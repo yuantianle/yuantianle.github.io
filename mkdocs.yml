@@ -1,0 +1,95 @@
+site_name: Tianle Yuan's Blog
+
+theme:
+  name: material
+  favicon: images/self.ico
+  logo: images/logo_reverse.png
+  language: en 
+  palette:
+    #scheme: indigo # two color schemes: <light mode>: default <dark mode>: slate
+    #primary: black # header, the sidebar, text links and several other components
+    #accent: deep orange # hovered links, buttons and scrollbars
+    
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: deep orange
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: green
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.indexes
+    - search.suggest    
+    - search.highlight
+
+  icon:
+    repo: fontawesome/brands/git-alt 
+
+  custom_dir: overrides
+
+
+
+extra_css:
+  - stylesheets/extra.css
+
+
+extra:
+  alternate:
+    - name: English
+      link: /en/ 
+      lang: en
+    - name: 中文
+      link: /zh/
+      lang: zh
+
+  social:
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/tianle-yuan-b0b349216/
+      name: Tianle Yuan on Twitter
+      
+    - icon: fontawesome/brands/github
+      link: https://github.com/yuantianle
+      name: Tianle Yuan on GitHub
+    
+    - icon: fontawesome/solid/house-medical
+      link: https://yuantianle.com
+      name: Go back to Tianle's Main Page
+  
+
+
+plugins:
+  - git-revision-date-localized:
+      enable_creation_date: true
+  - search
+
+repo_url: https://github.com/yuantianle
+repo_name: yuantianle's GitHub
+
+copyright: Copyright &copy; 2020 - 2022 Tianle Yuan
+
+
+markdown_extensions:
+  - admonition #MkDocs 警告框
+  - pymdownx.details 
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.caret #下划线
+  - pymdownx.mark #文本高亮
+  - pymdownx.tilde #删除线
+  - toc: # 大纲
+      permalink: true
+      slugify: !!python/name:pymdownx.slugs.uslugify
