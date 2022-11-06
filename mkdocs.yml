@@ -27,18 +27,20 @@ theme:
       toggle:
         icon: material/weather-night
         name: Switch to light mode
+    
   features:
     - navigation.instant
     - navigation.indexes
     - search.suggest    
     - search.highlight
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
 
   icon:
     repo: fontawesome/brands/git-alt 
 
   custom_dir: overrides
-
-
 
 extra_css:
   - stylesheets/extra.css
@@ -90,6 +92,6 @@ markdown_extensions:
   - pymdownx.caret #下划线
   - pymdownx.mark #文本高亮
   - pymdownx.tilde #删除线
-  - toc: # 大纲
-      permalink: true
-      slugify: !!python/name:pymdownx.slugs.uslugify
+  #- toc: # 大纲
+  #    permalink: true
+  #    slugify: !!python/name:pymdownx.slugs.uslugify
