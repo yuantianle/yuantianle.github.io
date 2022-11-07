@@ -1,9 +1,9 @@
-:root > * {
-    --md-default-bg-color: #6b6b6b;
-    --md-default-bg-color--light: #fd9191;
-    --md-default-bg-color--dark: #fd9191;
-    
-  }
+[data-md-color-scheme="slate"] {
+    --md-default-bg-color: #312f2f;
+}
+[data-md-color-scheme="default"] {
+    --md-default-bg-color: #dae5f0;
+}
   
 .md-content__inner{
     
@@ -27,10 +27,6 @@
 .md-nav--lifted>.md-nav__list>.md-nav__item--active>.md-nav__link {
     background: rgba(0, 0, 0, 0);
     box-shadow: none;
-}
-
-.md-main{
-    background-color: antiquewhite;
 }
 
 /*logo*/
