@@ -1,9 +1,10 @@
-# 🧮: Algorithms
+# **:abacus: Algorithms**
 
-```
-{% raw %}{% include list.liquid all=true %}{% endraw %}
+>**As a software engineer, being familier with algorithms and data structures is the basic skill for our job interview and solid skill improvement.**
 
-{% include list.liquid all=true %}
-```
+## This chapter can be saperated into two sections:
 
-{% include list.liquid all=true %}
+1. [Practice Sheet](Practice_Sheet/README.md) for the questions record of my practice.
+
+2. [Typical Questions](Typical_Questions/README.md) for the typical solution that I have learnt before.
+

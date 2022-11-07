@@ -1,4 +1,4 @@
-# :bar_chart: Math
+# **:bar_chart: Math**
 
 ```
 {% raw %}{% include list.liquid all=true %}{% endraw %}

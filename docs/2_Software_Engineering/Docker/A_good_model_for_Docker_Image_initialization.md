@@ -1,7 +1,3 @@
----
-sort: 2
----
-
 # A good model for Docker Image initialization
 
 >From what we learned: [Basic guidance of docker](Basic.md), we learned how to use Docker compose to run containers in parallel. In that learning, we directly use `swiftlang/swift:nightly-focal` from the Docker repo. Here, we will learn how to create and use our own Docker Image in the Docker compose.

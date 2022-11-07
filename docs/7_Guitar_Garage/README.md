@@ -1,13 +1,5 @@
----
-sort: 7
----
+# **:guitar: Guitar Garage**
 
-# :guitar: Guitar Garage
+>** This is a chapter for collecting some of the guitar sheets that I am into**
 
-```
-{% raw %}{% include list.liquid all=true %}{% endraw %}
 
-{% include list.liquid all=true %}
-```
-
-{% include list.liquid all=true %}

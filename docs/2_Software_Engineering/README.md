@@ -1,8 +1,4 @@
----
-sort: 3
----
-
-# :rocket: Software Engineering
+# **:rocket: Software Engineering**
 
 ```
 {% raw %}{% include list.liquid all=true %}{% endraw %}
