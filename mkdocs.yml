@@ -72,8 +72,6 @@ plugins:
   - git-revision-date-localized:
       enable_creation_date: true
   - search
-  - table-reader:
-      data_path: "docs/assets/tables"
 
 repo_url: https://github.com/yuantianle
 repo_name: yuantianle's GitHub
