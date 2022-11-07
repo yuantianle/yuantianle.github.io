@@ -1,8 +1,4 @@
----
-sort: 6
----
-
-# :speech_balloon: Casual Literary Notes
+# :speech_balloon: Algorithms
 
 ```
 {% raw %}{% include list.liquid all=true %}{% endraw %}

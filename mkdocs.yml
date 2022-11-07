@@ -130,9 +130,13 @@ nav:
       - VS_Code: 2_Software_Engineering/Docker/README.md
 
     - C++: 3_C++/README.md
-    - Math: 4_Math/README.md
-    - Casual Literary: 5_Casual_Literary_Notes/README.md
-    - Guitar Garage: 6_Guitar_Garage/README.md
+    - Algorithm: 
+      - 4_Algorithms/README.md
+      - Practic Sheet: 4_Algorithms/Practice_Sheet/README.md
+      - Typical Questions: 4_Algorithms/Typical_Questions/README.md
+    - Math: 5_Math/README.md
+    - Casual Literary: 6_Casual_Literary_Notes/README.md
+    - Guitar Garage: 7_Guitar_Garage/README.md
 
 edit_uri: yuantianle.github.io/edit/main/docs/
 
