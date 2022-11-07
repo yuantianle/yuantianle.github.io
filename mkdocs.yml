@@ -138,10 +138,12 @@ nav:
       - Typical Questions: 
         - 4_Algorithms/Typical_Questions/README.md
         - Leetcode:
+          - 4_Algorithms/Typical_Questions/Leetcode/Topology_sort.md
           - Topology Sort: 4_Algorithms/Typical_Questions/Leetcode/Topology_sort.md
           - Quick Sort: 4_Algorithms/Typical_Questions/Leetcode/Quick_sort.md
         - Hackerrank:
-          - Topology Sort: 4_Algorithms/Typical_Questions/Hackerrank/STDIN&STDOUT.md
+          - 4_Algorithms/Typical_Questions/Hackerrank/STDIN&STDOUT.md
+          - STDIN and STDOUT: 4_Algorithms/Typical_Questions/Hackerrank/STDIN&STDOUT.md
 
     
     - Math: 5_Math/README.md
