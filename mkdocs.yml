@@ -97,12 +97,12 @@ markdown_extensions:
   - pymdownx.smartsymbols
 
   - toc: # 大纲
-      permalink: true
+      permalink: ⚓︎
       slugify: !!python/name:pymdownx.slugs.uslugify
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji 
       emoji_generator: !!python/name:materialx.emoji.to_svg
-
+  - md_in_html
 
 nav:
     - Intro: index.md
