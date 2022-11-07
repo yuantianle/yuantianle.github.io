@@ -1,9 +1,6 @@
-# :speech_balloon: Algorithms
+# :question: Typical Questions
 
-```
-{% raw %}{% include list.liquid all=true %}{% endraw %}
+## The questions have been classified by the resources:
 
-{% include list.liquid all=true %}
-```
-
-{% include list.liquid all=true %}
+   1. [Leetcode](https://leetcode.com/).
+   2. [Hackerrank](https://www.hackerrank.com/).
