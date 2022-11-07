@@ -1,4 +1,4 @@
-# :speech_balloon: Algorithms
+# 🧮: Algorithms
 
 ```
 {% raw %}{% include list.liquid all=true %}{% endraw %}
