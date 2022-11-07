@@ -7,3 +7,4 @@
 ```
 
 {% include list.liquid all=true %}
+{{ read_csv('basic_table.csv') }}
