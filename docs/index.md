@@ -1,4 +1,4 @@
 ---
-title: HAHAHA
+title: Intro
 template: home.html
 ---

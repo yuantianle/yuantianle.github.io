@@ -1,8 +1,4 @@
----
-sort: 4
----
-
-# 🛠️: C++
+# :radioactive: C++
 
 ```
 {% raw %}{% include list.liquid all=true %}{% endraw %}

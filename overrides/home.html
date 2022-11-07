@@ -23,7 +23,7 @@
         }
 
         .mdx-container {
-            background: #0a2a43;
+            background: #00192A;
             min-height: 150vh;
         }
 
@@ -57,7 +57,7 @@
             bottom: 0;
             width: 100%;
             height: 100px;
-            background: linear-gradient(to top, #0a2a43, transparent);
+            background: linear-gradient(to top, #00192A, transparent);
             z-index: 10000;
         }
         
@@ -68,7 +68,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: #0a2a43;
+            background: #a3c0d4;
             z-index: 10000;
             mix-blend-mode: color; /*soft-light;*/
         }
@@ -78,12 +78,12 @@
     <div class="mdx-container">
          
         <section id="parallax" style="">
-            <img src="assets/images/layer_sky.png" id="layer_sky"  style=" height: 50%; width: auto; margin-left:-90%;"/>
-            <h2 id="text_name"                                     style=" margin-left:90%; margin-Top:-50%; color: rgb(27, 39, 65); position: relative; font-size: 10em;">Tianle Yuan's Blog</h2>
+            <img src="assets/images/layer_sky.png" id="layer_sk"  style=" height: 50%; width: auto; margin-left:-90%;"/>
+            <h2 id="text_name"                                     style=" margin-left:90%; margin-Top:-50%; color: rgb(0, 0, 0); position: relative; font-size: 9.5em;">Tianle Yuan's Blog</h2>
             <img src="assets/images/02.gif" id="pumpking"          style=" height: 25%; width: auto; margin-left:37%; margin-top:3%;"/>
             <img src="assets/images/layer_bg2.png" id="layer_bg2"  style=" height: 55%; width: auto; margin-left:0%; margin-top:15%;"/>
             <img src="assets/images/layer_bg1.png" id="layer_bg1"  style=" height: 55%; width: auto; margin-left:0%; margin-top:25%;"/>
-            <h2 id="text_welcome"                                  style=" margin-left:110%; margin-Top: 5%; color: rgb(255, 255, 255); position: relative; font-size: 10em;">Welcome</h2>
+            <h2 id="text_welcome"                                  style=" margin-left:110%; margin-Top: 5%; color: rgb(255, 255, 255); position: relative; font-size: 10em;">Welcome!</h2>
             <img src="assets/images/layer_main.png" id="layer_main"style=" height: 45%; width: auto; margin-left:0%; margin-top: 40%;" />
             <img src="assets/images/empire.png" id="alice"          style=" height: 55%; width: auto; margin-left:100%; margin-top: 42%;" />
             
@@ -94,7 +94,7 @@
               <div class="mdx-hero__content">
                 <h1 style="color: #fff;">To be a scholar is to be the top.</h1>
                 <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | e }}" class="md-button md-button--primary">
-                  Go into the blog.
+                  Go to my blog.
                 </a>
               </div>
             </div>
@@ -103,7 +103,7 @@
 
     <script type="text/javascript">
 
-        let layer_sky = document.getElementById("layer_sky");
+        let layer_sk = document.getElementById("layer_sk");
         let text_name = document.getElementById("text_name");
         let pumpking = document.getElementById("pumpking");
         let layer_bg2 = document.getElementById("layer_bg2");
@@ -115,13 +115,14 @@
         window.addEventListener('scroll', function () {
             var value = window.scrollY;
 
-            layer_sky.style.left = value * 1.5 + 'px';
+            layer_sk.style.left = value * 1.5 + 'px';
             text_name.style.left = -value * 1 + 'px';
-            pumpking.style.left = -value * 1.3 + 'px';
+            pumpking.style.left = -value * 1.5 + 'px';
+            pumpking.style.top = value * 0.5 + 'px';
             layer_bg2.style.left = -value * 0.16 + 'px';
             layer_bg1.style.left = -value * 0.32 + 'px';
             layer_main.style.left = -value * 2.2 + 'px';
-            text_welcome.style.left = -value * 3.2 + 'px';
+            text_welcome.style.left = -value * 3.1 + 'px';
             alice.style.left = -value * 0.48 + 'px';
             alice.style.top = -value * 0.15 + 'px';
 

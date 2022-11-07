@@ -1,0 +1,46 @@
+:root > * {
+    --md-default-bg-color: #6b6b6b;
+    --md-default-bg-color--light: #fd9191;
+    --md-default-bg-color--dark: #fd9191;
+    
+  }
+  
+.md-content__inner{
+    
+}
+
+.md-sidebar--primary .md-sidebar__scrollwrap{
+    margin-top: 0%;
+    margin-left: -10%;
+    margin-right: 10%;
+    padding-top: 5%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 30px 50px;
+}
+
+
+.md-sidebar--secondary .md-sidebar__scrollwrap{
+    margin-top: 0%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.md-nav--lifted>.md-nav__list>.md-nav__item--active>.md-nav__link {
+    background: rgba(0, 0, 0, 0);
+    box-shadow: none;
+}
+
+.md-main{
+    background-color: antiquewhite;
+}
+
+/*logo*/
+.md-header__button.md-logo :-webkit-any(img,svg){
+    height: 1.8rem;
+}
+
+/*sun-moon en-zh -- logo*/
+.md-icon svg {
+    height: 1.0rem;
+    width: auto;
+}
+

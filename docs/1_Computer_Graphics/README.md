@@ -1,6 +1,4 @@
----
-sort: 2
----
+
 
 # :crystal_ball: Computer Graphics
 

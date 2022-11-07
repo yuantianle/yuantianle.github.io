@@ -67,8 +67,6 @@ extra:
     - icon: fontawesome/solid/house-medical
       link: https://yuantianle.com
       name: Go back to Tianle's Main Page
-  
-
 
 plugins:
   - git-revision-date-localized:
@@ -87,11 +85,55 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.highlight:
       anchor_linenums: true
+      linenums: true
+      auto_title: true
+      linenums_style: pymdownx-inline
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.caret #下划线
   - pymdownx.mark #文本高亮
   - pymdownx.tilde #删除线
-  #- toc: # 大纲
-  #    permalink: true
-  #    slugify: !!python/name:pymdownx.slugs.uslugify
+  - pymdownx.keys #键盘图标
+  - pymdownx.smartsymbols
+
+  - toc: # 大纲
+      permalink: true
+      slugify: !!python/name:pymdownx.slugs.uslugify
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji 
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+
+nav:
+    - Intro: index.md
+
+    - Computer Graphics: 
+      - 1_Computer_Graphics/README.md
+      - Thermal Dynamics: 1_Computer_Graphics/1_Thermal_Dynamics.md
+      - Lighting: 1_Computer_Graphics/2_Lighting.md
+      - Three.js: 1_Computer_Graphics/3_Three_js.md
+      
+    - Software Engineering: 
+      - 2_Software_Engineering/README.md
+      - Docker:
+        - 2_Software_Engineering/Docker/README.md
+        - A good model for Docker Image initialization: 2_Software_Engineering/Docker/A_good_model_for_Docker_Image_initialization.md
+        - Basic guidance of docker: Basic.md
+      - Swift: 
+        - 2_Software_Engineering/Swift/README.md
+        - Notes: 2_Software_Engineering/Swift/Notes/README.md
+        - Swift on Windows 10: 
+          - 2_Software_Engineering/Swift/Swift_on_win10/README.md
+          - TL;DR: 2_Software_Engineering/Swift/Swift_on_win10/TL_DR.md
+          - VS Code-Docker for editing Swift on Win10: 2_Software_Engineering/Swift/Swift_on_win10/VS_Code_Docker_for_a_nice_Swift_edition_on_Windows10.md
+      - Terminal: 2_Software_Engineering/Docker/README.md
+      - VS_Code: 2_Software_Engineering/Docker/README.md
+
+    - C++: 3_C++/README.md
+    - Math: 4_Math/README.md
+    - Casual Literary: 5_Casual_Literary_Notes/README.md
+    - Guitar Garage: 6_Guitar_Garage/README.md
+
+edit_uri: yuantianle.github.io/edit/main/docs/
+
+
