@@ -4,7 +4,7 @@ theme:
   name: material
   favicon: images/self.ico
   logo: images/logo_reverse.png
-  language: en 
+  language: en
   palette:
     #scheme: indigo # two color schemes: <light mode>: default <dark mode>: slate
     #primary: black # header, the sidebar, text links and several other components
@@ -50,11 +50,13 @@ extra_css:
 extra:
   alternate:
     - name: English
-      link: /en/ 
-      lang: en
-    - name: 中文
-      link: /zh/
-      lang: zh
+      lang: 'en'
+      link: ''
+    - name: 中文(谷歌)
+      lang: 'zh-CN'
+      link: 'https://yuantianle-github-io.translate.goog/?_x_tr_sl=en&_x_tr_tl=zh-CN&_x_tr_hl=en&_x_tr_pto=wapp'
+      # _x_tr_sl = source language
+      # _x_tr_tl = translation language
 
   social:
     - icon: fontawesome/brands/linkedin
@@ -121,7 +123,7 @@ nav:
       - 2_Software_Engineering/README.md
       - Docker:
         - 2_Software_Engineering/Docker/README.md
-        - Guidance: 2_Software_Engineering/Docker/Basic.md
+        - Guidance: 2_Software_Engineering/Docker/Guidance.md
         - Command Line: 2_Software_Engineering/Docker/Docker_Command.md
         - Docker Image init (DIY): 2_Software_Engineering/Docker/A_good_model_for_Docker_Image_initialization.md
         

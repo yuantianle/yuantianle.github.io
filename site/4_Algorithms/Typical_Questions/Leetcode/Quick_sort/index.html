@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#comments-true" class="md-skip">
+        <a href="#quick-sort" class="md-skip">
           Skip to content
         </a>
       
@@ -140,14 +140,14 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="/en/" hreflang="en" class="md-select__link">
+                  <a href="../../../.." hreflang="en" class="md-select__link">
                     English
                   </a>
                 </li>
                 
                 <li class="md-select__item">
-                  <a href="/zh/" hreflang="zh" class="md-select__link">
-                    中文
+                  <a href="https://yuantianle-github-io.translate.goog/?_x_tr_sl=en&_x_tr_tl=zh-CN&_x_tr_hl=en&_x_tr_pto=wapp" hreflang="zh-CN" class="md-select__link">
+                    中文(谷歌)
                   </a>
                 </li>
                 
@@ -593,7 +593,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../2_Software_Engineering/Docker/Basic/" class="md-nav__link">
+      <a href="../../../../2_Software_Engineering/Docker/Guidance/" class="md-nav__link">
         Guidance
       </a>
     </li>
@@ -1034,39 +1034,12 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Quick Sort
-          <span class="md-nav__icon md-icon"></span>
-        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Quick Sort
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#comments-true" class="md-nav__link">
-    comments: true
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -1209,10 +1182,7 @@
   </a>
 
 
-  <h1>Quick Sort</h1>
-
-<hr />
-<h2 id="comments-true">comments: true<a class="headerlink" href="#comments-true" title="Permanent link">⚓︎</a></h2>
+<h1 id="quick-sort"><strong>Quick Sort</strong><a class="headerlink" href="#quick-sort" title="Permanent link">⚓︎</a></h1>
 
   <hr>
 <div class="md-source-file">
@@ -1232,6 +1202,55 @@
 
 
 
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+    <script src="https://giscus.app/client.js"
+        data-repo="yuantianle/yuantianle.github.io"
+        data-repo-id="R_kgDOITXaGg"
+        data-category-id="DIC_kwDOITXaGs4CSWJD"
+        =""
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    </script>
+
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
 
                 
               </article>
