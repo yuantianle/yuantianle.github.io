@@ -55,5 +55,5 @@
 }
 
 .md-typeset h1 {
-    color: var(--md-default-fg-color);
+    color: rgba(0, 0, 0, 1);
 }
