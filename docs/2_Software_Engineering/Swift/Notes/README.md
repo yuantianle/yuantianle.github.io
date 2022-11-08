@@ -1,7 +1,6 @@
 ---
-sort: 2
+comments: true
 ---
-
-# Swift Learning
+# **Swift Learning**
 
 {% include list.liquid all=true %}

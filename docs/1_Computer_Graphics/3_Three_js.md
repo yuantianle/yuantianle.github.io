@@ -1,4 +1,7 @@
-# Three.js
+---
+comments: true
+---
+# **Three.js**
 
 ```
 {% raw %}{% include list.liquid all=true %}{% endraw %}

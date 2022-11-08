@@ -1,4 +1,4 @@
-# :question: Typical Questions
+# **:question: Typical Questions**
 
 >**This is not a garage for questions. This section is aiming to record all the structured question type. That is to say, pseudo-code is more important than code itself.**
 

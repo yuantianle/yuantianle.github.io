@@ -36,6 +36,7 @@ theme:
     - navigation.tabs
     - navigation.sections
     - toc.integrate
+    - content.code.annotate
 
   icon:
     repo: fontawesome/brands/git-alt 
@@ -95,6 +96,8 @@ markdown_extensions:
   - pymdownx.tilde #删除线
   - pymdownx.keys #键盘图标
   - pymdownx.smartsymbols
+  - pymdownx.critic
+
 
   - toc: # 大纲
       permalink: ⚓︎
@@ -138,11 +141,9 @@ nav:
       - Typical Questions: 
         - 4_Algorithms/Typical_Questions/README.md
         - Leetcode:
-          - 4_Algorithms/Typical_Questions/Leetcode/Topology_sort.md
           - Topology Sort: 4_Algorithms/Typical_Questions/Leetcode/Topology_sort.md
           - Quick Sort: 4_Algorithms/Typical_Questions/Leetcode/Quick_sort.md
         - Hackerrank:
-          - 4_Algorithms/Typical_Questions/Hackerrank/STDIN&STDOUT.md
           - STDIN and STDOUT: 4_Algorithms/Typical_Questions/Hackerrank/STDIN&STDOUT.md
 
     

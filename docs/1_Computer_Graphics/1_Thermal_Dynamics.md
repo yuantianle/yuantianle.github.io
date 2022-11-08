@@ -1,4 +1,7 @@
-# Thermal Dynamics
+---
+comments: true
+---
+# **Thermal Dynamics**
 
 ```
 {% raw %}{% include list.liquid all=true %}{% endraw %}
