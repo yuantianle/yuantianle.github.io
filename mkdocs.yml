@@ -121,9 +121,9 @@ nav:
       - 2_Software_Engineering/README.md
       - Docker:
         - 2_Software_Engineering/Docker/README.md
-        - Basic guidance of Docker: 2_Software_Engineering/Docker/Basic.md
-        - Commands for Docker: 2_Software_Engineering/Docker/Docker_Command.md
-        - A good model for Docker Image initialization: 2_Software_Engineering/Docker/A_good_model_for_Docker_Image_initialization.md
+        - Guidance: 2_Software_Engineering/Docker/Basic.md
+        - Command Line: 2_Software_Engineering/Docker/Docker_Command.md
+        - Docker Image init (DIY): 2_Software_Engineering/Docker/A_good_model_for_Docker_Image_initialization.md
         
       - Swift: 
         - 2_Software_Engineering/Swift/README.md
@@ -131,7 +131,7 @@ nav:
         - Swift on Windows 10: 
           - 2_Software_Engineering/Swift/Swift_on_win10/README.md
           - TL;DR: 2_Software_Engineering/Swift/Swift_on_win10/TL_DR.md
-          - VS Code-Docker for editing Swift on Win10: 2_Software_Engineering/Swift/Swift_on_win10/VS_Code_Docker_for_a_nice_Swift_edition_on_Windows10.md
+          - VS Code-Docker for Swift on Win10: 2_Software_Engineering/Swift/Swift_on_win10/VS_Code_Docker_for_a_nice_Swift_edition_on_Windows10.md
       - Terminal: 2_Software_Engineering/Docker/README.md
       - VS_Code: 2_Software_Engineering/Docker/README.md
 
