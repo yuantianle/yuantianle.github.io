@@ -25,9 +25,9 @@ comments: true
 ## **Serial queue, Concurrent queue, Main dispatch queue and Thread**
 | DQueue type\ Thread | Main thread | Other thread |
 | :---------- | :----------------------------------- |
-| Serial queue | :material-check:     Fetch resource  |
-| Concurrent queue | :material-check-all: Update resource |
-| Main dispatch queue | :material-close:     Delete resource |
+| Serial queue | :material-check:  |  Fetch resource  |
+| Concurrent queue | :material-check-all: | Update resource |
+| Main dispatch queue | :material-close: | Delete resource |
 
 | DQueue type | Grammar |
 | :---------- | :----------------------------------- |
