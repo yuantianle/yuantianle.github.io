@@ -606,9 +606,54 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Guidance
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Guidance
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-install-docker-desktop" class="md-nav__link">
+    Step 1. Install Docker Desktop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-create-a-docker-composeyml-file" class="md-nav__link">
+    Step 2. Create a docker-compose.yml file
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-launch-the-dev-docker-service-created-in-step-2" class="md-nav__link">
+    Step 3. Launch the dev Docker service created in Step 2
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1184,22 +1229,22 @@
 <blockquote>
 <p>Docker is a useful tool with CI and backend work. Especially there are some cases that we need to test code in different system. Let's take swift as an example. We make it works on Windows 10.</p>
 </blockquote>
-<p><strong>Step 1. Install Docker Desktop</strong></p>
-<p>We can download [Links][Docker Desktop]https://docs.docker.com/get-docker/ from the website and install it on your Windows 10.</p>
-<p><strong>Step 2. Create a <code>docker-compose.yml</code> file</strong></p>
-<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos="1 "></span></a>services:
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><a href="#__codelineno-0-2"><span class="linenos" data-linenos="2 "></span></a>  dev:
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><a href="#__codelineno-0-3"><span class="linenos" data-linenos="3 "></span></a>    image: &quot;swiftlang/swift:nightly-focal&quot; #Default setting package for your system
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><a href="#__codelineno-0-4"><span class="linenos" data-linenos="4 "></span></a>    volumes:
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><a href="#__codelineno-0-5"><span class="linenos" data-linenos="5 "></span></a>      - /Users/&lt;YOUR_DIC_TO_INSTALL_SWIFT&gt;/swift:/code
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><a href="#__codelineno-0-6"><span class="linenos" data-linenos="6 "></span></a>    environment:
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><a href="#__codelineno-0-7"><span class="linenos" data-linenos="7 "></span></a>      - USER=&lt;YOUR_NAME&gt;
+<h3 id="step-1-install-docker-desktop"><strong>Step 1. Install Docker Desktop</strong><a class="headerlink" href="#step-1-install-docker-desktop" title="Permanent link">⚓︎</a></h3>
+<p>We can download <img alt="🐳" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f433.svg" title=":whale:" /> <a href="https://docs.docker.com/get-docker/">Docker Desktop</a> from the website and install it on your Windows 10.</p>
+<h3 id="step-2-create-a-docker-composeyml-file"><strong>Step 2. Create a <code>docker-compose.yml</code> file</strong><a class="headerlink" href="#step-2-create-a-docker-composeyml-file" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><span class="filename">docker-compose.yml</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos="1 "></span></a><span class="nt">services</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><a href="#__codelineno-0-2"><span class="linenos" data-linenos="2 "></span></a><span class="w">  </span><span class="nt">dev</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><a href="#__codelineno-0-3"><span class="linenos" data-linenos="3 "></span></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;swiftlang/swift:nightly-focal&quot;</span><span class="w"> </span><span class="c1">#Default setting package for your system</span><span class="w"></span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><a href="#__codelineno-0-4"><span class="linenos" data-linenos="4 "></span></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><a href="#__codelineno-0-5"><span class="linenos" data-linenos="5 "></span></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/Users/&lt;YOUR_DIC_TO_INSTALL_SWIFT&gt;/swift:/code</span><span class="w"></span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><a href="#__codelineno-0-6"><span class="linenos" data-linenos="6 "></span></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"></span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><a href="#__codelineno-0-7"><span class="linenos" data-linenos="7 "></span></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">USER=&lt;YOUR_NAME&gt;</span><span class="w"></span>
 </code></pre></div>
-<p><strong>Step 3. Launch the <code>dev</code> Docker service created in Step 2</strong></p>
-<p>Turn on your Docker Desktop. Then run the code below:</p>
-<div class="highlight"><span class="filename">Bash</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos="1 "></span></a>docker-compose run --rm dev
+<h3 id="step-3-launch-the-dev-docker-service-created-in-step-2"><strong>Step 3. Launch the <code>dev</code> Docker service created in Step 2</strong><a class="headerlink" href="#step-3-launch-the-dev-docker-service-created-in-step-2" title="Permanent link">⚓︎</a></h3>
+<p>Turn on your Docker Desktop. Then run the code below. </p>
+<p>Once inside your docker container, <code>cd code</code>.  From <code>\code</code> directory you can run the swift command.</p>
+<div class="highlight"><span class="filename">Git Bash</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos="1 "></span></a>docker-compose run --rm dev
 </code></pre></div>
-<p><strong>Once inside your docker container, <code>cd code</code>.  From <code>\code</code> directory you can run the swift command.</strong></p>
 
   <hr>
 <div class="md-source-file">
@@ -1210,7 +1255,7 @@
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 8, 2022</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 3, 2022</span>
       
     
   </small>

@@ -620,9 +620,150 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Command Line
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Command Line
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#i-docker-image" class="md-nav__link">
+    I. Docker Image
+  </a>
+  
+    <nav class="md-nav" aria-label="I. Docker Image">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-an-image" class="md-nav__link">
+    Create an image:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#check-the-images-we-have" class="md-nav__link">
+    Check the images we have:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#delete-some-image" class="md-nav__link">
+    Delete some image:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ii-docker-container" class="md-nav__link">
+    II. Docker Container
+  </a>
+  
+    <nav class="md-nav" aria-label="II. Docker Container">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-container-based-on-the-image" class="md-nav__link">
+    Create a container based on the image:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#display-a-list-of-launched-containers" class="md-nav__link">
+    Display a list of launched containers:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rename-an-existing-container" class="md-nav__link">
+    Rename an existing container:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pause-a-running-container" class="md-nav__link">
+    Pause a running container:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stop-a-running-container" class="md-nav__link">
+    Stop a running container:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#restart-a-running-container" class="md-nav__link">
+    Restart a running container:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removes-all-the-stopped-containers" class="md-nav__link">
+    Removes all the stopped containers:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quit-and-delete-the-running-containers" class="md-nav__link">
+    Quit and delete the running containers:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#remove-an-existing-container" class="md-nav__link">
+    Remove an existing container:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-image-from-a-containers-file-changes" class="md-nav__link">
+    Create a new image from a container’s file changes:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1180,53 +1321,75 @@
   </a>
 
 
-<h1 id="some-basic-command-for-docker">Some basic command for Docker<a class="headerlink" href="#some-basic-command-for-docker" title="Permanent link">⚓︎</a></h1>
+<h1 id="some-basic-command-for-docker"><strong>Some basic command for Docker</strong><a class="headerlink" href="#some-basic-command-for-docker" title="Permanent link">⚓︎</a></h1>
+<blockquote>
 <p>Useful link for understanding Docker concepts:
-https://www.simplilearn.com/tutorials/docker-tutorial/what-is-dockerfile</p>
-<p>Check the image we have:
-<img alt="image" src="https://user-images.githubusercontent.com/61530469/200457708-f7ce6cd2-e21c-4d86-9d7e-ca3a3273ddbd.png" /></p>
-<p>Delete some image:
-<img alt="image" src="https://user-images.githubusercontent.com/61530469/200457746-88301eaa-f14f-4570-99e4-65a0f864cc71.png" />
-<img alt="image" src="https://user-images.githubusercontent.com/61530469/200457756-735ae3e9-d414-419f-91f1-ba082272d6ec.png" /></p>
-<p>Create an image:
-(1) Create a Docker file:
-mkdir Docker_images
-cd Docker_images
-vi Dockerfile
-FROM ubuntu
-MAINTAINER simpli
-RUN apt-get update
-CMD ["echo", "Welcome to Simplilearn"]</p>
-<p>(2) Build a Docker Image with Dockerfile and tag:
-docker build -t simpli_image /D/Docker_images  =&gt; [location of your dockerfile]
-<img alt="image" src="https://user-images.githubusercontent.com/61530469/200457795-b292dca5-52c1-4a87-99d7-ead75e38007e.png" />
-<img alt="image" src="https://user-images.githubusercontent.com/61530469/200457814-e71c8e79-c3f9-4357-9484-578df6687121.png" />
-<img alt="image" src="https://user-images.githubusercontent.com/61530469/200457819-3a36eb8a-6073-410b-bdd0-b9686a9cb54c.png" /></p>
-<p>Create a container based on the image:
-docker run --name simpli_container simpli_image
-<img alt="image" src="https://user-images.githubusercontent.com/61530469/200457842-876a263b-6bbd-46e3-bc90-71042b594c9b.png" />
-<img alt="image" src="https://user-images.githubusercontent.com/61530469/200457858-241f752d-5157-432b-8023-5e653140289e.png" /></p>
-<p>Display a list of launched containers:
-docker ps -a
-<img alt="image" src="https://user-images.githubusercontent.com/61530469/200457866-3a4bf186-638c-4411-94f5-9e9adaf4feb0.png" /></p>
-<p>Rename an existing container:
-docker rename [CONTAINER_NAME] [NEW_CONTAINER_NAME]</p>
-<p>Pause a running container: 
-docker pause [CONTAINER_NAME]</p>
-<p>Stop a running container: &lt;直接删掉container了&gt;
-docker stop [CONTAINER_NAME]</p>
-<p>Restart a running container: &lt;格式化了&gt;
-docker stop [CONTAINER_NAME]</p>
-<p>Removes all the stopped containers:
-docker container prune [OPTIONS] </p>
-<p>Quit and delete the running containers:
-exit</p>
-<p>Remove an existing container:
-docker rm [CONTAINER] </p>
-<p>Create a new image from a container’s file changes:
-docker container commit [OPTIONS] [CONTAINER_ID] [NEW_IMAGE_NAME]</p>
+<a href="https://www.simplilearn.com/tutorials/docker-tutorial/what-is-dockerfile">What Is a Dockerfile: Everything You Need to Know</a></p>
+</blockquote>
+<h2 id="i-docker-image"><strong>I. Docker Image</strong><a class="headerlink" href="#i-docker-image" title="Permanent link">⚓︎</a></h2>
+<h3 id="create-an-image"><strong>Create an image:</strong><a class="headerlink" href="#create-an-image" title="Permanent link">⚓︎</a></h3>
+<ol>
+<li>Create a Docker file:
+<div class="highlight"><span class="filename">.dockerfile</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos="1 "></span></a>mkdir Docker_images
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><a href="#__codelineno-0-2"><span class="linenos" data-linenos="2 "></span></a><span class="nb">cd</span> Docker_images
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><a href="#__codelineno-0-3"><span class="linenos" data-linenos="3 "></span></a>vi Dockerfile
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><a href="#__codelineno-0-4"><span class="linenos" data-linenos="4 "></span></a><span class="k">FROM</span><span class="w"> </span><span class="s">ubuntu</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><a href="#__codelineno-0-5"><span class="linenos" data-linenos="5 "></span></a><span class="k">MAINTAINER</span><span class="w"> </span><span class="s">simpli</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><a href="#__codelineno-0-6"><span class="linenos" data-linenos="6 "></span></a><span class="k">RUN</span><span class="w"> </span>apt-get update
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><a href="#__codelineno-0-7"><span class="linenos" data-linenos="7 "></span></a><span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;echo&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Welcome to Simplilearn&quot;</span><span class="p">]</span>
+</code></pre></div></li>
+<li>Build a Docker Image with Dockerfile and tag:
+<div class="highlight"><span class="filename">Git Bash</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos="1 "></span></a>docker build -t simpli_image /D/Docker_images  <span class="o">=</span>&gt; <span class="o">[</span>location of your dockerfile<span class="o">]</span>
+</code></pre></div></li>
+</ol>
+<p><img :=":" _="," alt="image" class="center" src="https://user-images.githubusercontent.com/61530469/200457795-b292dca5-52c1-4a87-99d7-ead75e38007e.png" width="40%" /></p>
+<p><img :=":" _="," alt="image" class="center" src="https://user-images.githubusercontent.com/61530469/200457814-e71c8e79-c3f9-4357-9484-578df6687121.png" width="80%" /></p>
+<p><img :=":" _="," alt="image" class="center" src="https://user-images.githubusercontent.com/61530469/200457819-3a36eb8a-6073-410b-bdd0-b9686a9cb54c.png" width="80%" /></p>
+<h3 id="check-the-images-we-have"><strong>Check the images we have:</strong><a class="headerlink" href="#check-the-images-we-have" title="Permanent link">⚓︎</a></h3>
+<p><img :=":" _="," alt="image" class="center" src="https://user-images.githubusercontent.com/61530469/200457708-f7ce6cd2-e21c-4d86-9d7e-ca3a3273ddbd.png" width="80%" /></p>
+<h3 id="delete-some-image"><strong>Delete some image:</strong><a class="headerlink" href="#delete-some-image" title="Permanent link">⚓︎</a></h3>
+<p><img :=":" _="," alt="image" class="center" src="https://user-images.githubusercontent.com/61530469/200457746-88301eaa-f14f-4570-99e4-65a0f864cc71.png" width="80%" /></p>
+<p><img :=":" _="," alt="image" class="center" src="https://user-images.githubusercontent.com/61530469/200457756-735ae3e9-d414-419f-91f1-ba082272d6ec.png" width="80%" /></p>
+<h2 id="ii-docker-container"><strong>II. Docker Container</strong><a class="headerlink" href="#ii-docker-container" title="Permanent link">⚓︎</a></h2>
+<h3 id="create-a-container-based-on-the-image"><strong>Create a container based on the image:</strong><a class="headerlink" href="#create-a-container-based-on-the-image" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><span class="filename">Git Bash</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><a href="#__codelineno-2-1"><span class="linenos" data-linenos="1 "></span></a>docker run --name simpli_container simpli_image
+</code></pre></div>
+<p><img :=":" _="," alt="image" class="center" src="https://user-images.githubusercontent.com/61530469/200457842-876a263b-6bbd-46e3-bc90-71042b594c9b.png" width="80%" /></p>
+<p><img :=":" _="," alt="image" class="center" src="https://user-images.githubusercontent.com/61530469/200457858-241f752d-5157-432b-8023-5e653140289e.png" width="80%" /></p>
+<h3 id="display-a-list-of-launched-containers"><strong>Display a list of launched containers:</strong><a class="headerlink" href="#display-a-list-of-launched-containers" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><span class="filename">Git Bash</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><a href="#__codelineno-3-1"><span class="linenos" data-linenos="1 "></span></a>docker ps -a
+</code></pre></div>
+<p><img :=":" _="," alt="image" class="center" src="https://user-images.githubusercontent.com/61530469/200457866-3a4bf186-638c-4411-94f5-9e9adaf4feb0.png" width="80%" /></p>
+<h3 id="rename-an-existing-container"><strong>Rename an existing container:</strong><a class="headerlink" href="#rename-an-existing-container" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><span class="filename">Git Bash</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><a href="#__codelineno-4-1"><span class="linenos" data-linenos="1 "></span></a>docker rename <span class="o">[</span>CONTAINER_NAME<span class="o">]</span> <span class="o">[</span>NEW_CONTAINER_NAME<span class="o">]</span>
+</code></pre></div>
+<h3 id="pause-a-running-container"><strong>Pause a running container:</strong><a class="headerlink" href="#pause-a-running-container" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><span class="filename">Git Bash</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><a href="#__codelineno-5-1"><span class="linenos" data-linenos="1 "></span></a>docker pause <span class="o">[</span>CONTAINER_NAME<span class="o">]</span>
+</code></pre></div>
+<h3 id="stop-a-running-container"><strong>Stop a running container: </strong><a class="headerlink" href="#stop-a-running-container" title="Permanent link">⚓︎</a></h3>
+<p>(somehow directly deleted the container)</p>
+<div class="highlight"><span class="filename">Git Bash</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><a href="#__codelineno-6-1"><span class="linenos" data-linenos="1 "></span></a>docker stop <span class="o">[</span>CONTAINER_NAME<span class="o">]</span>
+</code></pre></div>
+<h3 id="restart-a-running-container"><strong>Restart a running container: </strong><a class="headerlink" href="#restart-a-running-container" title="Permanent link">⚓︎</a></h3>
+<p>(somehow directly clear the setting of container)</p>
+<div class="highlight"><span class="filename">Git Bash</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><a href="#__codelineno-7-1"><span class="linenos" data-linenos="1 "></span></a>docker stop <span class="o">[</span>CONTAINER_NAME<span class="o">]</span>
+</code></pre></div>
+<h3 id="removes-all-the-stopped-containers"><strong>Removes all the stopped containers:</strong><a class="headerlink" href="#removes-all-the-stopped-containers" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><span class="filename">Git Bash</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><a href="#__codelineno-8-1"><span class="linenos" data-linenos="1 "></span></a>docker container prune <span class="o">[</span>OPTIONS<span class="o">]</span> 
+</code></pre></div>
+<h3 id="quit-and-delete-the-running-containers"><strong>Quit and delete the running containers:</strong><a class="headerlink" href="#quit-and-delete-the-running-containers" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><span class="filename">Git Bash</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><a href="#__codelineno-9-1"><span class="linenos" data-linenos="1 "></span></a><span class="nb">exit</span>
+</code></pre></div>
+<h3 id="remove-an-existing-container"><strong>Remove an existing container:</strong><a class="headerlink" href="#remove-an-existing-container" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><span class="filename">Git Bash</span><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><a href="#__codelineno-10-1"><span class="linenos" data-linenos="1 "></span></a>docker rm <span class="o">[</span>CONTAINER<span class="o">]</span> 
+</code></pre></div>
+<h3 id="create-a-new-image-from-a-containers-file-changes"><strong>Create a new image from a container’s file changes:</strong><a class="headerlink" href="#create-a-new-image-from-a-containers-file-changes" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><span class="filename">Git Bash</span><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><a href="#__codelineno-11-1"><span class="linenos" data-linenos="1 "></span></a>docker container commit <span class="o">[</span>OPTIONS<span class="o">]</span> <span class="o">[</span>CONTAINER_ID<span class="o">]</span> <span class="o">[</span>NEW_IMAGE_NAME<span class="o">]</span>
+</code></pre></div>
+<blockquote>
 <p>The sub-explanation of Docker Compose:
-https://www.simplilearn.com/tutorials/docker-tutorial/docker-compose</p>
+<a href="https://www.simplilearn.com/tutorials/docker-tutorial/docker-compose">What is Docker Compose: Example, Benefits and Basic Commands</a></p>
+</blockquote>
 
   <hr>
 <div class="md-source-file">

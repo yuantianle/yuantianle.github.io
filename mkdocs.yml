@@ -99,6 +99,7 @@ markdown_extensions:
   - pymdownx.keys #键盘图标
   - pymdownx.smartsymbols
   - pymdownx.critic
+  - attr_list
 
 
   - toc: # 大纲
