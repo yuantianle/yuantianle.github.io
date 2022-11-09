@@ -4,7 +4,7 @@ comments: true
 
 # **Map, Filter and Reduce**
 
-## Grammar
+## **Grammar**
 
 ```
 map(function(type1 -> type1))
@@ -17,7 +17,7 @@ filter (function(type1 -> bool))
 ```
 reduce(init_val(type3), function(type1, type 2-> type3))
 ```
-## Way1: Function
+## **Way1: Function**
 
 ### Example
 
@@ -73,7 +73,7 @@ print(result)
 
 ![image](https://user-images.githubusercontent.com/61530469/200770718-adaef9ec-9889-4598-9707-c2bcf7853e86.png){width:80%, : .center}
 
-## Way2: Closure
+## **Way2: Closure**
 
 ### Example
 
@@ -120,7 +120,7 @@ for _ in 0...5 {
 ### Result
 ![image](https://user-images.githubusercontent.com/61530469/200774996-a7cf34c0-49db-4d9b-ae8b-8d0b2803d609.png){width:80%, : .center}
 
-## Way3: Using the built-in operator
+## **Way3: Using the built-in operator**
 
 ### Example
 
