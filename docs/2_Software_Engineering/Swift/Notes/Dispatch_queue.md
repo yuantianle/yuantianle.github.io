@@ -29,6 +29,12 @@ comments: true
 | Concurrent queue | :material-check-all: Update resource |
 | Main dispatch queue | :material-close:     Delete resource |
 
+| DQueue type | Grammar |
+| :---------- | :----------------------------------- |
+| Serial queue | ```DispatchQueue(lablel:"..").sync/.async``` |
+| Concurrent queue | DispatchQueue(lablel:"..", attributes: .concurrent).sync/.async |
+| Main dispatch queue | `DispatchQueue.main.sync { … }` |
+
 > **Context-switching between threads is expensive. Cheaper to stay on the same thread if you can**. And so, `sync` will “stay” on the same thread whenever possible.  This is so unless you do `DispatchQueue.main.sync {...}` to send the work to the main dispatch queue, in which case it will always go to the main thread.
 
 
