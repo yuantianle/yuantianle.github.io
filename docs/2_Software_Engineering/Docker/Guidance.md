@@ -2,7 +2,7 @@
 comments: true
 ---
 
-# **Basic guidance of docker**
+# **Basic guidance of docker** 
 
 > Docker is a useful tool with CI and backend work. Especially there are some cases that we need to test code in different system. Let's take swift as an example. We make it works on Windows 10.
 
@@ -32,5 +32,5 @@ Once inside your docker container, `cd code`.  From `\code` directory you can ru
 docker-compose run --rm dev
 ```
 
-
+> (The three steps above are sited from Prof. Will Braynen, OSU)
 
