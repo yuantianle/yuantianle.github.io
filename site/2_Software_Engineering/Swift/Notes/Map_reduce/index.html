@@ -842,9 +842,63 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Map-Reduce
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Map-Reduce
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#grammar" class="md-nav__link">
+    Grammar
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#way1-function" class="md-nav__link">
+    Way1: Function
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#way2-closure" class="md-nav__link">
+    Way2: Closure
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#way3-using-the-built-in-operator" class="md-nav__link">
+    Way3: Using the built-in operator
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1301,6 +1355,116 @@
 
 
 <h1 id="map-filter-and-reduce"><strong>Map, Filter and Reduce</strong><a class="headerlink" href="#map-filter-and-reduce" title="Permanent link">⚓︎</a></h1>
+<h2 id="grammar"><strong>Grammar</strong><a class="headerlink" href="#grammar" title="Permanent link">⚓︎</a></h2>
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos="1 "></span></a>map(function(type1 -&gt; type1))
+</code></pre></div>
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos="1 "></span></a>filter (function(type1 -&gt; bool))
+</code></pre></div>
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><a href="#__codelineno-2-1"><span class="linenos" data-linenos="1 "></span></a>reduce(init_val(type3), function(type1, type 2-&gt; type3))
+</code></pre></div>
+<h2 id="way1-function"><strong>Way1: Function</strong><a class="headerlink" href="#way1-function" title="Permanent link">⚓︎</a></h2>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">⚓︎</a></h3>
+<p><img :=":" alt="image" class="center" src="https://user-images.githubusercontent.com/61530469/200788862-2a87ba4d-b357-44dc-ae0b-813f490e8d93.png" width:50_="width:50%," /></p>
+<p><a href="https://twitter.com/steveluscher/status/741089564329054208">Steven Luscher on Twitter</a></p>
+<h3 id="code">Code<a class="headerlink" href="#code" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><span class="filename">way1.swift</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><a href="#__codelineno-3-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="kd">import</span> <span class="nc">Foundation</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><a href="#__codelineno-3-2"><span class="linenos" data-linenos=" 2 "></span></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><a href="#__codelineno-3-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="kd">func</span> <span class="nf">cook</span><span class="p">(</span><span class="n">food</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="p">{</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><a href="#__codelineno-3-4"><span class="linenos" data-linenos=" 4 "></span></a>    <span class="kd">var</span> <span class="nv">transformedFood</span> <span class="p">=</span> <span class="s">&quot;&quot;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><a href="#__codelineno-3-5"><span class="linenos" data-linenos=" 5 "></span></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><a href="#__codelineno-3-6"><span class="linenos" data-linenos=" 6 "></span></a>    <span class="k">switch</span> <span class="n">food</span> <span class="p">{</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><a href="#__codelineno-3-7"><span class="linenos" data-linenos=" 7 "></span></a>        <span class="k">case</span> <span class="s">&quot;🌽&quot;</span><span class="p">:</span> 
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><a href="#__codelineno-3-8"><span class="linenos" data-linenos=" 8 "></span></a>            <span class="n">transformedFood</span> <span class="p">=</span> <span class="s">&quot;🍿&quot;</span> 
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><a href="#__codelineno-3-9"><span class="linenos" data-linenos=" 9 "></span></a>            <span class="bp">print</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><a href="#__codelineno-3-10"><span class="linenos" data-linenos="10 "></span></a>        <span class="k">case</span> <span class="s">&quot;🐮&quot;</span><span class="p">:</span> 
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><a href="#__codelineno-3-11"><span class="linenos" data-linenos="11 "></span></a>            <span class="n">transformedFood</span> <span class="p">=</span> <span class="s">&quot;🍔&quot;</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><a href="#__codelineno-3-12"><span class="linenos" data-linenos="12 "></span></a>            <span class="bp">print</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><a href="#__codelineno-3-13"><span class="linenos" data-linenos="13 "></span></a>        <span class="k">case</span> <span class="s">&quot;🐔&quot;</span><span class="p">:</span> 
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a><a href="#__codelineno-3-14"><span class="linenos" data-linenos="14 "></span></a>            <span class="n">transformedFood</span> <span class="p">=</span> <span class="s">&quot;🍳&quot;</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a><a href="#__codelineno-3-15"><span class="linenos" data-linenos="15 "></span></a>            <span class="bp">print</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a><a href="#__codelineno-3-16"><span class="linenos" data-linenos="16 "></span></a>    <span class="k">default</span><span class="p">:</span> <span class="n">transformedFood</span> <span class="p">=</span> <span class="n">food</span> <span class="c1">// remains uncooked</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a><a href="#__codelineno-3-17"><span class="linenos" data-linenos="17 "></span></a>    <span class="p">}</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a><a href="#__codelineno-3-18"><span class="linenos" data-linenos="18 "></span></a>
+<a id="__codelineno-3-19" name="__codelineno-3-19"></a><a href="#__codelineno-3-19"><span class="linenos" data-linenos="19 "></span></a>    <span class="k">return</span> <span class="n">transformedFood</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20"></a><a href="#__codelineno-3-20"><span class="linenos" data-linenos="20 "></span></a><span class="p">}</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21"></a><a href="#__codelineno-3-21"><span class="linenos" data-linenos="21 "></span></a>
+<a id="__codelineno-3-22" name="__codelineno-3-22"></a><a href="#__codelineno-3-22"><span class="linenos" data-linenos="22 "></span></a><span class="kd">func</span> <span class="nf">eat</span><span class="p">(</span><span class="n">food1</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">food2</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="p">{</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23"></a><a href="#__codelineno-3-23"><span class="linenos" data-linenos="23 "></span></a>    <span class="kd">var</span> <span class="nv">transformedFood</span> <span class="p">=</span> <span class="s">&quot;💩&quot;</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24"></a><a href="#__codelineno-3-24"><span class="linenos" data-linenos="24 "></span></a>    <span class="k">return</span> <span class="n">transformedFood</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25"></a><a href="#__codelineno-3-25"><span class="linenos" data-linenos="25 "></span></a><span class="p">}</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26"></a><a href="#__codelineno-3-26"><span class="linenos" data-linenos="26 "></span></a>
+<a id="__codelineno-3-27" name="__codelineno-3-27"></a><a href="#__codelineno-3-27"><span class="linenos" data-linenos="27 "></span></a><span class="kd">func</span> <span class="nf">isVegetarian</span><span class="p">(</span><span class="n">dish</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="p">{</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28"></a><a href="#__codelineno-3-28"><span class="linenos" data-linenos="28 "></span></a>    <span class="k">return</span> <span class="n">dish</span><span class="p">==</span><span class="s">&quot;🍳&quot;</span>
+<a id="__codelineno-3-29" name="__codelineno-3-29"></a><a href="#__codelineno-3-29"><span class="linenos" data-linenos="29 "></span></a><span class="p">}</span>
+<a id="__codelineno-3-30" name="__codelineno-3-30"></a><a href="#__codelineno-3-30"><span class="linenos" data-linenos="30 "></span></a>
+<a id="__codelineno-3-31" name="__codelineno-3-31"></a><a href="#__codelineno-3-31"><span class="linenos" data-linenos="31 "></span></a><span class="c1">//Map</span>
+<a id="__codelineno-3-32" name="__codelineno-3-32"></a><a href="#__codelineno-3-32"><span class="linenos" data-linenos="32 "></span></a><span class="kd">let</span> <span class="nv">meals</span> <span class="p">=</span> <span class="p">[</span><span class="s">&quot;🌽&quot;</span><span class="p">,</span> <span class="s">&quot;🐮&quot;</span><span class="p">,</span> <span class="s">&quot;🐔&quot;</span><span class="p">].</span><span class="bp">map</span><span class="p">(</span><span class="n">cook</span><span class="p">)</span>
+<a id="__codelineno-3-33" name="__codelineno-3-33"></a><a href="#__codelineno-3-33"><span class="linenos" data-linenos="33 "></span></a><span class="c1">//Filter</span>
+<a id="__codelineno-3-34" name="__codelineno-3-34"></a><a href="#__codelineno-3-34"><span class="linenos" data-linenos="34 "></span></a><span class="kd">let</span> <span class="nv">filtered_meals</span> <span class="p">=</span> <span class="n">meals</span><span class="p">.</span><span class="bp">filter</span><span class="p">(</span><span class="n">isVegetarian</span><span class="p">)</span>
+<a id="__codelineno-3-35" name="__codelineno-3-35"></a><a href="#__codelineno-3-35"><span class="linenos" data-linenos="35 "></span></a><span class="c1">//Reduce</span>
+<a id="__codelineno-3-36" name="__codelineno-3-36"></a><a href="#__codelineno-3-36"><span class="linenos" data-linenos="36 "></span></a><span class="kd">let</span> <span class="nv">result</span> <span class="p">=</span> <span class="n">filtered_meals</span><span class="p">.</span><span class="bp">reduce</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">,</span><span class="n">eat</span><span class="p">)</span>
+<a id="__codelineno-3-37" name="__codelineno-3-37"></a><a href="#__codelineno-3-37"><span class="linenos" data-linenos="37 "></span></a><span class="c1">//Print</span>
+<a id="__codelineno-3-38" name="__codelineno-3-38"></a><a href="#__codelineno-3-38"><span class="linenos" data-linenos="38 "></span></a><span class="bp">print</span><span class="p">(</span><span class="n">meals</span><span class="p">)</span>
+<a id="__codelineno-3-39" name="__codelineno-3-39"></a><a href="#__codelineno-3-39"><span class="linenos" data-linenos="39 "></span></a><span class="bp">print</span><span class="p">(</span><span class="n">filtered_meals</span><span class="p">)</span>
+<a id="__codelineno-3-40" name="__codelineno-3-40"></a><a href="#__codelineno-3-40"><span class="linenos" data-linenos="40 "></span></a><span class="bp">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="result">Result<a class="headerlink" href="#result" title="Permanent link">⚓︎</a></h3>
+<p><img :=":" alt="image" class="center" src="https://user-images.githubusercontent.com/61530469/200770718-adaef9ec-9889-4598-9707-c2bcf7853e86.png" width:80_="width:80%," /></p>
+<h2 id="way2-closure"><strong>Way2: Closure</strong><a class="headerlink" href="#way2-closure" title="Permanent link">⚓︎</a></h2>
+<h3 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">⚓︎</a></h3>
+<p>Realize the assert shown below with closure:</p>
+<div class="highlight"><span class="filename">Q2.swift</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><a href="#__codelineno-4-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="k">for</span> <span class="kc">_</span> <span class="k">in</span> <span class="mf">0.</span><span class="p">..</span><span class="mi">5</span> <span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><a href="#__codelineno-4-2"><span class="linenos" data-linenos=" 2 "></span></a>    <span class="kd">let</span> <span class="nv">foodNames</span> <span class="p">=</span> <span class="p">[</span><span class="s">&quot;🍔&quot;</span><span class="p">:</span> <span class="s">&quot;hamburger&quot;</span><span class="p">,</span> <span class="s">&quot;🍟&quot;</span><span class="p">:</span> <span class="s">&quot;french fries&quot;</span><span class="p">,</span> <span class="s">&quot;🌽&quot;</span><span class="p">:</span> <span class="s">&quot;popcorn&quot;</span><span class="p">]</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><a href="#__codelineno-4-3"><span class="linenos" data-linenos=" 3 "></span></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><a href="#__codelineno-4-4"><span class="linenos" data-linenos=" 4 "></span></a>    <span class="kd">var</span> <span class="nv">outcome</span> <span class="p">=</span> <span class="n">foodNames</span><span class="p">.</span><span class="bp">map</span><span class="p">({...}).</span><span class="bp">filter</span><span class="p">({}).</span><span class="bp">reduce</span><span class="p">(...,{...})</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><a href="#__codelineno-4-5"><span class="linenos" data-linenos=" 5 "></span></a>    <span class="n">outcome</span><span class="p">.</span><span class="n">removeFirst</span><span class="p">()</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><a href="#__codelineno-4-6"><span class="linenos" data-linenos=" 6 "></span></a>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><a href="#__codelineno-4-7"><span class="linenos" data-linenos=" 7 "></span></a>    <span class="bp">assert</span><span class="p">(</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><a href="#__codelineno-4-8"><span class="linenos" data-linenos=" 8 "></span></a>        <span class="n">outcome</span> <span class="p">==</span> <span class="s">&quot;Hamburger Popcorn&quot;</span> <span class="o">||</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><a href="#__codelineno-4-9"><span class="linenos" data-linenos=" 9 "></span></a>        <span class="n">outcome</span> <span class="p">==</span> <span class="s">&quot;Popcorn Hamburger&quot;</span> 
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><a href="#__codelineno-4-10"><span class="linenos" data-linenos="10 "></span></a>    <span class="p">)</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><a href="#__codelineno-4-11"><span class="linenos" data-linenos="11 "></span></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="code_1">Code<a class="headerlink" href="#code_1" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><span class="filename">way2.swift</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><a href="#__codelineno-5-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="kd">import</span> <span class="nc">Foundation</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><a href="#__codelineno-5-2"><span class="linenos" data-linenos=" 2 "></span></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><a href="#__codelineno-5-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="k">for</span> <span class="kc">_</span> <span class="k">in</span> <span class="mf">0.</span><span class="p">..</span><span class="mi">5</span> <span class="p">{</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><a href="#__codelineno-5-4"><span class="linenos" data-linenos=" 4 "></span></a>    <span class="kd">let</span> <span class="nv">foodNames</span> <span class="p">=</span> <span class="p">[</span><span class="s">&quot;🍔&quot;</span><span class="p">:</span> <span class="s">&quot;hamburger&quot;</span><span class="p">,</span> <span class="s">&quot;🍟&quot;</span><span class="p">:</span> <span class="s">&quot;french fries&quot;</span><span class="p">,</span> <span class="s">&quot;🌽&quot;</span><span class="p">:</span> <span class="s">&quot;popcorn&quot;</span><span class="p">]</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><a href="#__codelineno-5-5"><span class="linenos" data-linenos=" 5 "></span></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><a href="#__codelineno-5-6"><span class="linenos" data-linenos=" 6 "></span></a>    <span class="c1">//Map</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><a href="#__codelineno-5-7"><span class="linenos" data-linenos=" 7 "></span></a>    <span class="kd">var</span> <span class="nv">mapped</span> <span class="p">=</span> <span class="n">foodNames</span><span class="p">.</span><span class="bp">map</span><span class="p">({(</span><span class="n">key</span><span class="p">,</span><span class="n">value</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="k">in</span> <span class="k">return</span> <span class="n">value</span><span class="p">.</span><span class="n">capitalized</span><span class="p">})</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><a href="#__codelineno-5-8"><span class="linenos" data-linenos=" 8 "></span></a>    <span class="c1">//Filter</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><a href="#__codelineno-5-9"><span class="linenos" data-linenos=" 9 "></span></a>    <span class="kd">var</span> <span class="nv">filterred</span> <span class="p">=</span> <span class="n">mapped</span><span class="p">.</span><span class="bp">filter</span><span class="p">({(</span><span class="n">food</span><span class="p">:</span><span class="nb">String</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Bool</span> <span class="k">in</span> <span class="k">return</span> <span class="o">!</span><span class="p">(</span><span class="n">food</span> <span class="p">==</span> <span class="s">&quot;French Fries&quot;</span><span class="p">)})</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><a href="#__codelineno-5-10"><span class="linenos" data-linenos="10 "></span></a>    <span class="c1">//Reduce</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><a href="#__codelineno-5-11"><span class="linenos" data-linenos="11 "></span></a>    <span class="kd">var</span> <span class="nv">reduced</span> <span class="p">=</span> <span class="n">filterred</span><span class="p">.</span><span class="bp">reduce</span><span class="p">(</span><span class="s">&quot;&quot;</span><span class="p">,{</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="k">in</span> <span class="n">a</span> <span class="o">+</span>  <span class="s">&quot; &quot;</span> <span class="o">+</span> <span class="n">b</span><span class="p">})</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><a href="#__codelineno-5-12"><span class="linenos" data-linenos="12 "></span></a>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><a href="#__codelineno-5-13"><span class="linenos" data-linenos="13 "></span></a>    <span class="n">reduced</span><span class="p">.</span><span class="n">removeFirst</span><span class="p">()</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14"></a><a href="#__codelineno-5-14"><span class="linenos" data-linenos="14 "></span></a>    <span class="kd">var</span> <span class="nv">outcome</span> <span class="p">=</span> <span class="n">reduced</span>
+<a id="__codelineno-5-15" name="__codelineno-5-15"></a><a href="#__codelineno-5-15"><span class="linenos" data-linenos="15 "></span></a>
+<a id="__codelineno-5-16" name="__codelineno-5-16"></a><a href="#__codelineno-5-16"><span class="linenos" data-linenos="16 "></span></a>    <span class="bp">assert</span><span class="p">(</span>
+<a id="__codelineno-5-17" name="__codelineno-5-17"></a><a href="#__codelineno-5-17"><span class="linenos" data-linenos="17 "></span></a>        <span class="n">outcome</span> <span class="p">==</span> <span class="s">&quot;Hamburger Popcorn&quot;</span> <span class="o">||</span>
+<a id="__codelineno-5-18" name="__codelineno-5-18"></a><a href="#__codelineno-5-18"><span class="linenos" data-linenos="18 "></span></a>        <span class="n">outcome</span> <span class="p">==</span> <span class="s">&quot;Popcorn Hamburger&quot;</span> 
+<a id="__codelineno-5-19" name="__codelineno-5-19"></a><a href="#__codelineno-5-19"><span class="linenos" data-linenos="19 "></span></a>    <span class="p">)</span>
+<a id="__codelineno-5-20" name="__codelineno-5-20"></a><a href="#__codelineno-5-20"><span class="linenos" data-linenos="20 "></span></a><span class="p">}</span>
+</code></pre></div>
+<h3 id="result_1">Result<a class="headerlink" href="#result_1" title="Permanent link">⚓︎</a></h3>
+<p><img :=":" alt="image" class="center" src="https://user-images.githubusercontent.com/61530469/200774996-a7cf34c0-49db-4d9b-ae8b-8d0b2803d609.png" width:80_="width:80%," /></p>
+<h2 id="way3-using-the-built-in-operator"><strong>Way3: Using the built-in operator</strong><a class="headerlink" href="#way3-using-the-built-in-operator" title="Permanent link">⚓︎</a></h2>
+<h3 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">⚓︎</a></h3>
+<p>Realize the assert shown below with built-in operator:</p>
+<div class="highlight"><span class="filename">Q3.swift</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><a href="#__codelineno-6-1"><span class="linenos" data-linenos="1 "></span></a><span class="kd">let</span> <span class="nv">outcome</span> <span class="p">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">].</span><span class="bp">map</span><span class="p">({...}).</span><span class="bp">filter</span><span class="p">({...}).</span><span class="bp">reduce</span><span class="p">(...,...)</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><a href="#__codelineno-6-2"><span class="linenos" data-linenos="2 "></span></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><a href="#__codelineno-6-3"><span class="linenos" data-linenos="3 "></span></a><span class="bp">assert</span><span class="p">(</span><span class="n">outcome</span> <span class="p">==</span> <span class="mi">108</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="code_2">Code<a class="headerlink" href="#code_2" title="Permanent link">⚓︎</a></h3>
+<div class="highlight"><span class="filename">way3.swift</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><a href="#__codelineno-7-1"><span class="linenos" data-linenos="1 "></span></a><span class="kd">import</span> <span class="nc">Foundation</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><a href="#__codelineno-7-2"><span class="linenos" data-linenos="2 "></span></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><a href="#__codelineno-7-3"><span class="linenos" data-linenos="3 "></span></a><span class="kd">let</span> <span class="nv">outcome</span> <span class="p">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">].</span><span class="bp">map</span><span class="p">(</span> <span class="p">{</span><span class="nv">$0</span> <span class="o">+</span> <span class="mi">1</span><span class="p">}</span> <span class="p">).</span><span class="bp">filter</span><span class="p">(</span> <span class="p">{</span><span class="nv">$0</span> <span class="o">!=</span> <span class="mi">5</span><span class="p">}</span> <span class="p">).</span><span class="bp">reduce</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><a href="#__codelineno-7-4"><span class="linenos" data-linenos="4 "></span></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><a href="#__codelineno-7-5"><span class="linenos" data-linenos="5 "></span></a><span class="bp">assert</span><span class="p">(</span><span class="n">outcome</span> <span class="p">==</span> <span class="mi">108</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="result_2">Result<a class="headerlink" href="#result_2" title="Permanent link">⚓︎</a></h3>
+<p><img :=":" alt="image" class="center" src="https://user-images.githubusercontent.com/61530469/200776454-497db043-3f8c-447d-8f10-71d5a8453817.png" width:80_="width:80%," /></p>
 
   <hr>
 <div class="md-source-file">
