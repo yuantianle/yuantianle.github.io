@@ -106,6 +106,8 @@ markdown_extensions:
   - toc: # 大纲
       permalink: ⚓︎
       slugify: !!python/name:pymdownx.slugs.uslugify
+      toc_depth: 2
+      title: On this page
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji 
       emoji_generator: !!python/name:materialx.emoji.to_svg
