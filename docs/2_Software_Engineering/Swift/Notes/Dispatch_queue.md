@@ -25,9 +25,9 @@ comments: true
 ## **Serial queue, Concurrent queue, Main dispatch queue and Thread**
 | DQueue type \ Thread | Main thread | Other thread |
 | :---------- | :---------------|:--------------- |
-| Serial queue |    |  `sync`: one thread / `async`: multi threads [concurrent] |
-| Concurrent queue |   | multi threads [parallel] |
-| Main dispatch queue | one main thread | |
+| Serial queue |  \  |  `sync`: one thread / `async`: multi threads [concurrent] |
+| Concurrent queue | \  | multi threads [parallel] |
+| Main dispatch queue | one main thread | \ |
 
 | DQueue type | Grammar | Properties | 
 | :---------- | :----------------------------------- | :----------------------------------- |
