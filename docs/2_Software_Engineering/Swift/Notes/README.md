@@ -1,6 +1,8 @@
----
-comments: true
----
-# **Swift Learning**
+# **Notes for Swift learning**
 
-{% include list.liquid all=true %}
+## Table of contents:
+
+1. [Dispatch queue and Dead lock](Dispatch_queue.md))
+
+2. [Map, Filter and Reduce](Map_reduce.md)
+   
