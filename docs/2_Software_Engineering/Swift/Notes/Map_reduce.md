@@ -21,7 +21,7 @@ reduce(init_val(type3), function(type1, type 2-> type3))
 
 ### Example
 
-![image](https://user-images.githubusercontent.com/61530469/200768266-b09b0ceb-8263-43e8-a37f-aa5f56af1f3b.png){width:50%, : .center}
+![image](https://user-images.githubusercontent.com/61530469/200768266-b09b0ceb-8263-43e8-a37f-aa5f56af1f3b.png){width:20%, : .center}
 
 [Steven Luscher on Twitter](https://twitter.com/steveluscher/status/741089564329054208)
 
