@@ -22,6 +22,16 @@ comments: true
 * Whereas you can think of a **thread** as where **instructions actually execute**; for example, a thread might have `start`, `stop`, and `sleep` methods. A thread is **short for a thread of execution** and is **the smallest sequence of programmed instructions** that can be managed independently by a scheduler, which is typically [but not always] **a part of the operating system**” ([wikipedia](https://en.wikipedia.org/wiki/Thread_(computing))).  
 
 
+## **Serial queue, Concurrent queue, Main dispatch queue and Thread**
+| DQueue type\ Thread | Main thread | Other thread |
+| :---------- | :----------------------------------- |
+| Serial queue | :material-check:     Fetch resource  |
+| Concurrent queue | :material-check-all: Update resource |
+| Main dispatch queue | :material-close:     Delete resource |
+
+> **Context-switching between threads is expensive. Cheaper to stay on the same thread if you can**. And so, `sync` will “stay” on the same thread whenever possible.  This is so unless you do `DispatchQueue.main.sync {...}` to send the work to the main dispatch queue, in which case it will always go to the main thread.
+
+
 ## **Dead lock in dispatch queue**
 
 To understand dead lock happends in dispatch queue processing, we firstly need to know what is the [Concurrency](../../Others/Concurrency.md).
@@ -88,4 +98,3 @@ print("3")
 
 ![image](https://user-images.githubusercontent.com/61530469/200782821-4b81ac12-962c-47d5-8c09-14d40b02c764.png){width="40%", : .center}
 
-> **Context-switching between threads is expensive. Cheaper to stay on the same thread if you can**. And so, `sync` will “stay” on the same thread whenever possible.  This is so unless you do `DispatchQueue.main.sync {...}` to send the work to the main dispatch queue, in which case it will always go to the main thread.
