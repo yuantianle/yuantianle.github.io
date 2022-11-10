@@ -7,15 +7,15 @@ comments: true
 
 ## **I. Dispatch queue (from Prof. Will Braynen, OSU)**
 
-### **What?**
+### **1️⃣What?**
 
 * A dispatch queue is an **object-like structure** that **manages the tasks** you submit to it. All dispatch queues are **first-in, first-out (FIFO)** data structures. Thus, the tasks you add to a queue are always started in the same order that they were added.” (source: [Apple documentation](https://developer.apple.com/library/archive/documentation/General/Conceptual/ConcurrencyProgrammingGuide/OperationQueues/OperationQueues.html)). That’s important.
 
-### **For?**
+### **2️⃣For?**
 
 * Well, it’s a way to **run multi-threaded code** without using threads directly. It’s **not** as low level as working with threads. 
 
-### **Diff with threads?**
+### **3️⃣Diff with threads?**
 
 * A **dispatch queue** can manage its own **pool thread**, etc, and ultimately the point of a dispatch queue is to keep track of what instruction to execute next while giving you a **higher-level API** instead of dealing with threads directly
 
@@ -23,17 +23,23 @@ comments: true
 
 
 ## **II. Serial queue, Concurrent queue, Main dispatch queue and Thread**
+
+### **🤏Grammar and Properties** 
+
+* The table below shows how to use the dispatch queue, and in what situation:
+| DQueue type | Grammar | Properties | 
+| :---------- | :----------------------------------- | :----------------------------------- |
+| Serial queue | `DispatchQueue(lablel:"..").sync/.async { … }` | Private, conccurrent |
+| Concurrent queue | `DispatchQueue(lablel:"..", attributes: .concurrent).sync/.async { … }` | Global, parallel |
+| Main dispatch queue | `DispatchQueue.main.sync { … }` | Global, conccurrent |
+
+### **👯‍♀️Dispatch queue v.s. Thread** 
 | DQueue type \ Thread | Main thread | Other thread |
 | :---------- | :---------------|:--------------- |
 | Serial queue |  \  |  `sync`: one thread / `async`: multi threads [concurrent] |
 | Concurrent queue | \  | multi threads [parallel] |
 | Main dispatch queue | one main thread | \ |
 
-| DQueue type | Grammar | Properties | 
-| :---------- | :----------------------------------- | :----------------------------------- |
-| Serial queue | `DispatchQueue(lablel:"..").sync/.async { … }` | Private, conccurrent |
-| Concurrent queue | `DispatchQueue(lablel:"..", attributes: .concurrent).sync/.async { … }` | Global, parallel |
-| Main dispatch queue | `DispatchQueue.main.sync { … }` | Global, conccurrent |
 
 > **Context-switching between threads is expensive. Cheaper to stay on the same thread if you can**. And so, `sync` will “stay” on the same thread whenever possible.  This is so unless you do `DispatchQueue.main.sync {...}` to send the work to the main dispatch queue, in which case it will always go to the main thread.
 
