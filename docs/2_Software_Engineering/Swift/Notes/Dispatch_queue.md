@@ -110,7 +110,7 @@ print("5")
 
 **Explaination Picture**
 
-![image](deadlock1.png){width="100%", : .center}
+![image](deadlock1.jpg){width="100%", : .center}
 
 ### **Dead lock case 2 (serial queue)**
 
