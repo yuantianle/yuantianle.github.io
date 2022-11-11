@@ -139,7 +139,7 @@ print("3")
 ![image](deadlock2.jpg){width="90%", : .center}
 
 
-???+ danger "Watchout!!"
+???+ danger "Be careful!!"
 
     Please DISTINGUISH the difference between `DispatchQueue.main.sync{...}` and `myQueue.sync{...}` by take a look at [the case shown below](#no-dead-lock-case-serial-queue-with-sync) :small_red_triangle_down: 
 
