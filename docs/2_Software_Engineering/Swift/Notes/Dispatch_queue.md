@@ -46,9 +46,9 @@ comments: true
 
 * **Q&A**
 
-???+ question "If it is the first time your call `let myQueue = DispatchQueue(label:"test queue")` and `sync`, how many queues will app have? Which queue will tasks in `sync` code block be queuing?"
+???+ question "If it is the first time your call `let myQueue = DispatchQueue(label:"test queue")` and `sync`, how many queues will app have for main thread? Which queue will tasks in `sync` code block be queuing?"
 
-    Two. One is main queue. Another one is private queue created by `let myQueue = DispatchQueue(label:"test queue")`. Tasks in `sync` code block will be queuing in the new created private queue.
+    Two. One is main queue. Another one is private queue created by `let myQueue = DispatchQueue(label:"test queue")`. Tasks in `sync` code block will be queuing in the new created private queue. You can also feel the answer from the figure in ["No dead lock case (serial queue with sync)"](#no-dead-lock-case-serial-queue-with-sync)
   
 ???+ question "What `queue` will tasks in `sync` block be on?"
 
@@ -76,7 +76,7 @@ comments: true
 
 To understand dead lock happends in dispatch queue processing, we firstly need to know what is the [Concurrency](../../Others/Concurrency.md).
 
-### **Dead lock case 1 (dispatch queue)**
+### **:lock: Dead lock case 1 (dispatch queue)**
 
 **Code**
 
@@ -110,9 +110,9 @@ print("5")
 
 **Explaination Picture**
 
-![image](deadlock1.jpg){width="100%", : .center}
+![image](deadlock1.jpg){width="90%", : .center}
 
-### **Dead lock case 2 (serial queue)**
+### **:lock: Dead lock case 2 (serial queue)**
 
 **Code**
 
@@ -136,10 +136,14 @@ print("3")
 
 **Explaination Picture**
 
-![image](deadlock2.jpg){width="100%", : .center}
+![image](deadlock2.jpg){width="90%", : .center}
 
 
-### **No dead lock case (serial queue with `sync`)**
+???+ danger "Watchout!!"
+
+    Please DISTINGUISH the difference between `DispatchQueue.main.sync{...}` and `myQueue.sync{...}` by take a look at [the case shown below](#no-dead-lock-case-serial-queue-with-sync) :small_red_triangle_down: 
+
+### **:closed_lock_with_key: No dead lock case (serial queue with `sync`)**
 
 **Code**
 
@@ -167,5 +171,5 @@ print("3")
 
 **Explaination Picture**
 
-![image](ndeadlock1.jpg){width="100%", : .center}
+![image](ndeadlock1.jpg){width="90%", : .center}
 
