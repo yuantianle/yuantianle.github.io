@@ -1349,15 +1349,15 @@
 
 <h1 id="dispatch-queue-and-dead-lock"><strong>Dispatch queue and Dead lock</strong><a class="headerlink" href="#dispatch-queue-and-dead-lock" title="Permanent link">⚓︎</a></h1>
 <h2 id="i-dispatch-queue-from-prof-will-braynen-osu"><strong>I. Dispatch queue (from Prof. Will Braynen, OSU)</strong><a class="headerlink" href="#i-dispatch-queue-from-prof-will-braynen-osu" title="Permanent link">⚓︎</a></h2>
-<h3 id="what"><strong>What?</strong><a class="headerlink" href="#what" title="Permanent link">⚓︎</a></h3>
+<h3 id="1-what"><strong>1️⃣ What?</strong><a class="headerlink" href="#1-what" title="Permanent link">⚓︎</a></h3>
 <ul>
 <li>A dispatch queue is an <strong>object-like structure</strong> that <strong>manages the tasks</strong> you submit to it. All dispatch queues are <strong>first-in, first-out (FIFO)</strong> data structures. Thus, the tasks you add to a queue are always started in the same order that they were added.” (source: <a href="https://developer.apple.com/library/archive/documentation/General/Conceptual/ConcurrencyProgrammingGuide/OperationQueues/OperationQueues.html">Apple documentation</a>). That’s important.</li>
 </ul>
-<h3 id="for"><strong>For?</strong><a class="headerlink" href="#for" title="Permanent link">⚓︎</a></h3>
+<h3 id="2-for"><strong>2️⃣ For?</strong><a class="headerlink" href="#2-for" title="Permanent link">⚓︎</a></h3>
 <ul>
 <li>Well, it’s a way to <strong>run multi-threaded code</strong> without using threads directly. It’s <strong>not</strong> as low level as working with threads. </li>
 </ul>
-<h3 id="diff-with-threads"><strong>Diff with threads?</strong><a class="headerlink" href="#diff-with-threads" title="Permanent link">⚓︎</a></h3>
+<h3 id="3-diff-with-threads"><strong>3️⃣ Diff with threads?</strong><a class="headerlink" href="#3-diff-with-threads" title="Permanent link">⚓︎</a></h3>
 <ul>
 <li>
 <p>A <strong>dispatch queue</strong> can manage its own <strong>pool thread</strong>, etc, and ultimately the point of a dispatch queue is to keep track of what instruction to execute next while giving you a <strong>higher-level API</strong> instead of dealing with threads directly</p>
@@ -1367,32 +1367,10 @@
 </li>
 </ul>
 <h2 id="ii-serial-queue-concurrent-queue-main-dispatch-queue-and-thread"><strong>II. Serial queue, Concurrent queue, Main dispatch queue and Thread</strong><a class="headerlink" href="#ii-serial-queue-concurrent-queue-main-dispatch-queue-and-thread" title="Permanent link">⚓︎</a></h2>
-<table>
-<thead>
-<tr>
-<th align="left">DQueue type  Thread</th>
-<th align="left">Main thread</th>
-<th align="left">Other thread</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Serial queue</td>
-<td align="left">\</td>
-<td align="left"><code>sync</code>: one thread / <code>async</code>: multi threads [concurrent]</td>
-</tr>
-<tr>
-<td align="left">Concurrent queue</td>
-<td align="left">\</td>
-<td align="left">multi threads [parallel]</td>
-</tr>
-<tr>
-<td align="left">Main dispatch queue</td>
-<td align="left">one main thread</td>
-<td align="left">\</td>
-</tr>
-</tbody>
-</table>
+<h3 id="-grammar-and-properties"><strong>🤏 Grammar and Properties</strong><a class="headerlink" href="#-grammar-and-properties" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>The table below shows how to use the dispatch queue, and in what situation:</li>
+</ul>
 <table>
 <thead>
 <tr>
@@ -1419,9 +1397,65 @@
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p><strong>Context-switching between threads is expensive. Cheaper to stay on the same thread if you can</strong>. And so, <code>sync</code> will “stay” on the same thread whenever possible.  This is so unless you do <code>DispatchQueue.main.sync {...}</code> to send the work to the main dispatch queue, in which case it will always go to the main thread.</p>
-</blockquote>
+<h3 id="-dispatch-queue-vs-thread"><strong>👯‍♀️ Dispatch Queue v.s. Thread</strong><a class="headerlink" href="#-dispatch-queue-vs-thread" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>The table below concludes the relationship between:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="left">D.Queue type / Thread</th>
+<th align="left">Main thread</th>
+<th align="left">Other thread</th>
+<th align="left">Task Processing Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Serial queue</td>
+<td align="left"><code>sync</code>: main thread <br /> N/A</td>
+<td align="left">N/A <br /> <code>async</code>: multiple threads</td>
+<td align="left">[<ins class="critic">serial</ins>] <br />[<ins class="critic">concurrent</ins>]</td>
+</tr>
+<tr>
+<td align="left">Concurrent queue</td>
+<td align="left">N/A</td>
+<td align="left">multiple threads</td>
+<td align="left">[<ins class="critic">parallel</ins>]</td>
+</tr>
+<tr>
+<td align="left">Main dispatch queue</td>
+<td align="left">main thread</td>
+<td align="left">N/A</td>
+<td align="left">[<ins class="critic">serial</ins>]</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Q&amp;A</strong></li>
+</ul>
+<details class="question" open="open">
+<summary>If it is the first time your call <code>let myQueue = DispatchQueue(label:"test queue")</code> and <code>sync</code>, how many queues will app have? Which queue will tasks in <code>sync</code> code block be queuing?</summary>
+<p>Two. One is main queue. Another one is private queue created by <code>let myQueue = DispatchQueue(label:"test queue")</code>. Tasks in <code>sync</code> code block will be queuing in the new created private queue.</p>
+</details>
+<details class="question" open="open">
+<summary>What <code>queue</code> will tasks in <code>sync</code> block be on?</summary>
+<p>When you call <code>let myQueue = DispatchQueue(label:"test queue")</code>, you will send the code in the block of <code>sync</code> to some other queue besides existing queue (such as main queue).</p>
+<p>No matter in serial, concurrent or parallel processing, you can always have multiple queues (* but not for threads).</p>
+</details>
+<details class="question" open="open">
+<summary>What <code>thread</code> will tasks in <code>sync</code> block be on?</summary>
+<p>Remember: <strong>Context-switching between threads is expensive. Cheaper to stay on the same thread if you can.</strong></p>
+<p>Anytime you call <code>sync</code>, even if you do not do <code>DispatchQueue.main.sync { … }</code>(to send the work to the main dispatch queue) and instead synchronously dispatch to some other queue, even a private queue you created, the task you submitted might still execute on the main thread.</p>
+</details>
+<details class="question" open="open">
+<summary>What <code>queue</code> and <code>thread</code> will tasks in <code>DispatchQueue.main.sync { … }</code> block be on?</summary>
+<p>Main queue. Main thread.</p>
+</details>
+<details class="question" open="open">
+<summary>Deadlock condition?</summary>
+<p><code>Same thread</code> &amp; <code>serial queue</code> &amp; <code>sync</code> ---&gt; deadlock.</p>
+</details>
 <h2 id="iii-dead-lock-in-dispatch-queue"><strong>III. Dead lock in dispatch queue</strong><a class="headerlink" href="#iii-dead-lock-in-dispatch-queue" title="Permanent link">⚓︎</a></h2>
 <p>To understand dead lock happends in dispatch queue processing, we firstly need to know what is the <a href="../../../Others/Concurrency/">Concurrency</a>.</p>
 <h3 id="dead-lock-case-1-dispatch-queue"><strong>Dead lock case 1 (dispatch queue)</strong><a class="headerlink" href="#dead-lock-case-1-dispatch-queue" title="Permanent link">⚓︎</a></h3>
@@ -1474,7 +1508,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 9, 2022</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">November 10, 2022</span>
       
         <br>
         Created:
