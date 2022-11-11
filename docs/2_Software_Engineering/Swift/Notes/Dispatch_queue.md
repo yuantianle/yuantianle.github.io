@@ -136,5 +136,5 @@ print("3")
 
 **Explaination Picture**
 
-![image](https://user-images.githubusercontent.com/61530469/200782821-4b81ac12-962c-47d5-8c09-14d40b02c764.png){width="40%", : .center}
+![image](deadlock2.jpg){width="40%", : .center}
 
