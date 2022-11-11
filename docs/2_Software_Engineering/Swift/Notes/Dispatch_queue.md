@@ -136,5 +136,36 @@ print("3")
 
 **Explaination Picture**
 
-![image](deadlock2.jpg){width="40%", : .center}
+![image](deadlock2.jpg){width="100%", : .center}
+
+
+### **No dead lock case (serial queue with `sync`)**
+
+**Code**
+
+```swift title="ndl.swift"
+import Foundation
+
+let myQueue = DispatchQueue(label:"test queue")
+
+print("1")
+
+myQueue.sync{
+    print("2")
+}
+
+print("3")
+```
+
+**Output**
+
+```
+1
+2
+3
+```
+
+**Explaination Picture**
+
+![image](ndeadlock1.jpg){width="100%", : .center}
 
