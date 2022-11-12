@@ -48,4 +48,6 @@ Instead, I directly run the image I have in Docker Desktop. And once I want to s
 
 ![image](https://user-images.githubusercontent.com/61530469/201456359-757131cf-482b-4292-830f-9631b401f514.png){width="80%", : .center}
 
+???+ dangerous
 
+  (It doesn't mean you cannot run the terminal anymore. After you run the container through the Docker Desktop engine, you can open any terminal to edit your container status. Just at this time. closing the terminal will not affect your container process.)
