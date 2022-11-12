@@ -129,9 +129,14 @@ nav:
       - 2_Software_Engineering/README.md
       - Docker:
         - 2_Software_Engineering/Docker/README.md
-        - Guidance: 2_Software_Engineering/Docker/Guidance.md
+        - Guidance: 
+          - 2_Software_Engineering/Docker/Guidance/README.md
+          - Docker Compose -> Container: 2_Software_Engineering/Docker/Guidance/docker_compose.md
+          - Docker Run -> Container: 2_Software_Engineering/Docker/Guidance/docker_run.md
+        - Docker Image (DIY): 2_Software_Engineering/Docker/A_good_model_for_Docker_Image_initialization.md
+        - Docker Compose: 2_Software_Engineering/Docker/Docker_compose.md
         - Command Line: 2_Software_Engineering/Docker/Docker_Command.md
-        - Docker Image init (DIY): 2_Software_Engineering/Docker/A_good_model_for_Docker_Image_initialization.md
+        
         
       - Swift: 
         - 2_Software_Engineering/Swift/README.md

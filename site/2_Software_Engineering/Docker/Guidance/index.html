@@ -13,7 +13,7 @@
     
     
       
-        <title>Guidance - Tianle Yuan's Blog</title>
+        <title>**Basic guidance of docker** - Tianle Yuan's Blog</title>
       
     
     
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Guidance
+              **Basic guidance of docker**
             
           </span>
         </div>
@@ -571,6 +571,8 @@
         
           
         
+          
+        
       
       
         
@@ -600,18 +602,103 @@
     
   
   
-    <li class="md-nav__item md-nav__item--active">
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2_2" type="checkbox" id="__nav_3_2_2" checked>
+      
       
       
         
+          
+            
+          
+        
+          
+        
+          
+        
       
       
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Guidance
+        
+        
+        <div class="md-nav__link md-nav__link--index md-nav__link--active">
+          <a href="./">Guidance</a>
+          
+            <label for="__nav_3_2_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Guidance" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Guidance
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="docker_compose/" class="md-nav__link">
+        Docker Compose -> Container
       </a>
-      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="docker_run/" class="md-nav__link">
+        Docker Run -> Container
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../A_good_model_for_Docker_Image_initialization/" class="md-nav__link">
+        Docker Image (DIY)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Docker_compose/" class="md-nav__link">
+        Docker Compose
+      </a>
     </li>
   
 
@@ -625,20 +712,6 @@
     <li class="md-nav__item">
       <a href="../Docker_Command/" class="md-nav__link">
         Command Line
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../A_good_model_for_Docker_Image_initialization/" class="md-nav__link">
-        Docker Image init (DIY)
       </a>
     </li>
   
@@ -1292,7 +1365,7 @@
                 
                   
 
-  <a href="https://github.com/yuantianle/yuantianle.github.io/edit/main/docs/2_Software_Engineering/Docker/Guidance.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/yuantianle/yuantianle.github.io/edit/main/docs/2_Software_Engineering/Docker/Guidance/README.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
@@ -1304,34 +1377,28 @@
 </blockquote>
 <h3 id="step-1-install-docker-desktop"><strong>Step 1. Install Docker Desktop</strong><a class="headerlink" href="#step-1-install-docker-desktop" title="Permanent link">⚓︎</a></h3>
 <p>We can download <img alt="🐳" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f433.svg" title=":whale:" /> <a href="https://docs.docker.com/get-docker/">Docker Desktop</a> from the website and install it on your Windows 10.</p>
-<h3 id="step-2-create-a-docker-composeyml-file"><strong>Step 2. Create a <code>docker-compose.yml</code> file</strong><a class="headerlink" href="#step-2-create-a-docker-composeyml-file" title="Permanent link">⚓︎</a></h3>
-<div class="highlight"><span class="filename">docker-compose.yml</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos="1 "></span></a><span class="nt">services</span><span class="p">:</span><span class="w"></span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><a href="#__codelineno-0-2"><span class="linenos" data-linenos="2 "></span></a><span class="w">  </span><span class="nt">dev</span><span class="p">:</span><span class="w"></span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><a href="#__codelineno-0-3"><span class="linenos" data-linenos="3 "></span></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;swiftlang/swift:nightly-focal&quot;</span><span class="w"> </span><span class="c1">#Default setting package for your system</span><span class="w"></span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><a href="#__codelineno-0-4"><span class="linenos" data-linenos="4 "></span></a><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w"></span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><a href="#__codelineno-0-5"><span class="linenos" data-linenos="5 "></span></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/Users/&lt;YOUR_DIC_TO_INSTALL_SWIFT&gt;/swift:/code</span><span class="w"></span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><a href="#__codelineno-0-6"><span class="linenos" data-linenos="6 "></span></a><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w"></span>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><a href="#__codelineno-0-7"><span class="linenos" data-linenos="7 "></span></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">USER=&lt;YOUR_NAME&gt;</span><span class="w"></span>
-</code></pre></div>
-<h3 id="step-3-launch-the-dev-docker-service-created-in-step-2"><strong>Step 3. Launch the <code>dev</code> Docker service created in Step 2</strong><a class="headerlink" href="#step-3-launch-the-dev-docker-service-created-in-step-2" title="Permanent link">⚓︎</a></h3>
-<p>Turn on your Docker Desktop. Then run the code below. </p>
-<p>Once inside your docker container, <code>cd code</code>.  From <code>\code</code> directory you can run the swift command.</p>
-<div class="highlight"><span class="filename">Git Bash</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos="1 "></span></a>docker-compose run --rm dev
-</code></pre></div>
-<blockquote>
-<p>(The three steps above are sited from Prof. Will Braynen, OSU)</p>
-</blockquote>
+<h3 id="step-2-run-docker-container"><strong>Step 2. Run Docker Container</strong><a class="headerlink" href="#step-2-run-docker-container" title="Permanent link">⚓︎</a></h3>
+<p><strong>To run <code>Docker Container</code>, firstly you need to have a <code>Docker Image</code>. There are two ways to have an <code>Image</code>:</strong></p>
+<ul>
+<li>Create an <code>Image</code> by using <code>dockerfile</code> (see in <a href="../A_good_model_for_Docker_Image_initialization/">A good model for Docker Image initialization</a>).</li>
+<li>Git clone an <code>Image</code> from Docker Hub.</li>
+</ul>
+<p><strong>After you have the <code>Docker Image</code> as the system mirror settings, you can create a <code>Docker Container</code> as an realization of the system. There are two ways to create the <code>Docker Container</code>:</strong></p>
+<ul>
+<li>Docker <a href="docker_run/"><code>run</code></a>.</li>
+<li>Docker <a href="docker_compose/"><code>compose</code></a>.</li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 9, 2022 09:19:51</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 12, 2022 08:13:08</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 3, 2022 06:58:10</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 12, 2022 08:13:08</span>
       
     
   </small>
@@ -1421,13 +1488,13 @@
       
       
         
-        <a href="../Docker_Command/" class="md-footer__link md-footer__link--next" aria-label="Next: Command Line" rel="next">
+        <a href="docker_compose/" class="md-footer__link md-footer__link--next" aria-label="Next: Docker Compose -&gt; Container" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Command Line
+              Docker Compose -> Container
             </div>
           </div>
           <div class="md-footer__button md-icon">
