@@ -78,7 +78,7 @@ curl localhost:3000
 
 ## **3.  Server on host, client in Docker container**
 
-```yml title:"S_d&C_h.yml"
+```yml title:"S_h&C_d.yml"
 services:
   client:
     image: "swiftlang/swift:nightly-focal" #simpli_image
@@ -99,4 +99,30 @@ curl host.docker.internal:3000/data/2.5/weather
 
 ## **4.  Server in Docker container, client in another Docker container**
 
+```yml title:"S_d&C_another_d.yml"
+services:
+  server:
+    image: "swiftlang/swift:nightly-focal"
+    volumes:
+      - "C:/CS561_WEEK8:/code"
+    environment:
+      - USER=ytl_5 
+    command: bash -c "apt-get update && apt-get install -y nodejs && node /code/myapp/app.js"
 
+  client:
+    image: "swiftlang/swift:nightly-focal"
+    volumes:
+      - "C:/CS561_WEEK8:/code"
+      - USER=ytl_5 
+```
+
+```bash
+Host:
+docker-compose run --rm --name myserver server
+docker inspect myserver | grep IPAddress
+docker-compose run --rm --name myclient client
+docker inspect myclient | grep IPAddress
+
+Docker Container:
+curl <server ip address>:3000/data/2.5/weather
+```
