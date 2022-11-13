@@ -78,4 +78,25 @@ curl localhost:3000
 
 ## **3.  Server on host, client in Docker container**
 
+```yml title:"S_d&C_h.yml"
+services:
+  client:
+    image: "swiftlang/swift:nightly-focal" #simpli_image
+    volumes:
+      - "C:/CS561_WEEK8:/code"
+    environment:
+      - USER=ytl_5 
+    command: bash -c "apt-get update && apt-get install -y nodejs && node /code/myapp/app.js"
+```
+
+```bash
+Host:
+docker-compose run --rm client
+
+Docker Container:
+curl host.docker.internal:3000/data/2.5/weather
+```
+
 ## **4.  Server in Docker container, client in another Docker container**
+
+
