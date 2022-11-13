@@ -127,6 +127,11 @@ nav:
       
     - Software Engineering: 
       - 2_Software_Engineering/README.md
+      - Github:
+        - 2_Software_Engineering/Github/README.md
+        - Github commands: 2_Software_Engineering/Github/commands.md
+        - Github Action: 2_Software_Engineering/Github/action.md
+
       - Docker:
         - 2_Software_Engineering/Docker/README.md
         - Guidance: 
@@ -149,10 +154,14 @@ nav:
           - Dispatch queue: 2_Software_Engineering/Swift/Notes/Dispatch_queue.md
           - Map-Reduce: 2_Software_Engineering/Swift/Notes/Map_reduce.md
 
-      - Terminal: 2_Software_Engineering/Terminal/README.md
-      - VS_Code: 2_Software_Engineering/VS_Code/README.md
+      - Terminal: 
+        - 2_Software_Engineering/Terminal/README.md
+      - VS_Code: 
+        - 2_Software_Engineering/VS_Code/README.md
       - Others: 
+        - 2_Software_Engineering/Others/README.md
         - Concurrency v.s. Parallelism: 2_Software_Engineering/Others/Concurrency.md
+        - SSH: 2_Software_Engineering/Others/SSH.md
 
     - C++: 3_C++/README.md
     - Algorithm: 

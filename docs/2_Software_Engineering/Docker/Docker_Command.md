@@ -2,11 +2,13 @@
 CommentS: true
 ---
 
-# **Some basic command for Docker**
+# **Docker command line**
 
->Useful link for understanding Docker concepts:</br>
-[What Is a Dockerfile: Everything You Need to Know](https://www.simplilearn.com/tutorials/docker-tutorial/what-is-dockerfile)</br>
-[Top Docker Commands That You Need to Master](https://www.simplilearn.com/tutorials/docker-tutorial/docker-commands)
+>Useful link for understanding Docker concepts:
+
+>* [What Is a Dockerfile: Everything You Need to Know](https://www.simplilearn.com/tutorials/docker-tutorial/what-is-dockerfile)
+
+>* [Top Docker Commands That You Need to Master](https://www.simplilearn.com/tutorials/docker-tutorial/docker-commands)
 
 ## **I. Docker Image**
 

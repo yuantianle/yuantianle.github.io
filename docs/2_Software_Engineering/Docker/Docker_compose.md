@@ -10,7 +10,7 @@ We have already touched `Docker Compose` from [Guidance](./Guidance/docker_compo
 
 Assume our mock server looks like this:
 
-```jsm title:"mockapi.js"
+```java title="mockapi.js"
 const express = require('express')
 const app = express()
 const port = 3000
@@ -33,7 +33,7 @@ app.listen(port, () => {
 
 ## **1.  Server and client in the same Docker container**
 
-```yaml title:"S_d&C_d.yml"
+```yaml title="S_d&C_d.yml"
 services:
   server:
     image: "swiftlang/swift:nightly-focal" #simpli_image
@@ -45,16 +45,16 @@ services:
 ```
 
 ```shell
-Host:
+#Host:
 docker-compose run --rm --name myserver server
 
-Docker:
+#Docker:
 curl localhost:3000/data/2.5/Weather
 ```
 
 ## **2.  Server in Docker container, client on host**
 
-```yaml title:"S_d&C_h.yml"
+```yaml title="S_d&C_h.yml"
 services:
   server:
     image: "swiftlang/swift:nightly-focal" #simpli_image
@@ -68,17 +68,17 @@ services:
 ```
 
 ```shell
-Host:
+#Host:
 docker-compose run --rm --service-ports server
 
-Host:
+#Host:
 curl localhost:3000
 ```
 
 
 ## **3.  Server on host, client in Docker container**
 
-```yaml title:"S_h&C_d.yml"
+```yaml title="S_h&C_d.yml"
 services:
   client:
     image: "swiftlang/swift:nightly-focal" #simpli_image
@@ -90,16 +90,16 @@ services:
 ```
 
 ```shell
-Host:
+#Host:
 docker-compose run --rm client
 
-Docker Container:
+#Docker Container:
 curl host.docker.internal:3000/data/2.5/weather
 ```
 
 ## **4.  Server in Docker container, client in another Docker container**
 
-```yaml title:"S_d&C_another_d.yml"
+```yaml title="S_d&C_another_d.yml"
 services:
   server:
     image: "swiftlang/swift:nightly-focal"
@@ -117,12 +117,12 @@ services:
 ```
 
 ```shell
-Host:
+#Host:
 docker-compose run --rm --name myserver server
 docker inspect myserver | grep IPAddress
 docker-compose run --rm --name myclient client
 docker inspect myclient | grep IPAddress
 
-Docker Container:
+#Docker Container:
 curl <server ip address>:3000/data/2.5/weather
 ```
