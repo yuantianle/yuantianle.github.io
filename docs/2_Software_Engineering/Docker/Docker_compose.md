@@ -10,7 +10,7 @@ We have already touched `Docker Compose` from [Guidance](./Guidance/docker_compo
 
 Assume our mock server looks like this:
 
-```js title:"mockapi.js"
+```jsm title:"mockapi.js"
 const express = require('express')
 const app = express()
 const port = 3000
@@ -33,7 +33,7 @@ app.listen(port, () => {
 
 ## **1.  Server and client in the same Docker container**
 
-```yml title:"S_d&C_d.yml"
+```yaml title:"S_d&C_d.yml"
 services:
   server:
     image: "swiftlang/swift:nightly-focal" #simpli_image
@@ -44,7 +44,7 @@ services:
     command: bash -c "apt-get update && apt-get install -y nodejs && node /code/myapp/app.js"
 ```
 
-```bash
+```shell
 Host:
 docker-compose run --rm --name myserver server
 
@@ -54,7 +54,7 @@ curl localhost:3000/data/2.5/Weather
 
 ## **2.  Server in Docker container, client on host**
 
-```yml title:"S_d&C_h.yml"
+```yaml title:"S_d&C_h.yml"
 services:
   server:
     image: "swiftlang/swift:nightly-focal" #simpli_image
@@ -67,7 +67,7 @@ services:
       -"3000:3000"
 ```
 
-```bash
+```shell
 Host:
 docker-compose run --rm --service-ports server
 
@@ -78,7 +78,7 @@ curl localhost:3000
 
 ## **3.  Server on host, client in Docker container**
 
-```yml title:"S_h&C_d.yml"
+```yaml title:"S_h&C_d.yml"
 services:
   client:
     image: "swiftlang/swift:nightly-focal" #simpli_image
@@ -89,7 +89,7 @@ services:
     command: bash -c "apt-get update && apt-get install -y nodejs && node /code/myapp/app.js"
 ```
 
-```bash
+```shell
 Host:
 docker-compose run --rm client
 
@@ -99,7 +99,7 @@ curl host.docker.internal:3000/data/2.5/weather
 
 ## **4.  Server in Docker container, client in another Docker container**
 
-```yml title:"S_d&C_another_d.yml"
+```yaml title:"S_d&C_another_d.yml"
 services:
   server:
     image: "swiftlang/swift:nightly-focal"
@@ -116,7 +116,7 @@ services:
       - USER=ytl_5 
 ```
 
-```bash
+```shell
 Host:
 docker-compose run --rm --name myserver server
 docker inspect myserver | grep IPAddress
