@@ -77,6 +77,17 @@ plugins:
       fallback_to_build_date: true
       type: datetime
   - search
+  - git-authors:
+      show_contribution: true
+      show_line_count: true
+      show_email_address: true
+      count_empty_lines: true
+      fallback_to_empty: false
+      sort_authors_by: name
+      authorship_threshold_percent: 10
+      exclude:
+          - index.md
+      enabled: true
 
 repo_url: https://github.com/yuantianle
 repo_name: yuantianle's GitHub
