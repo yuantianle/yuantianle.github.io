@@ -173,3 +173,60 @@ print("3")
 
 ![image](ndeadlock1.jpg){width="90%", : .center}
 
+
+### **:arm: Application of Dispatch Queue**
+
+``` swift title="application.swift"
+import Foundation
+
+// Read-write pattern - using a serial dispatch queue
+
+protocol DataProvider {
+    func getValue(_ key: String) -> Int?
+    func updateValue(_ key: String, _ value: Int)
+}
+
+class MockData: DataProvider {
+    func getValue(_ key: String) -> Int? {
+        return 6
+    }
+
+    func updateValue(_ key: String, _ value: Int) {}
+}
+
+/// A thread-safe data provider
+class Data: DataProvider {
+    // singleton pattern
+    static let shared = Data()
+    private init() {}
+
+    private var lookupTable: [String: Int] = [:]
+    private let lock = DispatchQueue(label: "edu.oregonstate.data-provider-lock")
+
+    // read
+    func getValue(_ key: String) -> Int? {
+        lock.sync {
+            return lookupTable[key]
+        }
+    }
+
+    // write
+    func updateValue(_ key: String, _ value: Int) {
+        lock.async {
+            self.lookupTable[key] = value
+        }
+    }
+}
+
+// Thread 1 - reader
+
+if (Data.shared.getValue("a") ?? 0) < 5 {
+
+    // do important stuff
+}
+
+// Thread 2 - writer
+
+Data.shared.updateValue("a", 5)
+```
+
