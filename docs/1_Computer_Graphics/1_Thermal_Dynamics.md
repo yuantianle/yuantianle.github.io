@@ -107,6 +107,8 @@ Usually, the Five-point stencil discretization with explicit method will need to
 
 ## **Final Results**
 
+After set the initial conditions (I.C.) of temperature and boundary conditions (B.C.), we start iterating the equation system until the solution converge to a stable status. The difference iteration processes can be seen below.
+
 **Case 1:</br>`Dirichlet B.C:` top, right</br>`Neumann B.C:` bottom, left</br>`High temperature I.C:` top, right</br>`Low temperature I.C:` rest of map**
 
 ![](Thermal/matrix_1.gif){width="40%", : .center}
