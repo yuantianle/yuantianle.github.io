@@ -178,6 +178,7 @@ nav:
       - Others: 
         - 2_Software_Engineering/Others/README.md
         - Concurrency v.s. Parallelism: 2_Software_Engineering/Others/Concurrency.md
+        - Lock, mutex, and Semaphore: 2_Software_Engineering/Others/Lock_mutex_semaphore.md
         - SSH: 2_Software_Engineering/Others/SSH.md
 
     - C++: 3_C++/README.md

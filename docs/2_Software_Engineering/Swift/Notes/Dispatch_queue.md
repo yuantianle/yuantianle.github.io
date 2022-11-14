@@ -176,6 +176,8 @@ print("3")
 
 ### **:arm: Application of Dispatch Queue**
 
+The example shown below indicates that we can use `Dispatch Queue` as a "thread lock" to protect the thread processing for a code block from interrupted by other thread.
+
 ``` swift title="application.swift"
 import Foundation
 
@@ -201,6 +203,7 @@ class Data: DataProvider {
     private init() {}
 
     private var lookupTable: [String: Int] = [:]
+    // Dispatch queue lock for protecting read and write behaviors
     private let lock = DispatchQueue(label: "edu.oregonstate.data-provider-lock")
 
     // read

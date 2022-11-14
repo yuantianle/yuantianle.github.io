@@ -1,6 +1,7 @@
 ---
 comments: true
 ---
+
 # **:fire: Thermal Dynamics**
 
 >This section shows the implicit method of thermal transfering with FDE.
