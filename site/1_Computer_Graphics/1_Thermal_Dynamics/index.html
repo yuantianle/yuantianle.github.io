@@ -454,9 +454,56 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Thermal Dynamics
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Thermal Dynamics
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problem-background" class="md-nav__link">
+    Problem background
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#five-point-stencil-discretization" class="md-nav__link">
+    Five-point stencil discretization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-results" class="md-nav__link">
+    Final Results
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1554,12 +1601,103 @@
   </a>
 
 
-<h1 id="thermal-dynamics"><strong>Thermal Dynamics</strong><a class="headerlink" href="#thermal-dynamics" title="Permanent link">⚓︎</a></h1>
-<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos="1 "></span></a>{% raw %}{% include list.liquid all=true %}{% endraw %}
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><a href="#__codelineno-0-2"><span class="linenos" data-linenos="2 "></span></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><a href="#__codelineno-0-3"><span class="linenos" data-linenos="3 "></span></a>{% include list.liquid all=true %}
-</code></pre></div>
-<p>{% include list.liquid all=true %}</p>
+<h1 id="thermal-dynamics"><strong><img alt="🔥" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f525.svg" title=":fire:" /> Thermal Dynamics</strong><a class="headerlink" href="#thermal-dynamics" title="Permanent link">⚓︎</a></h1>
+<blockquote>
+<p>This section shows the implicit method of thermal transfering with FDE.</p>
+</blockquote>
+<h2 id="problem-background"><strong>Problem background</strong><a class="headerlink" href="#problem-background" title="Permanent link">⚓︎</a></h2>
+<p>Think about 2D case. Considering the continum of the whole wall material, heat conduction is the major way to transfer heat. We use heat diffusion as our heat conduction method. Assuming that <span class="arithmatex">\(X\)</span> is the domain of 2D plane, <span class="arithmatex">\(T\)</span> is the temperature at point <span class="arithmatex">\(p\)</span>, and <span class="arithmatex">\(\alpha\)</span> is the thermal diffusivity, then we have the Equation:</p>
+<div class="admonition tip">
+<div class="arithmatex">\[
+\begin{equation}
+    \frac{\partial T}{\partial t} = \alpha \Delta T(p) = \alpha\left(\frac{\partial^2 T}{\partial x^2}+\frac{\partial^2 T}  {\partial y^2}\right),\quad \forall p=(x,y)\in X
+    \label{eq:thermal_diffuse}
+\end{equation}
+\]</div>
+</div>
+<p>Take <span class="arithmatex">\(f(p)\)</span> as a function relates to point <span class="arithmatex">\(p\)</span>, which we set is as a constant function.</br> <strong>Dirichlet boundary condition</strong> is:</p>
+<div class="admonition tip">
+<div class="arithmatex">\[
+\begin{equation}
+    \left\{ \begin{array}{ll} 
+        \Delta T(p) =0,\quad\forall p\in X
+    \\
+    \\
+        T(p) =f(p),\quad\forall p\in \partial X  
+    \end{array} \right.
+    \label{eq:Dirichlet_boundary_condition}
+\end{equation}
+\]</div>
+</div>
+<p><strong>Neumann boundary condition</strong> is:</p>
+<div class="admonition tip">
+<div class="arithmatex">\[
+\begin{equation}
+    \left\{ \begin{array}{ll} 
+        \Delta T(p) =0,\quad\forall p\in X
+    \\
+    \\
+        \dfrac{\partial T(p)}{\partial n} =f(p),\quad\forall p\in \partial X  
+    \end{array} \right.
+    \label{eq:Neumann_boundary_condition}
+\end{equation}
+\]</div>
+</div>
+<h2 id="five-point-stencil-discretization"><strong>Five-point stencil discretization</strong><a class="headerlink" href="#five-point-stencil-discretization" title="Permanent link">⚓︎</a></h2>
+<p>To visualize the phenomenon on computer, we need to have temperature grids. The grid is used for the descritization of the whole 2D plane. <code>Five-point stencil</code> difference is the method we use to express derivation for the heat partial differential equations. The corresponding temperature grid with <code>Five-point stencil</code> can be seen in picture shown below:</p>
+<p><img :=":" _="," alt="" class="center" src="../Thermal/chpt4_Five_stenclie_iter.png" width="40%" /></p>
+<p>The continuous differential form shown in <a href="#problem-background">Problem background</a>, is further rewritten into a discrete form by the temperature grid as shown in equation below. The sparse matrix system will be solved in an implicit way.</p>
+<div class="admonition tip">
+<div class="arithmatex">\[
+\begin{equation}
+\begin{aligned}
+    \frac{T^{n+1}_{i,j}-T^{n}_{i,j}}{\Delta t} = &amp; \alpha\left[\frac{T^{n+1}_{i+1,j}-2T^{n+1}_{i,j}+T^{n+1}_{i-1,j}}    {\Delta x^2}+\frac{T^{n+1}_{i,j+1}-2T^{n+1}_{i,j}+T^{n+1}_{i,j-1}}{\Delta y^2}\right]
+    \\
+    &amp;+O(\Delta t,\Delta x^2),\quad \forall (x,y)\in X
+    \label{eq:thermal_diffuse_discrete}
+\end{aligned}
+\end{equation}
+\]</div>
+</div>
+<p>Where <span class="arithmatex">\(i\)</span> and <span class="arithmatex">\(j\)</span> are the spacial indices on the temperature grid, <span class="arithmatex">\(n\)</span> is the temporal index, which monotonically increasing over time, and <span class="arithmatex">\(o\)</span> is infinitesimaali in space and time.</p>
+<p>We also do the same discritize processing for the two boundary conditions. We get the expression of Dirichlet B.C. and Neumann B.C. shown in below two equations [Neil 2015].</p>
+<div class="admonition tip">
+<div class="arithmatex">\[
+\begin{equation}
+    T^{n}_{i,j} = C,\quad \forall (x,y)\in \partial X
+    \label{eq:Dirichlet_boundary_condition_discrete}
+\end{equation}
+\]</div>
+<div class="arithmatex">\[
+\begin{equation}
+    \left\{ \begin{array}{ll} 
+        \frac{T^{n+1}_{i,j}-T^{n}_{i,j}}{\Delta t} = \alpha\left(\frac{2T^{n+1}_{i+1,j}-2T^{n+1}_{i,j}-2\Delta xC}  {\Delta   x^2}\right),\quad\forall i,\; (i,j)\in \partial X_{left}
+    \\
+    \\
+        \frac{T^{n+1}_{i,j}-T^{n}_{i,j}}{\Delta t} = \alpha\left(\frac{2T^{n+1}_{i-1,j}-2T^{n+1}_{i,j}-2\Delta xC}  {\Delta   x^2}\right),\quad\forall i,\; (i,j)\in \partial X_{right}
+    \\
+    \\
+        \frac{T^{n+1}_{i,j}-T^{n}_{i,j}}{\Delta t} = \alpha\left(\frac{2T^{n+1}_{i,j+1}-2T^{n+1}_{i,j}-2\Delta yC}  {\Delta   y^2}\right),\quad\forall j,\; (i,j)\in \partial X_{top}
+    \\
+    \\
+        \frac{T^{n+1}_{i,j}-T^{n}_{i,j}}{\Delta t} = \alpha\left(\frac{2T^{n+1}_{i,j-1}-2T^{n+1}_{i,j}-2\Delta yC}  {\Delta   y^2}\right),\quad\forall j,\; (i,j)\in \partial X_{bottom}
+    \end{array} \right.
+    \label{eq:Neumann_boundary_condition_discrete}
+\end{equation}
+\]</div>
+</div>
+<p>Usually, the Five-point stencil discretization with explicit method will need to be limited by some step length constrains. However, based on our implementation by using implicit method, our iteration step can be far longer than the explicit method, which means the temperature transfering can be speed up by increasing the lengh of the iteration step.</p>
+<h2 id="final-results"><strong>Final Results</strong><a class="headerlink" href="#final-results" title="Permanent link">⚓︎</a></h2>
+<p><strong>Case 1:</br><code>Dirichlet B.C:</code> top, right</br><code>Neumann B.C:</code> bottom, left</br><code>High temperature I.C:</code> top, right</br><code>Low temperature I.C:</code> rest of map</strong></p>
+<p><img :=":" _="," alt="" class="center" src="../Thermal/matrix_1.gif" width="40%" /></p>
+<p><strong>Case 2:</br><code>Dirichlet B.C:</code> top</br><code>Neumann B.C:</code> bottom, left, right</br><code>High temperature I.C:</code> top</br><code>Low temperature I.C:</code> rest of map</strong></p>
+<p><img :=":" _="," alt="" class="center" src="../Thermal/matrix_2.gif" width="40%" /></p>
+<p><strong>Case 3:</br><code>Dirichlet B.C:</code> top, right</br><code>Neumann B.C:</code> bottom, left</br><code>High temperature I.C:</code> top, right</br><code>Low temperature I.C:</code> rest of map</strong></p>
+<p><img :=":" _="," alt="" class="center" src="../Thermal/matrix_3.gif" width="40%" /></p>
+<p><strong>Case 4:</br><code>Dirichlet B.C:</code> top</br><code>Neumann B.C:</code> bottom, left, right</br><code>High temperature I.C:</code> top</br><code>Low temperature I.C:</code> rest of map</strong></p>
+<p><img :=":" _="," alt="" class="center" src="../Thermal/matrix_4.gif" width="40%" /></p>
+<h3 id="references"><strong>References</strong><a class="headerlink" href="#references" title="Permanent link">⚓︎</a></h3>
+<p>“Finite difference methods,” Neil Balmforth's webpage. [Online]. Available: https://personal.math.ubc.ca/~njb/fd. [Accessed: 14-Nov-2022]. </p>
 
   <hr>
 <div class="md-source-file">
@@ -1730,6 +1868,12 @@
     
     
       <script src="../../assets/javascripts/bundle.8492ddcf.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

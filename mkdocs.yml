@@ -46,6 +46,10 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 extra:
   alternate:
@@ -114,6 +118,8 @@ markdown_extensions:
   - pymdownx.critic
   - attr_list
   - tables
+  - pymdownx.arithmatex:
+      generic: true
 
 
   - toc: # 大纲
