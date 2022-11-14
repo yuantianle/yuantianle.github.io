@@ -174,7 +174,7 @@ print("3")
 ![image](ndeadlock1.jpg){width="90%", : .center}
 
 
-### **:arm: Application of Dispatch Queue**
+### **:mechanical_arm: Application of Dispatch Queue**
 
 The example shown below indicates that we can use `Dispatch Queue` as a "thread lock" to protect the thread processing for a code block from interrupted by other thread.
 
