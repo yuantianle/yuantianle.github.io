@@ -8,19 +8,19 @@
       
       
       
-      <link rel="icon" href="/images/self.ico">
+      <link rel="icon" href="../../../images/self.ico">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
       
-        <title>Tianle Yuan's Blog</title>
+        <title>**Lock, Mutex, and Semaphore** - Tianle Yuan's Blog</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.472b142f.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.472b142f.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.08040f6c.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.08040f6c.min.css">
         
       
       
@@ -37,9 +37,9 @@
       
     
     
-      <link rel="stylesheet" href="/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -67,6 +67,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#lock-mutex-and-semaphore" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -77,9 +82,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Tianle Yuan&#39;s Blog" class="md-header__button md-logo" aria-label="Tianle Yuan's Blog" data-md-component="logo">
+    <a href="../../.." title="Tianle Yuan&#39;s Blog" class="md-header__button md-logo" aria-label="Tianle Yuan's Blog" data-md-component="logo">
       
-  <img src="/images/logo_reverse.png" alt="logo">
+  <img src="../../../images/logo_reverse.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -95,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              **Lock, Mutex, and Semaphore**
             
           </span>
         </div>
@@ -137,7 +142,7 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="/." hreflang="en" class="md-select__link">
+                  <a href="../../.." hreflang="en" class="md-select__link">
                     English
                   </a>
                 </li>
@@ -222,7 +227,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="/." class="md-tabs__link">
+    <a href="../../.." class="md-tabs__link">
       Intro
     </a>
   </li>
@@ -237,7 +242,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/1_Computer_Graphics/" class="md-tabs__link">
+      <a href="../../../1_Computer_Graphics/" class="md-tabs__link">
         Computer Graphics
       </a>
     </li>
@@ -253,7 +258,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/2_Software_Engineering/" class="md-tabs__link">
+      <a href="../../" class="md-tabs__link">
         Software Engineering
       </a>
     </li>
@@ -266,7 +271,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="/3_C%2B%2B/" class="md-tabs__link">
+    <a href="../../../3_C%2B%2B/" class="md-tabs__link">
       C++
     </a>
   </li>
@@ -281,7 +286,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="/4_Algorithms/" class="md-tabs__link">
+      <a href="../../../4_Algorithms/" class="md-tabs__link">
         Algorithm
       </a>
     </li>
@@ -294,7 +299,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="/5_Math/" class="md-tabs__link">
+    <a href="../../../5_Math/" class="md-tabs__link">
       Math
     </a>
   </li>
@@ -306,7 +311,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="/6_Casual_Literary_Notes/" class="md-tabs__link">
+    <a href="../../../6_Casual_Literary_Notes/" class="md-tabs__link">
       Casual Literary
     </a>
   </li>
@@ -318,7 +323,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="/7_Guitar_Garage/" class="md-tabs__link">
+    <a href="../../../7_Guitar_Garage/" class="md-tabs__link">
       Guitar Garage
     </a>
   </li>
@@ -347,9 +352,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Tianle Yuan&#39;s Blog" class="md-nav__button md-logo" aria-label="Tianle Yuan's Blog" data-md-component="logo">
+    <a href="../../.." title="Tianle Yuan&#39;s Blog" class="md-nav__button md-logo" aria-label="Tianle Yuan's Blog" data-md-component="logo">
       
-  <img src="/images/logo_reverse.png" alt="logo">
+  <img src="../../../images/logo_reverse.png" alt="logo">
 
     </a>
     Tianle Yuan's Blog
@@ -377,7 +382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Intro
       </a>
     </li>
@@ -415,7 +420,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="/1_Computer_Graphics/">Computer Graphics</a>
+          <a href="../../../1_Computer_Graphics/">Computer Graphics</a>
           
             <label for="__nav_2">
               <span class="md-nav__icon md-icon"></span>
@@ -438,7 +443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1_Computer_Graphics/1_Thermal_Dynamics/" class="md-nav__link">
+      <a href="../../../1_Computer_Graphics/1_Thermal_Dynamics/" class="md-nav__link">
         Thermal Dynamics
       </a>
     </li>
@@ -452,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1_Computer_Graphics/2_Lighting/" class="md-nav__link">
+      <a href="../../../1_Computer_Graphics/2_Lighting/" class="md-nav__link">
         Lighting
       </a>
     </li>
@@ -466,7 +471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/1_Computer_Graphics/3_Three_js/" class="md-nav__link">
+      <a href="../../../1_Computer_Graphics/3_Three_js/" class="md-nav__link">
         Three.js
       </a>
     </li>
@@ -517,7 +522,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="/2_Software_Engineering/">Software Engineering</a>
+          <a href="../../">Software Engineering</a>
           
             <label for="__nav_3">
               <span class="md-nav__icon md-icon"></span>
@@ -563,7 +568,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="/2_Software_Engineering/Github/">Github</a>
+          <a href="../../Github/">Github</a>
           
             <label for="__nav_3_2">
               <span class="md-nav__icon md-icon"></span>
@@ -586,7 +591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/2_Software_Engineering/Github/commands/" class="md-nav__link">
+      <a href="../../Github/commands/" class="md-nav__link">
         Github commands
       </a>
     </li>
@@ -600,7 +605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/2_Software_Engineering/Github/action/" class="md-nav__link">
+      <a href="../../Github/action/" class="md-nav__link">
         Github Action
       </a>
     </li>
@@ -648,7 +653,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="/2_Software_Engineering/Docker/">Docker</a>
+          <a href="../../Docker/">Docker</a>
           
             <label for="__nav_3_3">
               <span class="md-nav__icon md-icon"></span>
@@ -692,7 +697,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="/2_Software_Engineering/Docker/Guidance/">Guidance</a>
+          <a href="../../Docker/Guidance/">Guidance</a>
           
             <label for="__nav_3_3_2">
               <span class="md-nav__icon md-icon"></span>
@@ -715,7 +720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/2_Software_Engineering/Docker/Guidance/docker_compose/" class="md-nav__link">
+      <a href="../../Docker/Guidance/docker_compose/" class="md-nav__link">
         Docker Compose -> Container
       </a>
     </li>
@@ -729,7 +734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/2_Software_Engineering/Docker/Guidance/docker_run/" class="md-nav__link">
+      <a href="../../Docker/Guidance/docker_run/" class="md-nav__link">
         Docker Run -> Container
       </a>
     </li>
@@ -750,7 +755,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/2_Software_Engineering/Docker/A_good_model_for_Docker_Image_initialization/" class="md-nav__link">
+      <a href="../../Docker/A_good_model_for_Docker_Image_initialization/" class="md-nav__link">
         Docker Image (DIY)
       </a>
     </li>
@@ -764,7 +769,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/2_Software_Engineering/Docker/Docker_compose/" class="md-nav__link">
+      <a href="../../Docker/Docker_compose/" class="md-nav__link">
         Docker Compose
       </a>
     </li>
@@ -778,7 +783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/2_Software_Engineering/Docker/Docker_Command/" class="md-nav__link">
+      <a href="../../Docker/Docker_Command/" class="md-nav__link">
         Command Line
       </a>
     </li>
@@ -822,7 +827,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="/2_Software_Engineering/Swift/">Swift</a>
+          <a href="../../Swift/">Swift</a>
           
             <label for="__nav_3_4">
               <span class="md-nav__icon md-icon"></span>
@@ -866,7 +871,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="/2_Software_Engineering/Swift/Swift_on_win10/">Swift on Windows 10</a>
+          <a href="../../Swift/Swift_on_win10/">Swift on Windows 10</a>
           
             <label for="__nav_3_4_2">
               <span class="md-nav__icon md-icon"></span>
@@ -889,7 +894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/2_Software_Engineering/Swift/Swift_on_win10/TL_DR/" class="md-nav__link">
+      <a href="../../Swift/Swift_on_win10/TL_DR/" class="md-nav__link">
         TL;DR
       </a>
     </li>
@@ -903,7 +908,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/2_Software_Engineering/Swift/Swift_on_win10/VS_Code_Docker_for_a_nice_Swift_edition_on_Windows10/" class="md-nav__link">
+      <a href="../../Swift/Swift_on_win10/VS_Code_Docker_for_a_nice_Swift_edition_on_Windows10/" class="md-nav__link">
         VS Code-Docker for Swift on Win10
       </a>
     </li>
@@ -945,7 +950,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="/2_Software_Engineering/Swift/Notes/">Learning Notes</a>
+          <a href="../../Swift/Notes/">Learning Notes</a>
           
             <label for="__nav_3_4_3">
               <span class="md-nav__icon md-icon"></span>
@@ -968,7 +973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/2_Software_Engineering/Swift/Notes/Dispatch_queue/" class="md-nav__link">
+      <a href="../../Swift/Notes/Dispatch_queue/" class="md-nav__link">
         Dispatch queue
       </a>
     </li>
@@ -982,7 +987,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/2_Software_Engineering/Swift/Notes/Map_reduce/" class="md-nav__link">
+      <a href="../../Swift/Notes/Map_reduce/" class="md-nav__link">
         Map-Reduce
       </a>
     </li>
@@ -1029,7 +1034,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="/2_Software_Engineering/Terminal/">Terminal</a>
+          <a href="../../Terminal/">Terminal</a>
           
         </div>
       
@@ -1074,7 +1079,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="/2_Software_Engineering/VS_Code/">VS_Code</a>
+          <a href="../../VS_Code/">VS_Code</a>
           
         </div>
       
@@ -1125,7 +1130,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="/2_Software_Engineering/Others/">Others</a>
+          <a href="../">Others</a>
           
             <label for="__nav_3_7">
               <span class="md-nav__icon md-icon"></span>
@@ -1148,7 +1153,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/2_Software_Engineering/Others/Concurrency/" class="md-nav__link">
+      <a href="../Concurrency/" class="md-nav__link">
         Concurrency v.s. Parallelism
       </a>
     </li>
@@ -1162,7 +1167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/2_Software_Engineering/Others/Lock_mutex_semaphore.md" class="md-nav__link">
+      <a href="../Lock_mutex_semaphore.md" class="md-nav__link">
         Lock, mutex, and Semaphore
       </a>
     </li>
@@ -1176,7 +1181,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/2_Software_Engineering/Others/SSH/" class="md-nav__link">
+      <a href="../SSH/" class="md-nav__link">
         SSH
       </a>
     </li>
@@ -1205,7 +1210,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/3_C%2B%2B/" class="md-nav__link">
+      <a href="../../../3_C%2B%2B/" class="md-nav__link">
         C++
       </a>
     </li>
@@ -1241,7 +1246,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="/4_Algorithms/">Algorithm</a>
+          <a href="../../../4_Algorithms/">Algorithm</a>
           
             <label for="__nav_5">
               <span class="md-nav__icon md-icon"></span>
@@ -1283,7 +1288,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="/4_Algorithms/Practice_Sheet/">Practic Sheet</a>
+          <a href="../../../4_Algorithms/Practice_Sheet/">Practic Sheet</a>
           
         </div>
       
@@ -1332,7 +1337,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="/4_Algorithms/Typical_Questions/">Typical Questions</a>
+          <a href="../../../4_Algorithms/Typical_Questions/">Typical Questions</a>
           
             <label for="__nav_5_3">
               <span class="md-nav__icon md-icon"></span>
@@ -1387,7 +1392,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/4_Algorithms/Typical_Questions/Leetcode/Topology_sort/" class="md-nav__link">
+      <a href="../../../4_Algorithms/Typical_Questions/Leetcode/Topology_sort/" class="md-nav__link">
         Topology Sort
       </a>
     </li>
@@ -1401,7 +1406,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/4_Algorithms/Typical_Questions/Leetcode/Quick_sort/" class="md-nav__link">
+      <a href="../../../4_Algorithms/Typical_Questions/Leetcode/Quick_sort/" class="md-nav__link">
         Quick Sort
       </a>
     </li>
@@ -1452,7 +1457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/4_Algorithms/Typical_Questions/Hackerrank/STDIN%26STDOUT/" class="md-nav__link">
+      <a href="../../../4_Algorithms/Typical_Questions/Hackerrank/STDIN%26STDOUT/" class="md-nav__link">
         STDIN and STDOUT
       </a>
     </li>
@@ -1488,7 +1493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/5_Math/" class="md-nav__link">
+      <a href="../../../5_Math/" class="md-nav__link">
         Math
       </a>
     </li>
@@ -1503,7 +1508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/6_Casual_Literary_Notes/" class="md-nav__link">
+      <a href="../../../6_Casual_Literary_Notes/" class="md-nav__link">
         Casual Literary
       </a>
     </li>
@@ -1518,7 +1523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/7_Guitar_Garage/" class="md-nav__link">
+      <a href="../../../7_Guitar_Garage/" class="md-nav__link">
         Guitar Garage
       </a>
     </li>
@@ -1536,8 +1541,96 @@
           
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
+                  
+  
+    <div class="md-source-date" style="text-align: right; font-weight: bold;">
+      <small>
+          Author: <span class='git-page-authors git-authors'><a href='mailto:yuant@oregonstate.edu'>Tianle Yuan</a></span>
+      </small>
+    </div>
+  
+  
+                  
+
+  <a href="https://github.com/yuantianle/yuantianle.github.io/edit/main/docs/2_Software_Engineering/Others/Lock__mutex_semaphore.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="lock-mutex-and-semaphore"><strong>Lock, Mutex, and Semaphore</strong><a class="headerlink" href="#lock-mutex-and-semaphore" title="Permanent link">⚓︎</a></h1>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      Last update:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 14, 2022 22:36:39</span>
+      
+        <br>
+        Created:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 14, 2022 22:36:39</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+    <script src="https://giscus.app/client.js"
+        data-repo="yuantianle/yuantianle.github.io"
+        data-repo-id="R_kgDOITXaGg"
+        data-category-id="DIC_kwDOITXaGs4CSWJD"
+        =""
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    </script>
+
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
+
                 
-  <h1>404 - Not found</h1>
+
+
 
               </article>
             </div>
@@ -1596,12 +1689,12 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "/", "features": ["navigation.instant", "navigation.indexes", "search.suggest", "search.highlight", "navigation.tabs", "navigation.sections", "toc.integrate", "content.code.annotate"], "search": "/assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.indexes", "search.suggest", "search.highlight", "navigation.tabs", "navigation.sections", "toc.integrate", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="/assets/javascripts/bundle.d6c3db9e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
       
-        <script src="/javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
