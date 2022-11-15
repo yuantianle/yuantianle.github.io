@@ -1,9 +1,7 @@
 # **:radioactive: C++**
 
-```
-{% raw %}{% include list.liquid all=true %}{% endraw %}
+> **Basic OOP learning with C++**
 
-{% include list.liquid all=true %}
-```
+## This sub-chapter can be saperated into 1 sections:
 
-{% include list.liquid all=true %}
+1. [Inheritance](Inheritance/README.md).

@@ -1,4 +1,6 @@
-# **:book: Table of contents**
+# **Inheritance**
+
+### **:book: Table of contents**
 
 1. [Basic Inheritance](#basic-inheritance)
 

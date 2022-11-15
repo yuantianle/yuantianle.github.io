@@ -186,7 +186,7 @@ nav:
       - 3_C++/README.md
       - Inheritance: 
         - 3_C++/Inheritance/README.md
-        - 3_C++/Inheritance/Inheritance.md
+        - --> contents: 3_C++/Inheritance/Inheritance.md
 
     - Algorithm: 
       - 4_Algorithms/README.md
