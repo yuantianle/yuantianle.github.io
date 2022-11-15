@@ -2,10 +2,10 @@
 
 ### **:book: Table of contents**
 
-1. [Basic Inheritance](#basic-inheritance)
+1. [Basic Inheritance](Inheritance/#basic-inheritance)
 
-2. [Multiple Inheritance](#multiple-inheritance)
+2. [Multiple Inheritance](Inheritance/#multiple-inheritance)
    
-3. [Inheritance Access](#inheritance-access)
+3. [Inheritance Access](Inheritance/#inheritance-access)
 
-4. [`Public`, `Private`, and `Protected` Inheritances](#public-private-and-protected-inheritances)
+4. [`Public`, `Private`, and `Protected` Inheritances](Inheritance/#public-private-and-protected-inheritances)
