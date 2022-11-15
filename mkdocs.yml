@@ -51,6 +51,7 @@ extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
+
 extra:
   alternate:
     - name: English
@@ -181,7 +182,12 @@ nav:
         - Lock, mutex, and Semaphore: 2_Software_Engineering/Others/Lock_mutex_semaphore.md
         - SSH: 2_Software_Engineering/Others/SSH.md
 
-    - C++: 3_C++/README.md
+    - C++: 
+      - 3_C++/README.md
+      - Inheritance: 
+        - 3_C++/Inheritance/README.md
+        - 3_C++/Inheritance/Inheritance.md
+
     - Algorithm: 
       - 4_Algorithms/README.md
       - Practic Sheet: 
