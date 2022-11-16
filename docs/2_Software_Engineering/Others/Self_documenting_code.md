@@ -2,7 +2,7 @@
 comments: true
 ---
 
-# **😎 Self-documenting code** 
+# **😎 Self-documenting Code** 
 
 ## **About the topic**
 
