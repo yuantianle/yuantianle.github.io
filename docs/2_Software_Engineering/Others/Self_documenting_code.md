@@ -67,22 +67,22 @@ Let's see how to do self-documenting in `Swift`:
     ```swift title="question.swift"
     import Foundation
 
-    func greet(s1: String, s2: String) -> String {
+    func greet(_ s1: String, _ s2: String) -> String {
         return "Hello \(s1)!  Glad you could visit from \(s2)."
     }
 
-    assert(greet(s1: "Will", s2: "Portland") == "Hello Will!  Glad you could visit from Portland.")
+    assert(greet("Will", "Portland") == "Hello Will!  Glad you could visit from Portland.")
     ```
 
 ???+ info "Notice!"
 
-    Swift restricts the title before each argument input when we implement the function, i.e., you cannot run `greet("Bill", "Cupertino")`. This semantic diminishes ambiguities when compiler compiling.
+    Swift restricts the `parameter name` before each argument input when we implement the function, i.e., you cannot run `greet("Bill", "Cupertino")` unless you use `_` in the `function signature`. This semantic diminishes ambiguities when compiler compiling.
 
 In [Swift](https://docs.swift.org/swift-book/LanguageGuide/Functions.html#//apple_ref/doc/uid/TP40014097-CH10-ID158), each function parameter has both a `parameter name` and an `argument label`. 
 
-- The `parameter name` {==is used in the implementation of the function==}. 
+- The `parameter name` {==is used in the implementation of the function==} (in `function signature`). 
 
-- The `argument label` {==is used when calling the function==}; each argument is written in the function call with its argument label before it. 
+- The `argument label` {==is used when calling the function==}; each argument is written in the function call with its argument label before it (in `call site`). 
 
 So we do self-documenting firstly based on refining `parameter name`.
 
