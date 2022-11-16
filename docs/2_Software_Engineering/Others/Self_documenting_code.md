@@ -76,7 +76,7 @@ Let's see how to do self-documenting in `Swift`:
 
 ???+ info "Notice!"
 
-    Swift restricts the `parameter name` before each argument input when we implement the function, i.e., you cannot run `greet("Bill", "Cupertino")` unless you use `_` in the `function signature`. This semantic diminishes ambiguities when compiler compiling.
+    Swift restricts the `parameter name` before each argument input when we implement the function, i.e., you are not encouraged to run `greet("Bill", "Cupertino")` unless you use `_` before `parameter name` in the `function signature`. This semantic diminishes ambiguities when compiler compiling.
 
 In [Swift](https://docs.swift.org/swift-book/LanguageGuide/Functions.html#//apple_ref/doc/uid/TP40014097-CH10-ID158), each function parameter has both a `parameter name` and an `argument label`. 
 

@@ -1807,7 +1807,7 @@
   
     <div class="md-source-date" style="text-align: right; font-weight: bold;">
       <small>
-          Author: <span class='git-page-authors git-authors'></span>
+          Author: <span class='git-page-authors git-authors'><a href='mailto:yuant@oregonstate.edu'>Tianle Yuan</a></span>
       </small>
     </div>
   
@@ -1820,7 +1820,7 @@
   </a>
 
 
-<h1 id="-self-documenting-code"><strong>😎 Self-documenting code</strong><a class="headerlink" href="#-self-documenting-code" title="Permanent link">⚓︎</a></h1>
+<h1 id="-self-documenting-code"><strong>😎 Self-documenting Code</strong><a class="headerlink" href="#-self-documenting-code" title="Permanent link">⚓︎</a></h1>
 <h2 id="about-the-topic"><strong>About the topic</strong><a class="headerlink" href="#about-the-topic" title="Permanent link">⚓︎</a></h2>
 <p>Let's look at the <a href="https://stackoverflow.com/a/209089">code case</a> shown below:</p>
 <details class="question" open="open">
@@ -1870,24 +1870,24 @@
 <summary>Question</summary>
 <div class="highlight"><span class="filename">question.swift</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><a href="#__codelineno-5-1"><span class="linenos" data-linenos="1 "></span></a><span class="kd">import</span> <span class="nc">Foundation</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2"></a><a href="#__codelineno-5-2"><span class="linenos" data-linenos="2 "></span></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a><a href="#__codelineno-5-3"><span class="linenos" data-linenos="3 "></span></a><span class="kd">func</span> <span class="nf">greet</span><span class="p">(</span><span class="n">s1</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">s2</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="p">{</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><a href="#__codelineno-5-3"><span class="linenos" data-linenos="3 "></span></a><span class="kd">func</span> <span class="nf">greet</span><span class="p">(</span><span class="kc">_</span> <span class="n">s1</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="kc">_</span> <span class="n">s2</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="p">{</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4"></a><a href="#__codelineno-5-4"><span class="linenos" data-linenos="4 "></span></a>    <span class="k">return</span> <span class="s">&quot;Hello </span><span class="si">\(</span><span class="n">s1</span><span class="si">)</span><span class="s">!  Glad you could visit from </span><span class="si">\(</span><span class="n">s2</span><span class="si">)</span><span class="s">.&quot;</span>
 <a id="__codelineno-5-5" name="__codelineno-5-5"></a><a href="#__codelineno-5-5"><span class="linenos" data-linenos="5 "></span></a><span class="p">}</span>
 <a id="__codelineno-5-6" name="__codelineno-5-6"></a><a href="#__codelineno-5-6"><span class="linenos" data-linenos="6 "></span></a>
-<a id="__codelineno-5-7" name="__codelineno-5-7"></a><a href="#__codelineno-5-7"><span class="linenos" data-linenos="7 "></span></a><span class="bp">assert</span><span class="p">(</span><span class="n">greet</span><span class="p">(</span><span class="n">s1</span><span class="p">:</span> <span class="s">&quot;Will&quot;</span><span class="p">,</span> <span class="n">s2</span><span class="p">:</span> <span class="s">&quot;Portland&quot;</span><span class="p">)</span> <span class="p">==</span> <span class="s">&quot;Hello Will!  Glad you could visit from Portland.&quot;</span><span class="p">)</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><a href="#__codelineno-5-7"><span class="linenos" data-linenos="7 "></span></a><span class="bp">assert</span><span class="p">(</span><span class="n">greet</span><span class="p">(</span><span class="s">&quot;Will&quot;</span><span class="p">,</span> <span class="s">&quot;Portland&quot;</span><span class="p">)</span> <span class="p">==</span> <span class="s">&quot;Hello Will!  Glad you could visit from Portland.&quot;</span><span class="p">)</span>
 </code></pre></div>
 </details>
 <details class="info" open="open">
 <summary>Notice!</summary>
-<p>Swift restricts the title before each argument input when we implement the function, i.e., you cannot run <code>greet("Bill", "Cupertino")</code>. This semantic diminishes ambiguities when compiler compiling.</p>
+<p>Swift restricts the <code>parameter name</code> before each argument input when we implement the function, i.e., you are not encouraged to run <code>greet("Bill", "Cupertino")</code> unless you use <code>_</code> before <code>parameter name</code> in the <code>function signature</code>. This semantic diminishes ambiguities when compiler compiling.</p>
 </details>
 <p>In <a href="https://docs.swift.org/swift-book/LanguageGuide/Functions.html#//apple_ref/doc/uid/TP40014097-CH10-ID158">Swift</a>, each function parameter has both a <code>parameter name</code> and an <code>argument label</code>. </p>
 <ul>
 <li>
-<p>The <code>parameter name</code> <mark class="critic">is used in the implementation of the function</mark>. </p>
+<p>The <code>parameter name</code> <mark class="critic">is used in the implementation of the function</mark> (in <code>function signature</code>). </p>
 </li>
 <li>
-<p>The <code>argument label</code> <mark class="critic">is used when calling the function</mark>; each argument is written in the function call with its argument label before it. </p>
+<p>The <code>argument label</code> <mark class="critic">is used when calling the function</mark>; each argument is written in the function call with its argument label before it (in <code>call site</code>). </p>
 </li>
 </ul>
 <p>So we do self-documenting firstly based on refining <code>parameter name</code>.</p>
@@ -1930,11 +1930,11 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 16, 2022 07:41:43</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 16, 2022 07:48:03</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 16, 2022 07:41:43</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 16, 2022 07:42:13</span>
       
     
   </small>
