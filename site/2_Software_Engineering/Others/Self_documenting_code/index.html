@@ -13,7 +13,7 @@
     
     
       
-        <title>SSH - Tianle Yuan's Blog</title>
+        <title>Self-documenting code - Tianle Yuan's Blog</title>
       
     
     
@@ -67,6 +67,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#-self-documenting-code" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -95,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              SSH
+              Self-documenting code
             
           </span>
         </div>
@@ -1213,19 +1218,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../SSH/" class="md-nav__link">
         SSH
       </a>
-      
     </li>
   
 
@@ -1263,11 +1260,61 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../Self_documenting_code/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Self-documenting code
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Self-documenting code
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#about-the-topic" class="md-nav__link">
+    About the topic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#self-documenting-in-swift" class="md-nav__link">
+    Self-documenting in Swift
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1767,26 +1814,127 @@
   
                   
 
-  <a href="https://github.com/yuantianle/yuantianle.github.io/edit/main/docs/2_Software_Engineering/Others/SSH.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/yuantianle/yuantianle.github.io/edit/main/docs/2_Software_Engineering/Others/Self_documenting_code.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-  <h1>SSH</h1>
-
-
+<h1 id="-self-documenting-code"><strong>😎 Self-documenting code</strong><a class="headerlink" href="#-self-documenting-code" title="Permanent link">⚓︎</a></h1>
+<h2 id="about-the-topic"><strong>About the topic</strong><a class="headerlink" href="#about-the-topic" title="Permanent link">⚓︎</a></h2>
+<p>Let's look at the <a href="https://stackoverflow.com/a/209089">code case</a> shown below:</p>
+<details class="question" open="open">
+<summary>Question</summary>
+<p>What does the code below for?
+<div class="highlight"><span class="filename">question.c++</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos="1 "></span></a><span class="kt">float</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w"> </span><span class="n">a</span><span class="o">=</span><span class="mf">9.81</span><span class="p">;</span><span class="w"> </span><span class="n">b</span><span class="o">=</span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">c</span><span class="o">=</span><span class="w"> </span><span class="mf">.5</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+</code></pre></div></p>
+</details>
+<p>Of course, it is hard to read and understand the code above. Let's see the <code>self-documenting</code> version of the last code block:</p>
+<details class="success" open="open">
+<summary>Self-documenting version</summary>
+<div class="highlight"><span class="filename">improved_1.c++</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos="1 "></span></a><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">gravitationalForce</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9.81</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><a href="#__codelineno-1-2"><span class="linenos" data-linenos="2 "></span></a><span class="kt">float</span><span class="w"> </span><span class="n">timeInSeconds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><a href="#__codelineno-1-3"><span class="linenos" data-linenos="3 "></span></a><span class="kt">float</span><span class="w"> </span><span class="n">displacement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">gravitationalForce</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">timeInSeconds</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+</details>
+<p>Now, you can feel that <code>self-documenting</code> is a good code-writing habit for code understanding and development, even if we do not have comments. But! If your self-documenting is too complex, the variable name itself will cause code smell, which affects the readability of codes. So why not also add comments!</p>
+<details class="success" open="open">
+<summary>Self-documenting + Comment version</summary>
+<div class="highlight"><span class="filename">improved_2.c++</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><a href="#__codelineno-2-1"><span class="linenos" data-linenos="1 "></span></a><span class="cm">/* compute displacement with Newton&#39;s equation x = vₒt + ½at² */</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><a href="#__codelineno-2-2"><span class="linenos" data-linenos="2 "></span></a><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">gravitationalForce</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9.81</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><a href="#__codelineno-2-3"><span class="linenos" data-linenos="3 "></span></a><span class="kt">float</span><span class="w"> </span><span class="n">timeInSeconds</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><a href="#__codelineno-2-4"><span class="linenos" data-linenos="4 "></span></a><span class="kt">float</span><span class="w"> </span><span class="n">displacement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">gravitationalForce</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">timeInSeconds</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+</details>
+<p>But do not add comments on each line:</p>
+<details class="failure" open="open">
+<summary>Bad Comment example</summary>
+<div class="highlight"><span class="filename">bad.c++</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><a href="#__codelineno-3-1"><span class="linenos" data-linenos="1 "></span></a><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9.81</span><span class="p">;</span><span class="w"> </span><span class="c1">//gravitational force</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><a href="#__codelineno-3-2"><span class="linenos" data-linenos="2 "></span></a><span class="kt">float</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="c1">//time in seconds</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><a href="#__codelineno-3-3"><span class="linenos" data-linenos="3 "></span></a><span class="kt">float</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="p">(</span><span class="n">b</span><span class="o">^</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="c1">//multiply the time and gravity together to get displacement.</span>
+</code></pre></div>
+</details>
+<p>If your team requires <code>zero comments</code> coding style, transfer your code block with comments into <code>function closure</code>:</p>
+<details class="success" open="open">
+<summary>Self-documenting + function closure version</summary>
+<div class="highlight"><span class="filename">improved_3.c++</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><a href="#__codelineno-4-1"><span class="linenos" data-linenos="1 "></span></a><span class="kt">float</span><span class="w"> </span><span class="nf">computeDisplacement</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">timeInSeconds</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><a href="#__codelineno-4-2"><span class="linenos" data-linenos="2 "></span></a><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">gravitationalForce</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9.81</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><a href="#__codelineno-4-3"><span class="linenos" data-linenos="3 "></span></a><span class="kt">float</span><span class="w"> </span><span class="n">displacement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">gravitationalForce</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">timeInSeconds</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><a href="#__codelineno-4-4"><span class="linenos" data-linenos="4 "></span></a><span class="k">return</span><span class="w"> </span><span class="n">displacement</span><span class="p">;</span><span class="w"></span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><a href="#__codelineno-4-5"><span class="linenos" data-linenos="5 "></span></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</details>
+<h2 id="self-documenting-in-swift"><strong>Self-documenting in Swift</strong><a class="headerlink" href="#self-documenting-in-swift" title="Permanent link">⚓︎</a></h2>
+<p>Let's see how to do self-documenting in <code>Swift</code>:</p>
+<details class="question" open="open">
+<summary>Question</summary>
+<div class="highlight"><span class="filename">question.swift</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><a href="#__codelineno-5-1"><span class="linenos" data-linenos="1 "></span></a><span class="kd">import</span> <span class="nc">Foundation</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><a href="#__codelineno-5-2"><span class="linenos" data-linenos="2 "></span></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><a href="#__codelineno-5-3"><span class="linenos" data-linenos="3 "></span></a><span class="kd">func</span> <span class="nf">greet</span><span class="p">(</span><span class="n">s1</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">s2</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="p">{</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><a href="#__codelineno-5-4"><span class="linenos" data-linenos="4 "></span></a>    <span class="k">return</span> <span class="s">&quot;Hello </span><span class="si">\(</span><span class="n">s1</span><span class="si">)</span><span class="s">!  Glad you could visit from </span><span class="si">\(</span><span class="n">s2</span><span class="si">)</span><span class="s">.&quot;</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><a href="#__codelineno-5-5"><span class="linenos" data-linenos="5 "></span></a><span class="p">}</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><a href="#__codelineno-5-6"><span class="linenos" data-linenos="6 "></span></a>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><a href="#__codelineno-5-7"><span class="linenos" data-linenos="7 "></span></a><span class="bp">assert</span><span class="p">(</span><span class="n">greet</span><span class="p">(</span><span class="n">s1</span><span class="p">:</span> <span class="s">&quot;Will&quot;</span><span class="p">,</span> <span class="n">s2</span><span class="p">:</span> <span class="s">&quot;Portland&quot;</span><span class="p">)</span> <span class="p">==</span> <span class="s">&quot;Hello Will!  Glad you could visit from Portland.&quot;</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<details class="info" open="open">
+<summary>Notice!</summary>
+<p>Swift restricts the title before each argument input when we implement the function, i.e., you cannot run <code>greet("Bill", "Cupertino")</code>. This semantic diminishes ambiguities when compiler compiling.</p>
+</details>
+<p>In <a href="https://docs.swift.org/swift-book/LanguageGuide/Functions.html#//apple_ref/doc/uid/TP40014097-CH10-ID158">Swift</a>, each function parameter has both a <code>parameter name</code> and an <code>argument label</code>. </p>
+<ul>
+<li>
+<p>The <code>parameter name</code> <mark class="critic">is used in the implementation of the function</mark>. </p>
+</li>
+<li>
+<p>The <code>argument label</code> <mark class="critic">is used when calling the function</mark>; each argument is written in the function call with its argument label before it. </p>
+</li>
+</ul>
+<p>So we do self-documenting firstly based on refining <code>parameter name</code>.</p>
+<details class="success" open="open">
+<summary>Self-documenting in Swift</summary>
+<div class="highlight"><span class="filename">improved_1.swift</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><a href="#__codelineno-6-1"><span class="linenos" data-linenos="1 "></span></a><span class="kd">import</span> <span class="nc">Foundation</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><a href="#__codelineno-6-2"><span class="linenos" data-linenos="2 "></span></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><a href="#__codelineno-6-3"><span class="linenos" data-linenos="3 "></span></a><span class="kd">func</span> <span class="nf">greet</span><span class="p">(</span><span class="n">person</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">hometown</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="p">{</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><a href="#__codelineno-6-4"><span class="linenos" data-linenos="4 "></span></a>    <span class="k">return</span> <span class="s">&quot;Hello </span><span class="si">\(</span><span class="n">person</span><span class="si">)</span><span class="s">!  Glad you could visit from </span><span class="si">\(</span><span class="n">hometown</span><span class="si">)</span><span class="s">.&quot;</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><a href="#__codelineno-6-5"><span class="linenos" data-linenos="5 "></span></a><span class="p">}</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><a href="#__codelineno-6-6"><span class="linenos" data-linenos="6 "></span></a>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><a href="#__codelineno-6-7"><span class="linenos" data-linenos="7 "></span></a><span class="bp">assert</span><span class="p">(</span><span class="n">greet</span><span class="p">(</span><span class="n">person</span><span class="p">:</span> <span class="s">&quot;Will&quot;</span><span class="p">,</span> <span class="n">hometown</span><span class="p">:</span> <span class="s">&quot;Portland&quot;</span><span class="p">)</span> <span class="p">==</span> <span class="s">&quot;Hello Will!  Glad you could visit from Portland.&quot;</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<p>You can observe that when implementing the function, <code>greet(person: "Will", hometown: "Portland")</code> still reads not like natural language. Let's add <code>argument label</code>!</p>
+<details class="success" open="open">
+<summary>Self-documenting in Swift + Argument label</summary>
+<div class="highlight"><span class="filename">improved_1.swift</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><a href="#__codelineno-7-1"><span class="linenos" data-linenos="1 "></span></a><span class="kd">import</span> <span class="nc">Foundation</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><a href="#__codelineno-7-2"><span class="linenos" data-linenos="2 "></span></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><a href="#__codelineno-7-3"><span class="linenos" data-linenos="3 "></span></a><span class="kd">func</span> <span class="nf">greet</span><span class="p">(</span><span class="n">person</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="n">from</span> <span class="n">hometown</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="p">{</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><a href="#__codelineno-7-4"><span class="linenos" data-linenos="4 "></span></a>    <span class="k">return</span> <span class="s">&quot;Hello </span><span class="si">\(</span><span class="n">person</span><span class="si">)</span><span class="s">!  Glad you could visit from </span><span class="si">\(</span><span class="n">hometown</span><span class="si">)</span><span class="s">.&quot;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><a href="#__codelineno-7-5"><span class="linenos" data-linenos="5 "></span></a><span class="p">}</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><a href="#__codelineno-7-6"><span class="linenos" data-linenos="6 "></span></a>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><a href="#__codelineno-7-7"><span class="linenos" data-linenos="7 "></span></a><span class="bp">assert</span><span class="p">(</span><span class="n">greet</span><span class="p">(</span><span class="n">person</span><span class="p">:</span> <span class="s">&quot;Will&quot;</span><span class="p">,</span> <span class="n">from</span><span class="p">:</span> <span class="s">&quot;Portland&quot;</span><span class="p">)</span> <span class="p">==</span> <span class="s">&quot;Hello Will!  Glad you could visit from Portland.&quot;</span><span class="p">)</span>
+</code></pre></div>
+</details>
+<p>Thanks, Prof. Will always visits us from Portland! <img alt="🦧" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f9a7.svg" title=":orangutan:" /></p>
+<h3 id="references"><strong>References:</strong><a class="headerlink" href="#references" title="Permanent link">⚓︎</a></h3>
+<ul>
+<li>
+<p><a href="https://stackoverflow.com/a/209089">What is self-documenting code and can it replace well documented code? [closed]</a></p>
+</li>
+<li>
+<p><a href="https://docs.swift.org/swift-book/LanguageGuide/Functions.html#//apple_ref/doc/uid/TP40014097-CH10-ID158">Function Argument Labels and Parameter Names</a></p>
+</li>
+</ul>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 13, 2022 21:09:05</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 16, 2022 07:41:43</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 13, 2022 21:09:05</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 16, 2022 07:41:43</span>
       
     
   </small>
@@ -1795,6 +1943,55 @@
 
 
 
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+    <script src="https://giscus.app/client.js"
+        data-repo="yuantianle/yuantianle.github.io"
+        data-repo-id="R_kgDOITXaGg"
+        data-category-id="DIC_kwDOITXaGs4CSWJD"
+        =""
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    </script>
+
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
 
                 
 
@@ -1819,7 +2016,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: **Others**" rel="prev">
+        <a href="../Lock_mutex_semaphore/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Lock, mutex, and Semaphore" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1828,20 +2025,20 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              **Others**
+              Lock, mutex, and Semaphore
             </div>
           </div>
         </a>
       
       
         
-        <a href="../Concurrency/" class="md-footer__link md-footer__link--next" aria-label="Next: Concurrency v.s. Parallelism" rel="next">
+        <a href="../../../3_C%2B%2B/" class="md-footer__link md-footer__link--next" aria-label="Next: **:radioactive: C++**" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Concurrency v.s. Parallelism
+              **:radioactive: C++**
             </div>
           </div>
           <div class="md-footer__button md-icon">
