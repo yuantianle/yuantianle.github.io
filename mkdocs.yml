@@ -172,7 +172,9 @@ nav:
           - Map-Reduce: 2_Software_Engineering/Swift/Notes/Map_reduce.md
       - AWS:
         - 2_Software_Engineering/AWS/README.md
-        - Basic Concepts: 2_Software_Engineering/AWS/basic.md
+        - Basic Concepts: 
+          - 2_Software_Engineering/AWS/Basic/README.md
+          - IAM: 2_Software_Engineering/AWS/Basic/IAM.md
       - Terminal: 
         - 2_Software_Engineering/Terminal/README.md
       - VS_Code: 
