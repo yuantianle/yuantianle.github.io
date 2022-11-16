@@ -48,7 +48,7 @@ But do not add comments on each line:
 
 If your team requires `zero comments` coding style, transfer your code block with comments into `function closure`:
 
-???+ success "Self-documenting + function closure version"
+???+ success "Self-documenting + Function closure version"
 
     ```c++ title="improved_3.c++"
     float computeDisplacement(float timeInSeconds) {
@@ -112,7 +112,7 @@ You can observe that when implementing the function, `greet(person: "Will", home
     assert(greet(person: "Will", from: "Portland") == "Hello Will!  Glad you could visit from Portland.")
     ```
 
-Thanks, Prof. Will always visits us from Portland! :orangutan:
+>**Thanks, Prof. Will always visits us from Portland! :orangutan:**
 
 ### **References:**
 
