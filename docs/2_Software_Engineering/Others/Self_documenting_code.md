@@ -74,7 +74,7 @@ Let's see how to do self-documenting in `Swift`:
     assert(greet("Will", "Portland") == "Hello Will!  Glad you could visit from Portland.")
     ```
 
-???+ info "Notice!"
+???+ warning "Notice!"
 
     Swift restricts the `parameter name` before each argument input when we implement the function, i.e., you are not encouraged to run `greet("Bill", "Cupertino")` unless you use `_` (**Omitting Argument Labels**) before `parameter name` in the `function signature`. This semantic diminishes ambiguities when compiler compiling.
 
