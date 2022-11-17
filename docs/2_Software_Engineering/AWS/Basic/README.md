@@ -12,6 +12,8 @@ comments: true
 
 3. **[Elastic Load Balancing and Auto Scaling](LoadBalancer_Scaling.md)**
 
+4. **[S3](S3.md).**
+
 ### **References:**
 
 - [Digital Cloud Training](https://digitalcloud.training/)
