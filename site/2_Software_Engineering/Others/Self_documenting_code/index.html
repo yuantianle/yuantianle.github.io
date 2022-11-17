@@ -1062,10 +1062,91 @@
   
   
   
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5_2" type="checkbox" id="__nav_3_5_2" >
+      
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../AWS/Basic/">Basic Concepts</a>
+          
+            <label for="__nav_3_5_2">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" aria-label="Basic Concepts" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_5_2">
+          <span class="md-nav__icon md-icon"></span>
+          Basic Concepts
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../AWS/basic/" class="md-nav__link">
-        Basic Concepts
+      <a href="../../AWS/Basic/IAM/" class="md-nav__link">
+        IAM
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AWS/Basic/EC2/" class="md-nav__link">
+        EC2
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AWS/Basic/LoadBalancer_Scaling/" class="md-nav__link">
+        Load Balancer & Scaling
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -1856,7 +1937,7 @@
 </details>
 <p>If your team requires <code>zero comments</code> coding style, transfer your code block with comments into <code>function closure</code>:</p>
 <details class="success" open="open">
-<summary>Self-documenting + function closure version</summary>
+<summary>Self-documenting + Function closure version</summary>
 <div class="highlight"><span class="filename">improved_3.c++</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><a href="#__codelineno-4-1"><span class="linenos" data-linenos="1 "></span></a><span class="kt">float</span><span class="w"> </span><span class="nf">computeDisplacement</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">timeInSeconds</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <a id="__codelineno-4-2" name="__codelineno-4-2"></a><a href="#__codelineno-4-2"><span class="linenos" data-linenos="2 "></span></a><span class="k">const</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">gravitationalForce</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">9.81</span><span class="p">;</span><span class="w"></span>
 <a id="__codelineno-4-3" name="__codelineno-4-3"></a><a href="#__codelineno-4-3"><span class="linenos" data-linenos="3 "></span></a><span class="kt">float</span><span class="w"> </span><span class="n">displacement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">gravitationalForce</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">timeInSeconds</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span><span class="w"></span>
@@ -1877,9 +1958,9 @@
 <a id="__codelineno-5-7" name="__codelineno-5-7"></a><a href="#__codelineno-5-7"><span class="linenos" data-linenos="7 "></span></a><span class="bp">assert</span><span class="p">(</span><span class="n">greet</span><span class="p">(</span><span class="s">&quot;Will&quot;</span><span class="p">,</span> <span class="s">&quot;Portland&quot;</span><span class="p">)</span> <span class="p">==</span> <span class="s">&quot;Hello Will!  Glad you could visit from Portland.&quot;</span><span class="p">)</span>
 </code></pre></div>
 </details>
-<details class="info" open="open">
+<details class="warning" open="open">
 <summary>Notice!</summary>
-<p>Swift restricts the <code>parameter name</code> before each argument input when we implement the function, i.e., you are not encouraged to run <code>greet("Bill", "Cupertino")</code> unless you use <code>_</code> before <code>parameter name</code> in the <code>function signature</code>. This semantic diminishes ambiguities when compiler compiling.</p>
+<p>Swift restricts the <code>parameter name</code> before each argument input when we implement the function, i.e., you are not encouraged to run <code>greet("Bill", "Cupertino")</code> unless you use <code>_</code> (<strong>Omitting Argument Labels</strong>) before <code>parameter name</code> in the <code>function signature</code>. This semantic diminishes ambiguities when compiler compiling.</p>
 </details>
 <p>In <a href="https://docs.swift.org/swift-book/LanguageGuide/Functions.html#//apple_ref/doc/uid/TP40014097-CH10-ID158">Swift</a>, each function parameter has both a <code>parameter name</code> and an <code>argument label</code>. </p>
 <ul>
@@ -1914,7 +1995,9 @@
 <a id="__codelineno-7-7" name="__codelineno-7-7"></a><a href="#__codelineno-7-7"><span class="linenos" data-linenos="7 "></span></a><span class="bp">assert</span><span class="p">(</span><span class="n">greet</span><span class="p">(</span><span class="n">person</span><span class="p">:</span> <span class="s">&quot;Will&quot;</span><span class="p">,</span> <span class="n">from</span><span class="p">:</span> <span class="s">&quot;Portland&quot;</span><span class="p">)</span> <span class="p">==</span> <span class="s">&quot;Hello Will!  Glad you could visit from Portland.&quot;</span><span class="p">)</span>
 </code></pre></div>
 </details>
-<p>Thanks, Prof. Will always visits us from Portland! <img alt="🦧" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f9a7.svg" title=":orangutan:" /></p>
+<blockquote>
+<p><strong>Thanks, Prof. Will always visits us from Portland! <img alt="🦧" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f9a7.svg" title=":orangutan:" /></strong></p>
+</blockquote>
 <h3 id="references"><strong>References:</strong><a class="headerlink" href="#references" title="Permanent link">⚓︎</a></h3>
 <ul>
 <li>
@@ -1930,7 +2013,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 16, 2022 07:48:03</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 16, 2022 07:56:25</span>
       
         <br>
         Created:

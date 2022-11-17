@@ -4,4 +4,4 @@
 
 ## **There are x sections in this chapter:**
 
-1. **[Basic concepts in AWS](basic.md).**
+1. **[Basic concepts in AWS](Basic/README.md).**

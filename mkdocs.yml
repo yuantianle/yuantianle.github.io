@@ -175,6 +175,8 @@ nav:
         - Basic Concepts: 
           - 2_Software_Engineering/AWS/Basic/README.md
           - IAM: 2_Software_Engineering/AWS/Basic/IAM.md
+          - EC2: 2_Software_Engineering/AWS/Basic/EC2.md
+          - Load Balancer & Scaling: 2_Software_Engineering/AWS/Basic/LoadBalancer_Scaling.md
       - Terminal: 
         - 2_Software_Engineering/Terminal/README.md
       - VS_Code: 
