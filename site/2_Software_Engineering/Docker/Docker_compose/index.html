@@ -1952,7 +1952,7 @@
   
     <div class="md-source-date" style="text-align: right; font-weight: bold;">
       <small>
-          Author: <span class='git-page-authors git-authors'><a href='mailto:yuant@oregonstate.edu'>Tianle Yuan</a> (22.66%), <a href='mailto:61530469+yuantianle@users.noreply.github.com'>Tianle Yuan</a> (77.34%)</span>
+          Author: <span class='git-page-authors git-authors'><a href='mailto:yuant@oregonstate.edu'>Tianle Yuan</a> (20.14%), <a href='mailto:61530469+yuantianle@users.noreply.github.com'>Tianle Yuan</a> (68.06%)</span>
       </small>
     </div>
   
@@ -1991,6 +1991,10 @@
 <a id="__codelineno-0-18" name="__codelineno-0-18"></a><a href="#__codelineno-0-18"><span class="linenos" data-linenos="18 "></span></a><span class="p">})</span><span class="w"></span>
 </code></pre></div>
 <h2 id="1--server-and-client-in-the-same-docker-container"><strong>1.  Server and client in the same Docker container</strong><a class="headerlink" href="#1--server-and-client-in-the-same-docker-container" title="Permanent link">⚓︎</a></h2>
+<details class="question" open="open">
+<summary>Concept Diagram?</summary>
+<p><img :=":" _="," alt="picture" class="center" src="../picture/1.png" width="70%" />    </p>
+</details>
 <div class="highlight"><span class="filename">S_d&C_d.yml</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos="1 "></span></a><span class="nt">services</span><span class="p">:</span><span class="w"></span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a><a href="#__codelineno-1-2"><span class="linenos" data-linenos="2 "></span></a><span class="w">  </span><span class="nt">server</span><span class="p">:</span><span class="w"></span>
 <a id="__codelineno-1-3" name="__codelineno-1-3"></a><a href="#__codelineno-1-3"><span class="linenos" data-linenos="3 "></span></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;swiftlang/swift:nightly-focal&quot;</span><span class="w"> </span><span class="c1">#simpli_image</span><span class="w"></span>
@@ -2007,6 +2011,10 @@
 <a id="__codelineno-2-5" name="__codelineno-2-5"></a><a href="#__codelineno-2-5"><span class="linenos" data-linenos="5 "></span></a>curl localhost:3000/data/2.5/Weather
 </code></pre></div>
 <h2 id="2--server-in-docker-container-client-on-host"><strong>2.  Server in Docker container, client on host</strong><a class="headerlink" href="#2--server-in-docker-container-client-on-host" title="Permanent link">⚓︎</a></h2>
+<details class="question" open="open">
+<summary>Concept Diagram?</summary>
+<p><img :=":" _="," alt="picture" class="center" src="../picture/2.png" width="70%" />    </p>
+</details>
 <div class="highlight"><span class="filename">S_d&C_h.yml</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><a href="#__codelineno-3-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="nt">services</span><span class="p">:</span><span class="w"></span>
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a><a href="#__codelineno-3-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="w">  </span><span class="nt">server</span><span class="p">:</span><span class="w"></span>
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a><a href="#__codelineno-3-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;swiftlang/swift:nightly-focal&quot;</span><span class="w"> </span><span class="c1">#simpli_image</span><span class="w"></span>
@@ -2022,9 +2030,13 @@
 <a id="__codelineno-4-2" name="__codelineno-4-2"></a><a href="#__codelineno-4-2"><span class="linenos" data-linenos="2 "></span></a>docker-compose run --rm --service-ports server
 <a id="__codelineno-4-3" name="__codelineno-4-3"></a><a href="#__codelineno-4-3"><span class="linenos" data-linenos="3 "></span></a>
 <a id="__codelineno-4-4" name="__codelineno-4-4"></a><a href="#__codelineno-4-4"><span class="linenos" data-linenos="4 "></span></a><span class="c1">#Host:</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a><a href="#__codelineno-4-5"><span class="linenos" data-linenos="5 "></span></a>curl localhost:3000
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><a href="#__codelineno-4-5"><span class="linenos" data-linenos="5 "></span></a>curl localhost:3000/data/2.5/Weather
 </code></pre></div>
 <h2 id="3--server-on-host-client-in-docker-container"><strong>3.  Server on host, client in Docker container</strong><a class="headerlink" href="#3--server-on-host-client-in-docker-container" title="Permanent link">⚓︎</a></h2>
+<details class="question" open="open">
+<summary>Concept Diagram?</summary>
+<p><img :=":" _="," alt="picture" class="center" src="../picture/3.png" width="70%" />    </p>
+</details>
 <div class="highlight"><span class="filename">S_h&C_d.yml</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><a href="#__codelineno-5-1"><span class="linenos" data-linenos="1 "></span></a><span class="nt">services</span><span class="p">:</span><span class="w"></span>
 <a id="__codelineno-5-2" name="__codelineno-5-2"></a><a href="#__codelineno-5-2"><span class="linenos" data-linenos="2 "></span></a><span class="w">  </span><span class="nt">client</span><span class="p">:</span><span class="w"></span>
 <a id="__codelineno-5-3" name="__codelineno-5-3"></a><a href="#__codelineno-5-3"><span class="linenos" data-linenos="3 "></span></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;swiftlang/swift:nightly-focal&quot;</span><span class="w"> </span><span class="c1">#simpli_image</span><span class="w"></span>
@@ -2041,6 +2053,10 @@
 <a id="__codelineno-6-5" name="__codelineno-6-5"></a><a href="#__codelineno-6-5"><span class="linenos" data-linenos="5 "></span></a>curl host.docker.internal:3000/data/2.5/weather
 </code></pre></div>
 <h2 id="4--server-in-docker-container-client-in-another-docker-container"><strong>4.  Server in Docker container, client in another Docker container</strong><a class="headerlink" href="#4--server-in-docker-container-client-in-another-docker-container" title="Permanent link">⚓︎</a></h2>
+<details class="question" open="open">
+<summary>Concept Diagram?</summary>
+<p><img :=":" _="," alt="picture" class="center" src="../picture/4.png" width="70%" />    </p>
+</details>
 <div class="highlight"><span class="filename">S_d&C_another_d.yml</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><a href="#__codelineno-7-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="nt">services</span><span class="p">:</span><span class="w"></span>
 <a id="__codelineno-7-2" name="__codelineno-7-2"></a><a href="#__codelineno-7-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="w">  </span><span class="nt">server</span><span class="p">:</span><span class="w"></span>
 <a id="__codelineno-7-3" name="__codelineno-7-3"></a><a href="#__codelineno-7-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;swiftlang/swift:nightly-focal&quot;</span><span class="w"></span>

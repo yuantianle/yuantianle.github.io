@@ -33,6 +33,10 @@ app.listen(port, () => {
 
 ## **1.  Server and client in the same Docker container**
 
+???+ question "Concept Diagram?"
+
+    ![picture](picture/1.png){width="70%", : .center}    
+
 ```yaml title="S_d&C_d.yml"
 services:
   server:
@@ -54,6 +58,10 @@ curl localhost:3000/data/2.5/Weather
 
 ## **2.  Server in Docker container, client on host**
 
+???+ question "Concept Diagram?"
+
+    ![picture](picture/2.png){width="70%", : .center}    
+
 ```yaml title="S_d&C_h.yml"
 services:
   server:
@@ -72,11 +80,15 @@ services:
 docker-compose run --rm --service-ports server
 
 #Host:
-curl localhost:3000
+curl localhost:3000/data/2.5/Weather
 ```
 
 
 ## **3.  Server on host, client in Docker container**
+
+???+ question "Concept Diagram?"
+
+    ![picture](picture/3.png){width="70%", : .center}    
 
 ```yaml title="S_h&C_d.yml"
 services:
@@ -98,6 +110,10 @@ curl host.docker.internal:3000/data/2.5/weather
 ```
 
 ## **4.  Server in Docker container, client in another Docker container**
+
+???+ question "Concept Diagram?"
+
+    ![picture](picture/4.png){width="70%", : .center}    
 
 ```yaml title="S_d&C_another_d.yml"
 services:
