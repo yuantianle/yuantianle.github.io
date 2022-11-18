@@ -1900,7 +1900,7 @@
   
     <div class="md-source-date" style="text-align: right; font-weight: bold;">
       <small>
-          Author: <span class='git-page-authors git-authors'></span>
+          Author: <span class='git-page-authors git-authors'><a href='mailto:yuant@oregonstate.edu'>Tianle Yuan</a></span>
       </small>
     </div>
   
@@ -1916,13 +1916,20 @@
 <h1 id="docker-containers-and-ecs"><strong>Docker Containers and ECS</strong><a class="headerlink" href="#docker-containers-and-ecs" title="Permanent link">⚓︎</a></h1>
 <details class="question" open="open">
 <summary>What is <code>Docker Container</code> and What is <code>Kubernetes</code>?</summary>
+<ul>
+<li>
 <p><code>Docker Container</code> is an alternative to traditional virtual machines. It can be understood as the <a href="../../../Docker/">Light-weight VM</a> that we can run our applications with <mark class="critic">fewer underlying resources and dependencies</mark>. <code>Docker Container</code> is very <mark class="critic">quick to start up</mark> and very <mark class="critic">good for <code>microservices</code>-based applications</mark>.</p>
+</li>
+<li>
 <p><code>Kubernetes</code> is a platform for running and managing <code>container</code>s from many container runtimes.</p>
-<p>The relationship between Virtual Machine, Container, and Kubernetes can be seen in the <a href="https://www.atlassian.com/microservices/microservices-architecture/kubernetes-vs-docker">picture</a> shown below:</p>
+</li>
+</ul>
+<p>The relationship between <strong>Virtual Machine</strong>, <strong>Container</strong>, and <strong>Kubernetes</strong> can be seen in the picture (which comes from "<em>Docker or Kubernetes: Which one is right for you?</em>" in <a href="https://www.atlassian.com/microservices/microservices-architecture/kubernetes-vs-docker">Kubernetes vs. Docker</a>), as shown below :</p>
 <p><img :=":" _="," alt="picture 6" class="center" src="../picture/Kubernetes.png" width="80%" />    </p>
 </details>
 <details class="question" open="open">
-<summary>What are <code>ECS</code> and <code>EKS</code>?</summary>
+<summary>Do you remember <code>EC2</code>? What are <code>ECS</code> and <code>EKS</code>?</summary>
+<p><code>EC2</code>, the <ins class="critic">Amazon Elastic Compute Cloud</ins> we discussed in the <a href="../EC2/">previous section</a>, is actually a <code>virtual machine</code>.</p>
 <p><code>ECS</code> is <ins class="critic">Amazon Elastic Container Service</ins> for you to use <code>container</code> in the AWS cloud. It also provides a <strong>fully</strong> managed serverless platform or <strong>partially</strong> self-managed platform for users.</p>
 <p><code>EKS</code>, the <ins class="critic">Amazon Elastic Kubernetes</ins>, is also offered by AWS to use <code>Kubernetes</code> in the cloud.</p>
 </details>
@@ -1949,11 +1956,11 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 18, 2022 01:40:14</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 18, 2022 01:40:41</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 18, 2022 01:40:15</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 18, 2022 01:40:41</span>
       
     
   </small>

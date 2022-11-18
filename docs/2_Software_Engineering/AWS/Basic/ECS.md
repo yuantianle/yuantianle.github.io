@@ -6,16 +6,18 @@ comments: true
 
 ???+ question "What is `Docker Container` and What is `Kubernetes`?"
 
-    `Docker Container` is an alternative to traditional virtual machines. It can be understood as the [Light-weight VM](../../Docker/README.md) that we can run our applications with {==fewer underlying resources and dependencies==}. `Docker Container` is very {==quick to start up==} and very {==good for `microservices`-based applications==}.
+    - `Docker Container` is an alternative to traditional virtual machines. It can be understood as the [Light-weight VM](../../Docker/README.md) that we can run our applications with {==fewer underlying resources and dependencies==}. `Docker Container` is very {==quick to start up==} and very {==good for `microservices`-based applications==}.
 
-    `Kubernetes` is a platform for running and managing `container`s from many container runtimes.
+    - `Kubernetes` is a platform for running and managing `container`s from many container runtimes.
 
-    The relationship between Virtual Machine, Container, and Kubernetes can be seen in the [picture](https://www.atlassian.com/microservices/microservices-architecture/kubernetes-vs-docker) shown below:
+    The relationship between **Virtual Machine**, **Container**, and **Kubernetes** can be seen in the picture (which comes from "*Docker or Kubernetes: Which one is right for you?*" in [Kubernetes vs. Docker](https://www.atlassian.com/microservices/microservices-architecture/kubernetes-vs-docker)), as shown below :
 
     ![picture 6](picture/Kubernetes.png){width="80%", : .center}    
 
 
-???+ question "What are `ECS` and `EKS`?"
+???+ question "Do you remember `EC2`? What are `ECS` and `EKS`?"
+
+    `EC2`, the {++Amazon Elastic Compute Cloud++} we discussed in the [previous section](./EC2.md), is actually a `virtual machine`.
 
     `ECS` is {++Amazon Elastic Container Service++} for you to use `container` in the AWS cloud. It also provides a **fully** managed serverless platform or **partially** self-managed platform for users.
     
