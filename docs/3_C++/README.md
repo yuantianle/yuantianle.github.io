@@ -1,4 +1,4 @@
-# **:radioactive: C++**
+# **:simple-cplusplus:{.e_cpp} C++**
 
 > **Basic OOP learning with C++**
 

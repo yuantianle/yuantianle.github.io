@@ -2,7 +2,7 @@
 comments: true
 ---
 
-# **Elastic Load Balancing and Auto Scaling**
+# **:octicons-share-android-24:{.e_swift} Elastic Load Balancing and Auto Scaling**
 
 ???+ question "What demand?"
 

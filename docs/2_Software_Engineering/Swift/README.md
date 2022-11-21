@@ -1,4 +1,4 @@
-# **Swift**
+# **:material-language-swift:{.e_swift} Swift**
 
 > **Although I am using Windows 10 and Linux, I never know when I will need to build projects for Mac OS. Time to learn!**
 

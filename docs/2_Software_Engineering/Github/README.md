@@ -1,4 +1,4 @@
-# **Github**
+# **:simple-github:{.e_github} Github**
 
 >**Version control is important especially when we are collaborating with others for a big project. Github is one of the tools for version control.**
 

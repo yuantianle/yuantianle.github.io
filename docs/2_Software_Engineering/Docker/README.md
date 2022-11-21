@@ -1,4 +1,4 @@
-# **:whale: Docker**
+# **:simple-docker:{.e_docker} Docker**
 
 >**Docker container is a "lightweight" VM. The benifit of using container is that we do not need to care much about hardware level as real virtual machine. Instead, we only focus on the levels above operating system. Also, like WSL2, Docker's operating system can garantee file's real-time real-write synchronization between docker container folder and host folder**
 

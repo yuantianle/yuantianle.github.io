@@ -1,4 +1,4 @@
-# VS Code
+# **:material-microsoft-visual-studio-code:{.e_vscode} VS Code**
 
 ```
 {% raw %}{% include list.liquid all=true %}{% endraw %}

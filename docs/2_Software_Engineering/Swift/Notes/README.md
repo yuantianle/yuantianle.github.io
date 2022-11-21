@@ -1,4 +1,4 @@
-# **Notes for Swift learning**
+# **:material-language-swift: Notes for Swift learning**
 
 ## Table of contents:
 

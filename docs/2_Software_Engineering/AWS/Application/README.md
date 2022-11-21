@@ -2,7 +2,7 @@
 comments: true
 ---
 
-# **Application 1: a `Decrypter` service**
+# **:simple-amazonaws: Application 1: a `Decrypter` service**
 
 ???+ question "Situation"
 

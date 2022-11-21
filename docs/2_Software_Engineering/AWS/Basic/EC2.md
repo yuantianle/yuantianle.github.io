@@ -2,7 +2,7 @@
 comments: true
 ---
 
-# **EC2**
+# **:simple-amazonec2:{.e_swift} EC2**
 
 ???+ question "What?"
 

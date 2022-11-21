@@ -2,7 +2,7 @@
 comments: true
 ---
 
-# **Docker Containers and ECS**
+# **:simple-amazonecs:{.e_swift} Docker Containers and ECS**
 
 ???+ question "What is `Docker Container` and What is `Kubernetes`?"
 
