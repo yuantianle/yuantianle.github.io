@@ -2,6 +2,6 @@
 
 > **Basic OOP learning with C++**
 
-## This sub-chapter can be saperated into 1 sections:
+### **This chapter can be separated into below sections:**
 
 1. [Inheritance](Inheritance/README.md).

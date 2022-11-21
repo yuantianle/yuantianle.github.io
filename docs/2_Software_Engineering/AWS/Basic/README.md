@@ -4,7 +4,7 @@ comments: true
 
 # **:fontawesome-brands-aws: Basic AWS concepts** 
 
-## **Table of Contents:**
+### **Table of Contents:**
 
 1. **:fontawesome-regular-id-card:{.e_swift} [IAM](IAM.md).**
 
@@ -18,7 +18,7 @@ comments: true
 
 6. **:simple-awslambda:{.e_swift} [Serverless Application](Serverless.md).**
 
-7. **:material-map-marker-path:{.e_swift} [Avalibility Zone and Region](Zone_region.md).**
+7. **:material-map-marker-path:{.e_swift} [Availbility Zone and Region](Zone_region.md).**
 
 ### **References:**
 

@@ -2,7 +2,7 @@
 
 >**Version control is important especially when we are collaborating with others for a big project. Github is one of the tools for version control.**
 
-## This section can be splited into 2 sections:
+### This section is split into 2 sections:
 
 1. [Github commands](commands.md) for start using Github.
 

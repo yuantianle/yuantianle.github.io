@@ -1,8 +1,8 @@
 # **:rocket: Software Engineering**
 
->**Being a software engineer requires an understanding of the various technologies used in the industry。**
+>**Being a software engineer requires an understanding of the various technologies used in the industry.**
 
-### **This chapter is splited into 7 sections:**
+### **This chapter is split into 7 sections:**
 
 1. [Github](Github/README.md): version control.
 

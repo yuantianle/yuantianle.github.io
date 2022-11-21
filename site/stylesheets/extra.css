@@ -103,3 +103,25 @@
 .md-nav__link>* {
       font-weight: bold;
 }
+
+.e_docker {
+    color: #1DA1F2;
+  }
+.e_github {
+    color: #7C007C;
+  }
+.e_vscode {
+    color: #1d8ff2;
+  }
+.e_cpp {
+    color: #f4ce65;
+  }
+.e_swift {
+    color: #F6692F;
+  }
+.e_aws {
+    color: #FD9827;
+  }  
+.e_terminal {
+    color: #02cb16;
+  }  

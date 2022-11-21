@@ -4,7 +4,7 @@ sort: 1
 
 # **:material-language-swift: Swift on Windows 10**
 
-## **There are two sections in this chapter:**
+### **There are two sections in this chapter:**
 
 1. **[TL;DR](TL_DR.md).**
 

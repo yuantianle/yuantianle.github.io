@@ -1,6 +1,6 @@
 # **:material-language-swift: Notes for Swift learning**
 
-## Table of contents:
+### **Table of contents:**
 
 1. [Dispatch queue and Dead lock](Dispatch_queue.md)
 

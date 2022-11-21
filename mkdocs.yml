@@ -139,9 +139,22 @@ nav:
 
     - Computer Graphics: 
       - 1_Computer_Graphics/README.md
-      - Thermal Dynamics: 1_Computer_Graphics/1_Thermal_Dynamics.md
-      - Lighting: 1_Computer_Graphics/2_Lighting.md
-      - Three.js: 1_Computer_Graphics/3_Three_js.md
+      - Science: 
+        - 1_Computer_Graphics/Science/README.md
+        - Thermal Dynamics: 1_Computer_Graphics/Science/Thermal/README.md
+        - Noise: 1_Computer_Graphics/Science/Noise/README.md
+        - Lighting: 1_Computer_Graphics/Science/Light/README.md
+      - Tools: 
+        - 1_Computer_Graphics/CGtech/README.md
+        - OpenCV: 1_Computer_Graphics/CGtech/OpenCV/README.md
+        - Shader: 1_Computer_Graphics/CGtech/Shader/README.md
+        - Three.js: 1_Computer_Graphics/CGtech/Threejs/README.md
+        - Unity: 1_Computer_Graphics/CGtech/Unity/README.md
+        - Unreal Engine: 1_Computer_Graphics/CGtech/Unreal/README.md
+        - Vulkan: 1_Computer_Graphics/CGtech/Vulkan/README.md
+
+      - Arts: 
+        - 1_Computer_Graphics/Art/README.md
       
     - Software Engineering: 
       - 2_Software_Engineering/README.md
