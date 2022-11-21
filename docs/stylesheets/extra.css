@@ -125,3 +125,7 @@
 .e_terminal {
     color: #02cb16;
   }  
+
+.md-typeset .admonition, .md-typeset details {
+    font-size: .75rem;
+}
