@@ -85,7 +85,7 @@
 
 /*width of content area*/
 .md-grid {
-    max-width: 90%; 
+    max-width: 85%; 
   }
 
 .center {
@@ -125,6 +125,17 @@
 .e_terminal {
     color: #02cb16;
   }  
+
+.git_triangle{
+    color: #00FFFF;
+}
+.git_square{
+    color: #FF5555;
+}
+.git_circle{
+    color: #99FF55;
+}
+
 
 .md-typeset .admonition, .md-typeset details {
     font-size: .75rem;
