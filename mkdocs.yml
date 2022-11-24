@@ -158,10 +158,11 @@ nav:
       
     - Software Engineering: 
       - 2_Software_Engineering/README.md
-      - Git:
+      - Git & GitHub:
         - 2_Software_Engineering/Github/README.md
-        - Git Basic Commands: 2_Software_Engineering/Github/commands.md
-        - Github Action: 2_Software_Engineering/Github/action.md
+        - Git Theory: 2_Software_Engineering/Github/theory.md
+        - Git Commands: 2_Software_Engineering/Github/commands.md
+        - GitHub Action: 2_Software_Engineering/Github/action.md
 
       - Docker:
         - 2_Software_Engineering/Docker/README.md
