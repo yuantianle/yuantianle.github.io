@@ -974,6 +974,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#squash-and-merge" class="md-nav__link">
+    Squash and merge
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2306,72 +2313,115 @@
 
 
 <h1 id="git-basic-commands"><strong><span class="twemoji"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.546 10.93 13.067.452a1.55 1.55 0 0 0-2.188 0L8.708 2.627l2.76 2.76a1.838 1.838 0 0 1 2.327 2.341l2.658 2.66a1.838 1.838 0 0 1 1.9 3.039 1.837 1.837 0 0 1-2.6 0 1.846 1.846 0 0 1-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348a1.848 1.848 0 0 1 0 2.6 1.844 1.844 0 0 1-2.609 0 1.834 1.834 0 0 1 0-2.598c.182-.18.387-.316.605-.406V8.835a1.834 1.834 0 0 1-.996-2.41L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477a1.545 1.545 0 0 0 2.186 0l10.43-10.43a1.544 1.544 0 0 0 0-2.187"/></svg></span> Git Basic Commands</strong><a class="headerlink" href="#git-basic-commands" title="Permanent link">⚓︎</a></h1>
-<p><img :=":" _="," alt="picture1" class="center" src="../picutures/time.png" width="50%" /> </p>
+<p><img :=":" _="," alt="picture1" class="center" src="../picutures/time.png" width="60%" /> </p>
 <h2 id="initialize-git-repo"><strong>Initialize Git repo</strong><a class="headerlink" href="#initialize-git-repo" title="Permanent link">⚓︎</a></h2>
-<p>Initialize local repository by using: <code>git init</code></p>
-<p><img :=":" _="," alt="picture 5" class="center" src="../pictures/git_init2.png" width="50%" /> </p>
-<p><img :=":" _="," alt="picture 6" class="center" src="../pictures/git_init1.png" width="50%" />    </p>
+<p>Initialize the local repository by using: <strong><code>git init</code></strong></p>
+<p><img :=":" _="," alt="picture 5" class="center" src="../pictures/git_init2.png" width="60%" /> </p>
+<p><img :=":" _="," alt="picture 6" class="center" src="../pictures/git_init1.png" width="60%" />    </p>
 <h2 id="check-status"><strong>Check status</strong><a class="headerlink" href="#check-status" title="Permanent link">⚓︎</a></h2>
-<p>Create a README.md file:</p>
-<p><img :=":" _="," alt="picture 7" class="center" src="../pictures/git_status1.png" width="50%" />  </p>
-<p>Check the status of the local repo by using: <code>git status</code> </p>
-<p><img :=":" _="," alt="picture 8" class="center" src="../pictures/git_status2.png" width="50%" />  </p>
+<p>Create a <strong>README.md</strong> file:</p>
+<p><img :=":" _="," alt="picture 7" class="center" src="../pictures/git_status1.png" width="60%" />  </p>
+<p>Check the status of the local repo by using: <strong><code>git status</code></strong> </p>
+<p><img :=":" _="," alt="picture 8" class="center" src="../pictures/git_status2.png" width="60%" />  </p>
 <h2 id="add-changes"><strong>Add changes</strong><a class="headerlink" href="#add-changes" title="Permanent link">⚓︎</a></h2>
-<p>Add changes into staging area by using: <code>git add .</code> or <code>git add *</code></p>
-<p><img :=":" _="," alt="picture 9" class="center" src="../pictures/git_add1.png" width="50%" />   </p>
-<p>Check the status again: </p>
-<p><img :=":" _="," alt="picture 10" class="center" src="../pictures/git_add2.png" width="50%" />   </p>
+<p>Add changes into the <strong>staging area</strong> by using: <strong><code>git add .</code></strong> or <strong><code>git add *</code></strong></p>
+<p><img :=":" _="," alt="picture 9" class="center" src="../pictures/git_add1.png" width="60%" />   </p>
+<p>Recheck the <code>status</code>: </p>
+<p><img :=":" _="," alt="picture 10" class="center" src="../pictures/git_add2.png" width="60%" />   </p>
 <h2 id="commit-to-the-local-repo"><strong>Commit to the local repo</strong><a class="headerlink" href="#commit-to-the-local-repo" title="Permanent link">⚓︎</a></h2>
-<p>Commit the new snapshot to the local repo:</p>
-<p><img :=":" _="," alt="picture 11" class="center" src="../pictures/git_commit.png" width="50%" />  </p>
-<p>Check the status again: </p>
-<p><img :=":" _="," alt="picture 12" class="center" src="../pictures/git_commit2.png" width="50%" />  </p>
+<p><code>Commit</code> the new snapshot to the local repo:  <strong><code>git commit -m "&lt;mesage&gt;"</code></strong></p>
+<p><img :=":" _="," alt="picture 11" class="center" src="../pictures/git_commit.png" width="60%" />  </p>
+<p>Recheck the <code>status</code>: </p>
+<p><img :=":" _="," alt="picture 12" class="center" src="../pictures/git_commit2.png" width="60%" />  </p>
 <h2 id="rename-branch-name"><strong>Rename branch name</strong><a class="headerlink" href="#rename-branch-name" title="Permanent link">⚓︎</a></h2>
-<p>Rename the <strong>main branch</strong> named from <code>master</code> into <code>main</code> by using: <code>git branch -m master main</code></p>
-<p><img :=":" _="," alt="picture 13" class="center" src="../pictures/git_rename1.png" width="50%" />  </p>
-<p>Check the status again: </p>
-<p><img :=":" _="," alt="picture 14" class="center" src="../pictures/git_rename2.png" width="50%" />  </p>
+<p>Rename the <strong>main branch</strong> named from <code>master</code> into <code>main</code> by using: <strong><code>git branch -m master main</code></strong></p>
+<p><img :=":" _="," alt="picture 13" class="center" src="../pictures/git_rename1.png" width="60%" />  </p>
+<p>Recheck the <code>status</code>: </p>
+<p><img :=":" _="," alt="picture 14" class="center" src="../pictures/git_rename2.png" width="60%" />  </p>
 <h2 id="create-a-branch-and-switch"><strong>Create a branch and switch</strong><a class="headerlink" href="#create-a-branch-and-switch" title="Permanent link">⚓︎</a></h2>
-<p>Create a <strong>new branch</strong> by using: <code>git branch m_branch_1</code></p>
-<p><img :=":" _="," alt="picture 15" class="center" src="../pictures/git_branch1.png" width="50%" />  </p>
-<p>Then switch to the <strong>new branch</strong>: <code>git checkout m_branch_1</code></p>
-<p><img :=":" _="," alt="picture 16" class="center" src="../pictures/git_branch2.png" width="50%" />  </p>
-<p>Or you can do one step instead of the above to command lines: <code>git checkout -b m_branch_1</code></p>
-<p>Check the status again: </p>
-<p><img :=":" _="," alt="picture 17" class="center" src="../pictures/git_branch3.png" width="50%" />  </p>
+<p>Create a <strong>new branch</strong> by using: <strong><code>git branch m_branch_1</code></strong></p>
+<p><img :=":" _="," alt="picture 15" class="center" src="../pictures/git_branch1.png" width="60%" />  </p>
+<p>Then switch to the <strong>new branch</strong>: <strong><code>git checkout m_branch_1</code></strong></p>
+<p><img :=":" _="," alt="picture 16" class="center" src="../pictures/git_branch2.png" width="60%" />  </p>
+<p>Or you can do one step instead of the above to command lines: <strong><code>git checkout -b m_branch_1</code></strong></p>
+<p>Recheck the <code>status</code>: </p>
+<p><img :=":" _="," alt="picture 17" class="center" src="../pictures/git_branch3.png" width="60%" />  </p>
 <h2 id="merge-changes-into-main"><strong>Merge changes into main</strong><a class="headerlink" href="#merge-changes-into-main" title="Permanent link">⚓︎</a></h2>
-<p>Edit the README.md file by: <code>vim README.md</code></p>
-<p><img :=":" _="," alt="picture 18" class="center" src="../pictures/git_merge1.png" width="50%" /> </p>
-<p>Commit the <strong>new branch</strong>: <code>git commit -a -m 'Added encourage sentence'</code></p>
-<p><img :=":" _="," alt="picture 19" class="center" src="../pictures/git_merge2.png" width="50%" />  </p>
-<p>Switch back to the main branch and merge the <strong>new branch</strong> into the <strong>main branch</strong>: <code>git merge m_branch_1</code></p>
-<p><img :=":" _="," alt="picture 20" class="center" src="../pictures/git_merge3.png" width="50%" />  </p>
+<p>Edit the <strong>README.md</strong> file by: <strong><code>vim README.md</code></strong></p>
+<p><img :=":" _="," alt="picture 18" class="center" src="../pictures/git_merge1.png" width="60%" /> </p>
+<p>Commit the <strong>new branch</strong>: <strong><code>git commit -a -m 'Added encourage sentence'</code></strong></p>
+<p><img :=":" _="," alt="picture 19" class="center" src="../pictures/git_merge2.png" width="60%" />  </p>
+<p>Switch back to the main branch and merge the <strong>new branch</strong> into the <strong>main branch</strong>: <strong><code>git merge m_branch_1</code></strong></p>
+<p><img :=":" _="," alt="picture 20" class="center" src="../pictures/git_merge3.png" width="60%" />  </p>
 <h2 id="check-the-commit-history"><strong>Check the commit history</strong><a class="headerlink" href="#check-the-commit-history" title="Permanent link">⚓︎</a></h2>
-<p>Take a look at git log: <code>git log</code></p>
-<p><img :=":" _="," alt="picture 23" class="center" src="../pictures/git_history1.png" width="50%" />  </p>
-<p>Use graph selection in git log: <code>git log --graph --oneline --decorate --all</code></p>
-<p><img :=":" _="," alt="picture 22" class="center" src="../pictures/git_history2.png" width="50%" />  </p>
-<p>More details: <code>git log --graph --abbrev-commit --decorate --date=relative --all</code></p>
-<p><img :=":" _="," alt="picture 21" class="center" src="../pictures/git_history.png" width="50%" />  </p>
+<p>Take a look at git log: <strong><code>git log</code></strong></p>
+<p><img :=":" _="," alt="picture 23" class="center" src="../pictures/git_history1.png" width="60%" />  </p>
+<p>Use graph selection in git log: <strong><code>git log --graph --oneline --decorate --all</code></strong></p>
+<p><img :=":" _="," alt="picture 22" class="center" src="../pictures/git_history2.png" width="60%" />  </p>
+<p>More details: <strong><code>git log --graph --abbrev-commit --decorate --date=relative --all</code></strong></p>
+<p><img :=":" _="," alt="picture 21" class="center" src="../pictures/git_history.png" width="60%" />  </p>
 <p>In <code>Sourcetree</code>:</p>
 <p><img :=":" _="," alt="picture 24" class="center" src="../pictures/git_history_sourcetree.png" width="80%" />  </p>
 <h2 id="rebase-branch"><strong>Rebase branch</strong><a class="headerlink" href="#rebase-branch" title="Permanent link">⚓︎</a></h2>
-<p>We rebase <strong>main branch</strong> into <strong>m_branch_2</strong>: <code>git rebase m_branch_2</code></p>
-<p><img :=":" _="," alt="picture 25" class="center" src="../pictures/git_rebase1.png" width="50%" />   </p>
+<p>We rebase <strong>main branch</strong> into <strong>m_branch_2</strong>: <strong><code>git rebase m_branch_2</code></strong></p>
+<p><img :=":" _="," alt="picture 25" class="center" src="../pictures/git_rebase1.png" width="60%" />   </p>
 <p>Check the folder in different branches:</p>
-<p><img :=":" _="," alt="picture 26" class="center" src="../pictures/git_rebase2.png.png" width="50%" />   </p>
+<p><img :=":" _="," alt="picture 26" class="center" src="../pictures/git_rebase2.png.png" width="60%" />   </p>
 <details class="warning" open="open">
 <summary>Warning</summary>
 <p>Even though we rebase <u>the <strong>main branch</strong> <code>onto</code> (or <code>on top of</code>) <strong>m_branch_2</strong></u>, since we cannot delete the <strong>main branch</strong>, there is <mark class="critic">NO DIFFERENCE WITH</mark> rebasing <u><strong>m_branch_2</strong> onto the <strong>main branch</strong></u>:</p>
 </details>
 <p><img :=":" _="," alt="picture 27" class="center" src="../pictures/git_rebase3.png" width="80%" />   </p>
+<h2 id="squash-and-merge"><strong>Squash and merge</strong><a class="headerlink" href="#squash-and-merge" title="Permanent link">⚓︎</a></h2>
+<p>Look at the commit history below; we want to <code>squash</code> the last three commits on <strong>m_branch2</strong> into one:</p>
+<p><img :=":" _="," alt="picture 28" class="center" src="../pictures/git_squash.png" width="80%" />  </p>
+<p>We use this <code>rebase</code> command with interactive selection: <strong><code>git rebase -i HEAD~3</code></strong>; Do the edition as below:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Before</th>
+<th align="center">After</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="picture 30" src="../pictures/git_squash2.png" /></td>
+<td align="center"><img alt="picture 32" src="../pictures/git_squash3.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>Then it will automatically <code>commit</code>. You should add some commit messages:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Before</th>
+<th align="center">After</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><img alt="picture 33" src="../pictures/git_squash41.png" /></td>
+<td align="center"><img alt="picture 34" src="../pictures/git_squash42.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>After finishing <code>squash</code>, the terminal will return:</p>
+<p><img :=":" _="," alt="picture 35" class="center" src="../pictures/git_squash5.png" width="60%" />  </p>
+<p>The commit history will look like this:</p>
+<p><img :=":" _="," alt="picture 36" class="center" src="../pictures/git_squash6.png" width="80%" />  </p>
+<p>Finally, We <code>merge</code> the <strong>m_branch_2</strong> into the <strong>main</strong>:</p>
+<p><img :=":" _="," alt="picture 38" class="center" src="../pictures/git_squash_merge2.png" width="60%" /> </p>
+<p>Automatically <code>commit</code> and ask for a commit message:</p>
+<p><img :=":" _="," alt="picture 37" class="center" src="../pictures/git_squash_merge.png" width="60%" />  </p>
+<p>The commit history now looks like the below:</p>
+<p><img :=":" _="," alt="picture 39" class="center" src="../pictures/git_squash_merge3.png" width="80%" />  </p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 21, 2022 21:52:03</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 24, 2022 02:08:29</span>
       
         <br>
         Created:

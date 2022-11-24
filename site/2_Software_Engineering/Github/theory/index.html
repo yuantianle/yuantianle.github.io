@@ -899,21 +899,14 @@
       
         <li class="md-nav__item">
   <a href="#git-objects" class="md-nav__link">
-    Git Objects
+    Git objects
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#git-storage-structure" class="md-nav__link">
-    Git storage structure
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#git-commit-snapshot" class="md-nav__link">
-    Git commit (snapshot)
+  <a href="#big-graph" class="md-nav__link">
+    Big graph
   </a>
   
 </li>
@@ -2271,7 +2264,7 @@
   
     <div class="md-source-date" style="text-align: right; font-weight: bold;">
       <small>
-          Author: <span class='git-page-authors git-authors'></span>
+          Author: <span class='git-page-authors git-authors'><a href='mailto:yuant@oregonstate.edu'>Tianle Yuan</a></span>
       </small>
     </div>
   
@@ -2300,13 +2293,78 @@
 </details>
 <p>I hope this section can help you to understand Git behaviors deeply. <img alt="🎅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f385.svg" title=":santa:" /></p>
 </blockquote>
-<h2 id="git-objects"><strong>Git Objects</strong><a class="headerlink" href="#git-objects" title="Permanent link">⚓︎</a></h2>
-<p>Git Object</p>
-<h2 id="git-storage-structure"><strong>Git storage structure</strong><a class="headerlink" href="#git-storage-structure" title="Permanent link">⚓︎</a></h2>
-<h2 id="git-commit-snapshot"><strong>Git commit (snapshot)</strong><a class="headerlink" href="#git-commit-snapshot" title="Permanent link">⚓︎</a></h2>
-<p>A commit is a snapshot in time. Imagine the commit history you can see when using <code>git log</code> or any app visualization, such as <code>Sourcetree</code> as shown below:</p>
-<p><code>Snapshot</code> is a <u>"slice"</u> of your local repo at some point in time. Snapshot is to a repository as a screenshot is to a video.</p>
-<p><code>Metadata</code> contains the <u>author’s name</u> and <u>email address</u>, the <u>message</u> that you typed, and <u>pointers</u> to the commit or commits that directly came before this commit.</p>
+<h2 id="git-objects"><strong>Git objects</strong><a class="headerlink" href="#git-objects" title="Permanent link">⚓︎</a></h2>
+<p>Git repository is constructed by <code>Git objects</code>. Git references each object by using their <code>object ID</code> (OID for short). </p>
+<details class="note" open="open">
+<summary>Note</summary>
+<p><code>Git objects</code> has three types: <code>blob</code>, <code>tree</code>, and <code>commit</code>. They have below functions:</p>
+<ul>
+<li><span class="twemoji git_square"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3v18h18V3"/></svg></span> <code>blob</code> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-4 4v-3H6.83A2.99 2.99 0 0 1 4 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3c1.31 0 2.42.83 2.83 2H19V8l4 4Z"/></svg></span> file contents </li>
+<li><span class="twemoji git_triangle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1 21h22L12 2"/></svg></span> <code>tree</code> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-4 4v-3H6.83A2.99 2.99 0 0 1 4 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3c1.31 0 2.42.83 2.83 2H19V8l4 4Z"/></svg></span> directory listings </li>
+<li><span class="twemoji git_circle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"/></svg></span> <code>commit</code> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m23 12-4 4v-3H6.83A2.99 2.99 0 0 1 4 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3c1.31 0 2.42.83 2.83 2H19V8l4 4Z"/></svg></span> snapshots</li>
+</ul>
+</details>
+<details class="example" open="open">
+<summary>Commands and commit history that we will use</summary>
+<ul>
+<li>
+<p>The command that we can <strong>retrieve</strong> the <code>OID</code> of <code>Git objects</code>: <strong><code>git rev-parse &lt;ref&gt;​</code></strong></p>
+<ul>
+<li>
+<p><strong><code>&lt;ref&gt;</code></strong> will be the parameters below: </p>
+<ul>
+<li><code>HEAD</code>: the <strong>currently</strong> checked-out branch's <strong>latest</strong> commit.</li>
+<li><code>HEAD^{tree}</code>: the <strong>root tree</strong> of the <strong>currently</strong> checked-out branch's <strong>latest</strong> commit.</li>
+<li><code>HEAD:&lt;file path&gt;</code>: the file content at the moment of the <strong>currently</strong> checked-out branch's <strong>latest</strong> commit.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>The command that we <strong>decrypt</strong> the <code>OID</code> SHA-1 hash into plain-text files: <strong><code>git rev-parse &lt;ref&gt;​</code></strong></p>
+</li>
+<li>
+<p>In the commit history, please focus on the commit hash:</p>
+<p><img :=":" _="," alt="picture 39" class="center" src="../pictures/git_squash_merge3.png" width="70%" />  </p>
+</li>
+</ul>
+</details>
+<h3 id="git-file-content-storage-blob"><strong><span class="twemoji git_square"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3v18h18V3"/></svg></span> Git file content storage: blob</strong><a class="headerlink" href="#git-file-content-storage-blob" title="Permanent link">⚓︎</a></h3>
+<p><code>blobs</code> contain <strong>file contents</strong>. </p>
+<p>Let's use the command lines: <code>git rev-parse HEAD:README.md</code> and <code>git cat-file -p &lt;OID&gt; | head -n 8</code></p>
+<p><img :=":" _="," alt="picture 40" class="center" src="../pictures/blob.png" width="60%" />  </p>
+<p>The <ins class="critic">contents at <code>HEAD:README.md</code></ins> matches the <ins class="critic"><strong>README.md</strong> file contents in the current working directory</ins>:</p>
+<p><img :=":" _="," alt="picture 41" class="center" src="../pictures/blob2.png" width="70%" />  </p>
+<h3 id="git-directory-tree"><strong><span class="twemoji git_triangle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1 21h22L12 2"/></svg></span> Git directory: tree</strong><a class="headerlink" href="#git-directory-tree" title="Permanent link">⚓︎</a></h3>
+<p>We should notice that <code>blobs</code> only contain file contents. However, <code>trees</code> record <strong>files' names</strong> and their <strong>directories</strong>. The concept can be seen in the graph as shown below:</p>
+<p><img :=":" _="," alt="picture 43" class="center" src="../pictures/tree.png" width="50%" />    </p>
+<p>Let's use the command lines: <code>git rev-parse HEAD^{tree}</code> and <code>git cat-file -p &lt;OID&gt; | head -n 15</code></p>
+<p>As shown below, a <code>tree</code> is an ordered list of: <strong>file modes</strong>, <strong>paired with object types</strong>, the <strong>OID</strong>, and <strong>path entries</strong> for the object at that path. </p>
+<p><img :=":" _="," alt="picture 44" class="center" src="../pictures/tree2.png" width="60%" /> </p>
+<details class="warning" open="open">
+<summary>Reminding</summary>
+<p>The objects shown in the list are all <code>blobs</code>. But the objects can also be <code>trees</code>. When some objects in the tree are <code>trees</code>, they are <code>subdirectories</code>. </p>
+<p>Trees can point to other trees! 😎</p>
+</details>
+<h3 id="git-history-snapshot-commit"><strong><span class="twemoji git_circle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"/></svg></span> Git history snapshot: commit</strong><a class="headerlink" href="#git-history-snapshot-commit" title="Permanent link">⚓︎</a></h3>
+<p>The <code>tree</code> itself doesn’t know where it exists within the repository; that is the role of the objects pointing to the tree. The object role is the <code>commit</code>!</p>
+<p>To understand the <code>commit</code> more straightforward, firstly, let's use the command lines: <code>git rev-parse HEAD</code> and <code>git cat-file -p &lt;OID&gt;</code></p>
+<p><img :=":" _="," alt="picture 46" class="center" src="../pictures/commit3.png" width="60%" />  </p>
+<p>Combining the concept map below, each <code>commit</code> contains:</p>
+<ul>
+<li>A pointer to its root tree, representing the state of the working directory at that time.</li>
+<li>A list of parent commits corresponding to the previous snapshots (commits). A commit with no parents is a root commit, and a commit with multiple parents is a merge commit. Commits also contain </li>
+<li>Metadata describing the snapshot. Such as:<ul>
+<li>Author and committer's name, email address, and date</li>
+<li>A commit message. The commit message is an opportunity for the commit author to describe the purpose of that commit with respect to the parents.</li>
+</ul>
+</li>
+</ul>
+<p><img :=":" _="," alt="picture 45" class="center" src="../pictures/commit.png" width="50%" />  </p>
+<p>All in all, we call <code>commit</code> a <code>snapshot</code> in time. Remember the <a href="#git-objects">commit history</a> from <code>Sourcetree</code>. The <code>snapshot</code> is a <u>"slice"</u> of your local repo at some node point in time. <code>Snapshot</code> is to a repository, as a screenshot is to a video.</p>
+<h2 id="big-graph"><strong>Big graph</strong><a class="headerlink" href="#big-graph" title="Permanent link">⚓︎</a></h2>
+<p>From what we have learned from <a href="#git-objects">Git objects</a>, we can treat the local directory as the objects diagram shown below:</p>
+<p><img :=":" _="," alt="picture 47" class="center" src="../pictures/biggraph.png" width="70%" />  </p>
 <h2 id="git-branch"><strong>Git branch</strong><a class="headerlink" href="#git-branch" title="Permanent link">⚓︎</a></h2>
 <h2 id="git-diff"><strong>Git diff</strong><a class="headerlink" href="#git-diff" title="Permanent link">⚓︎</a></h2>
 <p><code>Git</code> does NOT <strong>store</strong> data as a series of <del class="critic">changesets</del> or <del class="critic">differences</del>, but instead as a <ins class="critic">series of</ins> <code>snapshots</code>.</p>
@@ -2321,11 +2379,11 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 24, 2022 02:07:50</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 24, 2022 02:08:29</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 24, 2022 02:07:50</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 24, 2022 02:08:29</span>
       
     
   </small>

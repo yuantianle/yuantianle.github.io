@@ -1,1 +1,1 @@
-# **:simple-github: Github Action**
+# **:simple-github: GitHub Action**
