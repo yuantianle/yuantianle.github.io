@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # **:simple-git: Git Basic Commands**
 
 ![picture1](./picutures/time.png){width="60%", : .center} 

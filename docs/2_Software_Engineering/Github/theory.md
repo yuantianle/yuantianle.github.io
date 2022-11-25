@@ -1,3 +1,7 @@
+---
+comments: true
+---
+
 # **:simple-git: Git Theory**
 
 > When you are first using Git, you must feel confused about the questions shown below
@@ -238,7 +242,7 @@ The `git rebase` command in the most basic form is like a series of `git cherry-
 
 ???+question "What do `git add` do?"
 
-    `git add` create `blobs` for newly added files and append index for both created and edited blob.
+    `git add` create `blobs` for newly added files and append index for both creating and editing blob.
 
 Let's directly create a new file named `intro.txt` in the **main branch** and `git add .`:
 
@@ -246,7 +250,7 @@ Let's directly create a new file named `intro.txt` in the **main branch** and `g
 
 ![picture 13](pictures/add2.png){width="60%", : .center}   
 
-If we directly check the `index` file under `./.git`, it shows arbi, we use command to check what is in the index: 
+If we directly check the `index` file under `./.git`, it shows messy code. We use the command line to check what is in the index: **`git ls-files --stage`**
 
 ![picture 14](pictures/add3.png){width="70%", : .center}   
 
@@ -315,9 +319,9 @@ Now you are 100% sure: there is one object `tree` and another `commit`.
 
     Yeah! `b956ad5` is the `tree` object!
 
-> **Git functions looks easy but there are some concepts are confusing. I have spent a whole week figuring out what was going on in deep. Then I spent two days for the conclusion in this section. If you check this article in details, I believe, you will treat Git in different angle! 🏖️🍻 
+> **Git functions looks easy but there are some concepts are confusing. I have spent a whole week figuring out what was going on in deep. Then I spent two days for the conclusion in this section. If you check this article in details, I believe, you will treat Git in different angle! 🏖️🍻**
 
-> Also don't forget to check if you can answer the questions at the start of this article. 💯🤴**
+> **Also don't forget to check if you can answer the questions at the start of this article. 💯🤴**
 
 ### **References:**
 

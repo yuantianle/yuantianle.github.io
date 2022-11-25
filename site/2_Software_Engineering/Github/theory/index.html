@@ -2523,12 +2523,12 @@ commits =  diffs \cup snapshots
 <h3 id="git-add"><strong>git add</strong><a class="headerlink" href="#git-add" title="Permanent link">⚓︎</a></h3>
 <details class="question" open="open">
 <summary>What do <code>git add</code> do?</summary>
-<p><code>git add</code> create <code>blobs</code> for newly added files and append index for both created and edited blob.</p>
+<p><code>git add</code> create <code>blobs</code> for newly added files and append index for both creating and editing blob.</p>
 </details>
 <p>Let's directly create a new file named <code>intro.txt</code> in the <strong>main branch</strong> and <code>git add .</code>:</p>
 <p><img :=":" _="," alt="picture 11" class="center" src="../pictures/add1.png" width="60%" /> </p>
 <p><img :=":" _="," alt="picture 13" class="center" src="../pictures/add2.png" width="60%" />   </p>
-<p>If we directly check the <code>index</code> file under <code>./.git</code>, it shows arbi, we use command to check what is in the index: </p>
+<p>If we directly check the <code>index</code> file under <code>./.git</code>, it shows messy code. We use the command line to check what is in the index: <strong><code>git ls-files --stage</code></strong></p>
 <p><img :=":" _="," alt="picture 14" class="center" src="../pictures/add3.png" width="70%" />   </p>
 <p>We can see; now an OID has been added to the <strong>index list</strong> for <strong>mapping</strong> <code>intro.txt</code>.</p>
 <p>Let's check the OID: <code>659096bbe255c5137a9020740d077a5071b13ff7</code> </p>
@@ -2584,8 +2584,8 @@ commits =  diffs \cup snapshots
 <p>Yeah! <code>b956ad5</code> is the <code>tree</code> object!</p>
 </details>
 <blockquote>
-<p>**Git functions looks easy but there are some concepts are confusing. I have spent a whole week figuring out what was going on in deep. Then I spent two days for the conclusion in this section. If you check this article in details, I believe, you will treat Git in different angle! 🏖️🍻 </p>
-<p>Also don't forget to check if you can answer the questions at the start of this article. 💯🤴**</p>
+<p><strong>Git functions looks easy but there are some concepts are confusing. I have spent a whole week figuring out what was going on in deep. Then I spent two days for the conclusion in this section. If you check this article in details, I believe, you will treat Git in different angle! 🏖️🍻</strong></p>
+<p><strong>Also don't forget to check if you can answer the questions at the start of this article. 💯🤴</strong></p>
 </blockquote>
 <h3 id="references"><strong>References:</strong><a class="headerlink" href="#references" title="Permanent link">⚓︎</a></h3>
 <ul>
@@ -2597,7 +2597,7 @@ commits =  diffs \cup snapshots
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 25, 2022 01:58:16</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 25, 2022 05:39:31</span>
       
         <br>
         Created:
@@ -2610,6 +2610,55 @@ commits =  diffs \cup snapshots
 
 
 
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+    <script src="https://giscus.app/client.js"
+        data-repo="yuantianle/yuantianle.github.io"
+        data-repo-id="R_kgDOITXaGg"
+        data-category-id="DIC_kwDOITXaGs4CSWJD"
+        =""
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    </script>
+
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
 
                 
 
