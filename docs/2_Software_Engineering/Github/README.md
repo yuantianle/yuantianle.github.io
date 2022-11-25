@@ -4,7 +4,7 @@
 
 ### This section is split into below sections:
 
-1. [Git theory](theory.md) for understanding Git essence (:1st_place_medal: Highly recommend reading first before using the command line). 
+1. [Git theory](theory.md) for understanding Git essence (💯 Highly recommend reading first before using the command line). 
 
 2. [Git commands](commands.md) for a start using Git commands.
 
