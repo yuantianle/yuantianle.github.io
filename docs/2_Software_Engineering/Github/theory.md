@@ -190,28 +190,134 @@ In the diagram above, we notice that the things tree is never visited, and so no
 
 ## **Two commands implementing `diff`**
 
-### **Git cherry-pick**
+### **git cherry-pick**
 
 The `git cherry-pick <OID>` command creates a new commit with an identical diff (arbitrary diff between two neighbor commits) to the new commit whose parent is the current commit. 
 
-???+example "Steps of cherry-picking:"
+???+example "Steps of `cherry-pick`:"
 
     1. Compute the `diff` between the commit <oid> and its parent.
     2. Apply that `diff` to the current HEAD.
     3. Create a new `commit` whose root tree matches the new working directory and whose parent is the commit at HEAD.
     4. Move the ref at `HEAD` to that new commit.
    
-    ![picture 6](pictures/cherry.png){width="50%", : .center}  
+    ![picture 6](pictures/cherry.png){width="55%", : .center} 
+
 
     ???+warning "Important!"
 
         We {==didn’t “move” the commit==} to be on top of our current HEAD; We {==created a new commit==} whose diff matches the old commit.
 
-### **Git rebase**
+### **git rebase**
 
-    
+The `git rebase` command in the most basic form is like a series of `git cherry-pick` commands, replaying `diffs` on top of a different commit.
 
-In its most basic form it is really just a series of git cherry-pick commands, replaying diffs on top of a different commit.
+???+example "Steps of `rebase`:"
+
+    1. In default, `git rebase <target>` will discover {==the list of commits==} that are <u>reachable from `HEAD`</u> but <u>not reachable from `<target>`</u>.
+        - **[Example]: the common base P is computed to determine the commit list `A`, `B`, and `C`.**
+
+    2. Then, the `rebase` command navigates to the `<target>` location and performs `git cherry-pick` commands on this <u>commit list</u>, starting from the oldest commits.
+        - **[Example]: then cherry-picked on top of the target to construct new commits in sequence: `A'`, `B'`, and `C'`.**
+
+    ![picture 8](pictures/rebase.png){width="60%", : .center}  
+
+    ???+warning "Important!"
+
+        The commits `A'`, `B'`, and `C'` are {==brand new==} commits that share a lot of information with `A`, `B`, and `C`, but are {==distinct==} new objects (their OIDs are totally different). 
+        
+        In fact, the old commits still exist in your repository <u>until garbage collection runs</u>.
+
+## **git add and git commit**
+
+> Known the basic theory of Git, let's go back to the two basic Git command: **`git add` and `git commit`**. The diagram shown below is the design of them two.
+
+![picture 10](pictures/add_commit.png){width="60%", : .center}   
+
+### **git add**
+
+???+question "What do `git add` do?"
+
+    `git add` create `blobs` for newly added files and append index for both created and edited blob.
+
+Let's directly create a new file named `intro.txt` in the **main branch** and `git add .`:
+
+![picture 11](pictures/add1.png){width="60%", : .center} 
+
+![picture 13](pictures/add2.png){width="60%", : .center}   
+
+If we directly check the `index` file under `./.git`, it shows arbi, we use command to check what is in the index: 
+
+![picture 14](pictures/add3.png){width="70%", : .center}   
+
+We can see; now an OID has been added to the **index list** for **mapping** `intro.txt`.
+
+Let's check the OID: `659096bbe255c5137a9020740d077a5071b13ff7` 
+
+![picture 16](pictures/add4.png){width="60%", : .center}  
+
+Oh yeah! It is the new file's content! 
+
+Combining the knowledge in [Git blob](#git-file-content-storage-blob), you are 100% sure: The OID (or hash index/key) was appended in the `index folder` because we have also created a `blob` file when we do `git add`. 
+
+???+example "Explore OID: `659096bbe255c5137a9020740d077a5071b13ff7`"
+
+    Let's check the folder: `./.git/objects`.
+
+    ![picture 17](pictures/add5.png){width="70%", : .center}  
+
+    REMEMBER: OID above is `65`+`9096bbe255c5137a9020740d077a5071b13ff7`
+
+    We select the folder named `65` since 
+
+    ![picture 18](pictures/add6.png){width="70%", : .center}  
+
+    We see the file with the hash of the second part of the OID: `9096bbe255c5137a9020740d077a5071b13ff7`
+
+In fact, we can directly use the **first 7 digits** of the OID to check the object's type and content:
+
+![picture 19](pictures/add7.png){width="60%", : .center}  
+
+### **git commit**
+
+???+question "What do `git commit` do?"
+
+    `git commit` based on the `blobs` in the local repo, furtherly create a new `commit` and it's root `tree` for them.
+
+Let's `git commit -m "added intro.txt"`:
+
+![picture 20](pictures/commit1.png){width="60%", : .center}    
+
+Go into the `./.git/objects` folder. We can see the two created folders:
+
+![picture 21](pictures/commit2.png){width="70%", : .center}    
+
+`ce` | ![picture 23](pictures/new_commit3.png)
+:-:|:-:
+`b9` | ![picture 24](pictures/new_commit4.png) 
+
+Now you are 100% sure: there is one object `tree` and another `commit`.
+
+???+example "Explore folder `ce` and `b9`"
+
+    By combining the contents in the fold file's hash, we can get two OIDs:
+
+    - OID1: `ce` + `bc14637e116de809cfb39fc6d021f5ba54d015` = `cebc14637e116de809cfb39fc6d021f5ba54d015`
+    - OID2: `b9` + `56ad5fbafbfc0050d73a7289661ceb764f5a8f` = `b956ad5fbafbfc0050d73a7289661ceb764f5a8f`
+
+    As we concluded at the end of [git add](#git-add), we only use the first 7 digits and use `git cat-file -t <OID>` and `git cat-file -p  <OID>`:
+
+    ![picture 26](pictures/new_commit5.png){width="60%", : .center}    
+
+    Yeah! `cebc146` is the `commit` object!
+
+    ![picture 27](pictures/new_commit6.png){width="60%", : .center}    
+
+    Yeah! `b956ad5` is the `tree` object!
+
+> **Git functions looks easy but there are some concepts are confusing. I have spent a whole week figuring out what was going on in deep. Then I spent two days for the conclusion in this section. If you check this article in details, I believe, you will treat Git in different angle! 🏖️🍻 
+
+> Also don't forget to check if you can answer the questions at the start of this article. 💯🤴**
 
 ### **References:**
 

@@ -932,6 +932,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#git-add-and-git-commit" class="md-nav__link">
+    git add and git commit
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2467,24 +2474,119 @@ commits =  diffs \cup snapshots
 <p><code>Patch</code> only implements the <code>diff</code> part but cannot traverse commit history. <code>Snapshots</code> record the commit history in time.</p>
 </details>
 <h2 id="two-commands-implementing-diff"><strong>Two commands implementing <code>diff</code></strong><a class="headerlink" href="#two-commands-implementing-diff" title="Permanent link">⚓︎</a></h2>
-<h3 id="git-cherry-pick"><strong>Git cherry-pick</strong><a class="headerlink" href="#git-cherry-pick" title="Permanent link">⚓︎</a></h3>
+<h3 id="git-cherry-pick"><strong>git cherry-pick</strong><a class="headerlink" href="#git-cherry-pick" title="Permanent link">⚓︎</a></h3>
 <p>The <code>git cherry-pick &lt;OID&gt;</code> command creates a new commit with an identical diff (arbitrary diff between two neighbor commits) to the new commit whose parent is the current commit. </p>
 <details class="example" open="open">
-<summary>Steps of cherry-picking:</summary>
+<summary>Steps of <code>cherry-pick</code>:</summary>
 <ol>
 <li>Compute the <code>diff</code> between the commit <oid> and its parent.</li>
 <li>Apply that <code>diff</code> to the current HEAD.</li>
 <li>Create a new <code>commit</code> whose root tree matches the new working directory and whose parent is the commit at HEAD.</li>
 <li>Move the ref at <code>HEAD</code> to that new commit.</li>
 </ol>
-<p><img :=":" _="," alt="picture 6" class="center" src="../pictures/cherry.png" width="50%" />  </p>
+<p><img :=":" _="," alt="picture 6" class="center" src="../pictures/cherry.png" width="55%" /> </p>
 <details class="warning" open="open">
 <summary>Important!</summary>
 <p>We <mark class="critic">didn’t “move” the commit</mark> to be on top of our current HEAD; We <mark class="critic">created a new commit</mark> whose diff matches the old commit.</p>
 </details>
 </details>
-<h3 id="git-rebase"><strong>Git rebase</strong><a class="headerlink" href="#git-rebase" title="Permanent link">⚓︎</a></h3>
-<p>In its most basic form it is really just a series of git cherry-pick commands, replaying diffs on top of a different commit.</p>
+<h3 id="git-rebase"><strong>git rebase</strong><a class="headerlink" href="#git-rebase" title="Permanent link">⚓︎</a></h3>
+<p>The <code>git rebase</code> command in the most basic form is like a series of <code>git cherry-pick</code> commands, replaying <code>diffs</code> on top of a different commit.</p>
+<details class="example" open="open">
+<summary>Steps of <code>rebase</code>:</summary>
+<ol>
+<li>
+<p>In default, <code>git rebase &lt;target&gt;</code> will discover <mark class="critic">the list of commits</mark> that are <u>reachable from <code>HEAD</code></u> but <u>not reachable from <code>&lt;target&gt;</code></u>.</p>
+<ul>
+<li><strong>[Example]: the common base P is computed to determine the commit list <code>A</code>, <code>B</code>, and <code>C</code>.</strong></li>
+</ul>
+</li>
+<li>
+<p>Then, the <code>rebase</code> command navigates to the <code>&lt;target&gt;</code> location and performs <code>git cherry-pick</code> commands on this <u>commit list</u>, starting from the oldest commits.</p>
+<ul>
+<li><strong>[Example]: then cherry-picked on top of the target to construct new commits in sequence: <code>A'</code>, <code>B'</code>, and <code>C'</code>.</strong></li>
+</ul>
+</li>
+</ol>
+<p><img :=":" _="," alt="picture 8" class="center" src="../pictures/rebase.png" width="60%" />  </p>
+<details class="warning" open="open">
+<summary>Important!</summary>
+<p>The commits <code>A'</code>, <code>B'</code>, and <code>C'</code> are <mark class="critic">brand new</mark> commits that share a lot of information with <code>A</code>, <code>B</code>, and <code>C</code>, but are <mark class="critic">distinct</mark> new objects (their OIDs are totally different). </p>
+<p>In fact, the old commits still exist in your repository <u>until garbage collection runs</u>.</p>
+</details>
+</details>
+<h2 id="git-add-and-git-commit"><strong>git add and git commit</strong><a class="headerlink" href="#git-add-and-git-commit" title="Permanent link">⚓︎</a></h2>
+<blockquote>
+<p>Known the basic theory of Git, let's go back to the two basic Git command: <strong><code>git add</code> and <code>git commit</code></strong>. The diagram shown below is the design of them two.</p>
+</blockquote>
+<p><img :=":" _="," alt="picture 10" class="center" src="../pictures/add_commit.png" width="60%" />   </p>
+<h3 id="git-add"><strong>git add</strong><a class="headerlink" href="#git-add" title="Permanent link">⚓︎</a></h3>
+<details class="question" open="open">
+<summary>What do <code>git add</code> do?</summary>
+<p><code>git add</code> create <code>blobs</code> for newly added files and append index for both created and edited blob.</p>
+</details>
+<p>Let's directly create a new file named <code>intro.txt</code> in the <strong>main branch</strong> and <code>git add .</code>:</p>
+<p><img :=":" _="," alt="picture 11" class="center" src="../pictures/add1.png" width="60%" /> </p>
+<p><img :=":" _="," alt="picture 13" class="center" src="../pictures/add2.png" width="60%" />   </p>
+<p>If we directly check the <code>index</code> file under <code>./.git</code>, it shows arbi, we use command to check what is in the index: </p>
+<p><img :=":" _="," alt="picture 14" class="center" src="../pictures/add3.png" width="70%" />   </p>
+<p>We can see; now an OID has been added to the <strong>index list</strong> for <strong>mapping</strong> <code>intro.txt</code>.</p>
+<p>Let's check the OID: <code>659096bbe255c5137a9020740d077a5071b13ff7</code> </p>
+<p><img :=":" _="," alt="picture 16" class="center" src="../pictures/add4.png" width="60%" />  </p>
+<p>Oh yeah! It is the new file's content! </p>
+<p>Combining the knowledge in <a href="#git-file-content-storage-blob">Git blob</a>, you are 100% sure: The OID (or hash index/key) was appended in the <code>index folder</code> because we have also created a <code>blob</code> file when we do <code>git add</code>. </p>
+<details class="example" open="open">
+<summary>Explore OID: <code>659096bbe255c5137a9020740d077a5071b13ff7</code></summary>
+<p>Let's check the folder: <code>./.git/objects</code>.</p>
+<p><img :=":" _="," alt="picture 17" class="center" src="../pictures/add5.png" width="70%" />  </p>
+<p>REMEMBER: OID above is <code>65</code>+<code>9096bbe255c5137a9020740d077a5071b13ff7</code></p>
+<p>We select the folder named <code>65</code> since </p>
+<p><img :=":" _="," alt="picture 18" class="center" src="../pictures/add6.png" width="70%" />  </p>
+<p>We see the file with the hash of the second part of the OID: <code>9096bbe255c5137a9020740d077a5071b13ff7</code></p>
+</details>
+<p>In fact, we can directly use the <strong>first 7 digits</strong> of the OID to check the object's type and content:</p>
+<p><img :=":" _="," alt="picture 19" class="center" src="../pictures/add7.png" width="60%" />  </p>
+<h3 id="git-commit"><strong>git commit</strong><a class="headerlink" href="#git-commit" title="Permanent link">⚓︎</a></h3>
+<details class="question" open="open">
+<summary>What do <code>git commit</code> do?</summary>
+<p><code>git commit</code> based on the <code>blobs</code> in the local repo, furtherly create a new <code>commit</code> and it's root <code>tree</code> for them.</p>
+</details>
+<p>Let's <code>git commit -m "added intro.txt"</code>:</p>
+<p><img :=":" _="," alt="picture 20" class="center" src="../pictures/commit1.png" width="60%" />    </p>
+<p>Go into the <code>./.git/objects</code> folder. We can see the two created folders:</p>
+<p><img :=":" _="," alt="picture 21" class="center" src="../pictures/commit2.png" width="70%" />    </p>
+<table>
+<thead>
+<tr>
+<th align="center"><code>ce</code></th>
+<th align="center"><img alt="picture 23" src="../pictures/new_commit3.png" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><code>b9</code></td>
+<td align="center"><img alt="picture 24" src="../pictures/new_commit4.png" /></td>
+</tr>
+</tbody>
+</table>
+<p>Now you are 100% sure: there is one object <code>tree</code> and another <code>commit</code>.</p>
+<details class="example" open="open">
+<summary>Explore folder <code>ce</code> and <code>b9</code></summary>
+<p>By combining the contents in the fold file's hash, we can get two OIDs:</p>
+<ul>
+<li>OID1: <code>ce</code> + <code>bc14637e116de809cfb39fc6d021f5ba54d015</code> = <code>cebc14637e116de809cfb39fc6d021f5ba54d015</code></li>
+<li>OID2: <code>b9</code> + <code>56ad5fbafbfc0050d73a7289661ceb764f5a8f</code> = <code>b956ad5fbafbfc0050d73a7289661ceb764f5a8f</code></li>
+</ul>
+<p>As we concluded at the end of <a href="#git-add">git add</a>, we only use the first 7 digits and use <code>git cat-file -t &lt;OID&gt;</code> and <code>git cat-file -p  &lt;OID&gt;</code>:</p>
+<p><img :=":" _="," alt="picture 26" class="center" src="../pictures/new_commit5.png" width="60%" />    </p>
+<p>Yeah! <code>cebc146</code> is the <code>commit</code> object!</p>
+<p><img :=":" _="," alt="picture 27" class="center" src="../pictures/new_commit6.png" width="60%" />    </p>
+<p>Yeah! <code>b956ad5</code> is the <code>tree</code> object!</p>
+</details>
+<blockquote>
+<p>**Git functions looks easy but there are some concepts are confusing. I have spent a whole week figuring out what was going on in deep. Then I spent two days for the conclusion in this section. If you check this article in details, I believe, you will treat Git in different angle! 🏖️🍻 </p>
+<p>Also don't forget to check if you can answer the questions at the start of this article. 💯🤴**</p>
+</blockquote>
 <h3 id="references"><strong>References:</strong><a class="headerlink" href="#references" title="Permanent link">⚓︎</a></h3>
 <ul>
 <li><a href="https://github.blog/2020-12-17-commits-are-snapshots-not-diffs/">Commits are snapshots, not diffs</a></li>
@@ -2495,7 +2597,7 @@ commits =  diffs \cup snapshots
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 24, 2022 08:44:48</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 25, 2022 01:58:16</span>
       
         <br>
         Created:
