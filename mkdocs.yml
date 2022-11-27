@@ -219,7 +219,7 @@ nav:
         - 3_C++/C++NEW/README.md
         - C++11:
           - 3_C++/C++NEW/C++11/README.md
-          - CONTENTS: 3_C++/C++NEW/C++11/content.md
+          - auto & decltype: 3_C++/C++NEW/C++11/auto.md
         - C++14:
           - 3_C++/C++NEW/C++14/README.md
           - CONTENTS: 3_C++/C++NEW/C++14/content.md

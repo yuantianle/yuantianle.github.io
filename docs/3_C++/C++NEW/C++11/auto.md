@@ -2,11 +2,9 @@
 comments: true
 ---
 
-# **:simple-cplusplus: C++11**
+# **:simple-cplusplus: auto & decltype**
 
-## **auto & decltype**
-
-### **auto type**
+## **auto type**
 
 `auto` type can help the compiler to derivate the type of a variable <u>from the right side of</u> `=` when it is **in the compiling stage**.
 
@@ -14,7 +12,7 @@ comments: true
 auto m_int = 10; // since 10 is int type, the type of `m_int` has been automatially derivated as `int`
 ```
 
-### **decltype(exp) type**
+## **decltype(exp) type**
 
 `decltype(exp)` can be understood as: "declare type" from expression. `decltype` can derivate the type of the variable from the expression `exp`. It does not care about what is showing on the right side of `=`.
 
@@ -31,7 +29,7 @@ decltype(m_test2 + 100) m_test3;   //`m_test3` has been derivated to `double`
 
     - `decltype` can process any complex expression. But! the result of the `exp` should not be `void`.
 
-### **decltype(exp) type \[advance]**
+## **decltype(exp) type \[advance]**
 
 Before we go in advance, let's figure out `lvalue` and `rvalue`:
 
