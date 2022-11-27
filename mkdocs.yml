@@ -211,7 +211,24 @@ nav:
       - 3_C++/README.md
       - Inheritance: 
         - 3_C++/Inheritance/README.md
-        - --> contents: 3_C++/Inheritance/Inheritance.md
+        - CONTENTS: 3_C++/Inheritance/Inheritance.md
+      - Template:
+        - 3_C++/Template/README.md
+        - CONTENTS: 3_C++/Template/content.md
+      - C++ 11/14/17/20: 
+        - 3_C++/C++NEW/README.md
+        - C++11:
+          - 3_C++/C++NEW/C++11/README.md
+          - CONTENTS: 3_C++/C++NEW/C++11/content.md
+        - C++14:
+          - 3_C++/C++NEW/C++14/README.md
+          - CONTENTS: 3_C++/C++NEW/C++14/content.md
+        - C++17:
+          - 3_C++/C++NEW/C++17/README.md
+          - CONTENTS: 3_C++/C++NEW/C++17/content.md
+        - C++20:
+          - 3_C++/C++NEW/C++20/README.md
+          - CONTENTS: 3_C++/C++NEW/C++20/content.md      
 
     - Algorithm: 
       - 4_Algorithms/README.md

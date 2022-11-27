@@ -2,7 +2,7 @@
 comments: true
 ---
 
-# **Inheritance**
+# **:simple-cplusplus: Inheritance**
 
 ## **Basic Inheritance**
 

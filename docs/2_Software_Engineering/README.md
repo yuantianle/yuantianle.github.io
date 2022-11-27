@@ -4,9 +4,9 @@
 
 ### **This chapter is split into 7 sections:**
 
-1. [Github](Github/README.md): version control.
+1. [Git and GitHub](Github/README.md): version control.
 
-2. [Docker](Docker/README.md): light-weight virtual machine.
+2. [Docker](Docker/README.md): lightweight virtual machine.
 
 3. [Swift](Swift/README.md): Mac OS language.
 
@@ -16,6 +16,6 @@
 
 6. [VS Code](VS_Code/README.md): magic IDE with bunches of great extensions.
 
-7. [Others](Others/README.md): random topics waiting for being classified.
+7. [Others](Others/README.md): random topics waiting to be classified.
 
 

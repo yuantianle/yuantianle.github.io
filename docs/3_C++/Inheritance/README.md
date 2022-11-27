@@ -1,4 +1,4 @@
-# **Inheritance**
+# **:simple-cplusplus: Inheritance**
 
 ### **:book: Table of contents**
 
