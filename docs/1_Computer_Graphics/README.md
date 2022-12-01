@@ -1,3 +1,7 @@
+---
+ᴴₒᴴₒᴴₒ: ture
+---
+
 # **:crystal_ball: Computer Graphics**
 
 >**My exploration of `Computer Graphics` stems from my love of art, programming, and scientific equations.**
