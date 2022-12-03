@@ -1,8 +1,11 @@
 ---
 comments: true
+ᴴₒᴴₒᴴₒ: ture
 ---
 
 # **Map, Filter and Reduce**
+
+> Map-Filter-Reduce are well known as `Syntactic Sugar`, which is a term for syntax changes in computer programming which make it easier for humans to code. Also, it is a `Fan-in Fan-out` way to process multiple tasks.
 
 ## **Grammar**
 

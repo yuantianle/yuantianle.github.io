@@ -1,5 +1,6 @@
 ---
 comments: true
+ᴴₒᴴₒᴴₒ: ture
 ---
 
 # **:simple-cplusplus: Template**
@@ -17,10 +18,10 @@ comments: true
     Templates are expanded at **compiler time**. 
     
     The function is basically like <u>macros</u>. The {++DIFFERENCE++} is:
-    
-        - Compiler needs to do **type checking** before template expansion.
-        - Compiled code will finally contain **multiple copies** of the same templated class/function
-        - For the same type of function/class calling, the compiler will not create a new copy; instead, it uses the old copy. 
+        
+    - Compiler needs to do **type checking** before template expansion.
+    - Compiled code will finally contain **multiple copies** of the same templated class/function
+    - For the same type of function/class calling, the compiler will not create a new copy; instead, it uses the old copy. 
 
 ![picture 1](pictures/diff.png){width="60%", : .center}   
 

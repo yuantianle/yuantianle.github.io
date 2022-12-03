@@ -52,7 +52,9 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 
-extra:
+extra: 
+  generator: false
+  
   alternate:
     - name: English
       lang: 'en'
@@ -65,7 +67,7 @@ extra:
 
   social:
     - icon: fontawesome/brands/linkedin
-      link: https://www.linkedin.com/in/tianle-yuan-b0b349216/
+      link: https://www.linkedin.com/in/yuantianle/
       name: Tianle Yuan on Twitter
       
     - icon: fontawesome/brands/github
@@ -75,6 +77,7 @@ extra:
     - icon: fontawesome/solid/house-medical
       link: https://yuantianle.com
       name: Go back to Tianle's Main Page
+
 
 plugins:
   - git-revision-date-localized:
@@ -121,6 +124,8 @@ markdown_extensions:
   - tables
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.tabbed:
+      alternate_style: true 
 
 
   - toc: # 大纲
@@ -132,6 +137,12 @@ markdown_extensions:
       emoji_index: !!python/name:materialx.emoji.twemoji 
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - md_in_html
+
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
 
 
 nav:
@@ -232,15 +243,16 @@ nav:
 
     - Algorithm: 
       - 4_Algorithms/README.md
-      - Practic Sheet: 
-        - 4_Algorithms/Practice_Sheet/README.md
-      - Typical Questions: 
+      - Typical Algorithms: 
         - 4_Algorithms/Typical_Questions/README.md
         - Leetcode:
           - Topology Sort: 4_Algorithms/Typical_Questions/Leetcode/Topology_sort.md
+          - Dijkstra: 4_Algorithms/Typical_Questions/Leetcode/Dijkstra.md
           - Quick Sort: 4_Algorithms/Typical_Questions/Leetcode/Quick_sort.md
         - Hackerrank:
           - STDIN and STDOUT: 4_Algorithms/Typical_Questions/Hackerrank/STDIN&STDOUT.md
+      - Practic Sheet: 
+        - 4_Algorithms/Practice_Sheet/README.md
 
     
     - Math: 5_Math/README.md

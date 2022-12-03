@@ -8,7 +8,9 @@
 
 ### **This chapter can be separated into two sections:**
 
-1. [Practice Sheet](Practice_Sheet/README.md) for the questions record of my practice.
+1. [Typical Algorithms](Typical_Questions/README.md) for the typical solution that I have learned before.
 
-2. [Typical Questions](Typical_Questions/README.md) for the typical solution that I have learned before.
+2. [Practice Sheet](Practice_Sheet/README.md) for the questions record of my practice.
+
+
 
