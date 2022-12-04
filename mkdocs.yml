@@ -259,6 +259,7 @@ nav:
       - Front End: 
         - 5_FullStack/Frontend/README.md
         - SSH: 5_FullStack/Frontend/SSH.md
+        - URI: 5_FullStack/Frontend/uri.md
       - APIs: 
         - 5_FullStack/API/README.md
         - REST API: 5_FullStack/API/rest_api.md

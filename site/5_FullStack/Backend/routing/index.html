@@ -2570,6 +2570,8 @@
         
           
         
+          
+        
       
       
         
@@ -2600,6 +2602,20 @@
     <li class="md-nav__item">
       <a href="../../Frontend/SSH/" class="md-nav__link">
         SSH
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Frontend/uri/" class="md-nav__link">
+        URI
       </a>
     </li>
   
@@ -2933,7 +2949,7 @@
   
     <div class="md-source-date" style="text-align: right; font-weight: bold;">
       <small>
-          Author: <span class='git-page-authors git-authors'></span>
+          Author: <span class='git-page-authors git-authors'><a href='mailto:yuant@oregonstate.edu'>Tianle Yuan</a></span>
       </small>
     </div>
   
@@ -2949,49 +2965,58 @@
 <h1 id="backend-routing"><strong> Backend Routing</strong><a class="headerlink" href="#backend-routing" title="Permanent link">⚓︎</a></h1>
 <h2 id="definiton"><strong>Definiton</strong><a class="headerlink" href="#definiton" title="Permanent link">⚓︎</a></h2>
 <details class="question" open="open">
-<summary>What?</summary>
-<p>In <code>backend routing</code>, the <u>server handles every request</u> by <strong>responding</strong> to the client with a code <code>201</code>(I got that thing you want!) or a <code>404</code>(Nope, I don’t have that!).</p>
+<summary>When? (background)</summary>
+<p><strong>client</strong> requests to a particular <code>endpoint</code> [ &lt;=&gt; <a href="../../Frontend/uri/"><code>URI</code></a> + <code>HTTP</code> request method (<code>GET</code>, <code>POST</code>, ...) ]. </p>
 </details>
 <details class="question" open="open">
-<summary>Situation?</summary>
+<summary>What? (import routing)</summary>
+<p>To handle the request, in <code>backend routing</code>, the <u>server handles every request</u> by <strong>responding</strong> to the client with a code <code>201</code>(I got that thing you want!) or a <code>404</code>(Nope, I don’t have that!).</p>
+</details>
+<details class="question" open="open">
+<summary>Situation? (example)</summary>
 <p>Let’s say a <strong>user</strong> fills out a form with his <u>name, address, favorite hobby</u> and sends a <code>POST</code> request by submitting the form. That <code>GET request url</code> is sent to the <strong>server</strong>, and the <strong>server</strong> serves back the <code>requested url</code> to the <strong>client</strong> as a <mark class="critic">static file</mark> that is stored on the server. </p>
 <p>If the <strong>server</strong> doesn’t have the requested file, then it returns a <code>404</code> response error. </p>
 </details>
 <h2 id="usage"><strong>Usage</strong><a class="headerlink" href="#usage" title="Permanent link">⚓︎</a></h2>
 <details class="example" open="open">
 <summary>Code using</summary>
+<details class="node" open="open">
+<summary>Express.js syntax</summary>
+<p><center><code><mark class="critic">app</mark>.<mark class="critic">METHOD</mark>(<mark class="critic">PATH</mark>, <mark class="critic">HANDLER</mark>)</code></center></p>
+<ul>
+<li><code>app</code>: an instance of express.</li>
+<li><code>METHOD</code>: an HTTP request method, in lowercase.</li>
+<li><code>PATH</code>: a path on the server.</li>
+<li><code>HANDLER</code>: the function executed when the route is matched.</li>
+</ul>
+</details>
+<details class="node" open="open">
+<summary>Example code</summary>
 <p><pre class="embed" data-gutter="inside">
-const express = require('express');
-const bodyParser = require('body-parser');
-const app = express();
-&nbsp;
-app.use(bodyParser.json());
-&nbsp;
-app.get('/articles', (req, res) =&gt; {
-  const articles = [];
-  // code to retrieve an article...
-  res.json(articles);
-});
-&nbsp;
-app.post('/articles', (req, res) =&gt; {
-  // code to add a new article...
-  res.json(req.body);
-});
-&nbsp;
-app.put('/articles/:id', (req, res) =&gt; {
-  const { id } = req.params;
-  // code to update an article...
-  res.json(req.body);
-});
-&nbsp;
-app.delete('/articles/:id', (req, res) =&gt; {
-  const { id } = req.params;
-  // code to delete an article...
-  res.json({ deleted: id });
-});
-&nbsp;
-app.listen(3000, () =&gt; console.log('server started'));
+//Respond with Hello World! on the homepage:
+app.get('/', (req, res) =&gt; {
+    res.send('Hello World!')
+})
 </pre></p>
+<p><pre class="embed" data-gutter="inside">
+//Respond to POST request on the root route (/), the application’s home page:
+app.post('/', (req, res) =&gt; {
+    res.send('Got a POST request')
+})
+</pre></p>
+<p><pre class="embed" data-gutter="inside">
+//Respond to a PUT request to the /user route:
+app.put('/user', (req, res) =&gt; {
+    res.send('Got a PUT request at /user')
+})
+</pre></p>
+<p><pre class="embed" data-gutter="inside">
+//Respond to a DELETE request to the /user route:
+app.delete('/user', (req, res) =&gt; {
+    res.send('Got a DELETE request at /user')
+})
+</pre></p>
+</details>
 </details>
 <h2 id="implement-routing"><strong>Implement Routing</strong><a class="headerlink" href="#implement-routing" title="Permanent link">⚓︎</a></h2>
 <p>We have already learn <a href="./">Backend Routing</a>. Here, let's see how to implement <code>Routing</code> by using <strong>Express.js</strong>.</p>
@@ -3027,11 +3052,11 @@ const notebooks = elements.reduce((notebooks, element) => {
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 4, 2022 05:56:54</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 4, 2022 05:57:23</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 4, 2022 05:56:54</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 4, 2022 01:47:38</span>
       
     
   </small>

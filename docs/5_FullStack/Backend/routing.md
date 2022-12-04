@@ -7,11 +7,16 @@ comments: true
 
 ## **Definiton**
 
-???+question "What?"
-    
-    In `backend routing`, the <u>server handles every request</u> by **responding** to the client with a code `201`(I got that thing you want!) or a `404`(Nope, I don’t have that!).
+???+question "When? (background)"
 
-???+question "Situation?"
+    **client** requests to a particular `endpoint` \[ <=> [`URI`](../Frontend/uri.md) + `HTTP` request method (`GET`, `POST`, ...) \]. 
+
+
+???+question "What? (import routing)"
+    
+    To handle the request, in `backend routing`, the <u>server handles every request</u> by **responding** to the client with a code `201`(I got that thing you want!) or a `404`(Nope, I don’t have that!).
+
+???+question "Situation? (example)"
 
     Let’s say a **user** fills out a form with his <u>name, address, favorite hobby</u> and sends a `POST` request by submitting the form. That `GET request url` is sent to the **server**, and the **server** serves back the `requested url` to the **client** as a {==static file==} that is stored on the server. 
     
@@ -21,38 +26,44 @@ comments: true
 
 ???+example "Code using"
 
-    <pre class="embed" data-gutter="inside">
-    const express = require('express');
-    const bodyParser = require('body-parser');
-    const app = express();
-    &nbsp;
-    app.use(bodyParser.json());
-    &nbsp;
-    app.get('/articles', (req, res) => {
-      const articles = [];
-      // code to retrieve an article...
-      res.json(articles);
-    });
-    &nbsp;
-    app.post('/articles', (req, res) => {
-      // code to add a new article...
-      res.json(req.body);
-    });
-    &nbsp;
-    app.put('/articles/:id', (req, res) => {
-      const { id } = req.params;
-      // code to update an article...
-      res.json(req.body);
-    });
-    &nbsp;
-    app.delete('/articles/:id', (req, res) => {
-      const { id } = req.params;
-      // code to delete an article...
-      res.json({ deleted: id });
-    });
-    &nbsp;
-    app.listen(3000, () => console.log('server started'));
-    </pre>
+    ???+node "Express.js syntax"
+
+        <center>`{==app==}.{==METHOD==}({==PATH==}, {==HANDLER==})`</center>
+
+        - `app`: an instance of express.
+        - `METHOD`: an HTTP request method, in lowercase.
+        - `PATH`: a path on the server.
+        - `HANDLER`: the function executed when the route is matched.
+
+    ???+node "Example code"
+
+        <pre class="embed" data-gutter="inside">
+        //Respond with Hello World! on the homepage:
+        app.get('/', (req, res) => {
+            res.send('Hello World!')
+        })
+        </pre>
+
+        <pre class="embed" data-gutter="inside">
+        //Respond to POST request on the root route (/), the application’s home page:
+        app.post('/', (req, res) => {
+            res.send('Got a POST request')
+        })
+        </pre>
+
+        <pre class="embed" data-gutter="inside">
+        //Respond to a PUT request to the /user route:
+        app.put('/user', (req, res) => {
+            res.send('Got a PUT request at /user')
+        })
+        </pre>
+
+        <pre class="embed" data-gutter="inside">
+        //Respond to a DELETE request to the /user route:
+        app.delete('/user', (req, res) => {
+            res.send('Got a DELETE request at /user')
+        })
+        </pre>
 
 
 ## **Implement Routing**
