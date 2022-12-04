@@ -254,11 +254,24 @@ nav:
       - Practic Sheet: 
         - 4_Algorithms/Practice_Sheet/README.md
 
-    
-    - Math: 5_Math/README.md
+    - Full Stack: 
+      - 5_FullStack/README.md
+      - Front End: 
+        - 5_FullStack/Frontend/README.md
+        - SSH: 5_FullStack/Frontend/SSH.md
+      - APIs: 
+        - 5_FullStack/API/README.md
+        - REST API: 5_FullStack/API/rest_api.md
+      - Back End: 
+        - 5_FullStack/Backend/README.md
+        - Node.js: 5_FullStack/Backend/nodejs.md
+        - Express.js: 5_FullStack/Backend/expressjs.md
+
+
+    - Math: 6_Math/README.md
     - Casual Literary: 
-      - Dunhuang Wall Painting: 6_Casual_Literary_Notes/Dunhuang.md
-    - Guitar Garage: 7_Guitar_Garage/README.md
+      - Dunhuang Wall Painting: 7_Casual_Literary_Notes/Dunhuang.md
+    - Guitar Garage: 8_Guitar_Garage/README.md
 
 edit_uri: yuantianle.github.io/edit/main/docs/
 
