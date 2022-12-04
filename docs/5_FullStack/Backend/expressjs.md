@@ -57,6 +57,42 @@ comments: true
 
 We have already learn [Backend Routing](./routing.md). Here, let's see how to implement `Routing` by using **Express.js**.
 
+???+success "Routing example"
+
+    > Please go to [Hoppscotch](https://hoppscotch.io/) for implementing `POST`, `PUT` and `DELETE`
+
+    <pre class="embed" data-gutter="inside">
+    const express = require('express');
+    const bodyParser = require('body-parser');
+    const app = express();
+    &nbsp;
+    app.use(bodyParser.json());
+    &nbsp;
+    app.get('/articles', (req, res) => {
+      const articles = [];
+      // code to retrieve an article...
+      res.json(articles);
+    });
+    &nbsp;
+    app.post('/articles', (req, res) => {
+      // code to add a new article...
+      res.json(req.body);
+    });
+    &nbsp;
+    app.put('/articles/:id', (req, res) => {
+      const { id } = req.params;
+      // code to update an article...
+      res.json(req.body);
+    });
+    &nbsp;
+    app.delete('/articles/:id', (req, res) => {
+      const { id } = req.params;
+      // code to delete an article...
+      res.json({ deleted: id });
+    });
+    &nbsp;
+    app.listen(3000, () => console.log('server started'));
+    </pre>
 
 
 ### **References:**

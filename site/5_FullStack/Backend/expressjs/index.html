@@ -1548,22 +1548,42 @@
             
           
         
+          
+        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../2_Software_Engineering/Terminal/">Terminal</a>
+          <a href="../../../2_Software_Engineering/Terminal/">Bash Commands</a>
+          
+            <label for="__nav_3_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
           
         </div>
       
-      <nav class="md-nav" aria-label="Terminal" data-md-level="2">
+      <nav class="md-nav" aria-label="Bash Commands" data-md-level="2">
         <label class="md-nav__title" for="__nav_3_6">
           <span class="md-nav__icon md-icon"></span>
-          Terminal
+          Bash Commands
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2_Software_Engineering/Terminal/contents/" class="md-nav__link">
+        CONTENTS
+      </a>
+    </li>
+  
+
             
           
         </ul>
@@ -3015,6 +3035,44 @@ app.listen(port, () =&gt; {
 </details>
 <h2 id="implement-routing"><strong>Implement Routing</strong><a class="headerlink" href="#implement-routing" title="Permanent link">⚓︎</a></h2>
 <p>We have already learn <a href="../routing/">Backend Routing</a>. Here, let's see how to implement <code>Routing</code> by using <strong>Express.js</strong>.</p>
+<details class="success" open="open">
+<summary>Routing example</summary>
+<blockquote>
+<p>Please go to <a href="https://hoppscotch.io/">Hoppscotch</a> for implementing <code>POST</code>, <code>PUT</code> and <code>DELETE</code></p>
+</blockquote>
+<p><pre class="embed" data-gutter="inside">
+const express = require('express');
+const bodyParser = require('body-parser');
+const app = express();
+&nbsp;
+app.use(bodyParser.json());
+&nbsp;
+app.get('/articles', (req, res) =&gt; {
+  const articles = [];
+  // code to retrieve an article...
+  res.json(articles);
+});
+&nbsp;
+app.post('/articles', (req, res) =&gt; {
+  // code to add a new article...
+  res.json(req.body);
+});
+&nbsp;
+app.put('/articles/:id', (req, res) =&gt; {
+  const { id } = req.params;
+  // code to update an article...
+  res.json(req.body);
+});
+&nbsp;
+app.delete('/articles/:id', (req, res) =&gt; {
+  const { id } = req.params;
+  // code to delete an article...
+  res.json({ deleted: id });
+});
+&nbsp;
+app.listen(3000, () =&gt; console.log('server started'));
+</pre></p>
+</details>
 <h3 id="references"><strong>References:</strong><a class="headerlink" href="#references" title="Permanent link">⚓︎</a></h3>
 <ul>
 <li><a href="https://en.wikipedia.org/wiki/Express.js">Express.js wiki</a></li>

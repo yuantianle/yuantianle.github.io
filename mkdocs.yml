@@ -207,8 +207,9 @@ nav:
           - Serverless Application: 2_Software_Engineering/AWS/Basic/Serverless.md
           - Avalibility Zone and Region: 2_Software_Engineering/AWS/Basic/Zone_region.md
         - Application: 2_Software_Engineering/AWS/Application/README.md
-      - Terminal: 
+      - Bash Commands: 
         - 2_Software_Engineering/Terminal/README.md
+        - CONTENTS: 2_Software_Engineering/Terminal/contents.md
       - VS_Code: 
         - 2_Software_Engineering/VS_Code/README.md
       - Others: 

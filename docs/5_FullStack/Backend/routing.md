@@ -66,11 +66,103 @@ comments: true
         </pre>
 
 
-## **Implement Routing**
+## **Handlers for Routing**
 
-We have already learn [Backend Routing](./routing.md). Here, let's see how to implement `Routing` by using **Express.js**.
+> Open the boxes below to see the examples 👇
 
+???+success "Four classes of handler"
 
+    ???note "1° `A single callback function` can handle a route"
+
+        <pre class="embed" data-gutter="inside">
+        const express = require('express')
+        const app = express()
+        const port = 3000
+        &nbsp;
+        app.get('/', (req, res) => {
+            res.send('Hello from A!')
+        })
+        &nbsp;
+        app.listen(port, () => {
+            console.log(\`Example app listening on port ${port}\`)
+        })
+        </pre>
+
+    ???note "2° `More than one callback function` can handle a route (use `next()` to control the next callback.)"
+
+        <pre class="embed" data-gutter="inside">
+        const express = require('express')
+        const app = express() 
+        const port = 3000
+        &nbsp;
+        app.get('/', (req, res, next) => {
+            console.log('the response will be sent by the next function ...')
+            next()
+        }, (req, res) => {
+            res.send('Hello from B!')
+        })
+        &nbsp;
+        app.listen(port, () => {
+            console.log(\`Example app listening on port ${port}\`)
+        })
+        </pre>
+
+    ???note "3° `An array of callback functions` can handle a route"
+
+        <pre class="embed" data-gutter="inside">
+        const express = require('express')
+        const app = express()
+        const port = 3000
+        &nbsp;
+        const cb0 = function (req, res, next) {
+            console.log('CB0')
+            next()
+        }
+        &nbsp;
+        const cb1 = function (req, res, next) {
+            console.log('CB1')
+            next()
+        }
+        &nbsp;
+        const cb2 = function (req, res) {
+            res.send('Hello from C!')
+        }
+        &nbsp;
+        app.get('/', [cb0, cb1, cb2])
+        &nbsp;
+        app.listen(port, () => {
+            console.log(\`Example app listening on port ${port}\`)
+        })
+        </pre>
+
+    ???note "4° `A combination of independent functions and arrays of functions` can handle a route"
+
+        <pre class="embed" data-gutter="inside">
+        const express = require('express')
+        const app = express()
+        const port = 3000
+        &nbsp;
+        const cb0 = function (req, res, next) {
+          console.log('CB0')
+          next()
+        }
+        &nbsp;
+        const cb1 = function (req, res, next) {
+          console.log('CB1')
+          next()
+        }
+        &nbsp;
+        app.get('/', [cb0, cb1], (req, res, next) => {
+          console.log('the response will be sent by the next function ...')
+          next()
+        }, (req, res) => {
+          res.send('Hello from D!')
+        })
+        &nbsp;
+        app.listen(port, () => {
+            console.log(\`Example app listening on port ${port}\`)
+        })
+        </pre>
 
 ### **References:**
 

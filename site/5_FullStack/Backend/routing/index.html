@@ -1548,22 +1548,42 @@
             
           
         
+          
+        
       
       
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../2_Software_Engineering/Terminal/">Terminal</a>
+          <a href="../../../2_Software_Engineering/Terminal/">Bash Commands</a>
+          
+            <label for="__nav_3_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
           
         </div>
       
-      <nav class="md-nav" aria-label="Terminal" data-md-level="2">
+      <nav class="md-nav" aria-label="Bash Commands" data-md-level="2">
         <label class="md-nav__title" for="__nav_3_6">
           <span class="md-nav__icon md-icon"></span>
-          Terminal
+          Bash Commands
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2_Software_Engineering/Terminal/contents/" class="md-nav__link">
+        CONTENTS
+      </a>
+    </li>
+  
+
             
           
         </ul>
@@ -2824,8 +2844,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#implement-routing" class="md-nav__link">
-    Implement Routing
+  <a href="#handlers-for-routing" class="md-nav__link">
+    Handlers for Routing
   </a>
   
 </li>
@@ -3018,8 +3038,105 @@ app.delete('/user', (req, res) =&gt; {
 </pre></p>
 </details>
 </details>
-<h2 id="implement-routing"><strong>Implement Routing</strong><a class="headerlink" href="#implement-routing" title="Permanent link">⚓︎</a></h2>
-<p>We have already learn <a href="./">Backend Routing</a>. Here, let's see how to implement <code>Routing</code> by using <strong>Express.js</strong>.</p>
+<h2 id="handlers-for-routing"><strong>Handlers for Routing</strong><a class="headerlink" href="#handlers-for-routing" title="Permanent link">⚓︎</a></h2>
+<blockquote>
+<p>Open the boxes below to see the examples 👇</p>
+</blockquote>
+<details class="success" open="open">
+<summary>Four classes of handler</summary>
+<details class="note">
+<summary>1° <code>A single callback function</code> can handle a route</summary>
+<p><pre class="embed" data-gutter="inside">
+const express = require('express')
+const app = express()
+const port = 3000
+&nbsp;
+app.get('/', (req, res) =&gt; {
+    res.send('Hello from A!')
+})
+&nbsp;
+app.listen(port, () =&gt; {
+    console.log(`Example app listening on port ${port}`)
+})
+</pre></p>
+</details>
+<details class="note">
+<summary>2° <code>More than one callback function</code> can handle a route (use <code>next()</code> to control the next callback.)</summary>
+<p><pre class="embed" data-gutter="inside">
+const express = require('express')
+const app = express() 
+const port = 3000
+&nbsp;
+app.get('/', (req, res, next) =&gt; {
+    console.log('the response will be sent by the next function ...')
+    next()
+}, (req, res) =&gt; {
+    res.send('Hello from B!')
+})
+&nbsp;
+app.listen(port, () =&gt; {
+    console.log(`Example app listening on port ${port}`)
+})
+</pre></p>
+</details>
+<details class="note">
+<summary>3° <code>An array of callback functions</code> can handle a route</summary>
+<p><pre class="embed" data-gutter="inside">
+const express = require('express')
+const app = express()
+const port = 3000
+&nbsp;
+const cb0 = function (req, res, next) {
+    console.log('CB0')
+    next()
+}
+&nbsp;
+const cb1 = function (req, res, next) {
+    console.log('CB1')
+    next()
+}
+&nbsp;
+const cb2 = function (req, res) {
+    res.send('Hello from C!')
+}
+&nbsp;
+app.get('/', [cb0, cb1, cb2])
+&nbsp;
+app.listen(port, () =&gt; {
+    console.log(`Example app listening on port ${port}`)
+})
+</pre></p>
+</details>
+<details class="note">
+<summary>4° <code>A combination of independent functions and arrays of functions</code> can handle a route</summary>
+<p><pre class="embed" data-gutter="inside">
+const express = require('express')
+const app = express()
+const port = 3000
+&nbsp;
+const cb0 = function (req, res, next) {
+  console.log('CB0')
+  next()
+}
+&nbsp;
+const cb1 = function (req, res, next) {
+  console.log('CB1')
+  next()
+}
+&nbsp;
+app.get('/', [cb0, cb1], (req, res, next) =&gt; {
+  console.log('the response will be sent by the next function ...')
+  next()
+}, (req, res) =&gt; {
+  res.send('Hello from D!')
+})
+&nbsp;
+app.listen(port, () =&gt; {
+    console.log(`Example app listening on port ${port}`)
+})
+</pre></p>
+</details>
+</details>
 <h3 id="references"><strong>References:</strong><a class="headerlink" href="#references" title="Permanent link">⚓︎</a></h3>
 <ul>
 <li>
@@ -3052,7 +3169,7 @@ const notebooks = elements.reduce((notebooks, element) => {
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 4, 2022 05:57:23</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 4, 2022 07:37:10</span>
       
         <br>
         Created:

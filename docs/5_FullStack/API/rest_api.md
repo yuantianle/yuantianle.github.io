@@ -12,6 +12,8 @@ comments: true
 
 ???+question "Technical Definition?"
 
+    `REST`: Representational State Transfer.
+
     A `REST API` is an **API (application programming interface)** that conforms to specific **architectural** constraints, like *stateless communication* and *cacheable data*. 
     
     `REST API` is not a protocol or standard. While `REST APIs` {==can be accessed through==} a number of communication protocols, most commonly, they are called over `HTTPS`.
@@ -21,6 +23,7 @@ comments: true
     `REST APIs` should accept `JSON` for request payload and also send responses to `JSON`. `JSON` is the standard for transferring data.
 
 ## **Anatomy of an HTTP request**
+
 
 
 
@@ -40,10 +43,8 @@ Delete| `DELETE` | removes data.
 
 ???+example "Example"
 
-    By using [Express.js](../Backend/expressjs.md), we can implement CRUD operations as below:
+    We can refer to the code described in [Express.js](../Backend/expressjs.md) to learn how to implement `CRUD` operations using `Javascript`.
 
-    <pre class="embed" data-gutter="inside">
-    </pre>
 
 ### **References:**
 

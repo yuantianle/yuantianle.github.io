@@ -2,12 +2,48 @@
 ᴴₒᴴₒᴴₒ: ture
 ---
 
-# **:octicons-terminal-16:{.e_terminal} Terminal**
+# **:octicons-terminal-16:{.e_terminal} Bash Commands**
 
-```
-{% raw %}{% include list.liquid all=true %}{% endraw %}
+### ** :articulated_lorry: Table of Concepts:**
 
-{% include list.liquid all=true %}
-```
+1. [ls](contents/#ls).
 
-{% include list.liquid all=true %}
+2. [cd](contents/#cd).
+
+3. [pwd](contents/#pwd).
+
+4. [grep](contents/#grep).
+
+5. [chomod](contents/#chomod).
+
+6. [find](contents/#find).
+
+7. [history](contents/#history).
+
+8. [Pip (|)](contents/#pip).
+
+9. [Output Redirect (>)](contents/#output-redirect).
+
+10. [cat](contents/#cat).
+
+11. [man](contents/#man).
+
+12. [more, less, most](contents/#more-less-most).
+
+13. [alias](contents/#alias).
+
+14. [unalias](contents/#unalias).
+
+15. [echo](contents/#echo).
+
+16. [which](contents/#which).
+
+17. [PATH](contents/#path).
+
+18. [ln](contents/#ln).
+
+19. [Background Processing (&)](contents/#background-processing).
+
+20. [code](contents/#code).
+
+21. [.bash_profile vs .bashrc](contents/#bash_profile-vs-bashrc).

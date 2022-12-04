@@ -16,7 +16,7 @@
 
 4. [AWS](AWS/README.md): Amazon web services.
 
-5. [Terminal](Terminal/README.md): Linux command
+5. [Bash Commands](Terminal/README.md): Linux command
 
 6. [VS Code](VS_Code/README.md): magic IDE with bunches of great extensions.
 
