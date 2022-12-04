@@ -8,5 +8,7 @@
 
 1. [Node.js](nodejs.md).
 
-2. [Express.js](expressjs.md)
+2. [Express.js](expressjs.md).
+
+3. [Routing](routing.md).
 

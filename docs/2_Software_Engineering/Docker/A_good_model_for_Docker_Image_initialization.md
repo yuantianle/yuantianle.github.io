@@ -1,5 +1,6 @@
 ---
 comments: true
+ᴴₒᴴₒᴴₒ: ture
 ---
 
 # **A good model for Docker Image initialization**

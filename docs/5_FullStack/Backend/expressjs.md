@@ -5,7 +5,7 @@ comments: true
 
 # **:simple-express: Express.js**
 
-## Definiton
+## **Definiton**
 
 ???+question "What"
     
@@ -15,7 +15,7 @@ comments: true
 
     It is designed for building **web applications** and **APIs**. 
 
-## Usage
+## **Usage**
 
 ???+example "Code using"
 
@@ -40,17 +40,24 @@ comments: true
 
 ???+example "Steps of running locally"
 
-    1. Create a directory named `myapp`;
-    2. `cd` into the directory and run: `npm init`;
+    1. Create a directory named `myapp`.
+    2. `cd` into the directory and run: `npm init`.
     3. Command prompts you for a number of things:
         - name: (RETURN for default).
         - version of your application: (RETURN for default).
         - entry point: (default: index.js) `app.js`
     4. Install express as a dependency (choose one):
-        - install Express in the `myapp` directory and save it in the dependency list: a`npm install express` 
-        - install Express in the `myapp` directory temprarily and not add it to the dependency list: a`npm install express --no-save` 
+        - install Express in the `myapp` directory and save it in the dependency list: `npm install express` 
+        - install Express in the `myapp` directory temprarily and not add it to the dependency list: `npm install express --no-save` 
     5. Run the app with command: `node app.js`
     6. Then, load `http://localhost:<port>/` in a browser to see the output.
+
+
+## **Implement Routing**
+
+We have already learn [Backend Routing](./routing.md). Here, let's see how to implement `Routing` by using **Express.js**.
+
+
 
 ### **References:**
 

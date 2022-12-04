@@ -2757,6 +2757,8 @@
         
           
         
+          
+        
       
       
         
@@ -2801,6 +2803,20 @@
     <li class="md-nav__item">
       <a href="../../Backend/expressjs/" class="md-nav__link">
         Express.js
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Backend/routing/" class="md-nav__link">
+        Routing
       </a>
     </li>
   
@@ -2917,7 +2933,7 @@
   
     <div class="md-source-date" style="text-align: right; font-weight: bold;">
       <small>
-          Author: <span class='git-page-authors git-authors'></span>
+          Author: <span class='git-page-authors git-authors'><a href='mailto:yuant@oregonstate.edu'>Tianle Yuan</a></span>
       </small>
     </div>
   
@@ -2984,37 +3000,6 @@
 <summary>Example</summary>
 <p>By using <a href="../../Backend/expressjs/">Express.js</a>, we can implement CRUD operations as below:</p>
 <p><pre class="embed" data-gutter="inside">
-const express = require('express');
-const bodyParser = require('body-parser');
-&nbsp;
-const app = express();
-&nbsp;
-app.use(bodyParser.json());
-&nbsp;
-app.get('/articles', (req, res) =&gt; {
-  const articles = [];
-  // code to retrieve an article...
-  res.json(articles);
-});
-&nbsp;
-app.post('/articles', (req, res) =&gt; {
-  // code to add a new article...
-  res.json(req.body);
-});
-&nbsp;
-app.put('/articles/:id', (req, res) =&gt; {
-  const { id } = req.params;
-  // code to update an article...
-  res.json(req.body);
-});
-&nbsp;
-app.delete('/articles/:id', (req, res) =&gt; {
-  const { id } = req.params;
-  // code to delete an article...
-  res.json({ deleted: id });
-});
-&nbsp;
-app.listen(3000, () =&gt; console.log('server started'));
 </pre></p>
 </details>
 <h3 id="references"><strong>References:</strong><a class="headerlink" href="#references" title="Permanent link">⚓︎</a></h3>
@@ -3044,11 +3029,11 @@ const notebooks = elements.reduce((notebooks, element) => {
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 4, 2022 01:47:02</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 4, 2022 01:47:38</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 4, 2022 01:47:02</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 4, 2022 01:47:38</span>
       
     
   </small>

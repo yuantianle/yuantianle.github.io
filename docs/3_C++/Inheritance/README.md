@@ -1,3 +1,7 @@
+---
+ᴴₒᴴₒᴴₒ: ture
+---
+
 # **:simple-cplusplus: Inheritance**
 
 ### **:book: Table of contents**
