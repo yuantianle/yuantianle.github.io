@@ -19,19 +19,23 @@ comments: true
    
 5. [Mock](../5_FullStack/Frontend/Mock.md)
    
-6. [Auth](../5_FullStack/Frontend/Auth.md)
+6. [Cryptographic](../2_Software_Engineering/Others/crypto.md)
    
-7. [Tests](../2_Software_Engineering/Test/test.md)
+7. [Auth](../5_FullStack/Frontend/Auth.md)
+   
+8. [Tests](../2_Software_Engineering/Test/test.md)
 
-8. [Concurrency v.s. Prallellism](../2_Software_Engineering/Others/Concurrency.md)
+9.  [Concurrency v.s. Prallellism](../2_Software_Engineering/Others/Concurrency.md)
 
-9. [Semantics Versioning](../2_Software_Engineering/Github/sematicsversion.md)
+10. [Semantics Versioning](../2_Software_Engineering/Github/sematicsversion.md)
 
-10. [Self-documenting Code](../2_Software_Engineering/Others/Self_documenting_code.md)
+11. [Self-documenting Code](../2_Software_Engineering/Others/Self_documenting_code.md)
 
-11. [Dispatch Queue & Dead lock](../2_Software_Engineering/Swift/Notes/Dispatch_queue.md)
+12. [Dispatch Queue & Dead lock](../2_Software_Engineering/Swift/Notes/Dispatch_queue.md)
 
-12. [Map reduce](../2_Software_Engineering/Swift/Notes/Map_reduce.md)
+13. [Map reduce](../2_Software_Engineering/Swift/Notes/Map_reduce.md)
+
+14. [Docker](../2_Software_Engineering/Docker/README.md)
 
 
 

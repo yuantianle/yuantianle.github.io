@@ -313,3 +313,22 @@ comments: true
     === "`.bashrc`"
 
         {==Interactive==} {++non-login++} shell.
+
+## **Shebang (#!)**
+
+???note "`#!`"  
+
+    `Bash` commands can be used not only in command lines but also in scripts. The head of `Bash script` should mention using **Bash shell** with `#!`.
+    
+    **e.g:** `#!/bin/bash`.
+
+## **sha1sum**
+
+???note "`sha1sum`"
+
+    `sha1sum` is a **cryptographic hash function**. The algorithm transfer data into `Checksum`, which is convenient for **confirming** if your copy is the same as the original one.
+
+    ![picture 19](pictures/sha1.png){width="80%", : .center}  
+
+
+

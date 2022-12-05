@@ -47,3 +47,7 @@
 20. [code](contents/#code).
 
 21. [.bash_profile vs .bashrc](contents/#bash_profile-vs-bashrc).
+
+22. [Shebang (#!)](contents/#shebang).
+
+23. [sha1sum](contents/#sha1sum).

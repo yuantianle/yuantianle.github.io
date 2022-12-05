@@ -72,6 +72,10 @@ comments: true
 
     **Definition:** the sprint cicle. {==Table of meetings==} in a week. 
 
+## **Ceremonies**
+
+???+note "Ceremonies"
+
     ???example "**`Sprint Planning Meeting`**"
 
         **Time Frequency:** {==1\~2 hrs/week==}

@@ -228,7 +228,7 @@ nav:
         - 2_Software_Engineering/VS_Code/README.md
       - Others: 
         - 2_Software_Engineering/Others/README.md
-        - SSH: 2_Software_Engineering/Others/SSH.md
+        - Cryptographic: 2_Software_Engineering/Others/crypto.md
         - Concurrency v.s. Parallelism: 2_Software_Engineering/Others/Concurrency.md
         - Lock, mutex, and Semaphore: 2_Software_Engineering/Others/Lock_mutex_semaphore.md
         - Self-documenting code: 2_Software_Engineering/Others/Self_documenting_code.md
