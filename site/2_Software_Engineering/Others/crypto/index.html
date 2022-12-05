@@ -1675,7 +1675,7 @@
   
     <li class="md-nav__item">
       <a href="../../AWS/Basic/Zone_region/" class="md-nav__link">
-        Avalibility Zone and Region
+        Availability Zone and Region
       </a>
     </li>
   
@@ -1922,8 +1922,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#hash-sault" class="md-nav__link">
-    Hash sault
+  <a href="#hash-salt" class="md-nav__link">
+    Hash salt
   </a>
   
 </li>
@@ -3195,7 +3195,7 @@
   
     <div class="md-source-date" style="text-align: right; font-weight: bold;">
       <small>
-          Author: <span class='git-page-authors git-authors'></span>
+          Author: <span class='git-page-authors git-authors'><a href='mailto:yuant@oregonstate.edu'>Tianle Yuan</a></span>
       </small>
     </div>
   
@@ -3210,7 +3210,7 @@
 
 <h1 id="-cryptographic"><strong> 🦺 Cryptographic</strong><a class="headerlink" href="#-cryptographic" title="Permanent link">⚓︎</a></h1>
 <p>The <strong>transmission</strong> and <strong>storage</strong> of files need to be <strong>encrypted</strong>, otherwise the privacy of file content will be very easy to be disclosed. </p>
-<p>About <strong>file transmission</strong>, we have discussed in the section about <a href="../../../5_FullStack/Frontend/Auth/">OAuth</a> 2.0](../../5_FullStack/Frontend/Auth.md). In this section, we are talking about the way to encrypt <strong>stored files</strong>.</p>
+<p>About <strong>file transmission</strong>, we have discussed in the section about <a href="../../../5_FullStack/Frontend/Auth/">OAuth 2.0</a>. In this section, we are talking about the way to encrypt <strong>stored files</strong>.</p>
 <h2 id="cryptographic-hash-function"><strong>Cryptographic hash function</strong><a class="headerlink" href="#cryptographic-hash-function" title="Permanent link">⚓︎</a></h2>
 <p>Yes, to store the file secretly, we can use <code>Cryptographic hash function</code>, which we have mentioned before in command line <a href="../../2_Software_Engineering/Terminal/contents.md/#sha1sum">sha1sum</a>.</p>
 <p><code>Cryptographic hash function</code> should have below properties:</p>
@@ -3229,7 +3229,7 @@
 <li><strong>SHA2:</strong> consists of six hash functions with digests (hash values) that are <code>224</code>, <code>256</code>, <code>384</code>, or <code>512</code> bits: <code>SHA-224</code>, <code>SHA-256</code>, <code>SHA-384</code>, <code>SHA-512</code>, <code>SHA-512/224</code>, <code>SHA-512/256</code>.</li>
 <li><strong>SHA3:</strong> Subset of the broader family of algorithms called <a href="https://en.wikipedia.org/wiki/SHA-3"><code>Keccak</code></a>. This algorithm won the hash function competition called <a href="https://www.nists.org/conference">NIST</a>.</li>
 </ul>
-<h2 id="hash-sault"><strong>Hash sault</strong><a class="headerlink" href="#hash-sault" title="Permanent link">⚓︎</a></h2>
+<h2 id="hash-salt"><strong>Hash salt</strong><a class="headerlink" href="#hash-salt" title="Permanent link">⚓︎</a></h2>
 <p>As you saw that <code>Cryptographic hash function</code> has <code>Non-invertible</code> and <code>Deterministic</code> properties. If we use the same hash, we definitely know that we are using the same file. As a hacker, it is easy for you to build a hash cheating table!</p>
 <p><code>Salt</code> is <strong>random data</strong> that is used as <strong>additional input</strong> to a one-way function that hashes data, a password or passphrase.</p>
 <p>Let's compare the <code>normal Hash</code> with <code>Hash added salt</code>.</p>
@@ -3303,11 +3303,11 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 5, 2022 22:32:22</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 5, 2022 22:32:50</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 5, 2022 22:32:22</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 5, 2022 22:32:50</span>
       
     
   </small>

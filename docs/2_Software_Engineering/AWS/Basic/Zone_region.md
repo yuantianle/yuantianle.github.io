@@ -3,7 +3,7 @@ comments: true
 ᴴₒᴴₒᴴₒ: ture
 ---
 
-# **:material-map-marker-path:{.e_swift} Avalibility Zone and Region**
+# **:material-map-marker-path:{.e_swift} Availability Zone and Region**
 
     
 ???+ question "What is `Region`?"

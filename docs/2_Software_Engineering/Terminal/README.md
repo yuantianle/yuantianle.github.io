@@ -14,7 +14,7 @@
 
 4. [grep](contents/#grep).
 
-5. [chomod](contents/#chomod).
+5. [chmod](contents/#chmod).
 
 6. [find](contents/#find).
 

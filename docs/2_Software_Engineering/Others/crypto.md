@@ -7,7 +7,7 @@ comments: true
 
 The **transmission** and **storage** of files need to be **encrypted**, otherwise the privacy of file content will be very easy to be disclosed. 
 
-About **file transmission**, we have discussed in the section about [OAuth](../../5_FullStack/Frontend/Auth.md) 2.0](../../5_FullStack/Frontend/Auth.md). In this section, we are talking about the way to encrypt **stored files**.
+About **file transmission**, we have discussed in the section about [OAuth 2.0](../../5_FullStack/Frontend/Auth.md). In this section, we are talking about the way to encrypt **stored files**.
 
 ## **Cryptographic hash function**
 
@@ -32,7 +32,7 @@ There are three famous **hash algorithms**:
   - **SHA2:** consists of six hash functions with digests (hash values) that are `224`, `256`, `384`, or `512` bits: `SHA-224`, `SHA-256`, `SHA-384`, `SHA-512`, `SHA-512/224`, `SHA-512/256`.
   - **SHA3:** Subset of the broader family of algorithms called [`Keccak`](https://en.wikipedia.org/wiki/SHA-3). This algorithm won the hash function competition called [NIST](https://www.nists.org/conference).
 
-## **Hash sault**
+## **Hash salt**
 
 As you saw that `Cryptographic hash function` has `Non-invertible` and `Deterministic` properties. If we use the same hash, we definitely know that we are using the same file. As a hacker, it is easy for you to build a hash cheating table!
 

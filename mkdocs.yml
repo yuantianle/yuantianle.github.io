@@ -219,7 +219,7 @@ nav:
           - S3: 2_Software_Engineering/AWS/Basic/S3.md
           - ECS & Docker Container: 2_Software_Engineering/AWS/Basic/ECS.md
           - Serverless Application: 2_Software_Engineering/AWS/Basic/Serverless.md
-          - Avalibility Zone and Region: 2_Software_Engineering/AWS/Basic/Zone_region.md
+          - Availability Zone and Region: 2_Software_Engineering/AWS/Basic/Zone_region.md
         - Application: 2_Software_Engineering/AWS/Application/README.md
       - Bash Commands: 
         - 2_Software_Engineering/Terminal/README.md

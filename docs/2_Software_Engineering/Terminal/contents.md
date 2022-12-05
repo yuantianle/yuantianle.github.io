@@ -90,9 +90,9 @@ comments: true
 
     ![picture 11](pictures/grep3.png){width="80%", : .center}  
 
-## **chomod**
+## **chmod**
 
-???note "`chomod`"
+???note "`chmod`"
 
     Set `authority` for the given file. 
 
