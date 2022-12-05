@@ -6,6 +6,10 @@
 
 ### **:book: Table of contents:**
 
-1. [SSH](SSH.md).
+1. [HTTP](HTTP.md).
+   
+2. [Auth](Auth.md).
 
-2. [URI](uri.md).
+3. [SSH & HTTPS](SSH.md).
+
+4. [URI](uri.md).

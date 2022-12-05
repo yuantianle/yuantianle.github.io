@@ -169,11 +169,23 @@ nav:
       
     - Software Engineering: 
       - 2_Software_Engineering/README.md
+      
+      - CS561 Review: 2_Software_Engineering/Review.md
+
+      - Agile: 
+        - 2_Software_Engineering/Agile/README.md
+        - Agile Intro: 2_Software_Engineering/Agile/intro.md
+        - Agile Scrum: 2_Software_Engineering/Agile/scrum.md
+
       - Git & GitHub:
         - 2_Software_Engineering/Github/README.md
         - Git Theory: 2_Software_Engineering/Github/theory.md
         - Git Commands: 2_Software_Engineering/Github/commands.md
         - GitHub Action: 2_Software_Engineering/Github/action.md
+
+      - Test: 
+        - 2_Software_Engineering/Test/README.md
+        - Test Basic: 2_Software_Engineering/Test/test.md
 
       - Docker:
         - 2_Software_Engineering/Docker/README.md
@@ -195,6 +207,7 @@ nav:
           - 2_Software_Engineering/Swift/Notes/README.md
           - Dispatch queue: 2_Software_Engineering/Swift/Notes/Dispatch_queue.md
           - Map-Reduce: 2_Software_Engineering/Swift/Notes/Map_reduce.md
+      
       - AWS:
         - 2_Software_Engineering/AWS/README.md
         - Basic Concepts: 
@@ -259,7 +272,9 @@ nav:
       - 5_FullStack/README.md
       - Front End: 
         - 5_FullStack/Frontend/README.md
-        - SSH: 5_FullStack/Frontend/SSH.md
+        - HTTP: 5_FullStack/Frontend/HTTP.md
+        - Auth: 5_FullStack/Frontend/Auth.md
+        - SSH & HTTPS: 5_FullStack/Frontend/SSH.md
         - URI: 5_FullStack/Frontend/uri.md
       - APIs: 
         - 5_FullStack/API/README.md

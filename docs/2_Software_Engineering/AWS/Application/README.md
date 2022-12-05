@@ -29,3 +29,16 @@ comments: true
 
     ![picture](picture/loadbalance.png){width="80%", : .center}
 
+???+example "Implementation"
+
+    **Architecture Diagram:**
+
+    ![picture 6](picture/ad.png){width="80%", : .center}  
+
+    **Swagger Rainy Day:**
+
+    ![picture 7](picture/swagger1.png){width="80%", : .center}    
+
+    **Swagger Happy Day:**
+
+    ![picture 8](picture/swagger2.png){width="80%", : .center}    

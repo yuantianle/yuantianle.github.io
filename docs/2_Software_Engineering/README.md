@@ -8,18 +8,20 @@
 
 ### **This chapter is split into 7 sections:**
 
-1. [Git and GitHub](Github/README.md): version control.
+1. [Agile Scrum](Agile/README.md): version control.
 
-2. [Docker](Docker/README.md): lightweight virtual machine.
+2. [Git and GitHub](Github/README.md): version control.
 
-3. [Swift](Swift/README.md): Mac OS language.
+3. [Docker](Docker/README.md): lightweight virtual machine.
 
-4. [AWS](AWS/README.md): Amazon web services.
+4. [Swift](Swift/README.md): Mac OS language.
 
-5. [Bash Commands](Terminal/README.md): Linux command
+5. [AWS](AWS/README.md): Amazon web services.
 
-6. [VS Code](VS_Code/README.md): magic IDE with bunches of great extensions.
+6. [Bash Commands](Terminal/README.md): Linux command
 
-7. [Others](Others/README.md): random topics waiting to be classified.
+7. [VS Code](VS_Code/README.md): magic IDE with bunches of great extensions.
+
+8. [Others](Others/README.md): random topics waiting to be classified.
 
 

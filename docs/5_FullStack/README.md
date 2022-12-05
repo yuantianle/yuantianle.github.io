@@ -4,6 +4,8 @@
 
 # ** 💻 Full Stack**
 
+![full](./full.png){width="80%", : .center}
+
 ### **This chapter is split into 3 sections:**
 
 1. [Front End](Frontend/README.md).
