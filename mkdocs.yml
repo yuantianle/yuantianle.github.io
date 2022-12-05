@@ -182,6 +182,7 @@ nav:
         - Git Theory: 2_Software_Engineering/Github/theory.md
         - Git Commands: 2_Software_Engineering/Github/commands.md
         - GitHub Action: 2_Software_Engineering/Github/action.md
+        - GitHub Semantics Versioning: 2_Software_Engineering/Github/sematicsversion.md
 
       - Test: 
         - 2_Software_Engineering/Test/README.md
@@ -272,6 +273,7 @@ nav:
       - 5_FullStack/README.md
       - Front End: 
         - 5_FullStack/Frontend/README.md
+        - Mock: 5_FullStack/Frontend/Mock.md
         - HTTP: 5_FullStack/Frontend/HTTP.md
         - Auth: 5_FullStack/Frontend/Auth.md
         - SSH & HTTPS: 5_FullStack/Frontend/SSH.md

@@ -14,3 +14,5 @@
 
 3. [GitHub Action](action.md) for CI.
 
+4. [GitHub Semantics Versioning](sematicsversion.md) for a convention.
+

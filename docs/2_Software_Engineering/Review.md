@@ -17,7 +17,7 @@ comments: true
    
 4. [REST](../5_FullStack/API/rest_api.md)
    
-5. [Mock]()
+5. [Mock](../5_FullStack/Frontend/Mock.md)
    
 6. [Auth](../5_FullStack/Frontend/Auth.md)
    
@@ -25,7 +25,7 @@ comments: true
 
 8. [Concurrency v.s. Prallellism](../2_Software_Engineering/Others/Concurrency.md)
 
-9. [Semantics Versioning]()
+9. [Semantics Versioning](../2_Software_Engineering/Github/sematicsversion.md)
 
 10. [Self-documenting Code](../2_Software_Engineering/Others/Self_documenting_code.md)
 

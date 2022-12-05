@@ -947,6 +947,8 @@
         
           
         
+          
+        
       
       
         
@@ -1005,6 +1007,20 @@
     <li class="md-nav__item">
       <a href="../../../2_Software_Engineering/Github/action/" class="md-nav__link">
         GitHub Action
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../2_Software_Engineering/Github/sematicsversion/" class="md-nav__link">
+        GitHub Semantics Versioning
       </a>
     </li>
   
@@ -2760,6 +2776,8 @@
         
           
         
+          
+        
       
       
         
@@ -2780,6 +2798,20 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Mock/" class="md-nav__link">
+        Mock
+      </a>
+    </li>
+  
+
             
           
             
@@ -2859,15 +2891,22 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#how-to-use" class="md-nav__link">
-    How to use
+  <a href="#how-to-use-token" class="md-nav__link">
+    How to use Token
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#two-token-auth" class="md-nav__link">
-    Two Token Auth
+  <a href="#oauth-20" class="md-nav__link">
+    OAuth 2.0
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implement-oauth-20" class="md-nav__link">
+    Implement OAuth 2.0
   </a>
   
 </li>
@@ -3177,7 +3216,7 @@
   
     <div class="md-source-date" style="text-align: right; font-weight: bold;">
       <small>
-          Author: <span class='git-page-authors git-authors'></span>
+          Author: <span class='git-page-authors git-authors'><a href='mailto:yuant@oregonstate.edu'>Tianle Yuan</a></span>
       </small>
     </div>
   
@@ -3209,27 +3248,63 @@
 <h2 id="jwtio"><strong>JWT.io</strong><a class="headerlink" href="#jwtio" title="Permanent link">⚓︎</a></h2>
 <details class="note" open="open">
 <summary><code>JWT.io</code> for <code>Token</code> generation</summary>
-<p><code>JWT.io</code> is constructed by below components:</p>
+<p><a href="https://jwt.io/"><code>JWT.io</code></a> is constructed by below components:</p>
 <ul>
-<li>Header:</li>
-<li>Payload:</li>
-<li>Signature:</li>
+<li><strong>Header:</strong> Identify:<ul>
+<li>Which <strong>algorithm</strong>(normally HS256) to generate the <strong>signature</strong>.</li>
+<li>What token type (Here JWT).</li>
 </ul>
+</li>
+<li><strong>Payload:</strong> A set of claims.</li>
+<li><strong>Signature:</strong> Securely <strong>validates</strong> the token, calculated by encoding the <strong>header</strong> and <strong>payload</strong> using <a href="https://base64.guru/standards/base64url#:~:text=Base64URL%20is%20a%20modification%20of,characters%20for%20URLs%20and%20filenames."><code>Base64URL Encoding RFC 4648</code></a></li>
+</ul>
+<p><img :=":" _="," alt="picture 10" class="center" src="../pictures/jwt.png" width="80%" />  </p>
 </details>
-<h2 id="how-to-use"><strong>How to use</strong><a class="headerlink" href="#how-to-use" title="Permanent link">⚓︎</a></h2>
+<h2 id="how-to-use-token"><strong>How to use Token</strong><a class="headerlink" href="#how-to-use-token" title="Permanent link">⚓︎</a></h2>
 <details class="question" open="open">
 <summary>How to apply <code>Token</code>?</summary>
-<p>We <strong>inject</strong> tokens in the <a href="../HTTP/">HTTP</a> header.</p>
+<p>We <strong>inject</strong> tokens in the <a href="../HTTP/">HTTP</a> <strong>header</strong>.</p>
 </details>
-<h2 id="two-token-auth"><strong>Two Token Auth</strong><a class="headerlink" href="#two-token-auth" title="Permanent link">⚓︎</a></h2>
+<h2 id="oauth-20"><strong>OAuth 2.0</strong><a class="headerlink" href="#oauth-20" title="Permanent link">⚓︎</a></h2>
 <details class="question" open="open">
 <summary>Why need two <code>Tokens</code>?</summary>
+<p>It limits the <code>blast radius</code> of a <code>credential attack</code>.</p>
 <details class="example" open="open">
 <summary>Credential attack!</summary>
+<details class="note" open="open">
+<summary>Username-Password Auth</summary>
+<p><img :=":" _="," alt="picture 11" class="center" src="../pictures/auth1.png" width="60%" />    </p>
 </details>
-<details class="success" open="open">
-<summary>Implement theory</summary>
+<details class="note" open="open">
+<summary>One Token Auth</summary>
+<p><img :=":" _="," alt="picture 12" class="center" src="../pictures/auth2.png" width="60%" />    </p>
 </details>
+<details class="note" open="open">
+<summary>Two Token Auth (OAuth 2.0)</summary>
+<p><img :=":" _="," alt="picture 13" class="center" src="../pictures/auth3.png" width="60%" />    </p>
+</details>
+</details>
+</details>
+<h2 id="implement-oauth-20"><strong>Implement OAuth 2.0</strong><a class="headerlink" href="#implement-oauth-20" title="Permanent link">⚓︎</a></h2>
+<p>For the two tokens, one is named <code>Access Token</code>; another is named <code>Refresh Token</code>.</p>
+<details class="question" open="open">
+<summary>Difference between the two tokens?</summary>
+<ul>
+<li>
+<p><code>Access token</code> have <code>"Time-to-live"</code>, which is the maximum that the access token will be valid for use within the application.</p>
+</li>
+<li>
+<p><code>Refresh tokens</code> have <strong>longer</strong> expiration times than access tokens. The exsistance of <code>refresh tokens</code> allows you to use shorter lifetimes for access tokens <strong>WITHOUT</strong> having to request user credentials multiple times.</p>
+</li>
+</ul>
+</details>
+<details class="note" open="open">
+<summary>Iterations Diagram</summary>
+<p><img :=":" _="," alt="picture 14" class="center" src="../pictures/it1.png" width="60%" />  </p>
+<p><img :=":" _="," alt="picture 15" class="center" src="../pictures/it2.png" width="60%" />  </p>
+<p><img :=":" _="," alt="picture 16" class="center" src="../pictures/it3.png" width="60%" />  </p>
+<p><img :=":" _="," alt="picture 17" class="center" src="../pictures/it4.png" width="60%" />  </p>
+<p><img :=":" _="," alt="picture 18" class="center" src="../pictures/it5.png" width="60%" />  </p>
 </details>
 
   <hr>
@@ -3237,11 +3312,11 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 5, 2022 10:32:44</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 5, 2022 10:33:13</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 5, 2022 10:32:45</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 5, 2022 10:33:13</span>
       
     
   </small>
