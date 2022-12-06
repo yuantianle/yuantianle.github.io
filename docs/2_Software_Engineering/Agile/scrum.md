@@ -7,6 +7,8 @@ comments: true
 
 > Let's see the concepts that belongs to Agile Scrum. Click tab for unfolding.
 
+![all](./pictures/all.png){width="60%", : .center}
+
 ## **Roles**
 
 ???+note "Roles"
