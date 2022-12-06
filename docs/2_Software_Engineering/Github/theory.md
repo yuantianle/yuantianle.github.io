@@ -197,7 +197,9 @@ In the diagram above, we notice that the things tree is never visited, and so no
 
 ### **git cherry-pick**
 
-The `git cherry-pick <OID>` command creates a new commit with an identical diff (arbitrary diff between two neighbor commits) to the new commit whose parent is the current commit. 
+**Brief description:** A commit is accidentally made to the **wrong** branch. You can switch to the correct branch (now it is `HEAD` branch) and `cherry-pick` the commit to where it should belong in this `HEAD` branch.
+
+**Technical details:** The `git cherry-pick <OID>` command creates a new commit with an identical diff (arbitrary diff between two neighbor commits) to the new commit whose parent is the current commit. 
 
 ???+example "Steps of `cherry-pick`:"
 
