@@ -3665,7 +3665,8 @@
 <p><img :=":" _="," alt="picture 21" class="center" src="../pictures/source2.png" width="80%" />    </p>
 <p>Oh no! All the dependencies have gone!
 <img :=":" _="," alt="picture 22" class="center" src="../pictures/source3.png" width="80%" />    </p>
-<p>😆 Do not worry about it. <strong>Remove</strong> the code in <code>.bash_profile</code> and <strong>relaunch</strong> your shell. Then your shell will be brand new! (The theory see in next topic <a href="#bash_profile-vs-bashrc">.bash_profile vs .bashrc</a>)</p>
+<p>😆 Do not worry about it. <strong>Remove</strong> the code in <code>.bash_profile</code> and <strong>relaunch</strong> your shell. Then your shell will be brand new! (The theory see in next topic <a href="#bash_profile-vs-bashrc">.bash_profile vs .bashrc</a>).</p>
+<p>There is another way to fix the problem: change <code>export PATH=.:</code> into <code>export PATH=.:$PATH</code>.</p>
 </details>
 <h2 id="bash_profile-vs-bashrc"><strong>.bash_profile vs .bashrc</strong><a class="headerlink" href="#bash_profile-vs-bashrc" title="Permanent link">⚓︎</a></h2>
 <details class="node">
@@ -3724,7 +3725,7 @@
 <p>Use <a href="#source"><code>source</code></a>. Source it immediately!</p>
 </li>
 <li>
-<p>Make it executable with <code>chmod 7xx …</code>. Then run it in any way below. Let's assume the script is named <code>Donow</code>:</p>
+<p>Make it executable with <code>chmod 7xx &lt;script_name&gt;</code>. Then run it in any way below. Let's assume the script is named <code>Donow</code>:</p>
 <ul>
 <li><strong>Add script path</strong> into <code>PATH</code>. Then Run it with script name. <strong>e.g.:</strong> <code>$ Donow</code></li>
 <li>Run <strong>relative path</strong>. <strong>e.g.:</strong> <code>$ ./Donow</code></li>
@@ -3746,7 +3747,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 6, 2022 07:09:30</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 6, 2022 07:13:29</span>
       
         <br>
         Created:
