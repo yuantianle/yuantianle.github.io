@@ -64,7 +64,7 @@ comments: true
 
 ???note "`pwd`"
 
-    Present working directory.
+    Present **working directory**.
 
     ![picture 8](pictures/pwd.png){width="80%", : .center}  
 
@@ -102,11 +102,11 @@ comments: true
 
     === "Digit cheating sheet"
 
-        user | group| other
-        :-:|:-:|:-:
-        6|4|4
-        110| 100| 100
-        rwx | rwx | rwx
+        Person| user | group| other
+        :-:|:-:|:-:|:-:
+        Decimal|6|4|4
+        Binary| 110| 100| 100
+        Meaning| rwx | rwx | rwx
 
     === "Alphabet cheating sheet"
 
@@ -114,19 +114,19 @@ comments: true
 
         Person | u|g|o
         :-:|:-:|:-:|:-:
-        meaning | user|group|other
+        Meaning | user|group|other
 
         Verb| - | +
         :-:|:-:|:-:
-        meaning | add|remove
+        Meaning | add|remove
 
         Behavior | r|w|x
         :-:|:-:|:-:|:-:
-        meaning | read|write|excute
+        Meaning | read|write|excute
 
 ## **find**
 
-???note "`find . name <filename>`"
+???note "`find . -name <filename>`"
 
     Find `file` with the given `name` in the `current directory`.
 
@@ -158,15 +158,11 @@ comments: true
 
 ???note "`>` -- output redirection operator"
 
-    `Redirect` the contents of a command/file to another by `overwriting` it.
+    **Redirect** the contents of a command/file **to another** by `overwriting` it.
 
     **e.g.** 
     
-    I want to use `history` and `grep ls` in sequence.
-
-    ![picture 17](pictures/redirect1.png){width="80%", : .center}     
-
-    Then I want to save the output of `history | grep ls` in the file `output.log`. I use `history | grep ls > output.log`.
+    I want to save the output of `history | grep ls` in the file `output.log`. I use `history | grep ls > output.log`.
 
     ![picture 18](pictures/redirect2.png){width="80%", : .center}   
 
@@ -236,7 +232,7 @@ comments: true
 
 ???note "`unalias`"
 
-    Remove alias.
+    **Remove** `alias`.
 
     ???+warning "Note"
 
@@ -246,14 +242,14 @@ comments: true
 
 ???note "`echo`"
 
-    A built-in Linux feature that prints out arguments as the `standard output`. Example see in [PATH](#path).
+    A built-in Linux feature that **prints out** arguments as the `standard output`. Example see in [PATH](#path).
 
 
 ## **which**
 
 ???note "`which`"
 
-    Use to identify the `location` of `executables`.
+    Use to **identify** the `location` of `executables`.
     
     ![picture 25](pictures/which.png){width="80%", : .center}    
 
@@ -270,7 +266,7 @@ comments: true
 
     **Q:** How to make scripts execute from the present working directory without having to type a `./` before the script's name (**e.g.** `hello` instead of `./hello`)?
 
-    **A:** ./ executes files that are not in $PATH, “.” means it directly execute file in the current directory. Thus, we need to **add** hello’s absolute directory in $PATH, such as:
+    **A:** `./` executes files that are not in `${PATH}`, “.” means it directly execute file in the **current directory**. Thus, we need to **add** hello’s **absolute directory** in `${PATH}`, such as:
     
     <center>`PATH DEFAULT=${PATH}:/path/to/hello`</center>
 
@@ -278,7 +274,7 @@ comments: true
 
 ???note "`ln -s`"   
 
-    Create a `soft link` for an existing file.
+    Create a `soft link` for an <u>existing file</u>.
 
     ![picture 26](pictures/ln.png){width="80%", : .center}     
 
@@ -286,7 +282,7 @@ comments: true
 
 ???note "`&`"  
 
-    For example, launching node.js using `node app.js &` vs. `node app.js`
+    For example, launching **Node.js** using `node app.js &` vs. `node app.js`
 
     Use the `background process` can help to keep the process running without terminal effects. However, a `foreground process` will be killed when we close the terminal.
 
@@ -329,11 +325,11 @@ comments: true
 
     === "`.bash_profile`"
 
-        {==Interactive==} {++log-in++} shell.
+        **For:** {==Interactive==} {++log-in++} shell.
 
     === "`.bashrc`"
 
-        {==Interactive==} {++non-login++} shell.
+        **For:** {==Interactive==} {++non-login++} shell.
 
     ???+warning "Note!"
 
@@ -348,11 +344,11 @@ comments: true
 
 ???note "`#!`"  
 
-    `Bash` commands can be used not only in command lines but also in scripts. The head of `Bash script` should mention using **Bash shell** with `#!`.
+    `Bash` commands can be used not only in **command lines** but also in **scripts**. The head of `Bash script` should mention using **Bash shell** with `#!`.
     
     **e.g:** With `#!/bin/bash`, generate SHA hash for `[A-Za-z0-9]`:
 
-    ![picture 23](pictures/shabang.png){width="80%", : .center}
+    ![picture 23](pictures/shabang.png){width="60%", : .center}
 
 
     ???+question "How to run a bash script?"
