@@ -296,6 +296,25 @@ comments: true
 
     Open `VS Code` to edit some file.
 
+## **source**
+
+???node "`source`"
+
+    `source` is used to **read and execute** the content of a file (generally a set of commands) **right now** instead of relaunching the shell. Those commands are <u>passed as an argument in the current shell script</u>.
+
+    Let's create a `.bash_profile` in the `root` directory:
+
+    ![picture 20](pictures/source1.png){width="80%", : .center}  
+
+    Then execute the file:
+
+    ![picture 21](pictures/source2.png){width="80%", : .center}    
+
+    Oh no! All the dependencies have gone!
+    ![picture 22](pictures/source3.png){width="80%", : .center}    
+
+    😆 Do not worry about it. **Remove** the code in `.bash_profile` and **relaunch** your shell. Then your shell will be brand new! (The theory see in next topic [.bash_profile vs .bashrc](#bash_profile-vs-bashrc))
+
 ## **.bash_profile vs .bashrc**
 
 ???node "`.bash_profile` v.s. `.bashrc`"
@@ -314,6 +333,15 @@ comments: true
 
         {==Interactive==} {++non-login++} shell.
 
+    ???+warning "Note!"
+
+        The components you write in `.bash_profile` and `.bashrc` is just **appending** more works to the current default shell settings. It is **not overlapping**.
+
+        **E.g. situations** 
+            
+          - If you create an empty `.bash_profile` and execute (use `source`) immediately, it will make any changes to your shell's setting. 
+          - If you make any changes in `.bash_profile` and execute it immediately, it will implement the changes in your shell. However, if you delete the code in `.bash_profile` for the changes and restart shell, the shell will run as the original default.
+
 ## **Shebang (#!)**
 
 ???note "`#!`"  
@@ -321,6 +349,19 @@ comments: true
     `Bash` commands can be used not only in command lines but also in scripts. The head of `Bash script` should mention using **Bash shell** with `#!`.
     
     **e.g:** `#!/bin/bash`.
+
+    ???+question "How to run a bash script?"
+        
+        There are **two ways** to run a bash script:
+        
+          1. Use [`source`](#source). Source it immediately!
+          
+          2. Make it executable with `chmod 7xx …`. Then run it in any way below. Let's assume the script is named `Donow`:
+  
+            - **Add script path** into `PATH`. Then Run it with script name. **e.g.:** `$ Donow`
+            - Run **relative path**. **e.g.:** `$ ./Donow`
+            - Run **absolute path**. **e.g.:** `$ <Path_from_root>/Donow`
+
 
 ## **sha1sum**
 
