@@ -113,7 +113,7 @@ You can observe that when implementing the function, `greet(person: "Will", home
     assert(greet(person: "Will", from: "Portland") == "Hello Will!  Glad you could visit from Portland.")
     ```
 
->**Thanks, Prof. Will always visits us from Portland! :orangutan:**
+>**Thanks, the person who always visits us from Portland! :orangutan:**
 
 ### **References:**
 
