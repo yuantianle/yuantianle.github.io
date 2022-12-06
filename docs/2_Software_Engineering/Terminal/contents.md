@@ -350,7 +350,10 @@ comments: true
 
     `Bash` commands can be used not only in command lines but also in scripts. The head of `Bash script` should mention using **Bash shell** with `#!`.
     
-    **e.g:** `#!/bin/bash`.
+    **e.g:** With `#!/bin/bash`, generate SHA hash for `[A-Za-z0-9]`:
+
+    ![picture 23](pictures/shabang.png){width="80%", : .center}
+
 
     ???+question "How to run a bash script?"
         
