@@ -30,8 +30,8 @@ There are four major types of `tests`. You can see their relations in the diagra
     === "System tests"
 
         * **Formula:** $A\supset B + C$
-        * **Explanation:** test object: Some `system function` from **frontend** `C` to **backend** `A`. 
-        * **Note:** The `system test` is the same as `UI test`, which focuses on some system functions.
+        * **Explanation:** test object: Some **system function** from **frontend** `C` to **backend** `A`. 
+        * **Note:** The `system test` is the same as `UI test`, which focuses on some <u>system functions</u>.
 
     === "E2E tests"
 
