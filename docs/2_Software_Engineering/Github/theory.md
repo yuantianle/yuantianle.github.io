@@ -93,7 +93,7 @@ To understand the `commit` more straightforward, firstly, let's use the command 
 Combining the concept map below, each `commit` contains:
 
 - A pointer to its **root tree**, representing the state of the working directory at that time.
-- A **list of parent commits** corresponding to the previous snapshots (commits). A commit with no parents is a root commit, and a commit with multiple parents is a merge commit. Commits also contain 
+- A **list of parent commits** corresponding to the previous snapshots (commits). A commit with no parents is a root commit, and a commit with multiple parents is a merge commit.
 - **Metadata** describing the snapshot. Such as:
     - Author and committer's name, email address, and date
     - A commit message. The commit message is an opportunity for the commit author to describe the purpose of that commit with respect to the parents.

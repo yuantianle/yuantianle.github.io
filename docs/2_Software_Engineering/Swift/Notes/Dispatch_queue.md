@@ -6,7 +6,7 @@ comments: true
 # **Dispatch queue and Dead lock**
 
 
-## **I. Dispatch queue (from Prof. Will Braynen, OSU)**
+## **I. Dispatch queue (from Will Braynen)**
 
 ### **1️⃣ What?**
 
