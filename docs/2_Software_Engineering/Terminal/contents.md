@@ -313,7 +313,9 @@ comments: true
     Oh no! All the dependencies have gone!
     ![picture 22](pictures/source3.png){width="80%", : .center}    
 
-    😆 Do not worry about it. **Remove** the code in `.bash_profile` and **relaunch** your shell. Then your shell will be brand new! (The theory see in next topic [.bash_profile vs .bashrc](#bash_profile-vs-bashrc))
+    😆 Do not worry about it. **Remove** the code in `.bash_profile` and **relaunch** your shell. Then your shell will be brand new! (The theory see in next topic [.bash_profile vs .bashrc](#bash_profile-vs-bashrc)).
+
+    There is another way to fix the problem: change `export PATH=.:` into `export PATH=.:$PATH`.
 
 ## **.bash_profile vs .bashrc**
 
@@ -356,7 +358,7 @@ comments: true
         
           1. Use [`source`](#source). Source it immediately!
           
-          2. Make it executable with `chmod 7xx …`. Then run it in any way below. Let's assume the script is named `Donow`:
+          2. Make it executable with `chmod 7xx <script_name>`. Then run it in any way below. Let's assume the script is named `Donow`:
   
             - **Add script path** into `PATH`. Then Run it with script name. **e.g.:** `$ Donow`
             - Run **relative path**. **e.g.:** `$ ./Donow`
