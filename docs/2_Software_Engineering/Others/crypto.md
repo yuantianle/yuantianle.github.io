@@ -11,7 +11,7 @@ About **file transmission**, we have discussed in the section about [OAuth 2.0](
 
 ## **Cryptographic hash function**
 
-Yes, to store the file secretly, we can use `Cryptographic hash function`, which we have mentioned before in command line [sha1sum](../../2_Software_Engineering/Terminal/contents.md/#sha1sum).
+Yes, to store the file secretly, we can use `Cryptographic hash function` to generate `checksum`, which we have mentioned before in the command line [sha1sum](../../2_Software_Engineering/Terminal/contents/#sha1sum).
 
 `Cryptographic hash function` should have below properties:
 
