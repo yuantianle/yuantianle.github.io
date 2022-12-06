@@ -1936,6 +1936,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#source" class="md-nav__link">
+    source
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#bash_profile-vs-bashrc" class="md-nav__link">
     .bash_profile vs .bashrc
   </a>
@@ -3648,6 +3655,18 @@
 <summary><code>code</code></summary>
 <p>Open <code>VS Code</code> to edit some file.</p>
 </details>
+<h2 id="source"><strong>source</strong><a class="headerlink" href="#source" title="Permanent link">⚓︎</a></h2>
+<details class="node">
+<summary><code>source</code></summary>
+<p><code>source</code> is used to <strong>read and execute</strong> the content of a file (generally a set of commands) <strong>right now</strong> instead of relaunching the shell. Those commands are <u>passed as an argument in the current shell script</u>.</p>
+<p>Let's create a <code>.bash_profile</code> in the <code>root</code> directory:</p>
+<p><img :=":" _="," alt="picture 20" class="center" src="../pictures/source1.png" width="80%" />  </p>
+<p>Then execute the file:</p>
+<p><img :=":" _="," alt="picture 21" class="center" src="../pictures/source2.png" width="80%" />    </p>
+<p>Oh no! All the dependencies have gone!
+<img :=":" _="," alt="picture 22" class="center" src="../pictures/source3.png" width="80%" />    </p>
+<p>😆 Do not worry about it. <strong>Remove</strong> the code in <code>.bash_profile</code> and <strong>relaunch</strong> your shell. Then your shell will be brand new! (The theory see in next topic <a href="#bash_profile-vs-bashrc">.bash_profile vs .bashrc</a>)</p>
+</details>
 <h2 id="bash_profile-vs-bashrc"><strong>.bash_profile vs .bashrc</strong><a class="headerlink" href="#bash_profile-vs-bashrc" title="Permanent link">⚓︎</a></h2>
 <details class="node">
 <summary><code>.bash_profile</code> v.s. <code>.bashrc</code></summary>
@@ -3682,12 +3701,38 @@
 </div>
 </div>
 </div>
+<details class="warning" open="open">
+<summary>Note!</summary>
+<p>The components you write in <code>.bash_profile</code> and <code>.bashrc</code> is just <strong>appending</strong> more works to the current default shell settings. It is <strong>not overlapping</strong>.</p>
+<p><strong>E.g. situations</strong> </p>
+<ul>
+<li>If you create an empty <code>.bash_profile</code> and execute (use <code>source</code>) immediately, it will make any changes to your shell's setting. </li>
+<li>If you make any changes in <code>.bash_profile</code> and execute it immediately, it will implement the changes in your shell. However, if you delete the code in <code>.bash_profile</code> for the changes and restart shell, the shell will run as the original default.</li>
+</ul>
+</details>
 </details>
 <h2 id="shebang-"><strong>Shebang (#!)</strong><a class="headerlink" href="#shebang-" title="Permanent link">⚓︎</a></h2>
 <details class="note">
 <summary><code>#!</code></summary>
 <p><code>Bash</code> commands can be used not only in command lines but also in scripts. The head of <code>Bash script</code> should mention using <strong>Bash shell</strong> with <code>#!</code>.</p>
 <p><strong>e.g:</strong> <code>#!/bin/bash</code>.</p>
+<details class="question" open="open">
+<summary>How to run a bash script?</summary>
+<p>There are <strong>two ways</strong> to run a bash script:</p>
+<ol>
+<li>
+<p>Use <a href="#source"><code>source</code></a>. Source it immediately!</p>
+</li>
+<li>
+<p>Make it executable with <code>chmod 7xx …</code>. Then run it in any way below. Let's assume the script is named <code>Donow</code>:</p>
+<ul>
+<li><strong>Add script path</strong> into <code>PATH</code>. Then Run it with script name. <strong>e.g.:</strong> <code>$ Donow</code></li>
+<li>Run <strong>relative path</strong>. <strong>e.g.:</strong> <code>$ ./Donow</code></li>
+<li>Run <strong>absolute path</strong>. <strong>e.g.:</strong> <code>$ &lt;Path_from_root&gt;/Donow</code></li>
+</ul>
+</li>
+</ol>
+</details>
 </details>
 <h2 id="sha1sum"><strong>sha1sum</strong><a class="headerlink" href="#sha1sum" title="Permanent link">⚓︎</a></h2>
 <details class="note">
@@ -3701,7 +3746,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 5, 2022 23:06:02</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 6, 2022 07:09:30</span>
       
         <br>
         Created:
