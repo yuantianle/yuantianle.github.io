@@ -3416,7 +3416,7 @@
 <h2 id="pwd"><strong>pwd</strong><a class="headerlink" href="#pwd" title="Permanent link">⚓︎</a></h2>
 <details class="note">
 <summary><code>pwd</code></summary>
-<p>Present working directory.</p>
+<p>Present <strong>working directory</strong>.</p>
 <p><img :=":" _="," alt="picture 8" class="center" src="../pictures/pwd.png" width="80%" />  </p>
 </details>
 <h2 id="grep"><strong>grep</strong><a class="headerlink" href="#grep" title="Permanent link">⚓︎</a></h2>
@@ -3448,6 +3448,7 @@
 <table>
 <thead>
 <tr>
+<th align="center">Person</th>
 <th align="center">user</th>
 <th align="center">group</th>
 <th align="center">other</th>
@@ -3455,16 +3456,19 @@
 </thead>
 <tbody>
 <tr>
+<td align="center">Decimal</td>
 <td align="center">6</td>
 <td align="center">4</td>
 <td align="center">4</td>
 </tr>
 <tr>
+<td align="center">Binary</td>
 <td align="center">110</td>
 <td align="center">100</td>
 <td align="center">100</td>
 </tr>
 <tr>
+<td align="center">Meaning</td>
 <td align="center">rwx</td>
 <td align="center">rwx</td>
 <td align="center">rwx</td>
@@ -3485,7 +3489,7 @@
 </thead>
 <tbody>
 <tr>
-<td align="center">meaning</td>
+<td align="center">Meaning</td>
 <td align="center">user</td>
 <td align="center">group</td>
 <td align="center">other</td>
@@ -3502,7 +3506,7 @@
 </thead>
 <tbody>
 <tr>
-<td align="center">meaning</td>
+<td align="center">Meaning</td>
 <td align="center">add</td>
 <td align="center">remove</td>
 </tr>
@@ -3519,7 +3523,7 @@
 </thead>
 <tbody>
 <tr>
-<td align="center">meaning</td>
+<td align="center">Meaning</td>
 <td align="center">read</td>
 <td align="center">write</td>
 <td align="center">excute</td>
@@ -3532,7 +3536,7 @@
 </details>
 <h2 id="find"><strong>find</strong><a class="headerlink" href="#find" title="Permanent link">⚓︎</a></h2>
 <details class="note">
-<summary><code>find . name &lt;filename&gt;</code></summary>
+<summary><code>find . -name &lt;filename&gt;</code></summary>
 <p>Find <code>file</code> with the given <code>name</code> in the <code>current directory</code>.</p>
 <p><img :=":" _="," alt="picture 13" class="center" src="../pictures/find.png" width="80%" />   </p>
 </details>
@@ -3554,11 +3558,9 @@
 <h2 id="output-redirect-"><strong>Output Redirect (&gt;)</strong><a class="headerlink" href="#output-redirect-" title="Permanent link">⚓︎</a></h2>
 <details class="note">
 <summary><code>&gt;</code> -- output redirection operator</summary>
-<p><code>Redirect</code> the contents of a command/file to another by <code>overwriting</code> it.</p>
+<p><strong>Redirect</strong> the contents of a command/file <strong>to another</strong> by <code>overwriting</code> it.</p>
 <p><strong>e.g.</strong> </p>
-<p>I want to use <code>history</code> and <code>grep ls</code> in sequence.</p>
-<p><img :=":" _="," alt="picture 17" class="center" src="../pictures/redirect1.png" width="80%" />     </p>
-<p>Then I want to save the output of <code>history | grep ls</code> in the file <code>output.log</code>. I use <code>history | grep ls &gt; output.log</code>.</p>
+<p>I want to save the output of <code>history | grep ls</code> in the file <code>output.log</code>. I use <code>history | grep ls &gt; output.log</code>.</p>
 <p><img :=":" _="," alt="picture 18" class="center" src="../pictures/redirect2.png" width="80%" />   </p>
 </details>
 <h2 id="cat"><strong>cat</strong><a class="headerlink" href="#cat" title="Permanent link">⚓︎</a></h2>
@@ -3625,7 +3627,7 @@
 <h2 id="unalias"><strong>unalias</strong><a class="headerlink" href="#unalias" title="Permanent link">⚓︎</a></h2>
 <details class="note">
 <summary><code>unalias</code></summary>
-<p>Remove alias.</p>
+<p><strong>Remove</strong> <code>alias</code>.</p>
 <details class="warning" open="open">
 <summary>Note</summary>
 <p><code>unalias</code> not only remove the <code>alias</code> from the current session but also remove them permanently from <code>shell's configuration file</code>.</p>
@@ -3634,12 +3636,12 @@
 <h2 id="echo"><strong>echo</strong><a class="headerlink" href="#echo" title="Permanent link">⚓︎</a></h2>
 <details class="note">
 <summary><code>echo</code></summary>
-<p>A built-in Linux feature that prints out arguments as the <code>standard output</code>. Example see in <a href="#path">PATH</a>.</p>
+<p>A built-in Linux feature that <strong>prints out</strong> arguments as the <code>standard output</code>. Example see in <a href="#path">PATH</a>.</p>
 </details>
 <h2 id="which"><strong>which</strong><a class="headerlink" href="#which" title="Permanent link">⚓︎</a></h2>
 <details class="note">
 <summary><code>which</code></summary>
-<p>Use to identify the <code>location</code> of <code>executables</code>.</p>
+<p>Use to <strong>identify</strong> the <code>location</code> of <code>executables</code>.</p>
 <p><img :=":" _="," alt="picture 25" class="center" src="../pictures/which.png" width="80%" />    </p>
 </details>
 <h2 id="path"><strong>PATH</strong><a class="headerlink" href="#path" title="Permanent link">⚓︎</a></h2>
@@ -3651,19 +3653,19 @@
 <details class="note">
 <summary><code>PATH</code> edit</summary>
 <p><strong>Q:</strong> How to make scripts execute from the present working directory without having to type a <code>./</code> before the script's name (<strong>e.g.</strong> <code>hello</code> instead of <code>./hello</code>)?</p>
-<p><strong>A:</strong> ./ executes files that are not in $PATH, “.” means it directly execute file in the current directory. Thus, we need to <strong>add</strong> hello’s absolute directory in $PATH, such as:</p>
+<p><strong>A:</strong> <code>./</code> executes files that are not in <code>${PATH}</code>, “.” means it directly execute file in the <strong>current directory</strong>. Thus, we need to <strong>add</strong> hello’s <strong>absolute directory</strong> in <code>${PATH}</code>, such as:</p>
 <p><center><code>PATH DEFAULT=${PATH}:/path/to/hello</code></center></p>
 </details>
 <h2 id="ln"><strong>ln</strong><a class="headerlink" href="#ln" title="Permanent link">⚓︎</a></h2>
 <details class="note">
 <summary><code>ln -s</code></summary>
-<p>Create a <code>soft link</code> for an existing file.</p>
+<p>Create a <code>soft link</code> for an <u>existing file</u>.</p>
 <p><img :=":" _="," alt="picture 26" class="center" src="../pictures/ln.png" width="80%" />     </p>
 </details>
 <h2 id="background-processing-"><strong>Background Processing (&amp;)</strong><a class="headerlink" href="#background-processing-" title="Permanent link">⚓︎</a></h2>
 <details class="note">
 <summary><code>&amp;</code></summary>
-<p>For example, launching node.js using <code>node app.js &amp;</code> vs. <code>node app.js</code></p>
+<p>For example, launching <strong>Node.js</strong> using <code>node app.js &amp;</code> vs. <code>node app.js</code></p>
 <p>Use the <code>background process</code> can help to keep the process running without terminal effects. However, a <code>foreground process</code> will be killed when we close the terminal.</p>
 </details>
 <h2 id="code"><strong>code</strong><a class="headerlink" href="#code" title="Permanent link">⚓︎</a></h2>
@@ -3711,10 +3713,10 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1"><code>.bash_profile</code></label><label for="__tabbed_4_2"><code>.bashrc</code></label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><mark class="critic">Interactive</mark> <ins class="critic">log-in</ins> shell.</p>
+<p><strong>For:</strong> <mark class="critic">Interactive</mark> <ins class="critic">log-in</ins> shell.</p>
 </div>
 <div class="tabbed-block">
-<p><mark class="critic">Interactive</mark> <ins class="critic">non-login</ins> shell.</p>
+<p><strong>For:</strong> <mark class="critic">Interactive</mark> <ins class="critic">non-login</ins> shell.</p>
 </div>
 </div>
 </div>
@@ -3731,9 +3733,9 @@
 <h2 id="shebang-"><strong>Shebang (#!)</strong><a class="headerlink" href="#shebang-" title="Permanent link">⚓︎</a></h2>
 <details class="note">
 <summary><code>#!</code></summary>
-<p><code>Bash</code> commands can be used not only in command lines but also in scripts. The head of <code>Bash script</code> should mention using <strong>Bash shell</strong> with <code>#!</code>.</p>
+<p><code>Bash</code> commands can be used not only in <strong>command lines</strong> but also in <strong>scripts</strong>. The head of <code>Bash script</code> should mention using <strong>Bash shell</strong> with <code>#!</code>.</p>
 <p><strong>e.g:</strong> With <code>#!/bin/bash</code>, generate SHA hash for <code>[A-Za-z0-9]</code>:</p>
-<p><img :=":" _="," alt="picture 23" class="center" src="../pictures/shabang.png" width="80%" /></p>
+<p><img :=":" _="," alt="picture 23" class="center" src="../pictures/shabang.png" width="60%" /></p>
 <details class="question" open="open">
 <summary>How to run a bash script?</summary>
 <p>There are <strong>two ways</strong> to run a bash script:</p>
@@ -3764,7 +3766,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 6, 2022 07:39:41</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 6, 2022 18:54:42</span>
       
         <br>
         Created:
