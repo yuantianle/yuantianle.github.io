@@ -1936,6 +1936,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#source" class="md-nav__link">
+    source
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#bash_profile-vs-bashrc" class="md-nav__link">
     .bash_profile vs .bashrc
   </a>
@@ -2041,6 +2048,8 @@
         
           
         
+          
+        
       
       
         
@@ -2061,6 +2070,20 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Others/engineer/" class="md-nav__link">
+        Engineer Principles
+      </a>
+    </li>
+  
+
             
           
             
@@ -3393,7 +3416,7 @@
 <h2 id="pwd"><strong>pwd</strong><a class="headerlink" href="#pwd" title="Permanent link">⚓︎</a></h2>
 <details class="note">
 <summary><code>pwd</code></summary>
-<p>Present working directory.</p>
+<p>Present <strong>working directory</strong>.</p>
 <p><img :=":" _="," alt="picture 8" class="center" src="../pictures/pwd.png" width="80%" />  </p>
 </details>
 <h2 id="grep"><strong>grep</strong><a class="headerlink" href="#grep" title="Permanent link">⚓︎</a></h2>
@@ -3425,6 +3448,7 @@
 <table>
 <thead>
 <tr>
+<th align="center">Person</th>
 <th align="center">user</th>
 <th align="center">group</th>
 <th align="center">other</th>
@@ -3432,16 +3456,19 @@
 </thead>
 <tbody>
 <tr>
+<td align="center">Decimal</td>
 <td align="center">6</td>
 <td align="center">4</td>
 <td align="center">4</td>
 </tr>
 <tr>
+<td align="center">Binary</td>
 <td align="center">110</td>
 <td align="center">100</td>
 <td align="center">100</td>
 </tr>
 <tr>
+<td align="center">Meaning</td>
 <td align="center">rwx</td>
 <td align="center">rwx</td>
 <td align="center">rwx</td>
@@ -3462,7 +3489,7 @@
 </thead>
 <tbody>
 <tr>
-<td align="center">meaning</td>
+<td align="center">Meaning</td>
 <td align="center">user</td>
 <td align="center">group</td>
 <td align="center">other</td>
@@ -3479,7 +3506,7 @@
 </thead>
 <tbody>
 <tr>
-<td align="center">meaning</td>
+<td align="center">Meaning</td>
 <td align="center">add</td>
 <td align="center">remove</td>
 </tr>
@@ -3496,7 +3523,7 @@
 </thead>
 <tbody>
 <tr>
-<td align="center">meaning</td>
+<td align="center">Meaning</td>
 <td align="center">read</td>
 <td align="center">write</td>
 <td align="center">excute</td>
@@ -3509,7 +3536,7 @@
 </details>
 <h2 id="find"><strong>find</strong><a class="headerlink" href="#find" title="Permanent link">⚓︎</a></h2>
 <details class="note">
-<summary><code>find . name &lt;filename&gt;</code></summary>
+<summary><code>find . -name &lt;filename&gt;</code></summary>
 <p>Find <code>file</code> with the given <code>name</code> in the <code>current directory</code>.</p>
 <p><img :=":" _="," alt="picture 13" class="center" src="../pictures/find.png" width="80%" />   </p>
 </details>
@@ -3531,11 +3558,9 @@
 <h2 id="output-redirect-"><strong>Output Redirect (&gt;)</strong><a class="headerlink" href="#output-redirect-" title="Permanent link">⚓︎</a></h2>
 <details class="note">
 <summary><code>&gt;</code> -- output redirection operator</summary>
-<p><code>Redirect</code> the contents of a command/file to another by <code>overwriting</code> it.</p>
+<p><strong>Redirect</strong> the contents of a command/file <strong>to another</strong> by <code>overwriting</code> it.</p>
 <p><strong>e.g.</strong> </p>
-<p>I want to use <code>history</code> and <code>grep ls</code> in sequence.</p>
-<p><img :=":" _="," alt="picture 17" class="center" src="../pictures/redirect1.png" width="80%" />     </p>
-<p>Then I want to save the output of <code>history | grep ls</code> in the file <code>output.log</code>. I use <code>history | grep ls &gt; output.log</code>.</p>
+<p>I want to save the output of <code>history | grep ls</code> in the file <code>output.log</code>. I use <code>history | grep ls &gt; output.log</code>.</p>
 <p><img :=":" _="," alt="picture 18" class="center" src="../pictures/redirect2.png" width="80%" />   </p>
 </details>
 <h2 id="cat"><strong>cat</strong><a class="headerlink" href="#cat" title="Permanent link">⚓︎</a></h2>
@@ -3602,7 +3627,7 @@
 <h2 id="unalias"><strong>unalias</strong><a class="headerlink" href="#unalias" title="Permanent link">⚓︎</a></h2>
 <details class="note">
 <summary><code>unalias</code></summary>
-<p>Remove alias.</p>
+<p><strong>Remove</strong> <code>alias</code>.</p>
 <details class="warning" open="open">
 <summary>Note</summary>
 <p><code>unalias</code> not only remove the <code>alias</code> from the current session but also remove them permanently from <code>shell's configuration file</code>.</p>
@@ -3611,12 +3636,12 @@
 <h2 id="echo"><strong>echo</strong><a class="headerlink" href="#echo" title="Permanent link">⚓︎</a></h2>
 <details class="note">
 <summary><code>echo</code></summary>
-<p>A built-in Linux feature that prints out arguments as the <code>standard output</code>. Example see in <a href="#path">PATH</a>.</p>
+<p>A built-in Linux feature that <strong>prints out</strong> arguments as the <code>standard output</code>. Example see in <a href="#path">PATH</a>.</p>
 </details>
 <h2 id="which"><strong>which</strong><a class="headerlink" href="#which" title="Permanent link">⚓︎</a></h2>
 <details class="note">
 <summary><code>which</code></summary>
-<p>Use to identify the <code>location</code> of <code>executables</code>.</p>
+<p>Use to <strong>identify</strong> the <code>location</code> of <code>executables</code>.</p>
 <p><img :=":" _="," alt="picture 25" class="center" src="../pictures/which.png" width="80%" />    </p>
 </details>
 <h2 id="path"><strong>PATH</strong><a class="headerlink" href="#path" title="Permanent link">⚓︎</a></h2>
@@ -3628,25 +3653,38 @@
 <details class="note">
 <summary><code>PATH</code> edit</summary>
 <p><strong>Q:</strong> How to make scripts execute from the present working directory without having to type a <code>./</code> before the script's name (<strong>e.g.</strong> <code>hello</code> instead of <code>./hello</code>)?</p>
-<p><strong>A:</strong> ./ executes files that are not in $PATH, “.” means it directly execute file in the current directory. Thus, we need to <strong>add</strong> hello’s absolute directory in $PATH, such as:</p>
+<p><strong>A:</strong> <code>./</code> executes files that are not in <code>${PATH}</code>, “.” means it directly execute file in the <strong>current directory</strong>. Thus, we need to <strong>add</strong> hello’s <strong>absolute directory</strong> in <code>${PATH}</code>, such as:</p>
 <p><center><code>PATH DEFAULT=${PATH}:/path/to/hello</code></center></p>
 </details>
 <h2 id="ln"><strong>ln</strong><a class="headerlink" href="#ln" title="Permanent link">⚓︎</a></h2>
 <details class="note">
 <summary><code>ln -s</code></summary>
-<p>Create a <code>soft link</code> for an existing file.</p>
+<p>Create a <code>soft link</code> for an <u>existing file</u>.</p>
 <p><img :=":" _="," alt="picture 26" class="center" src="../pictures/ln.png" width="80%" />     </p>
 </details>
 <h2 id="background-processing-"><strong>Background Processing (&amp;)</strong><a class="headerlink" href="#background-processing-" title="Permanent link">⚓︎</a></h2>
 <details class="note">
 <summary><code>&amp;</code></summary>
-<p>For example, launching node.js using <code>node app.js &amp;</code> vs. <code>node app.js</code></p>
+<p>For example, launching <strong>Node.js</strong> using <code>node app.js &amp;</code> vs. <code>node app.js</code></p>
 <p>Use the <code>background process</code> can help to keep the process running without terminal effects. However, a <code>foreground process</code> will be killed when we close the terminal.</p>
 </details>
 <h2 id="code"><strong>code</strong><a class="headerlink" href="#code" title="Permanent link">⚓︎</a></h2>
 <details class="node">
 <summary><code>code</code></summary>
 <p>Open <code>VS Code</code> to edit some file.</p>
+</details>
+<h2 id="source"><strong>source</strong><a class="headerlink" href="#source" title="Permanent link">⚓︎</a></h2>
+<details class="node">
+<summary><code>source</code></summary>
+<p><code>source</code> is used to <strong>read and execute</strong> the content of a file (generally a set of commands) <strong>right now</strong> instead of relaunching the shell. Those commands are <u>passed as an argument in the current shell script</u>.</p>
+<p>Let's create a <code>.bash_profile</code> in the <code>root</code> directory:</p>
+<p><img :=":" _="," alt="picture 20" class="center" src="../pictures/source1.png" width="80%" />  </p>
+<p>Then execute the file:</p>
+<p><img :=":" _="," alt="picture 21" class="center" src="../pictures/source2.png" width="80%" />    </p>
+<p>Oh no! All the dependencies have gone!
+<img :=":" _="," alt="picture 22" class="center" src="../pictures/source3.png" width="80%" />    </p>
+<p>😆 Do not worry about it. <strong>Remove</strong> the code in <code>.bash_profile</code> and <strong>relaunch</strong> your shell. Then your shell will be brand new! (The theory see in next topic <a href="#bash_profile-vs-bashrc">.bash_profile vs .bashrc</a>).</p>
+<p>There is another way to fix the problem: change <code>export PATH=.:</code> into <code>export PATH=.:$PATH</code>.</p>
 </details>
 <h2 id="bash_profile-vs-bashrc"><strong>.bash_profile vs .bashrc</strong><a class="headerlink" href="#bash_profile-vs-bashrc" title="Permanent link">⚓︎</a></h2>
 <details class="node">
@@ -3675,19 +3713,46 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1"><code>.bash_profile</code></label><label for="__tabbed_4_2"><code>.bashrc</code></label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><mark class="critic">Interactive</mark> <ins class="critic">log-in</ins> shell.</p>
+<p><strong>For:</strong> <mark class="critic">Interactive</mark> <ins class="critic">log-in</ins> shell.</p>
 </div>
 <div class="tabbed-block">
-<p><mark class="critic">Interactive</mark> <ins class="critic">non-login</ins> shell.</p>
+<p><strong>For:</strong> <mark class="critic">Interactive</mark> <ins class="critic">non-login</ins> shell.</p>
 </div>
 </div>
 </div>
+<details class="warning" open="open">
+<summary>Note!</summary>
+<p>The components you write in <code>.bash_profile</code> and <code>.bashrc</code> is just <strong>appending</strong> more works to the current default shell settings. It is <strong>not overlapping</strong>.</p>
+<p><strong>E.g. situations</strong> </p>
+<ul>
+<li>If you create an empty <code>.bash_profile</code> and execute (use <code>source</code>) immediately, it will make any changes to your shell's setting. </li>
+<li>If you make any changes in <code>.bash_profile</code> and execute it immediately, it will implement the changes in your shell. However, if you delete the code in <code>.bash_profile</code> for the changes and restart shell, the shell will run as the original default.</li>
+</ul>
+</details>
 </details>
 <h2 id="shebang-"><strong>Shebang (#!)</strong><a class="headerlink" href="#shebang-" title="Permanent link">⚓︎</a></h2>
 <details class="note">
 <summary><code>#!</code></summary>
-<p><code>Bash</code> commands can be used not only in command lines but also in scripts. The head of <code>Bash script</code> should mention using <strong>Bash shell</strong> with <code>#!</code>.</p>
-<p><strong>e.g:</strong> <code>#!/bin/bash</code>.</p>
+<p><code>Bash</code> commands can be used not only in <strong>command lines</strong> but also in <strong>scripts</strong>. The head of <code>Bash script</code> should mention using <strong>Bash shell</strong> with <code>#!</code>.</p>
+<p><strong>e.g:</strong> With <code>#!/bin/bash</code>, generate SHA hash for <code>[A-Za-z0-9]</code>:</p>
+<p><img :=":" _="," alt="picture 23" class="center" src="../pictures/shabang.png" width="60%" /></p>
+<details class="question" open="open">
+<summary>How to run a bash script?</summary>
+<p>There are <strong>two ways</strong> to run a bash script:</p>
+<ol>
+<li>
+<p>Use <a href="#source"><code>source</code></a>. Source it immediately!</p>
+</li>
+<li>
+<p>Make it executable with <code>chmod 7xx &lt;script_name&gt;</code>. Then run it in any way below. Let's assume the script is named <code>Donow</code>:</p>
+<ul>
+<li><strong>Add script path</strong> into <code>PATH</code>. Then Run it with script name. <strong>e.g.:</strong> <code>$ Donow</code></li>
+<li>Run <strong>relative path</strong>. <strong>e.g.:</strong> <code>$ ./Donow</code></li>
+<li>Run <strong>absolute path</strong>. <strong>e.g.:</strong> <code>$ &lt;Path_from_root&gt;/Donow</code></li>
+</ul>
+</li>
+</ol>
+</details>
 </details>
 <h2 id="sha1sum"><strong>sha1sum</strong><a class="headerlink" href="#sha1sum" title="Permanent link">⚓︎</a></h2>
 <details class="note">
@@ -3701,7 +3766,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 5, 2022 22:32:50</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 6, 2022 18:54:42</span>
       
         <br>
         Created:

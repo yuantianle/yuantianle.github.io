@@ -1910,6 +1910,8 @@
         
           
         
+          
+        
       
       
         
@@ -1930,6 +1932,20 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Others/engineer/" class="md-nav__link">
+        Engineer Principles
+      </a>
+    </li>
+  
+
             
           
             
@@ -3222,10 +3238,10 @@
 <summary>What demand?</summary>
 <ul>
 <li>
-<p>How can we make sure that our applications have enough capacity and enough EC2 instances available?</p>
+<p>How can we make sure that our applications have <u>enough capacity</u> and <u>enough <code>EC2</code> instances</u> available?</p>
 </li>
 <li>
-<p>How can we distribute incoming connections to those EC2 instances?</p>
+<p>How can we <strong>distribute</strong> incoming connections to those <code>EC2</code> instances?</p>
 </li>
 </ul>
 </details>
@@ -3233,13 +3249,13 @@
 <summary>How?</summary>
 <ul>
 <li>
-<p><code>Auto Scaling</code> helps to make sure that you have the right number of EC2 instances to service the demand of your application.</p>
+<p><code>Auto Scaling</code> helps to make sure that you have the <strong>right number</strong> of <code>EC2</code> instances to service the demand of your application.</p>
 </li>
 <li>
 <p>Then, put <code>Elastic Load Balancing</code> in front of your application. <code>ELB</code> will distribute incoming connections across the pool of instances that are managed by the <code>Auto Scaling Group</code>.</p>
 </li>
 </ul>
-<p>All in all, those two technologies above enable you to have <strong>elastic</strong> and <strong>fault-tolerant</strong> applications.</p>
+<p>All in all, those two technologies above enable you to have <mark class="critic"><strong>elastic</strong></mark> and <mark class="critic"><strong>fault-tolerant</strong></mark> applications.</p>
 </details>
 <h2 id="elasticity-scaling-up-vs-out"><strong>Elasticity: Scaling Up v.s. Out</strong><a class="headerlink" href="#elasticity-scaling-up-vs-out" title="Permanent link">⚓︎</a></h2>
 <p>Assume that we have an <code>EC2</code> instance for our application now:</p>
@@ -3256,14 +3272,14 @@
 <h2 id="load-balancing-and-high-availability"><strong>Load Balancing and High Availability</strong><a class="headerlink" href="#load-balancing-and-high-availability" title="Permanent link">⚓︎</a></h2>
 <p>From <code>EC2 Auto Scaling</code>, we end up with lots of different <code>instances</code> of the same application. </p>
 <details class="question" open="open">
-<summary>How?</summary>
-<p>How do we direct traffic to those <code>instances</code>?</p>
+<summary>Demand?</summary>
+<p>How do we <strong>direct traffic</strong> to those <code>instances</code>?</p>
 </details>
 <details class="success" open="open">
 <summary>Load Balancer</summary>
 <p>As you can see in the pictures below, </p>
 <ul>
-<li><code>Load Balancer</code> can not only provide <code>high availability</code> (Availability Zones) if some server is in the crash.</li>
+<li><code>Load Balancer</code> can not only provide <code>high availability</code> (<a href="../Zone_region/#availability-zone">availability zones</a>) if some server is in the crash.</li>
 </ul>
 <p><img :=":" _="," alt="picture 21" class="center" src="../picture/Load_balancer.png" width="80%" />  </p>
 <ul>

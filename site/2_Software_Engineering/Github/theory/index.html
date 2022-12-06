@@ -1922,6 +1922,8 @@
         
           
         
+          
+        
       
       
         
@@ -1942,6 +1944,20 @@
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Others/engineer/" class="md-nav__link">
+        Engineer Principles
+      </a>
+    </li>
+  
+
             
           
             
@@ -3420,7 +3436,14 @@ commits =  diffs \cup snapshots
 </details>
 <h2 id="two-commands-implementing-diff"><strong>Two commands implementing <code>diff</code></strong><a class="headerlink" href="#two-commands-implementing-diff" title="Permanent link">⚓︎</a></h2>
 <h3 id="git-cherry-pick"><strong>git cherry-pick</strong><a class="headerlink" href="#git-cherry-pick" title="Permanent link">⚓︎</a></h3>
-<p>The <code>git cherry-pick &lt;OID&gt;</code> command creates a new commit with an identical diff (arbitrary diff between two neighbor commits) to the new commit whose parent is the current commit. </p>
+<ul>
+<li>
+<p><strong>Brief description:</strong> A commit is accidentally made to the <strong>wrong</strong> branch. You can switch to the correct branch (now it is <code>HEAD</code> branch) and <code>cherry-pick</code> the commit to where it should belong in this <code>HEAD</code> branch.</p>
+</li>
+<li>
+<p><strong>Technical details:</strong> The <code>git cherry-pick &lt;OID&gt;</code> command creates a new commit with an identical diff (arbitrary diff between two neighbor commits) to the new commit whose parent is the current commit. </p>
+</li>
+</ul>
 <details class="example" open="open">
 <summary>Steps of <code>cherry-pick</code>:</summary>
 <ol>
@@ -3542,7 +3565,7 @@ commits =  diffs \cup snapshots
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 4, 2022 05:57:23</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 6, 2022 02:21:33</span>
       
         <br>
         Created:

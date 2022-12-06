@@ -7,17 +7,17 @@ comments: true
 
 ???+ question "What demand?"
 
-    - How can we make sure that our applications have enough capacity and enough EC2 instances available?
+    - How can we make sure that our applications have <u>enough capacity</u> and <u>enough `EC2` instances</u> available?
 
-    - How can we distribute incoming connections to those EC2 instances?
+    - How can we **distribute** incoming connections to those `EC2` instances?
 
 ???+ success "How?"
 
-    - `Auto Scaling` helps to make sure that you have the right number of EC2 instances to service the demand of your application.
+    - `Auto Scaling` helps to make sure that you have the **right number** of `EC2` instances to service the demand of your application.
 
     - Then, put `Elastic Load Balancing` in front of your application. `ELB` will distribute incoming connections across the pool of instances that are managed by the `Auto Scaling Group`.
 
-    All in all, those two technologies above enable you to have **elastic** and **fault-tolerant** applications.
+    All in all, those two technologies above enable you to have {==**elastic**==} and {==**fault-tolerant**==} applications.
     
 ## **Elasticity: Scaling Up v.s. Out**
 
@@ -49,15 +49,15 @@ Amazon `EC2 Auto Scaling` is **horizontal scaling** (scales out), which dynamica
 
 From `EC2 Auto Scaling`, we end up with lots of different `instances` of the same application. 
 
-???+ question "How?"
+???+ question "Demand?"
 
-    How do we direct traffic to those `instances`?
+    How do we **direct traffic** to those `instances`?
 
 ???+ success "Load Balancer"
 
     As you can see in the pictures below, 
     
-    - `Load Balancer` can not only provide `high availability` (Availability Zones) if some server is in the crash.
+    - `Load Balancer` can not only provide `high availability` ([availability zones](../Zone_region/#availability-zone)) if some server is in the crash.
 
     ![picture 21](picture/Load_balancer.png){width="80%", : .center}  
 

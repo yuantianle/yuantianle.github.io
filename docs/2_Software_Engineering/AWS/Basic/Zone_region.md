@@ -5,15 +5,16 @@ comments: true
 
 # **:material-map-marker-path:{.e_swift} Availability Zone and Region**
 
-    
+## **Region**
 ???+ question "What is `Region`?"
 
-    A `region` in AWS represents a separate geographic area. If you have used AWS before, you must have seen this picture:
+    A `region` in AWS represents a separate **geographic area**. If you have used AWS before, you must have seen this picture:
     
     ![picture 2](picture/Region.png){width="20%", : .center}   
 
     Each AWS `region` is <u>isolated</u> and <u>operates independently</u> from other `regions`. 
 
+## **Availability Zone**
 
 ???+ question "What is `Availability Zone`?"
 
@@ -21,10 +22,11 @@ comments: true
 
     The `availability zones` within each `region` are connected via **low-latency links** to provide {==replication==} and {==fault tolerance==}.
 
+## **Relation: AZ and Region**
+
 The relationship between `Region` and `Availability Zone` can be seen in the [picture](https://bluexp.netapp.com/hubfs/aws_regions-1.png) below:
 
 ![picture 3](picture/zone.png){width="50%", : .center}  
-
 
 ### **References:**
 
