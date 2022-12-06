@@ -53,7 +53,7 @@ There are two ways to visualize Agile:
 
     The good software for `Scrum board` is [Jira](https://www.atlassian.com/software/jira?&aceid=&adposition=&adgroup=136973859330&campaign=18440774103&creative=632787634547&device=c&keyword=jira%20software&matchtype=e&network=g&placement=&ds_kids=p73335831615&ds_e=GOOGLE&ds_eid=700000001558501&ds_e1=GOOGLE&gclid=CjwKCAiAp7GcBhA0EiwA9U0mtmRRuJPSZVEFSlt9SAD838u_p3Gom2qMVoz-RVfMGsirEMim9wctoRoCLJsQAvD_BwE&gclsrc=aw.ds):
 
-    One `scrum board` is for one `sprint`, which typically set {==two weeks==} as period. There are typical **three stages**:
+    One `scrum board` is for one **sprint**, which typically set {==two weeks==} as period. There are typical **three stages**:
       
       1. **Initialize:** in `Backlog`, set points for each {++story/task++}. Try to assign the points to the story with the number in {++Fibonacci series++} such as: `1,2,3,5...`:
         ![picture 3](pictures/backlog.png){width="80%", : .center}  

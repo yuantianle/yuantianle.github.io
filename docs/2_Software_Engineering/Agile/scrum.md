@@ -85,7 +85,7 @@ comments: true
         **Topics:**
 
           - **What will we do?**: Identify what must be complete to deliver.
-          - **How will we do it?**: Commit a set of deliverables (**stories**) for the sprint in the backlog.
+          - **How will we do it?**: **Commit** a set of deliverables (**stories**) for the sprint in the backlog.
     
     ???example "**`Daily Scrum (stand-up meeting)`**"
 
@@ -139,7 +139,7 @@ comments: true
 
 ???note "Inspect and Adapt"
 
-    **Definition:** Learn from customer, team, market. <==> another `CI` (continuous improvement).
+    **Definition:** Learn from <u>customer</u>, <u>team</u>, <u>market</u>. <==> another `CI` (continuous improvement).
 
 ### **References:**
 
