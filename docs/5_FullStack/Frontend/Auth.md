@@ -32,7 +32,7 @@ To realize the two Auth principles. Including `Token` becomes essential.
         - Which **algorithm**(normally HS256) to generate the **signature**.
         - What token type (Here JWT).
       - **Payload:** A set of claims.
-      - **Signature:** Securely **validates** the token, calculated by encoding the **header** and **payload** using [`Base64URL Encoding RFC 4648`](https://base64.guru/standards/base64url#:~:text=Base64URL%20is%20a%20modification%20of,characters%20for%20URLs%20and%20filenames.)
+      - **Signature:** Securely **validates** the token, calculated by encoding the **header** and **payload** using [`Base64URL Encoding [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519)`](https://base64.guru/standards/base64url#:~:text=Base64URL%20is%20a%20modification%20of,characters%20for%20URLs%20and%20filenames.)
 
 
     ![picture 10](pictures/jwt.png){width="80%", : .center}  

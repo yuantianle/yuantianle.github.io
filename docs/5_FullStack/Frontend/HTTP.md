@@ -13,8 +13,8 @@ comments: true
 
 ## **Anatomy of an HTTP request**
 
-Level| Details
-:-|
-URL| **Structure:** {==CRUD method==} + {==HEAD (optional)==} + {==Path==} + {==HTTP version==}</br> **Details:** see in [URL](uri.md).
-HTTP Header| - Request headers </br> - General headers </br>- Representation headers
-HTTP body (optional)| - Single-resource body </br> - Multiple-resource bodys
+Level| Details | Response & Request
+:-|:-|:-
+URL| **Structure:** {==CRUD method==} + {==HEAD (optional)==} + {==Path==} + {==HTTP version==}</br> **Details:** see in [URL](uri.md).| Password & Key
+HTTP Header| - Request headers </br> - General headers </br>- Representation headers| JWT ([Base64](https://www.base64decode.org/) encoded [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519))
+HTTP body (optional)| - Single-resource body </br> - Multiple-resource bodys |JSON ([RFCs 8259](https://www.rfc-editor.org/rfc/rfc8259))
