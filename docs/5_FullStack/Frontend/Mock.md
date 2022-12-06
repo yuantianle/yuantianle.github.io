@@ -25,11 +25,11 @@ comments: true
 
     **Properties:**
         
-      - Same abstract interface/contract (e.g. REST API).
+      - Same abstract interface/contract (**e.g.** [REST API](../API/rest_api.md)).
       - Not a real implementation.
 
 ## **Mock Object**
 
 ???+note "Mock Object"
     
-    **Definition:** in OOP (object-oriented programming), `mock object` is a **simulated object** that **mimics the behavior** of real objects in controlled ways (e.g. Mock class, Mock struct).
+    **Definition:** in OOP (object-oriented programming), `mock object` is a **simulated object** that **mimics the behavior** of real objects in controlled ways (**e.g.** Mock class, Mock struct).
