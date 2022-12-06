@@ -228,6 +228,7 @@ nav:
         - 2_Software_Engineering/VS_Code/README.md
       - Others: 
         - 2_Software_Engineering/Others/README.md
+        - Engineer Principles: 2_Software_Engineering/Others/engineer.md
         - Cryptographic: 2_Software_Engineering/Others/crypto.md
         - Concurrency v.s. Parallelism: 2_Software_Engineering/Others/Concurrency.md
         - Lock, mutex, and Semaphore: 2_Software_Engineering/Others/Lock_mutex_semaphore.md
