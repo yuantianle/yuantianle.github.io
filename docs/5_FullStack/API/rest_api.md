@@ -20,7 +20,7 @@ comments: true
 
     ???+note "Operating principle"
 
-        `REST` communication typically **bases on** [**HTTP**](../Frontend/HTTP.md) protocol (but that isn't a requirement). **Requests** are made to a resource URI, possibly containing additional request data. **Replies** can be anything: `HTML`, `XML`, `JSON (RFCs)`, `CSV`, `plain-text`, or even `raw binary data`. 
+        `REST` communication typically **bases on** [**HTTP**](../Frontend/HTTP.md) protocol (but that isn't a requirement). **Requests** are made to a resource URI, possibly containing additional request data. **Replies** can be anything: `HTML`, `XML`, `JSON ([RFCs](https://www.rfc-editor.org/rfc/rfc8259))`, `CSV`, `plain-text`, or even `raw binary data`. 
 
     ???note "Benifits"
 
