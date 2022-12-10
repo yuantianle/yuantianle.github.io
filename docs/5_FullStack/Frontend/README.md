@@ -8,10 +8,4 @@
 
 1. [Mock](Mock.md)
    
-2. [HTTP](HTTP.md).
-   
-3. [Auth](Auth.md).
-
-4. [SSH & HTTPS](SSH.md).
-
-5. [URI](uri.md).
+2. [Auth](Auth.md).

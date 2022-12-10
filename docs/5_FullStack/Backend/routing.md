@@ -9,7 +9,7 @@ comments: true
 
 ???+question "When? (background)"
 
-    **client** requests to a particular `endpoint` \[ <=> [`URI`](../Frontend/uri.md) + `HTTP` request method (`GET`, `POST`, ...) \]. 
+    **client** requests to a particular `endpoint` \[ <=> [`URI`](../Frontend/uri.md) + [`HTTP`](../Web/Protocols/HTTP.md) request method (`GET`, `POST`, ...) \]. 
 
 
 ???+question "What? (import routing)"

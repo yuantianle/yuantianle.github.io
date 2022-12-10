@@ -42,7 +42,7 @@ To realize the two Auth principles. Including `Token` becomes essential.
 
 ???+question "How to apply `Token`?"
 
-    We **inject** tokens in the [HTTP](./HTTP.md) **header**.
+    We **inject** tokens in the [HTTP](../web/Protocols/HTTP.md) **header**.
 
 ## **OAuth 2.0**
 
