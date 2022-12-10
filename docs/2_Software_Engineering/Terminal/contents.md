@@ -116,7 +116,7 @@ comments: true
         :-:|:-:|:-:|:-:
         Meaning | user|group|other
 
-        Verb| - | +
+        Verb| + | -
         :-:|:-:|:-:
         Meaning | add|remove
 
