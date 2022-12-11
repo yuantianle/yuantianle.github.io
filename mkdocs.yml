@@ -288,6 +288,15 @@ nav:
       - Network:
         - 5_FullStack/Web/README.md
         - Performance Indices: 5_FullStack/Web/Indices.md
+        - OIS: 
+          - 5_FullStack/Web/OIS/README.md
+          - Physical Layer: 5_FullStack/Web/OIS/physical.md
+          - Data Link Layer: 5_FullStack/Web/OIS/datalink.md
+          - Network Layer: 5_FullStack/Web/OIS/network.md
+          - Transport Layer: 5_FullStack/Web/OIS/transport.md
+          - Session Layer: 5_FullStack/Web/OIS/session.md
+          - Presentaion Layer: 5_FullStack/Web/OIS/presentation.md
+          - Application Layer: 5_FullStack/Web/OIS/application.md
         - Protocols: 
           - 5_FullStack/Web/Protocols/README.md
           - HTTP: 5_FullStack/Web/Protocols/HTTP.md
