@@ -15,35 +15,54 @@
     --md-code-hl-number-color: #be8901;
 }
 
+/*For christmas*/
+
 [data-md-color-scheme="default"] .md-header{
     background-image: url("xmas13.png");
     background-size:contain;
+    text-shadow: #FC0 1px 0 20px;
 }
 [data-md-color-scheme="default"] .md-tabs{
     background-image: url("xmas22.png");
     background-size:contain;
+    text-shadow: #FC0 1px 0 20px;
 }
 [data-md-color-scheme="default"]{
     background-image: url("man.png");
     background-size:contain;
     background-position: center center;
+    background-repeat: repeat repeat;
     background-blend-mode: multiply;
 }
 
 [data-md-color-scheme="slate"] .md-header{
     background-image: url("xmas13.png");
     background-size:contain;
+    text-shadow: #FC0 1px 0 20px;
 }
 [data-md-color-scheme="slate"] .md-tabs{
     background-image: url("xmas22.png");
     background-size:contain;
+    text-shadow: #FC0 1px 0 20px;
 }
 [data-md-color-scheme="slate"]{
     background-image: url("man.png");
     background-size:contain;
-    background-position: center center;
+    background-position: center left;
     background-blend-mode: multiply;
 }
+
+[data-md-color-scheme="default"] .md-content{
+    background-color: #fff9f9e8;
+}
+.md-tabs__link--active, .md-tabs__link:is(:focus,:hover){
+    color: rgb(123, 255, 0);
+}
+
+[data-md-color-scheme="slate"] .md-content{
+    background-color: #000000a4;
+}
+/*For christmas*/
 
 [data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__scrollwrap{
     margin-top: -5%;
