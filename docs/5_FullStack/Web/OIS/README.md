@@ -2,7 +2,7 @@
 ᴴₒᴴₒᴴₒ: ture
 ---
 
-# ** :material-network-outline: OIS**
+# ** :seven: OIS**
 
 ## **OIS Model**
 
@@ -12,9 +12,9 @@
 
 ## **OIS Catlog**
 
-1. [Physical Layer](./physical.md).
+1. [:material-expansion-card-variant: Physical Layer](./physical.md).
    
-2. [Data Link Layer](./datalink.md).
+2. [:material-bridge: Data Link Layer](./datalink.md).
 
 3. [Network Layer](./network.md).
 

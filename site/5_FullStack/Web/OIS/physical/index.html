@@ -12,10 +12,10 @@
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
     
     
-      
-        <title>Physical Layer - Tianle Yuan's Blog</title>
-      
-    
+<title>
+
+</title>
+
     
       <link rel="stylesheet" href="../../../../assets/stylesheets/main.975780f9.min.css">
       
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#layer" class="md-skip">
+        <a href="#physical-layer" class="md-skip">
           Skip to content
         </a>
       
@@ -3179,8 +3179,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    ****
+  <a href="#definition" class="md-nav__link">
+    Definition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#transmission-mediums" class="md-nav__link">
+    Transmission Mediums
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cons" class="md-nav__link">
+    Cons
   </a>
   
 </li>
@@ -3471,13 +3485,86 @@
   </a>
 
 
-<h1 id="layer"><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M15 20a1 1 0 0 0-1-1h-1v-2h4a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H7a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h4v2h-1a1 1 0 0 0-1 1H2v2h7a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1h7v-2h-7m-8-5V5h10v10H7Z"/></svg></span> Layer</strong><a class="headerlink" href="#layer" title="Permanent link">⚓︎</a></h1>
-<h2 id="_1">****<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h2>
+<h1 id="physical-layer"><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M2 7h2.5v10H3V8.5H2M22 7v9h-8v1H7v-1H6V7m4 2H8v3h2m3-3h-2v3h2m7-3h-5v5h5V9Z"/></svg></span> Physical Layer</strong><a class="headerlink" href="#physical-layer" title="Permanent link">⚓︎</a></h1>
+<p><img :=":" _="," alt="picture 1" class="center" src="../pictures/Physical%20Layer.png" width="80%" /> </p>
+<h2 id="definition"><strong>Definition</strong><a class="headerlink" href="#definition" title="Permanent link">⚓︎</a></h2>
 <details class="question" open="open">
-<summary>?</summary>
+<summary>What?</summary>
+<p>Instead of representing <a href="#transmission-mediums">physical mediums</a>, <code>physical layer</code> is a <mark class="critic"><strong>standard</strong></mark>:</p>
+<ul>
+<li><ins class="critic">Electrical Specification:</ins> The <strong>logic level</strong> is used in <code>+10v ~ +15v</code> to represent binary <code>0</code>; <code>-10v ~ -15v</code> to represent binary <code>1</code>.</li>
+<li><ins class="critic">Physical Specification:</ins> Such as <em>timing</em>, <em>rates</em>, <em>distances</em>, <em>modulation</em>, and <em>connectors</em>.</li>
+<li><ins class="critic">Rules:</ins> For <strong>transmission media interfaces</strong> -- transmission and reception of raw <code>bit streams</code>.</li>
+</ul>
+</details>
+<h2 id="transmission-mediums"><strong>Transmission Mediums</strong><a class="headerlink" href="#transmission-mediums" title="Permanent link">⚓︎</a></h2>
+<details class="success" open="open">
+<summary>Transmission Mediums</summary>
+<p>There are <strong>three</strong> major types:</p>
+<ol>
+<li><strong>Copper</strong> (electrical).</li>
+<li><strong>Optical Fiber</strong> (light).</li>
+<li><strong>WIFI</strong> (RF).</li>
+</ol>
+</details>
+<details class="note" open="open">
+<summary>Optical Fiber for network?</summary>
+<p>Principles of <code>optical fiber</code> communication:</p>
+<pre class="mermaid"><code>graph LR
+    A["Device (network card)"]-- electrical signal --&gt;B([transportation])
+    subgraph Optical Fiber
+    B-. optical pulse .-&gt;C([Before the server])
+    end
+    C-- electrical signal --&gt;D[server]</code></pre>
+<details class="question" open="open">
+<summary>Why faster?</summary>
+<p>In the time sequence, turning <strong>on</strong> the light pulse means <code>1</code>, and turning <strong>off</strong> the light pulse means <code>0</code>. </p>
+<p>Since the <strong>frequency</strong> of visible light is about <code>10~8 MHz</code>, the <a href="./../Indices.md/#bandwidth">bandwidth</a> of the <code>optical fiber</code> communication system is <strong>much larger</strong> than that of other transmission media.</p>
+</details>
+</details>
+<details class="note" open="open">
+<summary>Repeater?</summary>
+<details class="question" open="open">
+<summary>Background?</summary>
+<p>The <code>signal power</code> transmitted on the <a href="#transmission-mediums">physical medium</a> will <strong>gradually decay</strong>. When the attenuation reaches a certain level, the <u>signal will be distorted</u>. Thus the <code>reception error</code> will be caused.</p>
+</details>
+<details class="question" open="open">
+<summary>What?</summary>
+<p><code>Repeater</code> is a device that can <strong>regenerate</strong> and <strong>restore</strong> the signal to <u>increase the transmission distance</u> of the signal.</p>
+<details class="warning" open="open">
+<summary>Note!</summary>
+<p>The two ends of the repeater are connected to different <code>network segments</code>, <strong>NOT</strong> <code>subnets</code>.</p>
+</details>
+</details>
+<details class="example" open="open">
+<summary>Example!</summary>
+<ul>
+<li>
+<p><strong>wireless:</strong> Normally, we can see a wireless <code>repeater</code> as a <code>WIFI extender</code>. There is a free Ad. here 😆:</p>
+<p><img :=":" _="," alt="picture 2" class="center" src="../pictures/xiaomi.png" width="50%" />   </p>
+</li>
+<li>
+<p><strong>wired:</strong> The old school uses wired ones:</p>
+<p><img :=":" _="," alt="picture 3" class="center" src="../pictures/old_repeater.png" width="50%" />  </p>
+</li>
+</ul>
+</details>
+</details>
+<h2 id="cons"><strong>Cons</strong><a class="headerlink" href="#cons" title="Permanent link">⚓︎</a></h2>
+<details class="warning" open="open">
+<summary>Cons of Physical Layer</summary>
+<p>There are <strong>three</strong> major cons that <code>Physical Layer</code> has:</p>
+<ol>
+<li>No access control (<strong>e.g.</strong> "entrance guard").</li>
+<li>No collision detection (<strong>e.g.</strong> "traffic police") &rarr; there are collisions.</li>
+<li>No uniquely identified devices (<strong>e.g.</strong> "workers without names in one office").</li>
+<li>No device communications (<strong>e.g.</strong> "cannot find specific worker since he/she doesn't have a name").</li>
+</ol>
 </details>
 <h3 id="references"><strong>References</strong><a class="headerlink" href="#references" title="Permanent link">⚓︎</a></h3>
-<p><a href=""></a></p>
+<p><a href="https://www.pinterest.co.uk/346e0552cdcca5443977884464e47f/">Network Byte</a></p>
+<p><a href="https://i.ebayimg.com/images/g/kx4AAOSwXKVg58hN/s-l640.jpg">Xiaomi Exterder</a></p>
+<p><a href="https://www.dummies.com/article/technology/information-technology/networking/general-networking/network-basics-repeaters-185332/">Network Basics: Repeaters</a></p>
 
   <hr>
 <div class="md-source-file">
@@ -3549,8 +3636,6 @@
 
                 
 
-
-
               </article>
             </div>
           
@@ -3570,7 +3655,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: ** :material-network-outline: OIS**" rel="prev">
+        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="Previous: ** :seven: OIS**" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -3579,7 +3664,7 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              ** :material-network-outline: OIS**
+              ** :seven: OIS**
             </div>
           </div>
         </a>
