@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#layer" class="md-skip">
+        <a href="#data-link-layer" class="md-skip">
           Skip to content
         </a>
       
@@ -3193,8 +3193,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    ****
+  <a href="#definition" class="md-nav__link">
+    Definition
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#abstracting" class="md-nav__link">
+    Abstracting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anatomy" class="md-nav__link">
+    Anatomy
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mac-sub-layer" class="md-nav__link">
+    MAC Sub Layer
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#llc-sub-layer" class="md-nav__link">
+    LLC Sub Layer
   </a>
   
 </li>
@@ -3471,20 +3499,133 @@
   </a>
 
 
-<h1 id="layer"><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 14v-3.09c-.72-.33-1.39-.73-2-1.2V14h2m-2 4H3v-2H1v-2h2V7h2v1.43C6.8 10 9.27 11 12 11c2.73 0 5.2-1 7-2.57V7h2v7h2v2h-2v2h-2v-2H5v2m12-7.09V14h2V9.71c-.61.47-1.28.87-2 1.2M16 14v-2.68c-.64.23-1.31.4-2 .52V14h2m-3 0v-2.04L12 12l-1-.04V14h2m-3 0v-2.16c-.69-.12-1.36-.29-2-.52V14h2Z"/></svg></span> Layer</strong><a class="headerlink" href="#layer" title="Permanent link">⚓︎</a></h1>
-<h2 id="_1">****<a class="headerlink" href="#_1" title="Permanent link">⚓︎</a></h2>
+<h1 id="data-link-layer"><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M7 14v-3.09c-.72-.33-1.39-.73-2-1.2V14h2m-2 4H3v-2H1v-2h2V7h2v1.43C6.8 10 9.27 11 12 11c2.73 0 5.2-1 7-2.57V7h2v7h2v2h-2v2h-2v-2H5v2m12-7.09V14h2V9.71c-.61.47-1.28.87-2 1.2M16 14v-2.68c-.64.23-1.31.4-2 .52V14h2m-3 0v-2.04L12 12l-1-.04V14h2m-3 0v-2.16c-.69-.12-1.36-.29-2-.52V14h2Z"/></svg></span> Data Link Layer</strong><a class="headerlink" href="#data-link-layer" title="Permanent link">⚓︎</a></h1>
+<p><img :=":" _="," alt="picture 1" class="center" src="../pictures/Data%20Link%20Layer.png" width="80%" /> </p>
+<h2 id="definition"><strong>Definition</strong><a class="headerlink" href="#definition" title="Permanent link">⚓︎</a></h2>
 <details class="question" open="open">
-<summary>?</summary>
+<summary>Demand?</summary>
+<p>The <code>bitstream</code> can cause <strong>errors</strong> (see <a href="./physical.md/#cons">physical layer's cons</a>) when it is transmitted on a medium. We need a <strong>new layer</strong> that provides <mark class="critic">high-quality (error free)</mark> data transfer services to topper layers (such as <a href="../network/">network layer</a>).</p>
+<pre class="mermaid"><code>graph LR
+    A[Network Layer] -- packets --- B[Data Link Layer]
+    B -- "frames (bit-by-bit)" --- C[Physical Layer]</code></pre>
 </details>
+<details class="question" open="open">
+<summary>For?</summary>
+<p><code>Data Link Layer</code> has below functions:</p>
+<ol>
+<li><a href="#framing"><strong>Framing</strong></a>.</li>
+<li><strong>Transparent Transmission &amp; Addressing</strong>.</li>
+<li><strong>Error Detection</strong>.</li>
+<li><strong>Error Correction</strong></li>
+<li><strong>Flow Control</strong></li>
+</ol>
+</details>
+<h2 id="abstracting"><strong>Abstracting</strong><a class="headerlink" href="#abstracting" title="Permanent link">⚓︎</a></h2>
+<details class="note" open="open">
+<summary>From <code>physical layer</code> to <code>data link layer</code></summary>
+<p>We know that in the <a href="../physical/"><code>physical layer</code></a>, information is communicated with bit stream through cable or WIFI. </p>
+<p>To abstract the <code>data link Layer</code>, we classify the "communication channel" in this layer into two types:</p>
+<ol>
+<li><strong>Point-to-point</strong> communication channel (use <a href="https://www.geeksforgeeks.org/p2ppeer-to-peer-file-sharing/">P2P</a> protocol).</li>
+<li><strong>Broadcast</strong> communication channel (use <a href="https://www.techtarget.com/searchnetworking/definition/CSMA-CA#:~:text=Carrier%20sense%20multiple%20access%2Fcollision%20avoidance%20(CSMA%2FCA),over%20a%20data%20link%20layer.">CSMA/CA</a> protocol).</li>
+</ol>
+</details>
+<details class="danger" open="open">
+<summary>Notice!</summary>
+<p>To understand the <code>data link layer</code> better, we think about the case of <strong>broadcasting</strong> first. </p>
+<p><a href="https://en.wikipedia.org/wiki/Local_area_network">LAN</a> (local area network) is a computer network that has the <strong>broadcasting</strong> function.</p>
+<p>Furthermore, from all the <code>LAN</code> products, we peak <a href="https://en.wikipedia.org/wiki/Ethernet"><code>Ethernet</code></a>, which fllow the standard of <a href="https://www.ibm.com/docs/en/zvm/7.1?topic=structure-ethernet-dix-v2"><em>DIX Ethernet V2</em></a> or <a href="https://en.wikipedia.org/wiki/IEEE_802.3"><em>IEEE 802.3</em></a>.</p>
+</details>
+<h2 id="anatomy"><strong>Anatomy</strong><a class="headerlink" href="#anatomy" title="Permanent link">⚓︎</a></h2>
+<details class="note" open="open">
+<summary>Dissect the <code>data link layer</code></summary>
+<p>In order to make the <code>data link layer</code> more suitable for  various <code>LAN</code> standards, the <a href="https://en. wikipedia.org/wiki/IEEE_802"><em>802 committee</em></a> divided the <code>data link layer</code> into two <strong>sub-layers</strong>:</p>
+<ul>
+<li><a href="#llc-sub-layer"><strong>Logical Link Control (LLC)</strong></a>: provides the logic for the data link.</li>
+<li><a href="#mac-sub-layer"><strong>Medium Access Control (MAC)</strong></a>：provides controls for accessing the transmission medium. It is transparent to <code>LLC</code> sublayer</li>
+</ul>
+<p><img :=":" _="," alt="picture 1" class="center" src="../pictures/data_link_anatomy.png" width="30%" />   </p>
+<p>Let's go to check them one by one.</p>
+</details>
+<h2 id="mac-sub-layer"><strong>MAC Sub Layer</strong><a class="headerlink" href="#mac-sub-layer" title="Permanent link">⚓︎</a></h2>
+<h3 id="functions"><strong>Functions</strong><a class="headerlink" href="#functions" title="Permanent link">⚓︎</a></h3>
+<p><code>MAC</code> sublayer is responsible for:</p>
+<ul>
+<li><a href="#framing"><strong>Framing</strong></a></li>
+<li><strong>Transparent Transmission &amp; Addressing</strong></li>
+<li><strong>Control physical medium access</strong></li>
+</ul>
+<h3 id="framing"><strong>Framing</strong><a class="headerlink" href="#framing" title="Permanent link">⚓︎</a></h3>
+<details class="question" open="open">
+<summary><code>Framing</code>?</summary>
+<p><strong>Encapsulate</strong> network data (a stream of <code>bits</code>) into <code>frames</code>, which is <strong>discernible blocks</strong> of information.</p>
+</details>
+<details class="question" open="open">
+<summary>Classifications?</summary>
+<p><img :=":" _="," alt="picture 2" class="center" src="../pictures/framing.png" width="50%" />     </p>
+<p>There are <strong>two</strong> types of <code>Framing</code>:</p>
+<ul>
+<li>
+<p><strong>Fixed-size Framing:</strong></p>
+<div class="admonition note">
+<p>The <code>frame</code> is of <strong>fixed size</strong>. No need to add delimiters.</p>
+<details class="warning" open="open">
+<summary>Con</summary>
+<p>When the data size is <strong>smaller</strong> than the fixed frame size, the frame itself will suffer <u>internal fragmentation</u>. We need to <code>pad</code> it.</p>
+</details>
+</div>
+</li>
+<li>
+<p><strong>Variable-size Framing:</strong></p>
+<div class="admonition note">
+<p>The <code>frame</code> needs to indicate <code>begin</code> and <code>end</code> to be distinguished.</p>
+<details class="success" open="open">
+<summary>Ways to implement</summary>
+<ol>
+<li>
+<p><code>Length field</code> : define the length <strong>in</strong> the frame.</p>
+<ul>
+<li><strong>e.g.</strong> <a href="https://en.wikipedia.org/wiki/IEEE_802.3">Ethernet (802.3)</a>.</li>
+<li><strong>Cons:</strong> Length field may get corrupted sometimes.</li>
+</ul>
+</li>
+<li>
+<p><code>ED (End Delimeter)</code> : add <strong>end delimiter</strong> (like <a href="https://en.wikipedia.org/wiki/Full_stop"><em>Period</em></a> in English).</p>
+<ul>
+<li><strong>e.g.</strong> <a href="https://en.wikipedia.org/wiki/Token_Ring">Token Ring (802.5)</a>.</li>
+<li><strong>Cons:</strong> The end delimiter can appear in the data.</li>
+<li><strong>Types:</strong> <ul>
+<li>Character/Byte Stuffing</li>
+<li>Bit Stuffing</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</details>
+</div>
+</li>
+</ul>
+</details>
+<h3 id="transparent-transmission"><strong>Transparent transmission</strong><a class="headerlink" href="#transparent-transmission" title="Permanent link">⚓︎</a></h3>
+<h2 id="llc-sub-layer"><strong>LLC Sub Layer</strong><a class="headerlink" href="#llc-sub-layer" title="Permanent link">⚓︎</a></h2>
+<h3 id="functions_1"><strong>Functions</strong><a class="headerlink" href="#functions_1" title="Permanent link">⚓︎</a></h3>
+<p><code>LLC</code> sublayer is responsible for:</p>
+<ul>
+<li><strong>Error Detection</strong></li>
+<li><strong>Error Correction</strong></li>
+<li><strong>Flow Control</strong></li>
+</ul>
 <h3 id="references"><strong>References</strong><a class="headerlink" href="#references" title="Permanent link">⚓︎</a></h3>
-<p><a href=""></a></p>
+<p><a href="https://networkencyclopedia.com/logical-link-control-llc-layer/">Picture Resource 1</a></p>
+<p><a href="https://www.javatpoint.com/frame">Picture Resource 2</a></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 11, 2022 01:42:37</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 13, 2022 05:01:29</span>
       
         <br>
         Created:
