@@ -236,6 +236,9 @@ nav:
 
     - C++: 
       - 3_C++/README.md
+      - STL:
+        - 3_C++/STL/README.md
+        - unordered_set: 3_C++/STL/unodered_set.md
       - Inheritance: 
         - 3_C++/Inheritance/README.md
         - CONTENTS: 3_C++/Inheritance/Inheritance.md
