@@ -2609,6 +2609,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_5_2_2">
@@ -2645,6 +2647,20 @@
     <li class="md-nav__item">
       <a href="../../../4_Algorithms/Typical_Questions/Leetcode/Dijkstra/" class="md-nav__link">
         Dijkstra
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../4_Algorithms/Typical_Questions/Leetcode/Bipartition/" class="md-nav__link">
+        Bipartition
       </a>
     </li>
   
@@ -3569,8 +3585,8 @@
   </a>
 
 
-<h1 id="auth"><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25V2.75zm1.75-.25a.25.25 0 0 0-.25.25V4.5h2v-2H1.75zM5 2.5v2h2v-2H5zm3.5 0v2h6V2.75a.25.25 0 0 0-.25-.25H8.5zm6 3.5h-13v7.25c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V6z"/></svg></span> Auth</strong><a class="headerlink" href="#auth" title="Permanent link">⚓︎</a></h1>
-<h2 id="auth_1"><strong>Auth</strong><a class="headerlink" href="#auth_1" title="Permanent link">⚓︎</a></h2>
+<h1 id="auth"><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25V2.75zm1.75-.25a.25.25 0 0 0-.25.25V4.5h2v-2H1.75zM5 2.5v2h2v-2H5zm3.5 0v2h6V2.75a.25.25 0 0 0-.25-.25H8.5zm6 3.5h-13v7.25c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V6z"/></svg></span> Auth</strong><a class="headerlink" href="#auth" title="Anchor link to this section for reference">⚓︎</a></h1>
+<h2 id="auth_1"><strong>Auth</strong><a class="headerlink" href="#auth_1" title="Anchor link to this section for reference">⚓︎</a></h2>
 <details class="question" open="open">
 <summary>Auth?</summary>
 <p><code>Auth</code> points to <strong>Authentication</strong> and <strong>Authorization</strong>. They come from <a href="../../API/rest_api/">REST API</a> communication. </p>
@@ -3579,13 +3595,13 @@
 <li>Without <strong>Authorization</strong> &rarr; 403 (Do not have permission to access resources).</li>
 </ul>
 </details>
-<h2 id="token"><strong>Token</strong><a class="headerlink" href="#token" title="Permanent link">⚓︎</a></h2>
+<h2 id="token"><strong>Token</strong><a class="headerlink" href="#token" title="Anchor link to this section for reference">⚓︎</a></h2>
 <p>To realize the two Auth principles. Including <code>Token</code> becomes essential.</p>
 <details class="question" open="open">
 <summary>Why <code>Token</code>?</summary>
 <p>Compared with <strong>username &amp; password</strong>, tokens are <strong>temporary</strong>, stored in browser or device. When sessions complete or exceed the expiration time, not like username &amp; password, they are automatically <strong>destroyed</strong>.</p>
 </details>
-<h2 id="jwtio"><strong>JWT.io</strong><a class="headerlink" href="#jwtio" title="Permanent link">⚓︎</a></h2>
+<h2 id="jwtio"><strong>JWT.io</strong><a class="headerlink" href="#jwtio" title="Anchor link to this section for reference">⚓︎</a></h2>
 <details class="note" open="open">
 <summary><code>JWT.io</code> for <code>Token</code> generation</summary>
 <p><a href="https://jwt.io/"><code>JWT.io</code></a> is constructed by below components:</p>
@@ -3600,12 +3616,12 @@
 </ul>
 <p><img :=":" _="," alt="picture 10" class="center" src="../pictures/jwt.png" width="80%" />  </p>
 </details>
-<h2 id="how-to-use-token"><strong>How to use Token</strong><a class="headerlink" href="#how-to-use-token" title="Permanent link">⚓︎</a></h2>
+<h2 id="how-to-use-token"><strong>How to use Token</strong><a class="headerlink" href="#how-to-use-token" title="Anchor link to this section for reference">⚓︎</a></h2>
 <details class="question" open="open">
 <summary>How to apply <code>Token</code>?</summary>
 <p>We <strong>inject</strong> tokens in the <a href="../web/Protocols/HTTP.md">HTTP</a> <strong>header</strong>.</p>
 </details>
-<h2 id="oauth-20"><strong>OAuth 2.0</strong><a class="headerlink" href="#oauth-20" title="Permanent link">⚓︎</a></h2>
+<h2 id="oauth-20"><strong>OAuth 2.0</strong><a class="headerlink" href="#oauth-20" title="Anchor link to this section for reference">⚓︎</a></h2>
 <details class="question" open="open">
 <summary>Why need two <code>Tokens</code>?</summary>
 <p>It limits the <code>blast radius</code> of a <code>credential attack</code>.</p>
@@ -3625,7 +3641,7 @@
 </details>
 </details>
 </details>
-<h2 id="implement-oauth-20"><strong>Implement OAuth 2.0</strong><a class="headerlink" href="#implement-oauth-20" title="Permanent link">⚓︎</a></h2>
+<h2 id="implement-oauth-20"><strong>Implement OAuth 2.0</strong><a class="headerlink" href="#implement-oauth-20" title="Anchor link to this section for reference">⚓︎</a></h2>
 <p>For the two tokens, one is named <code>Access Token</code>; another is named <code>Refresh Token</code>.</p>
 <details class="question" open="open">
 <summary>Difference between the two tokens?</summary>

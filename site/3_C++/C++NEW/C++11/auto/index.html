@@ -2672,6 +2672,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_5_2_2">
@@ -2708,6 +2710,20 @@
     <li class="md-nav__item">
       <a href="../../../../4_Algorithms/Typical_Questions/Leetcode/Dijkstra/" class="md-nav__link">
         Dijkstra
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../4_Algorithms/Typical_Questions/Leetcode/Bipartition/" class="md-nav__link">
+        Bipartition
       </a>
     </li>
   
@@ -3550,12 +3566,12 @@
   </a>
 
 
-<h1 id="auto--decltype"><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22.394 6c-.167-.29-.398-.543-.652-.69L12.926.22c-.509-.294-1.34-.294-1.848 0L2.26 5.31c-.508.293-.923 1.013-.923 1.6v10.18c0 .294.104.62.271.91.167.29.398.543.652.69l8.816 5.09c.508.293 1.34.293 1.848 0l8.816-5.09c.254-.147.485-.4.652-.69.167-.29.27-.616.27-.91V6.91c.003-.294-.1-.62-.268-.91zM12 19.11c-3.92 0-7.109-3.19-7.109-7.11 0-3.92 3.19-7.11 7.11-7.11a7.133 7.133 0 0 1 6.156 3.553l-3.076 1.78a3.567 3.567 0 0 0-3.08-1.78A3.56 3.56 0 0 0 8.444 12 3.56 3.56 0 0 0 12 15.555a3.57 3.57 0 0 0 3.08-1.778l3.078 1.78A7.135 7.135 0 0 1 12 19.11zm7.11-6.715h-.79v.79h-.79v-.79h-.79v-.79h.79v-.79h.79v.79h.79zm2.962 0h-.79v.79h-.79v-.79h-.79v-.79h.79v-.79h.79v.79h.79z"/></svg></span> auto &amp; decltype</strong><a class="headerlink" href="#auto--decltype" title="Permanent link">⚓︎</a></h1>
-<h2 id="auto-type"><strong>auto type</strong><a class="headerlink" href="#auto-type" title="Permanent link">⚓︎</a></h2>
+<h1 id="auto--decltype"><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22.394 6c-.167-.29-.398-.543-.652-.69L12.926.22c-.509-.294-1.34-.294-1.848 0L2.26 5.31c-.508.293-.923 1.013-.923 1.6v10.18c0 .294.104.62.271.91.167.29.398.543.652.69l8.816 5.09c.508.293 1.34.293 1.848 0l8.816-5.09c.254-.147.485-.4.652-.69.167-.29.27-.616.27-.91V6.91c.003-.294-.1-.62-.268-.91zM12 19.11c-3.92 0-7.109-3.19-7.109-7.11 0-3.92 3.19-7.11 7.11-7.11a7.133 7.133 0 0 1 6.156 3.553l-3.076 1.78a3.567 3.567 0 0 0-3.08-1.78A3.56 3.56 0 0 0 8.444 12 3.56 3.56 0 0 0 12 15.555a3.57 3.57 0 0 0 3.08-1.778l3.078 1.78A7.135 7.135 0 0 1 12 19.11zm7.11-6.715h-.79v.79h-.79v-.79h-.79v-.79h.79v-.79h.79v.79h.79zm2.962 0h-.79v.79h-.79v-.79h-.79v-.79h.79v-.79h.79v.79h.79z"/></svg></span> auto &amp; decltype</strong><a class="headerlink" href="#auto--decltype" title="Anchor link to this section for reference">⚓︎</a></h1>
+<h2 id="auto-type"><strong>auto type</strong><a class="headerlink" href="#auto-type" title="Anchor link to this section for reference">⚓︎</a></h2>
 <p><code>auto</code> type can help the compiler to derivate the type of a variable <u>from the right side of</u> <code>=</code> when it is <strong>in the compiling stage</strong>.</p>
 <div class="highlight"><span class="filename">auto.cpp</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos="1 "></span></a><span class="k">auto</span><span class="w"> </span><span class="n">m_int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// since 10 is int type, the type of `m_int` has been automatially derivated as `int`</span>
 </code></pre></div>
-<h2 id="decltypeexp-type"><strong>decltype(exp) type</strong><a class="headerlink" href="#decltypeexp-type" title="Permanent link">⚓︎</a></h2>
+<h2 id="decltypeexp-type"><strong>decltype(exp) type</strong><a class="headerlink" href="#decltypeexp-type" title="Anchor link to this section for reference">⚓︎</a></h2>
 <p><code>decltype(exp)</code> can be understood as: "declare type" from expression. <code>decltype</code> can derivate the type of the variable from the expression <code>exp</code>. It does not care about what is showing on the right side of <code>=</code>.</p>
 <div class="highlight"><span class="filename">decltype.cpp</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos="1 "></span></a><span class="kt">int</span><span class="w"> </span><span class="n">m_variable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a><a href="#__codelineno-1-2"><span class="linenos" data-linenos="2 "></span></a><span class="k">decltype</span><span class="p">(</span><span class="n">m_variable</span><span class="p">)</span><span class="w"> </span><span class="n">m_test1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">  </span><span class="c1">//`m_test1` has been derivated to `int`</span>
@@ -3573,7 +3589,7 @@
 </li>
 </ul>
 </details>
-<h2 id="decltypeexp-type-advance"><strong>decltype(exp) type [advance]</strong><a class="headerlink" href="#decltypeexp-type-advance" title="Permanent link">⚓︎</a></h2>
+<h2 id="decltypeexp-type-advance"><strong>decltype(exp) type [advance]</strong><a class="headerlink" href="#decltypeexp-type-advance" title="Anchor link to this section for reference">⚓︎</a></h2>
 <p>Before we go in advance, let's figure out <code>lvalue</code> and <code>rvalue</code>:</p>
 <div class="arithmatex">\[lvalue = rvalue\]</div>
 <ul>
@@ -3666,7 +3682,7 @@
 <a id="__codelineno-4-18" name="__codelineno-4-18"></a><a href="#__codelineno-4-18"><span class="linenos" data-linenos="18 "></span></a><span class="p">}</span><span class="w"></span>
 </code></pre></div>
 </details>
-<h3 id="references"><strong>References:</strong><a class="headerlink" href="#references" title="Permanent link">⚓︎</a></h3>
+<h3 id="references"><strong>References:</strong><a class="headerlink" href="#references" title="Anchor link to this section for reference">⚓︎</a></h3>
 <ul>
 <li>
 <p><a href="https://cloud.tencent.com/developer/article/1745592">Tencent Cloud</a></p>

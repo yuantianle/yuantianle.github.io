@@ -2691,6 +2691,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_5_2_2">
@@ -2727,6 +2729,20 @@
     <li class="md-nav__item">
       <a href="../../../4_Algorithms/Typical_Questions/Leetcode/Dijkstra/" class="md-nav__link">
         Dijkstra
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../4_Algorithms/Typical_Questions/Leetcode/Bipartition/" class="md-nav__link">
+        Bipartition
       </a>
     </li>
   
@@ -3569,7 +3585,7 @@
   </a>
 
 
-<h1 id="git-theory"><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.546 10.93 13.067.452a1.55 1.55 0 0 0-2.188 0L8.708 2.627l2.76 2.76a1.838 1.838 0 0 1 2.327 2.341l2.658 2.66a1.838 1.838 0 0 1 1.9 3.039 1.837 1.837 0 0 1-2.6 0 1.846 1.846 0 0 1-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348a1.848 1.848 0 0 1 0 2.6 1.844 1.844 0 0 1-2.609 0 1.834 1.834 0 0 1 0-2.598c.182-.18.387-.316.605-.406V8.835a1.834 1.834 0 0 1-.996-2.41L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477a1.545 1.545 0 0 0 2.186 0l10.43-10.43a1.544 1.544 0 0 0 0-2.187"/></svg></span> Git Theory</strong><a class="headerlink" href="#git-theory" title="Permanent link">⚓︎</a></h1>
+<h1 id="git-theory"><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.546 10.93 13.067.452a1.55 1.55 0 0 0-2.188 0L8.708 2.627l2.76 2.76a1.838 1.838 0 0 1 2.327 2.341l2.658 2.66a1.838 1.838 0 0 1 1.9 3.039 1.837 1.837 0 0 1-2.6 0 1.846 1.846 0 0 1-.404-1.996L12.86 8.955v6.525c.176.086.342.203.488.348a1.848 1.848 0 0 1 0 2.6 1.844 1.844 0 0 1-2.609 0 1.834 1.834 0 0 1 0-2.598c.182-.18.387-.316.605-.406V8.835a1.834 1.834 0 0 1-.996-2.41L7.636 3.7.45 10.881c-.6.605-.6 1.584 0 2.189l10.48 10.477a1.545 1.545 0 0 0 2.186 0l10.43-10.43a1.544 1.544 0 0 0 0-2.187"/></svg></span> Git Theory</strong><a class="headerlink" href="#git-theory" title="Anchor link to this section for reference">⚓︎</a></h1>
 <blockquote>
 <p>When you are first using Git, you must feel confused about the questions shown below</p>
 <details class="question" open="open">
@@ -3585,7 +3601,7 @@
 </details>
 <p>I hope this section can help you to understand Git behaviors deeply. <img alt="🎅" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f385.svg" title=":santa:" /></p>
 </blockquote>
-<h2 id="git-objects"><strong>Git objects</strong><a class="headerlink" href="#git-objects" title="Permanent link">⚓︎</a></h2>
+<h2 id="git-objects"><strong>Git objects</strong><a class="headerlink" href="#git-objects" title="Anchor link to this section for reference">⚓︎</a></h2>
 <p>Git repository is constructed by <code>Git objects</code>. Git references each object by using their <code>object ID</code> (OID for short). </p>
 <details class="note" open="open">
 <summary>Note</summary>
@@ -3621,14 +3637,14 @@
 </li>
 </ul>
 </details>
-<h3 id="git-file-content-storage-blob"><strong><span class="twemoji git_square"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3v18h18V3"/></svg></span> Git file content storage: blob</strong><a class="headerlink" href="#git-file-content-storage-blob" title="Permanent link">⚓︎</a></h3>
+<h3 id="git-file-content-storage-blob"><strong><span class="twemoji git_square"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3v18h18V3"/></svg></span> Git file content storage: blob</strong><a class="headerlink" href="#git-file-content-storage-blob" title="Anchor link to this section for reference">⚓︎</a></h3>
 <p><code>blobs</code> contain <strong>file contents</strong>. </p>
 <p>Let's use the command lines: </p>
 <p><center> <strong><code>git rev-parse HEAD:README.md</code> and <code>git cat-file -p &lt;OID&gt; | head -n 8</code></strong></center></p>
 <p><img :=":" _="," alt="picture 40" class="center" src="../pictures/blob.png" width="60%" />  </p>
 <p>The <ins class="critic">contents at <code>HEAD:README.md</code></ins> matches the <ins class="critic"><strong>README.md</strong> file contents in the current working directory</ins>:</p>
 <p><img :=":" _="," alt="picture 41" class="center" src="../pictures/blob2.png" width="70%" />  </p>
-<h3 id="git-directory-tree"><strong><span class="twemoji git_triangle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1 21h22L12 2"/></svg></span> Git directory: tree</strong><a class="headerlink" href="#git-directory-tree" title="Permanent link">⚓︎</a></h3>
+<h3 id="git-directory-tree"><strong><span class="twemoji git_triangle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M1 21h22L12 2"/></svg></span> Git directory: tree</strong><a class="headerlink" href="#git-directory-tree" title="Anchor link to this section for reference">⚓︎</a></h3>
 <p>We should notice that <code>blobs</code> only contain file contents. However, <code>trees</code> record <strong>files' names</strong> and their <strong>directories</strong>. The concept can be seen in the graph as shown below:</p>
 <p><img :=":" _="," alt="picture 43" class="center" src="../pictures/tree.png" width="50%" />    </p>
 <p>Let's use the command lines: </p>
@@ -3640,7 +3656,7 @@
 <p>The objects shown in the list are all <code>blobs</code>. But the objects can also be <code>trees</code>. When some objects in the tree are <code>trees</code>, they are <code>subdirectories</code>. </p>
 <p>Trees can point to other trees! 😎</p>
 </details>
-<h3 id="git-history-snapshot-commit"><strong><span class="twemoji git_circle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"/></svg></span> Git history snapshot: commit</strong><a class="headerlink" href="#git-history-snapshot-commit" title="Permanent link">⚓︎</a></h3>
+<h3 id="git-history-snapshot-commit"><strong><span class="twemoji git_circle"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10 10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"/></svg></span> Git history snapshot: commit</strong><a class="headerlink" href="#git-history-snapshot-commit" title="Anchor link to this section for reference">⚓︎</a></h3>
 <p>The <code>tree</code> itself doesn’t know where it exists within the repository; that is the role of the objects pointing to the tree. The object role is the <code>commit</code>!</p>
 <p>To understand the <code>commit</code> more straightforward, firstly, let's use the command lines: </p>
 <p><center> <strong><code>git rev-parse HEAD</code></strong> and <strong><code>git cat-file -p &lt;OID&gt;</code></strong></center></p>
@@ -3657,7 +3673,7 @@
 </ul>
 <p><img :=":" _="," alt="picture 45" class="center" src="../pictures/commit.png" width="50%" />  </p>
 <p>All in all, we call <code>commit</code> a <code>snapshot</code> in time. Remember the <a href="#git-objects">commit history</a> from <code>Sourcetree</code>. The <code>snapshot</code> is a <u>"slice"</u> of your local repo at some node point in time. <code>Snapshot</code> is to a repository, as a screenshot is to a video.</p>
-<h2 id="git-branch"><strong>Git branch</strong><a class="headerlink" href="#git-branch" title="Permanent link">⚓︎</a></h2>
+<h2 id="git-branch"><strong>Git branch</strong><a class="headerlink" href="#git-branch" title="Anchor link to this section for reference">⚓︎</a></h2>
 <p>In Git, we use <code>branches</code> as pointers to the commits to move around the Git history and make changes instead of directly referring to OIDs most of the time.</p>
 <p>In other words, the <code>branch file</code> contains the OID of a commit.</p>
 <p>Don't believe me? Let's see what is a <code>main branch</code> in the working directory: <strong><code>.git/refs/heads</code></strong>:</p>
@@ -3692,7 +3708,7 @@
 </li>
 </ul>
 </details>
-<h2 id="big-graph"><strong>Big graph</strong><a class="headerlink" href="#big-graph" title="Permanent link">⚓︎</a></h2>
+<h2 id="big-graph"><strong>Big graph</strong><a class="headerlink" href="#big-graph" title="Anchor link to this section for reference">⚓︎</a></h2>
 <p>From what we have learned from <a href="#git-objects">Git objects</a> and <a href="#git-branch">Git branchs</a>, we can treat the <code>local repo</code> as the <strong>objects</strong> diagram shown below:</p>
 <p><img :=":" _="," alt="picture 47" class="center" src="../pictures/biggraph.png" width="70%" />  </p>
 <details class="success" open="open">
@@ -3714,7 +3730,7 @@
 <li>Since these trees <mark class="critic">reference</mark> trees and blobs by their OID, these snapshots <u>DON'T need multiple copies</u>. of the same data.</li>
 </ul>
 </details>
-<h2 id="git-diff"><strong>Git diff</strong><a class="headerlink" href="#git-diff" title="Permanent link">⚓︎</a></h2>
+<h2 id="git-diff"><strong>Git diff</strong><a class="headerlink" href="#git-diff" title="Anchor link to this section for reference">⚓︎</a></h2>
 <blockquote>
 <p>So far, we know that Git stores <ins class="critic">series of <code>commits</code></ins>. But why doesn't Git store data as a series of <u>changesets</u> or <u>differences</u>? In fact, sometimes the <code>commits</code> use the function of the <code>diff</code>, but not all the time.</p>
 </blockquote>
@@ -3758,8 +3774,8 @@ commits =  diffs \cup snapshots
 <p>With <code>commit</code>, parent information, including differences, has been stored. That's why Git <strong>does not</strong> choose the <code>patch</code> as the functional implementation. </p>
 <p><code>Patch</code> only implements the <code>diff</code> part but cannot traverse commit history. <code>Snapshots</code> record the commit history in time.</p>
 </details>
-<h2 id="two-commands-implementing-diff"><strong>Two commands implementing <code>diff</code></strong><a class="headerlink" href="#two-commands-implementing-diff" title="Permanent link">⚓︎</a></h2>
-<h3 id="git-cherry-pick"><strong>git cherry-pick</strong><a class="headerlink" href="#git-cherry-pick" title="Permanent link">⚓︎</a></h3>
+<h2 id="two-commands-implementing-diff"><strong>Two commands implementing <code>diff</code></strong><a class="headerlink" href="#two-commands-implementing-diff" title="Anchor link to this section for reference">⚓︎</a></h2>
+<h3 id="git-cherry-pick"><strong>git cherry-pick</strong><a class="headerlink" href="#git-cherry-pick" title="Anchor link to this section for reference">⚓︎</a></h3>
 <ul>
 <li>
 <p><strong>Brief description:</strong> A commit is accidentally made to the <strong>wrong</strong> branch. You can switch to the correct branch (now it is <code>HEAD</code> branch) and <code>cherry-pick</code> the commit to where it should belong in this <code>HEAD</code> branch.</p>
@@ -3782,7 +3798,7 @@ commits =  diffs \cup snapshots
 <p>We <mark class="critic">didn’t “move” the commit</mark> to be on top of our current HEAD; We <mark class="critic">created a new commit</mark> whose diff matches the old commit.</p>
 </details>
 </details>
-<h3 id="git-rebase"><strong>git rebase</strong><a class="headerlink" href="#git-rebase" title="Permanent link">⚓︎</a></h3>
+<h3 id="git-rebase"><strong>git rebase</strong><a class="headerlink" href="#git-rebase" title="Anchor link to this section for reference">⚓︎</a></h3>
 <p>The <code>git rebase</code> command in the most basic form is like a series of <code>git cherry-pick</code> commands, replaying <code>diffs</code> on top of a different commit.</p>
 <details class="example" open="open">
 <summary>Steps of <code>rebase</code>:</summary>
@@ -3807,12 +3823,12 @@ commits =  diffs \cup snapshots
 <p>In fact, the old commits still exist in your repository <u>until garbage collection runs</u>.</p>
 </details>
 </details>
-<h2 id="git-add-and-git-commit"><strong>git add and git commit</strong><a class="headerlink" href="#git-add-and-git-commit" title="Permanent link">⚓︎</a></h2>
+<h2 id="git-add-and-git-commit"><strong>git add and git commit</strong><a class="headerlink" href="#git-add-and-git-commit" title="Anchor link to this section for reference">⚓︎</a></h2>
 <blockquote>
 <p>Known the basic theory of Git, let's go back to the two basic Git command: <strong><code>git add</code> and <code>git commit</code></strong>. The diagram shown below is the design of them two.</p>
 </blockquote>
 <p><img :=":" _="," alt="picture 10" class="center" src="../pictures/add_commit.png" width="60%" />   </p>
-<h3 id="git-add"><strong>git add</strong><a class="headerlink" href="#git-add" title="Permanent link">⚓︎</a></h3>
+<h3 id="git-add"><strong>git add</strong><a class="headerlink" href="#git-add" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="question" open="open">
 <summary>What do <code>git add</code> do?</summary>
 <p><code>git add</code> create <code>blobs</code> for newly added files and append index for both creating and editing blob.</p>
@@ -3838,7 +3854,7 @@ commits =  diffs \cup snapshots
 </details>
 <p>In fact, we can directly use the <strong>first 7 digits</strong> of the OID to check the object's type and content:</p>
 <p><img :=":" _="," alt="picture 19" class="center" src="../pictures/add7.png" width="60%" />  </p>
-<h3 id="git-commit"><strong>git commit</strong><a class="headerlink" href="#git-commit" title="Permanent link">⚓︎</a></h3>
+<h3 id="git-commit"><strong>git commit</strong><a class="headerlink" href="#git-commit" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="question" open="open">
 <summary>What do <code>git commit</code> do?</summary>
 <p><code>git commit</code> based on the <code>blobs</code> in the local repo, furtherly create a new <code>commit</code> and it's root <code>tree</code> for them.</p>
@@ -3879,7 +3895,7 @@ commits =  diffs \cup snapshots
 <p><strong>Git functions looks easy but there are some concepts are confusing. I have spent a whole week figuring out what was going on in deep. Then I spent two days for the conclusion in this section. If you check this article in details, I believe, you will treat Git in different angle! 🏖️🍻</strong></p>
 <p><strong>Also don't forget to check if you can answer the questions at the start of this article. 💯🤴</strong></p>
 </blockquote>
-<h3 id="references"><strong>References:</strong><a class="headerlink" href="#references" title="Permanent link">⚓︎</a></h3>
+<h3 id="references"><strong>References:</strong><a class="headerlink" href="#references" title="Anchor link to this section for reference">⚓︎</a></h3>
 <ul>
 <li><a href="https://github.blog/2020-12-17-commits-are-snapshots-not-diffs/">Commits are snapshots, not diffs</a></li>
 </ul>

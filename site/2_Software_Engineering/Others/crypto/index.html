@@ -2670,6 +2670,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_5_2_2">
@@ -2706,6 +2708,20 @@
     <li class="md-nav__item">
       <a href="../../../4_Algorithms/Typical_Questions/Leetcode/Dijkstra/" class="md-nav__link">
         Dijkstra
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../4_Algorithms/Typical_Questions/Leetcode/Bipartition/" class="md-nav__link">
+        Bipartition
       </a>
     </li>
   
@@ -3548,10 +3564,10 @@
   </a>
 
 
-<h1 id="-cryptographic"><strong> 🦺 Cryptographic</strong><a class="headerlink" href="#-cryptographic" title="Permanent link">⚓︎</a></h1>
+<h1 id="-cryptographic"><strong> 🦺 Cryptographic</strong><a class="headerlink" href="#-cryptographic" title="Anchor link to this section for reference">⚓︎</a></h1>
 <p>The <strong>transmission</strong> and <strong>storage</strong> of files need to be <strong>encrypted</strong>, otherwise the privacy of file content will be very easy to be disclosed. </p>
 <p>About <strong>file transmission</strong>, we have discussed in the section about <a href="../../../5_FullStack/Frontend/Auth/">OAuth 2.0</a>. In this section, we are talking about the way to encrypt <strong>stored files</strong>.</p>
-<h2 id="cryptographic-hash-function"><strong>Cryptographic hash function</strong><a class="headerlink" href="#cryptographic-hash-function" title="Permanent link">⚓︎</a></h2>
+<h2 id="cryptographic-hash-function"><strong>Cryptographic hash function</strong><a class="headerlink" href="#cryptographic-hash-function" title="Anchor link to this section for reference">⚓︎</a></h2>
 <p>Yes, to store the file secretly, we can use <code>Cryptographic hash function</code> to generate <code>checksum</code>, which we have mentioned before in the command line <a href="../../2_Software_Engineering/Terminal/contents/#sha1sum">sha1sum</a>.</p>
 <p><code>Cryptographic hash function</code> should have below properties:</p>
 <ul>
@@ -3562,14 +3578,14 @@
 </ul>
 <p>The picture below shows the property of <code>Cryptographic hash function</code>:</p>
 <p><img :=":" _="," alt="sha1sum" class="center" src="../../Terminal/pictures/sha1.png" width="80%" />  </p>
-<h2 id="hash-algorithms"><strong>Hash Algorithms</strong><a class="headerlink" href="#hash-algorithms" title="Permanent link">⚓︎</a></h2>
+<h2 id="hash-algorithms"><strong>Hash Algorithms</strong><a class="headerlink" href="#hash-algorithms" title="Anchor link to this section for reference">⚓︎</a></h2>
 <p>There are three famous <strong>hash algorithms</strong>:</p>
 <ul>
 <li><strong>SHA1:</strong> function which returns <code>160-bit (20-byte)</code> hash value. <a href="../Github/theory.md/#git-commit"><code>commit ID</code></a> is <strong>forty hexadecimal</strong> characters that specify a 160-bit SHA-1 hash.</li>
 <li><strong>SHA2:</strong> consists of six hash functions with digests (hash values) that are <code>224</code>, <code>256</code>, <code>384</code>, or <code>512</code> bits: <code>SHA-224</code>, <code>SHA-256</code>, <code>SHA-384</code>, <code>SHA-512</code>, <code>SHA-512/224</code>, <code>SHA-512/256</code>.</li>
 <li><strong>SHA3:</strong> Subset of the broader family of algorithms called <a href="https://en.wikipedia.org/wiki/SHA-3"><code>Keccak</code></a>. This algorithm won the hash function competition called <a href="https://www.nists.org/conference">NIST</a>.</li>
 </ul>
-<h2 id="hash-salt"><strong>Hash salt</strong><a class="headerlink" href="#hash-salt" title="Permanent link">⚓︎</a></h2>
+<h2 id="hash-salt"><strong>Hash salt</strong><a class="headerlink" href="#hash-salt" title="Anchor link to this section for reference">⚓︎</a></h2>
 <p>As you saw that <code>Cryptographic hash function</code> has <code>Non-invertible</code> and <code>Deterministic</code> properties. If we use the same hash, we definitely know that we are using the same file. As a hacker, it is easy for you to build a hash cheating table!</p>
 <p><code>Salt</code> is <strong>random data</strong> that is used as <strong>additional input</strong> to a one-way function that hashes data, a password or passphrase.</p>
 <p>Let's compare the <code>normal Hash</code> with <code>Hash added salt</code>.</p>
@@ -3625,7 +3641,7 @@
 </table>
 </details>
 <p>It is obvious that; output with <code>Hash added salt</code> algorithm prevents the increase the <code>Non-invertible</code> property and diminishes <code>Deterministic</code> property.</p>
-<h3 id="references"><strong>References:</strong><a class="headerlink" href="#references" title="Permanent link">⚓︎</a></h3>
+<h3 id="references"><strong>References:</strong><a class="headerlink" href="#references" title="Anchor link to this section for reference">⚓︎</a></h3>
 <ul>
 <li>
 <p><a href="https://en.wikipedia.org/wiki/SHA-1">SHA-1 wiki</a></p>
