@@ -2670,6 +2670,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_5_2_2">
@@ -2706,6 +2708,20 @@
     <li class="md-nav__item">
       <a href="../../../4_Algorithms/Typical_Questions/Leetcode/Dijkstra/" class="md-nav__link">
         Dijkstra
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../4_Algorithms/Typical_Questions/Leetcode/Bipartition/" class="md-nav__link">
+        Bipartition
       </a>
     </li>
   
@@ -3548,11 +3564,11 @@
   </a>
 
 
-<h1 id="thermal-dynamics"><strong><img alt="🔥" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f525.svg" title=":fire:" /> Thermal Dynamics</strong><a class="headerlink" href="#thermal-dynamics" title="Permanent link">⚓︎</a></h1>
+<h1 id="thermal-dynamics"><strong><img alt="🔥" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f525.svg" title=":fire:" /> Thermal Dynamics</strong><a class="headerlink" href="#thermal-dynamics" title="Anchor link to this section for reference">⚓︎</a></h1>
 <blockquote>
 <p>This section shows the implicit method of thermal transfering with FDE.</p>
 </blockquote>
-<h2 id="problem-background"><strong>Problem background</strong><a class="headerlink" href="#problem-background" title="Permanent link">⚓︎</a></h2>
+<h2 id="problem-background"><strong>Problem background</strong><a class="headerlink" href="#problem-background" title="Anchor link to this section for reference">⚓︎</a></h2>
 <p>Think about the 2D case. Considering the continuum of the whole wall material, heat conduction is the major way to transfer heat. We use heat diffusion as our heat conduction method. Assuming that <span class="arithmatex">\(X\)</span> is the domain of a 2D plane, <span class="arithmatex">\(T\)</span> is the temperature at point <span class="arithmatex">\(p\)</span>, and <span class="arithmatex">\(\alpha\)</span> is the thermal diffusivity, then we have the Equation:</p>
 <div class="admonition tip">
 <div class="arithmatex">\[
@@ -3590,7 +3606,7 @@
 \end{equation}
 \]</div>
 </div>
-<h2 id="five-point-stencil-discretization"><strong>Five-point stencil discretization</strong><a class="headerlink" href="#five-point-stencil-discretization" title="Permanent link">⚓︎</a></h2>
+<h2 id="five-point-stencil-discretization"><strong>Five-point stencil discretization</strong><a class="headerlink" href="#five-point-stencil-discretization" title="Anchor link to this section for reference">⚓︎</a></h2>
 <p>To visualize the phenomenon on a computer, we need to have temperature grids. The grid is used for the discretization of the whole 2D plane. <code>Five-point stencil</code> difference is the method we use to express derivation for the heat partial differential equations. The corresponding temperature grid with a <code>Five-point stencil</code> can be seen in the picture shown below:</p>
 <p><img :=":" _="," alt="" class="center" src="Thermal/chpt4_Five_stenclie_iter.png" width="40%" /></p>
 <p>The continuous differential form, shown in the <a href="#problem-background">Problem background</a>, is further rewritten into a discrete form by the temperature grid, as shown in the equation below. The sparse matrix system will be solved in an implicit way.</p>
@@ -3634,7 +3650,7 @@
 \]</div>
 </div>
 <p>Usually, the Five-point stencil discretization with an explicit method will need to be limited by some step length constraints. However, based on our implementation using the implicit method, our iteration step can be far longer than the explicit method, which means the temperature transferring can be sped up by increasing the length of the iteration step.</p>
-<h2 id="final-results"><strong>Final Results</strong><a class="headerlink" href="#final-results" title="Permanent link">⚓︎</a></h2>
+<h2 id="final-results"><strong>Final Results</strong><a class="headerlink" href="#final-results" title="Anchor link to this section for reference">⚓︎</a></h2>
 <p>After setting the initial conditions (I.C.) of temperature and boundary conditions (B.C.), we start iterating the equation system until the solution converges to a stable status. The different iteration processes can be seen below.</p>
 <p><strong>Case 1:</br><code>Dirichlet B.C:</code> top, right</br><code>Neumann B.C:</code> bottom, left</br><code>High temperature I.C:</code> top, right</br><code>Low temperature I.C:</code> rest of map</strong></p>
 <p><img :=":" _="," alt="" class="center" src="matrix_1.gif" width="40%" /></p>
@@ -3644,7 +3660,7 @@
 <p><img :=":" _="," alt="" class="center" src="matrix_3.gif" width="40%" /></p>
 <p><strong>Case 4:</br><code>Dirichlet B.C:</code> top</br><code>Neumann B.C:</code> bottom, left, right</br><code>High temperature I.C:</code> top</br><code>Low temperature I.C:</code> rest of map</strong></p>
 <p><img :=":" _="," alt="" class="center" src="matrix_4.gif" width="40%" /></p>
-<h3 id="references"><strong>References</strong><a class="headerlink" href="#references" title="Permanent link">⚓︎</a></h3>
+<h3 id="references"><strong>References</strong><a class="headerlink" href="#references" title="Anchor link to this section for reference">⚓︎</a></h3>
 <p>“Finite difference methods,” Neil Balmforth's webpage. [Online]. Available: https://personal.math.ubc.ca/~njb/fd. [Accessed: 14-Nov-2022]. </p>
 
   <hr>

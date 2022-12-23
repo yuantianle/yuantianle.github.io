@@ -2679,6 +2679,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_5_2_2">
@@ -2715,6 +2717,20 @@
     <li class="md-nav__item">
       <a href="../../../../4_Algorithms/Typical_Questions/Leetcode/Dijkstra/" class="md-nav__link">
         Dijkstra
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../4_Algorithms/Typical_Questions/Leetcode/Bipartition/" class="md-nav__link">
+        Bipartition
       </a>
     </li>
   
@@ -3557,22 +3573,22 @@
   </a>
 
 
-<h1 id="map-filter-and-reduce"><strong>Map, Filter and Reduce</strong><a class="headerlink" href="#map-filter-and-reduce" title="Permanent link">⚓︎</a></h1>
+<h1 id="map-filter-and-reduce"><strong>Map, Filter and Reduce</strong><a class="headerlink" href="#map-filter-and-reduce" title="Anchor link to this section for reference">⚓︎</a></h1>
 <blockquote>
 <p>Map-Filter-Reduce are well known as <code>Syntactic Sugar</code>, which is a term for syntax changes in computer programming which make it easier for humans to code. Also, it is a <code>Fan-in Fan-out</code> way to process multiple tasks.</p>
 </blockquote>
-<h2 id="grammar"><strong>Grammar</strong><a class="headerlink" href="#grammar" title="Permanent link">⚓︎</a></h2>
+<h2 id="grammar"><strong>Grammar</strong><a class="headerlink" href="#grammar" title="Anchor link to this section for reference">⚓︎</a></h2>
 <div class="highlight"><span class="filename">Text Only</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos="1 "></span></a>map(function(type1 -&gt; type1))
 </code></pre></div>
 <div class="highlight"><span class="filename">Text Only</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos="1 "></span></a>filter (function(type1 -&gt; bool))
 </code></pre></div>
 <div class="highlight"><span class="filename">Text Only</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><a href="#__codelineno-2-1"><span class="linenos" data-linenos="1 "></span></a>reduce(init_val(type3), function(type1, type 2-&gt; type3))
 </code></pre></div>
-<h2 id="way1-function"><strong>Way1: Function</strong><a class="headerlink" href="#way1-function" title="Permanent link">⚓︎</a></h2>
-<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">⚓︎</a></h3>
+<h2 id="way1-function"><strong>Way1: Function</strong><a class="headerlink" href="#way1-function" title="Anchor link to this section for reference">⚓︎</a></h2>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Anchor link to this section for reference">⚓︎</a></h3>
 <p><img :=":" alt="image" class="center" src="https://user-images.githubusercontent.com/61530469/200788862-2a87ba4d-b357-44dc-ae0b-813f490e8d93.png" width:50_="width:50%," /></p>
 <p><a href="https://twitter.com/steveluscher/status/741089564329054208">Steven Luscher on Twitter</a></p>
-<h3 id="code">Code<a class="headerlink" href="#code" title="Permanent link">⚓︎</a></h3>
+<h3 id="code">Code<a class="headerlink" href="#code" title="Anchor link to this section for reference">⚓︎</a></h3>
 <div class="highlight"><span class="filename">way1.swift</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><a href="#__codelineno-3-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="kd">import</span> <span class="nc">Foundation</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a><a href="#__codelineno-3-2"><span class="linenos" data-linenos=" 2 "></span></a>
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a><a href="#__codelineno-3-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="kd">func</span> <span class="nf">cook</span><span class="p">(</span><span class="n">food</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="p">{</span>
@@ -3614,10 +3630,10 @@
 <a id="__codelineno-3-39" name="__codelineno-3-39"></a><a href="#__codelineno-3-39"><span class="linenos" data-linenos="39 "></span></a><span class="bp">print</span><span class="p">(</span><span class="n">filtered_meals</span><span class="p">)</span>
 <a id="__codelineno-3-40" name="__codelineno-3-40"></a><a href="#__codelineno-3-40"><span class="linenos" data-linenos="40 "></span></a><span class="bp">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="result">Result<a class="headerlink" href="#result" title="Permanent link">⚓︎</a></h3>
+<h3 id="result">Result<a class="headerlink" href="#result" title="Anchor link to this section for reference">⚓︎</a></h3>
 <p><img :=":" alt="image" class="center" src="https://user-images.githubusercontent.com/61530469/200770718-adaef9ec-9889-4598-9707-c2bcf7853e86.png" width:80_="width:80%," /></p>
-<h2 id="way2-closure"><strong>Way2: Closure</strong><a class="headerlink" href="#way2-closure" title="Permanent link">⚓︎</a></h2>
-<h3 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">⚓︎</a></h3>
+<h2 id="way2-closure"><strong>Way2: Closure</strong><a class="headerlink" href="#way2-closure" title="Anchor link to this section for reference">⚓︎</a></h2>
+<h3 id="example_1">Example<a class="headerlink" href="#example_1" title="Anchor link to this section for reference">⚓︎</a></h3>
 <p>Realize the assert shown below with closure:</p>
 <div class="highlight"><span class="filename">Q2.swift</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><a href="#__codelineno-4-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="k">for</span> <span class="kc">_</span> <span class="k">in</span> <span class="mf">0.</span><span class="p">..</span><span class="mi">5</span> <span class="p">{</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2"></a><a href="#__codelineno-4-2"><span class="linenos" data-linenos=" 2 "></span></a>    <span class="kd">let</span> <span class="nv">foodNames</span> <span class="p">=</span> <span class="p">[</span><span class="s">&quot;🍔&quot;</span><span class="p">:</span> <span class="s">&quot;hamburger&quot;</span><span class="p">,</span> <span class="s">&quot;🍟&quot;</span><span class="p">:</span> <span class="s">&quot;french fries&quot;</span><span class="p">,</span> <span class="s">&quot;🌽&quot;</span><span class="p">:</span> <span class="s">&quot;popcorn&quot;</span><span class="p">]</span>
@@ -3631,7 +3647,7 @@
 <a id="__codelineno-4-10" name="__codelineno-4-10"></a><a href="#__codelineno-4-10"><span class="linenos" data-linenos="10 "></span></a>    <span class="p">)</span>
 <a id="__codelineno-4-11" name="__codelineno-4-11"></a><a href="#__codelineno-4-11"><span class="linenos" data-linenos="11 "></span></a><span class="p">}</span>
 </code></pre></div>
-<h3 id="code_1">Code<a class="headerlink" href="#code_1" title="Permanent link">⚓︎</a></h3>
+<h3 id="code_1">Code<a class="headerlink" href="#code_1" title="Anchor link to this section for reference">⚓︎</a></h3>
 <div class="highlight"><span class="filename">way2.swift</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><a href="#__codelineno-5-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="kd">import</span> <span class="nc">Foundation</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2"></a><a href="#__codelineno-5-2"><span class="linenos" data-linenos=" 2 "></span></a>
 <a id="__codelineno-5-3" name="__codelineno-5-3"></a><a href="#__codelineno-5-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="k">for</span> <span class="kc">_</span> <span class="k">in</span> <span class="mf">0.</span><span class="p">..</span><span class="mi">5</span> <span class="p">{</span>
@@ -3653,23 +3669,23 @@
 <a id="__codelineno-5-19" name="__codelineno-5-19"></a><a href="#__codelineno-5-19"><span class="linenos" data-linenos="19 "></span></a>    <span class="p">)</span>
 <a id="__codelineno-5-20" name="__codelineno-5-20"></a><a href="#__codelineno-5-20"><span class="linenos" data-linenos="20 "></span></a><span class="p">}</span>
 </code></pre></div>
-<h3 id="result_1">Result<a class="headerlink" href="#result_1" title="Permanent link">⚓︎</a></h3>
+<h3 id="result_1">Result<a class="headerlink" href="#result_1" title="Anchor link to this section for reference">⚓︎</a></h3>
 <p><img :=":" alt="image" class="center" src="https://user-images.githubusercontent.com/61530469/200774996-a7cf34c0-49db-4d9b-ae8b-8d0b2803d609.png" width:80_="width:80%," /></p>
-<h2 id="way3-using-the-built-in-operator"><strong>Way3: Using the built-in operator</strong><a class="headerlink" href="#way3-using-the-built-in-operator" title="Permanent link">⚓︎</a></h2>
-<h3 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">⚓︎</a></h3>
+<h2 id="way3-using-the-built-in-operator"><strong>Way3: Using the built-in operator</strong><a class="headerlink" href="#way3-using-the-built-in-operator" title="Anchor link to this section for reference">⚓︎</a></h2>
+<h3 id="example_2">Example<a class="headerlink" href="#example_2" title="Anchor link to this section for reference">⚓︎</a></h3>
 <p>Realize the assert shown below with built-in operator:</p>
 <div class="highlight"><span class="filename">Q3.swift</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><a href="#__codelineno-6-1"><span class="linenos" data-linenos="1 "></span></a><span class="kd">let</span> <span class="nv">outcome</span> <span class="p">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">].</span><span class="bp">map</span><span class="p">({...}).</span><span class="bp">filter</span><span class="p">({...}).</span><span class="bp">reduce</span><span class="p">(...,...)</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2"></a><a href="#__codelineno-6-2"><span class="linenos" data-linenos="2 "></span></a>
 <a id="__codelineno-6-3" name="__codelineno-6-3"></a><a href="#__codelineno-6-3"><span class="linenos" data-linenos="3 "></span></a><span class="bp">assert</span><span class="p">(</span><span class="n">outcome</span> <span class="p">==</span> <span class="mi">108</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="code_2">Code<a class="headerlink" href="#code_2" title="Permanent link">⚓︎</a></h3>
+<h3 id="code_2">Code<a class="headerlink" href="#code_2" title="Anchor link to this section for reference">⚓︎</a></h3>
 <div class="highlight"><span class="filename">way3.swift</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><a href="#__codelineno-7-1"><span class="linenos" data-linenos="1 "></span></a><span class="kd">import</span> <span class="nc">Foundation</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2"></a><a href="#__codelineno-7-2"><span class="linenos" data-linenos="2 "></span></a>
 <a id="__codelineno-7-3" name="__codelineno-7-3"></a><a href="#__codelineno-7-3"><span class="linenos" data-linenos="3 "></span></a><span class="kd">let</span> <span class="nv">outcome</span> <span class="p">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">8</span><span class="p">].</span><span class="bp">map</span><span class="p">(</span> <span class="p">{</span><span class="nv">$0</span> <span class="o">+</span> <span class="mi">1</span><span class="p">}</span> <span class="p">).</span><span class="bp">filter</span><span class="p">(</span> <span class="p">{</span><span class="nv">$0</span> <span class="o">!=</span> <span class="mi">5</span><span class="p">}</span> <span class="p">).</span><span class="bp">reduce</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
 <a id="__codelineno-7-4" name="__codelineno-7-4"></a><a href="#__codelineno-7-4"><span class="linenos" data-linenos="4 "></span></a>
 <a id="__codelineno-7-5" name="__codelineno-7-5"></a><a href="#__codelineno-7-5"><span class="linenos" data-linenos="5 "></span></a><span class="bp">assert</span><span class="p">(</span><span class="n">outcome</span> <span class="p">==</span> <span class="mi">108</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="result_2">Result<a class="headerlink" href="#result_2" title="Permanent link">⚓︎</a></h3>
+<h3 id="result_2">Result<a class="headerlink" href="#result_2" title="Anchor link to this section for reference">⚓︎</a></h3>
 <p><img :=":" alt="image" class="center" src="https://user-images.githubusercontent.com/61530469/200776454-497db043-3f8c-447d-8f10-71d5a8453817.png" width:80_="width:80%," /></p>
 
   <hr>

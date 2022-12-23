@@ -2672,6 +2672,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_5_2_2">
@@ -2708,6 +2710,20 @@
     <li class="md-nav__item">
       <a href="../../../../4_Algorithms/Typical_Questions/Leetcode/Dijkstra/" class="md-nav__link">
         Dijkstra
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../4_Algorithms/Typical_Questions/Leetcode/Bipartition/" class="md-nav__link">
+        Bipartition
       </a>
     </li>
   
@@ -3550,17 +3566,17 @@
   </a>
 
 
-<h1 id="dispatch-queue-and-dead-lock"><strong>Dispatch queue and Dead lock</strong><a class="headerlink" href="#dispatch-queue-and-dead-lock" title="Permanent link">⚓︎</a></h1>
-<h2 id="i-dispatch-queue-from-will-braynen"><strong>I. Dispatch queue (from Will Braynen)</strong><a class="headerlink" href="#i-dispatch-queue-from-will-braynen" title="Permanent link">⚓︎</a></h2>
-<h3 id="1-what"><strong>1️⃣ What?</strong><a class="headerlink" href="#1-what" title="Permanent link">⚓︎</a></h3>
+<h1 id="dispatch-queue-and-dead-lock"><strong>Dispatch queue and Dead lock</strong><a class="headerlink" href="#dispatch-queue-and-dead-lock" title="Anchor link to this section for reference">⚓︎</a></h1>
+<h2 id="i-dispatch-queue-from-will-braynen"><strong>I. Dispatch queue (from Will Braynen)</strong><a class="headerlink" href="#i-dispatch-queue-from-will-braynen" title="Anchor link to this section for reference">⚓︎</a></h2>
+<h3 id="1-what"><strong>1️⃣ What?</strong><a class="headerlink" href="#1-what" title="Anchor link to this section for reference">⚓︎</a></h3>
 <ul>
 <li>A dispatch queue is an <strong>object-like structure</strong> that <strong>manages the tasks</strong> you submit to it. All dispatch queues are <strong>first-in, first-out (FIFO)</strong> data structures. Thus, the tasks you add to a queue are always started in the same order that they were added.” (source: <a href="https://developer.apple.com/library/archive/documentation/General/Conceptual/ConcurrencyProgrammingGuide/OperationQueues/OperationQueues.html">Apple documentation</a>). That’s important.</li>
 </ul>
-<h3 id="2-for"><strong>2️⃣ For?</strong><a class="headerlink" href="#2-for" title="Permanent link">⚓︎</a></h3>
+<h3 id="2-for"><strong>2️⃣ For?</strong><a class="headerlink" href="#2-for" title="Anchor link to this section for reference">⚓︎</a></h3>
 <ul>
 <li>Well, it’s a way to <strong>run multi-threaded code</strong> without using threads directly. It’s <strong>not</strong> as low level as working with threads. </li>
 </ul>
-<h3 id="3-diff-with-threads"><strong>3️⃣ Diff with threads?</strong><a class="headerlink" href="#3-diff-with-threads" title="Permanent link">⚓︎</a></h3>
+<h3 id="3-diff-with-threads"><strong>3️⃣ Diff with threads?</strong><a class="headerlink" href="#3-diff-with-threads" title="Anchor link to this section for reference">⚓︎</a></h3>
 <ul>
 <li>
 <p>A <strong>dispatch queue</strong> can manage its own <strong>pool thread</strong>, etc, and ultimately the point of a dispatch queue is to keep track of what instruction to execute next while giving you a <strong>higher-level API</strong> instead of dealing with threads directly</p>
@@ -3569,8 +3585,8 @@
 <p>Whereas you can think of a <strong>thread</strong> as where <strong>instructions actually execute</strong>; for example, a thread might have <code>start</code>, <code>stop</code>, and <code>sleep</code> methods. A thread is <strong>short for a thread of execution</strong> and is <strong>the smallest sequence of programmed instructions</strong> that can be managed independently by a scheduler, which is typically [but not always] <strong>a part of the operating system</strong>” (<a href="https://en.wikipedia.org/wiki/Thread_(computing)">wikipedia</a>).  </p>
 </li>
 </ul>
-<h2 id="ii-serial-queue-concurrent-queue-main-dispatch-queue-and-thread"><strong>II. Serial queue, Concurrent queue, Main dispatch queue and Thread</strong><a class="headerlink" href="#ii-serial-queue-concurrent-queue-main-dispatch-queue-and-thread" title="Permanent link">⚓︎</a></h2>
-<h3 id="-grammar-and-properties"><strong>🤏 Grammar and Properties</strong><a class="headerlink" href="#-grammar-and-properties" title="Permanent link">⚓︎</a></h3>
+<h2 id="ii-serial-queue-concurrent-queue-main-dispatch-queue-and-thread"><strong>II. Serial queue, Concurrent queue, Main dispatch queue and Thread</strong><a class="headerlink" href="#ii-serial-queue-concurrent-queue-main-dispatch-queue-and-thread" title="Anchor link to this section for reference">⚓︎</a></h2>
+<h3 id="-grammar-and-properties"><strong>🤏 Grammar and Properties</strong><a class="headerlink" href="#-grammar-and-properties" title="Anchor link to this section for reference">⚓︎</a></h3>
 <ul>
 <li>The table below shows how to use the dispatch queue, and in what situation:</li>
 </ul>
@@ -3600,7 +3616,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="-dispatch-queue-vs-thread"><strong>👯‍♀️ Dispatch Queue v.s. Thread</strong><a class="headerlink" href="#-dispatch-queue-vs-thread" title="Permanent link">⚓︎</a></h3>
+<h3 id="-dispatch-queue-vs-thread"><strong>👯‍♀️ Dispatch Queue v.s. Thread</strong><a class="headerlink" href="#-dispatch-queue-vs-thread" title="Anchor link to this section for reference">⚓︎</a></h3>
 <ul>
 <li>The table below concludes the relationship between:</li>
 </ul>
@@ -3659,9 +3675,9 @@
 <summary>Deadlock condition?</summary>
 <p><code>Same thread</code> &amp; <code>serial queue</code> &amp; <code>sync</code> ---&gt; deadlock.</p>
 </details>
-<h2 id="iii-dead-lock-in-dispatch-queue"><strong>III. Dead lock in dispatch queue</strong><a class="headerlink" href="#iii-dead-lock-in-dispatch-queue" title="Permanent link">⚓︎</a></h2>
+<h2 id="iii-dead-lock-in-dispatch-queue"><strong>III. Dead lock in dispatch queue</strong><a class="headerlink" href="#iii-dead-lock-in-dispatch-queue" title="Anchor link to this section for reference">⚓︎</a></h2>
 <p>To understand dead lock happends in dispatch queue processing, we firstly need to know what is the <a href="../../../Others/Concurrency/">Concurrency</a>.</p>
-<h3 id="dead-lock-case-1-dispatch-queue"><strong><img alt="🔒" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f512.svg" title=":lock:" /> Dead lock case 1 (dispatch queue)</strong><a class="headerlink" href="#dead-lock-case-1-dispatch-queue" title="Permanent link">⚓︎</a></h3>
+<h3 id="dead-lock-case-1-dispatch-queue"><strong><img alt="🔒" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f512.svg" title=":lock:" /> Dead lock case 1 (dispatch queue)</strong><a class="headerlink" href="#dead-lock-case-1-dispatch-queue" title="Anchor link to this section for reference">⚓︎</a></h3>
 <p><strong>Code</strong></p>
 <div class="highlight"><span class="filename">dl_1.swift</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="kd">import</span> <span class="nc">Foundation</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a><a href="#__codelineno-0-2"><span class="linenos" data-linenos=" 2 "></span></a>
@@ -3688,7 +3704,7 @@
 </code></pre></div>
 <p><strong>Explaination Picture</strong></p>
 <p><img :=":" _="," alt="image" class="center" src="../deadlock1.jpg" width="90%" /></p>
-<h3 id="dead-lock-case-2-serial-queue"><strong><img alt="🔒" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f512.svg" title=":lock:" /> Dead lock case 2 (serial queue)</strong><a class="headerlink" href="#dead-lock-case-2-serial-queue" title="Permanent link">⚓︎</a></h3>
+<h3 id="dead-lock-case-2-serial-queue"><strong><img alt="🔒" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f512.svg" title=":lock:" /> Dead lock case 2 (serial queue)</strong><a class="headerlink" href="#dead-lock-case-2-serial-queue" title="Anchor link to this section for reference">⚓︎</a></h3>
 <p><strong>Code</strong></p>
 <div class="highlight"><span class="filename">dl_2.swift</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><a href="#__codelineno-2-1"><span class="linenos" data-linenos="1 "></span></a><span class="kd">import</span> <span class="nc">Foundation</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a><a href="#__codelineno-2-2"><span class="linenos" data-linenos="2 "></span></a>
@@ -3709,7 +3725,7 @@
 <summary>Be careful!!</summary>
 <p>Please DISTINGUISH the difference between <code>DispatchQueue.main.sync{...}</code> and <code>myQueue.sync{...}</code> by take a look at <a href="#no-dead-lock-case-serial-queue-with-sync">the case shown below</a> <img alt="🔻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f53b.svg" title=":small_red_triangle_down:" /> </p>
 </details>
-<h3 id="no-dead-lock-case-serial-queue-with-sync"><strong><img alt="🔐" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f510.svg" title=":closed_lock_with_key:" /> No dead lock case (serial queue with <code>sync</code>)</strong><a class="headerlink" href="#no-dead-lock-case-serial-queue-with-sync" title="Permanent link">⚓︎</a></h3>
+<h3 id="no-dead-lock-case-serial-queue-with-sync"><strong><img alt="🔐" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f510.svg" title=":closed_lock_with_key:" /> No dead lock case (serial queue with <code>sync</code>)</strong><a class="headerlink" href="#no-dead-lock-case-serial-queue-with-sync" title="Anchor link to this section for reference">⚓︎</a></h3>
 <p><strong>Code</strong></p>
 <div class="highlight"><span class="filename">ndl.swift</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><a href="#__codelineno-4-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="kd">import</span> <span class="nc">Foundation</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2"></a><a href="#__codelineno-4-2"><span class="linenos" data-linenos=" 2 "></span></a>
@@ -3730,7 +3746,7 @@
 </code></pre></div>
 <p><strong>Explaination Picture</strong></p>
 <p><img :=":" _="," alt="image" class="center" src="../ndeadlock1.jpg" width="90%" /></p>
-<h3 id="application-of-dispatch-queue"><strong><img alt="🦾" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f9be.svg" title=":mechanical_arm:" /> Application of Dispatch Queue</strong><a class="headerlink" href="#application-of-dispatch-queue" title="Permanent link">⚓︎</a></h3>
+<h3 id="application-of-dispatch-queue"><strong><img alt="🦾" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f9be.svg" title=":mechanical_arm:" /> Application of Dispatch Queue</strong><a class="headerlink" href="#application-of-dispatch-queue" title="Anchor link to this section for reference">⚓︎</a></h3>
 <p>The example shown below indicates that we can use <code>Dispatch Queue</code> as a "thread lock" to protect the thread processing for a code block from interrupted by other thread.</p>
 <div class="highlight"><span class="filename">application.swift</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><a href="#__codelineno-6-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="kd">import</span> <span class="nc">Foundation</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2"></a><a href="#__codelineno-6-2"><span class="linenos" data-linenos=" 2 "></span></a>

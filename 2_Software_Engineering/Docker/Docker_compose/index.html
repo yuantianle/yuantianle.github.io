@@ -2677,6 +2677,8 @@
         
           
         
+          
+        
       
       
         <label class="md-nav__link" for="__nav_5_2_2">
@@ -2713,6 +2715,20 @@
     <li class="md-nav__item">
       <a href="../../../4_Algorithms/Typical_Questions/Leetcode/Dijkstra/" class="md-nav__link">
         Dijkstra
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../4_Algorithms/Typical_Questions/Leetcode/Bipartition/" class="md-nav__link">
+        Bipartition
       </a>
     </li>
   
@@ -3555,7 +3571,7 @@
   </a>
 
 
-<h1 id="docker-compose-and-its-application"><strong><code>Docker Compose</code> and it's application</strong><a class="headerlink" href="#docker-compose-and-its-application" title="Permanent link">⚓︎</a></h1>
+<h1 id="docker-compose-and-its-application"><strong><code>Docker Compose</code> and it's application</strong><a class="headerlink" href="#docker-compose-and-its-application" title="Anchor link to this section for reference">⚓︎</a></h1>
 <p>We have already touched <code>Docker Compose</code> from <a href="../Guidance/docker_compose/">Guidance</a>. Now it is time to do some advance behaviors based on <code>Docker Compose</code>!</p>
 <blockquote>
 <p><code>Docker Compose</code> is a way to handle more than one <code>DocKer Container</code>. That is setting communiation between <code>DocKer Container</code>s. In this section, we will iterate all the situation between Server and Host combination to finally reach the goal of <code>DocKer Container</code> communications.</p>
@@ -3580,7 +3596,7 @@
 <a id="__codelineno-0-17" name="__codelineno-0-17"></a><a href="#__codelineno-0-17"><span class="linenos" data-linenos="17 "></span></a><span class="w">  </span><span class="n">console</span><span class="p">.</span><span class="na">log</span><span class="p">(</span><span class="err">`</span><span class="n">Example</span><span class="w"> </span><span class="n">app</span><span class="w"> </span><span class="n">listening</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">port</span><span class="w"> </span><span class="n">$</span><span class="p">{</span><span class="n">port</span><span class="p">}</span><span class="err">`</span><span class="p">)</span><span class="w"></span>
 <a id="__codelineno-0-18" name="__codelineno-0-18"></a><a href="#__codelineno-0-18"><span class="linenos" data-linenos="18 "></span></a><span class="p">})</span><span class="w"></span>
 </code></pre></div>
-<h2 id="1--server-and-client-in-the-same-docker-container"><strong>1.  Server and client in the same Docker container</strong><a class="headerlink" href="#1--server-and-client-in-the-same-docker-container" title="Permanent link">⚓︎</a></h2>
+<h2 id="1--server-and-client-in-the-same-docker-container"><strong>1.  Server and client in the same Docker container</strong><a class="headerlink" href="#1--server-and-client-in-the-same-docker-container" title="Anchor link to this section for reference">⚓︎</a></h2>
 <details class="question" open="open">
 <summary>Concept Diagram?</summary>
 <p><img :=":" _="," alt="picture" class="center" src="../picture/1.png" width="70%" />    </p>
@@ -3600,7 +3616,7 @@
 <a id="__codelineno-2-4" name="__codelineno-2-4"></a><a href="#__codelineno-2-4"><span class="linenos" data-linenos="4 "></span></a><span class="c1">#Docker:</span>
 <a id="__codelineno-2-5" name="__codelineno-2-5"></a><a href="#__codelineno-2-5"><span class="linenos" data-linenos="5 "></span></a>curl localhost:3000/data/2.5/Weather
 </code></pre></div>
-<h2 id="2--server-in-docker-container-client-on-host"><strong>2.  Server in Docker container, client on host</strong><a class="headerlink" href="#2--server-in-docker-container-client-on-host" title="Permanent link">⚓︎</a></h2>
+<h2 id="2--server-in-docker-container-client-on-host"><strong>2.  Server in Docker container, client on host</strong><a class="headerlink" href="#2--server-in-docker-container-client-on-host" title="Anchor link to this section for reference">⚓︎</a></h2>
 <details class="question" open="open">
 <summary>Concept Diagram?</summary>
 <p><img :=":" _="," alt="picture" class="center" src="../picture/2.png" width="70%" />    </p>
@@ -3622,7 +3638,7 @@
 <a id="__codelineno-4-4" name="__codelineno-4-4"></a><a href="#__codelineno-4-4"><span class="linenos" data-linenos="4 "></span></a><span class="c1">#Host:</span>
 <a id="__codelineno-4-5" name="__codelineno-4-5"></a><a href="#__codelineno-4-5"><span class="linenos" data-linenos="5 "></span></a>curl localhost:3000/data/2.5/Weather
 </code></pre></div>
-<h2 id="3--server-on-host-client-in-docker-container"><strong>3.  Server on host, client in Docker container</strong><a class="headerlink" href="#3--server-on-host-client-in-docker-container" title="Permanent link">⚓︎</a></h2>
+<h2 id="3--server-on-host-client-in-docker-container"><strong>3.  Server on host, client in Docker container</strong><a class="headerlink" href="#3--server-on-host-client-in-docker-container" title="Anchor link to this section for reference">⚓︎</a></h2>
 <details class="question" open="open">
 <summary>Concept Diagram?</summary>
 <p><img :=":" _="," alt="picture" class="center" src="../picture/3.png" width="70%" />    </p>
@@ -3642,7 +3658,7 @@
 <a id="__codelineno-6-4" name="__codelineno-6-4"></a><a href="#__codelineno-6-4"><span class="linenos" data-linenos="4 "></span></a><span class="c1">#Docker Container:</span>
 <a id="__codelineno-6-5" name="__codelineno-6-5"></a><a href="#__codelineno-6-5"><span class="linenos" data-linenos="5 "></span></a>curl host.docker.internal:3000/data/2.5/weather
 </code></pre></div>
-<h2 id="4--server-in-docker-container-client-in-another-docker-container"><strong>4.  Server in Docker container, client in another Docker container</strong><a class="headerlink" href="#4--server-in-docker-container-client-in-another-docker-container" title="Permanent link">⚓︎</a></h2>
+<h2 id="4--server-in-docker-container-client-in-another-docker-container"><strong>4.  Server in Docker container, client in another Docker container</strong><a class="headerlink" href="#4--server-in-docker-container-client-in-another-docker-container" title="Anchor link to this section for reference">⚓︎</a></h2>
 <details class="question" open="open">
 <summary>Concept Diagram?</summary>
 <p><img :=":" _="," alt="picture" class="center" src="../picture/4.png" width="70%" />    </p>
