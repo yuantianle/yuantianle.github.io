@@ -3301,6 +3301,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#devices-in-data-link" class="md-nav__link">
+    Devices in Data Link
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3590,9 +3597,9 @@
 <li><a href="#11-framing"><strong>Framing</strong></a>. </li>
 <li><a href="#12-addressing"><strong>Addressing</strong></a>.</li>
 <li><a href="#13-transparent-transmission"><strong>Transparent Transmission</strong></a>.</li>
-<li><strong>Error Detection</strong>.</li>
-<li><strong>Error Correction</strong>.</li>
-<li><strong>Flow Control</strong>.</li>
+<li><a href="#21-error-detection"><strong>Error Detection</strong></a></li>
+<li><a href="#22-error-correction"><strong>Error Correction</strong></a></li>
+<li><a href="#23-flow-control"><strong>Flow Control</strong></a></li>
 </ol>
 </details>
 <h2 id="abstracting"><strong>Abstracting</strong><a class="headerlink" href="#abstracting" title="Anchor link to this section for reference">⚓︎</a></h2>
@@ -3623,7 +3630,8 @@
 <p><img :=":" _="," alt="picture 1" class="center" src="../pictures/data_link_anatomy.png" width="30%" />   </p>
 </details>
 <blockquote>
-<p>Let's go to check them one by one! 🛸🛸</p>
+<p>Let's go to check them one by one! 🛸🛸 Drink some coffee first!
+<img :=":" _="," alt="picture 11" class="center" src="../pictures/coffee.gif" width="70%" />  </p>
 </blockquote>
 <h2 id="1-mac-sublayer"><strong>1. MAC Sublayer</strong><a class="headerlink" href="#1-mac-sublayer" title="Anchor link to this section for reference">⚓︎</a></h2>
 <h3 id="mac-address"><strong>Mac address</strong><a class="headerlink" href="#mac-address" title="Anchor link to this section for reference">⚓︎</a></h3>
@@ -3639,7 +3647,7 @@
 <li><a href="#11-framing"><strong>Framing</strong></a></li>
 <li><a href="#12-addressing"><strong>Addressing</strong></a></li>
 <li><a href="#13-transparent-transmission"><strong>Transparent Transmission</strong></a></li>
-<li><strong>Control physical medium access</strong></li>
+<li><a href="#14-control-physical-medium-access"><strong>Control physical medium access</strong></a></li>
 </ol>
 </div>
 <h3 id="11-framing"><strong>1.1 Framing</strong><a class="headerlink" href="#11-framing" title="Anchor link to this section for reference">⚓︎</a></h3>
@@ -3776,15 +3784,143 @@
 </details>
 </div>
 <h3 id="14-control-physical-medium-access"><strong>1.4 Control physical medium access</strong><a class="headerlink" href="#14-control-physical-medium-access" title="Anchor link to this section for reference">⚓︎</a></h3>
+<div class="admonition question">
 <p>No more explanations here; just know it as literal meaning.</p>
+</div>
 <h2 id="2-llc-sublayer"><strong>2. LLC Sublayer</strong><a class="headerlink" href="#2-llc-sublayer" title="Anchor link to this section for reference">⚓︎</a></h2>
-<h3 id="functions"><strong>Functions</strong><a class="headerlink" href="#functions" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="functions-of-llc-sublayer"><strong>Functions of LLC Sublayer</strong><a class="headerlink" href="#functions-of-llc-sublayer" title="Anchor link to this section for reference">⚓︎</a></h3>
+<div class="admonition note">
 <p><code>LLC</code> sublayer is responsible for:</p>
+<ol>
+<li><a href="#21-error-detection"><strong>Error Detection</strong></a></li>
+<li><a href="#22-error-correction"><strong>Error Correction</strong></a></li>
+<li><a href="#23-flow-control"><strong>Flow Control</strong></a></li>
+</ol>
+</div>
+<h3 id="21-error-detection"><strong>2.1 Error Detection</strong><a class="headerlink" href="#21-error-detection" title="Anchor link to this section for reference">⚓︎</a></h3>
+<div class="admonition success">
+<details class="question" open="open">
+<summary>What Error?</summary>
+<p>When data is transmitted, ,<code>0</code> can possibly be changed into <code>1</code>, which we call it as <code>bit errors</code>. It can be caused by:
+- Noise
+- Interference
+- Distortion
+- Bit synchronization errors</p>
+</details>
+<details class="question" open="open">
+<summary><code>BER</code> (Bit Error Rate)</summary>
+<p><code>BER</code> (Bit Error Rate): The percentage of incorrect transmitted bits to the total number of transmitted bits.</p>
+<p><center><span class="arithmatex">\(BER = \frac{Error\;Bits}{Transmitted\;Bits}\)</span></center></p>
+</details>
+<details class="note" open="open">
+<summary>How to detect?</summary>
+<p><code>CRC</code> (Cyclic redundancy check) is the method we use for <strong>error detection</strong>. </p>
+<p>Below diagram shows the idea of <code>CRC</code>:</p>
+<p><img :=":" _="," alt="picture 10" class="center" src="../pictures/CRC.png" width="80%" />  </p>
+<blockquote>
+<p>A good link for checking the methods for Error Detection: <a href="https://www.geeksforgeeks.org/error-detection-in-computer-networks/">Error Detection in Computer Networks</a></p>
+</blockquote>
+</details>
+<details class="danger" open="open">
+<summary>Unreliable Transmission Protocols</summary>
+<p>Generally, on the transmission link with <strong>poor communication quality</strong> (<code>errors</code> exists), we will add the <code>acknowledgement</code> and <code>retransmission</code> mechanisms to make sure the correctness of frame data. </p>
+<p>Without the two mechanisms we call the protocol an <code>unreliable transmission protocol</code>, such as:</p>
 <ul>
-<li><strong>Error Detection</strong></li>
-<li><strong>Error Correction</strong></li>
-<li><strong>Flow Control</strong></li>
+<li>PPP (for Point-to-point communication)</li>
+<li>CSMA/CD (for Broadcast communication)</li>
+<li>UDP (for the third layer, we will mention it later)</li>
 </ul>
+</details>
+</div>
+<h3 id="22-error-correction"><strong>2.2 Error Correction</strong><a class="headerlink" href="#22-error-correction" title="Anchor link to this section for reference">⚓︎</a></h3>
+<div class="admonition note">
+<p>Just for simple knowing:</p>
+<blockquote>
+<p><a href="https://www.tutorialspoint.com/error-detection-and-correction-in-data-link-layer#:~:text=Data%2Dlink%20layer%20uses%20error,a%20certain%20extent%20of%20accuracy.">Error Correction Techniques</a>:</p>
+<ol>
+<li>
+<p><strong>Backward Error Correction (Retransmission)</strong> −  If the receiver detects an error in the incoming frame, it requests the sender to <mark class="critic">retransmit</mark> the frame. It is a relatively simple technique. But it can be efficiently used only where retransmitting is not expensive, as in fiber optics and the time for retransmission is low relative to the requirements of the application.</p>
+</li>
+<li>
+<p><strong>Forward Error Correction</strong> −  If the receiver detects some error in the incoming frame, it executes the <mark class="critic">error-correcting code</mark> that generates the actual frame. This saves the bandwidth required for retransmission. It is inevitable in real-time systems. However, if there are too many errors, the frames need to be retransmitted.</p>
+</li>
+</ol>
+</blockquote>
+</div>
+<h3 id="23-flow-control"><strong>2.3 Flow Control</strong><a class="headerlink" href="#23-flow-control" title="Anchor link to this section for reference">⚓︎</a></h3>
+<div class="admonition note">
+<p>It is about processing the <strong>frame flow</strong> when transmitting. Details about the concepts see in <a href="https://www.geeksforgeeks.org/flow-control-in-data-link-layer/">Flow Control in Data Link Layer</a>. There are basically two type of methods:</p>
+<p><img :=":" _="," alt="picture 12" class="center" src="../pictures/flow_control.png" width="50%" />   </p>
+</div>
+<h2 id="devices-in-data-link"><strong>Devices in Data Link</strong><a class="headerlink" href="#devices-in-data-link" title="Anchor link to this section for reference">⚓︎</a></h2>
+<blockquote>
+<p>Finally, let's check some <strong>devices</strong> used in the <code>Data Link Layer</code>. </p>
+</blockquote>
+<div class="admonition note">
+<details class="example" open="open">
+<summary><code>Network Interface Card (NIC)</code></summary>
+<p><img :=":" _="," alt="picture 13" class="center" src="../pictures/network_card.png" width="60%" />  </p>
+<p>Computer output data, through the <code>Network Interface Card</code> (NIC / Ethernet Card), will become <a href="#11-framing"><code>Ethernet frames</code></a>. <code>Network card</code> will also complete some broadcast link management (CDMA/CD implementation).</p>
+</details>
+<details class="example" open="open">
+<summary><code>Network bridge</code></summary>
+<p>A bridge can be used to:
+- Interconnect two <code>LANs</code> together.
+- Separate network <code>segments</code>, which is a <strong>section of a network</strong> separated by <code>bridges</code>, <code>switches</code>, and <code>routers</code>.</p>
+<p><img :=":" _="," alt="picture 14" class="center" src="../pictures/network_bridge.png" width="60%" />  </p>
+</details>
+<details class="example" open="open">
+<summary><code>Ethernet switches</code></summary>
+<p>Picture first: 👀
+<img :=":" _="," alt="picture 15" class="center" src="../pictures/ethernet%20switches.png" width="60%" />    </p>
+<p>If you have ever traveled to any <strong>computer room</strong> before, you must have seen the sightseeing below:
+<img :=":" _="," alt="picture 16" class="center" src="../pictures/computer_room_hubs.png" width="60%" /></p>
+<p>Roughly, we can use <code>Hub</code>, <code>Switch</code>, and <code>Router</code> for <code>Ethernet switches</code>.
+<img :=":" _="," alt="picture 17" class="center" src="../pictures/hub_switch_router.png" width="80%" />  </p>
+<p>But what is the difference?</p>
+<details class="note" open="open">
+<summary>Hub</summary>
+<p><code>Hub</code> is a type of device that’s commonly used as a connection point for <strong>various devices</strong> in a <code>Local Area Network (LAN)</code>.</p>
+<ul>
+<li>It works by receiving packets that arrive at one of its multiple ports, copying the packets, and sending them to its other ports so that <strong>all</strong> <code>LAN</code> segments <strong>can see</strong> the data.</li>
+</ul>
+</details>
+<details class="note" open="open">
+<summary>Switch (switching hub)</summary>
+<p><code>Switch</code> is a <strong>more efficient</strong>, <strong>more intelligent</strong> version of a <code>hub</code>.</p>
+<ul>
+<li>
+<p>It uses packet switching to receive and forward data to its <strong>intended</strong> destination within a network.</p>
+</li>
+<li>
+<p>Rather than blindly passing along data to all devices in a network as <code>Hub</code>, a switch records and "learn" the addresses of the connected devices.</p>
+</li>
+<li>
+<p>Thus, <code>switch</code> can <strong>isolated</strong> <code>conflict domains</code> (which refers to the <em>range</em> that <strong>only one device</strong> can send information at a time).</p>
+</li>
+</ul>
+</details>
+<details class="note" open="open">
+<summary>Router</summary>
+<p><code>Router</code> is the <strong>most intelligent</strong> and <strong>complex</strong> of the three network connection devices. <code>Router</code> is the device in the <a href="../network/"><code>network layer</code></a>.</p>
+<ul>
+<li>
+<p>Rather than just forwarding data packets to other devices in a single network, routers are designed to forward data packets between <strong>two or more networks</strong>. It also <strong>directs traffic</strong> between those networks.</p>
+</li>
+<li>
+<p><code>Router</code>'s function = <code>Switch</code> + <code>Hub</code> + More.</p>
+</li>
+<li>
+<p>Thus, <code>router</code> can <strong>isolated</strong> <code>broadcast domain</code> (which refers to the <em>range</em> when the site sends out a broadcast signal, <strong>all the devices</strong> can receive the signal).</p>
+</li>
+</ul>
+</details>
+</details>
+</div>
+<blockquote>
+<p>Okay, no more knowledge today! Enough details! Cheers the coffee ☕☕
+<img :=":" _="," alt="coffee2" class="center" src="../pictures/coffee2.gif" width="80%" /> </p>
+</blockquote>
 <h3 id="references"><strong>References</strong><a class="headerlink" href="#references" title="Anchor link to this section for reference">⚓︎</a></h3>
 <p><a href="https://networkencyclopedia.com/logical-link-control-llc-layer/">Picture Resource 1</a></p>
 <p><a href="https://www.javatpoint.com/frame">Picture Resource 2</a></p>
@@ -3792,13 +3928,19 @@
 <p><a href="https://notes.shichao.io/tcpv1/ch3/">Picture Resource 4</a></p>
 <p><a href="https://media.geeksforgeeks.org/wp-content/uploads/Bit_Byte_Stuffing_1.jpg">Picture Resource 5</a></p>
 <p><a href="https://stucknactive.com/2019/03/02/1-12-network-types/">Picture Resource 6</a></p>
+<p><a href="https://media.geeksforgeeks.org/wp-content/uploads/detect15.jpg">Picture Resource 7</a></p>
+<p><a href="https://www.tutorialspoint.com/error-detection-and-correction-in-data-link-layer#:~:text=Data%2Dlink%20layer%20uses%20error,a%20certain%20extent%20of%20accuracy.">Error Detection and Correction in Data link Layer</a></p>
+<p><a href="https://www.geeksforgeeks.org/flow-control-in-data-link-layer/">Picture Resource 8</a></p>
+<p><a href="https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2022/03/Ethernet-Network-Card.jpg">Picture Resource 9</a></p>
+<p><a href="https://ptgmedia.pearsoncmg.com/images/chap5_9780789758194/elementLinks/05fig03_alt.jpg">Picture Resource 10</a></p>
+<p><a href="https://www.antaira.com/The-Difference-Between-a-Hub-Switch-and-Router">THE DIFFERENCE BETWEEN A HUB, SWITCH, &amp; ROUTER</a></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 15, 2022 22:00:50</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 23, 2022 06:13:22</span>
       
         <br>
         Created:

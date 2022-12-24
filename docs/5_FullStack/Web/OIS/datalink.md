@@ -27,9 +27,9 @@ comments: true
     1. [**Framing**](#11-framing). 
     2. [**Addressing**](#12-addressing).
     3. [**Transparent Transmission**](#13-transparent-transmission).
-    4. **Error Detection**.
-    5. **Error Correction**.
-    6. **Flow Control**.
+    4. [**Error Detection**](#21-error-detection)
+    5. [**Error Correction**](#22-error-correction)
+    6. [**Flow Control**](#23-flow-control)
 
 ## **Abstracting**
 
@@ -65,7 +65,9 @@ comments: true
 
     ![picture 1](pictures/data_link_anatomy.png){width="30%", : .center}   
 
-> Let's go to check them one by one! 🛸🛸
+> Let's go to check them one by one! 🛸🛸 Drink some coffee first!
+>![picture 11](pictures/coffee.gif){width="70%", : .center}  
+
 
 ## **1. MAC Sublayer**
 
@@ -87,7 +89,7 @@ comments: true
     1. [**Framing**](#11-framing)
     2. [**Addressing**](#12-addressing)
     3. [**Transparent Transmission**](#13-transparent-transmission)
-    4. **Control physical medium access**
+    4. [**Control physical medium access**](#14-control-physical-medium-access)
 
 
 ### **1.1 Framing**
@@ -205,18 +207,149 @@ comments: true
 
 ### **1.4 Control physical medium access**
 
-No more explanations here; just know it as literal meaning.
+!!! question ""
+    No more explanations here; just know it as literal meaning.
+
 
 ## **2. LLC Sublayer**
 
-### **Functions**
 
-`LLC` sublayer is responsible for:
+### **Functions of LLC Sublayer**
 
-- **Error Detection**
-- **Error Correction**
-- **Flow Control**
+!!! note ""
 
+    `LLC` sublayer is responsible for:
+
+    1. [**Error Detection**](#21-error-detection)
+    2. [**Error Correction**](#22-error-correction)
+    3. [**Flow Control**](#23-flow-control)
+
+
+### **2.1 Error Detection**
+
+!!! success ""
+
+    ???+question "What Error?"
+
+        When data is transmitted, ,`0` can possibly be changed into `1`, which we call it as `bit errors`. It can be caused by:
+        - Noise
+        - Interference
+        - Distortion
+        - Bit synchronization errors
+
+    ???+question "`BER` (Bit Error Rate)"
+
+        `BER` (Bit Error Rate): The percentage of incorrect transmitted bits to the total number of transmitted bits.
+
+        <center>$BER = \frac{Error\;Bits}{Transmitted\;Bits}$</center>
+
+    ???+note "How to detect?"
+
+        `CRC` (Cyclic redundancy check) is the method we use for **error detection**. 
+
+        Below diagram shows the idea of `CRC`:
+        
+        ![picture 10](pictures/CRC.png){width="80%", : .center}  
+
+        > A good link for checking the methods for Error Detection: [Error Detection in Computer Networks](https://www.geeksforgeeks.org/error-detection-in-computer-networks/)
+
+    ???+Danger "Unreliable Transmission Protocols"
+
+        Generally, on the transmission link with **poor communication quality** (`errors` exists), we will add the `acknowledgement` and `retransmission` mechanisms to make sure the correctness of frame data. 
+        
+        Without the two mechanisms we call the protocol an `unreliable transmission protocol`, such as:
+          
+        - PPP (for Point-to-point communication)
+        - CSMA/CD (for Broadcast communication)
+        - UDP (for the third layer, we will mention it later)
+
+
+### **2.2 Error Correction**
+
+!!! note ""
+
+    Just for simple knowing:
+
+    > [Error Correction Techniques](https://www.tutorialspoint.com/error-detection-and-correction-in-data-link-layer#:~:text=Data%2Dlink%20layer%20uses%20error,a%20certain%20extent%20of%20accuracy.):
+
+    > 1. **Backward Error Correction (Retransmission)** −  If the receiver detects an error in the incoming frame, it requests the sender to {==retransmit==} the frame. It is a relatively simple technique. But it can be efficiently used only where retransmitting is not expensive, as in fiber optics and the time for retransmission is low relative to the requirements of the application.
+
+    > 2. **Forward Error Correction** −  If the receiver detects some error in the incoming frame, it executes the {==error-correcting code==} that generates the actual frame. This saves the bandwidth required for retransmission. It is inevitable in real-time systems. However, if there are too many errors, the frames need to be retransmitted.
+
+### **2.3 Flow Control**
+
+!!! note ""
+
+    It is about processing the **frame flow** when transmitting. Details about the concepts see in [Flow Control in Data Link Layer](https://www.geeksforgeeks.org/flow-control-in-data-link-layer/). There are basically two type of methods:
+
+    ![picture 12](pictures/flow_control.png){width="50%", : .center}   
+
+## **Devices in Data Link**
+
+>Finally, let's check some **devices** used in the `Data Link Layer`. 
+
+!!! note ""
+
+    ???+example "`Network Interface Card (NIC)`"
+
+        ![picture 13](pictures/network_card.png){width="60%", : .center}  
+
+        Computer output data, through the `Network Interface Card` (NIC / Ethernet Card), will become [`Ethernet frames`](#11-framing). `Network card` will also complete some broadcast link management (CDMA/CD implementation).
+
+    ???+example "`Network bridge`"
+
+        A bridge can be used to:
+        - Interconnect two `LANs` together.
+        - Separate network `segments`, which is a **section of a network** separated by `bridges`, `switches`, and `routers`.
+
+        ![picture 14](pictures/network_bridge.png){width="60%", : .center}  
+
+
+    ???+example "`Ethernet switches`"
+
+        Picture first: 👀
+        ![picture 15](pictures/ethernet%20switches.png){width="60%", : .center}    
+
+        If you have ever traveled to any **computer room** before, you must have seen the sightseeing below:
+        ![picture 16](pictures/computer_room_hubs.png){width="60%", : .center}
+
+        Roughly, we can use `Hub`, `Switch`, and `Router` for `Ethernet switches`.
+        ![picture 17](pictures/hub_switch_router.png){width="80%", : .center}  
+
+        But what is the difference?
+        
+        ???+note "Hub"
+
+            `Hub` is a type of device that’s commonly used as a connection point for **various devices** in a `Local Area Network (LAN)`.
+
+            - It works by receiving packets that arrive at one of its multiple ports, copying the packets, and sending them to its other ports so that **all** `LAN` segments **can see** the data.
+        
+        ???+note "Switch (switching hub)"
+            
+            `Switch` is a **more efficient**, **more intelligent** version of a `hub`.
+
+            - It uses packet switching to receive and forward data to its **intended** destination within a network.
+
+            - Rather than blindly passing along data to all devices in a network as `Hub`, a switch records and "learn" the addresses of the connected devices.
+
+            - Thus, `switch` can **isolated** `conflict domains` (which refers to the *range* that **only one device** can send information at a time).
+
+        ???+note "Router"
+
+            `Router` is the **most intelligent** and **complex** of the three network connection devices. `Router` is the device in the [`network layer`](./network.md).
+
+            - Rather than just forwarding data packets to other devices in a single network, routers are designed to forward data packets between **two or more networks**. It also **directs traffic** between those networks.
+
+            - `Router`'s function = `Switch` + `Hub` + More.
+
+            - Thus, `router` can **isolated** `broadcast domain` (which refers to the *range* when the site sends out a broadcast signal, **all the devices** can receive the signal).
+
+
+        
+
+
+> Okay, no more knowledge today! Enough details! Cheers the coffee ☕☕
+> ![coffee2](pictures/coffee2.gif){width="80%", : .center} 
 
 ### **References**
 
@@ -231,3 +364,15 @@ No more explanations here; just know it as literal meaning.
 [Picture Resource 5](https://media.geeksforgeeks.org/wp-content/uploads/Bit_Byte_Stuffing_1.jpg)
 
 [Picture Resource 6](https://stucknactive.com/2019/03/02/1-12-network-types/)
+
+[Picture Resource 7](https://media.geeksforgeeks.org/wp-content/uploads/detect15.jpg)
+
+[Error Detection and Correction in Data link Layer](https://www.tutorialspoint.com/error-detection-and-correction-in-data-link-layer#:~:text=Data%2Dlink%20layer%20uses%20error,a%20certain%20extent%20of%20accuracy.)
+
+[Picture Resource 8](https://www.geeksforgeeks.org/flow-control-in-data-link-layer/)
+
+[Picture Resource 9](https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2022/03/Ethernet-Network-Card.jpg)
+
+[Picture Resource 10](https://ptgmedia.pearsoncmg.com/images/chap5_9780789758194/elementLinks/05fig03_alt.jpg)
+
+[THE DIFFERENCE BETWEEN A HUB, SWITCH, & ROUTER](https://www.antaira.com/The-Difference-Between-a-Hub-Switch-and-Router)
