@@ -15,6 +15,7 @@
     1. [Topology Sort](Leetcode/Topology_sort.md)
     2. [Dijkstra](Leetcode/Dijkstra.md)
     3. [Bipartition Check](Leetcode/Bipartition.md)
+    4. [Union-Find](Leetcode/Unionfind.md)
    
 === "Sorting"
 

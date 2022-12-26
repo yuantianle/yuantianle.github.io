@@ -269,6 +269,7 @@ nav:
           - Topology Sort: 4_Algorithms/Typical_Questions/Leetcode/Topology_sort.md
           - Dijkstra: 4_Algorithms/Typical_Questions/Leetcode/Dijkstra.md
           - Bipartition: 4_Algorithms/Typical_Questions/Leetcode/Bipartition.md
+          - Union-Find: 4_Algorithms/Typical_Questions/Leetcode/Unionfind.md
           - Quick Sort: 4_Algorithms/Typical_Questions/Leetcode/Quick_sort.md
         - Hackerrank:
           - STDIN and STDOUT: 4_Algorithms/Typical_Questions/Hackerrank/STDIN&STDOUT.md
