@@ -105,7 +105,7 @@ comments: true
             }
             return n;
         }
-    }
+    };
     ```
 
 ### **References**
