@@ -323,6 +323,10 @@ comments: true
             `Hub` is a type of device that’s commonly used as a connection point for **various devices** in a `Local Area Network (LAN)`.
 
             - It works by receiving packets that arrive at one of its multiple ports, copying the packets, and sending them to its other ports so that **all** `LAN` segments **can see** the data.
+
+            ???+warning "Watch out!"
+
+                `Hub` cannot handle the **transmit collision**. Once the collision happens, the collision will **repeat** and **impact all** the devices it connects to. That's why we should use `Switch.`
         
         ???+note "Switch (switching hub)"
             
@@ -333,6 +337,9 @@ comments: true
             - Rather than blindly passing along data to all devices in a network as `Hub`, a switch records and "learn" the addresses of the connected devices.
 
             - Thus, `switch` can **isolated** `conflict domains` (which refers to the *range* that **only one device** can send information at a time).
+
+            ![picture 18](pictures/switch_details.png){width="100%", : .center}  
+
 
         ???+note "Router"
 
@@ -375,4 +382,7 @@ comments: true
 
 [Picture Resource 10](https://ptgmedia.pearsoncmg.com/images/chap5_9780789758194/elementLinks/05fig03_alt.jpg)
 
+[Networking Fundamentals: OSI 7 - Layer 2 - the data link layer - Part 2](https://www.youtube.com/watch?v=Q_55Lryu9zc&list=PLTk5ZYSbd9Mi_ya5tVFD8NFfU1YZOyml1&index=4)
+
 [THE DIFFERENCE BETWEEN A HUB, SWITCH, & ROUTER](https://www.antaira.com/The-Difference-Between-a-Hub-Switch-and-Router)
+

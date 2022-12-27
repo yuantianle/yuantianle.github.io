@@ -3900,6 +3900,10 @@
 <ul>
 <li>It works by receiving packets that arrive at one of its multiple ports, copying the packets, and sending them to its other ports so that <strong>all</strong> <code>LAN</code> segments <strong>can see</strong> the data.</li>
 </ul>
+<details class="warning" open="open">
+<summary>Watch out!</summary>
+<p><code>Hub</code> cannot handle the <strong>transmit collision</strong>. Once the collision happens, the collision will <strong>repeat</strong> and <strong>impact all</strong> the devices it connects to. That's why we should use <code>Switch.</code></p>
+</details>
 </details>
 <details class="note" open="open">
 <summary>Switch (switching hub)</summary>
@@ -3915,6 +3919,7 @@
 <p>Thus, <code>switch</code> can <strong>isolated</strong> <code>conflict domains</code> (which refers to the <em>range</em> that <strong>only one device</strong> can send information at a time).</p>
 </li>
 </ul>
+<p><img :=":" _="," alt="picture 18" class="center" src="../pictures/switch_details.png" width="100%" />  </p>
 </details>
 <details class="note" open="open">
 <summary>Router</summary>
@@ -3949,6 +3954,7 @@
 <p><a href="https://www.geeksforgeeks.org/flow-control-in-data-link-layer/">Picture Resource 8</a></p>
 <p><a href="https://static1.makeuseofimages.com/wordpress/wp-content/uploads/2022/03/Ethernet-Network-Card.jpg">Picture Resource 9</a></p>
 <p><a href="https://ptgmedia.pearsoncmg.com/images/chap5_9780789758194/elementLinks/05fig03_alt.jpg">Picture Resource 10</a></p>
+<p><a href="https://www.youtube.com/watch?v=Q_55Lryu9zc&amp;list=PLTk5ZYSbd9Mi_ya5tVFD8NFfU1YZOyml1&amp;index=4">Networking Fundamentals: OSI 7 - Layer 2 - the data link layer - Part 2</a></p>
 <p><a href="https://www.antaira.com/The-Difference-Between-a-Hub-Switch-and-Router">THE DIFFERENCE BETWEEN A HUB, SWITCH, &amp; ROUTER</a></p>
 
   <hr>

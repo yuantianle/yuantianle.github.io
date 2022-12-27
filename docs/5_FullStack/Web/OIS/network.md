@@ -3,7 +3,7 @@ comments: true
 ᴴₒᴴₒᴴₒ: ture
 ---
 
-# **:material-network-outline: Layer**
+# **:material-network-outline: Network Layer**
 
 ## ****
 
