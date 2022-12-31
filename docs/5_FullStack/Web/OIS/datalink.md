@@ -3,7 +3,7 @@ comments: true
 ᴴₒᴴₒᴴₒ: ture
 ---
 
-# **:material-bridge: Data Link Layer**
+# **:material-ethernet: Data Link Layer**
 
 ![picture 1](pictures/Data%20Link%20Layer.png){width="80%", : .center} 
 

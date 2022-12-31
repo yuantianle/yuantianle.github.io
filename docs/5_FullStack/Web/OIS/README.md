@@ -14,9 +14,9 @@
 
 1. [:material-expansion-card-variant: Physical Layer](./physical.md).
    
-2. [:material-bridge: Data Link Layer](./datalink.md).
+2. [:material-ethernet: Data Link Layer](./datalink.md).
 
-3. [Network Layer](./network.md).
+3. [:material-ip-network: Network Layer](./network.md).
 
 4. [Transport Layer](./transport.md).
 

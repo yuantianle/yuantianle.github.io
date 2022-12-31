@@ -1,5 +1,4 @@
 [data-md-color-scheme="slate"] {
-    --md-default-bg-color: #232724;/*#e7eef6;*/
     --md-code-fg-color: #c530ee;
     --md-code-hl-name-color: #D5D7E2;
     --md-code-hl-comment-color: #50A64A;
@@ -7,7 +6,7 @@
     --md-code-hl-number-color: #B5CEA8;
 }
 [data-md-color-scheme="default"] {
-    --md-default-bg-color: #f6e9e7;/*#e7eef6;*/
+    --md-default-bg-color: /*#f6e9e7;*/#e7eef6;
     --md-code-fg-color: #c20707;
     --md-code-hl-name-color: #2e3c43;
     --md-code-hl-comment-color: #3e9516;
@@ -15,8 +14,44 @@
     --md-code-hl-number-color: #be8901;
 }
 
-/*For christmas*/
+/*For normal*/
 
+[data-md-color-scheme="default"]{
+    background-image: url("sea.jpg");
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+}
+
+[data-md-color-scheme="slate"]{
+    background-image: url("sunset.jpg");
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-blend-mode: normal;
+}
+
+[data-md-color-scheme="default"] .md-content{
+    background-color: #f9fcffd6;
+}
+
+[data-md-color-scheme="slate"] .md-content{
+    background-color: #0000007c;
+}
+
+[data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__scrollwrap{
+    background-color: #0000007c;
+}
+
+[data-md-color-scheme="default"] .md-sidebar--primary .md-sidebar__scrollwrap{
+    background-color: #ffffff60;
+}
+/*For normal*/
+
+/*For christmas
 [data-md-color-scheme="default"] .md-header{
     background-image: url("xmas13.png");
     background-size:contain;
@@ -62,11 +97,13 @@
 [data-md-color-scheme="slate"] .md-content{
     background-color: #000000a4;
 }
-/*For christmas*/
+For christmas*/
+
+
 
 [data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__scrollwrap{
-    margin-top: -5%;
-    /*margin-left: -10%;
+    /*margin-top: -5%;
+    margin-left: -10%;
     margin-right: 10%;*/
     padding-top: 5%;
     box-shadow: rgba(0, 0, 0, 0.808) 0px 30px 50px;
