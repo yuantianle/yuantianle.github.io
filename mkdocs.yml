@@ -271,6 +271,7 @@ nav:
           - Bipartition: 4_Algorithms/Typical_Questions/Leetcode/Bipartition.md
           - Union-Find: 4_Algorithms/Typical_Questions/Leetcode/Unionfind.md
           - Quick Sort: 4_Algorithms/Typical_Questions/Leetcode/Quick_sort.md
+          - Monotonic Queue: 4_Algorithms/Typical_Questions/Leetcode/Monotonic_queue.md
         - Hackerrank:
           - STDIN and STDOUT: 4_Algorithms/Typical_Questions/Hackerrank/STDIN&STDOUT.md
       - Practic Sheet: 
@@ -308,7 +309,10 @@ nav:
           - HTTP: 5_FullStack/Web/Protocols/HTTP.md
 
 
-    - Math: 6_Math/README.md
+    - Math: 
+      - 6_Math/README.md
+      - Numercial Methods: 6_Math/Numerical/README.md
+
     - Casual Literary: 
       - Dunhuang Wall Painting: 7_Casual_Literary_Notes/Dunhuang.md
     - Guitar Garage: 8_Guitar_Garage/README.md

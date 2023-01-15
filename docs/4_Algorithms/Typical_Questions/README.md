@@ -16,6 +16,11 @@
     2. [Dijkstra](Leetcode/Dijkstra.md)
     3. [Bipartition Check](Leetcode/Bipartition.md)
     4. [Union-Find](Leetcode/Unionfind.md)
+
+=== "Slide Window"
+
+    1.[Monotonic Queue](Leetcode/Monotonic_queue.md)
+    2.[Anagrams]()
    
 === "Sorting"
 

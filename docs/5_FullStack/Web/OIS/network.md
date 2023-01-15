@@ -31,6 +31,20 @@ comments: true
 
     ![picture 1](pictures/networking_intro.png){width="100%", : .center}
 
+## **IP packets**
+
+???+question "`IP packets`?"
+
+    `IP packets` is the data unit used within the **Internet Protocol**. It is similar to `frame` in the [`Layer 2`](./datalink.md). 
+    
+    `Datagram` is an alternative term for "packet".
+
+???+note "Structure"
+
+    There are two types of IP packets for `IPv4` (Internet Protocol version 4) and `IPv6` (Internet Protocol version 6):
+
+    ![picture 5](pictures/ipv4.png)  
+
 
 
 ### **References**
