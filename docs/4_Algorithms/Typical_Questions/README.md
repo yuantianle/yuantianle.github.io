@@ -19,12 +19,13 @@
 
 === "Slide Window"
 
-    1.[Monotonic Queue](Leetcode/Monotonic_queue.md)
-    2.[Anagrams]()
+    1. [Monotonic Queue](Leetcode/Monotonic_queue.md)
+    2. [Anagrams]()
    
 === "Sorting"
 
     1. [Quick Sort](Leetcode/Quick_sort.md)
+    2. [Counting Sort](Leetcode/Counting_sort.md)
    
 
 **II. From <img src="HackerRank_logo.png" alt="bash" width="25" height="25"/> [Hackerrank](https://wwwhackerrank.com/):**

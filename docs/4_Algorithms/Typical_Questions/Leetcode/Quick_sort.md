@@ -85,7 +85,8 @@ comments: true
         //    else cout<<i<<",";
         //}
         quickSort(input,0,input.size()-1);
-        assert(input == {1,3,4,5,6});
+        vector<int> test = {1,3,4,5,6};
+        assert(output == test);
         //cout<<"output:";
         //for(auto i: input)
         //{
