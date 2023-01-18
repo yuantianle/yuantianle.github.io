@@ -251,6 +251,7 @@ nav:
         - C++11:
           - 3_C++/C++NEW/C++11/README.md
           - auto & decltype: 3_C++/C++NEW/C++11/auto.md
+          - Smart pointer: 3_C++/C++NEW/C++11/smart_pointer.md
         - C++14:
           - 3_C++/C++NEW/C++14/README.md
           - CONTENTS: 3_C++/C++NEW/C++14/content.md

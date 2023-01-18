@@ -8,3 +8,5 @@
 
 1. [auto & decltype](auto.md)
 
+2. [Smart pointer](smart_pointer.md)
+

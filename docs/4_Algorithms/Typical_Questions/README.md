@@ -20,7 +20,6 @@
 === "Slide Window"
 
     1. [Monotonic Queue](Leetcode/Monotonic_queue.md)
-    2. [Anagrams]()
    
 === "Sorting"
 
