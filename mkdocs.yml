@@ -317,7 +317,10 @@ nav:
 
     - Casual Literary: 
       - Dunhuang Wall Painting: 7_Casual_Literary_Notes/Dunhuang.md
-    - Guitar Garage: 8_Guitar_Garage/README.md
+    - Japanese Learning: 
+      - 8_Japanese_Learning/README.md
+      - 五十音図: 8_Japanese_Learning/五十音図/README.md
+    - Guitar Garage: 9_Guitar_Garage/README.md
 
 edit_uri: yuantianle.github.io/edit/main/docs/
 
