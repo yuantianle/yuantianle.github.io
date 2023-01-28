@@ -320,7 +320,10 @@ nav:
     - Japanese Learning: 
       - 8_Japanese_Learning/README.md
       - 五十音図: 8_Japanese_Learning/五十音図/README.md
-    - Guitar Garage: 9_Guitar_Garage/README.md
+    - Guitar Garage: 
+      - 9_Guitar_Garage/README.md
+      - 每天多爱你一些: 9_Guitar_Garage/Sheet/每天多爱你一些.md
+      
 
 edit_uri: yuantianle.github.io/edit/main/docs/
 
