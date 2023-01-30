@@ -2899,6 +2899,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#stdout" class="md-nav__link">
+    STDOUT
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3861,6 +3868,7 @@
 <p>Keywords: Standard I/O</p>
 </blockquote>
 <h2 id="situation"><strong>Situation</strong><a class="headerlink" href="#situation" title="Anchor link to this section for reference">⚓︎</a></h2>
+<p>Below is the typical question format:</p>
 <details class="question" open="open">
 <summary>Question type</summary>
 <div class="highlight"><span class="filename">C++</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cmath&gt;</span>
@@ -3879,12 +3887,13 @@
 <h2 id="stdin"><strong>STDIN</strong><a class="headerlink" href="#stdin" title="Anchor link to this section for reference">⚓︎</a></h2>
 <p>The situation of STDIN can be separated into below types:</p>
 <ul>
-<li>Load single line</li>
-<li>Load several lines</li>
+<li><a href="#load-element">Load element</a></li>
+<li><a href="#load-single-line">Load single line</a></li>
+<li><a href="#load-multiple-line">Load several lines</a></li>
 </ul>
-<h3 id="load-single-line"><strong>Load single line</strong><a class="headerlink" href="#load-single-line" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="load-element"><strong>Load element</strong><a class="headerlink" href="#load-element" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="note" open="open">
-<summary>Load single line</summary>
+<summary>Load element</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">cin&gt;&gt;</label><label for="__tabbed_1_2">cin.get</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -3914,15 +3923,23 @@
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a><a href="#__codelineno-2-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a><a href="#__codelineno-2-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="w">    </span><span class="cm">/* Enter your code here. Read input from STDIN. Print output to STDOUT */</span><span class="w"> </span>
 <a id="__codelineno-2-4" name="__codelineno-2-4"></a><a href="#__codelineno-2-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="w">    </span><span class="c1">//WAY1: use &quot;int cin.get()&quot;</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a><a href="#__codelineno-2-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">cin</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><a href="#__codelineno-2-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="w">    </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a><a href="#__codelineno-2-7"><span class="linenos" data-linenos=" 7 "></span></a>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a><a href="#__codelineno-2-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="w">    </span><span class="c1">//WAY2: use &quot;istream&amp; cin.get(char&amp; var)&quot;</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a><a href="#__codelineno-2-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">20</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{};</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a><a href="#__codelineno-2-10"><span class="linenos" data-linenos="10 "></span></a><span class="w">    </span><span class="n">cin</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">);</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a><a href="#__codelineno-2-11"><span class="linenos" data-linenos="11 "></span></a>
-<a id="__codelineno-2-12" name="__codelineno-2-12"></a><a href="#__codelineno-2-12"><span class="linenos" data-linenos="12 "></span></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13"></a><a href="#__codelineno-2-13"><span class="linenos" data-linenos="13 "></span></a><span class="p">}</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><a href="#__codelineno-2-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">cha</span><span class="p">,</span><span class="n">chb</span><span class="p">,</span><span class="n">chc</span><span class="p">;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><a href="#__codelineno-2-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="w">    </span><span class="n">cha</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cin</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><a href="#__codelineno-2-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="w">    </span><span class="n">chb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cin</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><a href="#__codelineno-2-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="w">    </span><span class="n">chc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cin</span><span class="p">.</span><span class="n">get</span><span class="p">();</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><a href="#__codelineno-2-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">cha</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">chb</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot; &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">chc</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><a href="#__codelineno-2-10"><span class="linenos" data-linenos="10 "></span></a><span class="w">    </span><span class="c1">//input: a b c</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><a href="#__codelineno-2-11"><span class="linenos" data-linenos="11 "></span></a><span class="w">    </span><span class="c1">//output: 97(a) 32(space) 98(b)</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><a href="#__codelineno-2-12"><span class="linenos" data-linenos="12 "></span></a>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><a href="#__codelineno-2-13"><span class="linenos" data-linenos="13 "></span></a><span class="w">    </span><span class="c1">//WAY2: use &quot;istream&amp; cin.get(char&amp; var)&quot;</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><a href="#__codelineno-2-14"><span class="linenos" data-linenos="14 "></span></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">a</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{};</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><a href="#__codelineno-2-15"><span class="linenos" data-linenos="15 "></span></a><span class="w">    </span><span class="n">cin</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><a href="#__codelineno-2-16"><span class="linenos" data-linenos="16 "></span></a>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a><a href="#__codelineno-2-17"><span class="linenos" data-linenos="17 "></span></a><span class="w">    </span><span class="c1">//input: a b c</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a><a href="#__codelineno-2-18"><span class="linenos" data-linenos="18 "></span></a><span class="w">    </span><span class="c1">//output: a_b_ (&quot;_&quot; means space)</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a><a href="#__codelineno-2-19"><span class="linenos" data-linenos="19 "></span></a>
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a><a href="#__codelineno-2-20"><span class="linenos" data-linenos="20 "></span></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21"></a><a href="#__codelineno-2-21"><span class="linenos" data-linenos="21 "></span></a><span class="p">}</span>
 </code></pre></div>
 <details class="danger" open="open">
 <summary>Warning!</summary>
@@ -3931,13 +3948,80 @@
 <li>Successful read: return the of the <code>ASCll</code> value character. When an end-of-file character is encountered, return <code>EOF</code> or <code>-1</code>.</li>
 </ul>
 </li>
-<li>The <code>get()</code> function reads characters from the buffer without ignoring the separator.</li>
+<li>The <code>get()</code> function reads characters from the buffer WITHOUT ignoring the separator.</li>
 </ul>
 </details>
 </div>
 </div>
 </div>
 </details>
+<h3 id="load-single-line"><strong>Load single line</strong><a class="headerlink" href="#load-single-line" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="note" open="open">
+<summary>Load single line</summary>
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>```cpp
+<span class="linenos" data-linenos=" 2 "></span>......
+<span class="linenos" data-linenos=" 3 "></span>int main() {
+<span class="linenos" data-linenos=" 4 "></span>    /* Enter your code here. Read input from STDIN. Print output to STDOUT */ 
+<span class="linenos" data-linenos=" 5 "></span>    char a[10] = {};
+<span class="linenos" data-linenos=" 6 "></span>    char b[10] = {};
+<span class="linenos" data-linenos=" 7 "></span>    string line;
+<span class="linenos" data-linenos=" 8 "></span>    cin.getline(a,3);         //read line until: length (including &#39;enter&#39;) == 3
+<span class="linenos" data-linenos=" 9 "></span>    cin.getline(b,5,&#39;\n&#39;);    //indicate end symbol: &#39;\n&#39;
+<span class="linenos" data-linenos="10 "></span>    getline(cin,line);        //read the whole line into string including space.
+<span class="linenos" data-linenos="11 "></span>    cout &lt;&lt; a &lt;&lt; &quot;,&quot; &lt;&lt; b &lt;&lt; &quot;,&quot; &lt;&lt; line; 
+<span class="linenos" data-linenos="12 "></span>
+<span class="linenos" data-linenos="13 "></span>    //input:ak 
+<span class="linenos" data-linenos="14 "></span>    //      ksks
+<span class="linenos" data-linenos="15 "></span>    //      cmas;ckmaslc
+<span class="linenos" data-linenos="16 "></span>    //output: ak,ksks,cmas;ckmaslc
+<span class="linenos" data-linenos="17 "></span>
+<span class="linenos" data-linenos="18 "></span>    return 0;
+<span class="linenos" data-linenos="19 "></span>}
+<span class="linenos" data-linenos="20 "></span>```
+</code></pre></div>
+</details>
+<h3 id="load-multiple-line"><strong>Load multiple line</strong><a class="headerlink" href="#load-multiple-line" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="note" open="open">
+<summary>Load multiple line</summary>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">WAY 1</label><label for="__tabbed_2_2">WAY 2</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">C++</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><a href="#__codelineno-4-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="p">......</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><a href="#__codelineno-4-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><a href="#__codelineno-4-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><a href="#__codelineno-4-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">temp</span><span class="p">;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><a href="#__codelineno-4-5"><span class="linenos" data-linenos=" 5 "></span></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><a href="#__codelineno-4-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="w">    </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">temp</span><span class="p">;</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><a href="#__codelineno-4-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="w">    </span><span class="n">a</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><a href="#__codelineno-4-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">cin</span><span class="p">.</span><span class="n">get</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="sc">&#39;\n&#39;</span><span class="p">)</span><span class="w"> </span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><a href="#__codelineno-4-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><a href="#__codelineno-4-10"><span class="linenos" data-linenos="10 "></span></a><span class="w">        </span><span class="n">cin</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">temp</span><span class="p">;</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><a href="#__codelineno-4-11"><span class="linenos" data-linenos="11 "></span></a><span class="w">        </span><span class="n">a</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">temp</span><span class="p">);</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><a href="#__codelineno-4-12"><span class="linenos" data-linenos="12 "></span></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><a href="#__codelineno-4-13"><span class="linenos" data-linenos="13 "></span></a><span class="w">    </span><span class="c1">//input: 1 2 3</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a><a href="#__codelineno-4-14"><span class="linenos" data-linenos="14 "></span></a><span class="w">    </span><span class="c1">//output: 1 2 3</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15"></a><a href="#__codelineno-4-15"><span class="linenos" data-linenos="15 "></span></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16"></a><a href="#__codelineno-4-16"><span class="linenos" data-linenos="16 "></span></a><span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">C++</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><a href="#__codelineno-5-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="p">......</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><a href="#__codelineno-5-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">a</span><span class="p">;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><a href="#__codelineno-5-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="n">string</span><span class="w"> </span><span class="n">line</span><span class="p">,</span><span class="w"> </span><span class="n">word</span><span class="p">;</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><a href="#__codelineno-5-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><a href="#__codelineno-5-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="w">    </span><span class="n">getline</span><span class="p">(</span><span class="n">cin</span><span class="p">,</span><span class="w"> </span><span class="n">line</span><span class="p">);</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a><a href="#__codelineno-5-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="w">    </span><span class="n">istringstream</span><span class="w"> </span><span class="n">record</span><span class="p">(</span><span class="n">line</span><span class="p">);</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><a href="#__codelineno-5-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="w">    </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">record</span><span class="w"> </span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">word</span><span class="p">)</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><a href="#__codelineno-5-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a><a href="#__codelineno-5-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="w">        </span><span class="n">a</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">atoi</span><span class="p">(</span><span class="n">word</span><span class="p">.</span><span class="n">c_str</span><span class="p">()));</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><a href="#__codelineno-5-10"><span class="linenos" data-linenos="10 "></span></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><a href="#__codelineno-5-11"><span class="linenos" data-linenos="11 "></span></a><span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</details>
+<h2 id="stdout"><strong>STDOUT</strong><a class="headerlink" href="#stdout" title="Anchor link to this section for reference">⚓︎</a></h2>
 <h3 id="references"><strong>References:</strong><a class="headerlink" href="#references" title="Anchor link to this section for reference">⚓︎</a></h3>
 <ul>
 <li><a href="https://learn.microsoft.com/en-us/cpp/cpp/smart-pointers-modern-cpp?view=msvc-170">Smart pointers (Modern C++)</a></li>
@@ -3948,7 +4032,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 4, 2022 05:57:23</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 30, 2023 22:31:20</span>
       
         <br>
         Created:

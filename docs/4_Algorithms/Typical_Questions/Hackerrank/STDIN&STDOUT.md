@@ -31,14 +31,9 @@ Below is the typical question format:
 
 The situation of STDIN can be separated into below types:
     
-- [**STDIN and STDOUT**](#stdin-and-stdout)
-  - [**Situation**](#situation)
-  - [**STDIN**](#stdin)
-    - [**Load element**](#load-element)
-    - [**Load single line**](#load-single-line)
-    - [**Load multiple line**](#load-multiple-line)
-  - [**STDOUT**](#stdout)
-    - [**References:**](#references)
+* [Load element](#load-element)
+* [Load single line](#load-single-line)
+* [Load several lines](#load-multiple-line)
 
 ### **Load element**
 
