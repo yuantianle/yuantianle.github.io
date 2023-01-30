@@ -122,6 +122,7 @@ markdown_extensions:
   - pymdownx.critic
   - attr_list
   - tables
+  - pymdownx.keys
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.tabbed:
