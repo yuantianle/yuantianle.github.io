@@ -58,11 +58,7 @@ comments: true
 
 ???+question "Library?"
 
-    Defined in `<memory>` header file.
-
-    ```cpp title="head.cpp"
-    #include <memory>
-    ```
+    Use `#include <memory>`.
 
 ???+question "Types?"
 
@@ -79,7 +75,7 @@ comments: true
 
     ![picture 1](../pictures/unique_ptr.png){width="60%", : .center} 
 
-    ```cpp title="unique_ptr.cpp"
+    ```cpp title="unique_ptr.cpp" hl_lines="23 27"
     #include <iostream>
     #include <cassert>
     using namespace std;
@@ -105,8 +101,9 @@ comments: true
         unique_ptr<Rectangle> P1(new Rectangle(10, 5));
         assert(P1->area()==50); // This'll print 50
     
-        // unique_ptr<Rectangle> P2(P1);
+        // unique_ptr<Rectangle> P2(P1); -- Illegal
         unique_ptr<Rectangle> P2;
+        // P2 = P1 -- Illegal
         P2 = move(P1);
         assert(P2->area()==50);// This'll print 50
     
@@ -119,11 +116,13 @@ comments: true
 ### **shared_ptr**
 ???+note "shared_ptr"
 
-    By using `shared_ptr` more than one pointer can point to this one object at a time. It’ll maintain a Reference **Counter** using `use_count()` method. 
+    By using `shared_ptr`, more than one pointer can point to this one object at a time. It’ll maintain a Reference **Counter** using `use_count()` method. 
+
+    The object data will be **destroyed** when the last reference has been deleted (i.e. `use_count() == 0`).
 
     ![picture 2](../pictures/shared_ptr.png){width="60%", : .center} 
 
-    ```cpp title="shared_ptr.cpp"  
+    ```cpp title="shared_ptr.cpp" hl_lines="26 30"
     #include <iostream>
     #include <cassert>
     using namespace std;
@@ -172,9 +171,15 @@ comments: true
 ### **weak_ptr**
 ???+note "weak_ptr"
 
-    `weak_ptr` is much more similar to [`shared_ptr`](#shared_ptr) except it’ll NOT maintain a Reference Counter. 
+    `weak_ptr` is much more similar to [`shared_ptr`](#shared_ptr) except it’ll **NOT** maintain a Reference Counter. 
     
-    In this case, a pointer will not have a stronghold on the object. The reason is, if suppose pointers are holding the object and requesting for other objects then they may form a **Deadlock**. 
+    In this case, a pointer will not have a stronghold on the object. The reason is, if suppose pointers are holding the object and requesting for other objects then they may form a **Deadlock**:
+
+    - `shared_ptr1.use_count()` :material-infinity:= `1` <--> `shared_ptr2.use_count()` :material-infinity:= `1`
+
+    - `shared_ptr.use_count()` :material-infinity:= `0` <--> `weak_ptr.use_count()` :material-infinity:= `1`
+
+    - `weak_ptr.use_count()` :material-infinity:= `0` <--> `weak_ptr.use_count()` :material-infinity:= `0`
 
     ![picture 3](../pictures/weak_ptr.png){width="60%", : .center} 
 
