@@ -2,7 +2,7 @@
 ᴴₒᴴₒᴴₒ: ture
 ---
 
-# ** 💻 Full Stack**
+# ** 💻 Full Stack Concepts**
 
 ![full](./full.png){width="80%", : .center}
 
