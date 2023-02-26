@@ -4,8 +4,7 @@
 
 # **:simple-cplusplus: C++ 11/14/17/20**
 
-![picture 1](pictures/.png){width="60%", : .center}   
-![picture 2](pictures/new2.png){width="60%", : .center}     
+![picture 2](pictures/new2.png){width="80%", : .center}     
 
 
 ### **:book: Table of contents**

@@ -150,7 +150,7 @@ markdown_extensions:
 nav:
     - Intro: index.md
 
-    - Computer Graphics: 
+    - CG: 
       - 1_Computer_Graphics/README.md
       - Science: 
         - 1_Computer_Graphics/Science/README.md
@@ -169,7 +169,7 @@ nav:
       - Arts: 
         - 1_Computer_Graphics/Art/README.md
       
-    - Software Engineering: 
+    - SDE: 
       - 2_Software_Engineering/README.md
       
       - CS561 Review: 2_Software_Engineering/Review.md
@@ -238,16 +238,16 @@ nav:
 
     - C++: 
       - 3_C++/README.md
-      - STL:
-        - 3_C++/STL/README.md
-        - unordered_set: 3_C++/STL/unodered_set.md
-      - Inheritance: 
-        - 3_C++/Inheritance/README.md
-        - CONTENTS: 3_C++/Inheritance/Inheritance.md
-      - Template:
-        - 3_C++/Template/README.md
-        - CONTENTS: 3_C++/Template/content.md
-      - C++ 11/14/17/20: 
+      - 八股文目录 (Interview): 3_C++/fast_read.md
+      - Oldschool C++:
+        - 3_C++/C++OLD/README.md
+        - Inheritance: 
+          - 3_C++/C++OLD/Inheritance/README.md
+          - CONTENTS: 3_C++/C++OLD/Inheritance/Inheritance.md
+        - Template:
+          - 3_C++/C++OLD/Template/README.md
+          - CONTENTS: 3_C++/C++OLD/Template/content.md
+      - Modern C++: 
         - 3_C++/C++NEW/README.md
         - C++11:
           - 3_C++/C++NEW/C++11/README.md
@@ -261,7 +261,10 @@ nav:
           - CONTENTS: 3_C++/C++NEW/C++17/content.md
         - C++20:
           - 3_C++/C++NEW/C++20/README.md
-          - CONTENTS: 3_C++/C++NEW/C++20/content.md      
+          - CONTENTS: 3_C++/C++NEW/C++20/content.md     
+      - STL:
+        - 3_C++/STL/README.md
+        - unordered_set: 3_C++/STL/unodered_set.md 
 
     - Algorithm: 
       - 4_Algorithms/README.md
@@ -281,47 +284,51 @@ nav:
         - 4_Algorithms/Practice_Sheet/README.md
 
     - Full Stack: 
-      - 5_FullStack/README.md
-      - Front End: 
-        - 5_FullStack/Frontend/README.md
-        - Mock: 5_FullStack/Frontend/Mock.md
-        - Auth: 5_FullStack/Frontend/Auth.md
-        - URI: 5_FullStack/Frontend/uri.md
-      - APIs: 
-        - 5_FullStack/API/README.md
-        - REST API: 5_FullStack/API/rest_api.md
-      - Back End: 
-        - 5_FullStack/Backend/README.md
-        - Node.js: 5_FullStack/Backend/nodejs.md
-        - Express.js: 5_FullStack/Backend/expressjs.md
-        - Routing: 5_FullStack/Backend/routing.md
-      - Network:
-        - 5_FullStack/Web/README.md
-        - Performance Indices: 5_FullStack/Web/Indices.md
-        - OIS: 
-          - 5_FullStack/Web/OIS/README.md
-          - Physical Layer: 5_FullStack/Web/OIS/physical.md
-          - Data Link Layer: 5_FullStack/Web/OIS/datalink.md
-          - Network Layer: 5_FullStack/Web/OIS/network.md
-          - Transport Layer: 5_FullStack/Web/OIS/transport.md
-          - Session Layer: 5_FullStack/Web/OIS/session.md
-          - Presentaion Layer: 5_FullStack/Web/OIS/presentation.md
-          - Application Layer: 5_FullStack/Web/OIS/application.md
-        - Protocols: 
-          - 5_FullStack/Web/Protocols/README.md
-          - HTTP: 5_FullStack/Web/Protocols/HTTP.md
-
+      - 5_FullStack/README_all.md
+      - Basic knowledge:
+        - 5_FullStack/README_basic.md
+        - Front End: 
+          - 5_FullStack/Frontend/README.md
+          - Mock: 5_FullStack/Frontend/Mock.md
+          - Auth: 5_FullStack/Frontend/Auth.md
+          - URI: 5_FullStack/Frontend/uri.md
+        - APIs: 
+          - 5_FullStack/API/README.md
+          - REST API: 5_FullStack/API/rest_api.md
+        - Back End: 
+          - 5_FullStack/Backend/README.md
+          - Node.js: 5_FullStack/Backend/nodejs.md
+          - Express.js: 5_FullStack/Backend/expressjs.md
+          - Routing: 5_FullStack/Backend/routing.md
+        - Network:
+          - 5_FullStack/Web/README.md
+          - Performance Indices: 5_FullStack/Web/Indices.md
+          - OIS: 
+            - 5_FullStack/Web/OIS/README.md
+            - Physical Layer: 5_FullStack/Web/OIS/physical.md
+            - Data Link Layer: 5_FullStack/Web/OIS/datalink.md
+            - Network Layer: 5_FullStack/Web/OIS/network.md
+            - Transport Layer: 5_FullStack/Web/OIS/transport.md
+            - Session Layer: 5_FullStack/Web/OIS/session.md
+            - Presentaion Layer: 5_FullStack/Web/OIS/presentation.md
+            - Application Layer: 5_FullStack/Web/OIS/application.md
+          - Protocols: 
+            - 5_FullStack/Web/Protocols/README.md
+            - HTTP: 5_FullStack/Web/Protocols/HTTP.md
+      - Programming Language:
+        - 5_FullStack/README_lang.md
+        - Javascript: 5_FullStack/JS/README.md
 
     - Math: 
       - 6_Math/README.md
       - Numercial Methods: 6_Math/Numerical/README.md
 
-    - Casual Literary: 
+    - By-time:
       - Dunhuang Wall Painting: 7_Casual_Literary_Notes/Dunhuang.md
-    - Japanese Learning: 
+    - 日本語: 
       - 8_Japanese_Learning/README.md
       - 五十音図: 8_Japanese_Learning/五十音図/README.md
-    - Guitar Garage: 
+    - Guitar Sheets: 
       - 9_Guitar_Garage/README.md
       - 每天多爱你一些: 9_Guitar_Garage/Sheet/每天多爱你一些.md
       
