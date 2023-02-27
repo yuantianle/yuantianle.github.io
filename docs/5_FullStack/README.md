@@ -4,7 +4,7 @@
 
 # ** 💻 Full Stack**
 
-![picture 1](full_stack.png){width="60%", : .center}     
+![picture 1](./full_stack.png){width="60%", : .center}     
 
 ### **This chapter is split into below sections:**
 
