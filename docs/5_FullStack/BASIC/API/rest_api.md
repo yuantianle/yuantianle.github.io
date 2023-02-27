@@ -80,8 +80,7 @@ Number | Meaning
 
     ???+example "Example: Happy Day!"
 
-        ![](../../2_Software_Engineering/AWS/Application/picture/swagger2.png)
-
+        ![pic1](../../../2_Software_Engineering/AWS/Application/picture/swagger2.png){width="80%", : .center}
 
 
 

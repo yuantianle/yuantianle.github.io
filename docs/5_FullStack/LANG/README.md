@@ -4,7 +4,7 @@
 
 # ** 💻 Full Stack Language**
 
-![picture 1](./full_stack_lang.png){width="60%", : .center}     
+![picture 1](./full_stack_lang.png){width="80%", : .center}     
 
 ### **This chapter is split into below sections:**
 
