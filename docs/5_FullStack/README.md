@@ -8,9 +8,9 @@
 
 ### **This chapter is split into below sections:**
 
-- [Basic knowledge](README_basic.md)
+- [Basic knowledge](BASIC/README.md)
 
-- [Programming language](README_lang.md)
+- [Programming language](LANG/README.md)
 
 ### **References:**
 

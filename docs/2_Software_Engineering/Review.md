@@ -15,13 +15,13 @@ comments: true
 
 3. [Git theory and commands](../2_Software_Engineering/Github/README.md)
    
-4. [REST](../5_FullStack/API/rest_api.md)
+4. [REST](../5_FullStack/BASIC/API/rest_api.md)
    
-5. [Mock](../5_FullStack/Frontend/Mock.md)
+5. [Mock](../5_FullStack/BASIC/Frontend/Mock.md)
    
 6. [Cryptographic](../2_Software_Engineering/Others/crypto.md)
    
-7. [Auth](../5_FullStack/Frontend/Auth.md)
+7. [Auth](../5_FullStack/BASIC/Frontend/Auth.md)
    
 8. [Tests](../2_Software_Engineering/Test/test.md)
 

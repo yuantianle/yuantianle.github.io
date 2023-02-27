@@ -283,41 +283,41 @@ nav:
       - Practic Sheet: 
         - 4_Algorithms/Practice_Sheet/README.md
 
-    - Full Stack: 
+    - Full Stack:
       - 5_FullStack/README.md
       - Basic knowledge:
-        - 5_FullStack/Directory/README_basic.md
+        - 5_FullStack/BASIC/README.md
         - Front End: 
-          - 5_FullStack/Frontend/README.md
-          - Mock: 5_FullStack/Frontend/Mock.md
-          - Auth: 5_FullStack/Frontend/Auth.md
-          - URI: 5_FullStack/Frontend/uri.md
+          - 5_FullStack/BASIC/Frontend/README.md
+          - Mock: 5_FullStack/BASIC/Frontend/Mock.md
+          - Auth: 5_FullStack/BASIC/Frontend/Auth.md
+          - URI: 5_FullStack/BASIC/Frontend/uri.md
         - APIs: 
-          - 5_FullStack/API/README.md
-          - REST API: 5_FullStack/API/rest_api.md
+          - 5_FullStack/BASIC/API/README.md
+          - REST API: 5_FullStack/BASIC/API/rest_api.md
         - Back End: 
-          - 5_FullStack/Backend/README.md
-          - Node.js: 5_FullStack/Backend/nodejs.md
-          - Express.js: 5_FullStack/Backend/expressjs.md
-          - Routing: 5_FullStack/Backend/routing.md
+          - 5_FullStack/BASIC/Backend/README.md
+          - Node.js: 5_FullStack/BASIC/Backend/nodejs.md
+          - Express.js: 5_FullStack/BASIC/Backend/expressjs.md
+          - Routing: 5_FullStack/BASIC/Backend/routing.md
         - Network:
-          - 5_FullStack/Web/README.md
-          - Performance Indices: 5_FullStack/Web/Indices.md
+          - 5_FullStack/BASIC/Web/README.md
+          - Performance Indices: 5_FullStack/BASIC/Web/Indices.md
           - OIS: 
-            - 5_FullStack/Web/OIS/README.md
-            - Physical Layer: 5_FullStack/Web/OIS/physical.md
-            - Data Link Layer: 5_FullStack/Web/OIS/datalink.md
-            - Network Layer: 5_FullStack/Web/OIS/network.md
-            - Transport Layer: 5_FullStack/Web/OIS/transport.md
-            - Session Layer: 5_FullStack/Web/OIS/session.md
-            - Presentaion Layer: 5_FullStack/Web/OIS/presentation.md
-            - Application Layer: 5_FullStack/Web/OIS/application.md
+            - 5_FullStack/BASIC/Web/OIS/README.md
+            - Physical Layer: 5_FullStack/BASIC/Web/OIS/physical.md
+            - Data Link Layer: 5_FullStack/BASIC/Web/OIS/datalink.md
+            - Network Layer: 5_FullStack/BASIC/Web/OIS/network.md
+            - Transport Layer: 5_FullStack/BASIC/Web/OIS/transport.md
+            - Session Layer: 5_FullStack/BASIC/Web/OIS/session.md
+            - Presentaion Layer: 5_FullStack/BASIC/Web/OIS/presentation.md
+            - Application Layer: 5_FullStack/BASIC/Web/OIS/application.md
           - Protocols: 
-            - 5_FullStack/Web/Protocols/README.md
-            - HTTP: 5_FullStack/Web/Protocols/HTTP.md
+            - 5_FullStack/BASIC/Web/Protocols/README.md
+            - HTTP: 5_FullStack/BASIC/Web/Protocols/HTTP.md
       - Programming Language:
-        - 5_FullStack/Directory/README_lang.md
-        - Javascript: 5_FullStack/JS/README.md
+        - 5_FullStack/LANG/README.md
+        - Javascript: 5_FullStack/LANG/JS/README.md
 
     - Math: 
       - 6_Math/README.md
