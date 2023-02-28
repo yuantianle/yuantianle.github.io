@@ -72,6 +72,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#八股文" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -2050,6 +2055,8 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         八股文目录 (Interview)
@@ -2083,6 +2090,8 @@
         
           
         
+          
+        
       
       
         
@@ -2110,13 +2119,27 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../C%2B%2BOLD/ptr_ref/" class="md-nav__link">
+        Pointer & reference
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_3_2" type="checkbox" id="__nav_4_3_2" >
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_3_3" type="checkbox" id="__nav_4_3_3" >
       
       
         
@@ -2133,14 +2156,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../C%2B%2BOLD/Inheritance/">Inheritance</a>
           
-            <label for="__nav_4_3_2">
+            <label for="__nav_4_3_3">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
       <nav class="md-nav" aria-label="Inheritance" data-md-level="3">
-        <label class="md-nav__title" for="__nav_4_3_2">
+        <label class="md-nav__title" for="__nav_4_3_3">
           <span class="md-nav__icon md-icon"></span>
           Inheritance
         </label>
@@ -2180,7 +2203,7 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_3_3" type="checkbox" id="__nav_4_3_3" >
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4_3_4" type="checkbox" id="__nav_4_3_4" >
       
       
         
@@ -2197,14 +2220,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../C%2B%2BOLD/Template/">Template</a>
           
-            <label for="__nav_4_3_3">
+            <label for="__nav_4_3_4">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
       <nav class="md-nav" aria-label="Template" data-md-level="3">
-        <label class="md-nav__title" for="__nav_4_3_3">
+        <label class="md-nav__title" for="__nav_4_3_4">
           <span class="md-nav__icon md-icon"></span>
           Template
         </label>
@@ -3977,7 +4000,7 @@
   
     <div class="md-source-date" style="text-align: right; font-weight: bold;">
       <small>
-          Author: <span class='git-page-authors git-authors'></span>
+          Author: <span class='git-page-authors git-authors'><a href='mailto:not.committed.yet'>Not Committed Yet</a></span>
       </small>
     </div>
   
@@ -3989,7 +4012,18 @@
 
 
 
-
+<h1 id="八股文"><strong>八股文</strong><a class="headerlink" href="#八股文" title="Anchor link to this section for reference">⚓︎</a></h1>
+<blockquote>
+<p>Here is the component that used for C++ interview:</p>
+</blockquote>
+<ol>
+<li>
+<p><a href="../C%2B%2BNEW/C%2B%2B11/smart_pointer/">Smart Pointer</a></p>
+</li>
+<li>
+<p><a href="../C%2B%2BOLD/ptr_ref/">Pointer &amp; Reference</a> </p>
+</li>
+</ol>
 
   <hr>
 <div class="md-source-file">
@@ -4009,6 +4043,55 @@
 
 
 
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+    <script src="https://giscus.app/client.js"
+        data-repo="yuantianle/yuantianle.github.io"
+        data-repo-id="R_kgDOITXaGg"
+        data-category-id="DIC_kwDOITXaGs4CSWJD"
+        =""
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    </script>
+
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
 
                 
 

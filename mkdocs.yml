@@ -241,6 +241,7 @@ nav:
       - 八股文目录 (Interview): 3_C++/fast_read.md
       - Oldschool C++:
         - 3_C++/C++OLD/README.md
+        - Pointer & reference: 3_C++/C++OLD/ptr_ref.md
         - Inheritance: 
           - 3_C++/C++OLD/Inheritance/README.md
           - CONTENTS: 3_C++/C++OLD/Inheritance/Inheritance.md
@@ -264,7 +265,7 @@ nav:
           - CONTENTS: 3_C++/C++NEW/C++20/content.md     
       - STL:
         - 3_C++/STL/README.md
-        - unordered_set: 3_C++/STL/unodered_set.md 
+        - unordered_set: 3_C++/STL/unodered_set.md
 
     - Algorithm: 
       - 4_Algorithms/README.md
