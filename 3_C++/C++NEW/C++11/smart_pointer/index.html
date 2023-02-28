@@ -2080,6 +2080,8 @@
         
           
         
+          
+        
       
       
         
@@ -2107,13 +2109,27 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../../../C%2B%2BOLD/ptr_ref/" class="md-nav__link">
+        Pointer & reference
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_2" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3" >
       
       
         
@@ -2130,14 +2146,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../../C%2B%2BOLD/Inheritance/">Inheritance</a>
           
-            <label for="__nav_4_3_2">
+            <label for="__nav_4_3_3">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_2_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_4_3_2">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_3_3">
           <span class="md-nav__icon md-icon"></span>
           Inheritance
         </label>
@@ -2177,7 +2193,7 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3_4" >
       
       
         
@@ -2194,14 +2210,14 @@
         <div class="md-nav__link md-nav__link--index ">
           <a href="../../../C%2B%2BOLD/Template/">Template</a>
           
-            <label for="__nav_4_3_3">
+            <label for="__nav_4_3_4">
               <span class="md-nav__icon md-icon"></span>
             </label>
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_3_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_4_3_3">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_4_3_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_3_4">
           <span class="md-nav__icon md-icon"></span>
           Template
         </label>
@@ -2412,8 +2428,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#glance" class="md-nav__link">
-    Glance
+  <a href="#compare-with-pointer" class="md-nav__link">
+    Compare with pointer
   </a>
   
 </li>
@@ -4065,19 +4081,22 @@
 <p><code>Smart pointer</code> were first popularized during the first half of the 1990s. However, it has been refined by <code>C++ 11</code>. Let's learn this modern C++ feature!</p>
 <h2 id="benifits"><strong>Benifits</strong><a class="headerlink" href="#benifits" title="Anchor link to this section for reference">⚓︎</a></h2>
 <details class="success" open="open">
-<summary>Benifits</summary>
-<p>Prevent memory leak. It provides <strong>Garbage Collection Mechanisms</strong>.</p>
+<summary>Advantages</summary>
+<ol>
+<li><u>Prevent memory leak</u>. It provides <strong>Garbage Collection Mechanisms</strong> when we forget to release the mm space.</li>
+<li><u>Smart pointer is a class</u>. When the class is out of scope, the class automatically calls the destructor, which automatically frees the resource.</li>
+</ol>
 </details>
 <h2 id="theory"><strong>Theory</strong><a class="headerlink" href="#theory" title="Anchor link to this section for reference">⚓︎</a></h2>
 <details class="note">
 <summary>How? (click to unfold)</summary>
-<p>A <code>smart pointer</code> is a class template that you declare on the <strong>stack</strong>, and initialize by using a <strong>raw pointer</strong> that points to its heap-allocated object. </p>
+<p>A <code>smart pointer</code> is a <strong>class template</strong> that you declare on the <strong>stack</strong>, and initialize by using a <strong>raw pointer</strong> that points to its heap-allocated object. </p>
 <p>After the <code>smart pointer</code> is initialized, it owns the <strong>raw pointer</strong>. This means that the smart pointer is responsible for <strong>deleting</strong> the memory that the raw pointer specifies.</p>
 <p>The <code>smart pointer</code> destructor <u><strong>contains</strong> the call to delete, and because the smart pointer is declared on the stack, its destructor is invoked when the smart pointer goes out of scope, even if an exception is thrown somewhere further up the stack.</u></p>
 </details>
-<h2 id="glance"><strong>Glance</strong><a class="headerlink" href="#glance" title="Anchor link to this section for reference">⚓︎</a></h2>
+<h2 id="compare-with-pointer"><strong>Compare with pointer</strong><a class="headerlink" href="#compare-with-pointer" title="Anchor link to this section for reference">⚓︎</a></h2>
 <details class="question" open="open">
-<summary>Pseudo Comparison</summary>
+<summary>Comparison</summary>
 <div class="highlight"><span class="filename">comparison.cpp</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="kt">void</span><span class="w"> </span><span class="nf">UseRawPointer</span><span class="p">()</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a><a href="#__codelineno-0-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="p">{</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a><a href="#__codelineno-0-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="w">    </span><span class="c1">// Using a raw pointer -- not recommended.</span>
@@ -4108,63 +4127,40 @@
 <p>Use <code>#include &lt;memory&gt;</code>.</p>
 </details>
 <details class="question" open="open">
+<summary>API?</summary>
+<div class="highlight"><span class="filename">apis.cpp</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="c1">// T is the template parameter</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><a href="#__codelineno-1-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="n">T</span><span class="o">*</span><span class="w"> </span><span class="nf">get</span><span class="p">();</span><span class="w">                      </span><span class="c1">// Get the auto_ptr&#39;s native pointer encapsulated inside.</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><a href="#__codelineno-1-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">*</span><span class="p">();</span><span class="w">                </span><span class="c1">// &quot;operator x ()&quot; overloads x</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><a href="#__codelineno-1-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="n">T</span><span class="o">*</span><span class="w"> </span><span class="k">operator</span><span class="o">-&gt;</span><span class="p">();</span><span class="w">               </span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><a href="#__codelineno-1-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="n">T</span><span class="o">&amp;</span><span class="w"> </span><span class="n">val</span><span class="p">);</span><span class="w">    </span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><a href="#__codelineno-1-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="n">T</span><span class="o">*</span><span class="w"> </span><span class="nf">release</span><span class="p">();</span><span class="w">                  </span><span class="c1">// Set auto_ptr&#39;s inside pointer to nullptr,</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><a href="#__codelineno-1-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="w">                               </span><span class="c1">//which will not effect resource it pointed</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><a href="#__codelineno-1-8"><span class="linenos" data-linenos=" 8 "></span></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><a href="#__codelineno-1-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="kt">void</span><span class="w"> </span><span class="nf">reset</span><span class="w"> </span><span class="p">(</span><span class="n">T</span><span class="o">*</span><span class="w"> </span><span class="n">ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">nullptr</span><span class="p">);</span><span class="w"> </span><span class="c1">// Directly free the memory pointed to by the </span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><a href="#__codelineno-1-10"><span class="linenos" data-linenos="10 "></span></a><span class="w">                               </span><span class="c1">//encapsulated internal pointer, default set nullptr</span>
+</code></pre></div>
+</details>
+<details class="question" open="open">
 <summary>Types?</summary>
+<p>C++11 has already discarded original C++98 smart pointer <code>auto_ptr</code> introducing authority.</p>
 <p>There are three types of <code>smart pointers</code>:</p>
 <ol>
-<li><a href="#unique_ptr">unique_ptr</a></li>
-<li><a href="#shared_ptr">shared_ptr</a></li>
-<li><a href="#weak_ptr">weak_ptr</a></li>
+<li><a href="#unique_ptr">unique_ptr</a> (substitude <code>auto_ptr</code>)</li>
+<li><a href="#shared_ptr">shared_ptr</a> (strong ref)</li>
+<li><a href="#weak_ptr">weak_ptr</a> (weak ref)</li>
 </ol>
 </details>
 <h3 id="unique_ptr"><strong>unique_ptr</strong><a class="headerlink" href="#unique_ptr" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="note" open="open">
 <summary>unique_ptr</summary>
-<p><code>unique_ptr</code> stores <strong>one pointer only</strong>. We can assign a different object by removing the current object from the pointer. Notice the code below. First, the unique_pointer is pointing to <code>P1</code>. But, then we remove <code>P1</code> and assign <code>P2</code> so the pointer now points to <code>P2</code>.</p>
+<p><code>unique_ptr</code> stores <strong>one pointer only</strong>. Only one smart pointer can point to the object at a time.</p>
+<ul>
+<li>To change the object resource control, we remove the current <code>unique_ptr</code> <code>P1</code> and assign a new <code>unique_ptr</code> <code>P2</code> so the pointer now points to <code>P2</code>.</li>
+</ul>
 <p><img :=":" _="," alt="picture 1" class="center" src="../../pictures/unique_ptr.png" width="60%" /> </p>
-<div class="highlight"><span class="filename">unique_ptr.cpp</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><a href="#__codelineno-1-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cassert&gt;</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><a href="#__codelineno-1-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><a href="#__codelineno-1-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;memory&gt;</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><a href="#__codelineno-1-5"><span class="linenos" data-linenos=" 5 "></span></a>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><a href="#__codelineno-1-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="k">class</span><span class="w"> </span><span class="nc">Rectangle</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><a href="#__codelineno-1-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">length</span><span class="p">;</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a><a href="#__codelineno-1-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">breadth</span><span class="p">;</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a><a href="#__codelineno-1-9"><span class="linenos" data-linenos=" 9 "></span></a>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a><a href="#__codelineno-1-10"><span class="linenos" data-linenos="10 "></span></a><span class="k">public</span><span class="o">:</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a><a href="#__codelineno-1-11"><span class="linenos" data-linenos="11 "></span></a><span class="w">    </span><span class="n">Rectangle</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">){</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a><a href="#__codelineno-1-12"><span class="linenos" data-linenos="12 "></span></a><span class="w">        </span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l</span><span class="p">;</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a><a href="#__codelineno-1-13"><span class="linenos" data-linenos="13 "></span></a><span class="w">        </span><span class="n">breadth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a><a href="#__codelineno-1-14"><span class="linenos" data-linenos="14 "></span></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a><a href="#__codelineno-1-15"><span class="linenos" data-linenos="15 "></span></a>
-<a id="__codelineno-1-16" name="__codelineno-1-16"></a><a href="#__codelineno-1-16"><span class="linenos" data-linenos="16 "></span></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">area</span><span class="p">(){</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17"></a><a href="#__codelineno-1-17"><span class="linenos" data-linenos="17 "></span></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">breadth</span><span class="p">;</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18"></a><a href="#__codelineno-1-18"><span class="linenos" data-linenos="18 "></span></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19"></a><a href="#__codelineno-1-19"><span class="linenos" data-linenos="19 "></span></a><span class="p">};</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20"></a><a href="#__codelineno-1-20"><span class="linenos" data-linenos="20 "></span></a>
-<a id="__codelineno-1-21" name="__codelineno-1-21"></a><a href="#__codelineno-1-21"><span class="linenos" data-linenos="21 "></span></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
-<a id="__codelineno-1-22" name="__codelineno-1-22"></a><a href="#__codelineno-1-22"><span class="linenos" data-linenos="22 "></span></a>
-<a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="hll"><a href="#__codelineno-1-23"><span class="linenos" data-linenos="23 "></span></a><span class="w">    </span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Rectangle</span><span class="o">&gt;</span><span class="w"> </span><span class="n">P1</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Rectangle</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">));</span>
-</span><a id="__codelineno-1-24" name="__codelineno-1-24"></a><a href="#__codelineno-1-24"><span class="linenos" data-linenos="24 "></span></a><span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">P1</span><span class="o">-&gt;</span><span class="n">area</span><span class="p">()</span><span class="o">==</span><span class="mi">50</span><span class="p">);</span><span class="w"> </span><span class="c1">// This&#39;ll print 50</span>
-<a id="__codelineno-1-25" name="__codelineno-1-25"></a><a href="#__codelineno-1-25"><span class="linenos" data-linenos="25 "></span></a>
-<a id="__codelineno-1-26" name="__codelineno-1-26"></a><a href="#__codelineno-1-26"><span class="linenos" data-linenos="26 "></span></a><span class="w">    </span><span class="c1">// unique_ptr&lt;Rectangle&gt; P2(P1); -- Illegal</span>
-<a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="hll"><a href="#__codelineno-1-27"><span class="linenos" data-linenos="27 "></span></a><span class="w">    </span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Rectangle</span><span class="o">&gt;</span><span class="w"> </span><span class="n">P2</span><span class="p">;</span>
-</span><a id="__codelineno-1-28" name="__codelineno-1-28"></a><a href="#__codelineno-1-28"><span class="linenos" data-linenos="28 "></span></a><span class="w">    </span><span class="c1">// P2 = P1 -- Illegal</span>
-<a id="__codelineno-1-29" name="__codelineno-1-29"></a><a href="#__codelineno-1-29"><span class="linenos" data-linenos="29 "></span></a><span class="w">    </span><span class="n">P2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">move</span><span class="p">(</span><span class="n">P1</span><span class="p">);</span>
-<a id="__codelineno-1-30" name="__codelineno-1-30"></a><a href="#__codelineno-1-30"><span class="linenos" data-linenos="30 "></span></a><span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">P2</span><span class="o">-&gt;</span><span class="n">area</span><span class="p">()</span><span class="o">==</span><span class="mi">50</span><span class="p">);</span><span class="c1">// This&#39;ll print 50</span>
-<a id="__codelineno-1-31" name="__codelineno-1-31"></a><a href="#__codelineno-1-31"><span class="linenos" data-linenos="31 "></span></a>
-<a id="__codelineno-1-32" name="__codelineno-1-32"></a><a href="#__codelineno-1-32"><span class="linenos" data-linenos="32 "></span></a><span class="w">    </span><span class="c1">// This&#39;ll give an error,</span>
-<a id="__codelineno-1-33" name="__codelineno-1-33"></a><a href="#__codelineno-1-33"><span class="linenos" data-linenos="33 "></span></a><span class="w">    </span><span class="c1">//assert(P1-&gt;area()==50);</span>
-<a id="__codelineno-1-34" name="__codelineno-1-34"></a><a href="#__codelineno-1-34"><span class="linenos" data-linenos="34 "></span></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-1-35" name="__codelineno-1-35"></a><a href="#__codelineno-1-35"><span class="linenos" data-linenos="35 "></span></a><span class="p">}</span>
-</code></pre></div>
-</details>
-<h3 id="shared_ptr"><strong>shared_ptr</strong><a class="headerlink" href="#shared_ptr" title="Anchor link to this section for reference">⚓︎</a></h3>
-<details class="note" open="open">
-<summary>shared_ptr</summary>
-<p>By using <code>shared_ptr</code>, more than one pointer can point to this one object at a time. It’ll maintain a Reference <strong>Counter</strong> using <code>use_count()</code> method. </p>
-<p>The object data will be <strong>destroyed</strong> when the last reference has been deleted (i.e. <code>use_count() == 0</code>).</p>
-<p><img :=":" _="," alt="picture 2" class="center" src="../../pictures/shared_ptr.png" width="60%" /> </p>
-<div class="highlight"><span class="filename">shared_ptr.cpp</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><a href="#__codelineno-2-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<details class="success">
+<summary>Demo code</summary>
+<div class="highlight"><span class="filename">unique_ptr.cpp</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><a href="#__codelineno-2-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a><a href="#__codelineno-2-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cassert&gt;</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a><a href="#__codelineno-2-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4"></a><a href="#__codelineno-2-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;memory&gt;</span>
@@ -4174,55 +4170,109 @@
 <a id="__codelineno-2-8" name="__codelineno-2-8"></a><a href="#__codelineno-2-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">breadth</span><span class="p">;</span>
 <a id="__codelineno-2-9" name="__codelineno-2-9"></a><a href="#__codelineno-2-9"><span class="linenos" data-linenos=" 9 "></span></a>
 <a id="__codelineno-2-10" name="__codelineno-2-10"></a><a href="#__codelineno-2-10"><span class="linenos" data-linenos="10 "></span></a><span class="k">public</span><span class="o">:</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a><a href="#__codelineno-2-11"><span class="linenos" data-linenos="11 "></span></a><span class="w">    </span><span class="n">Rectangle</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12"></a><a href="#__codelineno-2-12"><span class="linenos" data-linenos="12 "></span></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13"></a><a href="#__codelineno-2-13"><span class="linenos" data-linenos="13 "></span></a><span class="w">        </span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l</span><span class="p">;</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14"></a><a href="#__codelineno-2-14"><span class="linenos" data-linenos="14 "></span></a><span class="w">        </span><span class="n">breadth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15"></a><a href="#__codelineno-2-15"><span class="linenos" data-linenos="15 "></span></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16"></a><a href="#__codelineno-2-16"><span class="linenos" data-linenos="16 "></span></a>
-<a id="__codelineno-2-17" name="__codelineno-2-17"></a><a href="#__codelineno-2-17"><span class="linenos" data-linenos="17 "></span></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">area</span><span class="p">()</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18"></a><a href="#__codelineno-2-18"><span class="linenos" data-linenos="18 "></span></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19"></a><a href="#__codelineno-2-19"><span class="linenos" data-linenos="19 "></span></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">breadth</span><span class="p">;</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20"></a><a href="#__codelineno-2-20"><span class="linenos" data-linenos="20 "></span></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-2-21" name="__codelineno-2-21"></a><a href="#__codelineno-2-21"><span class="linenos" data-linenos="21 "></span></a><span class="p">};</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><a href="#__codelineno-2-11"><span class="linenos" data-linenos="11 "></span></a><span class="w">    </span><span class="n">Rectangle</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">){</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><a href="#__codelineno-2-12"><span class="linenos" data-linenos="12 "></span></a><span class="w">        </span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l</span><span class="p">;</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><a href="#__codelineno-2-13"><span class="linenos" data-linenos="13 "></span></a><span class="w">        </span><span class="n">breadth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><a href="#__codelineno-2-14"><span class="linenos" data-linenos="14 "></span></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><a href="#__codelineno-2-15"><span class="linenos" data-linenos="15 "></span></a>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><a href="#__codelineno-2-16"><span class="linenos" data-linenos="16 "></span></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">area</span><span class="p">(){</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a><a href="#__codelineno-2-17"><span class="linenos" data-linenos="17 "></span></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">breadth</span><span class="p">;</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a><a href="#__codelineno-2-18"><span class="linenos" data-linenos="18 "></span></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a><a href="#__codelineno-2-19"><span class="linenos" data-linenos="19 "></span></a><span class="p">};</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a><a href="#__codelineno-2-20"><span class="linenos" data-linenos="20 "></span></a>
+<a id="__codelineno-2-21" name="__codelineno-2-21"></a><a href="#__codelineno-2-21"><span class="linenos" data-linenos="21 "></span></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(){</span>
 <a id="__codelineno-2-22" name="__codelineno-2-22"></a><a href="#__codelineno-2-22"><span class="linenos" data-linenos="22 "></span></a>
-<a id="__codelineno-2-23" name="__codelineno-2-23"></a><a href="#__codelineno-2-23"><span class="linenos" data-linenos="23 "></span></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
-<a id="__codelineno-2-24" name="__codelineno-2-24"></a><a href="#__codelineno-2-24"><span class="linenos" data-linenos="24 "></span></a><span class="p">{</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="hll"><a href="#__codelineno-2-23"><span class="linenos" data-linenos="23 "></span></a><span class="w">    </span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Rectangle</span><span class="o">&gt;</span><span class="w"> </span><span class="n">P1</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Rectangle</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">));</span>
+</span><a id="__codelineno-2-24" name="__codelineno-2-24"></a><a href="#__codelineno-2-24"><span class="linenos" data-linenos="24 "></span></a><span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">P1</span><span class="o">-&gt;</span><span class="n">area</span><span class="p">()</span><span class="o">==</span><span class="mi">50</span><span class="p">);</span><span class="w"> </span><span class="c1">// This&#39;ll print 50</span>
 <a id="__codelineno-2-25" name="__codelineno-2-25"></a><a href="#__codelineno-2-25"><span class="linenos" data-linenos="25 "></span></a>
-<a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="hll"><a href="#__codelineno-2-26"><span class="linenos" data-linenos="26 "></span></a><span class="w">    </span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Rectangle</span><span class="o">&gt;</span><span class="w"> </span><span class="n">P1</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Rectangle</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">));</span>
-</span><a id="__codelineno-2-27" name="__codelineno-2-27"></a><a href="#__codelineno-2-27"><span class="linenos" data-linenos="27 "></span></a><span class="w">    </span><span class="c1">// This&#39;ll print 50</span>
-<a id="__codelineno-2-28" name="__codelineno-2-28"></a><a href="#__codelineno-2-28"><span class="linenos" data-linenos="28 "></span></a><span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">P1</span><span class="o">-&gt;</span><span class="n">area</span><span class="p">()</span><span class="o">==</span><span class="mi">50</span><span class="p">);</span>
-<a id="__codelineno-2-29" name="__codelineno-2-29"></a><a href="#__codelineno-2-29"><span class="linenos" data-linenos="29 "></span></a>
-<a id="__codelineno-2-30" name="__codelineno-2-30"></a><span class="hll"><a href="#__codelineno-2-30"><span class="linenos" data-linenos="30 "></span></a><span class="w">    </span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Rectangle</span><span class="o">&gt;</span><span class="w"> </span><span class="n">P2</span><span class="p">;</span>
-</span><a id="__codelineno-2-31" name="__codelineno-2-31"></a><a href="#__codelineno-2-31"><span class="linenos" data-linenos="31 "></span></a><span class="w">    </span><span class="n">P2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">P1</span><span class="p">;</span>
-<a id="__codelineno-2-32" name="__codelineno-2-32"></a><a href="#__codelineno-2-32"><span class="linenos" data-linenos="32 "></span></a>
-<a id="__codelineno-2-33" name="__codelineno-2-33"></a><a href="#__codelineno-2-33"><span class="linenos" data-linenos="33 "></span></a><span class="w">    </span><span class="c1">// This&#39;ll print 50</span>
-<a id="__codelineno-2-34" name="__codelineno-2-34"></a><a href="#__codelineno-2-34"><span class="linenos" data-linenos="34 "></span></a><span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">P2</span><span class="o">-&gt;</span><span class="n">area</span><span class="p">()</span><span class="o">==</span><span class="mi">50</span><span class="p">);</span>
-<a id="__codelineno-2-35" name="__codelineno-2-35"></a><a href="#__codelineno-2-35"><span class="linenos" data-linenos="35 "></span></a>
-<a id="__codelineno-2-36" name="__codelineno-2-36"></a><a href="#__codelineno-2-36"><span class="linenos" data-linenos="36 "></span></a><span class="w">    </span><span class="c1">// This&#39;ll now not give an error,</span>
-<a id="__codelineno-2-37" name="__codelineno-2-37"></a><a href="#__codelineno-2-37"><span class="linenos" data-linenos="37 "></span></a><span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">P1</span><span class="o">-&gt;</span><span class="n">area</span><span class="p">()</span><span class="o">==</span><span class="mi">50</span><span class="p">);</span>
-<a id="__codelineno-2-38" name="__codelineno-2-38"></a><a href="#__codelineno-2-38"><span class="linenos" data-linenos="38 "></span></a>
-<a id="__codelineno-2-39" name="__codelineno-2-39"></a><a href="#__codelineno-2-39"><span class="linenos" data-linenos="39 "></span></a><span class="w">    </span><span class="c1">// This&#39;ll also print 50 now</span>
-<a id="__codelineno-2-40" name="__codelineno-2-40"></a><a href="#__codelineno-2-40"><span class="linenos" data-linenos="40 "></span></a><span class="w">    </span><span class="c1">// This&#39;ll print 2 as Reference Counter is 2</span>
-<a id="__codelineno-2-41" name="__codelineno-2-41"></a><a href="#__codelineno-2-41"><span class="linenos" data-linenos="41 "></span></a><span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">P1</span><span class="p">.</span><span class="n">use_count</span><span class="p">()</span><span class="o">==</span><span class="mi">2</span><span class="p">);</span>
-<a id="__codelineno-2-42" name="__codelineno-2-42"></a><a href="#__codelineno-2-42"><span class="linenos" data-linenos="42 "></span></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-2-43" name="__codelineno-2-43"></a><a href="#__codelineno-2-43"><span class="linenos" data-linenos="43 "></span></a><span class="p">}</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26"></a><a href="#__codelineno-2-26"><span class="linenos" data-linenos="26 "></span></a><span class="w">    </span><span class="c1">// unique_ptr&lt;Rectangle&gt; P2(P1); -- Illegal</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="hll"><a href="#__codelineno-2-27"><span class="linenos" data-linenos="27 "></span></a><span class="w">    </span><span class="n">unique_ptr</span><span class="o">&lt;</span><span class="n">Rectangle</span><span class="o">&gt;</span><span class="w"> </span><span class="n">P2</span><span class="p">;</span>
+</span><a id="__codelineno-2-28" name="__codelineno-2-28"></a><a href="#__codelineno-2-28"><span class="linenos" data-linenos="28 "></span></a><span class="w">    </span><span class="c1">// P2 = P1 -- Illegal</span>
+<a id="__codelineno-2-29" name="__codelineno-2-29"></a><a href="#__codelineno-2-29"><span class="linenos" data-linenos="29 "></span></a><span class="w">    </span><span class="n">P2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">move</span><span class="p">(</span><span class="n">P1</span><span class="p">);</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30"></a><a href="#__codelineno-2-30"><span class="linenos" data-linenos="30 "></span></a><span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">P2</span><span class="o">-&gt;</span><span class="n">area</span><span class="p">()</span><span class="o">==</span><span class="mi">50</span><span class="p">);</span><span class="c1">// This&#39;ll print 50</span>
+<a id="__codelineno-2-31" name="__codelineno-2-31"></a><a href="#__codelineno-2-31"><span class="linenos" data-linenos="31 "></span></a>
+<a id="__codelineno-2-32" name="__codelineno-2-32"></a><a href="#__codelineno-2-32"><span class="linenos" data-linenos="32 "></span></a><span class="w">    </span><span class="c1">// This&#39;ll give an error,</span>
+<a id="__codelineno-2-33" name="__codelineno-2-33"></a><a href="#__codelineno-2-33"><span class="linenos" data-linenos="33 "></span></a><span class="w">    </span><span class="c1">//assert(P1-&gt;area()==50);</span>
+<a id="__codelineno-2-34" name="__codelineno-2-34"></a><a href="#__codelineno-2-34"><span class="linenos" data-linenos="34 "></span></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-2-35" name="__codelineno-2-35"></a><a href="#__codelineno-2-35"><span class="linenos" data-linenos="35 "></span></a><span class="p">}</span>
 </code></pre></div>
+</details>
+</details>
+<h3 id="shared_ptr"><strong>shared_ptr</strong><a class="headerlink" href="#shared_ptr" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="note" open="open">
+<summary>shared_ptr</summary>
+<p>By using <code>shared_ptr</code>, more than one pointer can point to this one object at a time. </p>
+<ul>
+<li>
+<p>We can use the member function <code>use_count()</code> to check "referencer" number of object resources pointed by the pointer itself.</p>
+</li>
+<li>
+<p><code>shared_ptr</code> can call function <code>release()</code> to give up ownership of resource. The object resource counter will be minus one.</p>
+</li>
+<li>
+<p>The object resources will be <strong>destroyed</strong> when the last reference has been deleted (i.e. <code>Ptr.use_count() == 0</code>).</p>
+</li>
+</ul>
+<p><img :=":" _="," alt="picture 2" class="center" src="../../pictures/shared_ptr.png" width="60%" /> </p>
+<details class="success">
+<summary>Demo code</summary>
+<div class="highlight"><span class="filename">shared_ptr.cpp</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><a href="#__codelineno-3-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><a href="#__codelineno-3-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cassert&gt;</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><a href="#__codelineno-3-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><a href="#__codelineno-3-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;memory&gt;</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><a href="#__codelineno-3-5"><span class="linenos" data-linenos=" 5 "></span></a>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><a href="#__codelineno-3-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="k">class</span><span class="w"> </span><span class="nc">Rectangle</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><a href="#__codelineno-3-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">length</span><span class="p">;</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><a href="#__codelineno-3-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">breadth</span><span class="p">;</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><a href="#__codelineno-3-9"><span class="linenos" data-linenos=" 9 "></span></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><a href="#__codelineno-3-10"><span class="linenos" data-linenos="10 "></span></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><a href="#__codelineno-3-11"><span class="linenos" data-linenos="11 "></span></a><span class="w">    </span><span class="n">Rectangle</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">l</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><a href="#__codelineno-3-12"><span class="linenos" data-linenos="12 "></span></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><a href="#__codelineno-3-13"><span class="linenos" data-linenos="13 "></span></a><span class="w">        </span><span class="n">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">l</span><span class="p">;</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a><a href="#__codelineno-3-14"><span class="linenos" data-linenos="14 "></span></a><span class="w">        </span><span class="n">breadth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a><a href="#__codelineno-3-15"><span class="linenos" data-linenos="15 "></span></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a><a href="#__codelineno-3-16"><span class="linenos" data-linenos="16 "></span></a>
+<a id="__codelineno-3-17" name="__codelineno-3-17"></a><a href="#__codelineno-3-17"><span class="linenos" data-linenos="17 "></span></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">area</span><span class="p">()</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18"></a><a href="#__codelineno-3-18"><span class="linenos" data-linenos="18 "></span></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19"></a><a href="#__codelineno-3-19"><span class="linenos" data-linenos="19 "></span></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">length</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">breadth</span><span class="p">;</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20"></a><a href="#__codelineno-3-20"><span class="linenos" data-linenos="20 "></span></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21"></a><a href="#__codelineno-3-21"><span class="linenos" data-linenos="21 "></span></a><span class="p">};</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22"></a><a href="#__codelineno-3-22"><span class="linenos" data-linenos="22 "></span></a>
+<a id="__codelineno-3-23" name="__codelineno-3-23"></a><a href="#__codelineno-3-23"><span class="linenos" data-linenos="23 "></span></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24"></a><a href="#__codelineno-3-24"><span class="linenos" data-linenos="24 "></span></a><span class="p">{</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25"></a><a href="#__codelineno-3-25"><span class="linenos" data-linenos="25 "></span></a>
+<a id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="hll"><a href="#__codelineno-3-26"><span class="linenos" data-linenos="26 "></span></a><span class="w">    </span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Rectangle</span><span class="o">&gt;</span><span class="w"> </span><span class="n">P1</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Rectangle</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">));</span>
+</span><a id="__codelineno-3-27" name="__codelineno-3-27"></a><a href="#__codelineno-3-27"><span class="linenos" data-linenos="27 "></span></a><span class="w">    </span><span class="c1">// This&#39;ll print 50</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28"></a><a href="#__codelineno-3-28"><span class="linenos" data-linenos="28 "></span></a><span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">P1</span><span class="o">-&gt;</span><span class="n">area</span><span class="p">()</span><span class="o">==</span><span class="mi">50</span><span class="p">);</span>
+<a id="__codelineno-3-29" name="__codelineno-3-29"></a><a href="#__codelineno-3-29"><span class="linenos" data-linenos="29 "></span></a>
+<a id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="hll"><a href="#__codelineno-3-30"><span class="linenos" data-linenos="30 "></span></a><span class="w">    </span><span class="n">shared_ptr</span><span class="o">&lt;</span><span class="n">Rectangle</span><span class="o">&gt;</span><span class="w"> </span><span class="n">P2</span><span class="p">;</span>
+</span><a id="__codelineno-3-31" name="__codelineno-3-31"></a><a href="#__codelineno-3-31"><span class="linenos" data-linenos="31 "></span></a><span class="w">    </span><span class="n">P2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">P1</span><span class="p">;</span>
+<a id="__codelineno-3-32" name="__codelineno-3-32"></a><a href="#__codelineno-3-32"><span class="linenos" data-linenos="32 "></span></a>
+<a id="__codelineno-3-33" name="__codelineno-3-33"></a><a href="#__codelineno-3-33"><span class="linenos" data-linenos="33 "></span></a><span class="w">    </span><span class="c1">// This&#39;ll print 50</span>
+<a id="__codelineno-3-34" name="__codelineno-3-34"></a><a href="#__codelineno-3-34"><span class="linenos" data-linenos="34 "></span></a><span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">P2</span><span class="o">-&gt;</span><span class="n">area</span><span class="p">()</span><span class="o">==</span><span class="mi">50</span><span class="p">);</span>
+<a id="__codelineno-3-35" name="__codelineno-3-35"></a><a href="#__codelineno-3-35"><span class="linenos" data-linenos="35 "></span></a>
+<a id="__codelineno-3-36" name="__codelineno-3-36"></a><a href="#__codelineno-3-36"><span class="linenos" data-linenos="36 "></span></a><span class="w">    </span><span class="c1">// This&#39;ll now not give an error,</span>
+<a id="__codelineno-3-37" name="__codelineno-3-37"></a><a href="#__codelineno-3-37"><span class="linenos" data-linenos="37 "></span></a><span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">P1</span><span class="o">-&gt;</span><span class="n">area</span><span class="p">()</span><span class="o">==</span><span class="mi">50</span><span class="p">);</span>
+<a id="__codelineno-3-38" name="__codelineno-3-38"></a><a href="#__codelineno-3-38"><span class="linenos" data-linenos="38 "></span></a>
+<a id="__codelineno-3-39" name="__codelineno-3-39"></a><a href="#__codelineno-3-39"><span class="linenos" data-linenos="39 "></span></a><span class="w">    </span><span class="c1">// This&#39;ll also print 50 now</span>
+<a id="__codelineno-3-40" name="__codelineno-3-40"></a><a href="#__codelineno-3-40"><span class="linenos" data-linenos="40 "></span></a><span class="w">    </span><span class="c1">// This&#39;ll print 2 as Reference Counter is 2</span>
+<a id="__codelineno-3-41" name="__codelineno-3-41"></a><a href="#__codelineno-3-41"><span class="linenos" data-linenos="41 "></span></a><span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">P1</span><span class="p">.</span><span class="n">use_count</span><span class="p">()</span><span class="o">==</span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-3-42" name="__codelineno-3-42"></a><a href="#__codelineno-3-42"><span class="linenos" data-linenos="42 "></span></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-3-43" name="__codelineno-3-43"></a><a href="#__codelineno-3-43"><span class="linenos" data-linenos="43 "></span></a><span class="p">}</span>
+</code></pre></div>
+</details>
 </details>
 <h3 id="weak_ptr"><strong>weak_ptr</strong><a class="headerlink" href="#weak_ptr" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="note" open="open">
 <summary>weak_ptr</summary>
-<p><code>weak_ptr</code> is much more similar to <a href="#shared_ptr"><code>shared_ptr</code></a> except it’ll <strong>NOT</strong> maintain a Reference Counter. </p>
-<p>In this case, a pointer will not have a stronghold on the object. The reason is, if suppose pointers are holding the object and requesting for other objects then they may form a <strong>Deadlock</strong>:</p>
+<p><code>weak_ptr</code> does not control the life cycle of an object.</p>
 <ul>
-<li>
-<p><code>shared_ptr1.use_count()</code> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.6 6.62C21.58 6.62 24 9 24 12c0 2.96-2.42 5.37-5.4 5.37-1.45 0-2.8-.56-3.82-1.57L12 13.34l-2.83 2.51c-.97.97-2.33 1.53-3.77 1.53C2.42 17.38 0 14.96 0 12s2.42-5.38 5.4-5.38c1.44 0 2.8.56 3.82 1.58L12 10.66l2.83-2.51c.97-.97 2.33-1.53 3.77-1.53M7.8 14.39 10.5 12 7.84 9.65c-.68-.68-1.53-1.03-2.44-1.03C3.53 8.62 2 10.13 2 12c0 1.87 1.53 3.38 3.4 3.38.91 0 1.76-.35 2.4-.99m8.4-4.78L13.5 12l2.66 2.35c.68.68 1.54 1.03 2.44 1.03 1.87 0 3.4-1.51 3.4-3.38 0-1.87-1.53-3.38-3.4-3.38-.91 0-1.76.35-2.4.99Z"/></svg></span>= <code>1</code> &harr; <code>shared_ptr2.use_count()</code> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.6 6.62C21.58 6.62 24 9 24 12c0 2.96-2.42 5.37-5.4 5.37-1.45 0-2.8-.56-3.82-1.57L12 13.34l-2.83 2.51c-.97.97-2.33 1.53-3.77 1.53C2.42 17.38 0 14.96 0 12s2.42-5.38 5.4-5.38c1.44 0 2.8.56 3.82 1.58L12 10.66l2.83-2.51c.97-.97 2.33-1.53 3.77-1.53M7.8 14.39 10.5 12 7.84 9.65c-.68-.68-1.53-1.03-2.44-1.03C3.53 8.62 2 10.13 2 12c0 1.87 1.53 3.38 3.4 3.38.91 0 1.76-.35 2.4-.99m8.4-4.78L13.5 12l2.66 2.35c.68.68 1.54 1.03 2.44 1.03 1.87 0 3.4-1.51 3.4-3.38 0-1.87-1.53-3.38-3.4-3.38-.91 0-1.76.35-2.4.99Z"/></svg></span>= <code>1</code></p>
-</li>
-<li>
-<p><code>shared_ptr.use_count()</code> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.6 6.62C21.58 6.62 24 9 24 12c0 2.96-2.42 5.37-5.4 5.37-1.45 0-2.8-.56-3.82-1.57L12 13.34l-2.83 2.51c-.97.97-2.33 1.53-3.77 1.53C2.42 17.38 0 14.96 0 12s2.42-5.38 5.4-5.38c1.44 0 2.8.56 3.82 1.58L12 10.66l2.83-2.51c.97-.97 2.33-1.53 3.77-1.53M7.8 14.39 10.5 12 7.84 9.65c-.68-.68-1.53-1.03-2.44-1.03C3.53 8.62 2 10.13 2 12c0 1.87 1.53 3.38 3.4 3.38.91 0 1.76-.35 2.4-.99m8.4-4.78L13.5 12l2.66 2.35c.68.68 1.54 1.03 2.44 1.03 1.87 0 3.4-1.51 3.4-3.38 0-1.87-1.53-3.38-3.4-3.38-.91 0-1.76.35-2.4.99Z"/></svg></span>= <code>0</code> &harr; <code>weak_ptr.use_count()</code> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.6 6.62C21.58 6.62 24 9 24 12c0 2.96-2.42 5.37-5.4 5.37-1.45 0-2.8-.56-3.82-1.57L12 13.34l-2.83 2.51c-.97.97-2.33 1.53-3.77 1.53C2.42 17.38 0 14.96 0 12s2.42-5.38 5.4-5.38c1.44 0 2.8.56 3.82 1.58L12 10.66l2.83-2.51c.97-.97 2.33-1.53 3.77-1.53M7.8 14.39 10.5 12 7.84 9.65c-.68-.68-1.53-1.03-2.44-1.03C3.53 8.62 2 10.13 2 12c0 1.87 1.53 3.38 3.4 3.38.91 0 1.76-.35 2.4-.99m8.4-4.78L13.5 12l2.66 2.35c.68.68 1.54 1.03 2.44 1.03 1.87 0 3.4-1.51 3.4-3.38 0-1.87-1.53-3.38-3.4-3.38-.91 0-1.76.35-2.4.99Z"/></svg></span>= <code>1</code></p>
-</li>
-<li>
-<p><code>weak_ptr.use_count()</code> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.6 6.62C21.58 6.62 24 9 24 12c0 2.96-2.42 5.37-5.4 5.37-1.45 0-2.8-.56-3.82-1.57L12 13.34l-2.83 2.51c-.97.97-2.33 1.53-3.77 1.53C2.42 17.38 0 14.96 0 12s2.42-5.38 5.4-5.38c1.44 0 2.8.56 3.82 1.58L12 10.66l2.83-2.51c.97-.97 2.33-1.53 3.77-1.53M7.8 14.39 10.5 12 7.84 9.65c-.68-.68-1.53-1.03-2.44-1.03C3.53 8.62 2 10.13 2 12c0 1.87 1.53 3.38 3.4 3.38.91 0 1.76-.35 2.4-.99m8.4-4.78L13.5 12l2.66 2.35c.68.68 1.54 1.03 2.44 1.03 1.87 0 3.4-1.51 3.4-3.38 0-1.87-1.53-3.38-3.4-3.38-.91 0-1.76.35-2.4.99Z"/></svg></span>= <code>0</code> &harr; <code>weak_ptr.use_count()</code> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.6 6.62C21.58 6.62 24 9 24 12c0 2.96-2.42 5.37-5.4 5.37-1.45 0-2.8-.56-3.82-1.57L12 13.34l-2.83 2.51c-.97.97-2.33 1.53-3.77 1.53C2.42 17.38 0 14.96 0 12s2.42-5.38 5.4-5.38c1.44 0 2.8.56 3.82 1.58L12 10.66l2.83-2.51c.97-.97 2.33-1.53 3.77-1.53M7.8 14.39 10.5 12 7.84 9.65c-.68-.68-1.53-1.03-2.44-1.03C3.53 8.62 2 10.13 2 12c0 1.87 1.53 3.38 3.4 3.38.91 0 1.76-.35 2.4-.99m8.4-4.78L13.5 12l2.66 2.35c.68.68 1.54 1.03 2.44 1.03 1.87 0 3.4-1.51 3.4-3.38 0-1.87-1.53-3.38-3.4-3.38-.91 0-1.76.35-2.4.99Z"/></svg></span>= <code>0</code></p>
+<li>It points to an object managed by <a href="#shared_ptr"><code>shared_ptr</code></a>.</li>
+<li>It <strong>NOT</strong> maintains a Reference Counter (<code>use_count()</code>). </li>
+<li><code>weak_ptr</code> do not stronghold on the object. It is designed to assist <code>shared_ptr</code> to avoid <strong>Deadlock</strong> (when two <code>shared_ptr</code> refer each other):<ul>
+<li>BAD: <code>shared_ptr1.use_count()</code> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.6 6.62C21.58 6.62 24 9 24 12c0 2.96-2.42 5.37-5.4 5.37-1.45 0-2.8-.56-3.82-1.57L12 13.34l-2.83 2.51c-.97.97-2.33 1.53-3.77 1.53C2.42 17.38 0 14.96 0 12s2.42-5.38 5.4-5.38c1.44 0 2.8.56 3.82 1.58L12 10.66l2.83-2.51c.97-.97 2.33-1.53 3.77-1.53M7.8 14.39 10.5 12 7.84 9.65c-.68-.68-1.53-1.03-2.44-1.03C3.53 8.62 2 10.13 2 12c0 1.87 1.53 3.38 3.4 3.38.91 0 1.76-.35 2.4-.99m8.4-4.78L13.5 12l2.66 2.35c.68.68 1.54 1.03 2.44 1.03 1.87 0 3.4-1.51 3.4-3.38 0-1.87-1.53-3.38-3.4-3.38-.91 0-1.76.35-2.4.99Z"/></svg></span>= <code>1</code> &harr; <code>shared_ptr2.use_count()</code> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.6 6.62C21.58 6.62 24 9 24 12c0 2.96-2.42 5.37-5.4 5.37-1.45 0-2.8-.56-3.82-1.57L12 13.34l-2.83 2.51c-.97.97-2.33 1.53-3.77 1.53C2.42 17.38 0 14.96 0 12s2.42-5.38 5.4-5.38c1.44 0 2.8.56 3.82 1.58L12 10.66l2.83-2.51c.97-.97 2.33-1.53 3.77-1.53M7.8 14.39 10.5 12 7.84 9.65c-.68-.68-1.53-1.03-2.44-1.03C3.53 8.62 2 10.13 2 12c0 1.87 1.53 3.38 3.4 3.38.91 0 1.76-.35 2.4-.99m8.4-4.78L13.5 12l2.66 2.35c.68.68 1.54 1.03 2.44 1.03 1.87 0 3.4-1.51 3.4-3.38 0-1.87-1.53-3.38-3.4-3.38-.91 0-1.76.35-2.4.99Z"/></svg></span>= <code>1</code></li>
+<li>GOOD: <code>shared_ptr.use_count()</code> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.6 6.62C21.58 6.62 24 9 24 12c0 2.96-2.42 5.37-5.4 5.37-1.45 0-2.8-.56-3.82-1.57L12 13.34l-2.83 2.51c-.97.97-2.33 1.53-3.77 1.53C2.42 17.38 0 14.96 0 12s2.42-5.38 5.4-5.38c1.44 0 2.8.56 3.82 1.58L12 10.66l2.83-2.51c.97-.97 2.33-1.53 3.77-1.53M7.8 14.39 10.5 12 7.84 9.65c-.68-.68-1.53-1.03-2.44-1.03C3.53 8.62 2 10.13 2 12c0 1.87 1.53 3.38 3.4 3.38.91 0 1.76-.35 2.4-.99m8.4-4.78L13.5 12l2.66 2.35c.68.68 1.54 1.03 2.44 1.03 1.87 0 3.4-1.51 3.4-3.38 0-1.87-1.53-3.38-3.4-3.38-.91 0-1.76.35-2.4.99Z"/></svg></span>= <code>0</code> &harr; <code>weak_ptr</code></li>
+</ul>
 </li>
 </ul>
 <p><img :=":" _="," alt="picture 3" class="center" src="../../pictures/weak_ptr.png" width="60%" /> </p>
@@ -4242,7 +4292,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">February 24, 2023 06:18:29</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">February 28, 2023 04:07:20</span>
       
         <br>
         Created:
