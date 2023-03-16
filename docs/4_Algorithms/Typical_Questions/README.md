@@ -10,12 +10,16 @@
 
 **I. From <img src="LeetCode_logo_black.png" alt="bash" width="25" height="25"/> [Leetcode](https:/leetcode.com/):**
 
-=== "Graphics"
+=== "Matrix"
 
     1. [Topology Sort](Leetcode/Topology_sort.md)
-    2. [Dijkstra](Leetcode/Dijkstra.md)
-    3. [Bipartition Check](Leetcode/Bipartition.md)
-    4. [Union-Find](Leetcode/Unionfind.md)
+    2. [Backtracking](Leetcode/Backtracking.md) 
+
+=== "Graphics"
+
+    1. [Dijkstra](Leetcode/Dijkstra.md)
+    2. [Bipartition Check](Leetcode/Bipartition.md)
+    3. [Union-Find](Leetcode/Unionfind.md)    
 
 === "Slide Window"
 

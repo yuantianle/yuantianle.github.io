@@ -279,6 +279,7 @@ nav:
           - Quick Sort: 4_Algorithms/Typical_Questions/Leetcode/Quick_sort.md
           - Counting Sort: 4_Algorithms/Typical_Questions/Leetcode/Counting_sort.md
           - Monotonic Queue: 4_Algorithms/Typical_Questions/Leetcode/Monotonic_queue.md
+          - Backtracking: 4_Algorithms/Typical_Questions/Leetcode/Backtracking.md
         - Hackerrank:
           - STDIN and STDOUT: 4_Algorithms/Typical_Questions/Hackerrank/STDIN&STDOUT.md
       - Practic Sheet: 
