@@ -4119,14 +4119,10 @@
 <ul>
 <li><a href="#create-table"><code>CREATE TABLE</code></a> - creates a new table</li>
 <li><a href="#insert-into"><code>INSERT INTO</code></a> - inserts new data into a database</li>
-<li>
-<p><a href="#select"><code>SELECT</code></a> - extracts data from a database</p>
-</li>
-<li>
-<p>UPDATE - updates data in a database</p>
-</li>
-<li>DELETE - deletes data from a database</li>
-<li>ALTER TABLE - modifies a table</li>
+<li><a href="#select"><code>SELECT</code></a> - extracts data from a database</li>
+<li><a href="#where"><code>WHERE</code></a> - filter records</li>
+<li><a href="#update"><code>UPDATE</code></a> - edit data in a database</li>
+<li><a href="#delete"><code>DELETE</code></a> - deletes data from a database</li>
 <li><a href="#drop-table"><code>DROP TABLE</code></a> - deletes a table</li>
 </ul>
 <h3 id="create-table"><strong>Create Table</strong><a class="headerlink" href="#create-table" title="Anchor link to this section for reference">⚓︎</a></h3>
@@ -4257,13 +4253,118 @@ SELECT PersonID, City FROM Marks_family;      <br />
 </div>   </p>
 </details>
 </details>
+<h3 id="where"><strong>Where</strong><a class="headerlink" href="#where" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="note">
+<summary>Where</summary>
+<p>The <code>WHERE</code> clause is used to filter records. It is used in statements: <code>SELECT</code>, <code>UPDATE</code>, <code>DELETE</code>, etc.</p>
+<details class="success" open="open">
+<summary>Syntax</summary>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><a href="#__codelineno-4-1"><span class="linenos" data-linenos="1 "></span></a><span class="k">SELECT</span><span class="w"> </span><span class="n">column1</span><span class="p">,</span><span class="w"> </span><span class="n">column2</span><span class="p">,</span><span class="w"> </span><span class="p">...</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><a href="#__codelineno-4-2"><span class="linenos" data-linenos="2 "></span></a><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><a href="#__codelineno-4-3"><span class="linenos" data-linenos="3 "></span></a><span class="k">WHERE</span><span class="w"> </span><span class="n">condition</span><span class="p">;</span>
+</code></pre></div>
+</details>
+<details class="example">
+<summary>click to see an example</summary>
+<p><div data-pym-src='https://www.jdoodle.com/plugin' data-language="sql"
+  data-version-index="0">
+CREATE TABLE Marks_family (
+    PersonID int,
+    LastName varchar(255), --hold characters
+    FirstName varchar(255),
+    Address varchar(255),
+    City varchar(255)
+);
+INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
+VALUES (123, 'Tom', 'A', 'OR', 'Albany');
+INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
+VALUES (124, 'Kim', 'B', 'TX', 'Salem');
+INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
+VALUES (125, 'Yong', 'C', 'NC', 'Euguene');
+ 
+SELECT * FROM Marks_family
+WHERE City='Albany';
+</div>   </p>
+</details>
+</details>
+<h3 id="update"><strong>Update</strong><a class="headerlink" href="#update" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="note">
+<summary>Update</summary>
+<p>The <code>UPDATE</code> statement is used to <strong>modify</strong> the existing records in a table.</p>
+<details class="success" open="open">
+<summary>Syntax</summary>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><a href="#__codelineno-5-1"><span class="linenos" data-linenos="1 "></span></a><span class="k">UPDATE</span><span class="w"> </span><span class="k">table_name</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><a href="#__codelineno-5-2"><span class="linenos" data-linenos="2 "></span></a><span class="k">SET</span><span class="w"> </span><span class="n">column1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value1</span><span class="p">,</span><span class="w"> </span><span class="n">column2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value2</span><span class="p">,</span><span class="w"> </span><span class="p">...</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><a href="#__codelineno-5-3"><span class="linenos" data-linenos="3 "></span></a><span class="k">WHERE</span><span class="w"> </span><span class="n">condition</span><span class="p">;</span><span class="w"> </span><span class="c1">-- if omit this line, all records in the table will be updated</span>
+</code></pre></div>
+</details>
+<details class="example">
+<summary>click to see an example</summary>
+<p><div data-pym-src='https://www.jdoodle.com/plugin' data-language="sql"
+  data-version-index="0">
+CREATE TABLE Marks_family (
+    PersonID int,
+    LastName varchar(255), --hold characters
+    FirstName varchar(255),
+    Address varchar(255),
+    City varchar(255)
+);
+INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
+VALUES (123, 'Tom', 'A', 'OR', 'Albany');
+INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
+VALUES (124, 'Kim', 'B', 'TX', 'Salem');
+INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
+VALUES (125, 'Yong', 'C', 'NC', 'Euguene');
+ 
+UPDATE Marks_family
+SET LastName = 'Changed', FirstName = 'Haha'
+WHERE PersonID ='123';
+-- Out put and check
+SELECT * FROM Marks_family;
+</div>   </p>
+</details>
+</details>
+<h3 id="delete"><strong>Delete</strong><a class="headerlink" href="#delete" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="note">
+<summary>Delete</summary>
+<p>The <code>DELETE</code> statement is used to <strong>delete</strong> existing records in a table.</p>
+<details class="success" open="open">
+<summary>Syntax</summary>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><a href="#__codelineno-6-1"><span class="linenos" data-linenos="1 "></span></a><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="w"> </span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><a href="#__codelineno-6-2"><span class="linenos" data-linenos="2 "></span></a><span class="k">WHERE</span><span class="w"> </span><span class="n">condition</span><span class="p">;</span><span class="w">  </span><span class="c1">-- if omit this line, all records in the table will be deleted</span>
+</code></pre></div>
+</details>
+<details class="example">
+<summary>click to see an example</summary>
+<p><div data-pym-src='https://www.jdoodle.com/plugin' data-language="sql"
+  data-version-index="0">
+CREATE TABLE Marks_family (
+    PersonID int,
+    LastName varchar(255), --hold characters
+    FirstName varchar(255),
+    Address varchar(255),
+    City varchar(255)
+);
+INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
+VALUES (123, 'Tom', 'A', 'OR', 'Albany');
+INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
+VALUES (124, 'Kim', 'B', 'TX', 'Salem');
+INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
+VALUES (125, 'Yong', 'C', 'NC', 'Euguene');
+ 
+DELETE FROM Marks_family WHERE PersonID = '124';
+-- Out put and check
+SELECT * FROM Marks_family;
+</div>   </p>
+</details>
+</details>
 <h3 id="drop-table"><strong>Drop Table</strong><a class="headerlink" href="#drop-table" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="note">
 <summary>Drop Table</summary>
 <p>The <code>DROP TABLE</code> statement is used to <strong>drop an existing table</strong> in a database.</p>
 <details class="success" open="open">
 <summary>Syntax</summary>
-<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><a href="#__codelineno-4-1"><span class="linenos" data-linenos="1 "></span></a><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">table_name</span><span class="p">;</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><a href="#__codelineno-7-1"><span class="linenos" data-linenos="1 "></span></a><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">table_name</span><span class="p">;</span>
 </code></pre></div>
 </details>
 <details class="example">
@@ -4297,7 +4398,7 @@ DROP TABLE Marks_family;
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 21, 2023 00:28:52</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 21, 2023 07:01:11</span>
       
         <br>
         Created:
