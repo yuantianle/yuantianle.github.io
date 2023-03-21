@@ -320,6 +320,10 @@ nav:
       - Programming Language:
         - 5_FullStack/LANG/README.md
         - Javascript: 5_FullStack/LANG/JS/README.md
+        - SQL: 
+          - 5_FullStack/LANG/SQL/README.md
+          - Basic Management: 5_FullStack/LANG/SQL/basic.md
+          - Higher-level Management: 5_FullStack/LANG/SQL/higher.md
 
     - Math: 
       - 6_Math/README.md
