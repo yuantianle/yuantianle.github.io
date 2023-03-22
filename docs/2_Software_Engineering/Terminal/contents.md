@@ -35,17 +35,21 @@ comments: true
 
 ???note "`cd`"
 
-    (default) Go back to `root` directory
+    (default) Go back to the `root` home directory of the **current user**.
 
     ![picture 4](pictures/cd1.png){width="80%", : .center}  
 
 
 ???note "`cd ~`"
 
-    Go to the `root` directory
+    Go to the `root` home directory of **the current user**.
 
     ![picture 5](pictures/cd2.png){width="80%", : .center}  
 
+???note "`cd /`"
+
+    Takes you back to the root directory of the **current drive**.
+    ![picture 6-](pictures/cd_slash.png){width="80%", : .center}
 
 ???note "`cd .`"
 
