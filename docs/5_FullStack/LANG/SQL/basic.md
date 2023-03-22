@@ -16,6 +16,9 @@ To better review `SQL` management pipeline, I sort the famouse "verbs" in the se
 - [`DELETE`](#delete) - deletes data from a database
 - [`DROP TABLE`](#drop-table) - deletes a table
 
+There are some structural operators that are used to complete SQL sentences:
+
+- [``]
 
 ### **Create Table**
 

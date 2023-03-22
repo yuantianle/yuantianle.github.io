@@ -323,6 +323,7 @@ nav:
         - SQL: 
           - 5_FullStack/LANG/SQL/README.md
           - Basic Management: 5_FullStack/LANG/SQL/basic.md
+          - Structural Operators: 5_FullStack/LANG/SQL/particle.md
           - Higher-level Management: 5_FullStack/LANG/SQL/higher.md
 
     - Math: 

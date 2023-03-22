@@ -7,6 +7,7 @@
 ### **This chapter is split into below sections:**
 
 - [Basic Management](./basic.md)
+- [Structural Operators](./particle.md)
 - [Higher level Management](./higher.md)
 
 ### **References:**

@@ -9,6 +9,7 @@
 ### **This chapter is split into below sections:**
 
 - [Javascript](JS/README.md)
+- [SQL](SQL/README.md)
 
 ### **References:**
 
