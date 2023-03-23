@@ -325,6 +325,7 @@ nav:
           - Basic Management: 5_FullStack/LANG/SQL/basic.md
           - Structural Operators: 5_FullStack/LANG/SQL/particle.md
           - Higher-level Management: 5_FullStack/LANG/SQL/higher.md
+          - Multiple Table Operation: 5_FullStack/LANG/SQL/multi_table.md
 
     - Math: 
       - 6_Math/README.md

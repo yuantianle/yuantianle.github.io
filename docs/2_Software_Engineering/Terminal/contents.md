@@ -55,7 +55,7 @@ comments: true
 
     Go to the `present working` directory.  
 
-    ![picture 6](pictures/cd3.png){width="80%", : .center}    
+    ![picture 6](pictures/cd3.png){width="80%", : .center}  
 
 ???note "`cd ..`"
 

@@ -10,6 +10,11 @@ Here are some higher-level uses:
 
 - [`SELECT DISTINCT`](#select-distinct) - extracts distinct data from a database
 - [`ALTER TABLE`](#) - modifies a table
+- [`Like`]
+- [`Wildcards`]
+- [`Select Into`]
+- [`Insert Into Select`]
+- [`Case`]
 
 ### **Select Distinct**
 
