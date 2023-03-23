@@ -3757,6 +3757,8 @@
         
           
         
+          
+        
       
       
         
@@ -3825,6 +3827,20 @@
     <li class="md-nav__item">
       <a href="../higher/" class="md-nav__link">
         Higher-level Management
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi_table/" class="md-nav__link">
+        Multiple Table Operation
       </a>
     </li>
   
@@ -4136,9 +4152,16 @@
 <li><a href="#operators"><code>Operators</code></a> for <strong>expression</strong>.</li>
 <li><a href="#null"><code>NULL</code></a> for null <strong>expression</strong>.</li>
 <li><a href="#min--max"><code>Min &amp; Max</code></a> for <strong>expression</strong>.</li>
-<li>[<code>Count, Avg, Sum</code>] for <strong>expression</strong>.</li>
+<li><a href="#count-avg-sum"><code>Count, Avg, Sum</code></a> for aggregation function <strong>expressions</strong>.</li>
 <li><a href="#and-or-and-not"><code>AND, OR, NOT</code></a> for <strong>conditional</strong> <code>WHERE</code> filtering.</li>
-<li><a href="#order-by">`Order By</a> for <strong>sorting</strong> condition.</li>
+<li>[<code>Exists</code>]</li>
+<li>[<code>Any &amp; All</code>]</li>
+<li><a href="#order-by"><code>Order By</code></a> for <strong>sorting</strong> condition.</li>
+<li><a href="#group-by"><code>Group By</code></a> for <strong>summarizing</strong> rows with the same value.</li>
+<li><a href="#in"><code>In</code></a> <strong>shorthand</strong> for multiple <code>OR</code> conditions.</li>
+<li><a href="#between"><code>BETWEEN</code></a> for selecting values within a <strong>given range</strong>.</li>
+<li><a href="#as"><code>As</code></a> for <strong>name alias</strong>.</li>
+<li><a href="#having"><code>Having</code></a> for using <strong>aggregation condition</strong>.</li>
 </ul>
 <h3 id="operators"><strong>Operators</strong><a class="headerlink" href="#operators" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="note">
@@ -4373,15 +4396,56 @@ WHERE NOT City = 'Albany';
 </div> </p>
 </details>
 </details>
+<h3 id="count-avg-sum"><strong>Count, Avg, Sum</strong><a class="headerlink" href="#count-avg-sum" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="note">
+<summary>Count, Avg, Sum</summary>
+<p>The <code>COUNT, AVG, SUM</code> statements are used to express conditional <code>WHERE</code> filtering.</p>
+<details class="success" open="open">
+<summary>Syntax</summary>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><a href="#__codelineno-3-1"><span class="linenos" data-linenos="1 "></span></a><span class="k">SELECT</span><span class="w"> </span><span class="k">COUNT</span><span class="p">(</span><span class="k">column_name</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">AVG</span><span class="p">(</span><span class="k">column_name</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">SUM</span><span class="p">(</span><span class="k">column_name</span><span class="p">)</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><a href="#__codelineno-3-2"><span class="linenos" data-linenos="2 "></span></a><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><a href="#__codelineno-3-3"><span class="linenos" data-linenos="3 "></span></a><span class="k">WHERE</span><span class="w"> </span><span class="n">condition</span><span class="p">;</span>
+</code></pre></div>
+</details>
+<details class="example">
+<summary>click to see an example</summary>
+<p><div data-pym-src='https://www.jdoodle.com/plugin' data-language="sql"
+  data-version-index="0">
+CREATE TABLE Marks_family (
+    PersonID int,
+    LastName varchar(255), --hold characters
+    FirstName varchar(255),
+    Address varchar(255),
+    City varchar(255)
+);
+INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
+VALUES (123, 'Tom', 'A', 'OR', 'Albany');
+INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
+VALUES (124, 'Kim', 'B', 'TX', 'Salem');
+INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
+VALUES (125, 'Yong', 'C', 'NC', 'Albany');
+ 
+SELECT COUNT(PersonID)
+FROM Marks_family;
+ 
+SELECT AVG(PersonID)
+FROM Marks_family;
+ 
+SELECT SUM(PersonID)
+FROM Marks_family;
+</div> </p>
+</details>
+</details>
 <h3 id="order-by"><strong>Order By</strong><a class="headerlink" href="#order-by" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="note">
 <summary>Order By</summary>
 <p>The <code>ORDER BY</code> keyword is used to <strong>sort</strong> the result-set in <strong>ascending</strong> or <strong>descending</strong> order.</p>
 <details class="success" open="open">
 <summary>Syntax</summary>
-<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><a href="#__codelineno-3-1"><span class="linenos" data-linenos="1 "></span></a><span class="k">SELECT</span><span class="w"> </span><span class="n">column1</span><span class="p">,</span><span class="w"> </span><span class="n">column2</span><span class="p">,</span><span class="w"> </span><span class="p">...</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><a href="#__codelineno-3-2"><span class="linenos" data-linenos="2 "></span></a><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><a href="#__codelineno-3-3"><span class="linenos" data-linenos="3 "></span></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">column1</span><span class="p">,</span><span class="w"> </span><span class="n">column2</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="k">ASC</span><span class="o">|</span><span class="k">DESC</span><span class="p">;</span><span class="w"> </span><span class="c1">--Default ASC</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><a href="#__codelineno-4-1"><span class="linenos" data-linenos="1 "></span></a><span class="k">SELECT</span><span class="w"> </span><span class="n">column1</span><span class="p">,</span><span class="w"> </span><span class="n">column2</span><span class="p">,</span><span class="w"> </span><span class="p">...</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><a href="#__codelineno-4-2"><span class="linenos" data-linenos="2 "></span></a><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><a href="#__codelineno-4-3"><span class="linenos" data-linenos="3 "></span></a><span class="p">(</span><span class="k">WHERE</span><span class="w"> </span><span class="n">some_condition</span><span class="p">)</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><a href="#__codelineno-4-4"><span class="linenos" data-linenos="4 "></span></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">column1</span><span class="p">,</span><span class="w"> </span><span class="n">column2</span><span class="p">,</span><span class="w"> </span><span class="p">...</span><span class="w"> </span><span class="k">ASC</span><span class="o">|</span><span class="k">DESC</span><span class="p">;</span><span class="w"> </span><span class="c1">--Default ASC</span>
 </code></pre></div>
 </details>
 <details class="example">
@@ -4408,6 +4472,202 @@ ORDER BY PersonID, LastName ASC;
 </div>   </p>
 </details>
 </details>
+<h3 id="group-by"><strong>Group By</strong><a class="headerlink" href="#group-by" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="note">
+<summary>Group By</summary>
+<p>The <code>GROUP BY</code> statement groups rows that have the same values into <strong>summary rows</strong>, like "find the number of customers in each country". For summarized information, we always use aggregate functions (<code>COUNT()</code>, <code>MAX()</code>, <code>MIN()</code>, <code>SUM()</code>, <code>AVG()</code>) to group the result-set by one or more columns.</p>
+<details class="success" open="open">
+<summary>Syntax</summary>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><a href="#__codelineno-5-1"><span class="linenos" data-linenos="1 "></span></a><span class="k">SELECT</span><span class="w"> </span><span class="k">column_name</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><a href="#__codelineno-5-2"><span class="linenos" data-linenos="2 "></span></a><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><a href="#__codelineno-5-3"><span class="linenos" data-linenos="3 "></span></a><span class="k">WHERE</span><span class="w"> </span><span class="n">condition</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a><a href="#__codelineno-5-4"><span class="linenos" data-linenos="4 "></span></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="k">column_name</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><a href="#__codelineno-5-5"><span class="linenos" data-linenos="5 "></span></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="k">column_name</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+</code></pre></div>
+</details>
+<details class="example">
+<summary>click to see an example</summary>
+<p><div data-pym-src='https://www.jdoodle.com/plugin' data-language="sql"
+  data-version-index="0">
+CREATE TABLE Marks_family (
+    PersonID int,
+    LastName varchar(255), --hold characters
+    FirstName varchar(255),
+    Address varchar(255),
+    City varchar(255)
+);
+INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
+VALUES (123, 'Tom', 'A', 'OR', 'Albany');
+INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
+VALUES (125, 'Kim', 'B', 'TX', 'Salem');
+INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
+VALUES (127, 'Yong', 'C', 'NC', 'Albany');
+ 
+-- Static the number of people in each city.
+SELECT COUNT(PersonID), City
+FROM Marks_family
+GROUP BY City
+ORDER BY COUNT(PersonID) DESC;
+</div>   </p>
+</details>
+</details>
+<h3 id="in"><strong>In</strong><a class="headerlink" href="#in" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="note">
+<summary>In</summary>
+<p>The <code>IN</code> operator is a <strong>shorthand</strong> for multiple <code>OR</code> conditions, which allow you to specify multiple values in a <code>WHERE</code> clause.</p>
+<details class="success" open="open">
+<summary>Syntax</summary>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><a href="#__codelineno-6-1"><span class="linenos" data-linenos="1 "></span></a><span class="k">SELECT</span><span class="w"> </span><span class="k">column_name</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><a href="#__codelineno-6-2"><span class="linenos" data-linenos="2 "></span></a><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><a href="#__codelineno-6-3"><span class="linenos" data-linenos="3 "></span></a><span class="k">WHERE</span><span class="w"> </span><span class="k">column_name</span><span class="w"> </span><span class="p">(</span><span class="k">NOT</span><span class="p">)</span><span class="w"> </span><span class="k">IN</span><span class="w"> </span><span class="p">(</span><span class="n">value1</span><span class="p">,</span><span class="w"> </span><span class="n">value2</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span><span class="o">/</span><span class="p">(</span><span class="k">SELECT</span><span class="w"> </span><span class="k">STATEMENT</span><span class="p">)</span><span class="w"> </span><span class="p">;</span>
+</code></pre></div>
+</details>
+<details class="example">
+<summary>click to see an example</summary>
+<p><div data-pym-src='https://www.jdoodle.com/plugin' data-language="sql"
+  data-version-index="0">
+CREATE TABLE Marks_family (
+    PersonID int,
+    LastName varchar(255), --hold characters
+    FirstName varchar(255),
+    Address varchar(255),
+    City varchar(255)
+);
+INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
+VALUES (123, 'Tom', 'A', 'OR', 'Albany');
+INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
+VALUES (125, 'Kim', 'B', 'TX', 'Salem');
+INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
+VALUES (127, 'Yong', 'C', 'NC', 'Albany');
+ 
+SELECT *
+FROM Marks_family
+WHERE PersonID NOT IN (123,125);
+ 
+SELECT *
+FROM Marks_family
+WHERE CITY IN (SELECT City FROM Marks_family WHERE City = 'Salem');
+</div>   </p>
+</details>
+</details>
+<h3 id="between"><strong>Between</strong><a class="headerlink" href="#between" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="note">
+<summary>Between</summary>
+<p>The <code>BETWEEN</code> operator selects values within a <strong>given range</strong>. The values can be numbers, text, or dates.</p>
+<details class="success" open="open">
+<summary>Syntax</summary>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><a href="#__codelineno-7-1"><span class="linenos" data-linenos="1 "></span></a><span class="k">SELECT</span><span class="w"> </span><span class="n">column1</span><span class="p">,</span><span class="w"> </span><span class="n">column2</span><span class="p">,</span><span class="w"> </span><span class="p">...</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><a href="#__codelineno-7-2"><span class="linenos" data-linenos="2 "></span></a><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><a href="#__codelineno-7-3"><span class="linenos" data-linenos="3 "></span></a><span class="k">WHERE</span><span class="w"> </span><span class="k">column_name</span><span class="w"> </span><span class="p">(</span><span class="k">NOT</span><span class="p">)</span><span class="w"> </span><span class="k">BETWEEN</span><span class="w"> </span><span class="n">value1</span><span class="w"> </span><span class="k">AND</span><span class="w"> </span><span class="n">value2</span><span class="p">;</span>
+</code></pre></div>
+</details>
+<details class="example">
+<summary>click to see an example</summary>
+<p><div data-pym-src='https://www.jdoodle.com/plugin' data-language="sql"
+  data-version-index="0">
+CREATE TABLE Marks_family (
+    PersonID int,
+    LastName varchar(255), --hold characters
+    FirstName varchar(255),
+    Address varchar(255),
+    City varchar(255)
+);
+INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
+VALUES (123, 'Tom', 'A', 'OR', 'Albany');
+INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
+VALUES (125, 'Kim', 'B', 'TX', 'Salem');
+INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
+VALUES (127, 'Yong', 'C', 'NC', 'Albany');
+ 
+SELECT *
+FROM Marks_family
+WHERE PersonID NOT BETWEEN 123 AND 125;
+</div>   </p>
+</details>
+</details>
+<h3 id="as"><strong>As</strong><a class="headerlink" href="#as" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="note">
+<summary>As</summary>
+<p>The <code>AS</code> keyword is used to give a table, or a column in a table, a <strong>temporary name</strong> for better understanding.</p>
+<details class="success" open="open">
+<summary>Syntax</summary>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><a href="#__codelineno-8-1"><span class="linenos" data-linenos="1 "></span></a><span class="k">SELECT</span><span class="w"> </span><span class="k">column_name</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">alias_name</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><a href="#__codelineno-8-2"><span class="linenos" data-linenos="2 "></span></a><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="p">;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><a href="#__codelineno-8-3"><span class="linenos" data-linenos="3 "></span></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><a href="#__codelineno-8-4"><span class="linenos" data-linenos="4 "></span></a><span class="k">SELECT</span><span class="w"> </span><span class="n">column1</span><span class="p">,</span><span class="w"> </span><span class="n">column2</span><span class="p">,</span><span class="w"> </span><span class="p">...</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><a href="#__codelineno-8-5"><span class="linenos" data-linenos="5 "></span></a><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="n">alias_name</span><span class="p">;</span>
+</code></pre></div>
+</details>
+<details class="example">
+<summary>click to see an example</summary>
+<p><div data-pym-src='https://www.jdoodle.com/plugin' data-language="sql"
+  data-version-index="0">
+CREATE TABLE Marks_family (
+    PersonID int,
+    LastName varchar(255), --hold characters
+    FirstName varchar(255),
+    Address varchar(255),
+    City varchar(255)
+);
+INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
+VALUES (123, 'Tom', 'A', 'OR', 'Albany');
+INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
+VALUES (125, 'Kim', 'B', 'TX', 'Salem');
+INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
+VALUES (127, 'Yong', 'C', 'NC', 'Albany');
+ 
+SELECT M.PersonID
+FROM Marks_family AS M
+WHERE City = 'Salem';
+ 
+SELECT PersonID AS P, LastName AS L
+FROM Marks_family
+WHERE City = 'Salem';
+</div>   </p>
+</details>
+</details>
+<h3 id="having"><strong>Having</strong><a class="headerlink" href="#having" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="note">
+<summary>Having</summary>
+<p>The <code>HAVING</code> clause was added to SQL because the WHERE keyword cannot be used with aggregate functions.</p>
+<details class="success" open="open">
+<summary>Syntax</summary>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><a href="#__codelineno-9-1"><span class="linenos" data-linenos="1 "></span></a><span class="k">SELECT</span><span class="w"> </span><span class="k">column_name</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><a href="#__codelineno-9-2"><span class="linenos" data-linenos="2 "></span></a><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a><a href="#__codelineno-9-3"><span class="linenos" data-linenos="3 "></span></a><span class="k">WHERE</span><span class="w"> </span><span class="n">condition</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><a href="#__codelineno-9-4"><span class="linenos" data-linenos="4 "></span></a><span class="k">GROUP</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="k">column_name</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><a href="#__codelineno-9-5"><span class="linenos" data-linenos="5 "></span></a><span class="k">HAVING</span><span class="w"> </span><span class="n">condition</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a><a href="#__codelineno-9-6"><span class="linenos" data-linenos="6 "></span></a><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="k">column_name</span><span class="p">(</span><span class="n">s</span><span class="p">);</span>
+</code></pre></div>
+</details>
+<details class="example">
+<summary>click to see an example</summary>
+<p><div data-pym-src='https://www.jdoodle.com/plugin' data-language="sql"
+  data-version-index="0">
+CREATE TABLE Marks_family (
+    PersonID int,
+    LastName varchar(255), --hold characters
+    FirstName varchar(255),
+    Address varchar(255),
+    City varchar(255)
+);
+INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
+VALUES (123, 'Tom', 'A', 'OR', 'Albany');
+INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
+VALUES (125, 'Kim', 'B', 'TX', 'Salem');
+INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
+VALUES (126, 'Rim', 'F', 'TX', 'Salem');
+INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
+VALUES (127, 'Yong', 'C', 'NC', 'Albany');
+ 
+SELECT COUNT(PersonID), City
+FROM Marks_family
+GROUP BY City
+HAVING COUNT(PersonID) &gt; 1
+ORDER BY COUNT(PersonID) DESC;
+</div>   </p>
+</details>
+</details>
 <h3 id="references"><strong>References:</strong><a class="headerlink" href="#references" title="Anchor link to this section for reference">⚓︎</a></h3>
 <ul>
 <li><a href="https://www.w3schools.com/sql/">SQL Tutorial</a></li>
@@ -4419,7 +4679,7 @@ ORDER BY PersonID, LastName ASC;
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 22, 2023 06:24:30</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 23, 2023 07:37:25</span>
       
         <br>
         Created:
