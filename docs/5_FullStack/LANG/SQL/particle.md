@@ -205,6 +205,46 @@ There are some structural operators that are used to complete SQL sentences:
         WHERE NOT City = 'Albany';
         </div> 
 
+### **Exists**
+
+???note "Exists"
+
+    The `EXISTS` operator is used to test for the **existence of any record** in a subquery. Return `TRUE` when there are one or more records.
+
+    ???+success "Syntax"
+
+        ``` sql
+        SELECT column_name(s)
+        FROM table_name
+        WHERE EXISTS
+        (SELECT column_name FROM table_name WHERE condition);
+        ```
+
+    ???example "click to see an example"
+
+        <div data-pym-src='https://www.jdoodle.com/plugin' data-language="sql"
+          data-version-index="0">
+        CREATE TABLE Marks_family1 (
+            PersonID int,
+            City varchar(255)
+        );
+        CREATE TABLE Marks_family2 (
+            City varchar(255)
+        );
+        INSERT INTO Marks_family1 (PersonID, City)
+        VALUES (123, 'Albany');
+        INSERT INTO Marks_family2 (City)
+        VALUES ('Albany');
+        INSERT INTO Marks_family2 (City)
+        VALUES ('Eugene');
+        INSERT INTO Marks_family2 (City)
+        VALUES ('Salem');
+        \ 
+        SELECT City
+        FROM Marks_family1
+        WHERE EXISTS (SELECT City FROM Marks_family2);
+        </div> 
+
 ### **Count, Avg, Sum**
 
 ???note "Count, Avg, Sum"
