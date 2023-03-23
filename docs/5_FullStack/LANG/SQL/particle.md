@@ -13,11 +13,11 @@ There are some structural operators that are used to complete SQL sentences:
 - [`Min & Max`](#min--max) for **expression**.
 - [`Count, Avg, Sum`](#count-avg-sum) for aggregation function **expressions**.
 - [`AND, OR, NOT`](#and-or-and-not) for **conditional** `WHERE` filtering.
-- [`Exists`]
-- [`Any & All`]
+- [`Exists`](#exists) for checking the **existence** of any record.
+- [`In`](#in) **shorthand** for multiple `OR` conditions.
+- [`Any & All`](#any--all) perform a **comparison between** a single column value and a range of other values.
 - [`Order By`](#order-by) for **sorting** condition.
 - [`Group By`](#group-by) for **summarizing** rows with the same value.
-- [`In`](#in) **shorthand** for multiple `OR` conditions.
 - [`BETWEEN`](#between) for selecting values within a **given range**.
 - [`As`](#as) for **name alias**.
 - [`Having`](#having) for using **aggregation condition**.
@@ -240,9 +240,127 @@ There are some structural operators that are used to complete SQL sentences:
         INSERT INTO Marks_family2 (City)
         VALUES ('Salem');
         \ 
-        SELECT City
+        SELECT *
         FROM Marks_family1
         WHERE EXISTS (SELECT City FROM Marks_family2);
+        </div> 
+
+### **In**
+
+???note "In"
+
+    The `IN` operator is a **shorthand** for multiple `OR` conditions, which allow you to specify multiple values in a `WHERE` clause.
+    ???+success "Syntax"
+
+        ``` sql
+        SELECT column_name(s)
+        FROM table_name
+        WHERE column_name (NOT) IN (value1, value2, ...)/(SELECT STATEMENT) ;
+        ```
+
+    ???example "click to see an example"
+
+        <div data-pym-src='https://www.jdoodle.com/plugin' data-language="sql"
+          data-version-index="0">
+        CREATE TABLE Marks_family (
+            PersonID int,
+            LastName varchar(255), --hold characters
+            FirstName varchar(255),
+            Address varchar(255),
+            City varchar(255)
+        );
+        INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
+        VALUES (123, 'Tom', 'A', 'OR', 'Albany');
+        INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
+        VALUES (125, 'Kim', 'B', 'TX', 'Salem');
+        INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
+        VALUES (127, 'Yong', 'C', 'NC', 'Albany');
+        \ 
+        SELECT *
+        FROM Marks_family
+        WHERE PersonID NOT IN (123,125);
+        \ 
+        SELECT *
+        FROM Marks_family
+        WHERE CITY IN (SELECT City FROM Marks_family WHERE City = 'Salem');
+        </div>   
+
+### **Any & All**
+
+???note "Any & All"
+
+    The `ANY` and `ALL` operators allow you to **perform a comparison** between a single column value and a range of other values.
+
+    -  **operator** must be a standard comparison operator (`=`, `<>`, `!=`, `>`, `>=`, `<`, or `<=`).
+    -  `ALL` can be used with `SELECT`, `WHERE` and `HAVING` statements
+    -  `ANY` means that the **condition will be true** if the **operation is true** for any of the values in the range.
+    -  `ALL` means that the **condition will be true** only if the **operation is true** for all values in the range. 
+
+    | Symbol	| Equal Expression	|
+    | :---: | :---: |
+    | ANY | SOME |
+    | =ANY | IN |
+    | <>ALL | NOT IN |
+
+    ???+success "Syntax"
+
+        ``` sql
+        -- ANY can be used with WHERE and HAVING statements
+        SELECT column_name(s)
+        FROM table_name
+        WHERE column_name operator ANY
+          (SELECT column_name
+          FROM table_name
+          WHERE condition);
+
+        -- ALL can be used with SELECT, WHERE and HAVING statements
+        -- WAY1
+        SELECT ALL column_name(s)
+        FROM table_name
+        WHERE condition;
+        -- WAY2
+        SELECT column_name(s)
+        FROM table_name
+        WHERE column_name operator ALL
+          (SELECT column_name
+          FROM table_name
+          WHERE condition);
+
+        ```
+
+    ???example "click to see an example"
+
+        <div data-pym-src='https://www.jdoodle.com/plugin' data-language="sql"
+          data-version-index="0">
+        CREATE TABLE Marks_family1 (
+            PersonID int,
+            City varchar(255)
+        );
+        CREATE TABLE Marks_family2 (
+            PersonID2 int,
+            City varchar(255)
+        );
+        INSERT INTO Marks_family1
+        VALUES (123, 'Albany');
+        INSERT INTO Marks_family2
+        VALUES (477,'Salem');
+        INSERT INTO Marks_family2
+        VALUES (123,'Eugene');
+        INSERT INTO Marks_family2
+        VALUES (123,'Salem');
+        \ 
+        SELECT ALL City
+        FROM Marks_family2;
+        \ 
+        SELECT *
+        FROM Marks_family1
+        WHERE PersonID = ANY (
+            SELECT PersonID2
+            FROM Marks_family2
+            WHERE PersonID2 < 447
+        );
+        \ 
+
         </div> 
 
 ### **Count, Avg, Sum**
@@ -363,45 +481,7 @@ There are some structural operators that are used to complete SQL sentences:
         ORDER BY COUNT(PersonID) DESC;
         </div>   
 
-### **In**
 
-???note "In"
-
-    The `IN` operator is a **shorthand** for multiple `OR` conditions, which allow you to specify multiple values in a `WHERE` clause.
-    ???+success "Syntax"
-
-        ``` sql
-        SELECT column_name(s)
-        FROM table_name
-        WHERE column_name (NOT) IN (value1, value2, ...)/(SELECT STATEMENT) ;
-        ```
-
-    ???example "click to see an example"
-
-        <div data-pym-src='https://www.jdoodle.com/plugin' data-language="sql"
-          data-version-index="0">
-        CREATE TABLE Marks_family (
-            PersonID int,
-            LastName varchar(255), --hold characters
-            FirstName varchar(255),
-            Address varchar(255),
-            City varchar(255)
-        );
-        INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
-        VALUES (123, 'Tom', 'A', 'OR', 'Albany');
-        INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
-        VALUES (125, 'Kim', 'B', 'TX', 'Salem');
-        INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
-        VALUES (127, 'Yong', 'C', 'NC', 'Albany');
-        \ 
-        SELECT *
-        FROM Marks_family
-        WHERE PersonID NOT IN (123,125);
-        \ 
-        SELECT *
-        FROM Marks_family
-        WHERE CITY IN (SELECT City FROM Marks_family WHERE City = 'Salem');
-        </div>   
 
 ### **Between**
 

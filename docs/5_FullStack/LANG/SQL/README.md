@@ -9,6 +9,7 @@
 - [Basic Management](./basic.md)
 - [Structural Operators](./particle.md)
 - [Higher level Management](./higher.md)
+- [Multiple Table Operation](./multi_table.md)
 
 ### **References:**
 
