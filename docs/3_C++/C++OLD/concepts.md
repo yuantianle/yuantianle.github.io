@@ -7,25 +7,51 @@ comments: true
 
 > This material is for listing different OOP concepts:
 
-> - [**Inheritance**](#inheritance)
-> - [**Polymorphism**](#polymorphism)
-> - [**Encapsulation**](#encapsulation)
-> - [**Interface**](#interface)
-> - [**Abstract class**](#abstract-class)
-> - [**Virtual function**](#virtual-function-method)
-> - [**Overloading**](#overloading)
-> - [**Overriding**](#overriding)
-> - [**Compile & Run time**](#compile--run-time)
-> - [**Static methods and variables**](#static-methods-and-variables)
+- [**OOP**](#oop)
+- [**Inheritance**](#inheritance)
+- [**Polymorphism**](#polymorphism)
+- [**Encapsulation**](#encapsulation)
+- [**Interface**](#interface)
+- [**Abstract class**](#abstract-class)
+- [**Virtual function (method)**](#virtual-function-method)
+- [**Overloading**](#overloading)
+- [**Overriding**](#overriding)
+- [**Compile \& Run time**](#compile--run-time)
+- [**Static methods and variables**](#static-methods-and-variables)
+- [**Constructor and Destructor**](#constructor-and-destructor)
+- [**Access modifier**](#access-modifier)
 
+
+### **OOP**
+
+???+Note "Benefits of `OOP`"
+
+    `Object-oriented programming` has several **advantages** over procedural programming:
+
+    - OOP is <u>faster and easier</u> to execute
+    - OOP provides a <u>clear structure</u> for the programs
+    - OOP helps to keep the code <u>DRY "Don't Repeat Yourself"</u>. It create full reusable applications with less code and shorter development time
+    - OOP makes the code easier to <u>maintain, modify and debug</u>.
+
+### **Class and Object**
+
+???+Note "`Class and Object`"
+
+    - A `class` is a **template or blueprint** for creating objects. 
+        - It defines the <u>properties and behaviors</u> that an object of that class should have. 
+        - A class encapsulates data and methods that operate on that data, providing a way to <u>organize and structure</u> complex programs.
+
+    - An `object` is an **instance** of a class. 
+        - When a program creates an object of a class, it <u>allocates memory</u> for that object and initializes its member variables and methods according to the class definition. 
+        - Objects can <u>interact with each other</u> and with the program through their methods and public member variables.
 
 ### **Inheritance**
 
 ???+Note "`Inheritance`"
 
-    A **mechanism** in OOP that allows `subclass(derived class)` to inherit properties and methods from a `parent class(base class)`. And it can add new properties and methods or override the old class's methods
+    A **mechanism** in OOP that allows `subclass(derived class)` to inherit <u>properties and methods</u> from a `parent class(base class)`. And it can add new properties and methods or override the old class's methods
 
-    * **Usage:** `Subclasses` can inherit <u>public</u> and <u>protected</u> members from the `parent class`, but NOT <u>private</u> members.
+    * **Usage:** `Subclasses` can inherit <u>public</u> and <u>protected</u> members from the `parent class`, but NOT <u>private</u> members. See [C++ Inheriance](../Inheritance/Inheritance) for more details.
 
     * **Advantages:** It is an important way of <u>code reuse</u>. (for avoiding duplicates, organizing code structure, and improving code readability and maintainability).
 
@@ -33,7 +59,7 @@ comments: true
 
 ???+Note "`Polymorphism`"
 
-    The **ability** of different objects to respond to the same message in different ways.
+    The **ability** of **methods** with the same name to behave differently (depending on the type of object they are called on or the arguments that are passed to them).
 
     * **Usage:** method [overloading](#overloading), method [overriding](#overriding), [interface](#virtual-function--interface) implementation, and more. 
 
@@ -77,7 +103,7 @@ comments: true
           1. has all methods declared as pure virtual methods.
           2. has no variable declaration.
 
-    === "Abstrac class"
+    === "Abstract class"
 
         Satisfy: 
 
@@ -94,8 +120,9 @@ comments: true
 
     * **Usage:** Its main purpose is to allow derived classes to implement these methods, thus achieving [polymorphism](#polymorphism). 
   
-      * Subclasses must <u>implement all</u> the abstract methods in the abstract class, otherwise, the subclass must also be an abstract class.
-      * The abstract class <==> contains at least one abstract method ([pure virtual function](#virtual-function)).
+        * Subclasses must <u>implement all</u> the abstract methods in the abstract class, otherwise, the subclass must also be an abstract class.
+        * The abstract class <==> contains at least one abstract method ([pure virtual function](#virtual-function)).
+    
     * **Advantages:** Provide <u>standard</u>. (Provide a template and standard for subclasses to ensure that subclasses implement the methods and properties defined in the abstract class.)
 
     ```cpp
@@ -115,11 +142,11 @@ comments: true
             std::string message;    
     }; 
     ```
-### **Virtual function (method)**
+### **Abstract methods & Virtual function (method)**
 
 ???+Note "`Virtual function (method)`"
 
-    - `Abstract methods`: are **pure virtual methods**, which have no actual code in them, and (non-abstract) subclasses **HAVE TO override** the method.
+    - `Abstract methods`: are **pure virtual methods**, which have no actual code in them, and (non-abstract) subclasses **HAVE TO override** the method. It can only be used in an abstract class.
     - `Virtual methods`: can have code, which is usually a default implementation of something, and any subclasses CAN **override** the method using the override modifier and provide a custom implementation to achieve [polymorphism](#polymorphism).
 
     ```cpp
@@ -211,13 +238,13 @@ comments: true
 
 ### **Overriding**
 
-???+note "Overrding"
+???+note "`Overrding`"
 
     A **concept** refers to redefining a method inherited from a base class in a derived class. 
     
     * **Usage:** 
-      - The overriding method has the same <u>signature</u> (name, parameters, and return type) as the base class method but can have a <u>different implementation</u>.
-      - When a program calls a same-named method of a subclass object, it <u>first looks</u> for an implementation of the method in the subclass. If an implementation exists, it calls the method in the subclass. If there is no implementation, it continues to look for the method in the parent class. 
+        - The overriding method has the same <u>signature</u> (name, parameters, and return type) as the base class method but can have a <u>different implementation</u>.
+        - When a program calls a same-named method of a subclass object, it <u>first looks</u> for an implementation of the method in the subclass. If an implementation exists, it calls the method in the subclass. If there is no implementation, it continues to look for the method in the parent class. 
 
     ```cpp
     // C++ program to demonstrate function overriding
@@ -257,9 +284,142 @@ comments: true
 
 ### **Compile & Run time**
 
-<button id="open-window-btn" onclick="toggleWindow()">Open Mini Compiler</button>
+???+note "`Compile & Run time`"
+
+    - `Compile time`: the **period** when the <u>program code</u> is being translated into <u>machine code</u> by the compiler, which:
+        - Checks the syntax, types, declarations, and other information in the code.
+        - Generates <u>executable</u> code.
+        - Errors that occur during compile time can be viewesd in the error messages output by the compiler.
+    - `Run time`: the **period** when the program is being executed, which
+        - Executes the program (executable code generated by the compiler)
+        - Produces <u>output</u> based on user input and the logic of the code.
+        - Errors that occur during run time can be viewed in the error messages output by the program during its execution.
 
 ### **Static methods and variables**
+
+???+note "`Static methods and variables`"
+
+    **Methods** and **variables** that are associated with a class rather than with an instance of the class. 
+    
+    * **Usage:** 
+        - When defining it, add `static` keyword.
+        - They can be accessed directly by the class name without needing to create an instance of the class.
+        - `Static variables` can be accessed in any method of the class WITHOUT creating an object instance.
+        - `Static methods` cannot access instance variables, because they do not depend on the existence of an instance.
+
+    * **Advantages:**
+        - `Static variables` can be used to share data among all instances of a class.
+        - `Static methods` can be used to provide some global utility functions that can be called without creating an object instance.
+
+    ```cpp
+    // The example to use static variable for counting and static method for reading the counter
+    #include <iostream>
+    using namespace std;
+
+    class Employee {
+        private:
+            int num;
+            static int count; // static variable
+
+        public:
+            Employee(int n) {
+                num = n;
+                count++; // increment count every time a new instance is created
+            }
+
+            static int getCount() { // static method to return count
+                return count;
+            }
+
+            void getID() {
+                cout << "Instance number: " << num << endl;
+            }
+    };
+
+    int Employee::count = 0; // initialize static variable
+
+    int main() {
+        Employee ex1(1);
+        Employee ex2(2);
+        Employee ex3(3);
+
+        ex1.getID();
+        ex2.getID();
+        ex3.getID();
+
+        cout << "Total number of instances: " << Example::getCount() << endl;
+
+        return 0;
+    }
+    ```
+    <button id="open-window-btn" onclick="toggleWindow()">Open Mini Compiler</button>
+
+### **Constructor and Destructor**
+
+???+note "`Constructor and Destructor`"
+
+    - A `constructor` is a **special function** used to <u>create objects</u>. When an <u>object is created</u>, the <u>compiler automatically</u> calls the constructor of the class to initialize the object.
+    - A `destructor` is a **special function** used to <u>destroy objects</u>. When an object is destroyed, the <u>compiler automatically</u> calls the destructor of the class to clean up the object, such as releasing dynamically allocated memory. 
+    * **Usage:** 
+        - The `constructor` must have the <u>same name</u> as the class, <u>no return type</u> (including void), and <u>can have a parameter list</u>.
+        - The `destructor` must have the <u>same name</u> as the class, with a tilde (~) in front, and <u>no return type or parameter list</u>. 
+
+    * **Advantages:** Save coding time and system do it automatically for you.
+        ```cpp
+        // Without constructor
+        int main() {
+            Car Ford;
+            Ford.model = "Mustang";
+            Ford.color = "red";
+            Ford.year = 1969;
+
+            Car Opel;
+            Opel.model = "Astra";
+            Opel.color = "white";
+            Opel.year = 2005;
+        }
+        // With constructor
+        int main() {
+            Car Ford("Mustang", "Red", 1969);
+            Car Opel("Astra", "White", 2005);
+        }
+        ```
+    ```cpp
+    #include <iostream>
+    using namespace std;
+
+    class MyClass {
+    public:
+        // Constructor
+        MyClass() {
+            cout << "Constructor called." << endl;
+        }
+
+        // 析构函数
+        ~MyClass() {
+            cout << "Destructor called." << endl;
+        }
+    };
+
+    int main() {
+        // 创建对象
+        MyClass obj;
+        return 0;
+    }
+    ```
+    <button id="open-window-btn" onclick="toggleWindow()">Open Mini Compiler</button>
+
+### **Access modifier**
+
+???+note "`Access modifier`"
+
+    `Access modifier` is the **keyword** used to set the class member's accessibility for others (classes, fields, methods and properties).
+    
+    * **Usage:** See [Access modifier](../Inheritance/Inheritance/#inheritance-access).
+  
+    * **Advantages:**
+        - Data encapsulation: Gaurantee [encapsulation](#encapsulation).
+        - Behavior concealment: Create public APIs but hide it's corresponding inside behaviors in the class.
 
 
 #### **Reference**

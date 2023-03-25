@@ -4163,26 +4163,60 @@
 <h1 id="oop-concepts"><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22.394 6c-.167-.29-.398-.543-.652-.69L12.926.22c-.509-.294-1.34-.294-1.848 0L2.26 5.31c-.508.293-.923 1.013-.923 1.6v10.18c0 .294.104.62.271.91.167.29.398.543.652.69l8.816 5.09c.508.293 1.34.293 1.848 0l8.816-5.09c.254-.147.485-.4.652-.69.167-.29.27-.616.27-.91V6.91c.003-.294-.1-.62-.268-.91zM12 19.11c-3.92 0-7.109-3.19-7.109-7.11 0-3.92 3.19-7.11 7.11-7.11a7.133 7.133 0 0 1 6.156 3.553l-3.076 1.78a3.567 3.567 0 0 0-3.08-1.78A3.56 3.56 0 0 0 8.444 12 3.56 3.56 0 0 0 12 15.555a3.57 3.57 0 0 0 3.08-1.778l3.078 1.78A7.135 7.135 0 0 1 12 19.11zm7.11-6.715h-.79v.79h-.79v-.79h-.79v-.79h.79v-.79h.79v.79h.79zm2.962 0h-.79v.79h-.79v-.79h-.79v-.79h.79v-.79h.79v.79h.79z"/></svg></span> OOP concepts</strong><a class="headerlink" href="#oop-concepts" title="Anchor link to this section for reference">⚓︎</a></h1>
 <blockquote>
 <p>This material is for listing different OOP concepts:</p>
+</blockquote>
 <ul>
+<li><a href="#oop"><strong>OOP</strong></a></li>
 <li><a href="#inheritance"><strong>Inheritance</strong></a></li>
 <li><a href="#polymorphism"><strong>Polymorphism</strong></a></li>
 <li><a href="#encapsulation"><strong>Encapsulation</strong></a></li>
 <li><a href="#interface"><strong>Interface</strong></a></li>
 <li><a href="#abstract-class"><strong>Abstract class</strong></a></li>
-<li><a href="#virtual-function-method"><strong>Virtual function</strong></a></li>
+<li><a href="#virtual-function-method"><strong>Virtual function (method)</strong></a></li>
 <li><a href="#overloading"><strong>Overloading</strong></a></li>
 <li><a href="#overriding"><strong>Overriding</strong></a></li>
-<li><a href="#compile--run-time"><strong>Compile &amp; Run time</strong></a></li>
+<li><a href="#compile--run-time"><strong>Compile \&amp; Run time</strong></a></li>
 <li><a href="#static-methods-and-variables"><strong>Static methods and variables</strong></a></li>
+<li><a href="#constructor-and-destructor"><strong>Constructor and Destructor</strong></a></li>
+<li><a href="#access-modifier"><strong>Access modifier</strong></a></li>
 </ul>
-</blockquote>
+<h3 id="oop"><strong>OOP</strong><a class="headerlink" href="#oop" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="note" open="open">
+<summary>Benefits of <code>OOP</code></summary>
+<p><code>Object-oriented programming</code> has several <strong>advantages</strong> over procedural programming:</p>
+<ul>
+<li>OOP is <u>faster and easier</u> to execute</li>
+<li>OOP provides a <u>clear structure</u> for the programs</li>
+<li>OOP helps to keep the code <u>DRY "Don't Repeat Yourself"</u>. It create full reusable applications with less code and shorter development time</li>
+<li>OOP makes the code easier to <u>maintain, modify and debug</u>.</li>
+</ul>
+</details>
+<h3 id="class-and-object"><strong>Class and Object</strong><a class="headerlink" href="#class-and-object" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="note" open="open">
+<summary><code>Class and Object</code></summary>
+<ul>
+<li>
+<p>A <code>class</code> is a <strong>template or blueprint</strong> for creating objects. </p>
+<ul>
+<li>It defines the <u>properties and behaviors</u> that an object of that class should have. </li>
+<li>A class encapsulates data and methods that operate on that data, providing a way to <u>organize and structure</u> complex programs.</li>
+</ul>
+</li>
+<li>
+<p>An <code>object</code> is an <strong>instance</strong> of a class. </p>
+<ul>
+<li>When a program creates an object of a class, it <u>allocates memory</u> for that object and initializes its member variables and methods according to the class definition. </li>
+<li>Objects can <u>interact with each other</u> and with the program through their methods and public member variables.</li>
+</ul>
+</li>
+</ul>
+</details>
 <h3 id="inheritance"><strong>Inheritance</strong><a class="headerlink" href="#inheritance" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="note" open="open">
 <summary><code>Inheritance</code></summary>
-<p>A <strong>mechanism</strong> in OOP that allows <code>subclass(derived class)</code> to inherit properties and methods from a <code>parent class(base class)</code>. And it can add new properties and methods or override the old class's methods</p>
+<p>A <strong>mechanism</strong> in OOP that allows <code>subclass(derived class)</code> to inherit <u>properties and methods</u> from a <code>parent class(base class)</code>. And it can add new properties and methods or override the old class's methods</p>
 <ul>
 <li>
-<p><strong>Usage:</strong> <code>Subclasses</code> can inherit <u>public</u> and <u>protected</u> members from the <code>parent class</code>, but NOT <u>private</u> members.</p>
+<p><strong>Usage:</strong> <code>Subclasses</code> can inherit <u>public</u> and <u>protected</u> members from the <code>parent class</code>, but NOT <u>private</u> members. See <a href="../Inheritance/Inheritance">C++ Inheriance</a> for more details.</p>
 </li>
 <li>
 <p><strong>Advantages:</strong> It is an important way of <u>code reuse</u>. (for avoiding duplicates, organizing code structure, and improving code readability and maintainability).</p>
@@ -4192,7 +4226,7 @@
 <h3 id="polymorphism"><strong>Polymorphism</strong><a class="headerlink" href="#polymorphism" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="note" open="open">
 <summary><code>Polymorphism</code></summary>
-<p>The <strong>ability</strong> of different objects to respond to the same message in different ways.</p>
+<p>The <strong>ability</strong> of <strong>methods</strong> with the same name to behave differently (depending on the type of object they are called on or the arguments that are passed to them).</p>
 <ul>
 <li>
 <p><strong>Usage:</strong> method <a href="#overloading">overloading</a>, method <a href="#overriding">overriding</a>, <a href="#virtual-function--interface">interface</a> implementation, and more. </p>
@@ -4235,7 +4269,7 @@
 <a id="__codelineno-0-5" name="__codelineno-0-5"></a><a href="#__codelineno-0-5"><span class="linenos" data-linenos="5 "></span></a><span class="w">        </span><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">method_second</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a><a href="#__codelineno-0-6"><span class="linenos" data-linenos="6 "></span></a><span class="p">};</span>
 </code></pre></div>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Interface class</label><label for="__tabbed_1_2">Abstrac class</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Interface class</label><label for="__tabbed_1_2">Abstract class</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p>Satisfy: </p>
@@ -4262,12 +4296,14 @@
 <ul>
 <li>
 <p><strong>Usage:</strong> Its main purpose is to allow derived classes to implement these methods, thus achieving <a href="#polymorphism">polymorphism</a>. </p>
+<ul>
+<li>Subclasses must <u>implement all</u> the abstract methods in the abstract class, otherwise, the subclass must also be an abstract class.</li>
+<li>The abstract class &lt;==&gt; contains at least one abstract method (<a href="#virtual-function">pure virtual function</a>).</li>
+</ul>
 </li>
 <li>
-<p>Subclasses must <u>implement all</u> the abstract methods in the abstract class, otherwise, the subclass must also be an abstract class.</p>
+<p><strong>Advantages:</strong> Provide <u>standard</u>. (Provide a template and standard for subclasses to ensure that subclasses implement the methods and properties defined in the abstract class.)</p>
 </li>
-<li>The abstract class &lt;==&gt; contains at least one abstract method (<a href="#virtual-function">pure virtual function</a>).</li>
-<li><strong>Advantages:</strong> Provide <u>standard</u>. (Provide a template and standard for subclasses to ensure that subclasses implement the methods and properties defined in the abstract class.)</li>
 </ul>
 <div class="highlight"><span class="filename">C++</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a><a href="#__codelineno-1-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
@@ -4286,11 +4322,11 @@
 <a id="__codelineno-1-15" name="__codelineno-1-15"></a><a href="#__codelineno-1-15"><span class="linenos" data-linenos="15 "></span></a><span class="p">};</span><span class="w"> </span>
 </code></pre></div>
 </details>
-<h3 id="virtual-function-method"><strong>Virtual function (method)</strong><a class="headerlink" href="#virtual-function-method" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="abstract-methods--virtual-function-method"><strong>Abstract methods &amp; Virtual function (method)</strong><a class="headerlink" href="#abstract-methods--virtual-function-method" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="note" open="open">
 <summary><code>Virtual function (method)</code></summary>
 <ul>
-<li><code>Abstract methods</code>: are <strong>pure virtual methods</strong>, which have no actual code in them, and (non-abstract) subclasses <strong>HAVE TO override</strong> the method.</li>
+<li><code>Abstract methods</code>: are <strong>pure virtual methods</strong>, which have no actual code in them, and (non-abstract) subclasses <strong>HAVE TO override</strong> the method. It can only be used in an abstract class.</li>
 <li><code>Virtual methods</code>: can have code, which is usually a default implementation of something, and any subclasses CAN <strong>override</strong> the method using the override modifier and provide a custom implementation to achieve <a href="#polymorphism">polymorphism</a>.</li>
 </ul>
 <div class="highlight"><span class="filename">C++</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><a href="#__codelineno-2-1"><span class="linenos" data-linenos="1 "></span></a><span class="k">virtual</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">method_first</span><span class="p">()</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// a pure virtual method</span>
@@ -4385,12 +4421,14 @@
 </details>
 <h3 id="overriding"><strong>Overriding</strong><a class="headerlink" href="#overriding" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="note" open="open">
-<summary>Overrding</summary>
+<summary><code>Overrding</code></summary>
 <p>A <strong>concept</strong> refers to redefining a method inherited from a base class in a derived class. </p>
 <ul>
-<li><strong>Usage:</strong> </li>
+<li><strong>Usage:</strong> <ul>
 <li>The overriding method has the same <u>signature</u> (name, parameters, and return type) as the base class method but can have a <u>different implementation</u>.</li>
 <li>When a program calls a same-named method of a subclass object, it <u>first looks</u> for an implementation of the method in the subclass. If an implementation exists, it calls the method in the subclass. If there is no implementation, it continues to look for the method in the parent class. </li>
+</ul>
+</li>
 </ul>
 <p><div class="highlight"><span class="filename">C++</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><a href="#__codelineno-5-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="c1">// C++ program to demonstrate function overriding</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2"></a><a href="#__codelineno-5-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="c1">// by calling the overridden function</span>
@@ -4428,8 +4466,163 @@
 <button id="open-window-btn" onclick="toggleWindow()">Open Mini Compiler</button></p>
 </details>
 <h3 id="compile--run-time"><strong>Compile &amp; Run time</strong><a class="headerlink" href="#compile--run-time" title="Anchor link to this section for reference">⚓︎</a></h3>
-<p><button id="open-window-btn" onclick="toggleWindow()">Open Mini Compiler</button></p>
+<details class="note" open="open">
+<summary><code>Compile &amp; Run time</code></summary>
+<ul>
+<li><code>Compile time</code>: the <strong>period</strong> when the <u>program code</u> is being translated into <u>machine code</u> by the compiler, which:<ul>
+<li>Checks the syntax, types, declarations, and other information in the code.</li>
+<li>Generates <u>executable</u> code.</li>
+<li>Errors that occur during compile time can be viewesd in the error messages output by the compiler.</li>
+</ul>
+</li>
+<li><code>Run time</code>: the <strong>period</strong> when the program is being executed, which<ul>
+<li>Executes the program (executable code generated by the compiler)</li>
+<li>Produces <u>output</u> based on user input and the logic of the code.</li>
+<li>Errors that occur during run time can be viewed in the error messages output by the program during its execution.</li>
+</ul>
+</li>
+</ul>
+</details>
 <h3 id="static-methods-and-variables"><strong>Static methods and variables</strong><a class="headerlink" href="#static-methods-and-variables" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="note" open="open">
+<summary><code>Static methods and variables</code></summary>
+<p><strong>Methods</strong> and <strong>variables</strong> that are associated with a class rather than with an instance of the class. </p>
+<ul>
+<li>
+<p><strong>Usage:</strong> </p>
+<ul>
+<li>When defining it, add <code>static</code> keyword.</li>
+<li>They can be accessed directly by the class name without needing to create an instance of the class.</li>
+<li><code>Static variables</code> can be accessed in any method of the class WITHOUT creating an object instance.</li>
+<li><code>Static methods</code> cannot access instance variables, because they do not depend on the existence of an instance.</li>
+</ul>
+</li>
+<li>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li><code>Static variables</code> can be used to share data among all instances of a class.</li>
+<li><code>Static methods</code> can be used to provide some global utility functions that can be called without creating an object instance.</li>
+</ul>
+</li>
+</ul>
+<p><div class="highlight"><span class="filename">C++</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><a href="#__codelineno-6-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="c1">// The example to use static variable for counting and static method for reading the counter</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><a href="#__codelineno-6-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><a href="#__codelineno-6-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><a href="#__codelineno-6-4"><span class="linenos" data-linenos=" 4 "></span></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><a href="#__codelineno-6-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="k">class</span><span class="w"> </span><span class="nc">Employee</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><a href="#__codelineno-6-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="w">    </span><span class="k">private</span><span class="o">:</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><a href="#__codelineno-6-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">num</span><span class="p">;</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><a href="#__codelineno-6-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="p">;</span><span class="w"> </span><span class="c1">// static variable</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><a href="#__codelineno-6-9"><span class="linenos" data-linenos=" 9 "></span></a>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a><a href="#__codelineno-6-10"><span class="linenos" data-linenos="10 "></span></a><span class="w">    </span><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><a href="#__codelineno-6-11"><span class="linenos" data-linenos="11 "></span></a><span class="w">        </span><span class="n">Employee</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">n</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><a href="#__codelineno-6-12"><span class="linenos" data-linenos="12 "></span></a><span class="w">            </span><span class="n">num</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a><a href="#__codelineno-6-13"><span class="linenos" data-linenos="13 "></span></a><span class="w">            </span><span class="n">count</span><span class="o">++</span><span class="p">;</span><span class="w"> </span><span class="c1">// increment count every time a new instance is created</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a><a href="#__codelineno-6-14"><span class="linenos" data-linenos="14 "></span></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a><a href="#__codelineno-6-15"><span class="linenos" data-linenos="15 "></span></a>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a><a href="#__codelineno-6-16"><span class="linenos" data-linenos="16 "></span></a><span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">getCount</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// static method to return count</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a><a href="#__codelineno-6-17"><span class="linenos" data-linenos="17 "></span></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">count</span><span class="p">;</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18"></a><a href="#__codelineno-6-18"><span class="linenos" data-linenos="18 "></span></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19"></a><a href="#__codelineno-6-19"><span class="linenos" data-linenos="19 "></span></a>
+<a id="__codelineno-6-20" name="__codelineno-6-20"></a><a href="#__codelineno-6-20"><span class="linenos" data-linenos="20 "></span></a><span class="w">        </span><span class="kt">void</span><span class="w"> </span><span class="n">getID</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21"></a><a href="#__codelineno-6-21"><span class="linenos" data-linenos="21 "></span></a><span class="w">            </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Instance number: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">num</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22"></a><a href="#__codelineno-6-22"><span class="linenos" data-linenos="22 "></span></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-6-23" name="__codelineno-6-23"></a><a href="#__codelineno-6-23"><span class="linenos" data-linenos="23 "></span></a><span class="p">};</span>
+<a id="__codelineno-6-24" name="__codelineno-6-24"></a><a href="#__codelineno-6-24"><span class="linenos" data-linenos="24 "></span></a>
+<a id="__codelineno-6-25" name="__codelineno-6-25"></a><a href="#__codelineno-6-25"><span class="linenos" data-linenos="25 "></span></a><span class="kt">int</span><span class="w"> </span><span class="n">Employee</span><span class="o">::</span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// initialize static variable</span>
+<a id="__codelineno-6-26" name="__codelineno-6-26"></a><a href="#__codelineno-6-26"><span class="linenos" data-linenos="26 "></span></a>
+<a id="__codelineno-6-27" name="__codelineno-6-27"></a><a href="#__codelineno-6-27"><span class="linenos" data-linenos="27 "></span></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-28" name="__codelineno-6-28"></a><a href="#__codelineno-6-28"><span class="linenos" data-linenos="28 "></span></a><span class="w">    </span><span class="n">Employee</span><span class="w"> </span><span class="n">ex1</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-6-29" name="__codelineno-6-29"></a><a href="#__codelineno-6-29"><span class="linenos" data-linenos="29 "></span></a><span class="w">    </span><span class="n">Employee</span><span class="w"> </span><span class="n">ex2</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-6-30" name="__codelineno-6-30"></a><a href="#__codelineno-6-30"><span class="linenos" data-linenos="30 "></span></a><span class="w">    </span><span class="n">Employee</span><span class="w"> </span><span class="n">ex3</span><span class="p">(</span><span class="mi">3</span><span class="p">);</span>
+<a id="__codelineno-6-31" name="__codelineno-6-31"></a><a href="#__codelineno-6-31"><span class="linenos" data-linenos="31 "></span></a>
+<a id="__codelineno-6-32" name="__codelineno-6-32"></a><a href="#__codelineno-6-32"><span class="linenos" data-linenos="32 "></span></a><span class="w">    </span><span class="n">ex1</span><span class="p">.</span><span class="n">getID</span><span class="p">();</span>
+<a id="__codelineno-6-33" name="__codelineno-6-33"></a><a href="#__codelineno-6-33"><span class="linenos" data-linenos="33 "></span></a><span class="w">    </span><span class="n">ex2</span><span class="p">.</span><span class="n">getID</span><span class="p">();</span>
+<a id="__codelineno-6-34" name="__codelineno-6-34"></a><a href="#__codelineno-6-34"><span class="linenos" data-linenos="34 "></span></a><span class="w">    </span><span class="n">ex3</span><span class="p">.</span><span class="n">getID</span><span class="p">();</span>
+<a id="__codelineno-6-35" name="__codelineno-6-35"></a><a href="#__codelineno-6-35"><span class="linenos" data-linenos="35 "></span></a>
+<a id="__codelineno-6-36" name="__codelineno-6-36"></a><a href="#__codelineno-6-36"><span class="linenos" data-linenos="36 "></span></a><span class="w">    </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Total number of instances: &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">Example</span><span class="o">::</span><span class="n">getCount</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-6-37" name="__codelineno-6-37"></a><a href="#__codelineno-6-37"><span class="linenos" data-linenos="37 "></span></a>
+<a id="__codelineno-6-38" name="__codelineno-6-38"></a><a href="#__codelineno-6-38"><span class="linenos" data-linenos="38 "></span></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-6-39" name="__codelineno-6-39"></a><a href="#__codelineno-6-39"><span class="linenos" data-linenos="39 "></span></a><span class="p">}</span>
+</code></pre></div>
+<button id="open-window-btn" onclick="toggleWindow()">Open Mini Compiler</button></p>
+</details>
+<h3 id="constructor-and-destructor"><strong>Constructor and Destructor</strong><a class="headerlink" href="#constructor-and-destructor" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="note" open="open">
+<summary><code>Constructor and Destructor</code></summary>
+<ul>
+<li>A <code>constructor</code> is a <strong>special function</strong> used to <u>create objects</u>. When an <u>object is created</u>, the <u>compiler automatically</u> calls the constructor of the class to initialize the object.</li>
+<li>A <code>destructor</code> is a <strong>special function</strong> used to <u>destroy objects</u>. When an object is destroyed, the <u>compiler automatically</u> calls the destructor of the class to clean up the object, such as releasing dynamically allocated memory. </li>
+<li>
+<p><strong>Usage:</strong> </p>
+<ul>
+<li>The <code>constructor</code> must have the <u>same name</u> as the class, <u>no return type</u> (including void), and <u>can have a parameter list</u>.</li>
+<li>The <code>destructor</code> must have the <u>same name</u> as the class, with a tilde (~) in front, and <u>no return type or parameter list</u>. </li>
+</ul>
+</li>
+<li>
+<p><strong>Advantages:</strong> Save coding time and system do it automatically for you.
+    <div class="highlight"><span class="filename">C++</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><a href="#__codelineno-7-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="c1">// Without constructor</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><a href="#__codelineno-7-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><a href="#__codelineno-7-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="w">    </span><span class="n">Car</span><span class="w"> </span><span class="n">Ford</span><span class="p">;</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><a href="#__codelineno-7-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="w">    </span><span class="n">Ford</span><span class="p">.</span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Mustang&quot;</span><span class="p">;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><a href="#__codelineno-7-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="w">    </span><span class="n">Ford</span><span class="p">.</span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;red&quot;</span><span class="p">;</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><a href="#__codelineno-7-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="w">    </span><span class="n">Ford</span><span class="p">.</span><span class="n">year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1969</span><span class="p">;</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><a href="#__codelineno-7-7"><span class="linenos" data-linenos=" 7 "></span></a>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><a href="#__codelineno-7-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="w">    </span><span class="n">Car</span><span class="w"> </span><span class="n">Opel</span><span class="p">;</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><a href="#__codelineno-7-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="w">    </span><span class="n">Opel</span><span class="p">.</span><span class="n">model</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Astra&quot;</span><span class="p">;</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><a href="#__codelineno-7-10"><span class="linenos" data-linenos="10 "></span></a><span class="w">    </span><span class="n">Opel</span><span class="p">.</span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;white&quot;</span><span class="p">;</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><a href="#__codelineno-7-11"><span class="linenos" data-linenos="11 "></span></a><span class="w">    </span><span class="n">Opel</span><span class="p">.</span><span class="n">year</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2005</span><span class="p">;</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12"></a><a href="#__codelineno-7-12"><span class="linenos" data-linenos="12 "></span></a><span class="p">}</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13"></a><a href="#__codelineno-7-13"><span class="linenos" data-linenos="13 "></span></a><span class="c1">// With constructor</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14"></a><a href="#__codelineno-7-14"><span class="linenos" data-linenos="14 "></span></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15"></a><a href="#__codelineno-7-15"><span class="linenos" data-linenos="15 "></span></a><span class="w">    </span><span class="n">Car</span><span class="w"> </span><span class="n">Ford</span><span class="p">(</span><span class="s">&quot;Mustang&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Red&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1969</span><span class="p">);</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16"></a><a href="#__codelineno-7-16"><span class="linenos" data-linenos="16 "></span></a><span class="w">    </span><span class="n">Car</span><span class="w"> </span><span class="n">Opel</span><span class="p">(</span><span class="s">&quot;Astra&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;White&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">2005</span><span class="p">);</span>
+<a id="__codelineno-7-17" name="__codelineno-7-17"></a><a href="#__codelineno-7-17"><span class="linenos" data-linenos="17 "></span></a><span class="p">}</span>
+</code></pre></div>
+<div class="highlight"><span class="filename">C++</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><a href="#__codelineno-8-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><a href="#__codelineno-8-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">std</span><span class="p">;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><a href="#__codelineno-8-3"><span class="linenos" data-linenos=" 3 "></span></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><a href="#__codelineno-8-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="k">class</span><span class="w"> </span><span class="nc">MyClass</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><a href="#__codelineno-8-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="k">public</span><span class="o">:</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><a href="#__codelineno-8-6"><span class="linenos" data-linenos=" 6 "></span></a><span class="w">    </span><span class="c1">// Constructor</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><a href="#__codelineno-8-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="w">    </span><span class="n">MyClass</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><a href="#__codelineno-8-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Constructor called.&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><a href="#__codelineno-8-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><a href="#__codelineno-8-10"><span class="linenos" data-linenos="10 "></span></a>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><a href="#__codelineno-8-11"><span class="linenos" data-linenos="11 "></span></a><span class="w">    </span><span class="c1">// 析构函数</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a><a href="#__codelineno-8-12"><span class="linenos" data-linenos="12 "></span></a><span class="w">    </span><span class="o">~</span><span class="n">MyClass</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a><a href="#__codelineno-8-13"><span class="linenos" data-linenos="13 "></span></a><span class="w">        </span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;Destructor called.&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">endl</span><span class="p">;</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a><a href="#__codelineno-8-14"><span class="linenos" data-linenos="14 "></span></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a><a href="#__codelineno-8-15"><span class="linenos" data-linenos="15 "></span></a><span class="p">};</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a><a href="#__codelineno-8-16"><span class="linenos" data-linenos="16 "></span></a>
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a><a href="#__codelineno-8-17"><span class="linenos" data-linenos="17 "></span></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a><a href="#__codelineno-8-18"><span class="linenos" data-linenos="18 "></span></a><span class="w">    </span><span class="c1">// 创建对象</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19"></a><a href="#__codelineno-8-19"><span class="linenos" data-linenos="19 "></span></a><span class="w">    </span><span class="n">MyClass</span><span class="w"> </span><span class="n">obj</span><span class="p">;</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20"></a><a href="#__codelineno-8-20"><span class="linenos" data-linenos="20 "></span></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21"></a><a href="#__codelineno-8-21"><span class="linenos" data-linenos="21 "></span></a><span class="p">}</span>
+</code></pre></div>
+<button id="open-window-btn" onclick="toggleWindow()">Open Mini Compiler</button></p>
+</li>
+</ul>
+</details>
+<h3 id="access-modifier"><strong>Access modifier</strong><a class="headerlink" href="#access-modifier" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="note" open="open">
+<summary><code>Access modifier</code></summary>
+<p><code>Access modifier</code> is the <strong>keyword</strong> used to set the class member's accessibility for others (classes, fields, methods and properties).</p>
+<ul>
+<li>
+<p><strong>Usage:</strong> See <a href="../Inheritance/Inheritance/#inheritance-access">Access modifier</a>.</p>
+</li>
+<li>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li>Data encapsulation: Gaurantee <a href="#encapsulation">encapsulation</a>.</li>
+<li>Behavior concealment: Create public APIs but hide it's corresponding inside behaviors in the class.</li>
+</ul>
+</li>
+</ul>
+</details>
 <h4 id="reference"><strong>Reference</strong><a class="headerlink" href="#reference" title="Anchor link to this section for reference">⚓︎</a></h4>
 <ul>
 <li><a href="https://www.geeksforgeeks.org/cpp-polymorphism/">Picture resource 1</a></li>
@@ -4772,7 +4965,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 25, 2023 08:52:53</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 25, 2023 20:58:09</span>
       
         <br>
         Created:
