@@ -379,7 +379,56 @@
 </nav>
           
         
-         
+       
+    <head>
+        <title>Code Compiler</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/mode/javascript/javascript.min.js"></script>
+        <style>
+            #floating-window {
+                position: fixed;
+                top: 50px;
+                right: 50px;
+                width: 500px;
+                height: 400px;
+                background-color: white;
+                border: 1px solid black;
+                z-index: 9999;
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="toggleWindow()">Open Window</button>
+        <div id="floating-window">
+            <textarea id="code-editor"></textarea>
+            <button onclick="compileCode()">Compile</button>
+            <div id="output"></div>
+        </div>
+        <script>
+            var editor = CodeMirror.fromTextArea(document.getElementById("code-editor"), {
+                lineNumbers: true,
+                mode: "javascript"
+            });
+    
+            function toggleWindow() {
+                var window = document.getElementById("floating-window");
+                if (window.style.display === "none") {
+                    window.style.display = "block";
+                } else {
+                    window.style.display = "none";
+                }
+            }
+    
+            function compileCode() {
+                var code = editor.getValue();
+                // TODO: call your compiler API or library here
+                var output = "Compiled output: " + code;
+                document.getElementById("output").innerHTML = output;
+            }
+        </script>
+    </body> 
     <style>
         .md-header{position:initial}
         .md-main__inner{margin:0}
