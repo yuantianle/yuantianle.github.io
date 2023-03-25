@@ -257,6 +257,8 @@ comments: true
 
 ### **Compile & Run time**
 
+<button id="open-window-btn" onclick="toggleWindow()">Open Mini Compiler</button>
+
 ### **Static methods and variables**
 
 
@@ -314,9 +316,9 @@ comments: true
     }
     #floating-window .mini-title {
       position: fixed;
-      width: 100%;
       cursor: move;
       z-index: 9998;
+      width: inherit;
     }
     .CodeMirror-vscrollbar-handle:hover {
       background-color: #555;
@@ -325,9 +327,9 @@ comments: true
       position: fixed;
       top: 70px;
       bottom: 0;
-      right: 20px;
-      height: 75%;
-      width: 500px;
+      left: 70%;
+      height: 71%;
+      width: 30%;
       min-height: 200px;
       max-height: 100%;
       background-color: rgba(1,1,1,0.3);
@@ -336,19 +338,9 @@ comments: true
       z-index: 9999;
       display: none;
       overflow-y: auto;
-      resize: none;
+      resize: both;
     }
 
-    .resize-handle {
-      position: absolute;
-      width: 10px;
-      height: 10px;
-      bottom: 0;
-      right: 0;
-      cursor: nwse-resize;
-      z-index: 10;
-      background-color: rgba(0, 0, 0, 0.3);
-    }
     #floating-window input[type="text"],
     #floating-window textarea {
       display: block;
@@ -368,7 +360,7 @@ comments: true
       margin: 10px auto;
       padding: 10px 20px;
       background-color: rgba(1,1,1,1);
-      color: white;s
+      color: white;
       border: none;
       border-radius: 5px;
       font-size: 16px;
@@ -418,7 +410,10 @@ comments: true
     #floating-window::-webkit-scrollbar-thumb:hover {
       background-color: #555;
     }
-
+    #floating-window #minimize-window-btn {
+      margin: 0;
+      padding: 2px 10px 2px 10px;
+    }
   </style>
 </head>
 <body>
@@ -426,22 +421,41 @@ comments: true
        Open Mini Compiler
     </button>-->
     <div id="floating-window">
-        <h3 class = "mini-title" style="margin: 0; padding: 10px; background-color: #000000; color: white; border-top-left-radius: 5px; border-top-right-radius: 5px;">C++ Code Compiler</h3>
+        <h4 class = "mini-title" style="margin: 0; padding: 10px; background-color: #000000; color: white; border-top-left-radius: 5px; border-top-right-radius: 5px;">
+        C++ Code Compiler
+        <button id="minimize-window-btn" style="float:right; margin-right:5px;" onclick="minimizeWindow()">✕</button>
+        </h4>
         <div style="padding: 10px;">
-            <label for="input" style="display: block; margin-bottom: 5px; font-weight: bold;">Input:</label>
+            <label for="input" style="display: block; margin-top: 50px; margin-bottom: 5px; font-weight: bold;">Input:</label>
             <textarea id="input" style="color: white;" name="input" placeholder="(Optional) Enter input here..." rows="4"></textarea>
             <label for="code-editor" style="display: block; margin-top: 10px; margin-bottom: 5px; font-weight: bold;">Code:</label>
             <textarea id="code-editor" placeholder="Enter C++ code here..." rows="5"></textarea>
             <button onclick="compileCode()">Compile</button>
+            <select id="language-select">
+              <option value="c++17">C++</option>
+              <option value="c">C</option>
+              <option value="c++98">C++98</option>
+              <option value="c++11">C++11</option>
+              <option value="c++14">C++14</option>
+              <option value="c++17">C++17</option>
+              <option value="c++20">C++20</option>
+              <option value="sql">SQL</option>
+              <option value="python2.7">Python2.7</option>
+              <option value="Swift">Swift</option>
+              <option value="ruby">ruby</option>
+              <option value="bash">bash</option>
+              <option value="Haskell">Haskell</option>
+              <option value="OCaml">OCaml</option>
+              <option value="Lua">Lua</option>
+            </select>
             <div id="output">
                 <label for="output" style="display: block; margin-bottom: 5px; font-weight: bold;">Output:</label>
                 <textarea id="output" style="color: white;" name="output" placeholder="Output will be displayed here" rows="4" readonly></textarea>
-            </div><div class="resize-handle"></div>
+            </div>
         </div>
     </div>
     <script>
         var isDragging = false;
-        var isResizing = false;
         var mouseX = 0;
         var mouseY = 0;
         var windowX = 0;
@@ -450,12 +464,7 @@ comments: true
         var floatingWindow = document.getElementById('floating-window');
 
         floatingWindow.addEventListener('mousedown', function(e) {
-          if (e.target.classList.contains('resize-handle')) {
-            isResizing = true;
-            mouseX = e.clientX;
-            mouseY = e.clientY;
-          } 
-          else if (e.target.classList.contains('mini-title')) {
+          if (e.target.classList.contains('mini-title')) {
             isDragging = true;
             windowX = floatingWindow.offsetLeft;
             windowY = floatingWindow.offsetTop;
@@ -463,27 +472,24 @@ comments: true
             mouseY = e.clientY;
           }
         });
-        
+
         document.addEventListener('mousemove', function(e) {
           if (isDragging) {
             var deltaX = e.clientX - mouseX;
             var deltaY = e.clientY - mouseY;
             floatingWindow.style.left = (windowX + deltaX) + 'px';
             floatingWindow.style.top = (windowY + deltaY) + 'px';
-          } else if (isResizing) {
-            var deltaX = e.clientX - mouseX;
-            var deltaY = e.clientY - mouseY;
-            floatingWindow.style.width = (floatingWindow.offsetWidth + deltaX) + 'px';
-            floatingWindow.style.height = (floatingWindow.offsetHeight + deltaY) + 'px';
-            mouseX = e.clientX;
-            mouseY = e.clientY;
           }
         });
         
         document.addEventListener('mouseup', function(e) {
           isDragging = false;
-          isResizing = false;
         });
+
+        function minimizeWindow() {
+         document.getElementById("floating-window").style.display = "none";
+        }
+
     </script>
     <script>
         // Edit arguments for CodeMirror
@@ -495,7 +501,7 @@ comments: true
         });
         editor.setOption('theme', 'abcdef');
         editor.refresh();
-        
+        // Click button and see float window
         function toggleWindow() {
             var window = document.getElementById("floating-window");
             if (window.style.display === "none") {
@@ -505,54 +511,93 @@ comments: true
             }
         }
         // Event listener for paste event
-        document.addEventListener('paste', function(event) {
-            // Check if code editor has focus
-            //if (editor.hasFocus()) {
-                // Get the selected text from the clipboard
-                var selectedText = event.clipboardData.getData('text');
-                // Paste the selected text into the editor
-                editor.replaceSelection(selectedText);
-                // Prevent the default paste behavior
-                event.preventDefault();
-            //}
-        });
+
         // RESTful API response
         async function compileCode() {
           var code = editor.getValue();
           var input = document.getElementById("input").value;
+          var lang = document.getElementById("language-select").value;
+          var cmd;
+
+          switch(lang) {
+            case "c":
+              cmd = "gcc -std=c11 -O2 -Wall -pedantic -pthread main.cpp && ./a.out";
+            case "c++98":
+              cmd = "g++ -std=c++98 -O2 -Wall -pedantic -pthread main.cpp && ./a.out";
+              break;
+            case "c++11":
+              cmd = "g++ -std=c++11 -O2 -Wall -pedantic -pthread main.cpp && ./a.out";
+              break;
+            case "c++14":
+              cmd = "g++ -std=c++14 -O2 -Wall -pedantic -pthread main.cpp && ./a.out";
+              break;
+            case "c++17":
+              cmd = "g++ -std=c++17 -O2 -Wall -pedantic -pthread main.cpp && ./a.out";
+              break;
+            case "c++20":
+              cmd = "g++ -std=c++20 -O2 -Wall -pedantic -pthread main.cpp && ./a.out";
+              break;
+            case "sql":
+              cmd = "sqlite3 :memory: < /dev/null";
+              break;
+            case "python2.7":
+              cmd = "python2.7 main.py";
+              break;
+            case "Swift":
+              cmd = "swift main.swift";
+              break;
+            case "ruby":
+              cmd = "ruby main.rb";
+              break;
+            case "bash":
+              cmd = "bash main.sh";
+              break;
+            case "Haskell":
+              cmd = "runhaskell main.hs";
+              break;
+            case "OCaml":
+              cmd = "ocamlrun main.ml";
+              break;
+            case "Lua":
+              cmd = "lua5.1 main.lua";
+              break;
+            default:
+              cmd = "g++ -std=c++17 -O2 -Wall -pedantic -pthread main.cpp && ./a.out";
+          }
+
           var response = await fetch('https://coliru.stacked-crooked.com/compile', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-              cmd: 'g++ -std=c++17 -O2 -Wall -pedantic -pthread main.cpp && ./a.out',
+              cmd: cmd,
               src: code,
               input: input
             })
           });
-        if (response.ok) {
-            if (response.headers.get("content-type").includes("application/json")) {
-                var result = await response.json();
-                if (result.execResult) {
-                    var output = "Compiled output: " + result.execResult.stdout;
-                    document.getElementById("output").innerHTML = output;
-                } else {
-                    document.getElementById("output").innerHTML = "Error compiling code. Please try again.";
-                }
-            } else {
-                var output = await response.text();
-                var lines = output.split("\n");
-                var formattedOutput = "";
-                for (var i = 0; i < lines.length; i++) {
-                  formattedOutput += lines[i] + "<br/>";
-                }
-                document.getElementById("output").innerHTML = formattedOutput;
-            }
-        } else {
-            document.getElementById("output").innerHTML = "Error of Response, 404, Please check .";
+          if (response.ok) {
+              if (response.headers.get("content-type").includes("application/json")) {
+                  var result = await response.json();
+                  if (result.execResult) {
+                      var output = "Compiled output: " + result.execResult.stdout;
+                      document.getElementById("output").innerHTML = output;
+                  } else {
+                      document.getElementById("output").innerHTML = "Error compiling code. Please try again.";
+                  }
+              } else {
+                  var output = await response.text();
+                  var lines = output.split("\n");
+                  var formattedOutput = "";
+                  for (var i = 0; i < lines.length; i++) {
+                    formattedOutput += lines[i] + "<br/>";
+                  }
+                  document.getElementById("output").innerHTML = formattedOutput;
+              }
+          } else {
+              document.getElementById("output").innerHTML = "Error of Response, 404, Please check .";
+          }
         }
-            }
     </script>
 </body>
 
