@@ -551,7 +551,24 @@ comments: true
     #open-window-btn:hover {
       background-color: #0052cc;
     }
-    #output::placeholder {
+    #output-window::-webkit-scrollbar {
+    width: 10px;
+    }
+
+    #output-window::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    }
+
+    #output-window::-webkit-scrollbar-thumb {
+      background-color: #888;
+      border-radius: 5px;
+      border: 2px solid #f1f1f1;
+    }
+
+    #output-window::-webkit-scrollbar-thumb:hover {
+      background-color: #555;
+    }
+    #output-window::placeholder {
       color: #ABCDEF;
     }
     #input::placeholder {
@@ -619,7 +636,7 @@ comments: true
             </select>
             <div id="output">
                 <label for="output" style="display: block; margin-bottom: 5px; font-weight: bold;">Output:</label>
-                <textarea id="output" style="color: white;" name="output" placeholder="Output will be displayed here" rows="4" readonly></textarea>
+                <textarea id="output-window" style="color: white;" name="output" placeholder="Output will be displayed here." rows="4" readonly></textarea>
             </div>
         </div>
     </div>
@@ -785,21 +802,21 @@ comments: true
                   var result = await response.json();
                   if (result.execResult) {
                       var output = "Compiled output: " + result.execResult.stdout;
-                      document.getElementById("output").innerHTML = output;
+                      document.getElementById("output-window").innerHTML  = output;
                   } else {
-                      document.getElementById("output").innerHTML = "Error compiling code. Please try again.";
+                      document.getElementById("output-window").innerHTML = "Error compiling code. Please try again.";
                   }
               } else {
                   var output = await response.text();
                   var lines = output.split("\n");
                   var formattedOutput = "";
                   for (var i = 0; i < lines.length; i++) {
-                    formattedOutput += lines[i] + "<br/>";
+                    formattedOutput += lines[i] + "\n";
                   }
-                  document.getElementById("output").innerHTML = formattedOutput;
+                  document.getElementById("output-window").innerHTML = formattedOutput;
               }
           } else {
-              document.getElementById("output").innerHTML = "Error of Response, 404, Please check .";
+              document.getElementById("output-window").innerHTML = "Error of Response, 404, Please check .";
           }
         }
     </script>
