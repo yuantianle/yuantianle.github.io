@@ -6,7 +6,11 @@
 
 ### **:book: Table of contents**
 
-1. [Inheritance](Inheritance/README.md)
+1. [Basic OOP concepts](concepts.md)
+   
+2. [Pointer & Reference](ptr_ref.md)
+   
+3. [Inheritance](Inheritance/README.md)
 
-2. [Template](Template/README.md)
+4. [Template](Template/README.md)
 

@@ -434,6 +434,10 @@ comments: true
 
 <head>
   <title>C++ Code Compiler</title>
+  <!-- Include SweetAlert2 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.css">
+  <!-- Include SweetAlert2 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.js"></script>
   <link rel="stylesheet" href="https://github.com/codemirror/CodeMirror/blob/master/addon/edit/closetag.js">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/theme/abcdef.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.0/codemirror.min.css" />
@@ -574,6 +578,10 @@ comments: true
       margin: 0;
       padding: 2px 10px 2px 10px;
     }
+    #floating-window #tips-btn {
+      margin: 0;
+      padding: 2px 10px 2px 10px;
+    }
   </style>
 </head>
 <body>
@@ -584,6 +592,7 @@ comments: true
         <h4 class = "mini-title" style="margin: 0; padding: 10px; background-color: #000000; color: white; border-top-left-radius: 5px; border-top-right-radius: 5px;">
         C++ Code Compiler
         <button id="minimize-window-btn" style="float:right; margin-right:5px;" onclick="minimizeWindow()">✕</button>
+        <button id="tips-btn" style="float:right; margin-right:5px;" onclick="showTips()">?</button>
         </h4>
         <div style="padding: 10px;">
             <label for="input" style="display: block; margin-top: 50px; margin-bottom: 5px; font-weight: bold;">Input:</label>
@@ -650,17 +659,54 @@ comments: true
          document.getElementById("floating-window").style.display = "none";
         }
 
+        function showTips() {
+          Swal.fire({
+            title: "<span style='color:#FFCE54;'>👋🎉👓 Welcome to the mini compiler! 👓🎉👋</span>",
+            html: `
+              <div style='
+                background-color: #1a1a1a;
+                color: #fff;
+                padding: 20px;
+                border-radius: 10px;
+                font-family: "Comic Sans MS", cursive, sans-serif;
+                font-size: 20px;
+                line-height: 1.5;
+              '>
+                <p style='text-align: center;'>Here are some instructions:</p>
+                <ul style='list-style-type: none; margin: 0; padding: 0;'>
+                  <li>📝 You can enter input for your program in the 'Input' section (optional).</li>
+                  <li>👉 Select the code on the page, and it will automatically be added into code window.</li>
+                  <li>🔧 To compile your code, click the 'Compile' button.</li>
+                  <li>🎓 Select a programming language from the dropdown menu.</li>
+                  <li>🎉 Enjoy! 🎈</li>
+                </ul>
+              </div>
+            `,
+            confirmButtonText: "Got it!",
+            confirmButtonColor: "#FFCE54",
+            background: '#000000'
+          });
+        }
+
     </script>
     <script>
+
         // Edit arguments for CodeMirror
         var editor = CodeMirror.fromTextArea(document.getElementById("code-editor"), {
             lineNumbers: true,
             mode: "text/x-c++src",
             theme: "abcdef", // Set the theme to Monokai
-            autoCloseTages: true
+            autoCloseTags: true
         });
         editor.setOption('theme', 'abcdef');
         editor.refresh();
+        const floatWindow = document.getElementById('floating-window');
+        document.addEventListener('mouseup', (event) => {              // Listen for the 'mouseup' event on the document
+          const selection = window.getSelection().toString();     // Get the user's selection
+          if (!floatWindow.contains(event.target) && selection !== '') {        // If the selection is not empty, insert it into the code subwindow
+            editor.setValue(selection);                      // Insert the selected text into the CodeMirror editor
+          }
+        });
         // Click button and see float window
         function toggleWindow() {
             var window = document.getElementById("floating-window");
@@ -670,14 +716,12 @@ comments: true
                 window.style.display = "none";
             }
         }
-        // Event listener for paste event
-
         // RESTful API response
         async function compileCode() {
           var code = editor.getValue();
           var input = document.getElementById("input").value;
           var lang = document.getElementById("language-select").value;
-          var cmd;
+          var cmd = "";
 
           switch(lang) {
             case "c":
