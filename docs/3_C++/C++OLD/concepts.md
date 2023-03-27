@@ -8,15 +8,16 @@ comments: true
 > This material is for listing different OOP concepts:
 
 - [**OOP**](#oop)
+- [**Class and Object**](#class-and-object)
 - [**Inheritance**](#inheritance)
 - [**Polymorphism**](#polymorphism)
 - [**Encapsulation**](#encapsulation)
 - [**Interface**](#interface)
 - [**Abstract class**](#abstract-class)
-- [**Virtual function (method)**](#virtual-function-method)
+- [**Abstract methods & Virtual function (method)**](#abstract-methods--virtual-function-method)
 - [**Overloading**](#overloading)
 - [**Overriding**](#overriding)
-- [**Compile \& Run time**](#compile--run-time)
+- [**Compile & Run time**](#compile--run-time)
 - [**Static methods and variables**](#static-methods-and-variables)
 - [**Constructor and Destructor**](#constructor-and-destructor)
 - [**Access modifier**](#access-modifier)

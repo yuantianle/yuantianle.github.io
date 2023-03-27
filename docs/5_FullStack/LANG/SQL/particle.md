@@ -565,7 +565,9 @@ There are some structural operators that are used to complete SQL sentences:
 
 ???note "Having"
 
-    The `HAVING` clause was added to SQL because the WHERE keyword cannot be used with aggregate functions.
+    The `HAVING` clause was added to SQL because the `WHERE` keyword cannot be used with aggregate functions.
+    
+    (i.e. `HAVING` clause is used in conjunction with the `GROUP BY` clause to filter the results of an aggregated query based on a specific condition.)
     ???+success "Syntax"
 
         ``` sql
@@ -600,7 +602,7 @@ There are some structural operators that are used to complete SQL sentences:
         SELECT COUNT(PersonID), City
         FROM Marks_family
         GROUP BY City
-        HAVING COUNT(PersonID) > 1
+        HAVING COUNT(PersonID) > 1  -- return the city which people number is bigger than 1
         ORDER BY COUNT(PersonID) DESC;
         </div>   
 
