@@ -4774,7 +4774,8 @@ WHERE City = 'Salem';
 <h3 id="having"><strong>Having</strong><a class="headerlink" href="#having" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="note">
 <summary>Having</summary>
-<p>The <code>HAVING</code> clause was added to SQL because the WHERE keyword cannot be used with aggregate functions.</p>
+<p>The <code>HAVING</code> clause was added to SQL because the <code>WHERE</code> keyword cannot be used with aggregate functions.</p>
+<p>(i.e. <code>HAVING</code> clause is used in conjunction with the <code>GROUP BY</code> clause to filter the results of an aggregated query based on a specific condition.)</p>
 <details class="success" open="open">
 <summary>Syntax</summary>
 <div class="highlight"><span class="filename">SQL</span><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><a href="#__codelineno-11-1"><span class="linenos" data-linenos="1 "></span></a><span class="k">SELECT</span><span class="w"> </span><span class="k">column_name</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
@@ -4808,7 +4809,7 @@ VALUES (127, 'Yong', 'C', 'NC', 'Albany');
 SELECT COUNT(PersonID), City
 FROM Marks_family
 GROUP BY City
-HAVING COUNT(PersonID) &gt; 1
+HAVING COUNT(PersonID) &gt; 1  -- return the city which people number is bigger than 1
 ORDER BY COUNT(PersonID) DESC;
 </div>   </p>
 </details>
@@ -4824,7 +4825,7 @@ ORDER BY COUNT(PersonID) DESC;
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 23, 2023 23:44:25</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 27, 2023 06:27:10</span>
       
         <br>
         Created:

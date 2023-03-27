@@ -4165,22 +4165,97 @@
 <h3 id="glance-of-contents"><strong>Glance of contents</strong><a class="headerlink" href="#glance-of-contents" title="Anchor link to this section for reference">⚓︎</a></h3>
 <p>Here are some higher-level uses:</p>
 <ul>
+<li><a href="#drop"><code>DROP</code></a> - Delete database or table.</li>
+<li><a href="#stored-procedures"><code>Stored PROCEDURES</code></a> - Store SQL code for reuse.</li>
 <li><a href="#select-distinct"><code>SELECT DISTINCT</code></a> - extracts distinct data from a database</li>
-<li><a href="#"><code>ALTER TABLE</code></a> - modifies a table</li>
-<li>[<code>Like</code>]</li>
-<li>[<code>Wildcards</code>]</li>
-<li>[<code>Select Into</code>]</li>
-<li>[<code>Insert Into Select</code>]</li>
+<li><a href="#like"><code>LIKE</code></a> - Specify the data format in WHERE.</li>
+<li><a href="#wildcard"><code>WILDCARDS</code></a> - For regex expression.</li>
+<li>[<code>ALTER TABLE</code>]</li>
+<li>[<code>SELECT INTO</code>]</li>
+<li>[<code>INSERT INTO SELECT</code>]</li>
 <li>[<code>Case</code>]</li>
 </ul>
-<h3 id="select-distinct"><strong>Select Distinct</strong><a class="headerlink" href="#select-distinct" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="drop"><strong>DROP</strong><a class="headerlink" href="#drop" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="note">
-<summary>Select Distinct</summary>
+<summary>DROP</summary>
+<p>The <code>DROP</code> statement is used to delete the whole database or table.</p>
+<details class="success" open="open">
+<summary>Syntax</summary>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos="1 "></span></a><span class="k">DROP</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">databasename</span><span class="p">;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><a href="#__codelineno-0-2"><span class="linenos" data-linenos="2 "></span></a><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">table_name</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><a href="#__codelineno-0-3"><span class="linenos" data-linenos="3 "></span></a><span class="k">TRUNCATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="k">table_name</span><span class="p">;</span><span class="w">  </span><span class="c1">-- delete all the data inside a table, but not the table itself.</span>
+</code></pre></div>
+</details>
+<details class="example">
+<summary>click to see an example</summary>
+<p><div data-pym-src='https://www.jdoodle.com/plugin' data-language="sql"
+  data-version-index="0">
+CREATE TABLE Marks_family (
+    PersonID int,
+    LastName varchar(255), --hold characters
+    FirstName varchar(255),
+    Address varchar(255),
+    City varchar(255)
+);
+INSERT INTO Marks_family (PersonID, City)
+VALUES (123,'Albany');
+INSERT INTO Marks_family (PersonID, City)
+VALUES (123,'Salem');
+INSERT INTO Marks_family (PersonID, City)
+VALUES (223,'Albany');
+INSERT INTO Marks_family (PersonID, City)
+VALUES (123,'Albany');
+ 
+DROP TABLE Marks_family;
+</div>   </p>
+</details>
+</details>
+<h3 id="stored-procedures"><strong>Stored PROCEDURES</strong><a class="headerlink" href="#stored-procedures" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="note">
+<summary>Stored PROCEDURES</summary>
+<p>A <code>stored PROCEDURES</code> is a prepared SQL code that you can save, so the code can be <strong>reused</strong> over and over again.</p>
+<details class="success" open="open">
+<summary>Syntax</summary>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos="1 "></span></a><span class="c1">-- Stored Procedure Syntax</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><a href="#__codelineno-1-2"><span class="linenos" data-linenos="2 "></span></a><span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">procedure_name</span><span class="w"> </span><span class="c1">--definition</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><a href="#__codelineno-1-3"><span class="linenos" data-linenos="3 "></span></a><span class="k">AS</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><a href="#__codelineno-1-4"><span class="linenos" data-linenos="4 "></span></a><span class="n">sql_statement</span><span class="w">                   </span><span class="c1">--function body</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><a href="#__codelineno-1-5"><span class="linenos" data-linenos="5 "></span></a><span class="k">GO</span><span class="p">;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><a href="#__codelineno-1-6"><span class="linenos" data-linenos="6 "></span></a><span class="c1">-- Execute a Stored Procedure</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><a href="#__codelineno-1-7"><span class="linenos" data-linenos="7 "></span></a><span class="k">EXEC</span><span class="w"> </span><span class="n">procedure_name</span><span class="p">;</span><span class="w">            </span><span class="c1">--use the function</span>
+</code></pre></div>
+</details>
+<details class="example">
+<summary>click to see an example</summary>
+<p><div data-pym-src='https://www.jdoodle.com/plugin' data-language="sql"
+  data-version-index="0">
+-- <strong>EG1</strong>
+-- Stored Procedure Syntax
+CREATE PROCEDURE SelectAllCustomers @City nvarchar(30), @PostalCode nvarchar(10)
+AS
+SELECT * FROM Customers WHERE City = @City AND PostalCode = @PostalCode
+GO;
+-- Execute a Stored Procedure
+EXEC SelectAllCustomers @City = 'London', @PostalCode = 'WA1 1DP';</p>
+<p>-- <strong>EG2</strong>
+-- Stored Procedure Syntax
+CREATE PROCEDURE SelectAllCustomers
+AS
+SELECT * FROM Customers
+GO;
+-- Execute a Stored Procedure
+EXEC SelectAllCustomers;
+</div></p>
+</details>
+</details>
+<h3 id="select-distinct"><strong>SELECT DISTINCT</strong><a class="headerlink" href="#select-distinct" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="note">
+<summary>SELECT DISTINCT</summary>
 <p>The <code>SELECT DISTINCT</code> statement is used to return only distinct (different) values.</p>
 <details class="success" open="open">
 <summary>Syntax</summary>
-<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos="1 "></span></a><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">column1</span><span class="p">,</span><span class="w"> </span><span class="n">column2</span><span class="p">,</span><span class="w"> </span><span class="p">...</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><a href="#__codelineno-0-2"><span class="linenos" data-linenos="2 "></span></a><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="p">;</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><a href="#__codelineno-2-1"><span class="linenos" data-linenos="1 "></span></a><span class="k">SELECT</span><span class="w"> </span><span class="k">DISTINCT</span><span class="w"> </span><span class="n">column1</span><span class="p">,</span><span class="w"> </span><span class="n">column2</span><span class="p">,</span><span class="w"> </span><span class="p">...</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><a href="#__codelineno-2-2"><span class="linenos" data-linenos="2 "></span></a><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="p">;</span>
 </code></pre></div>
 </details>
 <details class="example">
@@ -4210,35 +4285,52 @@ SELECT DISTINCT PersonID FROM Marks_family;
 </div>   </p>
 </details>
 </details>
-<h3 id="update"><strong>Update</strong><a class="headerlink" href="#update" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="like"><strong>LIKE</strong><a class="headerlink" href="#like" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="note">
-<summary>Update</summary>
-<p>The <code>UPDATE</code> statement is used to <strong>modify</strong> the existing records in a table.</p>
+<summary>LIKE</summary>
+<p>The <code>LIKE</code> operator is used in a WHERE clause to search for a specified pattern in a column.</p>
 <details class="success" open="open">
 <summary>Syntax</summary>
-<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos="1 "></span></a><span class="k">UPDATE</span><span class="w"> </span><span class="k">table_name</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><a href="#__codelineno-1-2"><span class="linenos" data-linenos="2 "></span></a><span class="k">SET</span><span class="w"> </span><span class="n">column1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value1</span><span class="p">,</span><span class="w"> </span><span class="n">column2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value2</span><span class="p">,</span><span class="w"> </span><span class="p">...</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><a href="#__codelineno-1-3"><span class="linenos" data-linenos="3 "></span></a><span class="k">WHERE</span><span class="w"> </span><span class="n">condition</span><span class="p">;</span>
+<div class="highlight"><span class="filename">SQL</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><a href="#__codelineno-3-1"><span class="linenos" data-linenos="1 "></span></a><span class="k">SELECT</span><span class="w"> </span><span class="n">column1</span><span class="p">,</span><span class="w"> </span><span class="n">column2</span><span class="p">,</span><span class="w"> </span><span class="p">...</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><a href="#__codelineno-3-2"><span class="linenos" data-linenos="2 "></span></a><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><a href="#__codelineno-3-3"><span class="linenos" data-linenos="3 "></span></a><span class="k">WHERE</span><span class="w"> </span><span class="n">columnN</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="n">pattern</span><span class="p">;</span>
 </code></pre></div>
 </details>
-<p>After the example below, you will get a table like:</p>
 <table>
 <thead>
 <tr>
-<th align="center">PersonID</th>
-<th align="center">LastName</th>
-<th align="center">FirstName</th>
-<th align="center">Address</th>
-<th align="center">City</th>
+<th align="center">LIKE</th>
+<th align="center">Operator Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">123</td>
-<td align="center">Tom</td>
-<td align="center">Skage</td>
-<td align="center">OR</td>
-<td align="center">Albany</td>
+<td align="center">WHERE CustomerName LIKE 'a%'</td>
+<td align="center">Finds any values that start with "a"</td>
+</tr>
+<tr>
+<td align="center">WHERE CustomerName LIKE '%a'</td>
+<td align="center">Finds any values that end with "a"</td>
+</tr>
+<tr>
+<td align="center">WHERE CustomerName LIKE '%or%'</td>
+<td align="center">Finds any values that have "or" in any position</td>
+</tr>
+<tr>
+<td align="center">WHERE CustomerName LIKE '_r%'</td>
+<td align="center">Finds any values that have "r" in the second position</td>
+</tr>
+<tr>
+<td align="center">WHERE CustomerName LIKE 'a_%'</td>
+<td align="center">Finds any values that start with "a" and are at least 2 characters in length</td>
+</tr>
+<tr>
+<td align="center">WHERE CustomerName LIKE 'a__%'</td>
+<td align="center">Finds any values that start with "a" and are at least 3 characters in length</td>
+</tr>
+<tr>
+<td align="center">WHERE ContactName LIKE 'a%o'</td>
+<td align="center">Finds any values that start with "a" and ends with "o"</td>
 </tr>
 </tbody>
 </table>
@@ -4246,17 +4338,53 @@ SELECT DISTINCT PersonID FROM Marks_family;
 <summary>click to see an example</summary>
 <p><div data-pym-src='https://www.jdoodle.com/plugin' data-language="sql"
   data-version-index="0">
-CREATE TABLE Marks_family (
-    PersonID int,
-    LastName varchar(255), --hold characters
-    FirstName varchar(255),
-    Address varchar(255),
-    City varchar(255)
-);
- 
-INSERT INTO Marks_family (PersonID, LastName, FirstName, Address, City)
-VALUES (123, 'Tom', 'Skage', 'OR', 'Albany');
-</div>   </p>
+SELECT * FROM Customers
+WHERE CustomerName LIKE 'a%';
+</div></p>
+</details>
+</details>
+<h3 id="wildcard"><strong>Wildcard</strong><a class="headerlink" href="#wildcard" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="note">
+<summary>Wildcard</summary>
+<p><code>Wildcard</code> characters are used with the <code>LIKE</code> operator. The <code>LIKE</code> operator is used in a <code>WHERE</code> clause to search for a specified pattern in a column.</p>
+<details class="example">
+<summary>click to see an example</summary>
+<table>
+<thead>
+<tr>
+<th align="center">Symbol</th>
+<th align="center">Description</th>
+<th align="center">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">%</td>
+<td align="center">Represents zero or more characters</td>
+<td align="center">bl% finds bl, black, blue, and blob</td>
+</tr>
+<tr>
+<td align="center">_</td>
+<td align="center">Represents a single character</td>
+<td align="center">h_t finds hot, hat, and hit</td>
+</tr>
+<tr>
+<td align="center">[]</td>
+<td align="center">Represents any single character within the brackets</td>
+<td align="center">h[oa]t finds hot and hat, but not hit</td>
+</tr>
+<tr>
+<td align="center">^</td>
+<td align="center">Represents any character not in the brackets</td>
+<td align="center">h[^oa]t finds hit, but not hot and hat</td>
+</tr>
+<tr>
+<td align="center">-</td>
+<td align="center">Represents any single character within the specified range</td>
+<td align="center">c[a-b]t finds cat and cbt</td>
+</tr>
+</tbody>
+</table>
 </details>
 </details>
 <h3 id="references"><strong>References:</strong><a class="headerlink" href="#references" title="Anchor link to this section for reference">⚓︎</a></h3>
@@ -4270,7 +4398,7 @@ VALUES (123, 'Tom', 'Skage', 'OR', 'Albany');
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 23, 2023 07:37:25</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">March 27, 2023 06:27:10</span>
       
         <br>
         Created:
