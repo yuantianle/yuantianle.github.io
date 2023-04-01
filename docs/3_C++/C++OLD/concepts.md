@@ -800,6 +800,11 @@ comments: true
               input: input
             })
           });
+
+          response.headers.append('Access-Control-Allow-Origin', '*');
+          response.headers.append('Access-Control-Allow-Methods', 'PUT, GET, HEAD, POST, DELETE, OPTIONS');
+          response.headers.append('Access-Control-Allow-Headers', 'origin, x-requested-with, content-type');
+
           if (response.ok) {
               if (response.headers.get("content-type").includes("application/json")) {
                   var result = await response.json();

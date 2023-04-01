@@ -3,9 +3,9 @@ comments: true
 ᴴₒᴴₒᴴₒ: ture
 ---
 
-# **八股文**
+# ** 🚤 Fast Read Catalog**
 
-> Here is the component that used for C++ interview:
+> Here collects:
 
 0. [OOP Concepts](C++OLD/concepts.md)
 

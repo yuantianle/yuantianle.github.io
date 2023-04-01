@@ -238,7 +238,7 @@ nav:
 
     - C++: 
       - 3_C++/README.md
-      - 八股文目录 (Interview): 3_C++/fast_read.md
+      - Fast Read Catalog: 3_C++/fast_read.md
       - Oldschool C++:
         - 3_C++/C++OLD/README.md
         - OOP concepts: 3_C++/C++OLD/concepts.md
@@ -327,6 +327,12 @@ nav:
           - Structural Operators: 5_FullStack/LANG/SQL/particle.md
           - Higher-level Management: 5_FullStack/LANG/SQL/higher.md
           - Multiple Table Operation: 5_FullStack/LANG/SQL/multi_table.md
+    - ICS:
+      - 10_Interview/README.md
+      - OOP: 3_C++/C++OLD/concepts.md
+      - Basic Management: 5_FullStack/LANG/SQL/README.md
+      - Operating System: 10_Interview/Operating_system/README.md
+      - Networking: 10_Interview/Networking/README.md
 
     - Math: 
       - 6_Math/README.md

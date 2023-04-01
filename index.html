@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>智能 GPT 助手</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+      .container {
+        margin-top: 50px;
+      }
+      .card {
+        margin-bottom: 20px;
+      }
+      .card-header {
+        font-weight: bold;
+        background-color: #007bff;
+        color: white;
+      }
+      .card-body {
+        font-size: 18px;
+      }
+      #conversation {
+        height: 500px;
+        overflow-y: scroll;
+        border: 1px solid #ccc;
+        padding: 10px;
+      }
+      #input-container {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>智能 GPT 助手</h1>
+      <div id="conversation"></div>
+      <div id="input-container">
+        <input type="text" class="form-control" placeholder="输入您的问题" id="input">
+        <button type="button" class="btn btn-primary" id="submit-btn">提交</button>
+      </div>
+    </div>
+
+    <!-- GPT script -->
+    <script src="https://cdn.jsdelivr.net/npm/@openai/api"></script>
+    <script>
+      // initialize OpenAI API
+      const openai = new OpenAI('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');
+
+      // define conversation state
+      let conversationState = {};
+
+      // render message
+      const renderMessage = (text, isUser) => {
+        const container = document.getElementById('conversation');
+        const card = document.createElement('div');
+        card.classList.add('card');
+        const header = document.createElement('div');
+        header.classList.add('card-header');
+        header.innerText = isUser ? '我' : 'GPT';
+        const body = document.createElement('div');
+        body.classList.add('card-body');
+        body.innerText = text;
+        card.appendChild(header);
+        card.appendChild(body);
+        container.appendChild(card);
+        container.scrollTop = container.scrollHeight;
+      };
+
+      // handle user input
+      const handleUserInput = async () => {
+        const input = document.getElementById('input').value.trim();
+        if (!input) {
+          return;
+        }
+        renderMessage(input, true);
+        const response = await openai.complete({
+          engine: 'davinci',
+          prompt: input,
+          maxTokens: 100,
+          n: 1,
+          stop: ['\n']
+        });
+        const output = response.data.choices[0].text.trim();
+        conversationState = response.data.conversation;
+        renderMessage(output, false);
+        document.getElementById('input').value = '';
+      };
+
+      // handle submit button click
+      const submitButton = document.getElementById('submit-btn');
+      submitButton.addEventListener('click', handleUserInput);
+
+      // handle enter key press
+      const inputField = document.getElementById('input');
+      inputField.addEventListener('keyup', event => {
+        if (event.key === 'Enter') {
+          handleUserInput();
+        }
+      });
+
+      // run initial prompt on load
+      window.onload = () => {
+        renderMessage('您好，我是智能 GPT 助手。请问有什么我可以帮您的吗？', false);
+      };
+    </script>
+  </body>
+</html>
