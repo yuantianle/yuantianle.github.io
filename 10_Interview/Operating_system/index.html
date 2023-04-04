@@ -2035,6 +2035,8 @@
         
           
         
+          
+        
       
       
         
@@ -2662,6 +2664,102 @@
     <li class="md-nav__item">
       <a href="../../3_C%2B%2B/STL/unodered_set/" class="md-nav__link">
         unordered_set
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_6" >
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../../3_C%2B%2B/Design_Pattern/">Design Pattern</a>
+          
+            <label for="__nav_4_6">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_6">
+          <span class="md-nav__icon md-icon"></span>
+          Design Pattern
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3_C%2B%2B/Design_Pattern/UML/" class="md-nav__link">
+        UML class Diagram
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3_C%2B%2B/Design_Pattern/basic/" class="md-nav__link">
+        Software desgin basic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../3_C%2B%2B/Design_Pattern/contents/" class="md-nav__link">
+        Desgin Patterns
       </a>
     </li>
   
@@ -3963,7 +4061,7 @@
   
     <li class="md-nav__item">
       <a href="../../5_FullStack/LANG/SQL/" class="md-nav__link">
-        Basic Management
+        Database Management
       </a>
     </li>
   
@@ -4358,33 +4456,70 @@
 <summary>What are OS components?</summary>
 <ul>
 <li>
-<p><strong>Kernel:</strong> the core part of the operating system, responsible for <u>managing computer hardware</u> and <u>providing basic functions</u> such as system calls.</p>
+<p><strong><code>Kernel</code>:</strong> the core part of the operating system, responsible for <u>managing computer hardware</u> and <u>providing basic functions</u> such as system calls.</p>
 </li>
 <li>
-<p><strong>Process manager:</strong> responsible for the <u>efficient operation</u> of the computer system, including:</p>
+<p><strong><code>Process manager</code>:</strong> responsible for the <u>efficient operation</u> of the computer system, including:</p>
 <ul>
 <li>creating, deleting, scheduling, and managing processes.</li>
 </ul>
 </li>
 <li>
-<p><strong>Storage manager:</strong> responsible for <u>managing computer memory</u> resources, including:</p>
+<p><strong><code>Storage manager</code>:</strong> responsible for <u>managing computer memory</u> resources, including:</p>
 <ul>
 <li>memory allocation, recovery, and protection.</li>
 </ul>
 </li>
 <li>
-<p><strong>File system:</strong> responsible for <u>managing files and directories</u> in the computer system, including:</p>
+<p><strong><code>File system</code>:</strong> responsible for <u>managing files and directories</u> in the computer system, including:</p>
 <ul>
 <li>file reading, writing, creation, deletion, and protection.</li>
 </ul>
 </li>
 <li>
-<p><strong>Input/output manager:</strong> responsible for managing <u>data transfer</u> between the computer system and external devices, including: </p>
+<p><strong><code>Input/output manager</code>:</strong> responsible for managing <u>data transfer</u> between the computer system and external devices, including: </p>
 <ul>
 <li>input/output buffering, device drivers, and interrupt handling.</li>
 </ul>
 </li>
 </ul>
+</details>
+<h3 id="what-are-process-and-thread"><strong>What are process and thread?</strong><a class="headerlink" href="#what-are-process-and-thread" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="question">
+<summary>What are process and thread?</summary>
+<div class="admonition note">
+<p class="admonition-title">Definition with comparison</p>
+<ul>
+<li>
+<p><strong>Definition:</strong> </p>
+<ul>
+<li><code>Process</code> is an <mark class="critic">instance of a running program</mark> with its own independent address space and system resources, including <u>program code</u>, <u>data</u>, <u>stack</u>, and <u>process control blocks</u>. </li>
+<li><code>Thread</code> is an <mark class="critic">execution unit in a process</mark>, sharing resources of the process including <u>address space</u>, <u>file descriptors</u>, <u>signal handlers</u>, and <u>process ID</u>. </li>
+</ul>
+</li>
+<li>
+<p><strong>Scheduling:</strong> </p>
+<ul>
+<li><code>Process</code> is the <u>basic scheduling unit</u> in an operating system, and the operating system manages processes through process <u>control blocks</u>. </li>
+<li><code>Threads</code> are <u>scheduling units</u> within a process, and the operating system schedules threads.</li>
+</ul>
+</li>
+<li>
+<p><strong>Concurrency:</strong> Different processes run <u>concurrently</u>, with each process having its own independent address space and resources. </p>
+<ul>
+<li><code>Processes</code> are <u>independent</u> of each other. </li>
+<li><code>Threads</code> within the same process share resources and data, and can execute concurrently.</li>
+</ul>
+</li>
+<li>
+<p><strong>System overhead:</strong> </p>
+<ul>
+<li><code>Process</code> switching requires saving and restoring <u>all</u> process states, so process switching incurs a <u>larger system overhead</u>. </li>
+<li><code>Thread</code> switching only requires saving and restoring <u>part</u> of the thread state, so thread switching incurs a <u>smaller system overhead</u>.</li>
+</ul>
+</li>
+</ul>
+</div>
 </details>
 <h4 id="references"><strong>References:</strong><a class="headerlink" href="#references" title="Anchor link to this section for reference">⚓︎</a></h4>
 <ul>
@@ -4396,7 +4531,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 1, 2023 05:07:26</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 4, 2023 08:21:07</span>
       
         <br>
         Created:
