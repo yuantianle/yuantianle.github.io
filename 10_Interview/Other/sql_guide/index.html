@@ -9,24 +9,24 @@
       
       
       
-        <link rel="prev" href="../">
+        <link rel="prev" href="../oop_guide/">
       
       
-        <link rel="next" href="../Map_reduce/">
+        <link rel="next" href="../../Operating_system/">
       
-      <link rel="icon" href="../../../../images/self.ico">
+      <link rel="icon" href="../../../images/self.ico">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
     
     
       
-        <title>Dispatch queue - Tianle Yuan's Blog</title>
+        <title>Database Management - Tianle Yuan's Blog</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.7a7fce14.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7a7fce14.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a0c5b2b5.min.css">
       
       
 
@@ -42,9 +42,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dispatch-queue-and-dead-lock" class="md-skip">
+        <a href="#sql" class="md-skip">
           Skip to content
         </a>
       
@@ -87,9 +87,9 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../.." title="Tianle Yuan&#39;s Blog" class="md-header__button md-logo" aria-label="Tianle Yuan's Blog" data-md-component="logo">
+    <a href="../../.." title="Tianle Yuan&#39;s Blog" class="md-header__button md-logo" aria-label="Tianle Yuan's Blog" data-md-component="logo">
       
-  <img src="../../../../images/logo_reverse.png" alt="logo">
+  <img src="../../../images/logo_reverse.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Dispatch queue
+              Database Management
             
           </span>
         </div>
@@ -143,7 +143,7 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="../../../.." hreflang="en" class="md-select__link">
+                  <a href="../../.." hreflang="en" class="md-select__link">
                     English
                   </a>
                 </li>
@@ -228,7 +228,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../../.." class="md-tabs__link">
+    <a href="../../.." class="md-tabs__link">
       Intro
     </a>
   </li>
@@ -243,8 +243,72 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../1_Computer_Graphics/" class="md-tabs__link">
+      <a href="../../../1_Computer_Graphics/" class="md-tabs__link">
         CG
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../2_Software_Engineering/" class="md-tabs__link">
+        SDE
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../3_C%2B%2B/" class="md-tabs__link">
+        C++
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../4_Algorithms/" class="md-tabs__link">
+        Algorithm
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../5_FullStack/" class="md-tabs__link">
+        Full Stack
       </a>
     </li>
   
@@ -261,71 +325,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../" class="md-tabs__link md-tabs__link--active">
-        SDE
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../../../3_C%2B%2B/" class="md-tabs__link">
-        C++
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../../../4_Algorithms/" class="md-tabs__link">
-        Algorithm
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../../../5_FullStack/" class="md-tabs__link">
-        Full Stack
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../../../../10_Interview/" class="md-tabs__link">
+      <a href="../../" class="md-tabs__link md-tabs__link--active">
         ICS
       </a>
     </li>
@@ -341,7 +341,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../6_Math/" class="md-tabs__link">
+      <a href="../../../6_Math/" class="md-tabs__link">
         Math
       </a>
     </li>
@@ -357,7 +357,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../7_Casual_Literary_Notes/Dunhuang/" class="md-tabs__link">
+      <a href="../../../7_Casual_Literary_Notes/Dunhuang/" class="md-tabs__link">
         By-time
       </a>
     </li>
@@ -373,7 +373,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../8_Japanese_Learning/" class="md-tabs__link">
+      <a href="../../../8_Japanese_Learning/" class="md-tabs__link">
         日本語
       </a>
     </li>
@@ -389,7 +389,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../../9_Guitar_Garage/" class="md-tabs__link">
+      <a href="../../../9_Guitar_Garage/" class="md-tabs__link">
         Guitar Sheets
       </a>
     </li>
@@ -419,9 +419,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../.." title="Tianle Yuan&#39;s Blog" class="md-nav__button md-logo" aria-label="Tianle Yuan's Blog" data-md-component="logo">
+    <a href="../../.." title="Tianle Yuan&#39;s Blog" class="md-nav__button md-logo" aria-label="Tianle Yuan's Blog" data-md-component="logo">
       
-  <img src="../../../../images/logo_reverse.png" alt="logo">
+  <img src="../../../images/logo_reverse.png" alt="logo">
 
     </a>
     Tianle Yuan's Blog
@@ -449,7 +449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Intro
       </a>
     </li>
@@ -488,7 +488,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../1_Computer_Graphics/">CG</a>
+          <a href="../../../1_Computer_Graphics/">CG</a>
           
             <label for="__nav_2">
               <span class="md-nav__icon md-icon"></span>
@@ -541,7 +541,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../1_Computer_Graphics/Science/">Science</a>
+          <a href="../../../1_Computer_Graphics/Science/">Science</a>
           
             <label for="__nav_2_2">
               <span class="md-nav__icon md-icon"></span>
@@ -564,7 +564,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Computer_Graphics/Science/Thermal/" class="md-nav__link">
+      <a href="../../../1_Computer_Graphics/Science/Thermal/" class="md-nav__link">
         Thermal Dynamics
       </a>
     </li>
@@ -578,7 +578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Computer_Graphics/Science/Noise/" class="md-nav__link">
+      <a href="../../../1_Computer_Graphics/Science/Noise/" class="md-nav__link">
         Noise
       </a>
     </li>
@@ -592,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Computer_Graphics/Science/Light/" class="md-nav__link">
+      <a href="../../../1_Computer_Graphics/Science/Light/" class="md-nav__link">
         Lighting
       </a>
     </li>
@@ -655,7 +655,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../1_Computer_Graphics/CGtech/">Tools</a>
+          <a href="../../../1_Computer_Graphics/CGtech/">Tools</a>
           
             <label for="__nav_2_3">
               <span class="md-nav__icon md-icon"></span>
@@ -678,7 +678,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Computer_Graphics/CGtech/OpenCV/" class="md-nav__link">
+      <a href="../../../1_Computer_Graphics/CGtech/OpenCV/" class="md-nav__link">
         OpenCV
       </a>
     </li>
@@ -692,7 +692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Computer_Graphics/CGtech/Shader/" class="md-nav__link">
+      <a href="../../../1_Computer_Graphics/CGtech/Shader/" class="md-nav__link">
         Shader
       </a>
     </li>
@@ -706,7 +706,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Computer_Graphics/CGtech/Threejs/" class="md-nav__link">
+      <a href="../../../1_Computer_Graphics/CGtech/Threejs/" class="md-nav__link">
         Three.js
       </a>
     </li>
@@ -720,7 +720,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Computer_Graphics/CGtech/Unity/" class="md-nav__link">
+      <a href="../../../1_Computer_Graphics/CGtech/Unity/" class="md-nav__link">
         Unity
       </a>
     </li>
@@ -734,7 +734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Computer_Graphics/CGtech/Unreal/" class="md-nav__link">
+      <a href="../../../1_Computer_Graphics/CGtech/Unreal/" class="md-nav__link">
         Unreal Engine
       </a>
     </li>
@@ -748,7 +748,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../1_Computer_Graphics/CGtech/Vulkan/" class="md-nav__link">
+      <a href="../../../1_Computer_Graphics/CGtech/Vulkan/" class="md-nav__link">
         Vulkan
       </a>
     </li>
@@ -787,7 +787,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../1_Computer_Graphics/Art/">Arts</a>
+          <a href="../../../1_Computer_Graphics/Art/">Arts</a>
           
         </div>
       
@@ -819,16 +819,14 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
       
       
         
@@ -861,7 +859,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../">SDE</a>
+          <a href="../../../2_Software_Engineering/">SDE</a>
           
             <label for="__nav_3">
               <span class="md-nav__icon md-icon"></span>
@@ -869,7 +867,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           SDE
@@ -884,7 +882,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Review/" class="md-nav__link">
+      <a href="../../../2_Software_Engineering/Review/" class="md-nav__link">
         CS561 Review
       </a>
     </li>
@@ -920,7 +918,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../Agile/">Agile</a>
+          <a href="../../../2_Software_Engineering/Agile/">Agile</a>
           
             <label for="__nav_3_3">
               <span class="md-nav__icon md-icon"></span>
@@ -943,7 +941,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Agile/intro/" class="md-nav__link">
+      <a href="../../../2_Software_Engineering/Agile/intro/" class="md-nav__link">
         Agile Intro
       </a>
     </li>
@@ -957,7 +955,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Agile/scrum/" class="md-nav__link">
+      <a href="../../../2_Software_Engineering/Agile/scrum/" class="md-nav__link">
         Agile Scrum
       </a>
     </li>
@@ -1004,7 +1002,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../Github/">Git & GitHub</a>
+          <a href="../../../2_Software_Engineering/Github/">Git & GitHub</a>
           
             <label for="__nav_3_4">
               <span class="md-nav__icon md-icon"></span>
@@ -1027,7 +1025,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Github/theory/" class="md-nav__link">
+      <a href="../../../2_Software_Engineering/Github/theory/" class="md-nav__link">
         Git Theory
       </a>
     </li>
@@ -1041,7 +1039,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Github/commands/" class="md-nav__link">
+      <a href="../../../2_Software_Engineering/Github/commands/" class="md-nav__link">
         Git Commands
       </a>
     </li>
@@ -1055,7 +1053,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Github/action/" class="md-nav__link">
+      <a href="../../../2_Software_Engineering/Github/action/" class="md-nav__link">
         GitHub Action
       </a>
     </li>
@@ -1069,7 +1067,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Github/sematicsversion/" class="md-nav__link">
+      <a href="../../../2_Software_Engineering/Github/sematicsversion/" class="md-nav__link">
         GitHub Semantics Versioning
       </a>
     </li>
@@ -1110,7 +1108,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../Test/">Test</a>
+          <a href="../../../2_Software_Engineering/Test/">Test</a>
           
             <label for="__nav_3_5">
               <span class="md-nav__icon md-icon"></span>
@@ -1133,7 +1131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Test/test/" class="md-nav__link">
+      <a href="../../../2_Software_Engineering/Test/test/" class="md-nav__link">
         Test Basic
       </a>
     </li>
@@ -1180,7 +1178,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../Docker/">Docker</a>
+          <a href="../../../2_Software_Engineering/Docker/">Docker</a>
           
             <label for="__nav_3_6">
               <span class="md-nav__icon md-icon"></span>
@@ -1225,7 +1223,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../Docker/Guidance/">Guidance</a>
+          <a href="../../../2_Software_Engineering/Docker/Guidance/">Guidance</a>
           
             <label for="__nav_3_6_2">
               <span class="md-nav__icon md-icon"></span>
@@ -1248,7 +1246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Docker/Guidance/docker_compose/" class="md-nav__link">
+      <a href="../../../2_Software_Engineering/Docker/Guidance/docker_compose/" class="md-nav__link">
         Compose -> Container
       </a>
     </li>
@@ -1262,7 +1260,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Docker/Guidance/docker_run/" class="md-nav__link">
+      <a href="../../../2_Software_Engineering/Docker/Guidance/docker_run/" class="md-nav__link">
         Run -> Container
       </a>
     </li>
@@ -1283,7 +1281,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Docker/A_good_model_for_Docker_Image_initialization/" class="md-nav__link">
+      <a href="../../../2_Software_Engineering/Docker/A_good_model_for_Docker_Image_initialization/" class="md-nav__link">
         Docker Image (DIY)
       </a>
     </li>
@@ -1297,7 +1295,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Docker/Docker_compose/" class="md-nav__link">
+      <a href="../../../2_Software_Engineering/Docker/Docker_compose/" class="md-nav__link">
         Docker Compose
       </a>
     </li>
@@ -1311,7 +1309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Docker/Docker_Command/" class="md-nav__link">
+      <a href="../../../2_Software_Engineering/Docker/Docker_Command/" class="md-nav__link">
         Command Line
       </a>
     </li>
@@ -1330,16 +1328,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
       
       
         
@@ -1356,7 +1352,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../">Swift</a>
+          <a href="../../../2_Software_Engineering/Swift/">Swift</a>
           
             <label for="__nav_3_7">
               <span class="md-nav__icon md-icon"></span>
@@ -1364,7 +1360,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_7">
           <span class="md-nav__icon md-icon"></span>
           Swift
@@ -1401,7 +1397,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../Swift_on_win10/">Swift on Windows 10</a>
+          <a href="../../../2_Software_Engineering/Swift/Swift_on_win10/">Swift on Windows 10</a>
           
             <label for="__nav_3_7_2">
               <span class="md-nav__icon md-icon"></span>
@@ -1424,7 +1420,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Swift_on_win10/TL_DR/" class="md-nav__link">
+      <a href="../../../2_Software_Engineering/Swift/Swift_on_win10/TL_DR/" class="md-nav__link">
         TL;DR
       </a>
     </li>
@@ -1438,7 +1434,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Swift_on_win10/VS_Code_Docker_for_a_nice_Swift_edition_on_Windows10/" class="md-nav__link">
+      <a href="../../../2_Software_Engineering/Swift/Swift_on_win10/VS_Code_Docker_for_a_nice_Swift_edition_on_Windows10/" class="md-nav__link">
         VS Code-Docker for Swift on Win10
       </a>
     </li>
@@ -1457,16 +1453,14 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_3" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_3" >
       
       
         
@@ -1483,7 +1477,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../">Learning Notes</a>
+          <a href="../../../2_Software_Engineering/Swift/Notes/">Learning Notes</a>
           
             <label for="__nav_3_7_3">
               <span class="md-nav__icon md-icon"></span>
@@ -1491,7 +1485,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_7_3_label" aria-expanded="true">
+      <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_7_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3_7_3">
           <span class="md-nav__icon md-icon"></span>
           Learning Notes
@@ -1504,68 +1498,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Dispatch queue
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../2_Software_Engineering/Swift/Notes/Dispatch_queue/" class="md-nav__link">
         Dispatch queue
       </a>
-      
-        
-
-  
-
-<nav class="md-nav md-nav--secondary" aria-label="On this page">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      On this page
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#i-dispatch-queue-from-will-braynen" class="md-nav__link">
-    I. Dispatch queue (from Will Braynen)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ii-serial-queue-concurrent-queue-main-dispatch-queue-and-thread" class="md-nav__link">
-    II. Serial queue, Concurrent queue, Main dispatch queue and Thread
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#iii-dead-lock-in-dispatch-queue" class="md-nav__link">
-    III. Dead lock in dispatch queue
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1577,7 +1514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Map_reduce/" class="md-nav__link">
+      <a href="../../../2_Software_Engineering/Swift/Notes/Map_reduce/" class="md-nav__link">
         Map-Reduce
       </a>
     </li>
@@ -1629,7 +1566,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../AWS/">AWS</a>
+          <a href="../../../2_Software_Engineering/AWS/">AWS</a>
           
             <label for="__nav_3_8">
               <span class="md-nav__icon md-icon"></span>
@@ -1684,7 +1621,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../AWS/Basic/">Basic Concepts</a>
+          <a href="../../../2_Software_Engineering/AWS/Basic/">Basic Concepts</a>
           
             <label for="__nav_3_8_2">
               <span class="md-nav__icon md-icon"></span>
@@ -1707,7 +1644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../AWS/Basic/IAM/" class="md-nav__link">
+      <a href="../../../2_Software_Engineering/AWS/Basic/IAM/" class="md-nav__link">
         IAM
       </a>
     </li>
@@ -1721,7 +1658,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../AWS/Basic/EC2/" class="md-nav__link">
+      <a href="../../../2_Software_Engineering/AWS/Basic/EC2/" class="md-nav__link">
         EC2
       </a>
     </li>
@@ -1735,7 +1672,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../AWS/Basic/LoadBalancer_Scaling/" class="md-nav__link">
+      <a href="../../../2_Software_Engineering/AWS/Basic/LoadBalancer_Scaling/" class="md-nav__link">
         Load Balancer & Scaling
       </a>
     </li>
@@ -1749,7 +1686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../AWS/Basic/S3/" class="md-nav__link">
+      <a href="../../../2_Software_Engineering/AWS/Basic/S3/" class="md-nav__link">
         S3
       </a>
     </li>
@@ -1763,7 +1700,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../AWS/Basic/ECS/" class="md-nav__link">
+      <a href="../../../2_Software_Engineering/AWS/Basic/ECS/" class="md-nav__link">
         ECS & Docker Container
       </a>
     </li>
@@ -1777,7 +1714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../AWS/Basic/Serverless/" class="md-nav__link">
+      <a href="../../../2_Software_Engineering/AWS/Basic/Serverless/" class="md-nav__link">
         Serverless Application
       </a>
     </li>
@@ -1791,7 +1728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../AWS/Basic/Zone_region/" class="md-nav__link">
+      <a href="../../../2_Software_Engineering/AWS/Basic/Zone_region/" class="md-nav__link">
         Availability Zone and Region
       </a>
     </li>
@@ -1812,7 +1749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../AWS/Application/" class="md-nav__link">
+      <a href="../../../2_Software_Engineering/AWS/Application/" class="md-nav__link">
         Application
       </a>
     </li>
@@ -1853,7 +1790,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../Terminal/">Bash Commands</a>
+          <a href="../../../2_Software_Engineering/Terminal/">Bash Commands</a>
           
             <label for="__nav_3_9">
               <span class="md-nav__icon md-icon"></span>
@@ -1876,7 +1813,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Terminal/contents/" class="md-nav__link">
+      <a href="../../../2_Software_Engineering/Terminal/contents/" class="md-nav__link">
         CONTENTS
       </a>
     </li>
@@ -1915,7 +1852,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../VS_Code/">VS_Code</a>
+          <a href="../../../2_Software_Engineering/VS_Code/">VS_Code</a>
           
         </div>
       
@@ -1969,7 +1906,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../Others/">Others</a>
+          <a href="../../../2_Software_Engineering/Others/">Others</a>
           
             <label for="__nav_3_11">
               <span class="md-nav__icon md-icon"></span>
@@ -1992,7 +1929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Others/engineer/" class="md-nav__link">
+      <a href="../../../2_Software_Engineering/Others/engineer/" class="md-nav__link">
         Engineer Principles
       </a>
     </li>
@@ -2006,7 +1943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Others/crypto/" class="md-nav__link">
+      <a href="../../../2_Software_Engineering/Others/crypto/" class="md-nav__link">
         Cryptographic
       </a>
     </li>
@@ -2020,7 +1957,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Others/Concurrency/" class="md-nav__link">
+      <a href="../../../2_Software_Engineering/Others/Concurrency/" class="md-nav__link">
         Concurrency v.s. Parallelism
       </a>
     </li>
@@ -2034,7 +1971,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Others/Lock_mutex_semaphore/" class="md-nav__link">
+      <a href="../../../2_Software_Engineering/Others/Lock_mutex_semaphore/" class="md-nav__link">
         Lock, mutex, and Semaphore
       </a>
     </li>
@@ -2048,7 +1985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../Others/Self_documenting_code/" class="md-nav__link">
+      <a href="../../../2_Software_Engineering/Others/Self_documenting_code/" class="md-nav__link">
         Self-documenting code
       </a>
     </li>
@@ -2105,7 +2042,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../3_C%2B%2B/">C++</a>
+          <a href="../../../3_C%2B%2B/">C++</a>
           
             <label for="__nav_4">
               <span class="md-nav__icon md-icon"></span>
@@ -2128,7 +2065,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_C%2B%2B/fast_read/" class="md-nav__link">
+      <a href="../../../3_C%2B%2B/fast_read/" class="md-nav__link">
         Fast Read Catalog
       </a>
     </li>
@@ -2168,7 +2105,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../3_C%2B%2B/C%2B%2BOLD/">Oldschool C++</a>
+          <a href="../../../3_C%2B%2B/C%2B%2BOLD/">Oldschool C++</a>
           
             <label for="__nav_4_3">
               <span class="md-nav__icon md-icon"></span>
@@ -2191,7 +2128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_C%2B%2B/C%2B%2BOLD/concepts/" class="md-nav__link">
+      <a href="../../../3_C%2B%2B/C%2B%2BOLD/concepts/" class="md-nav__link">
         OOP concepts
       </a>
     </li>
@@ -2205,7 +2142,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_C%2B%2B/C%2B%2BOLD/ptr_ref/" class="md-nav__link">
+      <a href="../../../3_C%2B%2B/C%2B%2BOLD/ptr_ref/" class="md-nav__link">
         Pointer & reference
       </a>
     </li>
@@ -2239,7 +2176,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../3_C%2B%2B/C%2B%2BOLD/Inheritance/">Inheritance</a>
+          <a href="../../../3_C%2B%2B/C%2B%2BOLD/Inheritance/">Inheritance</a>
           
             <label for="__nav_4_3_4">
               <span class="md-nav__icon md-icon"></span>
@@ -2262,7 +2199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_C%2B%2B/C%2B%2BOLD/Inheritance/Inheritance/" class="md-nav__link">
+      <a href="../../../3_C%2B%2B/C%2B%2BOLD/Inheritance/Inheritance/" class="md-nav__link">
         CONTENTS
       </a>
     </li>
@@ -2303,7 +2240,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../3_C%2B%2B/C%2B%2BOLD/Template/">Template</a>
+          <a href="../../../3_C%2B%2B/C%2B%2BOLD/Template/">Template</a>
           
             <label for="__nav_4_3_5">
               <span class="md-nav__icon md-icon"></span>
@@ -2326,7 +2263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_C%2B%2B/C%2B%2BOLD/Template/content/" class="md-nav__link">
+      <a href="../../../3_C%2B%2B/C%2B%2BOLD/Template/content/" class="md-nav__link">
         CONTENTS
       </a>
     </li>
@@ -2380,7 +2317,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../3_C%2B%2B/C%2B%2BNEW/">Modern C++</a>
+          <a href="../../../3_C%2B%2B/C%2B%2BNEW/">Modern C++</a>
           
             <label for="__nav_4_4">
               <span class="md-nav__icon md-icon"></span>
@@ -2425,7 +2362,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../3_C%2B%2B/C%2B%2BNEW/C%2B%2B11/">C++11</a>
+          <a href="../../../3_C%2B%2B/C%2B%2BNEW/C%2B%2B11/">C++11</a>
           
             <label for="__nav_4_4_2">
               <span class="md-nav__icon md-icon"></span>
@@ -2448,7 +2385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_C%2B%2B/C%2B%2BNEW/C%2B%2B11/auto/" class="md-nav__link">
+      <a href="../../../3_C%2B%2B/C%2B%2BNEW/C%2B%2B11/auto/" class="md-nav__link">
         auto & decltype
       </a>
     </li>
@@ -2462,7 +2399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_C%2B%2B/C%2B%2BNEW/C%2B%2B11/smart_pointer/" class="md-nav__link">
+      <a href="../../../3_C%2B%2B/C%2B%2BNEW/C%2B%2B11/smart_pointer/" class="md-nav__link">
         Smart pointer
       </a>
     </li>
@@ -2503,7 +2440,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../3_C%2B%2B/C%2B%2BNEW/C%2B%2B14/">C++14</a>
+          <a href="../../../3_C%2B%2B/C%2B%2BNEW/C%2B%2B14/">C++14</a>
           
             <label for="__nav_4_4_3">
               <span class="md-nav__icon md-icon"></span>
@@ -2526,7 +2463,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_C%2B%2B/C%2B%2BNEW/C%2B%2B14/content/" class="md-nav__link">
+      <a href="../../../3_C%2B%2B/C%2B%2BNEW/C%2B%2B14/content/" class="md-nav__link">
         CONTENTS
       </a>
     </li>
@@ -2567,7 +2504,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../3_C%2B%2B/C%2B%2BNEW/C%2B%2B17/">C++17</a>
+          <a href="../../../3_C%2B%2B/C%2B%2BNEW/C%2B%2B17/">C++17</a>
           
             <label for="__nav_4_4_4">
               <span class="md-nav__icon md-icon"></span>
@@ -2590,7 +2527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_C%2B%2B/C%2B%2BNEW/C%2B%2B17/content/" class="md-nav__link">
+      <a href="../../../3_C%2B%2B/C%2B%2BNEW/C%2B%2B17/content/" class="md-nav__link">
         CONTENTS
       </a>
     </li>
@@ -2631,7 +2568,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../3_C%2B%2B/C%2B%2BNEW/C%2B%2B20/">C++20</a>
+          <a href="../../../3_C%2B%2B/C%2B%2BNEW/C%2B%2B20/">C++20</a>
           
             <label for="__nav_4_4_5">
               <span class="md-nav__icon md-icon"></span>
@@ -2654,7 +2591,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_C%2B%2B/C%2B%2BNEW/C%2B%2B20/content/" class="md-nav__link">
+      <a href="../../../3_C%2B%2B/C%2B%2BNEW/C%2B%2B20/content/" class="md-nav__link">
         CONTENTS
       </a>
     </li>
@@ -2702,7 +2639,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../3_C%2B%2B/STL/">STL</a>
+          <a href="../../../3_C%2B%2B/STL/">STL</a>
           
             <label for="__nav_4_5">
               <span class="md-nav__icon md-icon"></span>
@@ -2725,7 +2662,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_C%2B%2B/STL/unodered_set/" class="md-nav__link">
+      <a href="../../../3_C%2B%2B/STL/unodered_set/" class="md-nav__link">
         unordered_set
       </a>
     </li>
@@ -2770,7 +2707,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../3_C%2B%2B/Design_Pattern/">Design Pattern</a>
+          <a href="../../../3_C%2B%2B/Design_Pattern/">Design Pattern</a>
           
             <label for="__nav_4_6">
               <span class="md-nav__icon md-icon"></span>
@@ -2793,7 +2730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_C%2B%2B/Design_Pattern/UML/" class="md-nav__link">
+      <a href="../../../3_C%2B%2B/Design_Pattern/UML/" class="md-nav__link">
         UML class Diagram
       </a>
     </li>
@@ -2807,7 +2744,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_C%2B%2B/Design_Pattern/basic/" class="md-nav__link">
+      <a href="../../../3_C%2B%2B/Design_Pattern/basic/" class="md-nav__link">
         Software desgin basic
       </a>
     </li>
@@ -2821,7 +2758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../3_C%2B%2B/Design_Pattern/contents/" class="md-nav__link">
+      <a href="../../../3_C%2B%2B/Design_Pattern/contents/" class="md-nav__link">
         Desgin Patterns
       </a>
     </li>
@@ -2872,7 +2809,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../4_Algorithms/">Algorithm</a>
+          <a href="../../../4_Algorithms/">Algorithm</a>
           
             <label for="__nav_5">
               <span class="md-nav__icon md-icon"></span>
@@ -2917,7 +2854,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../4_Algorithms/Typical_Questions/">Typical Algorithms</a>
+          <a href="../../../4_Algorithms/Typical_Questions/">Typical Algorithms</a>
           
             <label for="__nav_5_2">
               <span class="md-nav__icon md-icon"></span>
@@ -2985,7 +2922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../4_Algorithms/Typical_Questions/Leetcode/Topology_sort/" class="md-nav__link">
+      <a href="../../../4_Algorithms/Typical_Questions/Leetcode/Topology_sort/" class="md-nav__link">
         Topology Sort
       </a>
     </li>
@@ -2999,7 +2936,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../4_Algorithms/Typical_Questions/Leetcode/Dijkstra/" class="md-nav__link">
+      <a href="../../../4_Algorithms/Typical_Questions/Leetcode/Dijkstra/" class="md-nav__link">
         Dijkstra
       </a>
     </li>
@@ -3013,7 +2950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../4_Algorithms/Typical_Questions/Leetcode/Bipartition/" class="md-nav__link">
+      <a href="../../../4_Algorithms/Typical_Questions/Leetcode/Bipartition/" class="md-nav__link">
         Bipartition
       </a>
     </li>
@@ -3027,7 +2964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../4_Algorithms/Typical_Questions/Leetcode/Unionfind/" class="md-nav__link">
+      <a href="../../../4_Algorithms/Typical_Questions/Leetcode/Unionfind/" class="md-nav__link">
         Union-Find
       </a>
     </li>
@@ -3041,7 +2978,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../4_Algorithms/Typical_Questions/Leetcode/Quick_sort/" class="md-nav__link">
+      <a href="../../../4_Algorithms/Typical_Questions/Leetcode/Quick_sort/" class="md-nav__link">
         Quick Sort
       </a>
     </li>
@@ -3055,7 +2992,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../4_Algorithms/Typical_Questions/Leetcode/Counting_sort/" class="md-nav__link">
+      <a href="../../../4_Algorithms/Typical_Questions/Leetcode/Counting_sort/" class="md-nav__link">
         Counting Sort
       </a>
     </li>
@@ -3069,7 +3006,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../4_Algorithms/Typical_Questions/Leetcode/Monotonic_queue/" class="md-nav__link">
+      <a href="../../../4_Algorithms/Typical_Questions/Leetcode/Monotonic_queue/" class="md-nav__link">
         Monotonic Queue
       </a>
     </li>
@@ -3083,7 +3020,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../4_Algorithms/Typical_Questions/Leetcode/Backtracking/" class="md-nav__link">
+      <a href="../../../4_Algorithms/Typical_Questions/Leetcode/Backtracking/" class="md-nav__link">
         Backtracking
       </a>
     </li>
@@ -3135,7 +3072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../4_Algorithms/Typical_Questions/Hackerrank/STDIN%26STDOUT/" class="md-nav__link">
+      <a href="../../../4_Algorithms/Typical_Questions/Hackerrank/STDIN%26STDOUT/" class="md-nav__link">
         STDIN and STDOUT
       </a>
     </li>
@@ -3181,7 +3118,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../4_Algorithms/Practice_Sheet/">Practic Sheet</a>
+          <a href="../../../4_Algorithms/Practice_Sheet/">Practic Sheet</a>
           
         </div>
       
@@ -3237,7 +3174,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../5_FullStack/">Full Stack</a>
+          <a href="../../../5_FullStack/">Full Stack</a>
           
             <label for="__nav_6">
               <span class="md-nav__icon md-icon"></span>
@@ -3286,7 +3223,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../5_FullStack/BASIC/">Basic knowledge</a>
+          <a href="../../../5_FullStack/BASIC/">Basic knowledge</a>
           
             <label for="__nav_6_2">
               <span class="md-nav__icon md-icon"></span>
@@ -3333,7 +3270,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../5_FullStack/BASIC/Frontend/">Front End</a>
+          <a href="../../../5_FullStack/BASIC/Frontend/">Front End</a>
           
             <label for="__nav_6_2_2">
               <span class="md-nav__icon md-icon"></span>
@@ -3356,7 +3293,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../5_FullStack/BASIC/Frontend/Mock/" class="md-nav__link">
+      <a href="../../../5_FullStack/BASIC/Frontend/Mock/" class="md-nav__link">
         Mock
       </a>
     </li>
@@ -3370,7 +3307,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../5_FullStack/BASIC/Frontend/Auth/" class="md-nav__link">
+      <a href="../../../5_FullStack/BASIC/Frontend/Auth/" class="md-nav__link">
         Auth
       </a>
     </li>
@@ -3384,7 +3321,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../5_FullStack/BASIC/Frontend/uri/" class="md-nav__link">
+      <a href="../../../5_FullStack/BASIC/Frontend/uri/" class="md-nav__link">
         URI
       </a>
     </li>
@@ -3425,7 +3362,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../5_FullStack/BASIC/API/">APIs</a>
+          <a href="../../../5_FullStack/BASIC/API/">APIs</a>
           
             <label for="__nav_6_2_3">
               <span class="md-nav__icon md-icon"></span>
@@ -3448,7 +3385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../5_FullStack/BASIC/API/rest_api/" class="md-nav__link">
+      <a href="../../../5_FullStack/BASIC/API/rest_api/" class="md-nav__link">
         REST API
       </a>
     </li>
@@ -3493,7 +3430,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../5_FullStack/BASIC/Backend/">Back End</a>
+          <a href="../../../5_FullStack/BASIC/Backend/">Back End</a>
           
             <label for="__nav_6_2_4">
               <span class="md-nav__icon md-icon"></span>
@@ -3516,7 +3453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../5_FullStack/BASIC/Backend/nodejs/" class="md-nav__link">
+      <a href="../../../5_FullStack/BASIC/Backend/nodejs/" class="md-nav__link">
         Node.js
       </a>
     </li>
@@ -3530,7 +3467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../5_FullStack/BASIC/Backend/expressjs/" class="md-nav__link">
+      <a href="../../../5_FullStack/BASIC/Backend/expressjs/" class="md-nav__link">
         Express.js
       </a>
     </li>
@@ -3544,7 +3481,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../5_FullStack/BASIC/Backend/routing/" class="md-nav__link">
+      <a href="../../../5_FullStack/BASIC/Backend/routing/" class="md-nav__link">
         Routing
       </a>
     </li>
@@ -3589,7 +3526,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../5_FullStack/BASIC/Web/">Network</a>
+          <a href="../../../5_FullStack/BASIC/Web/">Network</a>
           
             <label for="__nav_6_2_5">
               <span class="md-nav__icon md-icon"></span>
@@ -3612,7 +3549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../5_FullStack/BASIC/Web/Indices/" class="md-nav__link">
+      <a href="../../../5_FullStack/BASIC/Web/Indices/" class="md-nav__link">
         Performance Indices
       </a>
     </li>
@@ -3658,7 +3595,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../5_FullStack/BASIC/Web/OIS/">OIS</a>
+          <a href="../../../5_FullStack/BASIC/Web/OIS/">OIS</a>
           
             <label for="__nav_6_2_5_3">
               <span class="md-nav__icon md-icon"></span>
@@ -3681,7 +3618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../5_FullStack/BASIC/Web/OIS/physical/" class="md-nav__link">
+      <a href="../../../5_FullStack/BASIC/Web/OIS/physical/" class="md-nav__link">
         Physical Layer
       </a>
     </li>
@@ -3695,7 +3632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../5_FullStack/BASIC/Web/OIS/datalink/" class="md-nav__link">
+      <a href="../../../5_FullStack/BASIC/Web/OIS/datalink/" class="md-nav__link">
         Data Link Layer
       </a>
     </li>
@@ -3709,7 +3646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../5_FullStack/BASIC/Web/OIS/network/" class="md-nav__link">
+      <a href="../../../5_FullStack/BASIC/Web/OIS/network/" class="md-nav__link">
         Network Layer
       </a>
     </li>
@@ -3723,7 +3660,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../5_FullStack/BASIC/Web/OIS/transport/" class="md-nav__link">
+      <a href="../../../5_FullStack/BASIC/Web/OIS/transport/" class="md-nav__link">
         Transport Layer
       </a>
     </li>
@@ -3737,7 +3674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../5_FullStack/BASIC/Web/OIS/session/" class="md-nav__link">
+      <a href="../../../5_FullStack/BASIC/Web/OIS/session/" class="md-nav__link">
         Session Layer
       </a>
     </li>
@@ -3751,7 +3688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../5_FullStack/BASIC/Web/OIS/presentation/" class="md-nav__link">
+      <a href="../../../5_FullStack/BASIC/Web/OIS/presentation/" class="md-nav__link">
         Presentaion Layer
       </a>
     </li>
@@ -3765,7 +3702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../5_FullStack/BASIC/Web/OIS/application/" class="md-nav__link">
+      <a href="../../../5_FullStack/BASIC/Web/OIS/application/" class="md-nav__link">
         Application Layer
       </a>
     </li>
@@ -3806,7 +3743,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../5_FullStack/BASIC/Web/Protocols/">Protocols</a>
+          <a href="../../../5_FullStack/BASIC/Web/Protocols/">Protocols</a>
           
             <label for="__nav_6_2_5_4">
               <span class="md-nav__icon md-icon"></span>
@@ -3829,7 +3766,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../5_FullStack/BASIC/Web/Protocols/HTTP/" class="md-nav__link">
+      <a href="../../../5_FullStack/BASIC/Web/Protocols/HTTP/" class="md-nav__link">
         HTTP
       </a>
     </li>
@@ -3888,7 +3825,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../5_FullStack/LANG/">Programming Language</a>
+          <a href="../../../5_FullStack/LANG/">Programming Language</a>
           
             <label for="__nav_6_3">
               <span class="md-nav__icon md-icon"></span>
@@ -3911,7 +3848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../5_FullStack/LANG/JS/" class="md-nav__link">
+      <a href="../../../5_FullStack/LANG/JS/" class="md-nav__link">
         Javascript
       </a>
     </li>
@@ -3951,7 +3888,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../5_FullStack/LANG/SQL/">SQL</a>
+          <a href="../../../5_FullStack/LANG/SQL/">SQL</a>
           
             <label for="__nav_6_3_3">
               <span class="md-nav__icon md-icon"></span>
@@ -3974,7 +3911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../5_FullStack/LANG/SQL/basic/" class="md-nav__link">
+      <a href="../../../5_FullStack/LANG/SQL/basic/" class="md-nav__link">
         Basic Management
       </a>
     </li>
@@ -3988,7 +3925,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../5_FullStack/LANG/SQL/particle/" class="md-nav__link">
+      <a href="../../../5_FullStack/LANG/SQL/particle/" class="md-nav__link">
         Structural Operators
       </a>
     </li>
@@ -4002,7 +3939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../5_FullStack/LANG/SQL/higher/" class="md-nav__link">
+      <a href="../../../5_FullStack/LANG/SQL/higher/" class="md-nav__link">
         Higher-level Management
       </a>
     </li>
@@ -4016,7 +3953,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../5_FullStack/LANG/SQL/multi_table/" class="md-nav__link">
+      <a href="../../../5_FullStack/LANG/SQL/multi_table/" class="md-nav__link">
         Multiple Table Operation
       </a>
     </li>
@@ -4050,14 +3987,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
       
       
         
@@ -4082,7 +4021,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../10_Interview/">ICS</a>
+          <a href="../../">ICS</a>
           
             <label for="__nav_7">
               <span class="md-nav__icon md-icon"></span>
@@ -4090,7 +4029,7 @@
           
         </div>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           ICS
@@ -4105,7 +4044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../10_Interview/Other/oop_guide/" class="md-nav__link">
+      <a href="../oop_guide/" class="md-nav__link">
         OOP
       </a>
     </li>
@@ -4117,11 +4056,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../../10_Interview/Other/sql_guide/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Database Management
       </a>
+      
     </li>
   
 
@@ -4133,7 +4082,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../10_Interview/Operating_system/" class="md-nav__link">
+      <a href="../../Operating_system/" class="md-nav__link">
         Operating System
       </a>
     </li>
@@ -4147,7 +4096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../10_Interview/Networking/" class="md-nav__link">
+      <a href="../../Networking/" class="md-nav__link">
         Networking
       </a>
     </li>
@@ -4191,7 +4140,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../6_Math/">Math</a>
+          <a href="../../../6_Math/">Math</a>
           
             <label for="__nav_8">
               <span class="md-nav__icon md-icon"></span>
@@ -4214,7 +4163,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../6_Math/Numerical/" class="md-nav__link">
+      <a href="../../../6_Math/Numerical/" class="md-nav__link">
         Numercial Methods
       </a>
     </li>
@@ -4267,7 +4216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../7_Casual_Literary_Notes/Dunhuang/" class="md-nav__link">
+      <a href="../../../7_Casual_Literary_Notes/Dunhuang/" class="md-nav__link">
         Dunhuang Wall Painting
       </a>
     </li>
@@ -4311,7 +4260,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../8_Japanese_Learning/">日本語</a>
+          <a href="../../../8_Japanese_Learning/">日本語</a>
           
             <label for="__nav_10">
               <span class="md-nav__icon md-icon"></span>
@@ -4334,7 +4283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../8_Japanese_Learning/%E4%BA%94%E5%8D%81%E9%9F%B3%E5%9B%B3/" class="md-nav__link">
+      <a href="../../../8_Japanese_Learning/%E4%BA%94%E5%8D%81%E9%9F%B3%E5%9B%B3/" class="md-nav__link">
         五十音図
       </a>
     </li>
@@ -4376,7 +4325,7 @@
         
         
         <div class="md-nav__link md-nav__link--index ">
-          <a href="../../../../9_Guitar_Garage/">Guitar Sheets</a>
+          <a href="../../../9_Guitar_Garage/">Guitar Sheets</a>
           
             <label for="__nav_11">
               <span class="md-nav__icon md-icon"></span>
@@ -4399,7 +4348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../9_Guitar_Garage/Sheet/%E6%AF%8F%E5%A4%A9%E5%A4%9A%E7%88%B1%E4%BD%A0%E4%B8%80%E4%BA%9B/" class="md-nav__link">
+      <a href="../../../9_Guitar_Garage/Sheet/%E6%AF%8F%E5%A4%A9%E5%A4%9A%E7%88%B1%E4%BD%A0%E4%B8%80%E4%BA%9B/" class="md-nav__link">
         每天多爱你一些
       </a>
     </li>
@@ -4439,252 +4388,22 @@
   
 
 
-<h1 id="dispatch-queue-and-dead-lock"><strong>Dispatch queue and Dead lock</strong><a class="headerlink" href="#dispatch-queue-and-dead-lock" title="Anchor link to this section for reference">⚓︎</a></h1>
-<h2 id="i-dispatch-queue-from-will-braynen"><strong>I. Dispatch queue (from Will Braynen)</strong><a class="headerlink" href="#i-dispatch-queue-from-will-braynen" title="Anchor link to this section for reference">⚓︎</a></h2>
-<h3 id="1-what"><strong>1️⃣ What?</strong><a class="headerlink" href="#1-what" title="Anchor link to this section for reference">⚓︎</a></h3>
-<ul>
-<li>A dispatch queue is an <strong>object-like structure</strong> that <strong>manages the tasks</strong> you submit to it. All dispatch queues are <strong>first-in, first-out (FIFO)</strong> data structures. Thus, the tasks you add to a queue are always started in the same order that they were added.” (source: <a href="https://developer.apple.com/library/archive/documentation/General/Conceptual/ConcurrencyProgrammingGuide/OperationQueues/OperationQueues.html">Apple documentation</a>). That’s important.</li>
-</ul>
-<h3 id="2-for"><strong>2️⃣ For?</strong><a class="headerlink" href="#2-for" title="Anchor link to this section for reference">⚓︎</a></h3>
-<ul>
-<li>Well, it’s a way to <strong>run multi-threaded code</strong> without using threads directly. It’s <strong>not</strong> as low level as working with threads. </li>
-</ul>
-<h3 id="3-diff-with-threads"><strong>3️⃣ Diff with threads?</strong><a class="headerlink" href="#3-diff-with-threads" title="Anchor link to this section for reference">⚓︎</a></h3>
-<ul>
-<li>
-<p>A <strong>dispatch queue</strong> can manage its own <strong>pool thread</strong>, etc, and ultimately the point of a dispatch queue is to keep track of what instruction to execute next while giving you a <strong>higher-level API</strong> instead of dealing with threads directly</p>
-</li>
-<li>
-<p>Whereas you can think of a <strong>thread</strong> as where <strong>instructions actually execute</strong>; for example, a thread might have <code>start</code>, <code>stop</code>, and <code>sleep</code> methods. A thread is <strong>short for a thread of execution</strong> and is <strong>the smallest sequence of programmed instructions</strong> that can be managed independently by a scheduler, which is typically [but not always] <strong>a part of the operating system</strong>” (<a href="https://en.wikipedia.org/wiki/Thread_(computing)">wikipedia</a>).  </p>
-</li>
-</ul>
-<h2 id="ii-serial-queue-concurrent-queue-main-dispatch-queue-and-thread"><strong>II. Serial queue, Concurrent queue, Main dispatch queue and Thread</strong><a class="headerlink" href="#ii-serial-queue-concurrent-queue-main-dispatch-queue-and-thread" title="Anchor link to this section for reference">⚓︎</a></h2>
-<h3 id="-grammar-and-properties"><strong>🤏 Grammar and Properties</strong><a class="headerlink" href="#-grammar-and-properties" title="Anchor link to this section for reference">⚓︎</a></h3>
-<ul>
-<li>The table below shows how to use the dispatch queue, and in what situation:</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="left">DQueue type</th>
-<th align="left">Grammar</th>
-<th align="left">Properties</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Serial queue</td>
-<td align="left"><code>DispatchQueue(lablel:"..").sync/.async { … }</code></td>
-<td align="left">Private, conccurrent</td>
-</tr>
-<tr>
-<td align="left">Concurrent queue</td>
-<td align="left"><code>DispatchQueue(lablel:"..", attributes: .concurrent).sync/.async { … }</code></td>
-<td align="left">Global, parallel</td>
-</tr>
-<tr>
-<td align="left">Main dispatch queue</td>
-<td align="left"><code>DispatchQueue.main.sync { … }</code></td>
-<td align="left">Global, conccurrent</td>
-</tr>
-</tbody>
-</table>
-<h3 id="-dispatch-queue-vs-thread"><strong>👯‍♀️ Dispatch Queue v.s. Thread</strong><a class="headerlink" href="#-dispatch-queue-vs-thread" title="Anchor link to this section for reference">⚓︎</a></h3>
-<ul>
-<li>The table below concludes the relationship between:</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="left">D.Queue type / Thread</th>
-<th align="left">Main thread</th>
-<th align="left">Other thread</th>
-<th align="left">Task Processing Type</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Serial queue</td>
-<td align="left"><code>sync</code>: main thread <br /> N/A</td>
-<td align="left">N/A <br /> <code>async</code>: multiple threads</td>
-<td align="left">[<ins class="critic">serial</ins>] <br />[<ins class="critic">concurrent</ins>]</td>
-</tr>
-<tr>
-<td align="left">Concurrent queue</td>
-<td align="left">N/A</td>
-<td align="left">multiple threads</td>
-<td align="left">[<ins class="critic">parallel</ins>]</td>
-</tr>
-<tr>
-<td align="left">Main dispatch queue</td>
-<td align="left">main thread</td>
-<td align="left">N/A</td>
-<td align="left">[<ins class="critic">serial</ins>]</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li><strong>Q&amp;A</strong></li>
-</ul>
-<details class="question" open="open">
-<summary>If it is the first time your call <code>let myQueue = DispatchQueue(label:"test queue")</code> and <code>sync</code>, how many queues will app have for main thread? Which queue will tasks in <code>sync</code> code block be queuing?</summary>
-<p>Two. One is main queue. Another one is private queue created by <code>let myQueue = DispatchQueue(label:"test queue")</code>. Tasks in <code>sync</code> code block will be queuing in the new created private queue. You can also feel the answer from the figure in <a href="#no-dead-lock-case-serial-queue-with-sync">"No dead lock case (serial queue with sync)"</a></p>
-</details>
-<details class="question" open="open">
-<summary>What <code>queue</code> will tasks in <code>sync</code> block be on?</summary>
-<p>When you call <code>let myQueue = DispatchQueue(label:"test queue")</code>, you will send the code in the block of <code>sync</code> to some other queue besides existing queue (such as main queue).</p>
-<p>No matter in serial, concurrent or parallel processing, you can always have multiple queues (* but not for threads).</p>
-</details>
-<details class="question" open="open">
-<summary>What <code>thread</code> will tasks in <code>sync</code> block be on?</summary>
-<p>Remember: <strong>Context-switching between threads is expensive. Cheaper to stay on the same thread if you can.</strong></p>
-<p>Anytime you call <code>sync</code>, even if you do not do <code>DispatchQueue.main.sync { … }</code>(to send the work to the main dispatch queue) and instead synchronously dispatch to some other queue, even a private queue you created, the task you submitted might still execute on the main thread.</p>
-</details>
-<details class="question" open="open">
-<summary>What <code>queue</code> and <code>thread</code> will tasks in <code>DispatchQueue.main.sync { … }</code> block be on?</summary>
-<p>Main queue. Main thread.</p>
-</details>
-<details class="question" open="open">
-<summary>Deadlock condition?</summary>
-<p><code>Same thread</code> &amp; <code>serial queue</code> &amp; <code>sync</code> ---&gt; deadlock.</p>
-</details>
-<h2 id="iii-dead-lock-in-dispatch-queue"><strong>III. Dead lock in dispatch queue</strong><a class="headerlink" href="#iii-dead-lock-in-dispatch-queue" title="Anchor link to this section for reference">⚓︎</a></h2>
-<p>To understand dead lock happends in dispatch queue processing, we firstly need to know what is the <a href="../../../Others/Concurrency/">Concurrency</a>.</p>
-<h3 id="dead-lock-case-1-dispatch-queue"><strong><img alt="🔒" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" title=":lock:" /> Dead lock case 1 (dispatch queue)</strong><a class="headerlink" href="#dead-lock-case-1-dispatch-queue" title="Anchor link to this section for reference">⚓︎</a></h3>
-<p><strong>Code</strong></p>
-<div class="highlight"><span class="filename">dl_1.swift</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="kd">import</span> <span class="nc">Foundation</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><a href="#__codelineno-0-2"><span class="linenos" data-linenos=" 2 "></span></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><a href="#__codelineno-0-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="kd">let</span> <span class="nv">myQueue</span> <span class="p">=</span> <span class="n">DispatchQueue</span><span class="p">(</span><span class="n">label</span><span class="p">:</span><span class="s">&quot;test queue&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><a href="#__codelineno-0-4"><span class="linenos" data-linenos=" 4 "></span></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><a href="#__codelineno-0-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="bp">print</span><span class="p">(</span><span class="s">&quot;1&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a><a href="#__codelineno-0-6"><span class="linenos" data-linenos=" 6 "></span></a>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><a href="#__codelineno-0-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="n">myQueue</span><span class="p">.</span><span class="k">async</span><span class="p">{</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><a href="#__codelineno-0-8"><span class="linenos" data-linenos=" 8 "></span></a>    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;2&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a><a href="#__codelineno-0-9"><span class="linenos" data-linenos=" 9 "></span></a>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><a href="#__codelineno-0-10"><span class="linenos" data-linenos="10 "></span></a>    <span class="n">myQueue</span><span class="p">.</span><span class="n">sync</span><span class="p">{</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><a href="#__codelineno-0-11"><span class="linenos" data-linenos="11 "></span></a>        <span class="bp">print</span><span class="p">(</span><span class="s">&quot;3&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><a href="#__codelineno-0-12"><span class="linenos" data-linenos="12 "></span></a>    <span class="p">}</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a><a href="#__codelineno-0-13"><span class="linenos" data-linenos="13 "></span></a>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a><a href="#__codelineno-0-14"><span class="linenos" data-linenos="14 "></span></a>    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;4&quot;</span><span class="p">)</span>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a><a href="#__codelineno-0-15"><span class="linenos" data-linenos="15 "></span></a><span class="p">}</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a><a href="#__codelineno-0-16"><span class="linenos" data-linenos="16 "></span></a>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a><a href="#__codelineno-0-17"><span class="linenos" data-linenos="17 "></span></a><span class="bp">print</span><span class="p">(</span><span class="s">&quot;5&quot;</span><span class="p">)</span>
-</code></pre></div>
-<p><strong>Output</strong></p>
-<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><a href="#__codelineno-1-1"><span class="linenos" data-linenos="1 "></span></a>1
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><a href="#__codelineno-1-2"><span class="linenos" data-linenos="2 "></span></a>5
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><a href="#__codelineno-1-3"><span class="linenos" data-linenos="3 "></span></a>2
-</code></pre></div>
-<p><strong>Explaination Picture</strong></p>
-<p><img :=":" _="," alt="image" class="center" src="../deadlock1.jpg" width="90%" /></p>
-<h3 id="dead-lock-case-2-serial-queue"><strong><img alt="🔒" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f512.svg" title=":lock:" /> Dead lock case 2 (serial queue)</strong><a class="headerlink" href="#dead-lock-case-2-serial-queue" title="Anchor link to this section for reference">⚓︎</a></h3>
-<p><strong>Code</strong></p>
-<div class="highlight"><span class="filename">dl_2.swift</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><a href="#__codelineno-2-1"><span class="linenos" data-linenos="1 "></span></a><span class="kd">import</span> <span class="nc">Foundation</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><a href="#__codelineno-2-2"><span class="linenos" data-linenos="2 "></span></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><a href="#__codelineno-2-3"><span class="linenos" data-linenos="3 "></span></a><span class="bp">print</span><span class="p">(</span><span class="s">&quot;1&quot;</span><span class="p">)</span>  
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><a href="#__codelineno-2-4"><span class="linenos" data-linenos="4 "></span></a>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a><a href="#__codelineno-2-5"><span class="linenos" data-linenos="5 "></span></a><span class="n">DispatchQueue</span><span class="p">.</span><span class="n">main</span><span class="p">.</span><span class="n">sync</span><span class="p">{</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><a href="#__codelineno-2-6"><span class="linenos" data-linenos="6 "></span></a>    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;2&quot;</span><span class="p">)</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a><a href="#__codelineno-2-7"><span class="linenos" data-linenos="7 "></span></a><span class="p">}</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a><a href="#__codelineno-2-8"><span class="linenos" data-linenos="8 "></span></a>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a><a href="#__codelineno-2-9"><span class="linenos" data-linenos="9 "></span></a><span class="bp">print</span><span class="p">(</span><span class="s">&quot;3&quot;</span><span class="p">)</span>
-</code></pre></div>
-<p><strong>Output</strong></p>
-<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><a href="#__codelineno-3-1"><span class="linenos" data-linenos="1 "></span></a>1
-</code></pre></div>
-<p><strong>Explaination Picture</strong></p>
-<p><img :=":" _="," alt="image" class="center" src="../deadlock2.jpg" width="90%" /></p>
-<details class="danger" open="open">
-<summary>Be careful!!</summary>
-<p>Please DISTINGUISH the difference between <code>DispatchQueue.main.sync{...}</code> and <code>myQueue.sync{...}</code> by take a look at <a href="#no-dead-lock-case-serial-queue-with-sync">the case shown below</a> <img alt="🔻" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f53b.svg" title=":small_red_triangle_down:" /> </p>
-</details>
-<h3 id="no-dead-lock-case-serial-queue-with-sync"><strong><img alt="🔐" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f510.svg" title=":closed_lock_with_key:" /> No dead lock case (serial queue with <code>sync</code>)</strong><a class="headerlink" href="#no-dead-lock-case-serial-queue-with-sync" title="Anchor link to this section for reference">⚓︎</a></h3>
-<p><strong>Code</strong></p>
-<div class="highlight"><span class="filename">ndl.swift</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><a href="#__codelineno-4-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="kd">import</span> <span class="nc">Foundation</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a><a href="#__codelineno-4-2"><span class="linenos" data-linenos=" 2 "></span></a>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a><a href="#__codelineno-4-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="kd">let</span> <span class="nv">myQueue</span> <span class="p">=</span> <span class="n">DispatchQueue</span><span class="p">(</span><span class="n">label</span><span class="p">:</span><span class="s">&quot;test queue&quot;</span><span class="p">)</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a><a href="#__codelineno-4-4"><span class="linenos" data-linenos=" 4 "></span></a>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a><a href="#__codelineno-4-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="bp">print</span><span class="p">(</span><span class="s">&quot;1&quot;</span><span class="p">)</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a><a href="#__codelineno-4-6"><span class="linenos" data-linenos=" 6 "></span></a>
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a><a href="#__codelineno-4-7"><span class="linenos" data-linenos=" 7 "></span></a><span class="n">myQueue</span><span class="p">.</span><span class="n">sync</span><span class="p">{</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8"></a><a href="#__codelineno-4-8"><span class="linenos" data-linenos=" 8 "></span></a>    <span class="bp">print</span><span class="p">(</span><span class="s">&quot;2&quot;</span><span class="p">)</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9"></a><a href="#__codelineno-4-9"><span class="linenos" data-linenos=" 9 "></span></a><span class="p">}</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10"></a><a href="#__codelineno-4-10"><span class="linenos" data-linenos="10 "></span></a>
-<a id="__codelineno-4-11" name="__codelineno-4-11"></a><a href="#__codelineno-4-11"><span class="linenos" data-linenos="11 "></span></a><span class="bp">print</span><span class="p">(</span><span class="s">&quot;3&quot;</span><span class="p">)</span>
-</code></pre></div>
-<p><strong>Output</strong></p>
-<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><a href="#__codelineno-5-1"><span class="linenos" data-linenos="1 "></span></a>1
-<a id="__codelineno-5-2" name="__codelineno-5-2"></a><a href="#__codelineno-5-2"><span class="linenos" data-linenos="2 "></span></a>2
-<a id="__codelineno-5-3" name="__codelineno-5-3"></a><a href="#__codelineno-5-3"><span class="linenos" data-linenos="3 "></span></a>3
-</code></pre></div>
-<p><strong>Explaination Picture</strong></p>
-<p><img :=":" _="," alt="image" class="center" src="../ndeadlock1.jpg" width="90%" /></p>
-<h3 id="application-of-dispatch-queue"><strong><img alt="🦾" class="twemoji" src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f9be.svg" title=":mechanical_arm:" /> Application of Dispatch Queue</strong><a class="headerlink" href="#application-of-dispatch-queue" title="Anchor link to this section for reference">⚓︎</a></h3>
-<p>The example shown below indicates that we can use <code>Dispatch Queue</code> as a "thread lock" to protect the thread processing for a code block from interrupted by other thread.</p>
-<div class="highlight"><span class="filename">application.swift</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><a href="#__codelineno-6-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="kd">import</span> <span class="nc">Foundation</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2"></a><a href="#__codelineno-6-2"><span class="linenos" data-linenos=" 2 "></span></a>
-<a id="__codelineno-6-3" name="__codelineno-6-3"></a><a href="#__codelineno-6-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="c1">// Read-write pattern - using a serial dispatch queue</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4"></a><a href="#__codelineno-6-4"><span class="linenos" data-linenos=" 4 "></span></a>
-<a id="__codelineno-6-5" name="__codelineno-6-5"></a><a href="#__codelineno-6-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="kd">protocol</span> <span class="nc">DataProvider</span> <span class="p">{</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6"></a><a href="#__codelineno-6-6"><span class="linenos" data-linenos=" 6 "></span></a>    <span class="kd">func</span> <span class="nf">getValue</span><span class="p">(</span><span class="kc">_</span> <span class="n">key</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Int</span><span class="p">?</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7"></a><a href="#__codelineno-6-7"><span class="linenos" data-linenos=" 7 "></span></a>    <span class="kd">func</span> <span class="nf">updateValue</span><span class="p">(</span><span class="kc">_</span> <span class="n">key</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="kc">_</span> <span class="n">value</span><span class="p">:</span> <span class="nb">Int</span><span class="p">)</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8"></a><a href="#__codelineno-6-8"><span class="linenos" data-linenos=" 8 "></span></a><span class="p">}</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9"></a><a href="#__codelineno-6-9"><span class="linenos" data-linenos=" 9 "></span></a>
-<a id="__codelineno-6-10" name="__codelineno-6-10"></a><a href="#__codelineno-6-10"><span class="linenos" data-linenos="10 "></span></a><span class="kd">class</span> <span class="nc">MockData</span><span class="p">:</span> <span class="n">DataProvider</span> <span class="p">{</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11"></a><a href="#__codelineno-6-11"><span class="linenos" data-linenos="11 "></span></a>    <span class="kd">func</span> <span class="nf">getValue</span><span class="p">(</span><span class="kc">_</span> <span class="n">key</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Int</span><span class="p">?</span> <span class="p">{</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12"></a><a href="#__codelineno-6-12"><span class="linenos" data-linenos="12 "></span></a>        <span class="k">return</span> <span class="mi">6</span>
-<a id="__codelineno-6-13" name="__codelineno-6-13"></a><a href="#__codelineno-6-13"><span class="linenos" data-linenos="13 "></span></a>    <span class="p">}</span>
-<a id="__codelineno-6-14" name="__codelineno-6-14"></a><a href="#__codelineno-6-14"><span class="linenos" data-linenos="14 "></span></a>
-<a id="__codelineno-6-15" name="__codelineno-6-15"></a><a href="#__codelineno-6-15"><span class="linenos" data-linenos="15 "></span></a>    <span class="kd">func</span> <span class="nf">updateValue</span><span class="p">(</span><span class="kc">_</span> <span class="n">key</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="kc">_</span> <span class="n">value</span><span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">{}</span>
-<a id="__codelineno-6-16" name="__codelineno-6-16"></a><a href="#__codelineno-6-16"><span class="linenos" data-linenos="16 "></span></a><span class="p">}</span>
-<a id="__codelineno-6-17" name="__codelineno-6-17"></a><a href="#__codelineno-6-17"><span class="linenos" data-linenos="17 "></span></a>
-<a id="__codelineno-6-18" name="__codelineno-6-18"></a><a href="#__codelineno-6-18"><span class="linenos" data-linenos="18 "></span></a><span class="c1">/// A thread-safe data provider</span>
-<a id="__codelineno-6-19" name="__codelineno-6-19"></a><a href="#__codelineno-6-19"><span class="linenos" data-linenos="19 "></span></a><span class="kd">class</span> <span class="nc">Data</span><span class="p">:</span> <span class="n">DataProvider</span> <span class="p">{</span>
-<a id="__codelineno-6-20" name="__codelineno-6-20"></a><a href="#__codelineno-6-20"><span class="linenos" data-linenos="20 "></span></a>    <span class="c1">// singleton pattern</span>
-<a id="__codelineno-6-21" name="__codelineno-6-21"></a><a href="#__codelineno-6-21"><span class="linenos" data-linenos="21 "></span></a>    <span class="kd">static</span> <span class="kd">let</span> <span class="nv">shared</span> <span class="p">=</span> <span class="n">Data</span><span class="p">()</span>
-<a id="__codelineno-6-22" name="__codelineno-6-22"></a><a href="#__codelineno-6-22"><span class="linenos" data-linenos="22 "></span></a>    <span class="kd">private</span> <span class="kd">init</span><span class="p">()</span> <span class="p">{}</span>
-<a id="__codelineno-6-23" name="__codelineno-6-23"></a><a href="#__codelineno-6-23"><span class="linenos" data-linenos="23 "></span></a>
-<a id="__codelineno-6-24" name="__codelineno-6-24"></a><a href="#__codelineno-6-24"><span class="linenos" data-linenos="24 "></span></a>    <span class="kd">private</span> <span class="kd">var</span> <span class="nv">lookupTable</span><span class="p">:</span> <span class="p">[</span><span class="nb">String</span><span class="p">:</span> <span class="nb">Int</span><span class="p">]</span> <span class="p">=</span> <span class="p">[:]</span>
-<a id="__codelineno-6-25" name="__codelineno-6-25"></a><a href="#__codelineno-6-25"><span class="linenos" data-linenos="25 "></span></a>    <span class="c1">// Dispatch queue lock for protecting read and write behaviors</span>
-<a id="__codelineno-6-26" name="__codelineno-6-26"></a><a href="#__codelineno-6-26"><span class="linenos" data-linenos="26 "></span></a>    <span class="kd">private</span> <span class="kd">let</span> <span class="nv">lock</span> <span class="p">=</span> <span class="n">DispatchQueue</span><span class="p">(</span><span class="n">label</span><span class="p">:</span> <span class="s">&quot;edu.oregonstate.data-provider-lock&quot;</span><span class="p">)</span>
-<a id="__codelineno-6-27" name="__codelineno-6-27"></a><a href="#__codelineno-6-27"><span class="linenos" data-linenos="27 "></span></a>
-<a id="__codelineno-6-28" name="__codelineno-6-28"></a><a href="#__codelineno-6-28"><span class="linenos" data-linenos="28 "></span></a>    <span class="c1">// read</span>
-<a id="__codelineno-6-29" name="__codelineno-6-29"></a><a href="#__codelineno-6-29"><span class="linenos" data-linenos="29 "></span></a>    <span class="kd">func</span> <span class="nf">getValue</span><span class="p">(</span><span class="kc">_</span> <span class="n">key</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">Int</span><span class="p">?</span> <span class="p">{</span>
-<a id="__codelineno-6-30" name="__codelineno-6-30"></a><a href="#__codelineno-6-30"><span class="linenos" data-linenos="30 "></span></a>        <span class="n">lock</span><span class="p">.</span><span class="n">sync</span> <span class="p">{</span>
-<a id="__codelineno-6-31" name="__codelineno-6-31"></a><a href="#__codelineno-6-31"><span class="linenos" data-linenos="31 "></span></a>            <span class="k">return</span> <span class="n">lookupTable</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
-<a id="__codelineno-6-32" name="__codelineno-6-32"></a><a href="#__codelineno-6-32"><span class="linenos" data-linenos="32 "></span></a>        <span class="p">}</span>
-<a id="__codelineno-6-33" name="__codelineno-6-33"></a><a href="#__codelineno-6-33"><span class="linenos" data-linenos="33 "></span></a>    <span class="p">}</span>
-<a id="__codelineno-6-34" name="__codelineno-6-34"></a><a href="#__codelineno-6-34"><span class="linenos" data-linenos="34 "></span></a>
-<a id="__codelineno-6-35" name="__codelineno-6-35"></a><a href="#__codelineno-6-35"><span class="linenos" data-linenos="35 "></span></a>    <span class="c1">// write</span>
-<a id="__codelineno-6-36" name="__codelineno-6-36"></a><a href="#__codelineno-6-36"><span class="linenos" data-linenos="36 "></span></a>    <span class="kd">func</span> <span class="nf">updateValue</span><span class="p">(</span><span class="kc">_</span> <span class="n">key</span><span class="p">:</span> <span class="nb">String</span><span class="p">,</span> <span class="kc">_</span> <span class="n">value</span><span class="p">:</span> <span class="nb">Int</span><span class="p">)</span> <span class="p">{</span>
-<a id="__codelineno-6-37" name="__codelineno-6-37"></a><a href="#__codelineno-6-37"><span class="linenos" data-linenos="37 "></span></a>        <span class="n">lock</span><span class="p">.</span><span class="k">async</span> <span class="p">{</span>
-<a id="__codelineno-6-38" name="__codelineno-6-38"></a><a href="#__codelineno-6-38"><span class="linenos" data-linenos="38 "></span></a>            <span class="kc">self</span><span class="p">.</span><span class="n">lookupTable</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="p">=</span> <span class="n">value</span>
-<a id="__codelineno-6-39" name="__codelineno-6-39"></a><a href="#__codelineno-6-39"><span class="linenos" data-linenos="39 "></span></a>        <span class="p">}</span>
-<a id="__codelineno-6-40" name="__codelineno-6-40"></a><a href="#__codelineno-6-40"><span class="linenos" data-linenos="40 "></span></a>    <span class="p">}</span>
-<a id="__codelineno-6-41" name="__codelineno-6-41"></a><a href="#__codelineno-6-41"><span class="linenos" data-linenos="41 "></span></a><span class="p">}</span>
-<a id="__codelineno-6-42" name="__codelineno-6-42"></a><a href="#__codelineno-6-42"><span class="linenos" data-linenos="42 "></span></a>
-<a id="__codelineno-6-43" name="__codelineno-6-43"></a><a href="#__codelineno-6-43"><span class="linenos" data-linenos="43 "></span></a><span class="c1">// Thread 1 - reader</span>
-<a id="__codelineno-6-44" name="__codelineno-6-44"></a><a href="#__codelineno-6-44"><span class="linenos" data-linenos="44 "></span></a>
-<a id="__codelineno-6-45" name="__codelineno-6-45"></a><a href="#__codelineno-6-45"><span class="linenos" data-linenos="45 "></span></a><span class="k">if</span> <span class="p">(</span><span class="n">Data</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">getValue</span><span class="p">(</span><span class="s">&quot;a&quot;</span><span class="p">)</span> <span class="p">??</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">5</span> <span class="p">{</span>
-<a id="__codelineno-6-46" name="__codelineno-6-46"></a><a href="#__codelineno-6-46"><span class="linenos" data-linenos="46 "></span></a>
-<a id="__codelineno-6-47" name="__codelineno-6-47"></a><a href="#__codelineno-6-47"><span class="linenos" data-linenos="47 "></span></a>    <span class="c1">// do important stuff</span>
-<a id="__codelineno-6-48" name="__codelineno-6-48"></a><a href="#__codelineno-6-48"><span class="linenos" data-linenos="48 "></span></a><span class="p">}</span>
-<a id="__codelineno-6-49" name="__codelineno-6-49"></a><a href="#__codelineno-6-49"><span class="linenos" data-linenos="49 "></span></a>
-<a id="__codelineno-6-50" name="__codelineno-6-50"></a><a href="#__codelineno-6-50"><span class="linenos" data-linenos="50 "></span></a><span class="c1">// Thread 2 - writer</span>
-<a id="__codelineno-6-51" name="__codelineno-6-51"></a><a href="#__codelineno-6-51"><span class="linenos" data-linenos="51 "></span></a>
-<a id="__codelineno-6-52" name="__codelineno-6-52"></a><a href="#__codelineno-6-52"><span class="linenos" data-linenos="52 "></span></a><span class="n">Data</span><span class="p">.</span><span class="n">shared</span><span class="p">.</span><span class="n">updateValue</span><span class="p">(</span><span class="s">&quot;a&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
-</code></pre></div>
+<h1 id="sql"><strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M16.405 5.501c-.115 0-.193.014-.274.033v.013h.014c.054.104.146.18.214.273.054.107.1.214.154.32l.014-.015c.094-.066.14-.172.14-.333-.04-.047-.046-.094-.08-.14-.04-.067-.126-.1-.18-.153zM5.77 18.695h-.927a50.854 50.854 0 0 0-.27-4.41h-.008l-1.41 4.41H2.45l-1.4-4.41h-.01a72.892 72.892 0 0 0-.195 4.41H0c.055-1.966.192-3.81.41-5.53h1.15l1.335 4.064h.008l1.347-4.064h1.095c.242 2.015.384 3.86.428 5.53zm4.017-4.08c-.378 2.045-.876 3.533-1.492 4.46-.482.716-1.01 1.073-1.583 1.073-.153 0-.34-.046-.566-.138v-.494c.11.017.24.026.386.026.268 0 .483-.075.647-.222.197-.18.295-.382.295-.605 0-.155-.077-.47-.23-.944L6.23 14.615h.91l.727 2.36c.164.536.233.91.205 1.123.4-1.064.678-2.227.835-3.483zm12.325 4.08h-2.63v-5.53h.885v4.85h1.745zm-3.32.135-1.016-.5c.09-.076.177-.158.255-.25.433-.506.648-1.258.648-2.253 0-1.83-.718-2.746-2.155-2.746-.704 0-1.254.232-1.65.697-.43.508-.646 1.256-.646 2.245 0 .972.19 1.686.574 2.14.35.41.877.615 1.583.615.264 0 .506-.033.725-.098l1.325.772.36-.622zM15.5 17.588c-.225-.36-.337-.94-.337-1.736 0-1.393.424-2.09 1.27-2.09.443 0 .77.167.977.5.224.362.336.936.336 1.723 0 1.404-.424 2.108-1.27 2.108-.445 0-.77-.167-.978-.5zm-1.658-.425c0 .47-.172.856-.516 1.156-.344.3-.803.45-1.384.45-.543 0-1.064-.172-1.573-.515l.237-.476c.438.22.833.328 1.19.328.332 0 .593-.073.783-.22a.754.754 0 0 0 .3-.615c0-.33-.23-.61-.648-.845-.388-.213-1.163-.657-1.163-.657-.422-.307-.632-.636-.632-1.177 0-.45.157-.81.47-1.085.315-.278.72-.415 1.22-.415.512 0 .98.136 1.4.41l-.213.476a2.726 2.726 0 0 0-1.064-.23c-.283 0-.502.068-.654.206a.685.685 0 0 0-.248.524c0 .328.234.61.666.85.393.215 1.187.67 1.187.67.433.305.648.63.648 1.168zm9.382-5.852c-.535-.014-.95.04-1.297.188-.1.04-.26.04-.274.167.055.053.063.14.11.214.08.134.218.313.346.407.14.11.28.216.427.31.26.16.555.255.81.416.145.094.293.213.44.313.073.05.12.14.214.172v-.02c-.046-.06-.06-.147-.105-.214-.067-.067-.134-.127-.2-.193a3.223 3.223 0 0 0-.695-.675c-.214-.146-.682-.35-.77-.595l-.013-.014c.146-.013.32-.066.46-.106.227-.06.435-.047.67-.106.106-.027.213-.06.32-.094v-.06c-.12-.12-.21-.283-.334-.395a8.867 8.867 0 0 0-1.104-.823c-.21-.134-.476-.22-.697-.334-.08-.04-.214-.06-.26-.127-.12-.146-.19-.34-.275-.514a17.69 17.69 0 0 1-.547-1.163c-.12-.262-.193-.523-.34-.763-.69-1.137-1.437-1.826-2.586-2.5-.247-.14-.543-.2-.856-.274-.167-.008-.334-.02-.5-.027-.11-.047-.216-.174-.31-.235-.38-.24-1.364-.76-1.644-.072-.18.434.267.862.422 1.082.115.153.26.328.34.5.047.116.06.235.107.356.106.294.207.622.347.897.073.14.153.287.247.413.054.073.146.107.167.227-.094.136-.1.334-.154.5-.24.757-.146 1.693.194 2.25.107.166.362.534.703.393.3-.12.234-.5.32-.835.02-.08.007-.133.048-.187v.015c.094.188.188.367.274.555.206.328.566.668.867.895.16.12.287.328.487.402v-.02h-.015c-.043-.058-.1-.086-.154-.133a3.445 3.445 0 0 1-.35-.4 8.76 8.76 0 0 1-.747-1.218c-.11-.21-.202-.436-.29-.643-.04-.08-.04-.2-.107-.24-.1.146-.247.273-.32.453-.127.288-.14.642-.188 1.01-.027.007-.014 0-.027.014-.214-.052-.287-.274-.367-.46-.2-.475-.233-1.238-.06-1.785.047-.14.247-.582.167-.716-.042-.127-.174-.2-.247-.303a2.478 2.478 0 0 1-.24-.427c-.16-.374-.24-.788-.414-1.162-.08-.173-.22-.354-.334-.513-.127-.18-.267-.307-.368-.52-.033-.073-.08-.194-.027-.274.014-.054.042-.075.094-.09.088-.072.335.022.422.062.247.1.455.194.662.334.094.066.195.193.315.226h.14c.214.047.455.014.655.073.355.114.675.28.962.46a5.953 5.953 0 0 1 2.085 2.286c.08.154.115.295.188.455.14.33.313.663.455.982.14.315.275.636.476.897.1.14.502.213.682.286.133.06.34.115.46.188.23.14.454.3.67.454.11.076.443.243.463.378z"/></svg></span> SQL</strong><a class="headerlink" href="#sql" title="Anchor link to this section for reference">⚓︎</a></h1>
+<blockquote>
+<p>Please go to this <a href="../../../5_FullStack/LANG/SQL/">link</a> or check the info below:</p>
+</blockquote>
+<iframe width="100%" height="700" src="https://yuantianle.github.io/5_FullStack/LANG/SQL/README.md"></iframe>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 6, 2022 21:02:27</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 4, 2023 22:10:43</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 9, 2022 07:25:53</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 4, 2023 22:10:43</span>
       
     
   </small>
@@ -4808,12 +4527,12 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.instant", "navigation.indexes", "search.suggest", "search.highlight", "navigation.tabs", "navigation.top", "toc.integrate", "content.code.annotate"], "search": "../../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.indexes", "search.suggest", "search.highlight", "navigation.tabs", "navigation.top", "toc.integrate", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.407015b8.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.407015b8.min.js"></script>
       
-        <script src="../../../../javascripts/mathjax.js"></script>
+        <script src="../../../javascripts/mathjax.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
