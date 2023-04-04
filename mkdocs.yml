@@ -334,8 +334,8 @@ nav:
           - Multiple Table Operation: 5_FullStack/LANG/SQL/multi_table.md
     - ICS:
       - 10_Interview/README.md
-      - OOP: 3_C++/C++OLD/concepts.md
-      - Database Management: 5_FullStack/LANG/SQL/README.md
+      - OOP: 10_Interview/Other/oop_guide.md
+      - Database Management: 10_Interview/Other/sql_guide.md
       - Operating System: 10_Interview/Operating_system/README.md
       - Networking: 10_Interview/Networking/README.md
 

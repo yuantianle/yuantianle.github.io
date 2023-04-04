@@ -432,9 +432,6 @@ comments: true
 - [Abstract class vs Interface in C++](https://manishs-kth.medium.com/abstract-class-vs-interface-in-c-d1702d2c193e)
 - [C++ Overloading (Operator and Function)](https://www.tutorialspoint.com/cplusplus/cpp_overloading.htm)
 
-
-
-
 <head>
   <title>C++ Code Compiler</title>
   <!-- Include SweetAlert2 CSS -->
