@@ -267,6 +267,11 @@ nav:
       - STL:
         - 3_C++/STL/README.md
         - unordered_set: 3_C++/STL/unodered_set.md
+      - Design Pattern:
+        - 3_C++/Design_Pattern/README.md
+        - UML class Diagram: 3_C++/Design_Pattern/UML.md
+        - Software desgin basic: 3_C++/Design_Pattern/basic.md
+        - Desgin Patterns: 3_C++/Design_Pattern/contents.md
 
     - Algorithm: 
       - 4_Algorithms/README.md
@@ -330,7 +335,7 @@ nav:
     - ICS:
       - 10_Interview/README.md
       - OOP: 3_C++/C++OLD/concepts.md
-      - Basic Management: 5_FullStack/LANG/SQL/README.md
+      - Database Management: 5_FullStack/LANG/SQL/README.md
       - Operating System: 10_Interview/Operating_system/README.md
       - Networking: 10_Interview/Networking/README.md
 

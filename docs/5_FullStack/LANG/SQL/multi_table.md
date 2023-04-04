@@ -16,7 +16,7 @@ Here are some higher-level uses:
 - [`Self Join`](#self-join) - Inner join a table with itself.
 - [`Union`](#union) - Combine two tables with the same number of columns.
 
-### **Joins**
+## **Joins**
 
 ???note "Joins"
 
@@ -29,7 +29,7 @@ Here are some higher-level uses:
   
     ![picture 1](./pictures/Join.png){width="80%", : .center}     
 
-### **Inner Join**
+## **Inner Join**
 
 ???note "Inner Join"
 
@@ -69,7 +69,7 @@ Here are some higher-level uses:
         ON Marks_family.City = Student_List.City;
         </div> 
 
-### **Left Join**
+## **Left Join**
 
 ???note "Left Join"
 
@@ -109,7 +109,7 @@ Here are some higher-level uses:
         ON Student_List.City = Marks_family.City;
         </div>
 
-### **Right Join**
+## **Right Join**
 
 ???note "Right Join"
 
@@ -149,7 +149,7 @@ Here are some higher-level uses:
         ON Marks_family.City = Student_List.City;
         </div> 
 
-### **Full Join**
+## **Full Join**
 
 ???note "Full Join"
 
@@ -192,7 +192,7 @@ Here are some higher-level uses:
         ON Marks_family.City = Student_List.City;
         </div> 
 
-### **Self Join**
+## **Self Join**
 
 ???note "Self Join"
 
@@ -225,7 +225,7 @@ Here are some higher-level uses:
         WHERE A.City = B.City AND A.PersonID <> B.PersonID;
         </div> 
 
-### **Union**
+## **Union**
 
 ???note "Union"
 

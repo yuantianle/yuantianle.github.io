@@ -18,7 +18,7 @@ Here are some higher-level uses:
 - [`INSERT INTO SELECT`]
 - [`Case`]
 
-### **DROP**
+## **DROP**
 
 ???note "DROP"
 
@@ -54,7 +54,7 @@ Here are some higher-level uses:
         DROP TABLE Marks_family;
         </div>   
 
-### **Stored PROCEDURES**
+## **Stored PROCEDURES**
 
 ???note "Stored PROCEDURES"
 
@@ -94,7 +94,7 @@ Here are some higher-level uses:
         EXEC SelectAllCustomers;
         </div>
 
-### **SELECT DISTINCT**
+## **SELECT DISTINCT**
 
 ???note "SELECT DISTINCT"
 
@@ -131,7 +131,7 @@ Here are some higher-level uses:
         SELECT DISTINCT PersonID FROM Marks_family;
         </div>   
 
-### **LIKE**
+## **LIKE**
 
 ???note "LIKE"
 
@@ -162,7 +162,7 @@ Here are some higher-level uses:
         WHERE CustomerName LIKE 'a%';
         </div>
 
-### **Wildcard**
+## **Wildcard**
 
 ???note "Wildcard"
 

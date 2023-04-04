@@ -23,7 +23,7 @@ comments: true
 - [**Access modifier**](#access-modifier)
 
 
-### **OOP**
+## **OOP**
 
 ???+Note "Benefits of `OOP`"
 
@@ -34,7 +34,7 @@ comments: true
     - OOP helps to keep the code <u>DRY "Don't Repeat Yourself"</u>. It create full reusable applications with less code and shorter development time
     - OOP makes the code easier to <u>maintain, modify and debug</u>.
 
-### **Class and Object**
+## **Class and Object**
 
 ???+Note "`Class and Object`"
 
@@ -46,7 +46,7 @@ comments: true
         - When a program creates an object of a class, it <u>allocates memory</u> for that object and initializes its member variables and methods according to the class definition. 
         - Objects can <u>interact with each other</u> and with the program through their methods and public member variables.
 
-### **Inheritance**
+## **Inheritance**
 
 ???+Note "`Inheritance`"
 
@@ -69,7 +69,7 @@ comments: true
     ![picture 1](pictures/polymorphism.png){width="80%", : .center}  
 
 
-### **Encapsulation**
+## **Encapsulation**
 
 ???+Note "`Encapsulation`"
 
@@ -79,7 +79,7 @@ comments: true
 
     * **Advantages:** Improve code <u>security and reliability</u>, reduce unnecessary <u>coupling</u>, and make code more <u>maintainable</u> and easier to <u>extend</u>.
 
-### **Interface**
+## **Interface**
 
 ???+Note "`Interface`"
 
@@ -113,7 +113,7 @@ comments: true
           5. can have variables declaration.
 
 
-### **Abstract class**
+## **Abstract class**
 
 ???+Note "`Abstract class`"
 
@@ -143,7 +143,7 @@ comments: true
             std::string message;    
     }; 
     ```
-### **Abstract methods & Virtual function (method)**
+## **Abstract methods & Virtual function (method)**
 
 ???+Note "`Virtual function (method)`"
 
@@ -157,7 +157,7 @@ comments: true
     }
     ```
 
-### **Overloading**
+## **Overloading**
 
 ???+Note "`Overloading`"
         
@@ -237,7 +237,7 @@ comments: true
         }
         ```
 
-### **Overriding**
+## **Overriding**
 
 ???+note "`Overrding`"
 
@@ -283,7 +283,7 @@ comments: true
     ```
     <button id="open-window-btn" onclick="toggleWindow()">Open Mini Compiler</button>
 
-### **Compile & Run time**
+## **Compile & Run time**
 
 ???+note "`Compile & Run time`"
 
@@ -298,7 +298,7 @@ comments: true
         - Runtime exceptions are errors that occur during the execution of a program. They are not caught by the compiler and may cause the program to terminate abnormally.
             - E.g. invalid input, null pointer access, and arithmetic overflow.
 
-### **Static methods and variables**
+## **Static methods and variables**
 
 ???+note "`Static methods and variables`"
 
@@ -357,7 +357,7 @@ comments: true
     ```
     <button id="open-window-btn" onclick="toggleWindow()">Open Mini Compiler</button>
 
-### **Constructor and Destructor**
+## **Constructor and Destructor**
 
 ???+note "`Constructor and Destructor`"
 
@@ -412,7 +412,7 @@ comments: true
     ```
     <button id="open-window-btn" onclick="toggleWindow()">Open Mini Compiler</button>
 
-### **Access modifier**
+## **Access modifier**
 
 ???+note "`Access modifier`"
 
@@ -425,7 +425,7 @@ comments: true
         - Behavior concealment: Create public APIs but hide it's corresponding inside behaviors in the class.
 
 
-#### **Reference**
+### **Reference**
 
 - [Picture resource 1](https://www.geeksforgeeks.org/cpp-polymorphism/)
 - [OpenAI](https://chat.openai.com/chat)

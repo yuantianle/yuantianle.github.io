@@ -49,19 +49,43 @@ comments: true
 
 ??? question "What are OS components?"
 
-    - **Kernel:** the core part of the operating system, responsible for <u>managing computer hardware</u> and <u>providing basic functions</u> such as system calls.
+    - **`Kernel`:** the core part of the operating system, responsible for <u>managing computer hardware</u> and <u>providing basic functions</u> such as system calls.
 
-    - **Process manager:** responsible for the <u>efficient operation</u> of the computer system, including:
+    - **`Process manager`:** responsible for the <u>efficient operation</u> of the computer system, including:
         -  creating, deleting, scheduling, and managing processes.
 
-    - **Storage manager:** responsible for <u>managing computer memory</u> resources, including:
+    - **`Storage manager`:** responsible for <u>managing computer memory</u> resources, including:
         -  memory allocation, recovery, and protection.
 
-    - **File system:** responsible for <u>managing files and directories</u> in the computer system, including:
+    - **`File system`:** responsible for <u>managing files and directories</u> in the computer system, including:
         -  file reading, writing, creation, deletion, and protection.
 
-    - **Input/output manager:** responsible for managing <u>data transfer</u> between the computer system and external devices, including: 
+    - **`Input/output manager`:** responsible for managing <u>data transfer</u> between the computer system and external devices, including: 
         - input/output buffering, device drivers, and interrupt handling.
+
+### **What are process and thread?**
+
+??? question "What are process and thread?"
+
+    !!! note "Definition with comparison"
+
+        - **Definition:** 
+            - `Process` is an {==instance of a running program==} with its own independent address space and system resources, including <u>program code</u>, <u>data</u>, <u>stack</u>, and <u>process control blocks</u>. 
+            - `Thread` is an {==execution unit in a process==}, sharing resources of the process including <u>address space</u>, <u>file descriptors</u>, <u>signal handlers</u>, and <u>process ID</u>. 
+
+        - **Scheduling:** 
+            - `Process` is the <u>basic scheduling unit</u> in an operating system, and the operating system manages processes through process <u>control blocks</u>. 
+            - `Threads` are <u>scheduling units</u> within a process, and the operating system schedules threads.
+
+        - **Concurrency:** Different processes run <u>concurrently</u>, with each process having its own independent address space and resources. 
+            - `Processes` are <u>independent</u> of each other. 
+            - `Threads` within the same process share resources and data, and can execute concurrently.
+
+        - **System overhead:** 
+            - `Process` switching requires saving and restoring <u>all</u> process states, so process switching incurs a <u>larger system overhead</u>. 
+            - `Thread` switching only requires saving and restoring <u>part</u> of the thread state, so thread switching incurs a <u>smaller system overhead</u>.
+
+
 
 #### **References:**
 

@@ -22,7 +22,7 @@ There are some structural operators that are used to complete SQL sentences:
 - [`As`](#as) for **name alias**.
 - [`Having`](#having) for using **aggregation condition**.
 
-### **Operators**
+## **Operators**
 
 ???note "Operators"
 
@@ -81,7 +81,7 @@ There are some structural operators that are used to complete SQL sentences:
             | :---: | :---: |:---: |
             |Bitwise AND |Bitwise OR|Bitwise exclusive OR|
 
-### **Null**
+## **Null**
 
 ???note "Null"
 
@@ -119,7 +119,7 @@ There are some structural operators that are used to complete SQL sentences:
         WHERE LastName IS NOT NULL;
         </div> 
 
-### **Min & Max**
+## **Min & Max**
 
 ???note "Min & Max"
 
@@ -156,7 +156,7 @@ There are some structural operators that are used to complete SQL sentences:
         FROM Marks_family;
         </div> 
 
-### **And, Or, and Not**
+## **And, Or, and Not**
 
 ???note "And, Or, and Not"
 
@@ -205,7 +205,7 @@ There are some structural operators that are used to complete SQL sentences:
         WHERE NOT City = 'Albany';
         </div> 
 
-### **Exists**
+## **Exists**
 
 ???note "Exists"
 
@@ -245,7 +245,7 @@ There are some structural operators that are used to complete SQL sentences:
         WHERE EXISTS (SELECT City FROM Marks_family2);
         </div> 
 
-### **In**
+## **In**
 
 ???note "In"
 
@@ -285,7 +285,7 @@ There are some structural operators that are used to complete SQL sentences:
         WHERE CITY IN (SELECT City FROM Marks_family WHERE City = 'Salem');
         </div>   
 
-### **Any & All**
+## **Any & All**
 
 ???note "Any & All"
 
@@ -363,7 +363,7 @@ There are some structural operators that are used to complete SQL sentences:
 
         </div> 
 
-### **Count, Avg, Sum**
+## **Count, Avg, Sum**
 
 ???note "Count, Avg, Sum"
 
@@ -404,7 +404,7 @@ There are some structural operators that are used to complete SQL sentences:
         FROM Marks_family;
         </div> 
 
-### **Order By**
+## **Order By**
 
 ???note "Order By"
 
@@ -441,7 +441,7 @@ There are some structural operators that are used to complete SQL sentences:
         ORDER BY PersonID, LastName ASC;
         </div>   
 
-### **Group By**
+## **Group By**
 
 ???note "Group By"
 
@@ -483,7 +483,7 @@ There are some structural operators that are used to complete SQL sentences:
 
 
 
-### **Between**
+## **Between**
 
 ???note "Between"
 
@@ -519,7 +519,7 @@ There are some structural operators that are used to complete SQL sentences:
         WHERE PersonID NOT BETWEEN 123 AND 125;
         </div>   
 
-### **As**
+## **As**
 
 ???note "As"
 
@@ -561,7 +561,7 @@ There are some structural operators that are used to complete SQL sentences:
         WHERE City = 'Salem';
         </div>   
 
-### **Having**
+## **Having**
 
 ???note "Having"
 

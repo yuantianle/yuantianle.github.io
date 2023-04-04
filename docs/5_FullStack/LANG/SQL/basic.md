@@ -17,7 +17,7 @@ To better review `SQL` management pipeline, I sort the famouse "verbs" in the se
 - [`DROP TABLE`](#drop-table) - deletes a table
 
 
-### **Create Table**
+## **Create Table**
 
 ???note "Create Table"
 
@@ -51,7 +51,7 @@ To better review `SQL` management pipeline, I sort the famouse "verbs" in the se
         );
         </div>   
 
-### **Insert Into**
+## **Insert Into**
 
 ???note "Insert Into"
 
@@ -83,7 +83,7 @@ To better review `SQL` management pipeline, I sort the famouse "verbs" in the se
         VALUES (123, 'Tom', 'Skage', 'OR', 'Albany');
         </div>   
 
-### **Select**
+## **Select**
 
 ???note "Select"
 
@@ -116,7 +116,7 @@ To better review `SQL` management pipeline, I sort the famouse "verbs" in the se
         SELECT PersonID, City FROM Marks_family;        
         </div>   
     
-### **Where**
+## **Where**
 
 ???note "Where"
 
@@ -150,7 +150,7 @@ To better review `SQL` management pipeline, I sort the famouse "verbs" in the se
         WHERE City='Albany';
         </div>   
 
-### **Update**
+## **Update**
 
 ???note "Update"
 
@@ -187,7 +187,7 @@ To better review `SQL` management pipeline, I sort the famouse "verbs" in the se
         SELECT * FROM Marks_family;
         </div>   
 
-### **Delete**
+## **Delete**
 
 ???note "Delete"
 
@@ -221,7 +221,7 @@ To better review `SQL` management pipeline, I sort the famouse "verbs" in the se
         SELECT * FROM Marks_family;
         </div>   
 
-### **Drop Table**
+## **Drop Table**
 
 ???note "Drop Table"
 

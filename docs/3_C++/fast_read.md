@@ -5,7 +5,9 @@ comments: true
 
 # ** 🚤 Fast Read Catalog**
 
-> Here collects:
+> This is a special dictionary for faster anchoring.
+
+The fast anchoring catalog can be split into below sections:
 
 0. [OOP Concepts](C++OLD/concepts.md)
 
