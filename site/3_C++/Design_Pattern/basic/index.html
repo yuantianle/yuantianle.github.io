@@ -4428,7 +4428,7 @@
   
     <div class="md-source-date" style="text-align: right; font-weight: bold;">
       <small>
-          Author: <span class='git-page-authors git-authors'></span>
+          Author: <span class='git-page-authors git-authors'><a href='mailto:yuant@oregonstate.edu'>Tianle Yuan</a></span>
       </small>
     </div>
   
@@ -4580,7 +4580,7 @@
     note for Dog "this.m_energy += b.getNutrition();"
     class Dog{
         - m_energy : float
-        + Eat(Bone b)
+        + Eat(Food f)
     }
     class Food{
         &lt;&lt;interface&gt;&gt;
@@ -4598,6 +4598,12 @@
 </details>
 </div>
 <h3 id="favor-composition-over-inheritance"><strong>Favor Composition over Inheritance</strong><a class="headerlink" href="#favor-composition-over-inheritance" title="Anchor link to this section for reference">⚓︎</a></h3>
+<div class="admonition note">
+<p>We normally do not do inheritance, which will cause some problems:</p>
+<ul>
+<li><strong>The subclass can't abandon the interface of the superclass</strong>. All the abstract methods in the superclass has to be implemented in the subclass, even though some of them are useless.</li>
+</ul>
+</div>
 <h2 id="solid-principles"><strong>SOLID principles</strong><a class="headerlink" href="#solid-principles" title="Anchor link to this section for reference">⚓︎</a></h2>
 <p>Besides the basic design principles we talked above, <a href="../../../2_Software_Engineering/Others/engineer/"><code>SOLID principles</code></a> makes software design <u>easier to understand</u>, <u>more flexible</u>, and <u>more maintainable</u>. Here we focus more on using C++ examples for better understanding.</p>
 <h3 id="single-responsibility-principle"><strong>Single Responsibility Principle</strong><a class="headerlink" href="#single-responsibility-principle" title="Anchor link to this section for reference">⚓︎</a></h3>
@@ -4616,11 +4622,11 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 4, 2023 08:20:17</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 4, 2023 08:21:07</span>
       
         <br>
         Created:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 4, 2023 08:20:17</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 4, 2023 08:21:07</span>
       
     
   </small>

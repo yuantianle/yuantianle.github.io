@@ -14,7 +14,7 @@ comments: true
 ???+success "Advantages"
 
     1. <u>Prevent memory leak</u>. It provides **Garbage Collection Mechanisms** when we forget to release the mm space.
-    2. <u>Smart pointer is a class</u>. When the class is out of scope, the class automatically calls the destructor, which automatically frees the resource.
+    2. <u>Smart pointer is a class</u>. When the <u>class object</u> is out of scope, the class automatically calls the destructor, which automatically frees the resource.
 
 ## **Theory**
 
@@ -143,11 +143,29 @@ comments: true
 
     By using `shared_ptr`, more than one pointer can point to this one object at a time. 
     
-    - We can use the member function `use_count()` to check "referencer" number of object resources pointed by the pointer itself.
+    - We can use the member function `use_count()` of the `shared_ptr` object to check how many "referencers" (pointer objects) are referring to the same object resource.
 
-    - `shared_ptr` can call function `release()` to give up ownership of resource. The object resource counter will be minus one.
+        - 
+        ```cpp title="use_count.cpp" hl_lines="10 11 12"
+        #include <iostream>
+        #include <cassert>
+        #include <memory>
 
-    - The object resources will be **destroyed** when the last reference has been deleted (i.e. `Ptr.use_count() == 0`).
+        int main() {
+            std::shared_ptr<int> sp1 = std::make_shared<int>(42);
+            std::shared_ptr<int> sp2 = sp1;
+            std::shared_ptr<int> sp3 = sp1;
+
+            assert(sp1.use_count() == 3);
+            assert(sp2.use_count() == 3);
+            assert(sp3.use_count() == 3);
+            return 0;
+        }
+        ```
+        
+    - `shared_ptr` can call function `release()` to give up ownership of the resource. The object resource counter will be minus one.
+    
+    - The referred object resources will be **destroyed** when the last reference has been deleted (i.e. `Ptr.use_count() == 0`).
 
     ![picture 2](../pictures/shared_ptr.png){width="60%", : .center} 
 

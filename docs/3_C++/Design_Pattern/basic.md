@@ -114,7 +114,7 @@ Here we show the **basic principles** to make SW <u>flexible</u>, <u>robust</u>,
 !!! note ""
 
     {==Program to an **interface**, not an **implementation**==}. It means making the dependency more <u>flexible (decoupled)</u>
-    
+
         - <u>Figure out the method</u>, which demands the dependent class.
         - Using a new `Interface` or `Abstract class` to <u>abstract the method</u>.
         - Let the <u>dependent class implement the abstraction</u>.
@@ -152,7 +152,7 @@ Here we show the **basic principles** to make SW <u>flexible</u>, <u>robust</u>,
                 note for Dog "this.m_energy += b.getNutrition();"
                 class Dog{
                     - m_energy : float
-                    + Eat(Bone b)
+                    + Eat(Food f)
                 }
                 class Food{
                     <<interface>>
@@ -167,7 +167,11 @@ Here we show the **basic principles** to make SW <u>flexible</u>, <u>robust</u>,
             ```
 
 ### **Favor Composition over Inheritance**
+!!! note ""
 
+    We normally do not do inheritance, which will cause some problems:
+
+    - **The subclass can't abandon the interface of the superclass**. All the abstract methods in the superclass has to be implemented in the subclass, even though some of them are useless.
 ## **SOLID principles**
     
 Besides the basic design principles we talked above, [`SOLID principles`](../../2_Software_Engineering/Others/engineer.md) makes software design <u>easier to understand</u>, <u>more flexible</u>, and <u>more maintainable</u>. Here we focus more on using C++ examples for better understanding.
