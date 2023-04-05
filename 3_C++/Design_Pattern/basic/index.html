@@ -12,14 +12,14 @@
         <link rel="prev" href="../UML/">
       
       
-        <link rel="next" href="../contents/">
+        <link rel="next" href="../prog_tech/">
       
       <link rel="icon" href="../../../images/self.ico">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.5">
     
     
       
-        <title>Software desgin basic - Tianle Yuan's Blog</title>
+        <title>Software desgin principles - Tianle Yuan's Blog</title>
       
     
     
@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#software-desgin-basic" class="md-skip">
+        <a href="#software-desgin-principles" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Software desgin basic
+              Software desgin principles
             
           </span>
         </div>
@@ -2706,6 +2706,8 @@
         
           
         
+          
+        
       
       
         
@@ -2735,7 +2737,7 @@
   
     <li class="md-nav__item">
       <a href="../UML/" class="md-nav__link">
-        UML class Diagram
+        UML & Object relationships
       </a>
     </li>
   
@@ -2758,12 +2760,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Software desgin basic
+          Software desgin principles
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Software desgin basic
+        Software desgin principles
       </a>
       
         
@@ -2804,10 +2806,31 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#programming-techniques" class="md-nav__link">
+    Programming techniques
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prog_tech/" class="md-nav__link">
+        Programming techniques
+      </a>
     </li>
   
 
@@ -4437,10 +4460,28 @@
   
 
 
-<h1 id="software-desgin-basic"><strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19.229 4.18-4.066 2.327V1.826L11.993 0 8.827 1.83v4.677L4.78 4.17 1.606 6v3.664L5.657 12l-4.054 2.343V18l3.165 1.831 4.044-2.338v4.681L11.983 24l3.174-1.831v-4.676l4.052 2.327 3.173-1.829v-3.646L18.339 12l4.058-2.336V6l-3.164-1.82h-.004zm.373 3.429V5.715l1.639.942v1.905l-1.636-.953h-.003zm1.638 9.286-6.075-3.504 1.65-.945L21.239 15v1.896l.001-.001zm-6.827-3.95L12.763 12l6.452-3.726 1.641.944-6.446 3.727h.003zM3.134 9.219l1.641-.944L11.228 12l-1.639.945-6.455-3.726zm5.69 4.17-6.075 3.508V15l4.435-2.555 1.641.945v-.001zM2.749 8.564V6.66l1.64-.945v1.898l-1.64.951zm9.627 0V1.55l1.641.937V7.61l-1.641.953v.001zm-2.402-.96V2.493l1.64-.944v7.004l-1.64-.949zm8.866-1.889v1.898l-6.456 3.734V9.442l6.456-3.727zm-7.228 3.724v1.897L5.153 7.609V5.715l6.46 3.721-.001.003zm-2.403 6.513-4.435 2.555-1.64-.944 6.074-3.508v1.897zm.765-2.343 1.64-.945v7.453l-1.64.959v-7.467zm3.656 8.115-1.639.954-1.64-.951 1.64-.946 1.639.946v-.003zm.394-.657-1.648-.95v-7.441l1.648.944zm6.831-3.504-1.641.944-4.425-2.555v-1.897l6.075 3.508h-.009z"/></svg></span> Software desgin basic </strong><a class="headerlink" href="#software-desgin-basic" title="Anchor link to this section for reference">⚓︎</a></h1>
+<h1 id="software-desgin-principles"><strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19.229 4.18-4.066 2.327V1.826L11.993 0 8.827 1.83v4.677L4.78 4.17 1.606 6v3.664L5.657 12l-4.054 2.343V18l3.165 1.831 4.044-2.338v4.681L11.983 24l3.174-1.831v-4.676l4.052 2.327 3.173-1.829v-3.646L18.339 12l4.058-2.336V6l-3.164-1.82h-.004zm.373 3.429V5.715l1.639.942v1.905l-1.636-.953h-.003zm1.638 9.286-6.075-3.504 1.65-.945L21.239 15v1.896l.001-.001zm-6.827-3.95L12.763 12l6.452-3.726 1.641.944-6.446 3.727h.003zM3.134 9.219l1.641-.944L11.228 12l-1.639.945-6.455-3.726zm5.69 4.17-6.075 3.508V15l4.435-2.555 1.641.945v-.001zM2.749 8.564V6.66l1.64-.945v1.898l-1.64.951zm9.627 0V1.55l1.641.937V7.61l-1.641.953v.001zm-2.402-.96V2.493l1.64-.944v7.004l-1.64-.949zm8.866-1.889v1.898l-6.456 3.734V9.442l6.456-3.727zm-7.228 3.724v1.897L5.153 7.609V5.715l6.46 3.721-.001.003zm-2.403 6.513-4.435 2.555-1.64-.944 6.074-3.508v1.897zm.765-2.343 1.64-.945v7.453l-1.64.959v-7.467zm3.656 8.115-1.639.954-1.64-.951 1.64-.946 1.639.946v-.003zm.394-.657-1.648-.95v-7.441l1.648.944zm6.831-3.504-1.641.944-4.425-2.555v-1.897l6.075 3.508h-.009z"/></svg></span> Software desgin principles</strong><a class="headerlink" href="#software-desgin-principles" title="Anchor link to this section for reference">⚓︎</a></h1>
 <blockquote>
 <p>Before we start to learn the design pattern, we need to know what is a <strong>good software design</strong>.</p>
 </blockquote>
+<ul>
+<li><a href="#good-sw-desgin"><strong>Good SW desgin?</strong></a></li>
+<li><a href="#basic-design-principles"><strong>Basic design principles</strong></a><ul>
+<li><a href="#11-encapsulate-varies"><strong>1.1 Encapsulate varies</strong></a></li>
+<li><a href="#12-program-to-an-interface"><strong>1.2 Program to an interface</strong></a></li>
+<li><a href="#13-favor-composition-over-inheritance"><strong>1.3 Favor Composition over Inheritance</strong></a></li>
+</ul>
+</li>
+<li><a href="#solid-principles"><strong>SOLID principles</strong></a><ul>
+<li><a href="#21-single-responsibility-principle"><strong>2.1 Single Responsibility Principle</strong></a></li>
+<li><a href="#22-openclosed-principle"><strong>2.2 Open/Closed Principle</strong></a></li>
+<li><a href="#23-liskov-substitution-principle"><strong>2.3 Liskov Substitution Principle</strong></a></li>
+<li><a href="#24-interface-segregation-principle"><strong>2.4 Interface Segregation Principle</strong></a></li>
+<li><a href="#25-dependency-inversion-principle"><strong>2.5 Dependency Inversion Principle</strong></a></li>
+</ul>
+</li>
+<li><a href="#programming-techniques"><strong>Programming techniques</strong></a></li>
+</ul>
 <h2 id="good-sw-desgin"><strong>Good SW desgin?</strong><a class="headerlink" href="#good-sw-desgin" title="Anchor link to this section for reference">⚓︎</a></h2>
 <details class="question" open="open">
 <summary>How to define a good SW desgin?</summary>
@@ -4542,12 +4583,13 @@
 </div>
 <h3 id="12-program-to-an-interface"><strong>1.2 Program to an interface</strong><a class="headerlink" href="#12-program-to-an-interface" title="Anchor link to this section for reference">⚓︎</a></h3>
 <div class="admonition note">
-<p><mark class="critic">Program to an <strong>interface</strong>, not an <strong>implementation</strong></mark>. It means making the dependency more <u>flexible (decoupled)</u></p>
-<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code><span class="linenos" data-linenos="1 "></span>- &lt;u&gt;Figure out the method&lt;/u&gt;, which demands the dependent class.
-<span class="linenos" data-linenos="2 "></span>- Using a new `Interface` or `Abstract class` to &lt;u&gt;abstract the method&lt;/u&gt;.
-<span class="linenos" data-linenos="3 "></span>- Let the &lt;u&gt;dependent class implement the abstraction&lt;/u&gt;.
-<span class="linenos" data-linenos="4 "></span>- Dependency injection (now the &lt;u&gt;class in demand depends on the abstraction&lt;/u&gt;).
-</code></pre></div>
+<p><em>Program to an <a href="../../C%2B%2BOLD/concepts/#interface"><strong>interface</strong></a>, not an </em><strong><em>implementation</em></strong>. It means making the dependency more <u>flexible (decoupled)</u></p>
+<ul>
+<li><u>Figure out the method</u>, which demands the dependent class.</li>
+<li>Using a new <code>Interface</code> or <code>Abstract class</code> to <u>abstract the method</u>.</li>
+<li>Let the <u>dependent class implement the abstraction</u>.</li>
+<li>Dependency injection (now the <u>class in demand depends on the abstraction</u>).</li>
+</ul>
 <details class="success" open="open">
 <summary>Example</summary>
 <p>Dog loves eating bones. Now let's make the code <u>more extensible</u> (although it temporally looks more complicated):</p>
@@ -4596,7 +4638,7 @@
 </div>
 <h3 id="13-favor-composition-over-inheritance"><strong>1.3 Favor Composition over Inheritance</strong><a class="headerlink" href="#13-favor-composition-over-inheritance" title="Anchor link to this section for reference">⚓︎</a></h3>
 <div class="admonition note">
-<p>We normally do not do inheritance, which will cause some <mark class="critic">problems</mark>:</p>
+<p>To put <code>Reuse Mechanism</code> to work, we normally do NOT do <code>inheritance</code>, which will cause some <mark class="critic">problems</mark>:</p>
 <ul>
 <li>
 <p><strong>The subclass <u>can't abandon any interfaces</u> of the superclass</strong>. All the abstract methods (pure virtual functions) in the superclass have to be implemented in the subclass, even though some of them are useless.</p>
@@ -4614,11 +4656,12 @@
 <p><strong>Reusing code through inheritance can lead to parallel inheritance hierarchies.</strong> The combination of classes will explode.</p>
 </li>
 </ul>
+<p>Let's use <code>Composition</code>:</p>
 <details class="success" open="open">
-<summary>Let's use <code>Composition</code>!</summary>
+<summary><code>Inheritance</code> &rarr; <code>Composition</code>!</summary>
 <p>Check the picture in <a href="../UML/">UML class diagram</a> again:</p>
 <p><img :=":" _="," alt="picture 3" class="center" src="../pictures/UML_relationship.png" width="60%" />  </p>
-<p>With the same depth, we can change from using <code>Inheritance</code> to <code>Composition</code> or looser <code>Aggregation</code>.</p>
+<p>With the same depth, we can change from using <u>Inheritance</u> to <code>Composition</code> or looser <code>Aggregation</code>.</p>
 <p><strong>E.g.</strong> Let's take vehicles as an example:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Inheritance</label><label for="__tabbed_4_2">Composition &amp; Aggregation</label></div>
 <div class="tabbed-content">
@@ -4756,7 +4799,7 @@
 <h3 id="23-liskov-substitution-principle"><strong>2.3 Liskov Substitution Principle</strong><a class="headerlink" href="#23-liskov-substitution-principle" title="Anchor link to this section for reference">⚓︎</a></h3>
 <h3 id="24-interface-segregation-principle"><strong>2.4 Interface Segregation Principle</strong><a class="headerlink" href="#24-interface-segregation-principle" title="Anchor link to this section for reference">⚓︎</a></h3>
 <h3 id="25-dependency-inversion-principle"><strong>2.5 Dependency Inversion Principle</strong><a class="headerlink" href="#25-dependency-inversion-principle" title="Anchor link to this section for reference">⚓︎</a></h3>
-<h3 id="introduction"><strong>Introduction</strong><a class="headerlink" href="#introduction" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h2 id="programming-techniques"><strong>Programming techniques</strong><a class="headerlink" href="#programming-techniques" title="Anchor link to this section for reference">⚓︎</a></h2>
 <h3 id="reference"><strong>Reference</strong><a class="headerlink" href="#reference" title="Anchor link to this section for reference">⚓︎</a></h3>
 <ul>
 <li><a href="https://refactoring.guru/design-patterns">DESIGN PATTERNS</a></li>
@@ -4767,7 +4810,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 5, 2023 07:38:27</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 5, 2023 23:04:26</span>
       
         <br>
         Created:

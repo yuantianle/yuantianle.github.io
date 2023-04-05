@@ -19,7 +19,7 @@
     
     
       
-        <title>UML class Diagram - Tianle Yuan's Blog</title>
+        <title>UML & Object relationships - Tianle Yuan's Blog</title>
       
     
     
@@ -73,7 +73,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#uml-class-diagram-for-oop" class="md-skip">
+        <a href="#uml--object-relationships" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              UML class Diagram
+              UML & Object relationships
             
           </span>
         </div>
@@ -2706,6 +2706,8 @@
         
           
         
+          
+        
       
       
         
@@ -2744,12 +2746,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          UML class Diagram
+          UML & Object relationships
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        UML class Diagram
+        UML & Object relationships
       </a>
       
         
@@ -2770,43 +2772,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduction" class="md-nav__link">
-    Introduction
+  <a href="#uml" class="md-nav__link">
+    UML
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#classes" class="md-nav__link">
-    Classes
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#visibility" class="md-nav__link">
-    Visibility
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#relationship" class="md-nav__link">
-    Relationship
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#multiplicity-on-relations" class="md-nav__link">
-    Multiplicity on relations
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#annotations-on-classes" class="md-nav__link">
-    Annotations on classes
+  <a href="#object-relationships" class="md-nav__link">
+    Object relationships
   </a>
   
 </li>
@@ -2827,7 +2801,21 @@
   
     <li class="md-nav__item">
       <a href="../basic/" class="md-nav__link">
-        Software desgin basic
+        Software desgin principles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prog_tech/" class="md-nav__link">
+        Programming techniques
       </a>
     </li>
   
@@ -4458,20 +4446,17 @@
   
 
 
-<h1 id="uml-class-diagram-for-oop"><strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19.229 4.18-4.066 2.327V1.826L11.993 0 8.827 1.83v4.677L4.78 4.17 1.606 6v3.664L5.657 12l-4.054 2.343V18l3.165 1.831 4.044-2.338v4.681L11.983 24l3.174-1.831v-4.676l4.052 2.327 3.173-1.829v-3.646L18.339 12l4.058-2.336V6l-3.164-1.82h-.004zm.373 3.429V5.715l1.639.942v1.905l-1.636-.953h-.003zm1.638 9.286-6.075-3.504 1.65-.945L21.239 15v1.896l.001-.001zm-6.827-3.95L12.763 12l6.452-3.726 1.641.944-6.446 3.727h.003zM3.134 9.219l1.641-.944L11.228 12l-1.639.945-6.455-3.726zm5.69 4.17-6.075 3.508V15l4.435-2.555 1.641.945v-.001zM2.749 8.564V6.66l1.64-.945v1.898l-1.64.951zm9.627 0V1.55l1.641.937V7.61l-1.641.953v.001zm-2.402-.96V2.493l1.64-.944v7.004l-1.64-.949zm8.866-1.889v1.898l-6.456 3.734V9.442l6.456-3.727zm-7.228 3.724v1.897L5.153 7.609V5.715l6.46 3.721-.001.003zm-2.403 6.513-4.435 2.555-1.64-.944 6.074-3.508v1.897zm.765-2.343 1.64-.945v7.453l-1.64.959v-7.467zm3.656 8.115-1.639.954-1.64-.951 1.64-.946 1.639.946v-.003zm.394-.657-1.648-.95v-7.441l1.648.944zm6.831-3.504-1.641.944-4.425-2.555v-1.897l6.075 3.508h-.009z"/></svg></span> UML class diagram for OOP</strong><a class="headerlink" href="#uml-class-diagram-for-oop" title="Anchor link to this section for reference">⚓︎</a></h1>
+<h1 id="uml--object-relationships"><strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19.229 4.18-4.066 2.327V1.826L11.993 0 8.827 1.83v4.677L4.78 4.17 1.606 6v3.664L5.657 12l-4.054 2.343V18l3.165 1.831 4.044-2.338v4.681L11.983 24l3.174-1.831v-4.676l4.052 2.327 3.173-1.829v-3.646L18.339 12l4.058-2.336V6l-3.164-1.82h-.004zm.373 3.429V5.715l1.639.942v1.905l-1.636-.953h-.003zm1.638 9.286-6.075-3.504 1.65-.945L21.239 15v1.896l.001-.001zm-6.827-3.95L12.763 12l6.452-3.726 1.641.944-6.446 3.727h.003zM3.134 9.219l1.641-.944L11.228 12l-1.639.945-6.455-3.726zm5.69 4.17-6.075 3.508V15l4.435-2.555 1.641.945v-.001zM2.749 8.564V6.66l1.64-.945v1.898l-1.64.951zm9.627 0V1.55l1.641.937V7.61l-1.641.953v.001zm-2.402-.96V2.493l1.64-.944v7.004l-1.64-.949zm8.866-1.889v1.898l-6.456 3.734V9.442l6.456-3.727zm-7.228 3.724v1.897L5.153 7.609V5.715l6.46 3.721-.001.003zm-2.403 6.513-4.435 2.555-1.64-.944 6.074-3.508v1.897zm.765-2.343 1.64-.945v7.453l-1.64.959v-7.467zm3.656 8.115-1.639.954-1.64-.951 1.64-.946 1.639.946v-.003zm.394-.657-1.648-.95v-7.441l1.648.944zm6.831-3.504-1.641.944-4.425-2.555v-1.897l6.075 3.508h-.009z"/></svg></span> UML &amp; Object relationships</strong><a class="headerlink" href="#uml--object-relationships" title="Anchor link to this section for reference">⚓︎</a></h1>
 <blockquote>
-<p>Let's see how to express OOP by using UML class.</p>
+<p>Let's see how to express OOP by using UML class diagram. With UML we then import the relationship between classes.</p>
 </blockquote>
-<h2 id="introduction"><strong>Introduction</strong><a class="headerlink" href="#introduction" title="Anchor link to this section for reference">⚓︎</a></h2>
-<details class="questions" open="open">
-<summary>What is UML class?</summary>
+<h2 id="uml"><strong>UML</strong><a class="headerlink" href="#uml" title="Anchor link to this section for reference">⚓︎</a></h2>
 <p><code>Unified Modeling Language (UML)</code> is a type of static structure diagram used to show the structure of a system, including:
 - Classes
 - Attributes (Properties)
 - Methods (Operations)
 - Relationships (between objects)</p>
-</details>
-<h2 id="classes"><strong>Classes</strong><a class="headerlink" href="#classes" title="Anchor link to this section for reference">⚓︎</a></h2>
+<h3 id="11-classes"><strong>1.1 Classes</strong><a class="headerlink" href="#11-classes" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="question" open="open">
 <summary>How to express <code>class</code>?</summary>
 <p>A <code>class</code> in <code>UML</code> should encapsulate the <strong>class name</strong>, <strong>state</strong> (attributes), and <strong>behavior</strong> (methods).</p>
@@ -4507,7 +4492,7 @@ Let's say we have a class as above; then we can show the <strong>diagram</strong
 </div>
 </div>
 </details>
-<h2 id="visibility"><strong>Visibility</strong><a class="headerlink" href="#visibility" title="Anchor link to this section for reference">⚓︎</a></h2>
+<h3 id="12-visibility"><strong>1.2 Visibility</strong><a class="headerlink" href="#12-visibility" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="question" open="open">
 <summary>How to set visibility of attribute and method?</summary>
 <p>We can change the symbol before the attributes or methods as below:</p>
@@ -4534,7 +4519,55 @@ Let's say we have a class as above; then we can show the <strong>diagram</strong
         +m_age : int
     }</code></pre>
 </details>
-<h2 id="relationship"><strong>Relationship</strong><a class="headerlink" href="#relationship" title="Anchor link to this section for reference">⚓︎</a></h2>
+<h3 id="13-multiplicity-on-relations"><strong>1.3 Multiplicity on relations</strong><a class="headerlink" href="#13-multiplicity-on-relations" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="question" open="open">
+<summary>How to express multiplicity between classes?</summary>
+<p><strong>Multiplicity </strong>or<strong> cardinality</strong> in class diagrams indicates the <u>number of instances</u> of one class that can be linked to an instance of the other class.</p>
+<p>The different cardinality options are :</p>
+<ul>
+<li><code>1</code> Only 1</li>
+<li><code>0..1</code> Zero or One</li>
+<li><code>1..*</code> One or more</li>
+<li><code>*</code> Many</li>
+<li><code>n n</code></li>
+<li><code>0..n</code> zero to n</li>
+<li><code>1..n</code> one to n</li>
+</ul>
+<pre class="mermaid"><code>classDiagram
+    direction TB
+    Customer "1" --&gt; "*" Ticket
+    Student "1" --&gt; "1..*" Course
+    Galaxy --&gt; "many" Star : Contains</code></pre>
+</details>
+<h3 id="14-annotations-on-classes"><strong>1.4 Annotations on classes</strong><a class="headerlink" href="#14-annotations-on-classes" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="question" open="open">
+<summary>How to add annotations on classes?</summary>
+<p>Some common annotations include:</p>
+<ul>
+<li><code>&lt;&lt;Interface&gt;&gt;</code> To represent an Interface class</li>
+<li><code>&lt;&lt;Abstract&gt;&gt;</code> To represent an abstract class</li>
+<li><code>&lt;&lt;Service&gt;&gt;</code> To represent a service class</li>
+<li><code>&lt;&lt;Enumeration&gt;&gt;</code> To represent an enum</li>
+</ul>
+<pre class="mermaid"><code>classDiagram
+    direction TB
+    class A{
+        &lt;&lt;interface&gt;&gt;
+    }
+    class B{
+        &lt;&lt;Abstract&gt;&gt;
+    }
+
+    class C{
+        &lt;&lt;Service&gt;&gt;
+    }
+
+    class D{
+        &lt;&lt;Enumeration&gt;&gt;
+    }</code></pre>
+</details>
+<h2 id="object-relationships"><strong>Object relationships</strong><a class="headerlink" href="#object-relationships" title="Anchor link to this section for reference">⚓︎</a></h2>
+<p>Now we have the <code>UML</code> diagram as a tool for visualizing relationships. Let's look at the <strong>relationships</strong> between objects.</p>
 <details class="question" open="open">
 <summary>How to express relationships between classes?</summary>
 <p><img :=":" _="," alt="picture 3" class="center" src="../pictures/UML_relationship.png" width="60%" />  </p>
@@ -4661,53 +4694,6 @@ Let's say we have a class as above; then we can show the <strong>diagram</strong
 </div>
 </div>
 </details>
-<h2 id="multiplicity-on-relations"><strong>Multiplicity on relations</strong><a class="headerlink" href="#multiplicity-on-relations" title="Anchor link to this section for reference">⚓︎</a></h2>
-<details class="question" open="open">
-<summary>How to express multiplicity between classes?</summary>
-<p><strong>Multiplicity </strong>or<strong> cardinality</strong> in class diagrams indicates the <u>number of instances</u> of one class that can be linked to an instance of the other class.</p>
-<p>The different cardinality options are :</p>
-<ul>
-<li><code>1</code> Only 1</li>
-<li><code>0..1</code> Zero or One</li>
-<li><code>1..*</code> One or more</li>
-<li><code>*</code> Many</li>
-<li><code>n n</code></li>
-<li><code>0..n</code> zero to n</li>
-<li><code>1..n</code> one to n</li>
-</ul>
-<pre class="mermaid"><code>classDiagram
-    direction TB
-    Customer "1" --&gt; "*" Ticket
-    Student "1" --&gt; "1..*" Course
-    Galaxy --&gt; "many" Star : Contains</code></pre>
-</details>
-<h2 id="annotations-on-classes"><strong>Annotations on classes</strong><a class="headerlink" href="#annotations-on-classes" title="Anchor link to this section for reference">⚓︎</a></h2>
-<details class="question" open="open">
-<summary>How to add annotations on classes?</summary>
-<p>Some common annotations include:</p>
-<ul>
-<li><code>&lt;&lt;Interface&gt;&gt;</code> To represent an Interface class</li>
-<li><code>&lt;&lt;Abstract&gt;&gt;</code> To represent an abstract class</li>
-<li><code>&lt;&lt;Service&gt;&gt;</code> To represent a service class</li>
-<li><code>&lt;&lt;Enumeration&gt;&gt;</code> To represent an enum</li>
-</ul>
-<pre class="mermaid"><code>classDiagram
-    direction TB
-    class A{
-        &lt;&lt;interface&gt;&gt;
-    }
-    class B{
-        &lt;&lt;Abstract&gt;&gt;
-    }
-
-    class C{
-        &lt;&lt;Service&gt;&gt;
-    }
-
-    class D{
-        &lt;&lt;Enumeration&gt;&gt;
-    }</code></pre>
-</details>
 <h3 id="reference"><strong>Reference</strong><a class="headerlink" href="#reference" title="Anchor link to this section for reference">⚓︎</a></h3>
 <p>-<a href="https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-class-diagram-tutorial/">UML Class Diagram Tutorial</a></p>
 
@@ -4716,7 +4702,7 @@ Let's say we have a class as above; then we can show the <strong>diagram</strong
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 5, 2023 07:38:27</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 5, 2023 23:04:26</span>
       
         <br>
         Created:
