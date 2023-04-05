@@ -4585,7 +4585,8 @@ Let's say we have a class as above; then we can show the <strong>diagram</strong
 <p><strong>Iff:</strong>  <code>class A</code> depends on <code>class B</code></p>
 <ul>
 <li><code>object A</code> can visit info in <code>object B</code></li>
-<li><code>object A</code> is constructed by <code>object B</code> (<code>object B</code> can survive without <code>object A</code>)</li>
+<li><code>object A</code> is constructed by <code>object B</code> </li>
+<li><code>object A</code> do not controls the <mark class="critic">life-circle</mark> of <code>object B</code>(<code>object B</code> can survive without <code>object A</code>)</li>
 </ul>
 </li>
 <li>
@@ -4606,7 +4607,7 @@ Let's say we have a class as above; then we can show the <strong>diagram</strong
 <ul>
 <li><code>object A</code> can visit info in <code>object B</code></li>
 <li><code>object A</code> is constructed by <code>object B</code></li>
-<li><code>object A</code> controls the life-circle of <code>object B</code> (<code>object B</code> can not live without <code>object A</code>)</li>
+<li><code>object A</code> controls the <mark class="critic">life-circle</mark> of <code>object B</code> (<code>object B</code> can not live without <code>object A</code>)</li>
 </ul>
 </li>
 <li>
@@ -4715,7 +4716,7 @@ Let's say we have a class as above; then we can show the <strong>diagram</strong
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 4, 2023 08:21:07</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 5, 2023 07:38:27</span>
       
         <br>
         Created:
