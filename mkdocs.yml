@@ -269,8 +269,9 @@ nav:
         - unordered_set: 3_C++/STL/unodered_set.md
       - Design Pattern:
         - 3_C++/Design_Pattern/README.md
-        - UML class Diagram: 3_C++/Design_Pattern/UML.md
-        - Software desgin basic: 3_C++/Design_Pattern/basic.md
+        - UML & Object relationships: 3_C++/Design_Pattern/UML.md
+        - Software desgin principles: 3_C++/Design_Pattern/basic.md
+        - Programming techniques: 3_C++/Design_Pattern/prog_tech.md
         - Desgin Patterns: 3_C++/Design_Pattern/contents.md
 
     - Algorithm: 

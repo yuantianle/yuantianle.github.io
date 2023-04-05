@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../basic/">
+        <link rel="prev" href="../prog_tech/">
       
       
         <link rel="next" href="../../../4_Algorithms/">
@@ -71,6 +71,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#desgin-patterns" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -2701,6 +2706,8 @@
         
           
         
+          
+        
       
       
         
@@ -2730,7 +2737,7 @@
   
     <li class="md-nav__item">
       <a href="../UML/" class="md-nav__link">
-        UML class Diagram
+        UML & Object relationships
       </a>
     </li>
   
@@ -2744,7 +2751,21 @@
   
     <li class="md-nav__item">
       <a href="../basic/" class="md-nav__link">
-        Software desgin basic
+        Software desgin principles
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prog_tech/" class="md-nav__link">
+        Programming techniques
       </a>
     </li>
   
@@ -2763,10 +2784,59 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Desgin Patterns
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Desgin Patterns
       </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#creational-patterns" class="md-nav__link">
+    Creational patterns
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structural-patterns" class="md-nav__link">
+    Structural patterns
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#behavioral-patterns" class="md-nav__link">
+    Behavioral patterns
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -4384,7 +4454,87 @@
 
 
 
-
+<h1 id="desgin-patterns"><strong> <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m19.229 4.18-4.066 2.327V1.826L11.993 0 8.827 1.83v4.677L4.78 4.17 1.606 6v3.664L5.657 12l-4.054 2.343V18l3.165 1.831 4.044-2.338v4.681L11.983 24l3.174-1.831v-4.676l4.052 2.327 3.173-1.829v-3.646L18.339 12l4.058-2.336V6l-3.164-1.82h-.004zm.373 3.429V5.715l1.639.942v1.905l-1.636-.953h-.003zm1.638 9.286-6.075-3.504 1.65-.945L21.239 15v1.896l.001-.001zm-6.827-3.95L12.763 12l6.452-3.726 1.641.944-6.446 3.727h.003zM3.134 9.219l1.641-.944L11.228 12l-1.639.945-6.455-3.726zm5.69 4.17-6.075 3.508V15l4.435-2.555 1.641.945v-.001zM2.749 8.564V6.66l1.64-.945v1.898l-1.64.951zm9.627 0V1.55l1.641.937V7.61l-1.641.953v.001zm-2.402-.96V2.493l1.64-.944v7.004l-1.64-.949zm8.866-1.889v1.898l-6.456 3.734V9.442l6.456-3.727zm-7.228 3.724v1.897L5.153 7.609V5.715l6.46 3.721-.001.003zm-2.403 6.513-4.435 2.555-1.64-.944 6.074-3.508v1.897zm.765-2.343 1.64-.945v7.453l-1.64.959v-7.467zm3.656 8.115-1.639.954-1.64-.951 1.64-.946 1.639.946v-.003zm.394-.657-1.648-.95v-7.441l1.648.944zm6.831-3.504-1.641.944-4.425-2.555v-1.897l6.075 3.508h-.009z"/></svg></span> Desgin Patterns</strong><a class="headerlink" href="#desgin-patterns" title="Anchor link to this section for reference">⚓︎</a></h1>
+<blockquote>
+<p><code>Design pattern</code> is a <u>reusable solution</u> to a commonly occurring problem in software design. It provides a general <u>framework</u> for solving a particular design problem, which can be adapted to suit the specific needs of a particular application.</p>
+</blockquote>
+<p>Design patterns are typically classified into three categories:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><strong>Creational patterns</strong></label><label for="__tabbed_1_2"><strong>Structural patterns</strong></label><label for="__tabbed_1_3"><strong>Behavioral patterns</strong></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><a href="#creational-patterns"><strong>Creational patterns</strong></a><ul>
+<li><a href="#11-singleton"><strong>1.1 Singleton</strong></a></li>
+<li><a href="#12-factory-method"><strong>1.2 Factory Method</strong></a></li>
+<li><a href="#13-abstract-factory"><strong>1.3 Abstract Factory</strong></a></li>
+<li><a href="#14-builder"><strong>1.4 Builder</strong></a></li>
+<li><a href="#15-prototype"><strong>1.5 Prototype</strong></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><a href="#structural-patterns"><strong>Structural patterns</strong></a><ul>
+<li><a href="#21-adapter"><strong>2.1 Adapter</strong></a></li>
+<li><a href="#22-bridge"><strong>2.2 Bridge</strong></a></li>
+<li><a href="#23-composite"><strong>2.3 Composite</strong></a></li>
+<li><a href="#24-decorator"><strong>2.4 Decorator</strong></a></li>
+<li><a href="#25-facade"><strong>2.5 Facade</strong></a></li>
+<li><a href="#26-flyweight"><strong>2.6 Flyweight</strong></a></li>
+<li><a href="#27-proxy"><strong>2.7 Proxy</strong></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li><a href="#behavioral-patterns"><strong>Behavioral patterns</strong></a><ul>
+<li><a href="#31-chain-of-responsibility"><strong>3.1 Chain of Responsibility</strong></a></li>
+<li><a href="#32-command"><strong>3.2 Command</strong></a></li>
+<li><a href="#33-interpreter"><strong>3.3 Interpreter</strong></a></li>
+<li><a href="#34-iterator"><strong>3.4 Iterator</strong></a></li>
+<li><a href="#35-mediator"><strong>3.5 Mediator</strong></a></li>
+<li><a href="#36-memento"><strong>3.6 Memento</strong></a></li>
+<li><a href="#37-observer"><strong>3.7 Observer</strong></a></li>
+<li><a href="#38-state"><strong>3.8 State</strong></a></li>
+<li><a href="#39-strategy"><strong>3.9 Strategy</strong></a></li>
+<li><a href="#310-template-method"><strong>3.10 Template Method</strong></a></li>
+<li><a href="#311-visitor"><strong>3.11 Visitor</strong></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<p>The relationship among them can be seen in picture below:
+<img :=":" _="," alt="picture 1" class="center" src="../pictures/dp_relationship.png" width="80%" /></p>
+<h2 id="creational-patterns"><strong>Creational patterns</strong><a class="headerlink" href="#creational-patterns" title="Anchor link to this section for reference">⚓︎</a></h2>
+<h3 id="11-singleton"><strong>1.1 Singleton</strong><a class="headerlink" href="#11-singleton" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="12-factory-method"><strong>1.2 Factory Method</strong><a class="headerlink" href="#12-factory-method" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="13-abstract-factory"><strong>1.3 Abstract Factory</strong><a class="headerlink" href="#13-abstract-factory" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="14-builder"><strong>1.4 Builder</strong><a class="headerlink" href="#14-builder" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="15-prototype"><strong>1.5 Prototype</strong><a class="headerlink" href="#15-prototype" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h2 id="structural-patterns"><strong>Structural patterns</strong><a class="headerlink" href="#structural-patterns" title="Anchor link to this section for reference">⚓︎</a></h2>
+<h3 id="21-adapter"><strong>2.1 Adapter</strong><a class="headerlink" href="#21-adapter" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="22-bridge"><strong>2.2 Bridge</strong><a class="headerlink" href="#22-bridge" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="23-composite"><strong>2.3 Composite</strong><a class="headerlink" href="#23-composite" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="24-decorator"><strong>2.4 Decorator</strong><a class="headerlink" href="#24-decorator" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="25-facade"><strong>2.5 Facade</strong><a class="headerlink" href="#25-facade" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="26-flyweight"><strong>2.6 Flyweight</strong><a class="headerlink" href="#26-flyweight" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="27-proxy"><strong>2.7 Proxy</strong><a class="headerlink" href="#27-proxy" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h2 id="behavioral-patterns"><strong>Behavioral patterns</strong><a class="headerlink" href="#behavioral-patterns" title="Anchor link to this section for reference">⚓︎</a></h2>
+<h3 id="31-chain-of-responsibility"><strong>3.1 Chain of Responsibility</strong><a class="headerlink" href="#31-chain-of-responsibility" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="32-command"><strong>3.2 Command</strong><a class="headerlink" href="#32-command" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="33-interpreter"><strong>3.3 Interpreter</strong><a class="headerlink" href="#33-interpreter" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="34-iterator"><strong>3.4 Iterator</strong><a class="headerlink" href="#34-iterator" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="35-mediator"><strong>3.5 Mediator</strong><a class="headerlink" href="#35-mediator" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="36-memento"><strong>3.6 Memento</strong><a class="headerlink" href="#36-memento" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="37-observer"><strong>3.7 Observer</strong><a class="headerlink" href="#37-observer" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="38-state"><strong>3.8 State</strong><a class="headerlink" href="#38-state" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="39-strategy"><strong>3.9 Strategy</strong><a class="headerlink" href="#39-strategy" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="310-template-method"><strong>3.10 Template Method</strong><a class="headerlink" href="#310-template-method" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="311-visitor"><strong>3.11 Visitor</strong><a class="headerlink" href="#311-visitor" title="Anchor link to this section for reference">⚓︎</a></h3>
 
   <hr>
 <div class="md-source-file">
@@ -4404,6 +4554,55 @@
 
 
 
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+    <script src="https://giscus.app/client.js"
+        data-repo="yuantianle/yuantianle.github.io"
+        data-repo-id="R_kgDOITXaGg"
+        data-category-id="DIC_kwDOITXaGs4CSWJD"
+        =""
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    </script>
+
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
 
                 
 

@@ -3,21 +3,19 @@ comments: true
 ᴴₒᴴₒᴴₒ: ture
 ---
 
-# ** :simple-matternet: UML class diagram for OOP**
+# ** :simple-matternet: UML & Object relationships**
 
-> Let's see how to express OOP by using UML class.
+> Let's see how to express OOP by using UML class diagram. With UML we then import the relationship between classes.
 
-## **Introduction**
+## **UML**
 
-???+questions "What is UML class?"
+`Unified Modeling Language (UML)` is a type of static structure diagram used to show the structure of a system, including:
+- Classes
+- Attributes (Properties)
+- Methods (Operations)
+- Relationships (between objects)
 
-    `Unified Modeling Language (UML)` is a type of static structure diagram used to show the structure of a system, including:
-    - Classes
-    - Attributes (Properties)
-    - Methods (Operations)
-    - Relationships (between objects)
-
-## **Classes**
+### **1.1 Classes**
 
 ???+question "How to express `class`?"
 
@@ -58,7 +56,7 @@ comments: true
             BankAccount : +Withdrawal()
         ```
 
-## **Visibility**
+### **1.2 Visibility**
 
 ???+question "How to set visibility of attribute and method?"
 
@@ -89,8 +87,64 @@ comments: true
             +m_age : int
         }
     ```
+### **1.3 Multiplicity on relations**
 
-## **Relationship**
+???+question "How to express multiplicity between classes?"
+
+    **Multiplicity **or** cardinality** in class diagrams indicates the <u>number of instances</u> of one class that can be linked to an instance of the other class.
+
+    The different cardinality options are :
+
+    - `1` Only 1
+    - `0..1` Zero or One
+    - `1..*` One or more
+    - `*` Many
+    - `n n`
+    - `0..n` zero to n
+    - `1..n` one to n
+    
+    ``` mermaid
+    classDiagram
+        direction TB
+        Customer "1" --> "*" Ticket
+        Student "1" --> "1..*" Course
+        Galaxy --> "many" Star : Contains
+    ```
+
+### **1.4 Annotations on classes**
+
+???+question "How to add annotations on classes?"
+
+    Some common annotations include:
+
+    - `<<Interface>>` To represent an Interface class
+    - `<<Abstract>>` To represent an abstract class
+    - `<<Service>>` To represent a service class
+    - `<<Enumeration>>` To represent an enum
+
+
+    ``` mermaid
+    classDiagram
+        direction TB
+        class A{
+            <<interface>>
+        }
+        class B{
+            <<Abstract>>
+        }
+
+        class C{
+            <<Service>>
+        }
+
+        class D{
+            <<Enumeration>>
+        }
+    ```
+
+## **Object relationships**
+
+Now we have the `UML` diagram as a tool for visualizing relationships. Let's look at the **relationships** between objects.
 
 ???+question "How to express relationships between classes?"
     
@@ -191,60 +245,7 @@ comments: true
             classA --|> classB : Inheritance
         ```
 
-## **Multiplicity on relations**
 
-???+question "How to express multiplicity between classes?"
-
-    **Multiplicity **or** cardinality** in class diagrams indicates the <u>number of instances</u> of one class that can be linked to an instance of the other class.
-
-    The different cardinality options are :
-
-    - `1` Only 1
-    - `0..1` Zero or One
-    - `1..*` One or more
-    - `*` Many
-    - `n n`
-    - `0..n` zero to n
-    - `1..n` one to n
-    
-    ``` mermaid
-    classDiagram
-        direction TB
-        Customer "1" --> "*" Ticket
-        Student "1" --> "1..*" Course
-        Galaxy --> "many" Star : Contains
-    ```
-
-## **Annotations on classes**
-
-???+question "How to add annotations on classes?"
-
-    Some common annotations include:
-
-    - `<<Interface>>` To represent an Interface class
-    - `<<Abstract>>` To represent an abstract class
-    - `<<Service>>` To represent a service class
-    - `<<Enumeration>>` To represent an enum
-
-
-    ``` mermaid
-    classDiagram
-        direction TB
-        class A{
-            <<interface>>
-        }
-        class B{
-            <<Abstract>>
-        }
-
-        class C{
-            <<Service>>
-        }
-
-        class D{
-            <<Enumeration>>
-        }
-    ```
 
 ### **Reference**
 -[UML Class Diagram Tutorial](https://www.visual-paradigm.com/guide/uml-unified-modeling-language/uml-class-diagram-tutorial/)

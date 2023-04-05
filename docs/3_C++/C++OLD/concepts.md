@@ -83,7 +83,13 @@ comments: true
 
 ???+Note "`Interface`"
 
-    An **abstract type** defines a <u>standard specification</u> for a <u>set of methods</u> WITHOUT providing an implementation.
+    An **abstract type** defines a <u>standard specification</u> for a <u>set of methods</u> WITHOUT providing an implementation. 
+
+    ???+Warning "`Interface` & `Type`"
+
+        Theoretically, the <u>signature (name, parameters, and return type)</u> of all the methods declared by an object is called the `Interface` to the object. An object's `interface` characterizes the complete set of **requests** that can be sent to the object. Any request that matches a signature in the object's interface may be sent to the object [[ref. Gamma 94](http://www.javier8a.com/itc/bd1/articulo.pdf)].
+
+        A `type` is a name used to denote a <u>particular interface</u>. We speak of an object as having the type "Window" if it <u>accepts all requests</u> for the operations defined in the interface named "Window." An object may have many types, and widely different objects can share a type.
 
     * **Usage:** Interfaces allow different classes to implement the same methods with specific implementation.
 

@@ -9,7 +9,11 @@ comments: true
 
 If we are doing `OOD` (Object-Oriented Design), we should follow the `SOLID` principles:
 
-![picture 25](pictures/SOLID.png){width="50%", : .center}  
+![picture 25](pictures/SOLID.png){width="50%", : .center} 
+
+???+Warning "More resources for learning!"
+
+    Check SOLID [principles for OOP design](../../../3_C%2B%2B/Design_Pattern/basic/#solid-principles) to learn more in real cases.
 
 ## **Abstract Interface**
 

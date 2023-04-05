@@ -8,6 +8,7 @@
 
 The section can be split into below fragments:
 
-- [**UML class diagram for OOP**](UML.md)
-- [**Software desgin basic**](basic.md)
-- [**Desgin Patterns**](contents.md)
+1. [**UML class diagram for OOP**](UML.md)
+2. [**Software desgin principles**](basic.md)
+3. [**Programming techniques**](prog_tech.md)
+4. [**Desgin Patterns**](contents.md)

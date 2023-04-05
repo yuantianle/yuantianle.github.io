@@ -3,9 +3,23 @@ comments: true
 ᴴₒᴴₒᴴₒ: ture
 ---
 
-# ** :simple-matternet: Software desgin basic **
+# ** :simple-matternet: Software desgin principles**
 
 > Before we start to learn the design pattern, we need to know what is a **good software design**.
+
+- [**Good SW desgin?**](#good-sw-desgin)
+- [**Basic design principles**](#basic-design-principles)
+    - [**1.1 Encapsulate varies**](#11-encapsulate-varies)
+    - [**1.2 Program to an interface**](#12-program-to-an-interface)
+    - [**1.3 Favor Composition over Inheritance**](#13-favor-composition-over-inheritance)
+- [**SOLID principles**](#solid-principles)
+    - [**2.1 Single Responsibility Principle**](#21-single-responsibility-principle)
+    - [**2.2 Open/Closed Principle**](#22-openclosed-principle)
+    - [**2.3 Liskov Substitution Principle**](#23-liskov-substitution-principle)
+    - [**2.4 Interface Segregation Principle**](#24-interface-segregation-principle)
+    - [**2.5 Dependency Inversion Principle**](#25-dependency-inversion-principle)
+- [**Programming techniques**](#programming-techniques)
+
 
 ## **Good SW desgin?**
 ???+ question "How to define a good SW desgin?"
@@ -113,12 +127,12 @@ Here we show the **`basic principles`** to make SW <u>flexible</u>, <u>robust</u
 
 !!! note ""
 
-    {==Program to an **interface**, not an **implementation**==}. It means making the dependency more <u>flexible (decoupled)</u>
+    *Program to an [**interface**](../../C%2B%2BOLD/concepts/#interface), not an ****implementation***. It means making the dependency more <u>flexible (decoupled)</u>
 
-        - <u>Figure out the method</u>, which demands the dependent class.
-        - Using a new `Interface` or `Abstract class` to <u>abstract the method</u>.
-        - Let the <u>dependent class implement the abstraction</u>.
-        - Dependency injection (now the <u>class in demand depends on the abstraction</u>).
+    - <u>Figure out the method</u>, which demands the dependent class.
+    - Using a new `Interface` or `Abstract class` to <u>abstract the method</u>.
+    - Let the <u>dependent class implement the abstraction</u>.
+    - Dependency injection (now the <u>class in demand depends on the abstraction</u>).
 
     ???+success "Example"
 
@@ -169,7 +183,7 @@ Here we show the **`basic principles`** to make SW <u>flexible</u>, <u>robust</u
 ### **1.3 Favor Composition over Inheritance**
 !!! note ""
 
-    We normally do not do inheritance, which will cause some {==problems==}:
+    To put `Reuse Mechanism` to work, we normally do NOT do `inheritance`, which will cause some {==problems==}:
 
     - **The subclass <u>can't abandon any interfaces</u> of the superclass**. All the abstract methods (pure virtual functions) in the superclass have to be implemented in the subclass, even though some of them are useless.
   
@@ -181,13 +195,15 @@ Here we show the **`basic principles`** to make SW <u>flexible</u>, <u>robust</u
     
     - **Reusing code through inheritance can lead to parallel inheritance hierarchies.** The combination of classes will explode.
 
-    ???+success "Let's use `Composition`!"
+    Let's use `Composition`:
+
+    ???+success "`Inheritance` --> `Composition`!"
 
         Check the picture in [UML class diagram](./UML.md) again:
 
         ![picture 3](pictures/UML_relationship.png){width="60%", : .center}  
 
-        With the same depth, we can change from using `Inheritance` to `Composition` or looser `Aggregation`.
+        With the same depth, we can change from using <u>Inheritance</u> to `Composition` or looser `Aggregation`.
 
         **E.g.** Let's take vehicles as an example:
 
@@ -338,7 +354,7 @@ Besides the `basic design principles` we talked above, [`SOLID principles`](../.
 ### **2.4 Interface Segregation Principle**
 ### **2.5 Dependency Inversion Principle**
 
-### **Introduction**
+## **Programming techniques**
 
 ### **Reference**
 
