@@ -1,5 +1,4 @@
 ---
-comments: true
 ᴴₒᴴₒᴴₒ: ture
 ---
 
@@ -7,7 +6,7 @@ comments: true
 
 > Here is the "Charging Station" for preparing corresponding knowledges.
 
-* [Object Oriented Programming](../3_C%2B%2B/C%2B%2BOLD/concepts.md)
-* [SQL](../5_FullStack/LANG/SQL/README.md)
+* [Object Oriented Programming](Other/oop_guide.md)
+* [SQL](Other/sql_guide.md)
 * [Operating System](Operating_system/README.md)
 * [Networking](Networking/README.md)

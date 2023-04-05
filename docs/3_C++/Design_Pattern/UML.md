@@ -131,7 +131,8 @@ comments: true
         - **Iff:**  `class A` depends on `class B`
 
             - `object A` can visit info in `object B`
-            - `object A` is constructed by `object B` (`object B` can survive without `object A`)
+            - `object A` is constructed by `object B` 
+            - `object A` do not controls the {==life-circle==} of `object B`(`object B` can survive without `object A`)
 
         - **E.g:** An order form (`A`) associated with one customer object and multiple product objects (`B`).
 
@@ -148,7 +149,7 @@ comments: true
 
             - `object A` can visit info in `object B`
             - `object A` is constructed by `object B`
-            - `object A` controls the life-circle of `object B` (`object B` can not live without `object A`)
+            - `object A` controls the {==life-circle==} of `object B` (`object B` can not live without `object A`)
 
         - **E.g:** A car (`A`) needs to have tires, an engine, and oil (`B`) to work correctly.
 
