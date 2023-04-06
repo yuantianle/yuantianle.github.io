@@ -4619,7 +4619,7 @@
     note for Dog "this.m_energy += b.getNutrition();"
     class Dog{
         - m_energy : float
-        + Eat(Food f)
+        + Eat(Food b)
     }
     class Food{
         &lt;&lt;interface&gt;&gt;
@@ -4656,7 +4656,7 @@
 <p><strong>Reusing code through inheritance can lead to parallel inheritance hierarchies.</strong> The combination of classes will explode.</p>
 </li>
 </ul>
-<p>Let's use <code>Composition</code>:</p>
+<p>Let's use <code>Composition</code>. The technique we are using is called <a href="./prog_tech/#delegation"><code>Delegation</code></a></p>
 <details class="success" open="open">
 <summary><code>Inheritance</code> &rarr; <code>Composition</code>!</summary>
 <p>Check the picture in <a href="../UML/">UML class diagram</a> again:</p>
@@ -4683,6 +4683,7 @@
     `Manual Fuel SUV` --|&gt; `Fuel SUV`</code></pre>
 </div>
 <div class="tabbed-block">
+<p>You can solve this problem with composition. Instead of car objects implementing a behavior on their own, they can <strong>delegate</strong> it to other objects.</p>
 <pre class="mermaid"><code>classDiagram 
     direction BT
     Engine *-- vehicles
@@ -4746,8 +4747,8 @@
 <div class="admonition note">
 <p>For any extension, the class should be "open-minded"; For any edition, the class should be "enclosed".</p>
 <ul>
-<li><strong>Open-minded</strong> (developing status): add new methods and attributes, and rewrite superclass.</li>
-<li><strong>Enclosed</strong> (releasing status): interfaces have been defined, and behaviors will not be edited anymore.</li>
+<li><strong>"Open-minded"</strong> (developing status): add new methods and attributes, and rewrite superclass.</li>
+<li><strong>"Enclosed"</strong> (releasing status): interfaces have been defined, and behaviors will not be edited anymore.</li>
 <li><strong>*Note</strong>: when the class itself has some bugs, directly edit it instead of create new subclasses.</li>
 </ul>
 <div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Before</label><label for="__tabbed_6_2">After</label></div>
@@ -4810,7 +4811,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 5, 2023 23:04:26</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 6, 2023 01:19:31</span>
       
         <br>
         Created:
