@@ -166,7 +166,7 @@ Here we show the **`basic principles`** to make SW <u>flexible</u>, <u>robust</u
                 note for Dog "this.m_energy += b.getNutrition();"
                 class Dog{
                     - m_energy : float
-                    + Eat(Food f)
+                    + Eat(Food b)
                 }
                 class Food{
                     <<interface>>
@@ -195,7 +195,7 @@ Here we show the **`basic principles`** to make SW <u>flexible</u>, <u>robust</u
     
     - **Reusing code through inheritance can lead to parallel inheritance hierarchies.** The combination of classes will explode.
 
-    Let's use `Composition`:
+    Let's use `Composition`. The technique we are using is called [`Delegation`](./prog_tech/#delegation)
 
     ???+success "`Inheritance` --> `Composition`!"
 
@@ -229,6 +229,8 @@ Here we show the **`basic principles`** to make SW <u>flexible</u>, <u>robust</u
             ```
 
         === "Composition & Aggregation"
+
+            You can solve this problem with composition. Instead of car objects implementing a behavior on their own, they can **delegate** it to other objects.
 
             ``` mermaid
             classDiagram 
@@ -299,8 +301,8 @@ Besides the `basic design principles` we talked above, [`SOLID principles`](../.
 
     For any extension, the class should be "open-minded"; For any edition, the class should be "enclosed".
 
-    - **Open-minded** (developing status): add new methods and attributes, and rewrite superclass.
-    - **Enclosed** (releasing status): interfaces have been defined, and behaviors will not be edited anymore.
+    - **"Open-minded"** (developing status): add new methods and attributes, and rewrite superclass.
+    - **"Enclosed"** (releasing status): interfaces have been defined, and behaviors will not be edited anymore.
     - ***Note**: when the class itself has some bugs, directly edit it instead of create new subclasses.
 
     === "Before"

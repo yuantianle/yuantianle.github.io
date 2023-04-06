@@ -9,18 +9,140 @@ comments: true
 
 ## **Delegation**
 
-For enhancing code reuse, we followed the basic principle: [*Favor Composition over Inheritance*](basic.md/#13-favor-composition-over-inheritance). The technique `Delegation` is also helpful for code reuse.
+For enhancing code reuse, we followed the basic principle: [*Favor Composition over Inheritance*](basic.md/#13-favor-composition-over-inheritance). {==The `Delegation` is the technique to implement the principle of `Composition`==}.
 
-### **Implementaion**
+### **1.1 Definition**
 
-There are several programming techniques used in conjunction with design patterns, some of which include:
+!!! note ""
+    
+    **Two objects** are involved in handling a request:
+    
+    <center>$Receving\;object\;(subclass) \xrightarrow[]{\text{delegates operations}} Delegate\;object\;(superclass)$</center>
 
-Inversion of Control (IoC): IoC is a programming technique that involves inverting the control of object creation and management from the application code to a framework or container. This can help to decouple the application code from the details of object creation and management, which can improve the flexibility, modularity, and maintainability of the code.
+    ``` mermaid
+        classDiagram
+            direction LR
+            Delegator --* Delegatee : REQUEST behavior (Operation2)
+            class Delegator{
+                - target : Delegatee
+                + Operation()
+            }
+            note for Delegator "void Operation(){\n. target.Operation2(); \n}"
+            class Delegatee{
+                + Operation2()
+            }
+    ```
 
-Dependency Injection (DI): DI is a technique used to provide the necessary dependencies of an object from an external source, rather than having the object create its dependencies itself. This can help to improve the modularity, testability, and maintainability of the code by reducing coupling and allowing for easier substitution of dependencies.
+### **1.2 Example**
 
-Aspect-Oriented Programming (AOP): AOP is a programming technique that involves separating cross-cutting concerns, such as logging, security, and transaction management, from the main business logic of an application. AOP can help to improve the modularity and maintainability of the code by reducing duplication and improving separation of concerns.
+!!! note ""
 
-Template Method: The Template Method pattern is a behavioral pattern that involves defining the skeleton of an algorithm in a base class, but deferring some steps to subclasses. This can help to improve the flexibility and maintainability of the code by allowing different implementations of the algorithm to be used.
+    Let's say there is a class `Window` wanna calculate its area (`Area1()`). There are two plans:
 
-State Machine: The State Machine pattern is a behavioral pattern that involves defining a set of states and transitions between them, and specifying the behavior of an object based on its current state. This can help to improve the maintainability and extensibility of the code by encapsulating the behavior of an object into discrete states.
+    1. Abstract `Window` to a superclass `Rectangular` as an inheritance.
+    2. Delegate <u>area-calculate</u> behavior to a reusable `Rectangular` instance.
+
+    !!! example ""
+
+        === "Plan1: Abstraction"
+
+            ``` mermaid
+                classDiagram
+                    direction BT
+                    Window --|> Rectangle
+                    class Window{
+                        - win_width : int
+                        - win_height : int
+                        + Area1()
+                    }
+                    note for Window "float Area1(){\n. return this->win_width * this->win_height; \n}"
+                    class Rectangle{
+                        - rec_width : int
+                        - rec_height : int
+                        + Area2()
+                    }
+                    note for Rectangle "float Area2(){\n. return this->rec_width * this->rec_height; \n}"
+            ```
+            `Window` **inherits** the operation `Area2()` from `Rectangle`.
+
+        === "Plan2: Delegation"
+
+            ``` mermaid
+                classDiagram
+                    direction BT
+                    Window --* Rectangle
+                    class Window{
+                        - rectangle : Rectangle
+                        + Area1()
+                    }
+                    note for Window "float Area(){\n. return rectangle.Area2(window); \n}"
+                    class Rectangle{
+                        - rec_width : int
+                        - rec_height : int
+                        + Area2(ptr)
+                    }
+                    note for Rectangle "float Area2(ptr){\n. return this->rec_width * this->rec_height + ptr.info; \n}"
+            ```
+
+            `Window` must now **forward requests** to its `Rectangle` instance explicitly.
+
+    Instead of a *Window* {==being==} a *Rectangle*, with the help of **delegation**, it would change to {==have==} a *Rectangle*.
+
+### **1.3 Advantages**
+
+!!! note ""
+
+    - It makes it easy to compose behaviors at run-time;
+    - It makes it easy to change the way they're composed. 
+
+### **1.4 Improvement**
+
+!!! note ""
+
+    The completed `delegation` UML diagram can be seen below:
+
+    ``` mermaid
+    classDiagram
+        direction LR
+        Delegator ..> Interface : Depends on behavior of
+        Delegatee1 ..|> Interface : Realize
+        Delegatee2 ..|> Interface : Realize
+        class Delegator{
+            - target : Interface
+            + Operation()
+        }
+        note for Delegator "void Operation(){\n. target.Operation2(); \n}"
+        class Delegatee1{
+            + Operation2()
+        }
+        class Delegatee2{
+            + Operation2()
+        }
+        class Interface{
+            <<Interface>>
+            + Operation2()
+        }
+    ```
+
+    **E.g:** Our `window` can become `circular` at run-time simply by **replacing** its <u>Rectangle instance with a Circle instance</u>, assuming Rectangle and Circle have the same type.
+
+### **1.5 Use case**
+
+!!! note ""
+
+    Here we list the design patterns that use 
+    === "Use heavily"
+
+        - [State](../contents/#38-state) [Behavioral Design Pattern]
+        - [Strategy](../contents/#39-strategy) [Behavioral Design Pattern]
+        - [Visitor](../contents/#311-visitor) [Behavioral Design Pattern]
+
+    === "Less heavily"
+
+        - [Mediator](../contents/#35-mediator) [Behavioral Design Pattern]
+        - [Responsibility](../contents/#31-chain-of-responsibility) [Behavioral Design Pattern]
+        - [Bridge](../contents/#22-bridge) [Structural Design Pattern]
+
+### **Reference**
+
+- [Design Patterns Elements of Reusable Object-Oriented Software](http://www.javier8a.com/itc/bd1/articulo.pdf)

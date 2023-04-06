@@ -7,6 +7,14 @@ comments: true
 
 > Let's see how to express OOP by using UML class diagram. With UML we then import the relationship between classes.
 
+- [**UML**](#uml)
+    - [**1.1 Classes**](#11-classes)
+    - [**1.2 Visibility**](#12-visibility)
+    - [**1.3 Multiplicity on relations**](#13-multiplicity-on-relations)
+    - [**1.4 Annotations on classes**](#14-annotations-on-classes)
+- [**Object relationships**](#object-relationships)
+
+
 ## **UML**
 
 `Unified Modeling Language (UML)` is a type of static structure diagram used to show the structure of a system, including:

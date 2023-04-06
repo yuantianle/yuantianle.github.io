@@ -130,4 +130,4 @@ After setting the initial conditions (I.C.) of temperature and boundary conditio
 
 ### **References**
 
-“Finite difference methods,” Neil Balmforth's webpage. [Online]. Available: https://personal.math.ubc.ca/~njb/fd. [Accessed: 14-Nov-2022]. 
+- “Finite difference methods,” Neil Balmforth's webpage. [Online]. Available: https://personal.math.ubc.ca/~njb/fd. [Accessed: 14-Nov-2022]. 

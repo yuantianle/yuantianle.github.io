@@ -437,6 +437,7 @@ comments: true
 - [OpenAI](https://chat.openai.com/chat)
 - [Abstract class vs Interface in C++](https://manishs-kth.medium.com/abstract-class-vs-interface-in-c-d1702d2c193e)
 - [C++ Overloading (Operator and Function)](https://www.tutorialspoint.com/cplusplus/cpp_overloading.htm)
+- [Design Patterns Elements of Reusable Object-Oriented Software](http://www.javier8a.com/itc/bd1/articulo.pdf)
 
 <head>
   <title>C++ Code Compiler</title>
