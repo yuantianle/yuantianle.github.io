@@ -9,7 +9,7 @@ comments: true
 
 ## **Delegation**
 
-For enhancing code reuse, we followed the basic principle: [*Favor Composition over Inheritance*](basic.md/#13-favor-composition-over-inheritance). {==The `Delegation` is the technique to implement the principle of `Composition`==}.
+For enhancing code reuse, we followed the basic principle: [*Favor Composition over Inheritance*](basic/#13-favor-composition-over-inheritance). {==The `Delegation` is the technique to implement the principle of `Composition`==}.
 
 ### **1.1 Definition**
 
@@ -124,6 +124,35 @@ For enhancing code reuse, we followed the basic principle: [*Favor Composition o
         }
     ```
 
+    ``` cpp
+    protocol Delegator {
+        func standup()
+    }
+
+    class Delegatee1: ScrumMaster {
+        func standup() { ... }
+    }
+
+    class Delegatee2: ScrumMaster {
+        func standup() { ... }
+    }
+
+    class Will: ScrumMaster {
+        static let shared = Will()
+        var hasSchedulingConflict = false
+        weak var delegate: ScrumMaster?
+
+        private init()
+
+        func standup() {
+            guard !hasSchedulingConflict else {
+                delegate?.standup()
+            }
+
+            ...
+         }
+    }
+    ```
     **E.g:** Our `window` can become `circular` at run-time simply by **replacing** its <u>Rectangle instance with a Circle instance</u>, assuming Rectangle and Circle have the same type.
 
 ### **1.5 Use case**

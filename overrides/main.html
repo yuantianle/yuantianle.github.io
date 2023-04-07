@@ -1,12 +1,16 @@
 {% extends "base.html" %}
 
-{% block content %}  
+{% block content %}     <script
+    src="https://cdn.jsdelivr.net/gh/yasserelsaid/chatbot@latest/index.min.js"
+    id="yuantianle-github-io-7f7j3xbyx"
+  ></script> 
   {% if git_page_authors %}
     <div class="md-source-date" style="text-align: right; font-weight: bold;">
       <small>
           Author: {{ git_page_authors | default('enable mkdocs-git-authors-plugin') }}
       </small>
     </div>
+
   {% endif %}
   {{ super() }}
 {% endblock %}
