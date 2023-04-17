@@ -9,4 +9,5 @@
 * [Object Oriented Programming](Other/oop_guide.md)
 * [SQL](Other/sql_guide.md)
 * [Operating System](Operating_system/README.md)
+* [Kernel](Kernel/README.md)
 * [Networking](Networking/README.md)

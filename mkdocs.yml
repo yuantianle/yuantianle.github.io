@@ -50,6 +50,8 @@ extra_javascript:
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - javascripts/tablesort.js
 
 
 extra: 
@@ -96,6 +98,7 @@ plugins:
       exclude:
           - index.md
       enabled: true
+  - table-reader
 
 repo_url: https://github.com/yuantianle
 repo_name: yuantianle's GitHub
@@ -338,6 +341,7 @@ nav:
       - OOP: 10_Interview/Other/oop_guide.md
       - Database Management: 10_Interview/Other/sql_guide.md
       - Operating System: 10_Interview/Operating_system/README.md
+      - Kernel: 10_Interview/Kernel/README.md
       - Networking: 10_Interview/Networking/README.md
 
     - Math: 
