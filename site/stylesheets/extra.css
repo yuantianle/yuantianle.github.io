@@ -1,0 +1,242 @@
+[data-md-color-scheme="slate"] {
+    --md-code-fg-color: #f25dff;
+    --md-code-hl-name-color: #D5D7E2;
+    --md-code-hl-comment-color: #50A64A;
+    --md-code-hl-string-color: #b9381b;
+    --md-code-hl-number-color: #B5CEA8;
+
+    --md-mermaid-edge-color: #495ED3;
+    --md-mermaid-node-bg-color: #39405c79;
+    --md-mermaid-node-fg-color: #495ED3;
+    --md-mermaid-label-fg-color: #a2e3ff;
+    
+}
+[data-md-color-scheme="default"] {
+    --md-default-bg-color: /*#f6e9e7;*/#e7eef6;
+    --md-code-fg-color: #c20707;
+    --md-code-hl-name-color: #2e3c43;
+    --md-code-hl-comment-color: #3e9516;
+    --md-code-hl-string-color: #c41919;
+    --md-code-hl-number-color: #be8901;
+
+    --md-mermaid-edge-color: #455cdf;
+    --md-mermaid-node-bg-color: #d3daff70;
+    --md-mermaid-node-fg-color: #455cdf;
+    --md-mermaid-label-fg-color: #263339;
+    
+}
+
+/*For normal*/
+
+[data-md-color-scheme="default"]{
+    background-image: url("sea.jpg");
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+}
+
+[data-md-color-scheme="slate"]{
+    background-image: url("sunset.jpg");
+    background-size:cover;
+    background-attachment: fixed;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-blend-mode: normal;
+}
+
+[data-md-color-scheme="default"] .md-content{
+    background-color: #f9fcffd6;
+}
+
+[data-md-color-scheme="slate"] .md-content{
+    background-color: #0000007c;
+}
+
+[data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__scrollwrap{
+    background-color: #0000007c;
+}
+
+[data-md-color-scheme="default"] .md-sidebar--primary .md-sidebar__scrollwrap{
+    background-color: #ffffff60;
+}
+/*For normal*/
+
+/*For christmas
+[data-md-color-scheme="default"] .md-header{
+    background-image: url("xmas13.png");
+    background-size:contain;
+    text-shadow: #FC0 1px 0 20px;
+}
+[data-md-color-scheme="default"] .md-tabs{
+    background-image: url("xmas22.png");
+    background-size:contain;
+    text-shadow: #FC0 1px 0 20px;
+}
+[data-md-color-scheme="default"]{
+    background-image: url("man.png");
+    background-size:contain;
+    background-position: center center;
+    background-repeat: repeat repeat;
+    background-blend-mode: multiply;
+}
+
+[data-md-color-scheme="slate"] .md-header{
+    background-image: url("xmas13.png");
+    background-size:contain;
+    text-shadow: #FC0 1px 0 20px;
+}
+[data-md-color-scheme="slate"] .md-tabs{
+    background-image: url("xmas22.png");
+    background-size:contain;
+    text-shadow: #FC0 1px 0 20px;
+}
+[data-md-color-scheme="slate"]{
+    background-image: url("man.png");
+    background-size:contain;
+    background-position: center left;
+    background-blend-mode: multiply;
+}
+
+[data-md-color-scheme="default"] .md-content{
+    background-color: #fff9f9e8;
+}
+.md-tabs__link--active, .md-tabs__link:is(:focus,:hover){
+    color: rgb(123, 255, 0);
+}
+
+[data-md-color-scheme="slate"] .md-content{
+    background-color: #000000a4;
+}
+For christmas*/
+
+
+
+[data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__scrollwrap{
+    /*margin-top: -5%;
+    margin-left: -10%;
+    margin-right: 10%;*/
+    padding-top: 5%;
+    box-shadow: rgba(0, 0, 0, 0.808) 0px 30px 50px;
+}
+
+[data-md-color-scheme="default"] .md-sidebar--primary .md-sidebar__scrollwrap{
+    margin-top: -5%;
+    /*margin-left: -10%;
+    margin-right: 10%;*/
+    padding-top: 5%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 30px 50px;
+}
+
+
+/*.md-sidebar--secondary .md-sidebar__scrollwrap{
+    margin-top: 0%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}*/
+
+[data-md-color-scheme="slate"] .md-nav--lifted>.md-nav__list>.md-nav__item--active>.md-nav__link {
+    background: rgba(0, 0, 0, 0);
+    box-shadow: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: #61ff96;
+    padding-bottom: 3.5%;
+
+    text-shadow: 2px 7px 5px rgba(148, 148, 148, 0.3), 
+    0px -4px 10px rgba(0, 0, 0, 0.37);
+}
+[data-md-color-scheme="default"] .md-nav--lifted>.md-nav__list>.md-nav__item--active>.md-nav__link {
+    background: rgba(0, 0, 0, 0);
+    box-shadow: none;
+    font-weight: bold;
+    font-size: 22px;
+    color: #252593;
+    padding-bottom: 3.5%;
+
+    text-shadow: 2px 7px 5px rgba(0,0,0,0.3), 
+    0px -4px 10px rgba(255,255,255,0.3);
+}
+
+/*logo*/
+.md-header__button.md-logo :-webkit-any(img,svg){
+    height: 1.8rem;
+}
+
+/*sun-moon en-zh -- logo*/
+.md-icon svg {
+    height: 1.0rem;
+    width: auto;
+}
+
+.md-typeset code {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+[data-md-color-scheme="slate"] .md-typeset h1 {
+    color: rgb(255, 255, 255);
+}
+
+[data-md-color-scheme="default"] .md-typeset h1 {
+    color: rgba(0, 0, 0, 1);
+}
+
+/*width of content area*/
+.md-grid {
+    /*max-width: 85%;*/
+  }
+
+.center {
+    display: block;
+    margin: 0 auto;
+}
+
+.md-nav__item .md-nav__link--active {
+    color: #000000;
+    background-color: #ffac85;
+    border-radius: 3%;
+    font-weight: bold;
+}
+
+.md-nav__link>* {
+      font-weight: bold;
+}
+
+.e_docker {
+    color: #1DA1F2;
+  }
+.e_github {
+    color: #7C007C;
+  }
+.e_vscode {
+    color: #1d8ff2;
+  }
+.e_cpp {
+    color: #f4ce65;
+  }
+.e_swift {
+    color: #F6692F;
+  }
+.e_aws {
+    color: #FD9827;
+  }  
+.e_terminal {
+    color: #02cb16;
+  }  
+
+.git_triangle{
+    color: #00FFFF;
+}
+.git_square{
+    color: #FF5555;
+}
+.git_circle{
+    color: #99FF55;
+}
+
+
+.md-typeset .admonition, .md-typeset details {
+    font-size: .80rem;
+}
+
+
