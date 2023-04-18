@@ -11,7 +11,7 @@ comments: true
 
 !!! note ""
 
-    ![picture 2](../Images/kernel.jpg){width="60%", : .center}
+    ![picture 2](../Images/kernel.jpg){width="70%", : .center}
 
     ???+question "What is a kernel?"
 

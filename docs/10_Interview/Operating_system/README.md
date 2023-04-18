@@ -21,6 +21,11 @@ comments: true
         2. Providing an <u>interface</u> for user programs;
         3. Ensuring the normal <u>operation</u> of computer systems. 
 
+    <p align="center">
+        ![picture 1](../Images/monolithic_kernel.png){width="32.7%"} 
+        ![picture 2](../Images/micro_kernel.png){width="35%"}  
+    </p>
+
     - The {==**purpose**==} of an operating system is to:
         1. Provide a <u>good user experience</u>;
         2. Enable computer to excute programs <u>efficiently and reliably</u>.
@@ -29,27 +34,25 @@ comments: true
 
 ??? question "Click for answers 👇"
 
-    - **Time-sharing OS:** 
-        - allows multiple users to <u>share the resources</u> of a single computer;
-        - enables multiple users to access the computer system <u>simultaneously</u>.
+    - **Time-sharing OS:** allows <u>multiple users to share</u> the resources of the single computer system <u>simultaneously</u>.
 
-    - **Batch processing OS:** loads a <u>batch of user-submitted programs</u> into the computer system to run according to certain rules until all programs are completed.
+    - **Batch processing OS:** loads a <u>batchprograms</u>from the user into the computer system to run according to certain rules until all programs are completed.
 
     - **General purpose OS:** has both the functions of <u>Time-sharing</u> and <u>Batch processing</u>. *E.g* Windows, Linux, MacOS.
 
-    - **Real-time OS:** has high <u>requirements for the response time</u> of the computer system and can complete tasks within a specified time.
+    - **Real-time OS:** has <u>high requirements for the response time</u> of the computer system and can complete tasks within a specified time.
 
     - **Distributed OS:** 
-        - distributes the resources of the computer system <u>across multiple computer</u> nodes;
+        - <u>distributes</u> the resources of the computer system <u>across multiple computer nodes</u>;
         - <u>cooperates through a network</u> to improve the reliability and performance of the computer system.
 
-    - **Embedded OS:** an operating system designed for devices with <u>small sizes, low power consumption, and high reliability</u>.
+    - **Embedded OS:** an operating system designed for <u>devices with small sizes, low power consumption, and high reliability</u>.
 
 ### **OS components**
 
 ??? question "Click for answers 👇"
 
-    - **`Kernel`:** the core part of the operating system, responsible for <u>managing computer hardware</u> and <u>providing basic functions</u> such as system calls.
+    - **`Kernel`:** the core part of the operating system, responsible for <u>managing computer hardware</u> and <u>providing basic functions</u>, such as system calls.
 
     - **`Process manager`:** responsible for the <u>efficient operation</u> of the computer system, including:
         -  creating, deleting, scheduling, and managing processes.
@@ -70,20 +73,20 @@ comments: true
     !!! note "Definition with comparison"
 
         - **Definition:** 
-            - `Process` is an {==instance of a running program==} with its own independent instruction address space and system resources, including <u>program code</u>, <u>data</u>, <u>stack</u>, and <u>process control blocks</u>. 
+            - `Process` is an {==instance of a running program==} with its own independent <u>instruction address space</u> and <u>system resources</u> (*program code*, *data*, *stack*, and *process control blocks*). 
             - `Thread` is an {==execution unit in a process==}, sharing resources of the process including <u>address space</u>, <u>file descriptors</u>, <u>signal handlers</u>, and <u>process ID</u>. 
 
         - **Scheduling:** 
             - `Process` is the <u>basic scheduling unit</u> in an operating system, and the operating system manages processes through process <u>control blocks</u>. 
             - `Threads` are <u>scheduling units</u> within a process, and the operating system schedules threads.
 
-        - **Concurrency:** Different processes run <u>concurrently</u>, with each process having its own independent address space and resources. 
-            - `Processes` are <u>independent</u> of each other. 
-            - `Threads` within the same process share resources and data, and can execute concurrently.
+        - **Concurrency:** 
+            - `Processes` are <u>independent</u> of each other. Different processes run <u>concurrently</u>, with each process having its own independent address space and resources. 
+            - `Threads` within the same process <u>share resources and data</u>. Threads executed on the same CPU are executed *concurrently*, whereas threads executed on different CPUs are executed in *parallel*.
 
         - **System overhead:** 
-            - `Process` switching requires saving and restoring <u>all</u> process states, so process switching incurs a <u>larger system overhead</u>. 
-            - `Thread` switching only requires saving and restoring <u>part</u> of the thread state, so thread switching incurs a <u>smaller system overhead</u>.
+            - `Process` switching requires saving and restoring <u>all process states</u>, so process switching incurs a <u>larger system overhead</u>. 
+            - `Thread` switching only requires saving and restoring <u>part of the thread state</u>, so thread switching incurs a <u>smaller system overhead</u>.
 
 ### **Different states of processes**
 
@@ -91,52 +94,58 @@ comments: true
 
     Three states: running, ready, or waiting:
 
-    - **Running:** the process has all the resources it needs for execution, and it has been given permission by the operating system to use the processor.
-    - **Ready:** the process is waiting for permission to use the processor.
-    - **Waiting:** the process is waiting for some external event to occur, such as user input or disk access.
+    - **Running:** the process has <u>all the resources</u> it needs for execution, and it has been given permission by the OS to use the processor.
+    - **Ready:** the process is waiting for <u>permission</u> to use the processor.
+    - **Waiting:** the process is waiting for some <u>external event</u> to occur, such as user input or disk access.
 
 
     !!! warning ""
 
-        - Only one process can be in the running state at any given time. 
+        - <u>Only one</u> process can be in the <u>running state</u> at any given time. 
         - The remaining processes are either in a <u>waiting state</u> or a <u>ready state</u>. 
-        - In a real operating system, the waiting and ready states are implemented as **queues** that hold the processes in these states.
+        - In a real operating system, the <u>waiting and ready states</u> are implemented as *queues* that hold the processes in these states.
 
-### **Process scheduling parameters**
+### **Parameters for process scheduling **
 
 ??? question "Click for answers 👇"
 
     !!! note "Definition with comparison"
 
-        - **Arrival Time (AT):** Time at which the process arrives in the ready queue.
-        - **Completion Time (CT):** Time at which the process completes its execution.
-        - **Burst Time (BT)** Time required by a process for CPU execution.
-        - **Turn Around Time (TAT):** Completion Time - Arrival Time 
-        - **Waiting Time (WT):** Turn around time -Burst time.
+        - Moment：
+            - **`Arrival Time (AT)`:** Time at which the process <u>arrives in the ready queue</u>.
+            - **`Completion Time (CT)`:** Time at which the process completes its execution.
+        - Period:  
+            - **`Burst Time (BT)`:** Time required by a process for CPU execution.
+            - **`Turn Around Time (TAT)`:** Completion Time - Arrival Time 
+            - **`Waiting Time (WT)`:** Turn around time -Burst time.
 
 ### **Necessity of process**
 
 ??? question "Click for answers 👇"
 
-    A typical process involves both I/O time and CPU time. In a uniprogramming system like MS-DOS, time spent waiting for I/O is wasted and CPU is free during this time. In multiprogramming systems, one process can use CPU while another is waiting for I/O. This is possible only with process scheduling. 
+    A typical process involves both I/O time and CPU time. 
+    
+    In a uniprogramming system like MS-DOS, time spent waiting for I/O is wasted and CPU is free during this time. 
+    
+    In multiprogramming systems, one process can use CPU while another is waiting for I/O. This is possible only with process scheduling. 
 
 ### **Different process scheduling algorithms (PSA)**
 
 ??? question "Click for answers 👇"
 
-    - **First Come First Serve (FCFS):** Simplest scheduling algorithm that schedules according to arrival times of processes.
-    - **Shortest Job First (SJF):** Process which have the shortest burst time are scheduled first.
-    - **Shortest Remaining Time First (SRTF):** It is a preemptive mode of SJF algorithm in which jobs are scheduled according to the shortest remaining time (amount of time left for a process to complete its execution).
-    - **Round Robin (RR) Scheduling:** Each process is assigned a fixed time, in cyclic way.
-    - **Priority Based scheduling (Non Preemptive):** In this scheduling, processes are scheduled according to their priorities, i.e., highest priority process is schedule first. If priorities of two processes match, then scheduling is according to the arrival time.
-    - **Highest Response Ratio Next (HRRN):** In this scheduling, processes with highest **response ratio**(Turn around time / Burst time) is scheduled. This algorithm avoids starvation.
+    - **First Come First Serve (FCFS):** processes are scheduled according to their arrival times.
+    - **Shortest Job First (SJF):** processes with the shortest burst time are scheduled first.
+    - **Shortest Remaining Time First (SRTF):** processes are scheduled with the shortest remaining time -- amount of time left for a process to complete its execution (preemptive mode of SJF algorithm)
+    - **Round Robin (RR) Scheduling:** each process is assigned a fixed time; in a cyclic way.
+    - **Priority Based scheduling (Non Preemptive):** processes are scheduled according to their priorities. If priorities of two processes match, then scheduling is according to the arrival time.
+    - **Highest Response Ratio Next (HRRN):** processes with highest **response ratio**(Turn around time / Burst time) is scheduled. This algorithm avoids *starvation* (Consider a situation when a long process is there in the ready queue and shorter processes keep coming.).
     - **Multilevel Queue Scheduling (MLQ):** According to the priority of process, processes are placed in the different queues. Generally high priority process are placed in the top level queue. Only after completion of processes from top level queue, lower level queued processes are scheduled.
     - **Multilevel Feedback Queue (MLFQ) Scheduling:** It allows the process to move in between queues. The idea is to separate processes according to the characteristics of their CPU bursts. If a process uses too much CPU time, it is moved to a lower-priority queue.
 
     !!! warning ""
 
         - FCFS can cause long waiting times, especially when the first job takes too much CPU time.
-        - Both SJF and SRTF algorithms may cause starvation. Consider a situation when a long process is there in the ready queue and shorter processes keep coming.
+        - Both SJF and SRTF algorithms may cause starvation. HRRN can solve it.
         - If time quantum for RRS is very large, then it behaves same as FCFS scheduling.
         - SJF is optimal in terms of average waiting time for a given set of processes. SJF gives minimum average waiting time, but problems with SJF is how to know/predict the time of next job.
 
@@ -156,59 +165,58 @@ comments: true
 
 ??? question "Click for answers 👇"
 
-    The critical section problem is a fundamental concept in computer science and operating systems that deals with the synchronization and coordination of concurrent processes in a shared resource environment. It arises when multiple processes or threads need to access shared resources, such as data structures or hardware devices, simultaneously. Without proper synchronization mechanisms in place, this can lead to unexpected results or unintended behavior, known as race conditions.
+    The `critical section problem` arises when <u>multiple processes or threads</u> need to access <u>shared resources simultaneously</u>, such as data structures or hardware devices. Without proper synchronization mechanisms in place, this can lead to unexpected results or unintended behavior, known as race conditions. Here are some concepts you need to know:
+    
+    - **Critical Section **– The portion of the code in the program where shared variables are accessed and/or updated.
+    - **Remainder Section** – The remaining portion of the program excluding the Critical Section.
+    - **Race around Condition** – The final output of the code depends on the order in which the variables are accessed.
 
-    - Critical Section – The portion of the code in the program where shared variables are accessed and/or updated.
-    - Remainder Section – The remaining portion of the program excluding the Critical Section.
-    - Race around Condition – The final output of the code depends on the order in which the variables are accessed. This is termed as the race around condition.
+    A solution for the critical section problem must satisfy the following <u>three conditions</u>:
 
-    A solution for the critical section problem must satisfy the following three conditions:
-
-    - Mutual Exclusion – If a process Pi is executing in its critical section, then no other process is allowed to enter into the critical section.
-    - Progress – If no process is executing in the critical section, then the decision of a process to enter a critical section cannot be made by any other process that is executing in its remainder section. The selection of the process cannot be postponed indefinitely.
-    - Bounded Waiting – There exists a bound on the number of times other processes can enter into the critical section after a process has made request to access the critical section and before the requested is granted.
+    - **Mutual Exclusion:** If a process is executing in its critical section, then <u>do not allow</u> other processes to enter into the critical section.
+    - **Progress:** If no process is executing in the critical section, then the <u>decision of a process</u> to enter a *critical section* <u>cannot</u> be made by any other process that is executing in its remainder section. The selection of the process cannot be postponed indefinitely.
+    - **Bounded Waiting:** There exists a bound on the <u>number of times</u> other processes can enter into the critical section after a process has made request to access the critical section and before the requested is granted.
 
 
 ### **Synchronization Tools**
     
 ??? question "Click for answers 👇"
 
-     A **Semaphore** is an integer variable that is accessed only through two atomic operations, wait () and signal (). An atomic operation is executed in a single CPU time slice without any pre-emption. Semaphores are of two types:
+     A `Semaphore` is an **integer variable** that is accessed only through two *atomic operations*, `wait()` and `signal()`. An atomic operation is executed in a single CPU time slice without any pre-emption. 
+     
+    `Semaphores` are of two types:
 
-    - Counting Semaphore – A counting semaphore is an integer variable whose value can range over an unrestricted domain.
-    - Mutex – A mutex provides mutual exclusion, either producer or consumer can have the key (mutex) and proceed with their work. As long as the buffer is filled by producer, the consumer needs to wait, and vice versa. At any point of time, only one thread can work with the entire buffer. The concept can be generalized using semaphore. 
-    - Misconception: There is an ambiguity between binary semaphore and mutex. We might have come across that a mutex is binary semaphore. But they are not! The purpose of mutex and semaphore are different. May be, due to similarity in their implementation a mutex would be referred as binary semaphore.
+    - **Binary Semaphore:** It has two states, 0 and 1. It is used for mutual exclusion, where only one process can access the critical section at a time.
+
+    - **Counting Semaphore:** It has a positive integer value that can be incremented or decremented. It is used to control access to a shared resource where multiple processes can access the critical section simultaneously, but the maximum number of processes that can access it at any given time is limited by the value of the semaphore.
 
 
 ### **Deadlock**
 
 ??? question "Click for answers 👇"
 
-    A **situation** where a set of processes are blocked because each process is holding a resource and waiting for another resource acquired by some other process. Deadlock can arise if following four conditions hold simultaneously (Necessary Conditions):
+    A **situation** where a set of <u>processes are blocked</u> because each process is holding a resource and waiting for another resource acquired by some other process. 
+    
+    Deadlock can arise with four necessary Conditions hold simultaneously:
 
     - Mutual Exclusion – One or more than one resource are non-sharable (Only one process can use at a time).
     - Hold and Wait – A process is holding at least one resource and waiting for resources.
     - No Preemption – A resource cannot be taken from a process unless the process releases the resource.
     - Circular Wait – A set of processes are waiting for each other in circular form.
     
-    Methods for handling deadlock: There are three ways to handle deadlock
+    There are three ways to handle deadlock:
  
-    - Deadlock prevention or avoidance: The idea is to not let the system into deadlock state.
-    - Deadlock detection and recovery : Let deadlock occur, then do preemption to handle it once occurred.
-    - Ignore the problem all together : If deadlock is very rare, then let it happen and reboot the system. This is the approach that both Windows and UNIX take.
-
-
-### **Banker’s Algorithm** 
-
-??? question "Click for answers 👇"
-
-    This algorithm handles multiple instances of the same resource. 
+    - **Deadlock prevention or avoidance:** The idea is to not let the system into deadlock state.
+    - **Deadlock detection and recovery:** Let deadlock occur, then do preemption to handle it once occurred.
+    - **Ignore the problem all together:** If deadlock is very rare, then let it happen and reboot the system. This is the approach that both Windows and UNIX take.
 
 ### **Memory Management** 
 
 ??? question "Click for answers 👇"
 
-    The techniques allow the memory to be shared among multiple processes.
+    The techniques allow multiple processes to share the same memory.
+
+    Here are two techniques:
 
     - **Overlays:** The memory should contain only those instructions and data that are required at a given time.
     - **Swapping:** In multiprogramming, the instructions that have used the time slice are swapped out from the memory.
@@ -217,28 +225,49 @@ comments: true
    
 ??? question "Click for answers 👇"
 
-    (a) Single Partition Allocation Schemes – The memory is divided into two parts. One part is kept to be used by the OS and the other is kept to be used by the users. 
+    (a) `Single Partition Allocation Schemes` – The memory is divided into two parts. One part is kept to be used <u>by the OS</u>, and the other is kept to be used <u>by the users</u>. 
 
-    (b) Multiple Partition Schemes: 
+    (b) `Multiple Partition Schemes`: 
 
-    - Fixed Partition – The memory is divided into fixed size partitions.
-    - Variable Partition – The memory is divided into variable sized partitions. Variable partition allocation schemes:
+    - Fixed Partition – The memory is divided into <u>fixed size</u> partitions.
+    - Variable Partition – The memory is divided into <u>variable sized</u> partitions. Variable partition allocation schemes:
         - First Fit – The arriving process is allotted the first hole of memory in which it fits completely.
         - Best Fit – The arriving process is allotted the hole of memory in which it fits the best by leaving the minimum memory empty.
         - Worst Fit – The arriving process is allotted the hole of memory in which it leaves the maximum gap.
-    Note:
+    
+    !!! warning ""
 
         - Best fit does not necessarily give the best results for memory allocation.
-        - The cause of external fragmentation is the condition in Fixed partitioning and Variable partitioning saying that entire process should be allocated in a contiguous memory location. Therefore Paging is used.
-        Paging – The physical memory is divided into equal sized frames. The main memory is divided into fixed size pages. The size of a physical memory frame is equal to the size of a virtual memory frame.
-        Segmentation – Segmentation is implemented to give users view of memory. The logical address space is a collection of segments. Segmentation can be implemented with or without the use of paging.
+        - The cause of external fragmentation is the condition in Fixed partitioning and Variable partitioning saying that entire process should be allocated in a contiguous memory location. Therefore *Paging* is used.
 
+
+### **Paging & Segmentation** 
+   
+??? question "Click for answers 👇"
+
+    Two techniques used by OS to manage the allocation of memory.
+        
+    `Paging`: divides memory into logical units called **pages**. Each page represents a fixed-size chunk of memory, often 4KB in size.
+
+    - When a program needs to access a memory location, the operating system maps the virtual address used by the program to a physical address in memory using a <u>page table</u>. This allows programs to access memory without knowing its physical location, and it also allows the operating system to manage physical memory more efficiently by loading pages into memory only when needed.
+        
+    `Segmentation`: divides memory into logical units called **segments**. Each segment represents a specific part of the program, such as the code, data, or stack. Each segment has a unique size and is assigned a base address and a limit. 
+    
+    - When a program needs to access a memory location, the operating system maps the logical address used by the program to a physical address in memory using a <u>segment table</u>. This allows programs to access memory more efficiently, as they only need to know the logical location of the data they need to access.
+
+### **Logic memory & Virtual memory**
+
+??? question "Click for answers 👇"
+
+    - `Logical memory` is the memory space that a process sees as its own, and it consists of several segments, such as the code segment, data segment, and stack segment. Each segment contains a different type of data that the process needs to execute.
+
+    - `Virtual memory` on the other hand, is a technique used by operating systems to allow processes to use more memory than is physically available in the computer. It uses a combination of hardware and software to <u>map</u> a process's logical memory to physical memory or to a temporary storage area on disk called the swap file.
 
 ### **Page Fault** 
 
 ??? question "Click for answers 👇"
 
-    A `page fault` is a type of interrupt, raised by the hardware when a running program accesses a memory page that is mapped into the virtual address space, but not loaded in physical memory. 
+    A `page fault` is a type of interrupt, raised by the hardware when a running program accesses a memory page that is mapped into the virtual address space, but <u>not loaded in physical memory</u>. 
 
 ### **File System** 
 
@@ -250,13 +279,15 @@ comments: true
 
 ??? question "Click for answers 👇"
 
-    `File Directories`: Collection of files is a file directory. The directory contains information about the files, including attributes, location and ownership. Much of this information, especially that is concerned with storage, is managed by the operating system.
+    `File Directories`: Collection of files is a file directory. The directory contains information about the files, including attributes, location and ownership. Here are several directory types:
 
     - **SINGLE-LEVEL DIRECTORY:** In this a single directory is maintained for all the users
     
     - **TWO-LEVEL DIRECTORY:** Due to two levels there is a <u>path name</u> for every file to locate that file.
     
     - **TREE-STRUCTURED DIRECTORY:** Directory is maintained in the <u>form of a tree</u>. Searching is efficient and also there is grouping capability. 
+
+    Here are some file allocation ways:
     
     - **Continuous Allocation:** A single <u>continuous set of blocks is allocated</u> to a file at the time of file creation.
     
@@ -264,35 +295,19 @@ comments: true
     
     - **Indexed Allocation:** It addresses many of the problems of contiguous and chained allocation. In this case, the file allocation table contains a <u>separate one-level index</u> for each file
     
-### ** Seek time ** 
+### ** Disk time ** 
 
 ??? question "Click for answers 👇"
 
-    `Seek time` is the **time** taken to locate the <u>disk arm</u> to a <u>specified track</u> where the data is to be read or write.
-    
-### **Rotational Latency** 
+    - `Seek time` is the **time** taken to locate the <u>disk arm</u> to a <u>specified track</u> where the data is to be read or write.
 
-??? question "Click for answers 👇"
+    - `Rotational Latency` is the **time** taken by the <u>desired sector of the disk to rotate</u> into a position so that it can access the read/write heads.
 
-    `Rotational Latency` is the **time** taken by the <u>desired sector of the disk to rotate</u> into a position so that it can access the read/write heads.
-    
-### **Transfer Time** 
+    - `Transfer time` is the time to transfer the data. It depends on the rotating speed of the disk and number of bytes to be transferred. 
 
-??? question "Click for answers 👇"
+    - `Disk Access Time` = Seek Time + Rotational Latency + Transfer Time 
 
-    `Transfer time` is the time to transfer the data. It depends on the rotating speed of the disk and number of bytes to be transferred. 
-
-### **Disk Access Time** 
-
-??? question "Click for answers 👇"
-
-    Disk Access Time = Seek Time + Rotational Latency + Transfer Time 
-
-### **Disk Response Time**
-
-??? question "Click for answers 👇"
-
-    Response Time is the average of time spent by a request waiting to perform its I/O operation. Average Response time is the response time of the all requests. 
+    - `Response Time` is the average of time spent by a request waiting to perform its I/O operation. Average Response time is the response time of the all requests. 
     
 ### **Buffer**
 
@@ -315,5 +330,8 @@ comments: true
 
 #### **References:**
 
-- [[SQL Tutorial](https://www.geeksforgeeks.org/commonly-asked-operating-systems-interview-questions/?ref=lbp)]
+- [SQL Tutorial](https://www.geeksforgeeks.org/commonly-asked-operating-systems-interview-questions/?ref=lbp)]
 - [Last Minute Notes – Operating Systems](https://www.geeksforgeeks.org/last-minute-notes-operating-systems/?ref=lbp)
+- [Concurrency vs. Parallelism](https://jenkov.com/tutorials/java-concurrency/concurrency-vs-parallelism.html#:~:text=Thus%2C%20the%20threads%20executed%20on,CPUs%20are%20executed%20in%20parallel.)
+- [Image Resource 1](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.learncomputerscienceonline.com%2Foperating-system%2F&psig=AOvVaw3VcjEWrCoDpv64FY_LqyrY&ust=1681838404932000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJCM3ru2sf4CFQAAAAAdAAAAABAb)
+- [Image Resource 2](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.learncomputerscienceonline.com%2Foperating-system%2F&psig=AOvVaw3VcjEWrCoDpv64FY_LqyrY&ust=1681838404932000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJCM3ru2sf4CFQAAAAAdAAAAABBM)
