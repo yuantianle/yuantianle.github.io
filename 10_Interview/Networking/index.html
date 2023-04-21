@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../Operating_system/">
+        <link rel="prev" href="../Kernel/">
       
       
         <link rel="next" href="../../6_Math/">
@@ -71,6 +71,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#-networking" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -4027,6 +4032,10 @@
             
           
         
+          
+            
+          
+        
       
       
         
@@ -4095,6 +4104,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../Kernel/" class="md-nav__link">
+        Kernel
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -4102,6 +4125,8 @@
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
+      
+        
       
       
       <a href="./" class="md-nav__link md-nav__link--active">
@@ -4389,7 +4414,7 @@
   
     <div class="md-source-date" style="text-align: right; font-weight: bold;">
       <small>
-          Author: <span class='git-page-authors git-authors'></span>
+          Author: <span class='git-page-authors git-authors'><a href='mailto:yuant@oregonstate.edu'>Tianle Yuan</a></span>
       </small>
     </div>
 
@@ -4401,16 +4426,170 @@
   
 
 
-  <h1>Networking</h1>
-
-
+<h1 id="-networking"><strong> 👨‍💻 Networking</strong><a class="headerlink" href="#-networking" title="Anchor link to this section for reference">⚓︎</a></h1>
+<blockquote>
+<p>Interview Questions for Networking</p>
+</blockquote>
+<h3 id="overview"><strong>Overview</strong><a class="headerlink" href="#overview" title="Anchor link to this section for reference">⚓︎</a></h3>
+<div class="admonition note">
+<p>Here is the table of the 7 layers:</p>
+<p>|Nums|Layers                |Data Units|      |Functions |<br />
+|:-:|:-:|:-:|:-:|
+|7|Application Layer    |Data           |Mail Services,Directory Services,FTAM   |
+|6|Presentation Layer   |Data           |Encryption/Decryption, Compression|
+|5|Session Layer        |Data           |Session Establishment, Synchronization,Dialog Controller|
+|4|Transport Layer  |Segments,Datagram  |Segmentation|
+|3|Network Layer        |Packets        |Traffic control,Fragmentation,Routing|
+|2|Data Link Layer  |Frames             |Flow control,Error control,Access control|
+|1|Physical Layer       |Bits           |Bit Synchronization,Bit rate control,Physical Topologies|</p>
+<p>For the seven layers, here are some corresponding protocols and devices/apps:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">1. Pys Lr</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>
+<p>Protocol:</p>
+<ul>
+<li>Ethernet (IEEE 802.3)</li>
+<li>Wi-Fi (IEEE 802.11)</li>
+<li>Bluetooth</li>
+<li>DSL (Digital Subscriber Line)</li>
+<li>USB (Universal Serial Bus)</li>
+<li>RS-232</li>
+</ul>
+</li>
+<li>
+<p>Devices:</p>
+<ul>
+<li>Hubs</li>
+<li>Repeaters</li>
+<li>Cables (e.g., twisted pair, coaxial, fiber optic)</li>
+<li>Network Interface Cards (NICs)</li>
+<li>Wireless Access Points</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<p>=== "2. Dlk Lr"</p>
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>    - Protocol:
+<span class="linenos" data-linenos=" 2 "></span>
+<span class="linenos" data-linenos=" 3 "></span>        - Ethernet (IEEE 802.3)
+<span class="linenos" data-linenos=" 4 "></span>        - Wi-Fi (IEEE 802.11)
+<span class="linenos" data-linenos=" 5 "></span>        - PPP (Point-to-Point Protocol)
+<span class="linenos" data-linenos=" 6 "></span>        - HDLC (High-Level Data Link Control)
+<span class="linenos" data-linenos=" 7 "></span>        - Frame Relay
+<span class="linenos" data-linenos=" 8 "></span>        - ATM (Asynchronous Transfer Mode)
+<span class="linenos" data-linenos=" 9 "></span>
+<span class="linenos" data-linenos="10 "></span>    - Devices:
+<span class="linenos" data-linenos="11 "></span>
+<span class="linenos" data-linenos="12 "></span>        - Switches
+<span class="linenos" data-linenos="13 "></span>        - Bridges
+<span class="linenos" data-linenos="14 "></span>        - Wireless Access Points
+<span class="linenos" data-linenos="15 "></span>        - Network Interface Cards (NICs)
+<span class="linenos" data-linenos="16 "></span>        - Protocol Analyzers (e.g., Wireshark)
+</code></pre></div>
+<p>=== "3. Ntw Lr"</p>
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>    - Protocol:
+<span class="linenos" data-linenos=" 2 "></span>
+<span class="linenos" data-linenos=" 3 "></span>        - IPv4 (Internet Protocol version 4)
+<span class="linenos" data-linenos=" 4 "></span>        - IPv6 (Internet Protocol version 6)
+<span class="linenos" data-linenos=" 5 "></span>        - ICMP (Internet Control Message Protocol)
+<span class="linenos" data-linenos=" 6 "></span>        - IGMP (Internet Group Management Protocol)
+<span class="linenos" data-linenos=" 7 "></span>        - OSPF (Open Shortest Path First)
+<span class="linenos" data-linenos=" 8 "></span>        - RIP (Routing Information Protocol)
+<span class="linenos" data-linenos=" 9 "></span>        - BGP (Border Gateway Protocol)
+<span class="linenos" data-linenos="10 "></span>
+<span class="linenos" data-linenos="11 "></span>    - Devices:
+<span class="linenos" data-linenos="12 "></span>
+<span class="linenos" data-linenos="13 "></span>        - Routers
+<span class="linenos" data-linenos="14 "></span>        - Layer 3 Switches
+<span class="linenos" data-linenos="15 "></span>        - Firewalls
+<span class="linenos" data-linenos="16 "></span>        - Applications:
+<span class="linenos" data-linenos="17 "></span>        - Routing software (e.g., Cisco IOS, Juniper Junos OS)
+<span class="linenos" data-linenos="18 "></span>        - Network management and monitoring tools (e.g., SolarWinds Network Performance Monitor)
+</code></pre></div>
+<p>=== "4. Tsp Lr"</p>
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>    - Protocol:
+<span class="linenos" data-linenos=" 2 "></span>
+<span class="linenos" data-linenos=" 3 "></span>        - TCP (Transmission Control Protocol)
+<span class="linenos" data-linenos=" 4 "></span>        - UDP (User Datagram Protocol)
+<span class="linenos" data-linenos=" 5 "></span>        - SCTP (Stream Control Transmission Protocol)
+<span class="linenos" data-linenos=" 6 "></span>        - DCCP (Datagram Congestion Control Protocol)
+<span class="linenos" data-linenos=" 7 "></span>
+<span class="linenos" data-linenos=" 8 "></span>
+<span class="linenos" data-linenos=" 9 "></span>    - Applications:
+<span class="linenos" data-linenos="10 "></span>
+<span class="linenos" data-linenos="11 "></span>        - Wireshark (for analyzing TCP/UDP packets)
+<span class="linenos" data-linenos="12 "></span>        - Netstat (for monitoring active network connections)
+</code></pre></div>
+<p>=== "5. Ssn Lr"</p>
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>    - Protocol:
+<span class="linenos" data-linenos=" 2 "></span>
+<span class="linenos" data-linenos=" 3 "></span>        - TLS (Transport Layer Security)
+<span class="linenos" data-linenos=" 4 "></span>        - SSL (Secure Sockets Layer)
+<span class="linenos" data-linenos=" 5 "></span>        - SSH (Secure Shell)
+<span class="linenos" data-linenos=" 6 "></span>        - L2TP (Layer 2 Tunneling Protocol)
+<span class="linenos" data-linenos=" 7 "></span>        - PPTP (Point-to-Point Tunneling Protocol)
+<span class="linenos" data-linenos=" 8 "></span>
+<span class="linenos" data-linenos=" 9 "></span>    - Applications:
+<span class="linenos" data-linenos="10 "></span>
+<span class="linenos" data-linenos="11 "></span>        - VPN clients and servers (e.g., OpenVPN, Cisco AnyConnect)
+<span class="linenos" data-linenos="12 "></span>        - Remote desktop tools (e.g., TeamViewer, Microsoft Remote Desktop)
+<span class="linenos" data-linenos="13 "></span>        - Network file sharing systems (e.g., SMB, NFS)
+</code></pre></div>
+<p>=== "6. Pst Lr"</p>
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>    - Protocol:
+<span class="linenos" data-linenos=" 2 "></span>
+<span class="linenos" data-linenos=" 3 "></span>        - MIME (Multipurpose Internet Mail Extensions)
+<span class="linenos" data-linenos=" 4 "></span>        - XDR (External Data Representation)
+<span class="linenos" data-linenos=" 5 "></span>        - ASN.1 (Abstract Syntax Notation One)
+<span class="linenos" data-linenos=" 6 "></span>        - SSL/TLS (Secure Sockets Layer / Transport Layer Security)
+<span class="linenos" data-linenos=" 7 "></span>        - JSON (JavaScript Object Notation)
+<span class="linenos" data-linenos=" 8 "></span>        - XML (eXtensible Markup Language)
+<span class="linenos" data-linenos=" 9 "></span>
+<span class="linenos" data-linenos="10 "></span>    - Applications:
+<span class="linenos" data-linenos="11 "></span>
+<span class="linenos" data-linenos="12 "></span>        - Encryption/decryption tools (e.g., OpenSSL)
+<span class="linenos" data-linenos="13 "></span>        - Data compression software (e.g., gzip, WinZip, WinRAR)
+<span class="linenos" data-linenos="14 "></span>        - Web browsers (for rendering MIME types, e.g., Chrome, Firefox, Safari)
+</code></pre></div>
+<p>=== "7. Apl Lr"</p>
+<div class="highlight"><span class="filename">Text Only</span><pre><span></span><code><span class="linenos" data-linenos=" 1 "></span>    - Protocol:
+<span class="linenos" data-linenos=" 2 "></span>
+<span class="linenos" data-linenos=" 3 "></span>        - HTTP (Hypertext Transfer Protocol)
+<span class="linenos" data-linenos=" 4 "></span>        - HTTPS (Hypertext Transfer Protocol Secure)
+<span class="linenos" data-linenos=" 5 "></span>        - FTP (File Transfer Protocol)
+<span class="linenos" data-linenos=" 6 "></span>        - TFTP (Trivial File Transfer Protocol)
+<span class="linenos" data-linenos=" 7 "></span>        - SMTP (Simple Mail Transfer Protocol)
+<span class="linenos" data-linenos=" 8 "></span>        - POP3 (Post Office Protocol version 3)
+<span class="linenos" data-linenos=" 9 "></span>        - IMAP (Internet Message Access Protocol)
+<span class="linenos" data-linenos="10 "></span>        - DNS (Domain Name System)
+<span class="linenos" data-linenos="11 "></span>        - SNMP (Simple Network Management Protocol)
+<span class="linenos" data-linenos="12 "></span>        - Telnet
+<span class="linenos" data-linenos="13 "></span>        - DHCP (Dynamic Host Configuration Protocol)
+<span class="linenos" data-linenos="14 "></span>        - LDAP (Lightweight Directory Access Protocol)
+<span class="linenos" data-linenos="15 "></span>        - SIP (Session Initiation Protocol)
+<span class="linenos" data-linenos="16 "></span>        - XMPP (Extensible Messaging and Presence Protocol)
+<span class="linenos" data-linenos="17 "></span>
+<span class="linenos" data-linenos="18 "></span>    - Applications:
+<span class="linenos" data-linenos="19 "></span>
+<span class="linenos" data-linenos="20 "></span>        - Web browsers (e.g., Chrome, Firefox, Safari)
+<span class="linenos" data-linenos="21 "></span>        - Email clients (e.g., Microsoft Outlook, Mozilla Thunderbird, Apple Mail)
+<span class="linenos" data-linenos="22 "></span>        - File transfer clients (e.g., FileZilla, WinSCP)
+<span class="linenos" data-linenos="23 "></span>        - Instant messaging apps (e.g., WhatsApp, Telegram, Signal)
+<span class="linenos" data-linenos="24 "></span>        - Voice and video communication software (e.g., Zoom, Microsoft Teams, Skype)
+<span class="linenos" data-linenos="25 "></span>        - Network management and monitoring tools (e.g., SolarWinds Network Performance Monitor, Nagios)
+</code></pre></div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 1, 2023 05:07:26</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 17, 2023 07:16:17</span>
       
         <br>
         Created:
@@ -4423,6 +4602,55 @@
 
 
 
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+    <script src="https://giscus.app/client.js"
+        data-repo="yuantianle/yuantianle.github.io"
+        data-repo-id="R_kgDOITXaGg"
+        data-category-id="DIC_kwDOITXaGs4CSWJD"
+        =""
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    </script>
+
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
 
                 
 
@@ -4499,6 +4727,10 @@
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../javascripts/tablesort.js"></script>
       
     
   </body>

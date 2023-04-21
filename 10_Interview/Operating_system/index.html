@@ -12,7 +12,7 @@
         <link rel="prev" href="../Other/sql_guide/">
       
       
-        <link rel="next" href="../Networking/">
+        <link rel="next" href="../Kernel/">
       
       <link rel="icon" href="../../images/self.ico">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.6">
@@ -4032,6 +4032,10 @@
             
           
         
+          
+            
+          
+        
       
       
         
@@ -4101,6 +4105,20 @@
         Operating System
       </a>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Kernel/" class="md-nav__link">
+        Kernel
+      </a>
     </li>
   
 
@@ -4415,66 +4433,64 @@
 <ul>
 <li><a href="#what-is-operating-system"><strong>What is Operating System</strong></a></li>
 </ul>
-<h3 id="what-is-operating-system"><strong>What is Operating System?</strong><a class="headerlink" href="#what-is-operating-system" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="operating-system"><strong>Operating System</strong><a class="headerlink" href="#operating-system" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="question">
-<summary>What is Operating System?</summary>
-<p>The <strong>system software</strong> that controls computer <u>hardware and software</u> resources. </p>
+<summary>Click for answers 👇</summary>
+<p>The <strong>system software</strong> that controls computer <u>hardware</u> and <u>software</u> resources. </p>
 <ul>
-<li>
-<p>Its main <mark class="critic"><strong>functions</strong></mark> include:</p>
-<ol>
+<li>Its main <mark class="critic"><strong>functions</strong></mark> include:<ol>
 <li><u>Managing resources</u> such as processes, memory, files, and devices;</li>
 <li>Providing an <u>interface</u> for user programs;</li>
 <li>Ensuring the normal <u>operation</u> of computer systems. </li>
 </ol>
 </li>
-<li>
-<p>The <mark class="critic"><strong>purpose</strong></mark> of an operating system is to:</p>
-<ol>
+</ul>
+<p><p align="center">
+    <img alt="picture 1" src="../Images/monolithic_kernel.png" width="32.7%" /> 
+    <img alt="picture 2" src="../Images/micro_kernel.png" width="35%" /><br />
+</p></p>
+<ul>
+<li>The <mark class="critic"><strong>purpose</strong></mark> of an operating system is to:<ol>
 <li>Provide a <u>good user experience</u>;</li>
-<li>Enable computer systems to run <u>efficiently and reliably</u>.</li>
+<li>Enable computer to excute programs <u>efficiently and reliably</u>.</li>
 </ol>
 </li>
 </ul>
 </details>
-<h3 id="what-are-the-classifications-of-os"><strong>What are the classifications of OS?</strong><a class="headerlink" href="#what-are-the-classifications-of-os" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="classifications-of-os"><strong>Classifications of OS</strong><a class="headerlink" href="#classifications-of-os" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="question">
-<summary>What are the classifications of OS?</summary>
+<summary>Click for answers 👇</summary>
 <ul>
 <li>
-<p><strong>Time-sharing OS:</strong> </p>
-<ul>
-<li>allows multiple users to <u>share the resources</u> of a single computer;</li>
-<li>enables multiple users to access the computer system <u>simultaneously</u>.</li>
-</ul>
+<p><strong>Time-sharing OS:</strong> allows <u>multiple users to share</u> the resources of the single computer system <u>simultaneously</u>.</p>
 </li>
 <li>
-<p><strong>Batch processing OS:</strong> loads a <u>batch of user-submitted programs</u> into the computer system to run according to certain rules until all programs are completed.</p>
+<p><strong>Batch processing OS:</strong> loads a <u>batchprograms</u>from the user into the computer system to run according to certain rules until all programs are completed.</p>
 </li>
 <li>
 <p><strong>General purpose OS:</strong> has both the functions of <u>Time-sharing</u> and <u>Batch processing</u>. <em>E.g</em> Windows, Linux, MacOS.</p>
 </li>
 <li>
-<p><strong>Real-time OS:</strong> has high <u>requirements for the response time</u> of the computer system and can complete tasks within a specified time.</p>
+<p><strong>Real-time OS:</strong> has <u>high requirements for the response time</u> of the computer system and can complete tasks within a specified time.</p>
 </li>
 <li>
 <p><strong>Distributed OS:</strong> </p>
 <ul>
-<li>distributes the resources of the computer system <u>across multiple computer</u> nodes;</li>
+<li><u>distributes</u> the resources of the computer system <u>across multiple computer nodes</u>;</li>
 <li><u>cooperates through a network</u> to improve the reliability and performance of the computer system.</li>
 </ul>
 </li>
 <li>
-<p><strong>Embedded OS:</strong> an operating system designed for devices with <u>small sizes, low power consumption, and high reliability</u>.</p>
+<p><strong>Embedded OS:</strong> an operating system designed for <u>devices with small sizes, low power consumption, and high reliability</u>.</p>
 </li>
 </ul>
 </details>
-<h3 id="what-are-os-components"><strong>What are OS components?</strong><a class="headerlink" href="#what-are-os-components" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="os-components"><strong>OS components</strong><a class="headerlink" href="#os-components" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="question">
-<summary>What are OS components?</summary>
+<summary>Click for answers 👇</summary>
 <ul>
 <li>
-<p><strong><code>Kernel</code>:</strong> the core part of the operating system, responsible for <u>managing computer hardware</u> and <u>providing basic functions</u> such as system calls.</p>
+<p><strong><code>Kernel</code>:</strong> the core part of the operating system, responsible for <u>managing computer hardware</u> and <u>providing basic functions</u>, such as system calls.</p>
 </li>
 <li>
 <p><strong><code>Process manager</code>:</strong> responsible for the <u>efficient operation</u> of the computer system, including:</p>
@@ -4502,16 +4518,16 @@
 </li>
 </ul>
 </details>
-<h3 id="what-are-process-and-thread"><strong>What are process and thread?</strong><a class="headerlink" href="#what-are-process-and-thread" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="process-and-thread"><strong>Process and thread</strong><a class="headerlink" href="#process-and-thread" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="question">
-<summary>What are process and thread?</summary>
+<summary>Click for answers 👇</summary>
 <div class="admonition note">
 <p class="admonition-title">Definition with comparison</p>
 <ul>
 <li>
 <p><strong>Definition:</strong> </p>
 <ul>
-<li><code>Process</code> is an <mark class="critic">instance of a running program</mark> with its own independent address space and system resources, including <u>program code</u>, <u>data</u>, <u>stack</u>, and <u>process control blocks</u>. </li>
+<li><code>Process</code> is an <mark class="critic">instance of a running program</mark> with its own independent <u>instruction address space</u> and <u>system resources</u> (<em>program code</em>, <em>data</em>, <em>stack</em>, and <em>process control blocks</em>). </li>
 <li><code>Thread</code> is an <mark class="critic">execution unit in a process</mark>, sharing resources of the process including <u>address space</u>, <u>file descriptors</u>, <u>signal handlers</u>, and <u>process ID</u>. </li>
 </ul>
 </li>
@@ -4523,25 +4539,287 @@
 </ul>
 </li>
 <li>
-<p><strong>Concurrency:</strong> Different processes run <u>concurrently</u>, with each process having its own independent address space and resources. </p>
+<p><strong>Concurrency:</strong> </p>
 <ul>
-<li><code>Processes</code> are <u>independent</u> of each other. </li>
-<li><code>Threads</code> within the same process share resources and data, and can execute concurrently.</li>
+<li><code>Processes</code> are <u>independent</u> of each other. Different processes run <u>concurrently</u>, with each process having its own independent address space and resources. </li>
+<li><code>Threads</code> within the same process <u>share resources and data</u>. Threads executed on the same CPU are executed <em>concurrently</em>, whereas threads executed on different CPUs are executed in <em>parallel</em>.</li>
 </ul>
 </li>
 <li>
 <p><strong>System overhead:</strong> </p>
 <ul>
-<li><code>Process</code> switching requires saving and restoring <u>all</u> process states, so process switching incurs a <u>larger system overhead</u>. </li>
-<li><code>Thread</code> switching only requires saving and restoring <u>part</u> of the thread state, so thread switching incurs a <u>smaller system overhead</u>.</li>
+<li><code>Process</code> switching requires saving and restoring <u>all process states</u>, so process switching incurs a <u>larger system overhead</u>. </li>
+<li><code>Thread</code> switching only requires saving and restoring <u>part of the thread state</u>, so thread switching incurs a <u>smaller system overhead</u>.</li>
 </ul>
 </li>
 </ul>
 </div>
 </details>
+<h3 id="different-states-of-processes"><strong>Different states of processes</strong><a class="headerlink" href="#different-states-of-processes" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="question">
+<summary>Click for answers 👇</summary>
+<p>Three states: running, ready, or waiting:</p>
+<ul>
+<li><strong>Running:</strong> the process has <u>all the resources</u> it needs for execution, and it has been given permission by the OS to use the processor.</li>
+<li><strong>Ready:</strong> the process is waiting for <u>permission</u> to use the processor.</li>
+<li><strong>Waiting:</strong> the process is waiting for some <u>external event</u> to occur, such as user input or disk access.</li>
+</ul>
+<div class="admonition warning">
+<ul>
+<li><u>Only one</u> process can be in the <u>running state</u> at any given time. </li>
+<li>The remaining processes are either in a <u>waiting state</u> or a <u>ready state</u>. </li>
+<li>In a real operating system, the <u>waiting and ready states</u> are implemented as <em>queues</em> that hold the processes in these states.</li>
+</ul>
+</div>
+</details>
+<h3 id="parameters-for-process-scheduling"><strong>Parameters for process scheduling </strong><a class="headerlink" href="#parameters-for-process-scheduling" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="question">
+<summary>Click for answers 👇</summary>
+<div class="admonition note">
+<p class="admonition-title">Definition with comparison</p>
+<ul>
+<li>Moment：<ul>
+<li><strong><code>Arrival Time (AT)</code>:</strong> Time at which the process <u>arrives in the ready queue</u>.</li>
+<li><strong><code>Completion Time (CT)</code>:</strong> Time at which the process completes its execution.</li>
+</ul>
+</li>
+<li>Period:  <ul>
+<li><strong><code>Burst Time (BT)</code>:</strong> Time required by a process for CPU execution.</li>
+<li><strong><code>Turn Around Time (TAT)</code>:</strong> Completion Time - Arrival Time </li>
+<li><strong><code>Waiting Time (WT)</code>:</strong> Turn around time -Burst time.</li>
+</ul>
+</li>
+</ul>
+</div>
+</details>
+<h3 id="necessity-of-process"><strong>Necessity of process</strong><a class="headerlink" href="#necessity-of-process" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="question">
+<summary>Click for answers 👇</summary>
+<p>A typical process involves both I/O time and CPU time. </p>
+<p>In a uniprogramming system like MS-DOS, time spent waiting for I/O is wasted and CPU is free during this time. </p>
+<p>In multiprogramming systems, one process can use CPU while another is waiting for I/O. This is possible only with process scheduling. </p>
+</details>
+<h3 id="different-process-scheduling-algorithms-psa"><strong>Different process scheduling algorithms (PSA)</strong><a class="headerlink" href="#different-process-scheduling-algorithms-psa" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="question">
+<summary>Click for answers 👇</summary>
+<ul>
+<li><strong>First Come First Serve (FCFS):</strong> processes are scheduled according to their arrival times.</li>
+<li><strong>Shortest Job First (SJF):</strong> processes with the shortest burst time are scheduled first.</li>
+<li><strong>Shortest Remaining Time First (SRTF):</strong> processes are scheduled with the shortest remaining time -- amount of time left for a process to complete its execution (preemptive mode of SJF algorithm)</li>
+<li><strong>Round Robin (RR) Scheduling:</strong> each process is assigned a fixed time; in a cyclic way.</li>
+<li><strong>Priority Based scheduling (Non Preemptive):</strong> processes are scheduled according to their priorities. If priorities of two processes match, then scheduling is according to the arrival time.</li>
+<li><strong>Highest Response Ratio Next (HRRN):</strong> processes with highest <strong>response ratio</strong>(Turn around time / Burst time) is scheduled. This algorithm avoids <em>starvation</em> (Consider a situation when a long process is there in the ready queue and shorter processes keep coming.).</li>
+<li><strong>Multilevel Queue Scheduling (MLQ):</strong> According to the priority of process, processes are placed in the different queues. Generally high priority process are placed in the top level queue. Only after completion of processes from top level queue, lower level queued processes are scheduled.</li>
+<li><strong>Multilevel Feedback Queue (MLFQ) Scheduling:</strong> It allows the process to move in between queues. The idea is to separate processes according to the characteristics of their CPU bursts. If a process uses too much CPU time, it is moved to a lower-priority queue.</li>
+</ul>
+<div class="admonition warning">
+<ul>
+<li>FCFS can cause long waiting times, especially when the first job takes too much CPU time.</li>
+<li>Both SJF and SRTF algorithms may cause starvation. HRRN can solve it.</li>
+<li>If time quantum for RRS is very large, then it behaves same as FCFS scheduling.</li>
+<li>SJF is optimal in terms of average waiting time for a given set of processes. SJF gives minimum average waiting time, but problems with SJF is how to know/predict the time of next job.</li>
+</ul>
+</div>
+</details>
+<h3 id="objectives-of-psa"><strong>Objectives of PSA</strong><a class="headerlink" href="#objectives-of-psa" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="question">
+<summary>Click for answers 👇</summary>
+<ul>
+<li>Max CPU utilization (Keep CPU as busy as possible)</li>
+<li>Fair allocation of CPU.</li>
+<li>Max throughput (Number of processes that complete their execution per time unit)</li>
+<li>Min turnaround time (Time taken by a process to finish execution)</li>
+<li>Min waiting time (Time for which a process waits in ready queue)</li>
+<li>Min response time (Time when a process produces first response)</li>
+</ul>
+</details>
+<h3 id="critical-section-problem--solution"><strong>Critical section problem &amp; solution</strong><a class="headerlink" href="#critical-section-problem--solution" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="question">
+<summary>Click for answers 👇</summary>
+<p>The <code>critical section problem</code> arises when <u>multiple processes or threads</u> need to access <u>shared resources simultaneously</u>, such as data structures or hardware devices. Without proper synchronization mechanisms in place, this can lead to unexpected results or unintended behavior, known as race conditions. Here are some concepts you need to know:</p>
+<ul>
+<li><strong>Critical Section </strong>– The portion of the code in the program where shared variables are accessed and/or updated.</li>
+<li><strong>Remainder Section</strong> – The remaining portion of the program excluding the Critical Section.</li>
+<li><strong>Race around Condition</strong> – The final output of the code depends on the order in which the variables are accessed.</li>
+</ul>
+<p>A solution for the critical section problem must satisfy the following <u>three conditions</u>:</p>
+<ul>
+<li><strong>Mutual Exclusion:</strong> If a process is executing in its critical section, then <u>do not allow</u> other processes to enter into the critical section.</li>
+<li><strong>Progress:</strong> If no process is executing in the critical section, then the <u>decision of a process</u> to enter a <em>critical section</em> <u>cannot</u> be made by any other process that is executing in its remainder section. The selection of the process cannot be postponed indefinitely.</li>
+<li><strong>Bounded Waiting:</strong> There exists a bound on the <u>number of times</u> other processes can enter into the critical section after a process has made request to access the critical section and before the requested is granted.</li>
+</ul>
+</details>
+<h3 id="synchronization-tools"><strong>Synchronization Tools</strong><a class="headerlink" href="#synchronization-tools" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="question">
+<summary>Click for answers 👇</summary>
+<p>A <code>Semaphore</code> is an <strong>integer variable</strong> that is accessed only through two <em>atomic operations</em>, <code>wait()</code> and <code>signal()</code>. An atomic operation is executed in a single CPU time slice without any pre-emption. </p>
+<p><code>Semaphores</code> are of two types:</p>
+<ul>
+<li>
+<p><strong>Binary Semaphore:</strong> It has two states, 0 and 1. It is used for mutual exclusion, where only one process can access the critical section at a time.</p>
+</li>
+<li>
+<p><strong>Counting Semaphore:</strong> It has a positive integer value that can be incremented or decremented. It is used to control access to a shared resource where multiple processes can access the critical section simultaneously, but the maximum number of processes that can access it at any given time is limited by the value of the semaphore.</p>
+</li>
+</ul>
+</details>
+<h3 id="deadlock"><strong>Deadlock</strong><a class="headerlink" href="#deadlock" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="question">
+<summary>Click for answers 👇</summary>
+<p>A <strong>situation</strong> where a set of <u>processes are blocked</u> because each process is holding a resource and waiting for another resource acquired by some other process. </p>
+<p>Deadlock can arise with four necessary Conditions hold simultaneously:</p>
+<ul>
+<li>Mutual Exclusion – One or more than one resource are non-sharable (Only one process can use at a time).</li>
+<li>Hold and Wait – A process is holding at least one resource and waiting for resources.</li>
+<li>No Preemption – A resource cannot be taken from a process unless the process releases the resource.</li>
+<li>Circular Wait – A set of processes are waiting for each other in circular form.</li>
+</ul>
+<p>There are three ways to handle deadlock:</p>
+<ul>
+<li><strong>Deadlock prevention or avoidance:</strong> The idea is to not let the system into deadlock state.</li>
+<li><strong>Deadlock detection and recovery:</strong> Let deadlock occur, then do preemption to handle it once occurred.</li>
+<li><strong>Ignore the problem all together:</strong> If deadlock is very rare, then let it happen and reboot the system. This is the approach that both Windows and UNIX take.</li>
+</ul>
+</details>
+<h3 id="memory-management"><strong>Memory Management</strong><a class="headerlink" href="#memory-management" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="question">
+<summary>Click for answers 👇</summary>
+<p>The techniques allow multiple processes to share the same memory.</p>
+<p>Here are two techniques:</p>
+<ul>
+<li><strong>Overlays:</strong> The memory should contain only those instructions and data that are required at a given time.</li>
+<li><strong>Swapping:</strong> In multiprogramming, the instructions that have used the time slice are swapped out from the memory.</li>
+</ul>
+</details>
+<h3 id="memory-management-techniques"><strong>Memory Management Techniques</strong><a class="headerlink" href="#memory-management-techniques" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="question">
+<summary>Click for answers 👇</summary>
+<p>(a) <code>Single Partition Allocation Schemes</code> – The memory is divided into two parts. One part is kept to be used <u>by the OS</u>, and the other is kept to be used <u>by the users</u>. </p>
+<p>(b) <code>Multiple Partition Schemes</code>: </p>
+<ul>
+<li>Fixed Partition – The memory is divided into <u>fixed size</u> partitions.</li>
+<li>Variable Partition – The memory is divided into <u>variable sized</u> partitions. Variable partition allocation schemes:<ul>
+<li>First Fit – The arriving process is allotted the first hole of memory in which it fits completely.</li>
+<li>Best Fit – The arriving process is allotted the hole of memory in which it fits the best by leaving the minimum memory empty.</li>
+<li>Worst Fit – The arriving process is allotted the hole of memory in which it leaves the maximum gap.</li>
+</ul>
+</li>
+</ul>
+<div class="admonition warning">
+<ul>
+<li>Best fit does not necessarily give the best results for memory allocation.</li>
+<li>The cause of external fragmentation is the condition in Fixed partitioning and Variable partitioning saying that entire process should be allocated in a contiguous memory location. Therefore <em>Paging</em> is used.</li>
+</ul>
+</div>
+</details>
+<h3 id="paging--segmentation"><strong>Paging &amp; Segmentation</strong><a class="headerlink" href="#paging--segmentation" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="question">
+<summary>Click for answers 👇</summary>
+<p>Two techniques used by OS to manage the allocation of memory.</p>
+<p><code>Paging</code>: divides memory into logical units called <strong>pages</strong>. Each page represents a fixed-size chunk of memory, often 4KB in size.</p>
+<ul>
+<li>When a program needs to access a memory location, the operating system maps the virtual address used by the program to a physical address in memory using a <u>page table</u>. This allows programs to access memory without knowing its physical location, and it also allows the operating system to manage physical memory more efficiently by loading pages into memory only when needed.</li>
+</ul>
+<p><code>Segmentation</code>: divides memory into logical units called <strong>segments</strong>. Each segment represents a specific part of the program, such as the code, data, or stack. Each segment has a unique size and is assigned a base address and a limit. </p>
+<ul>
+<li>When a program needs to access a memory location, the operating system maps the logical address used by the program to a physical address in memory using a <u>segment table</u>. This allows programs to access memory more efficiently, as they only need to know the logical location of the data they need to access.</li>
+</ul>
+</details>
+<h3 id="logic-memory--virtual-memory"><strong>Logic memory &amp; Virtual memory</strong><a class="headerlink" href="#logic-memory--virtual-memory" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="question">
+<summary>Click for answers 👇</summary>
+<ul>
+<li>
+<p><code>Logical memory</code> is the memory space that a process sees as its own, and it consists of several segments, such as the code segment, data segment, and stack segment. Each segment contains a different type of data that the process needs to execute.</p>
+</li>
+<li>
+<p><code>Virtual memory</code> on the other hand, is a technique used by operating systems to allow processes to use more memory than is physically available in the computer. It uses a combination of hardware and software to <u>map</u> a process's logical memory to physical memory or to a temporary storage area on disk called the swap file.</p>
+</li>
+</ul>
+</details>
+<h3 id="page-fault"><strong>Page Fault</strong><a class="headerlink" href="#page-fault" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="question">
+<summary>Click for answers 👇</summary>
+<p>A <code>page fault</code> is a type of interrupt, raised by the hardware when a running program accesses a memory page that is mapped into the virtual address space, but <u>not loaded in physical memory</u>. </p>
+</details>
+<h3 id="file-system"><strong>File System</strong><a class="headerlink" href="#file-system" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="question">
+<summary>Click for answers 👇</summary>
+<p><code>File System</code>: A file is a collection of related information that is recorded on secondary storage. Or file is a collection of logically related entities. </p>
+</details>
+<h3 id="file-directories"><strong>File Directories</strong><a class="headerlink" href="#file-directories" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="question">
+<summary>Click for answers 👇</summary>
+<p><code>File Directories</code>: Collection of files is a file directory. The directory contains information about the files, including attributes, location and ownership. Here are several directory types:</p>
+<ul>
+<li>
+<p><strong>SINGLE-LEVEL DIRECTORY:</strong> In this a single directory is maintained for all the users</p>
+</li>
+<li>
+<p><strong>TWO-LEVEL DIRECTORY:</strong> Due to two levels there is a <u>path name</u> for every file to locate that file.</p>
+</li>
+<li>
+<p><strong>TREE-STRUCTURED DIRECTORY:</strong> Directory is maintained in the <u>form of a tree</u>. Searching is efficient and also there is grouping capability. </p>
+</li>
+</ul>
+<p>Here are some file allocation ways:</p>
+<ul>
+<li>
+<p><strong>Continuous Allocation:</strong> A single <u>continuous set of blocks is allocated</u> to a file at the time of file creation.</p>
+</li>
+<li>
+<p><strong>Linked Allocation(Non-contiguous allocation):</strong> Allocation is on an individual block basis. <u>Each block contains a pointer to the next block</u> in the chain. </p>
+</li>
+<li>
+<p><strong>Indexed Allocation:</strong> It addresses many of the problems of contiguous and chained allocation. In this case, the file allocation table contains a <u>separate one-level index</u> for each file</p>
+</li>
+</ul>
+</details>
+<h3 id="disk-time"><strong> Disk time </strong><a class="headerlink" href="#disk-time" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="question">
+<summary>Click for answers 👇</summary>
+<ul>
+<li>
+<p><code>Seek time</code> is the <strong>time</strong> taken to locate the <u>disk arm</u> to a <u>specified track</u> where the data is to be read or write.</p>
+</li>
+<li>
+<p><code>Rotational Latency</code> is the <strong>time</strong> taken by the <u>desired sector of the disk to rotate</u> into a position so that it can access the read/write heads.</p>
+</li>
+<li>
+<p><code>Transfer time</code> is the time to transfer the data. It depends on the rotating speed of the disk and number of bytes to be transferred. </p>
+</li>
+<li>
+<p><code>Disk Access Time</code> = Seek Time + Rotational Latency + Transfer Time </p>
+</li>
+<li>
+<p><code>Response Time</code> is the average of time spent by a request waiting to perform its I/O operation. Average Response time is the response time of the all requests. </p>
+</li>
+</ul>
+</details>
+<h3 id="buffer"><strong>Buffer</strong><a class="headerlink" href="#buffer" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="question">
+<summary>Click for answers 👇</summary>
+<p>A <code>buffer</code> is a memory area that stores data being transferred between <u>two devices</u> or between <u>a device and an application</u>.</p>
+</details>
+<h3 id="disk-scheduling-algorithms"><strong>Disk Scheduling Algorithms</strong><a class="headerlink" href="#disk-scheduling-algorithms" title="Anchor link to this section for reference">⚓︎</a></h3>
+<details class="question">
+<summary>Click for answers 👇</summary>
+<ul>
+<li><strong>FCFS:</strong> FCFS is the simplest of all the Disk Scheduling Algorithms. In FCFS, the requests are addressed in the order they arrive in the disk queue.</li>
+<li><strong>SSTF:</strong> In SSTF (Shortest Seek Time First), requests having shortest seek time are executed first. So, the seek time of every request is calculated in advance in a queue and then they are scheduled according to their calculated seek time. As a result, the request near the disk arm will get executed first.</li>
+<li><strong>SCAN:</strong> In SCAN algorithm the disk arm moves into a particular direction and services the requests coming in its path and after reaching the end of the disk, it reverses its direction and again services the request arriving in its path. So, this algorithm works like an elevator and hence also known as elevator algorithm.</li>
+<li><strong>CSCAN:</strong> In SCAN algorithm, the disk arm again scans the path that has been scanned, after reversing its direction. So, it may be possible that too many requests are waiting at the other end or there may be zero or few requests pending at the scanned area. </li>
+<li><strong>LOOK:</strong> It is similar to the SCAN disk scheduling algorithm except for the difference that the disk arm in spite of going to the end of the disk goes only to the last request to be serviced in front of the head and then reverses its direction from there only. Thus it prevents the extra delay which occurred due to unnecessary traversal to the end of the disk. </li>
+<li><strong>CLOOK:</strong> As LOOK is similar to SCAN algorithm, in a similar way, CLOOK is similar to CSCAN disk scheduling algorithm. In CLOOK, the disk arm in spite of going to the end goes only to the last request to be serviced in front of the head and then from there goes to the other end’s last request. Thus, it also prevents the extra delay which occurred due to unnecessary traversal to the end of the disk. </li>
+</ul>
+</details>
 <h4 id="references"><strong>References:</strong><a class="headerlink" href="#references" title="Anchor link to this section for reference">⚓︎</a></h4>
 <ul>
-<li><a href="https://www.w3schools.com/sql/">SQL Tutorial</a></li>
+<li><a href="https://www.geeksforgeeks.org/commonly-asked-operating-systems-interview-questions/?ref=lbp">SQL Tutorial</a>]</li>
+<li><a href="https://www.geeksforgeeks.org/last-minute-notes-operating-systems/?ref=lbp">Last Minute Notes – Operating Systems</a></li>
+<li><a href="https://jenkov.com/tutorials/java-concurrency/concurrency-vs-parallelism.html#:~:text=Thus%2C%20the%20threads%20executed%20on,CPUs%20are%20executed%20in%20parallel.">Concurrency vs. Parallelism</a></li>
+<li><a href="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.learncomputerscienceonline.com%2Foperating-system%2F&amp;psig=AOvVaw3VcjEWrCoDpv64FY_LqyrY&amp;ust=1681838404932000&amp;source=images&amp;cd=vfe&amp;ved=0CBAQjRxqFwoTCJCM3ru2sf4CFQAAAAAdAAAAABAb">Image Resource 1</a></li>
+<li><a href="https://www.google.com/url?sa=i&amp;url=https%3A%2F%2Fwww.learncomputerscienceonline.com%2Foperating-system%2F&amp;psig=AOvVaw3VcjEWrCoDpv64FY_LqyrY&amp;ust=1681838404932000&amp;source=images&amp;cd=vfe&amp;ved=0CBAQjRxqFwoTCJCM3ru2sf4CFQAAAAAdAAAAABBM">Image Resource 2</a></li>
 </ul>
 
   <hr>
@@ -4549,7 +4827,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 4, 2023 08:21:07</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">April 18, 2023 02:51:12</span>
       
         <br>
         Created:
@@ -4687,6 +4965,10 @@
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../javascripts/tablesort.js"></script>
       
     
   </body>
