@@ -104,54 +104,54 @@ For enhancing code reuse, we followed the basic principle: [*Favor Composition o
     ``` mermaid
     classDiagram
         direction LR
-        Delegator ..> Interface : Depends on behavior of
-        Delegatee1 ..|> Interface : Realize
-        Delegatee2 ..|> Interface : Realize
-        class Delegator{
-            - target : Interface
+        Delegator(Will) ..> Interface(ScrumMaster) : Depends on behavior of
+        Delegatee1(Tianle) ..|> Interface(ScrumMaster) : Realize
+        Delegatee2(Yun) ..|> Interface(ScrumMaster) : Realize
+        class Delegator(Will){
+            - target : Interface(ScrumMaster)
             + Operation()
         }
-        note for Delegator "void Operation(){\n. target.Operation2(); \n}"
-        class Delegatee1{
+        note for Delegator(Will) "void Operation(){\n. target.Operation2(); \n}"
+        class Delegatee1(Tianle){
             + Operation2()
         }
-        class Delegatee2{
+        class Delegatee2(Yun){
             + Operation2()
         }
-        class Interface{
+        class Interface(ScrumMaster){
             <<Interface>>
             + Operation2()
         }
     ```
 
     ``` cpp
-    protocol Delegator {
-        func standup()
-    }
-
-    class Delegatee1: ScrumMaster {
-        func standup() { ... }
-    }
-
-    class Delegatee2: ScrumMaster {
-        func standup() { ... }
-    }
-
-    class Will: ScrumMaster {
-        static let shared = Will()
-        var hasSchedulingConflict = false
-        weak var delegate: ScrumMaster?
-
-        private init()
-
-        func standup() {
-            guard !hasSchedulingConflict else {
-                delegate?.standup()
-            }
-
-            ...
-         }
-    }
+	protocol ScrumMaster {
+		func standup()
+	}
+	
+	class Tianle: ScrumMaster {
+		func standup() { ... }
+	}
+	
+	class Yun: ScrumMaster {
+		func standup() { ... }
+	}
+	
+	class Will: ScrumMaster {
+		static let shared = Will()
+		var hasSchedulingConflict = false
+		weak var target: ScrumMaster?
+	
+		private init()
+	
+		func standup() {
+			guard !hasSchedulingConflict else {
+				target?.standup()
+			}
+	
+			...
+		}
+	}
     ```
     **E.g:** Our `window` can become `circular` at run-time simply by **replacing** its <u>Rectangle instance with a Circle instance</u>, assuming Rectangle and Circle have the same type.
 
