@@ -339,6 +339,12 @@ nav:
     - ICS:
       - 10_Interview/README.md
       - OOP: 10_Interview/Other/oop_guide.md
+      - Game DevOP: 
+        - 10_Interview/Game_DevOP/README.md
+        - Coding Questions: 10_Interview/Game_DevOP/Coding_questions.md
+        - C++ Questions: 10_Interview/Game_DevOP/C++_questions.md
+        - CG Questions: 10_Interview/Game_DevOP/CG_questions.md
+        - Math Questions: 10_Interview/Game_DevOP/Math_questions.md
       - Database Management: 10_Interview/Other/sql_guide.md
       - Operating System: 10_Interview/Operating_system/README.md
       - Kernel: 10_Interview/Kernel/README.md
