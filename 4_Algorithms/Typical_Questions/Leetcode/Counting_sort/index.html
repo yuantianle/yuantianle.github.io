@@ -4615,7 +4615,7 @@
 </details>
 <details class="question" open="open">
 <summary>Efficiency?</summary>
-<p><strong>Time complexity:</strong>  <span class="arithmatex">\(O(N+M)\)</span> (where <code>M</code> is <span class="arithmatex">\(max(arr[])-min(arr[])\)</span> and <code>N</code> is equal to size(arr[])).</p>
+<p><strong>Time complexity:</strong> <span class="arithmatex">\(O(N+M)\)</span> (where <code>M</code> is <span class="arithmatex">\(max(arr[])-min(arr[])\)</span> and <code>N</code> is equal to size(arr[])).</p>
 <p><code>Counting sort</code> is better than the comparison-based sorting techniques because there is no comparison between elements in counting sort. </p>
 </details>
 <h2 id="algorithm-details"><strong>Algorithm Details</strong><a class="headerlink" href="#algorithm-details" title="Anchor link to this section for reference">⚓︎</a></h2>
@@ -4627,13 +4627,13 @@
 <h2 id="diagram"><strong>Diagram</strong><a class="headerlink" href="#diagram" title="Anchor link to this section for reference">⚓︎</a></h2>
 <details class="success" open="open">
 <summary>Example of "Partition"</summary>
-<p><img :=":" _="," alt="picture 1" class="center" src="../pictures/counting-sort.gif" width="80%" />  </p>
+<p><img :=":" _="," alt="picture 1" class="center" src="../pictures/counting-sort.gif" width="80%"/> </p>
 </details>
 <h2 id="answer"><strong>Answer</strong><a class="headerlink" href="#answer" title="Anchor link to this section for reference">⚓︎</a></h2>
 <details class="success" open="open">
 <summary>Realization</summary>
 <div class="highlight"><span class="filename">solution.c++</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><a href="#__codelineno-0-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="c1">//--------------------------------------------</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><a href="#__codelineno-0-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="c1">// Author = &quot;Tianle Yuan&quot;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><a href="#__codelineno-0-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="c1">// Author = "Tianle Yuan"</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a><a href="#__codelineno-0-3"><span class="linenos" data-linenos=" 3 "></span></a><span class="c1">//--------------------------------------------</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4"></a><a href="#__codelineno-0-4"><span class="linenos" data-linenos=" 4 "></span></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5"></a><a href="#__codelineno-0-5"><span class="linenos" data-linenos=" 5 "></span></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cassert&gt;</span>
@@ -4666,13 +4666,13 @@
 <a id="__codelineno-0-32" name="__codelineno-0-32"></a><a href="#__codelineno-0-32"><span class="linenos" data-linenos="32 "></span></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">countingSort</span><span class="p">(</span><span class="n">input</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">);</span>
 <a id="__codelineno-0-33" name="__codelineno-0-33"></a><a href="#__codelineno-0-33"><span class="linenos" data-linenos="33 "></span></a><span class="w">    </span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">};</span>
 <a id="__codelineno-0-34" name="__codelineno-0-34"></a><a href="#__codelineno-0-34"><span class="linenos" data-linenos="34 "></span></a><span class="w">    </span><span class="n">assert</span><span class="p">(</span><span class="n">output</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">test</span><span class="p">);</span>
-<a id="__codelineno-0-35" name="__codelineno-0-35"></a><a href="#__codelineno-0-35"><span class="linenos" data-linenos="35 "></span></a><span class="w">    </span><span class="c1">//cout&lt;&lt;&quot;output:&quot;;</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35"></a><a href="#__codelineno-0-35"><span class="linenos" data-linenos="35 "></span></a><span class="w">    </span><span class="c1">//cout&lt;&lt;"output:";</span>
 <a id="__codelineno-0-36" name="__codelineno-0-36"></a><a href="#__codelineno-0-36"><span class="linenos" data-linenos="36 "></span></a><span class="w">    </span><span class="c1">//for(auto i: output)</span>
 <a id="__codelineno-0-37" name="__codelineno-0-37"></a><a href="#__codelineno-0-37"><span class="linenos" data-linenos="37 "></span></a><span class="w">    </span><span class="c1">//{</span>
 <a id="__codelineno-0-38" name="__codelineno-0-38"></a><a href="#__codelineno-0-38"><span class="linenos" data-linenos="38 "></span></a><span class="w">    </span><span class="c1">//    if(i==output.back()){</span>
 <a id="__codelineno-0-39" name="__codelineno-0-39"></a><a href="#__codelineno-0-39"><span class="linenos" data-linenos="39 "></span></a><span class="w">    </span><span class="c1">//        cout&lt;&lt;i&lt;&lt;endl;</span>
 <a id="__codelineno-0-40" name="__codelineno-0-40"></a><a href="#__codelineno-0-40"><span class="linenos" data-linenos="40 "></span></a><span class="w">    </span><span class="c1">//    }</span>
-<a id="__codelineno-0-41" name="__codelineno-0-41"></a><a href="#__codelineno-0-41"><span class="linenos" data-linenos="41 "></span></a><span class="w">    </span><span class="c1">//    else cout&lt;&lt;i&lt;&lt;&quot;,&quot;;</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41"></a><a href="#__codelineno-0-41"><span class="linenos" data-linenos="41 "></span></a><span class="w">    </span><span class="c1">//    else cout&lt;&lt;i&lt;&lt;",";</span>
 <a id="__codelineno-0-42" name="__codelineno-0-42"></a><a href="#__codelineno-0-42"><span class="linenos" data-linenos="42 "></span></a><span class="w">    </span><span class="c1">//}</span>
 <a id="__codelineno-0-43" name="__codelineno-0-43"></a><a href="#__codelineno-0-43"><span class="linenos" data-linenos="43 "></span></a><span class="p">}</span>
 </code></pre></div>

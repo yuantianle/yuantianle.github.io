@@ -4665,11 +4665,11 @@ app.delete('/user', (req, res) =&gt; {
 const express = require('express')
 const app = express()
 const port = 3000
-&nbsp;
+ 
 app.get('/', (req, res) =&gt; {
     res.send('Hello from A!')
 })
-&nbsp;
+ 
 app.listen(port, () =&gt; {
     console.log(`Example app listening on port ${port}`)
 })
@@ -4681,14 +4681,14 @@ app.listen(port, () =&gt; {
 const express = require('express')
 const app = express() 
 const port = 3000
-&nbsp;
+ 
 app.get('/', (req, res, next) =&gt; {
     console.log('the response will be sent by the next function ...')
     next()
 }, (req, res) =&gt; {
     res.send('Hello from B!')
 })
-&nbsp;
+ 
 app.listen(port, () =&gt; {
     console.log(`Example app listening on port ${port}`)
 })
@@ -4700,23 +4700,23 @@ app.listen(port, () =&gt; {
 const express = require('express')
 const app = express()
 const port = 3000
-&nbsp;
+ 
 const cb0 = function (req, res, next) {
     console.log('CB0')
     next()
 }
-&nbsp;
+ 
 const cb1 = function (req, res, next) {
     console.log('CB1')
     next()
 }
-&nbsp;
+ 
 const cb2 = function (req, res) {
     res.send('Hello from C!')
 }
-&nbsp;
+ 
 app.get('/', [cb0, cb1, cb2])
-&nbsp;
+ 
 app.listen(port, () =&gt; {
     console.log(`Example app listening on port ${port}`)
 })
@@ -4728,24 +4728,24 @@ app.listen(port, () =&gt; {
 const express = require('express')
 const app = express()
 const port = 3000
-&nbsp;
+ 
 const cb0 = function (req, res, next) {
   console.log('CB0')
   next()
 }
-&nbsp;
+ 
 const cb1 = function (req, res, next) {
   console.log('CB1')
   next()
 }
-&nbsp;
+ 
 app.get('/', [cb0, cb1], (req, res, next) =&gt; {
   console.log('the response will be sent by the next function ...')
   next()
 }, (req, res) =&gt; {
   res.send('Hello from D!')
 })
-&nbsp;
+ 
 app.listen(port, () =&gt; {
     console.log(`Example app listening on port ${port}`)
 })

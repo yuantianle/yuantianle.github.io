@@ -4618,14 +4618,14 @@
   
 
 
-<h1 id="auth"><strong><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25ZM14.5 6h-13v7.25c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25Zm-6-3.5v2h6V2.75a.25.25 0 0 0-.25-.25ZM5 2.5v2h2v-2Zm-3.25 0a.25.25 0 0 0-.25.25V4.5h2v-2Z"/></svg></span> Auth</strong><a class="headerlink" href="#auth" title="Anchor link to this section for reference">⚓︎</a></h1>
+<h1 id="auth"><strong><span class="twemoji"><svg viewbox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M0 2.75C0 1.784.784 1 1.75 1h12.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15H1.75A1.75 1.75 0 0 1 0 13.25ZM14.5 6h-13v7.25c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25Zm-6-3.5v2h6V2.75a.25.25 0 0 0-.25-.25ZM5 2.5v2h2v-2Zm-3.25 0a.25.25 0 0 0-.25.25V4.5h2v-2Z"></path></svg></span> Auth</strong><a class="headerlink" href="#auth" title="Anchor link to this section for reference">⚓︎</a></h1>
 <h2 id="auth_1"><strong>Auth</strong><a class="headerlink" href="#auth_1" title="Anchor link to this section for reference">⚓︎</a></h2>
 <details class="question" open="open">
 <summary>Auth?</summary>
 <p><code>Auth</code> points to <strong>Authentication</strong> and <strong>Authorization</strong>. They come from <a href="../../API/rest_api/">REST API</a> communication. </p>
 <ul>
-<li>Without <strong>Authentication</strong> &rarr; 401 (Do not know who you are).</li>
-<li>Without <strong>Authorization</strong> &rarr; 403 (Do not have permission to access resources).</li>
+<li>Without <strong>Authentication</strong> → 401 (Do not know who you are).</li>
+<li>Without <strong>Authorization</strong> → 403 (Do not have permission to access resources).</li>
 </ul>
 </details>
 <h2 id="token"><strong>Token</strong><a class="headerlink" href="#token" title="Anchor link to this section for reference">⚓︎</a></h2>
@@ -4647,7 +4647,7 @@
 <li><strong>Payload:</strong> A set of claims.</li>
 <li><strong>Signature:</strong> Securely <strong>validates</strong> the token, calculated by encoding the <strong>header</strong> and <strong>payload</strong> using <a href="https://base64.guru/standards/base64url#:~:text=Base64URL%20is%20a%20modification%20of,characters%20for%20URLs%20and%20filenames."><code>Base64URL Encoding [RFC 7519](https://www.rfc-editor.org/rfc/rfc7519)</code></a></li>
 </ul>
-<p><img :=":" _="," alt="picture 10" class="center" src="../pictures/jwt.png" width="80%" />  </p>
+<p><img :=":" _="," alt="picture 10" class="center" src="../pictures/jwt.png" width="80%"/> </p>
 </details>
 <h2 id="how-to-use-token"><strong>How to use Token</strong><a class="headerlink" href="#how-to-use-token" title="Anchor link to this section for reference">⚓︎</a></h2>
 <details class="question" open="open">
@@ -4662,15 +4662,15 @@
 <summary>Credential attack!</summary>
 <details class="note" open="open">
 <summary>Username-Password Auth</summary>
-<p><img :=":" _="," alt="picture 11" class="center" src="../pictures/auth1.png" width="60%" />    </p>
+<p><img :=":" _="," alt="picture 11" class="center" src="../pictures/auth1.png" width="60%"/> </p>
 </details>
 <details class="note" open="open">
 <summary>One Token Auth</summary>
-<p><img :=":" _="," alt="picture 12" class="center" src="../pictures/auth2.png" width="60%" />    </p>
+<p><img :=":" _="," alt="picture 12" class="center" src="../pictures/auth2.png" width="60%"/> </p>
 </details>
 <details class="note" open="open">
 <summary>Two Token Auth (OAuth 2.0)</summary>
-<p><img :=":" _="," alt="picture 13" class="center" src="../pictures/auth3.png" width="60%" />    </p>
+<p><img :=":" _="," alt="picture 13" class="center" src="../pictures/auth3.png" width="60%"/> </p>
 </details>
 </details>
 </details>
@@ -4689,11 +4689,11 @@
 </details>
 <details class="note" open="open">
 <summary>Iterations Diagram</summary>
-<p><img :=":" _="," alt="picture 14" class="center" src="../pictures/it1.png" width="60%" />  </p>
-<p><img :=":" _="," alt="picture 15" class="center" src="../pictures/it2.png" width="60%" />  </p>
-<p><img :=":" _="," alt="picture 16" class="center" src="../pictures/it3.png" width="60%" />  </p>
-<p><img :=":" _="," alt="picture 17" class="center" src="../pictures/it4.png" width="60%" />  </p>
-<p><img :=":" _="," alt="picture 18" class="center" src="../pictures/it5.png" width="60%" />  </p>
+<p><img :=":" _="," alt="picture 14" class="center" src="../pictures/it1.png" width="60%"/> </p>
+<p><img :=":" _="," alt="picture 15" class="center" src="../pictures/it2.png" width="60%"/> </p>
+<p><img :=":" _="," alt="picture 16" class="center" src="../pictures/it3.png" width="60%"/> </p>
+<p><img :=":" _="," alt="picture 17" class="center" src="../pictures/it4.png" width="60%"/> </p>
+<p><img :=":" _="," alt="picture 18" class="center" src="../pictures/it5.png" width="60%"/> </p>
 </details>
 
   <hr>

@@ -4634,17 +4634,17 @@
 <h2 id="example"><strong>Example</strong><a class="headerlink" href="#example" title="Anchor link to this section for reference">⚓︎</a></h2>
 <details class="example" open="open">
 <summary>Example</summary>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Example 1:</label><label for="__tabbed_1_2">Example 2:</label></div>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"/><input id="__tabbed_1_2" name="__tabbed_1" type="radio"/><div class="tabbed-labels"><label for="__tabbed_1_1">Example 1:</label><label for="__tabbed_1_2">Example 2:</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img :=":" alt="picture 1" class="center" src="../pictures/union_find1.png" width="40%," />  </p>
+<p><img :=":" alt="picture 1" class="center" src="../pictures/union_find1.png" width="40%,"/> </p>
 <ul>
 <li><strong>Input:</strong> <code>n</code> = 5, <code>edges</code> = [[0,1],[1,2],[3,4]]</li>
 <li><strong>Output:</strong> 2</li>
 </ul>
 </div>
 <div class="tabbed-block">
-<p><img :=":" alt="picture 2" class="center" src="../pictures/union_find2.png" width="40%," />    </p>
+<p><img :=":" alt="picture 2" class="center" src="../pictures/union_find2.png" width="40%,"/> </p>
 <ul>
 <li><strong>Input:</strong> <code>n</code> = 5, <code>edges</code> = [[0,1],[1,2],[2,3],[3,4]]</li>
 <li><strong>Output:</strong> 1</li>
@@ -4683,7 +4683,7 @@
 <a id="__codelineno-0-25" name="__codelineno-0-25"></a><a href="#__codelineno-0-25"><span class="linenos" data-linenos="25 "></span></a><span class="w">        </span><span class="p">}</span>
 <a id="__codelineno-0-26" name="__codelineno-0-26"></a><a href="#__codelineno-0-26"><span class="linenos" data-linenos="26 "></span></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">;</span>
 <a id="__codelineno-0-27" name="__codelineno-0-27"></a><a href="#__codelineno-0-27"><span class="linenos" data-linenos="27 "></span></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="o">&amp;</span><span class="w"> </span><span class="n">edge</span><span class="o">:</span><span class="w"> </span><span class="n">edges</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-28" name="__codelineno-0-28"></a><a href="#__codelineno-0-28"><span class="linenos" data-linenos="28 "></span></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">unions</span><span class="p">(</span><span class="n">edge</span><span class="p">.</span><span class="n">first</span><span class="p">,</span><span class="w"> </span><span class="n">edge</span><span class="p">.</span><span class="n">second</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">//for each edges check if they are &quot;unionable&quot;</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a><a href="#__codelineno-0-28"><span class="linenos" data-linenos="28 "></span></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">unions</span><span class="p">(</span><span class="n">edge</span><span class="p">.</span><span class="n">first</span><span class="p">,</span><span class="w"> </span><span class="n">edge</span><span class="p">.</span><span class="n">second</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="c1">//for each edges check if they are "unionable"</span>
 <a id="__codelineno-0-29" name="__codelineno-0-29"></a><a href="#__codelineno-0-29"><span class="linenos" data-linenos="29 "></span></a><span class="w">                </span><span class="o">--</span><span class="n">count</span><span class="p">;</span>
 <a id="__codelineno-0-30" name="__codelineno-0-30"></a><a href="#__codelineno-0-30"><span class="linenos" data-linenos="30 "></span></a><span class="w">            </span><span class="p">}</span>
 <a id="__codelineno-0-31" name="__codelineno-0-31"></a><a href="#__codelineno-0-31"><span class="linenos" data-linenos="31 "></span></a><span class="w">        </span><span class="p">}</span>
