@@ -99,6 +99,7 @@ plugins:
           - index.md
       enabled: true
   - table-reader
+  - markmap
 
 repo_url: https://github.com/yuantianle
 repo_name: yuantianle's GitHub

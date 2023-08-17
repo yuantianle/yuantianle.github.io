@@ -2,7 +2,7 @@
 ᴴₒᴴₒᴴₒ: ture
 ---
 
-# ** 🎮 Game Engine Development**
+# **🎮 Game Engine Development**
 
 > Here are fields for preparing the position.
 
