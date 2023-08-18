@@ -2,7 +2,7 @@
 ᴴₒᴴₒᴴₒ: ture
 ---
 
-# **🎮 Math Questions **
+# **🎮 Math Questions**
 
 > This material is for related questions:
 
@@ -30,36 +30,41 @@
 
     **Answer:** Various methods can be used, including:
     
-    - Barycentric coordinates
+    - Barycentric coordinates ([Link](https://www.geeksforgeeks.org/check-whether-a-given-point-lies-inside-a-triangle-or-not/))
     ![picture 3](barycentric_coordinate.png){width="40%", : .center}  
-    - Angle summation
-    - ray intersection
-    - rectangle inclusion.
+    - Angle summation ([Link](https://www.researchgate.net/publication/321421519_OPTIMUM_TOOLS_FOR_FINISHING_SCULPTURED_SURFACES_DEFINED_BY_3D_IRREGULAR_CLOUD_OF_POINTS#pf2))
+    ![Alt text](interial_angle.png){width="40%", : .center}
+    - Ray intersection ([Link](https://www.baeldung.com/cs/check-if-point-is-in-2d-triangle#1-mathematical-idea-1))
+    ![Alt text](interial_ray.png){width="40%", : .center}
+    - Area comparison. ([Link](https://www.geeksforgeeks.org/check-whether-a-given-point-lies-inside-a-triangle-or-not/))
+    ![Alt text](interial_area.jpg){width="40%", : .center}
+
+## **Convex polygon**
+
+???+Note "How to determine if a polygon is convex?"
+
+    **Answer:** A polygon is convex if all its interior angles are less than 180 degrees. ([Link](https://www.learnalberta.ca/content/memg/division03/Polygon%20%28Convex%29/index.html))
+    ![Alt text](Polygon_convex.png){width="40%", : .center}
 
 
-## ****
+## **Reflection vector**
 
-???+Note ""
+???+Note "Given a normal vector and an incident vector, how to compute the reflection vector?"
 
-How to determine if a polygon is convex?
-Answer: A polygon is convex if all its interior angles are less than 180 degrees.
-
-
-## ****
-
-???+Note ""
-
-Given a normal vector and an incident vector, how to compute the reflection vector?
-Answer: Reflection vector can be computed using the incident vector and the normal vector.
+    Answer: Here below is the formula ([Link](https://www.contemporarycalculus.com/dh/Calculus_all/CC11_7_VectorReflections.pdf)):
+    $$ \vec{R} = \vec{I} - 2 \vec{I}\cdot\vec{N}$$
+    ![Alt text](reflection.png){width="30%", : .center}
 
 
-## ****
+## **Polygon area**
 
-???+Note ""
+???+Note "Use cross product to calculate the area of a polygon."
 
-Using cross product to calculate the area of a polygon.
-Answer: The magnitude of the cross product of two vectors gives twice the area of the parallelogram they form.
-
+    Answer: Refer the [Link](https://www.baeldung.com/cs/2d-polygon-area) Imagine we have three points A, B, and C. The area of the single triangle can be calculated as:
+    $$S_{tri}=1/2\cdot\|\vec{AB}\times\vec{AC}|$$
+    The area of any polygon can be claculated by:
+    $$S_{pol}=1/2\cdot\sum_{i=0}^{n-1}(x_i\cdoty_{i+1}-y_i\cdotx_{i+1}))$$
+    ![Alt text](polygon_area.jpg){width="30%", : .center}
 
 ## ****
 

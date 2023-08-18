@@ -2,7 +2,7 @@
 ᴴₒᴴₒᴴₒ: ture
 ---
 
-# **🎮 Computer Graphics Questions **
+# **🎮 Computer Graphics Questions**
 
 > This material is for related questions:
 

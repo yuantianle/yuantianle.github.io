@@ -100,6 +100,19 @@ plugins:
       enabled: true
   - table-reader
   - markmap
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 70%
+      height: auto
+      zoomable: true
+      draggable: true
+      skip_classes:
+        - custom-skip-class-name
+      auto_caption: false
+      caption_position: bottom
 
 repo_url: https://github.com/yuantianle
 repo_name: yuantianle's GitHub
