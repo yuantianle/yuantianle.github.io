@@ -51,7 +51,18 @@
     
     
     
-  </head>
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4632,14 +4643,14 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"/><input id="__tabbed_1_2" name="__tabbed_1" type="radio"/><div class="tabbed-labels"><label for="__tabbed_1_1">Example 1:</label><label for="__tabbed_1_2">Example 2:</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><img :=":" alt="picture 1" class="center" src="../pictures/backtracking_eg1.png" width="40%,"/> </p>
+<p><a class="glightbox" href="../pictures/backtracking_eg1.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" alt="picture 1" class="center" src="../pictures/backtracking_eg1.png" width="40%,"/></a> </p>
 <ul>
 <li><strong>Input:</strong> board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCCED"</li>
 <li><strong>Output:</strong> true</li>
 </ul>
 </div>
 <div class="tabbed-block">
-<p><img :=":" alt="picture 2" class="center" src="../pictures/backtracking_eg2.png" width="40%,"/> </p>
+<p><a class="glightbox" href="../pictures/backtracking_eg2.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" alt="picture 2" class="center" src="../pictures/backtracking_eg2.png" width="40%,"/></a> </p>
 <ul>
 <li><strong>Input:</strong> board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "SEE"</li>
 <li><strong>Output:</strong> true</li>
@@ -4882,5 +4893,5 @@
         
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

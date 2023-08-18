@@ -51,7 +51,18 @@
     
     
     
-  </head>
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4617,7 +4628,7 @@
 </code></pre></div>
 <h2 id="way1-function"><strong>Way1: Function</strong><a class="headerlink" href="#way1-function" title="Anchor link to this section for reference">⚓︎</a></h2>
 <h3 id="example">Example<a class="headerlink" href="#example" title="Anchor link to this section for reference">⚓︎</a></h3>
-<p><img :=":" alt="image" class="center" src="https://user-images.githubusercontent.com/61530469/200788862-2a87ba4d-b357-44dc-ae0b-813f490e8d93.png" width:50_="width:50%,"/></p>
+<p><a class="glightbox" href="https://user-images.githubusercontent.com/61530469/200788862-2a87ba4d-b357-44dc-ae0b-813f490e8d93.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" alt="image" class="center" src="https://user-images.githubusercontent.com/61530469/200788862-2a87ba4d-b357-44dc-ae0b-813f490e8d93.png" width:50_="width:50%,"/></a></p>
 <p><a href="https://twitter.com/steveluscher/status/741089564329054208">Steven Luscher on Twitter</a></p>
 <h3 id="code">Code<a class="headerlink" href="#code" title="Anchor link to this section for reference">⚓︎</a></h3>
 <div class="highlight"><span class="filename">way1.swift</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><a href="#__codelineno-3-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="kd">import</span> <span class="nc">Foundation</span>
@@ -4662,7 +4673,7 @@
 <a id="__codelineno-3-40" name="__codelineno-3-40"></a><a href="#__codelineno-3-40"><span class="linenos" data-linenos="40 "></span></a><span class="bp">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="result">Result<a class="headerlink" href="#result" title="Anchor link to this section for reference">⚓︎</a></h3>
-<p><img :=":" alt="image" class="center" src="https://user-images.githubusercontent.com/61530469/200770718-adaef9ec-9889-4598-9707-c2bcf7853e86.png" width:80_="width:80%,"/></p>
+<p><a class="glightbox" href="https://user-images.githubusercontent.com/61530469/200770718-adaef9ec-9889-4598-9707-c2bcf7853e86.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" alt="image" class="center" src="https://user-images.githubusercontent.com/61530469/200770718-adaef9ec-9889-4598-9707-c2bcf7853e86.png" width:80_="width:80%,"/></a></p>
 <h2 id="way2-closure"><strong>Way2: Closure</strong><a class="headerlink" href="#way2-closure" title="Anchor link to this section for reference">⚓︎</a></h2>
 <h3 id="example_1">Example<a class="headerlink" href="#example_1" title="Anchor link to this section for reference">⚓︎</a></h3>
 <p>Realize the assert shown below with closure:</p>
@@ -4701,7 +4712,7 @@
 <a id="__codelineno-5-20" name="__codelineno-5-20"></a><a href="#__codelineno-5-20"><span class="linenos" data-linenos="20 "></span></a><span class="p">}</span>
 </code></pre></div>
 <h3 id="result_1">Result<a class="headerlink" href="#result_1" title="Anchor link to this section for reference">⚓︎</a></h3>
-<p><img :=":" alt="image" class="center" src="https://user-images.githubusercontent.com/61530469/200774996-a7cf34c0-49db-4d9b-ae8b-8d0b2803d609.png" width:80_="width:80%,"/></p>
+<p><a class="glightbox" href="https://user-images.githubusercontent.com/61530469/200774996-a7cf34c0-49db-4d9b-ae8b-8d0b2803d609.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" alt="image" class="center" src="https://user-images.githubusercontent.com/61530469/200774996-a7cf34c0-49db-4d9b-ae8b-8d0b2803d609.png" width:80_="width:80%,"/></a></p>
 <h2 id="way3-using-the-built-in-operator"><strong>Way3: Using the built-in operator</strong><a class="headerlink" href="#way3-using-the-built-in-operator" title="Anchor link to this section for reference">⚓︎</a></h2>
 <h3 id="example_2">Example<a class="headerlink" href="#example_2" title="Anchor link to this section for reference">⚓︎</a></h3>
 <p>Realize the assert shown below with built-in operator:</p>
@@ -4717,7 +4728,7 @@
 <a id="__codelineno-7-5" name="__codelineno-7-5"></a><a href="#__codelineno-7-5"><span class="linenos" data-linenos="5 "></span></a><span class="bp">assert</span><span class="p">(</span><span class="n">outcome</span> <span class="p">==</span> <span class="mi">108</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="result_2">Result<a class="headerlink" href="#result_2" title="Anchor link to this section for reference">⚓︎</a></h3>
-<p><img :=":" alt="image" class="center" src="https://user-images.githubusercontent.com/61530469/200776454-497db043-3f8c-447d-8f10-71d5a8453817.png" width:80_="width:80%,"/></p>
+<p><a class="glightbox" href="https://user-images.githubusercontent.com/61530469/200776454-497db043-3f8c-447d-8f10-71d5a8453817.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" alt="image" class="center" src="https://user-images.githubusercontent.com/61530469/200776454-497db043-3f8c-447d-8f10-71d5a8453817.png" width:80_="width:80%,"/></a></p>
 
   <hr>
 <div class="md-source-file">
@@ -4878,5 +4889,5 @@
         
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

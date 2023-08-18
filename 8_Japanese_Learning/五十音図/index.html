@@ -51,7 +51,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4603,17 +4614,17 @@
 <div class="tabbed-block">
 <p><code>Hiragana</code> is used to express the <strong>inherent vocabulary</strong> and <strong>grammatical auxiliary words</strong> in modern Japanese.</p>
 <p><code>Hiragana</code> evolved from the <strong>cursive script (草书)</strong> of Chinese characters. </p>
-<p><img :=":" _="," alt="picture 3" class="center" src="pictures/hiragana.png" width="50%"/> </p>
+<p><a class="glightbox" href="pictures/hiragana.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 3" class="center" src="pictures/hiragana.png" width="50%"/></a> </p>
 <p>Early <code>Hiragana</code> was wildly used by Japanese women. It was used more for lyrical text, called female characters, female hand.</p>
 </div>
 <div class="tabbed-block">
 <p><code>Katakana</code> is used for <strong>foreign words</strong>, <strong>foreign names</strong>, <strong>onomatopoeia</strong>, <strong>biological</strong>, <strong>mineral</strong>, etc., in modern Japanese.</p>
 <p><code>Katakana</code> evolved from <strong>regular script (楷书)</strong> or its radicals of Chinese characters.</p>
-<p><img :=":" _="," alt="picture 1" class="center" src="pictures/katakana.png" width="45%"/></p>
+<p><a class="glightbox" href="pictures/katakana.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 1" class="center" src="pictures/katakana.png" width="45%"/></a></p>
 </div>
 <div class="tabbed-block">
 <p><code>Kanji</code> are the <strong>logographic Chinese characters</strong> taken from the Chinese script and used in the writing of Japanese.</p>
-<p><img :=":" _="," alt="picture 4" class="center" src="pictures/kanji.png" width="50%"/> </p>
+<p><a class="glightbox" href="pictures/kanji.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 4" class="center" src="pictures/kanji.png" width="50%"/></a> </p>
 <p>Early <code>Kanji</code> was wildly used by Japanese men for history, and papers, which are called male characters, male hands.</p>
 </div>
 </div>
@@ -5406,7 +5417,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>E.g:</strong> <img :=":" _="," alt="picture 5" class="center" src="pictures/youon.png" width="60%"/> </p>
+<p><strong>E.g:</strong> <a class="glightbox" href="pictures/youon.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 5" class="center" src="pictures/youon.png" width="60%"/></a> </p>
 </div>
 </div>
 </div>
@@ -5582,5 +5593,5 @@
         
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

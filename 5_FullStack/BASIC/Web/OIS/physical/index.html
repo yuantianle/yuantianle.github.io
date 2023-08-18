@@ -51,7 +51,18 @@
     
     
     
-  </head>
+   <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4600,7 +4611,7 @@
 
 
 <h1 id="physical-layer"><strong><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2 7h2.5v10H3V8.5H2M22 7v9h-8v1H7v-1H6V7m4 2H8v3h2m3-3h-2v3h2m7-3h-5v5h5V9Z"></path></svg></span> Physical Layer</strong><a class="headerlink" href="#physical-layer" title="Anchor link to this section for reference">⚓︎</a></h1>
-<p><img :=":" _="," alt="picture 1" class="center" src="../pictures/Physical%20Layer.png" width="80%"/> </p>
+<p><a class="glightbox" href="../pictures/Physical%20Layer.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 1" class="center" src="../pictures/Physical%20Layer.png" width="80%"/></a> </p>
 <h2 id="definition"><strong>Definition</strong><a class="headerlink" href="#definition" title="Anchor link to this section for reference">⚓︎</a></h2>
 <details class="question" open="open">
 <summary>What?</summary>
@@ -4655,11 +4666,11 @@
 <ul>
 <li>
 <p><strong>wireless:</strong> Normally, we can see a wireless <code>repeater</code> as a <code>WIFI extender</code>. There is a free Ad. here 😆:</p>
-<p><img :=":" _="," alt="picture 2" class="center" src="../pictures/xiaomi.png" width="50%"/> </p>
+<p><a class="glightbox" href="../pictures/xiaomi.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 2" class="center" src="../pictures/xiaomi.png" width="50%"/></a> </p>
 </li>
 <li>
 <p><strong>wired:</strong> The old school uses wired ones:</p>
-<p><img :=":" _="," alt="picture 3" class="center" src="../pictures/old_repeater.png" width="50%"/> </p>
+<p><a class="glightbox" href="../pictures/old_repeater.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 3" class="center" src="../pictures/old_repeater.png" width="50%"/></a> </p>
 </li>
 </ul>
 </details>
@@ -4839,5 +4850,5 @@
         
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

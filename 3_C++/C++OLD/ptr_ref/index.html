@@ -51,7 +51,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4687,7 +4698,7 @@
 <a id="__codelineno-1-24" name="__codelineno-1-24"></a><a href="#__codelineno-1-24"><span class="linenos" data-linenos="24 "></span></a><span class="n">local</span><span class="w"> </span><span class="n">p</span><span class="err">'</span><span class="n">s</span><span class="w"> </span><span class="n">value</span><span class="o">:</span><span class="mi">16</span>
 <a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="hll"><a href="#__codelineno-1-25"><span class="linenos" data-linenos="25 "></span></a><span class="n">a</span><span class="err">'</span><span class="n">s</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="n">address</span><span class="o">:</span><span class="mi">16</span>
 </span></code></pre></div>
-<p><img :=":" _="," alt="picture 3" class="center" src="../pictures/value_pass.png" width="50%"/> </p>
+<p><a class="glightbox" href="../pictures/value_pass.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 3" class="center" src="../pictures/value_pass.png" width="50%"/></a> </p>
 </details>
 <h3 id="pointer-passing"><strong>Pointer passing</strong><a class="headerlink" href="#pointer-passing" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="note" open="open">
@@ -4731,7 +4742,7 @@
 </span><a id="__codelineno-2-36" name="__codelineno-2-36"></a><span class="hll"><a href="#__codelineno-2-36"><span class="linenos" data-linenos="36 "></span></a><span class="n">a</span><span class="err">'</span><span class="n">s</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="n">address</span><span class="o">:</span><span class="mh">0x7ffd233a9854</span>
 </span><a id="__codelineno-2-37" name="__codelineno-2-37"></a><a href="#__codelineno-2-37"><span class="linenos" data-linenos="37 "></span></a><span class="n">a</span><span class="err">'</span><span class="n">s</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="n">value</span><span class="o">:</span><span class="mi">255</span>
 </code></pre></div>
-<p><img :=":" _="," alt="picture 1" class="center" src="../pictures/pointer_pass.png" width="50%"/> </p>
+<p><a class="glightbox" href="../pictures/pointer_pass.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 1" class="center" src="../pictures/pointer_pass.png" width="50%"/></a> </p>
 </details>
 <h3 id="reference-passing"><strong>Reference passing</strong><a class="headerlink" href="#reference-passing" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="note" open="open">
@@ -4770,7 +4781,7 @@
 <a id="__codelineno-3-24" name="__codelineno-3-24"></a><a href="#__codelineno-3-24"><span class="linenos" data-linenos="24 "></span></a><span class="n">local</span><span class="w"> </span><span class="n">p</span><span class="err">'</span><span class="n">s</span><span class="w"> </span><span class="n">value</span><span class="o">:</span><span class="mi">16</span>
 <a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="hll"><a href="#__codelineno-3-25"><span class="linenos" data-linenos="25 "></span></a><span class="n">a</span><span class="err">'</span><span class="n">s</span><span class="w"> </span><span class="n">now</span><span class="w"> </span><span class="n">address</span><span class="o">:</span><span class="mi">255</span>
 </span></code></pre></div>
-<p><img :=":" _="," alt="picture 2" class="center" src="../pictures/ref_pass.png" width="40%"/> </p>
+<p><a class="glightbox" href="../pictures/ref_pass.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 2" class="center" src="../pictures/ref_pass.png" width="40%"/></a> </p>
 </details>
 <h4 id="reference"><strong>Reference</strong><a class="headerlink" href="#reference" title="Anchor link to this section for reference">⚓︎</a></h4>
 <p><a href="https://blog.csdn.net/Jacky_Feng/article/details/103248186">Picture source 1</a></p>
@@ -4934,5 +4945,5 @@
         
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

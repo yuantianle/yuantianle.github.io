@@ -51,7 +51,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -73,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#-math-questions-" class="md-skip">
+        <a href="#-math-questions" class="md-skip">
           Skip to content
         </a>
       
@@ -4236,6 +4247,27 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#convex-polygon" class="md-nav__link">
+    Convex polygon
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflection-vector" class="md-nav__link">
+    Reflection vector
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#polygon-area" class="md-nav__link">
+    Polygon area
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
     ****
   </a>
@@ -4251,27 +4283,6 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    ****
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    ****
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    ****
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
     ****
   </a>
   
@@ -4637,7 +4648,7 @@
   
 
 
-<h1 id="-math-questions-">**🎮 Math Questions **<a class="headerlink" href="#-math-questions-" title="Anchor link to this section for reference">⚓︎</a></h1>
+<h1 id="-math-questions"><strong>🎮 Math Questions</strong><a class="headerlink" href="#-math-questions" title="Anchor link to this section for reference">⚓︎</a></h1>
 <blockquote>
 <p>This material is for related questions:</p>
 </blockquote>
@@ -4652,9 +4663,9 @@
 <p><strong>Answer:</strong> </p>
 <ul>
 <li><code>Dot product</code> is like light projection:
-<img :=":" _="," alt="picture 0" class="center" src="../dot_product.png" width="40%"/> </li>
+<a class="glightbox" href="../dot_product.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 0" class="center" src="../dot_product.png" width="40%"/></a> </li>
 <li><code>Cross product</code> is for getting the orthogonal vector of the provided vectors. Its symbol also shows the clockwise from one parent vector to another parent verctor:
-<img :=":" _="," alt="picture 2" class="center" src="../cross_product.png" width="40%"/> </li>
+<a class="glightbox" href="../cross_product.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 2" class="center" src="../cross_product.png" width="40%"/></a> </li>
 </ul>
 </details>
 <h2 id="point-in-tri"><strong>Point in Tri</strong><a class="headerlink" href="#point-in-tri" title="Anchor link to this section for reference">⚓︎</a></h2>
@@ -4662,44 +4673,51 @@
 <summary>How to determine if a point is inside a triangle?</summary>
 <p><strong>Answer:</strong> Various methods can be used, including:</p>
 <ul>
-<li>Barycentric coordinates
-<img :=":" _="," alt="picture 3" class="center" src="../barycentric_coordinate.png" width="40%"/> </li>
-<li>Angle summation</li>
-<li>ray intersection</li>
-<li>rectangle inclusion.</li>
+<li>Barycentric coordinates (<a href="https://www.geeksforgeeks.org/check-whether-a-given-point-lies-inside-a-triangle-or-not/">Link</a>)
+<a class="glightbox" href="../barycentric_coordinate.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 3" class="center" src="../barycentric_coordinate.png" width="40%"/></a> </li>
+<li>Angle summation (<a href="https://www.researchgate.net/publication/321421519_OPTIMUM_TOOLS_FOR_FINISHING_SCULPTURED_SURFACES_DEFINED_BY_3D_IRREGULAR_CLOUD_OF_POINTS#pf2">Link</a>)
+<a class="glightbox" href="../interial_angle.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="Alt text" class="center" src="../interial_angle.png" width="40%"/></a></li>
+<li>Ray intersection (<a href="https://www.baeldung.com/cs/check-if-point-is-in-2d-triangle#1-mathematical-idea-1">Link</a>)
+<a class="glightbox" href="../interial_ray.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="Alt text" class="center" src="../interial_ray.png" width="40%"/></a></li>
+<li>Area comparison. (<a href="https://www.geeksforgeeks.org/check-whether-a-given-point-lies-inside-a-triangle-or-not/">Link</a>)
+<a class="glightbox" href="../interial_area.jpg" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="Alt text" class="center" src="../interial_area.jpg" width="40%"/></a></li>
 </ul>
+</details>
+<h2 id="convex-polygon"><strong>Convex polygon</strong><a class="headerlink" href="#convex-polygon" title="Anchor link to this section for reference">⚓︎</a></h2>
+<details class="note" open="open">
+<summary>How to determine if a polygon is convex?</summary>
+<p><strong>Answer:</strong> A polygon is convex if all its interior angles are less than 180 degrees. (<a href="https://www.learnalberta.ca/content/memg/division03/Polygon%20%28Convex%29/index.html">Link</a>)
+<a class="glightbox" href="../Polygon_convex.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="Alt text" class="center" src="../Polygon_convex.png" width="40%"/></a></p>
+</details>
+<h2 id="reflection-vector"><strong>Reflection vector</strong><a class="headerlink" href="#reflection-vector" title="Anchor link to this section for reference">⚓︎</a></h2>
+<details class="note" open="open">
+<summary>Given a normal vector and an incident vector, how to compute the reflection vector?</summary>
+<p>Answer: Here below is the formula (<a href="https://www.contemporarycalculus.com/dh/Calculus_all/CC11_7_VectorReflections.pdf">Link</a>):
+$$ \vec{R} = \vec{I} - 2 \vec{I}\cdot\vec{N}$$
+<a class="glightbox" href="../reflection.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="Alt text" class="center" src="../reflection.png" width="30%"/></a></p>
+</details>
+<h2 id="polygon-area"><strong>Polygon area</strong><a class="headerlink" href="#polygon-area" title="Anchor link to this section for reference">⚓︎</a></h2>
+<details class="note" open="open">
+<summary>Use cross product to calculate the area of a polygon.</summary>
+<p>Answer: Refer the <a href="https://www.baeldung.com/cs/2d-polygon-area">Link</a> Imagine we have three points A, B, and C. The area of the single triangle can be calculated as:
+<span class="arithmatex">\(<span class="arithmatex">\(S_{tri}=1/2\cdot\|\vec{AB}\times\vec{AC}|\)</span>\)</span>
+The area of any polygon can be claculated by:
+<span class="arithmatex">\(<span class="arithmatex">\(S_{pol}=1/2\cdot\sum_{i=0}^{n-1}(x_i\cdoty_{i+1}-y_i\cdotx_{i+1}))\)</span>\)</span>
+<a class="glightbox" href="../polygon_area.jpg" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="Alt text" class="center" src="../polygon_area.jpg" width="30%"/></a></p>
 </details>
 <h2 id="_1">****<a class="headerlink" href="#_1" title="Anchor link to this section for reference">⚓︎</a></h2>
 <details class="note" open="open">
 <summary></summary>
 </details>
-<p>How to determine if a polygon is convex?
-Answer: A polygon is convex if all its interior angles are less than 180 degrees.</p>
-<h2 id="_2">****<a class="headerlink" href="#_2" title="Anchor link to this section for reference">⚓︎</a></h2>
-<details class="note" open="open">
-<summary></summary>
-</details>
-<p>Given a normal vector and an incident vector, how to compute the reflection vector?
-Answer: Reflection vector can be computed using the incident vector and the normal vector.</p>
-<h2 id="_3">****<a class="headerlink" href="#_3" title="Anchor link to this section for reference">⚓︎</a></h2>
-<details class="note" open="open">
-<summary></summary>
-</details>
-<p>Using cross product to calculate the area of a polygon.
-Answer: The magnitude of the cross product of two vectors gives twice the area of the parallelogram they form.</p>
-<h2 id="_4">****<a class="headerlink" href="#_4" title="Anchor link to this section for reference">⚓︎</a></h2>
-<details class="note" open="open">
-<summary></summary>
-</details>
 <p>Finding the distance between two lines in 3D space.
 Answer: The distance between two lines can be calculated using vector projection and vector subtraction.</p>
-<h2 id="_5">****<a class="headerlink" href="#_5" title="Anchor link to this section for reference">⚓︎</a></h2>
+<h2 id="_2">****<a class="headerlink" href="#_2" title="Anchor link to this section for reference">⚓︎</a></h2>
 <details class="note" open="open">
 <summary></summary>
 </details>
 <p>Closest distance between a point in 3D space and a 3D triangle.
 Answer: The closest distance can be found by projecting the point onto the plane of the triangle and measuring the distance.</p>
-<h2 id="_6">****<a class="headerlink" href="#_6" title="Anchor link to this section for reference">⚓︎</a></h2>
+<h2 id="_3">****<a class="headerlink" href="#_3" title="Anchor link to this section for reference">⚓︎</a></h2>
 <details class="note" open="open">
 <summary></summary>
 </details>
@@ -4767,7 +4785,7 @@ Answer: Extreme values can be found by analyzing critical points and endpoints. 
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 17, 2023 02:17:56</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 18, 2023 01:48:08</span>
       
         <br>
         Created:
@@ -4872,5 +4890,5 @@ Answer: Extreme values can be found by analyzing critical points and endpoints. 
         
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

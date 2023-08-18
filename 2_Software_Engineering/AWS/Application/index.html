@@ -51,7 +51,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4619,22 +4630,22 @@
 <details class="success" open="open">
 <summary>Solution</summary>
 <p>The picture below shows the efficient way to simulate the Decrypter service on AWS.</p>
-<p><img :=":" _="," alt="picture" class="center" src="picture/implementaion.png" width="80%"/></p>
+<p><a class="glightbox" href="picture/implementaion.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture" class="center" src="picture/implementaion.png" width="80%"/></a></p>
 <details class="success" open="open">
 <summary>Details in the Solution</summary>
 <p>Remember <a href="../Basic/picture/ECS_withbalancer.png"><code>ECS</code> with <code>Load Balancer</code></a> structure. Let's draw the details between <code>Lambda</code> and <code>Database</code> parts:</p>
-<p><img :=":" _="," alt="picture" class="center" src="picture/loadbalance.png" width="80%"/></p>
+<p><a class="glightbox" href="picture/loadbalance.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture" class="center" src="picture/loadbalance.png" width="80%"/></a></p>
 </details>
 </details>
 <h2 id="implementation"><strong>Implementation</strong><a class="headerlink" href="#implementation" title="Anchor link to this section for reference">⚓︎</a></h2>
 <details class="example" open="open">
 <summary>Implementation</summary>
 <p><strong>Architecture Diagram:</strong></p>
-<p><img :=":" _="," alt="picture 6" class="center" src="picture/ad.png" width="80%"/> </p>
+<p><a class="glightbox" href="picture/ad.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 6" class="center" src="picture/ad.png" width="80%"/></a> </p>
 <p><strong>Swagger Rainy Day:</strong></p>
-<p><img :=":" _="," alt="picture 7" class="center" src="picture/swagger1.png" width="80%"/> </p>
+<p><a class="glightbox" href="picture/swagger1.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 7" class="center" src="picture/swagger1.png" width="80%"/></a> </p>
 <p><strong>Swagger Happy Day:</strong></p>
-<p><img :=":" _="," alt="picture 8" class="center" src="picture/swagger2.png" width="80%"/> </p>
+<p><a class="glightbox" href="picture/swagger2.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 8" class="center" src="picture/swagger2.png" width="80%"/></a> </p>
 </details>
 
   <hr>
@@ -4796,5 +4807,5 @@
         
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

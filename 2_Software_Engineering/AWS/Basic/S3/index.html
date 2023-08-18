@@ -51,7 +51,18 @@
     
     
     
-  </head>
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4555,18 +4566,18 @@
 <summary>What and For?</summary>
 <p><code>S3</code> is <ins class="critic">an object-based storage system</ins>.</p>
 <p>You can use API to access the object's <code>S3</code> bucket (container) storage. Below are the <strong>characteristics</strong> of the storage service:</p>
-<p><img :=":" _="," alt="picture 1" class="center" src="../picture/S3_for.png" width="80%"/></p>
+<p><a class="glightbox" href="../picture/S3_for.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 1" class="center" src="../picture/S3_for.png" width="80%"/></a></p>
 </details>
 <p>The basic structure of <code>S3</code> bucket:</p>
-<p><img :=":" _="," alt="picture 32" class="center" src="../picture/S3_basic.png" width="80%"/> </p>
+<p><a class="glightbox" href="../picture/S3_basic.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 32" class="center" src="../picture/S3_basic.png" width="80%"/></a> </p>
 <p>To reach the <code>objects</code> in the bucket using the <code>URL</code>:</p>
-<p><img :=":" _="," alt="picture 2" class="center" src="../picture/S3_URL.png" width="80%"/> </p>
+<p><a class="glightbox" href="../picture/S3_URL.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 2" class="center" src="../picture/S3_URL.png" width="80%"/></a> </p>
 <p>To reach the <code>bucket</code> using the <code>URL</code>:</p>
-<p><img :=":" _="," alt="picture 3" class="center" src="../picture/S3_reach_S3.png" width="80%"/> </p>
+<p><a class="glightbox" href="../picture/S3_reach_S3.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 3" class="center" src="../picture/S3_reach_S3.png" width="80%"/></a> </p>
 <p>Different types of <code>S3 storage classes</code>:</p>
-<p><img :=":" _="," alt="picture 4" class="center" src="../picture/S3_diff_kinds.png" width="80%"/> </p>
+<p><a class="glightbox" href="../picture/S3_diff_kinds.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 4" class="center" src="../picture/S3_diff_kinds.png" width="80%"/></a> </p>
 <p>If you want to transfer one object from one <code>S3</code> class into the other class, you should follow the following hierarchy:</p>
-<p><img :=":" _="," alt="picture 5" class="center" src="../picture/S3_hierarchy.png" width="80%"/> </p>
+<p><a class="glightbox" href="../picture/S3_hierarchy.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 5" class="center" src="../picture/S3_hierarchy.png" width="80%"/></a> </p>
 <h3 id="references"><strong>References:</strong><a class="headerlink" href="#references" title="Anchor link to this section for reference">⚓︎</a></h3>
 <ul>
 <li><a href="https://digitalcloud.training/">Digital Cloud Training</a></li>
@@ -4731,5 +4742,5 @@
         
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

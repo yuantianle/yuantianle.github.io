@@ -51,7 +51,18 @@
     
     
     
-  </head>
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4543,7 +4554,7 @@
 <p><strong>This is not a garage for questions. This section is aiming to record all the structured question type. That is to say, pseudo-code is more important than code itself.</strong></p>
 </blockquote>
 <h2 id="the-questions-have-been-listed-here">The questions have been listed here:<a class="headerlink" href="#the-questions-have-been-listed-here" title="Anchor link to this section for reference">⚓︎</a></h2>
-<p><strong>I. From <img alt="bash" height="25" src="LeetCode_logo_black.png" width="25"/> <a href="https:/leetcode.com/">Leetcode</a>:</strong></p>
+<p><strong>I. From <a class="glightbox" href="LeetCode_logo_black.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img alt="bash" height="25" src="LeetCode_logo_black.png" width="25"/></a> <a href="https:/leetcode.com/">Leetcode</a>:</strong></p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"/><input id="__tabbed_1_2" name="__tabbed_1" type="radio"/><input id="__tabbed_1_3" name="__tabbed_1" type="radio"/><input id="__tabbed_1_4" name="__tabbed_1" type="radio"/><div class="tabbed-labels"><label for="__tabbed_1_1">Matrix</label><label for="__tabbed_1_2">Graphics</label><label for="__tabbed_1_3">Slide Window</label><label for="__tabbed_1_4">Sorting</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -4572,7 +4583,7 @@
 </div>
 </div>
 </div>
-<p><strong>II. From <img alt="bash" height="25" src="HackerRank_logo.png" width="25"/> <a href="https://wwwhackerrank.com/">Hackerrank</a>:</strong></p>
+<p><strong>II. From <a class="glightbox" href="HackerRank_logo.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img alt="bash" height="25" src="HackerRank_logo.png" width="25"/></a> <a href="https://wwwhackerrank.com/">Hackerrank</a>:</strong></p>
 <ol>
 <li><a href="Hackerrank/STDIN%26STDOUT/">STDIN and STDOUT</a></li>
 </ol>
@@ -4687,5 +4698,5 @@
         
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

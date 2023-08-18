@@ -51,7 +51,18 @@
     
     
     
-  </head>
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4562,7 +4573,7 @@
 </li>
 </ul>
 <p>The relationship between <strong>Virtual Machine</strong>, <strong>Container</strong>, and <strong>Kubernetes</strong> can be seen in the picture (which comes from "<em>Docker or Kubernetes: Which one is right for you?</em>" in <a href="https://www.atlassian.com/microservices/microservices-architecture/kubernetes-vs-docker">Kubernetes vs. Docker</a>), as shown below :</p>
-<p><img :=":" _="," alt="picture 6" class="center" src="../picture/Kubernetes.png" width="80%"/> </p>
+<p><a class="glightbox" href="../picture/Kubernetes.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 6" class="center" src="../picture/Kubernetes.png" width="80%"/></a> </p>
 </details>
 <details class="question" open="open">
 <summary>Do you remember <code>EC2</code>? What are <code>ECS</code> and <code>EKS</code>?</summary>
@@ -4571,13 +4582,13 @@
 <p><code>EKS</code>, the <ins class="critic">Amazon Elastic Kubernetes</ins>, is also offered by AWS to use <code>Kubernetes</code> in the cloud.</p>
 </details>
 <p>Below is the structure of ECS service:</p>
-<p><img :=":" _="," alt="picture 7" class="center" src="../picture/ECS_struct.png" width="80%"/> </p>
+<p><a class="glightbox" href="../picture/ECS_struct.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 7" class="center" src="../picture/ECS_struct.png" width="80%"/></a> </p>
 <p>Here is the definition of each concept shown in the picture above:</p>
-<p><img :=":" _="," alt="picture 10" class="center" src="../picture/ECS_concepts_explain.png" width="80%"/> </p>
+<p><a class="glightbox" href="../picture/ECS_concepts_explain.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 10" class="center" src="../picture/ECS_concepts_explain.png" width="80%"/></a> </p>
 <p>ECS <code>EC2 Cluster</code> v.s. ECS <code>Fargate Cluster</code>:</p>
-<p><img :=":" _="," alt="picture 9" class="center" src="../picture/ECS_EC2_Fargate.png" width="80%"/> </p>
+<p><a class="glightbox" href="../picture/ECS_EC2_Fargate.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 9" class="center" src="../picture/ECS_EC2_Fargate.png" width="80%"/></a> </p>
 <p>ECS with <code>Load Balancer</code>:</p>
-<p><img :=":" _="," alt="picture 11" class="center" src="../picture/ECS_withbalancer.png" width="80%"/> </p>
+<p><a class="glightbox" href="../picture/ECS_withbalancer.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 11" class="center" src="../picture/ECS_withbalancer.png" width="80%"/></a> </p>
 <h3 id="references"><strong>References:</strong><a class="headerlink" href="#references" title="Anchor link to this section for reference">⚓︎</a></h3>
 <ul>
 <li>
@@ -4747,5 +4758,5 @@
         
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

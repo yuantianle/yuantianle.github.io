@@ -51,7 +51,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4550,7 +4561,7 @@
 
 <h1 id="concurrency-vs-parallelism"><strong>Concurrency v.s. Parallelism</strong><a class="headerlink" href="#concurrency-vs-parallelism" title="Anchor link to this section for reference">⚓︎</a></h1>
 <p>Look at the picture shown below (from <a href="https://www.baeldung.com/cs/concurrency-vs-parallelism">Concurrency vs Parallelism</a>) to understand the difference between concurrency and parallelism:</p>
-<p><img :=":" _="," alt="image" class="center" src="https://user-images.githubusercontent.com/61530469/200766514-273dab9b-e335-4a12-83bd-802135dffff4.png" width="80%"/></p>
+<p><a class="glightbox" href="https://user-images.githubusercontent.com/61530469/200766514-273dab9b-e335-4a12-83bd-802135dffff4.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="image" class="center" src="https://user-images.githubusercontent.com/61530469/200766514-273dab9b-e335-4a12-83bd-802135dffff4.png" width="80%"/></a></p>
 <details class="warning" open="open">
 <summary>Watchout!</summary>
 <p><mark class="critic">Concurrent ← Parallel</mark></p>
@@ -4727,5 +4738,5 @@
         
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

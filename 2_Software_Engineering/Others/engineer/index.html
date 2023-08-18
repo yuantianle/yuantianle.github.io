@@ -51,7 +51,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4598,14 +4609,14 @@
 <h1 id="--engineer-principles">** <img alt="🧑‍💼" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f9d1-200d-1f4bc.svg" title=":office_worker:"/> Engineer Principles**<a class="headerlink" href="#--engineer-principles" title="Anchor link to this section for reference">⚓︎</a></h1>
 <h2 id="solid-princiles"><strong>SOLID princiles</strong><a class="headerlink" href="#solid-princiles" title="Anchor link to this section for reference">⚓︎</a></h2>
 <p>If we are doing <code>OOD</code> (Object-Oriented Design), we should follow the <code>SOLID</code> principles:</p>
-<p><img :=":" _="," alt="picture 25" class="center" src="../pictures/SOLID.png" width="50%"/> </p>
+<p><a class="glightbox" href="../pictures/SOLID.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 25" class="center" src="../pictures/SOLID.png" width="50%"/></a> </p>
 <details class="warning" open="open">
 <summary>More resources for learning!</summary>
 <p>Check SOLID <a href="../../../3_C%2B%2B/Design_Pattern/basic/#solid-principles">principles for OOP design</a> to learn more in real cases.</p>
 </details>
 <h2 id="abstract-interface"><strong>Abstract Interface</strong><a class="headerlink" href="#abstract-interface" title="Anchor link to this section for reference">⚓︎</a></h2>
 <p>For the last one, <code>Dependency Inversion</code> principle, we can use the concept of <code>abstract interface</code> as an implementation.</p>
-<p><img :=":" _="," alt="picture 26" class="center" src="../pictures/ai.png" width="60%"/> </p>
+<p><a class="glightbox" href="../pictures/ai.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 26" class="center" src="../pictures/ai.png" width="60%"/></a> </p>
 <details class="question" open="open">
 <summary>Why do we care?</summary>
 <ol>
@@ -4784,5 +4795,5 @@
         
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

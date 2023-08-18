@@ -27,7 +27,18 @@
     height: 100%;
     display: block;
 }
-</style></head>
+</style> <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
 <body data-md-color-accent="deep-orange" data-md-color-primary="black" data-md-color-scheme="default" dir="ltr">
 <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
 <input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
@@ -1718,7 +1729,7 @@
 <p><strong>Advantages:</strong> Improve code <u>flexibility and extensibility</u>, reduce code <u>repetition</u>, and better adhere to the <u>open-closed principle</u>.</p>
 </li>
 </ul>
-<p><img :=":" _="," alt="picture 1" class="center" src="../pictures/polymorphism.png" width="80%"> </img></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-type="image" data-width="70%" href="../pictures/polymorphism.png"><img :=":" _="," alt="picture 1" class="center" src="../pictures/polymorphism.png" width="80%"/></a> </p>
 </details>
 <h2 id="encapsulation"><strong>Encapsulation</strong><a class="headerlink" href="#encapsulation" title="Anchor link to this section for reference">⚓︎</a></h2>
 <details class="note" open="open">
@@ -2127,7 +2138,18 @@
 </ul>
 <p><head>
 <title>C++ Code Compiler</title>
-<!-- Include SweetAlert2 CSS --></head></p>
+<!-- Include SweetAlert2 CSS --> <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head></p>
 <p><link href="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.css" rel="stylesheet">
 <!-- Include SweetAlert2 JS --></link></p>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.16.6/dist/sweetalert2.min.js"></script>
@@ -2519,7 +2541,7 @@
           }
         }
     </script>
-</body>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 <hr/>
 <div class="md-source-file">
 <small>

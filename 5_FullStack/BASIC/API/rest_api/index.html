@@ -51,7 +51,18 @@
     
     
     
-  </head>
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4689,7 +4700,7 @@
 </tbody>
 </table>
 <h3 id="implementation-sketch"><strong>Implementation Sketch</strong><a class="headerlink" href="#implementation-sketch" title="Anchor link to this section for reference">⚓︎</a></h3>
-<p><img :=":" _="," alt="picture 9" class="center" src="../implementaion.png" width="80%"/> </p>
+<p><a class="glightbox" href="../implementaion.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 9" class="center" src="../implementaion.png" width="80%"/></a> </p>
 <h2 id="rest-api_1"><strong>REST API</strong><a class="headerlink" href="#rest-api_1" title="Anchor link to this section for reference">⚓︎</a></h2>
 <details class="question" open="open">
 <summary><code>REST API</code>?</summary>
@@ -4702,7 +4713,7 @@
 </details>
 <details class="example" open="open">
 <summary>Example: Happy Day!</summary>
-<p><img :=":" _="," alt="pic1" class="center" src="../../../../2_Software_Engineering/AWS/Application/picture/swagger2.png" width="80%"/></p>
+<p><a class="glightbox" href="../../../../2_Software_Engineering/AWS/Application/picture/swagger2.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="pic1" class="center" src="../../../../2_Software_Engineering/AWS/Application/picture/swagger2.png" width="80%"/></a></p>
 </details>
 </details>
 <h3 id="references"><strong>References:</strong><a class="headerlink" href="#references" title="Anchor link to this section for reference">⚓︎</a></h3>
@@ -4874,5 +4885,5 @@
         
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

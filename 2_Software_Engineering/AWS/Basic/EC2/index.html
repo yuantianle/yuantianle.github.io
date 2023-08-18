@@ -51,7 +51,18 @@
     
     
     
-  </head>
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4556,13 +4567,13 @@
 <p><code>EC2</code> is <ins class="critic">Amazon Elastic Compute Cloud</ins>. <code>EC2</code> allows you to run <strong>virtual servers</strong> in the cloud.</p>
 </details>
 <p>The concept of <code>EC2</code> can be seen in the picture below:</p>
-<p><img :=":" _="," alt="picture 11" class="center" src="../picture/EC2_concept.png" width="80%"/></p>
+<p><a class="glightbox" href="../picture/EC2_concept.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 11" class="center" src="../picture/EC2_concept.png" width="80%"/></a></p>
 <p>The pipeline of launching an <code>EC2</code> instance:</p>
-<p><img :=":" _="," alt="picture 12" class="center" src="../picture/EC2_lauching.png" width="80%"/></p>
+<p><a class="glightbox" href="../picture/EC2_lauching.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 12" class="center" src="../picture/EC2_lauching.png" width="80%"/></a></p>
 <details class="question" open="open">
 <summary>Why do we choose <code>EC2</code>?</summary>
 <p><strong>Fast</strong>, <strong>high administration</strong>, <strong>DIY combination</strong>, <strong>robust</strong>, <strong>safe</strong>, and <strong>cheap</strong>!</p>
-<p><img :=":" _="," alt="picture 13" class="center" src="../picture/EC2_benifit.png" width="80%"/> </p>
+<p><a class="glightbox" href="../picture/EC2_benifit.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 13" class="center" src="../picture/EC2_benifit.png" width="80%"/></a> </p>
 </details>
 <h3 id="references"><strong>References:</strong><a class="headerlink" href="#references" title="Anchor link to this section for reference">⚓︎</a></h3>
 <ul>
@@ -4728,5 +4739,5 @@
         
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

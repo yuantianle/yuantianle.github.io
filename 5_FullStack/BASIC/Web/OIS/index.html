@@ -51,7 +51,18 @@
     
     
     
-  </head>
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4545,7 +4556,7 @@
 <h1 id="--ois">** <img alt="7⃣" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/37-20e3.svg" title=":seven:"/> OIS**<a class="headerlink" href="#--ois" title="Anchor link to this section for reference">⚓︎</a></h1>
 <h2 id="ois-model"><strong>OIS Model</strong><a class="headerlink" href="#ois-model" title="Anchor link to this section for reference">⚓︎</a></h2>
 <p><code>OIS</code> (Open Systems Interconnection) model can be split into 7 levels:</p>
-<p><img :=":" _="," alt="picture 1" class="center" src="pictures/OIS.png" width="70%"/> </p>
+<p><a class="glightbox" href="pictures/OIS.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 1" class="center" src="pictures/OIS.png" width="70%"/></a> </p>
 <h2 id="ois-catlog"><strong>OIS Catlog</strong><a class="headerlink" href="#ois-catlog" title="Anchor link to this section for reference">⚓︎</a></h2>
 <ol>
 <li>
@@ -4681,5 +4692,5 @@
         
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

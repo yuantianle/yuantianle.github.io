@@ -51,7 +51,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4649,7 +4660,7 @@
 </div>
 </div>
 <p>The relationship among them can be seen in picture below:
-<img :=":" _="," alt="picture 1" class="center" src="../pictures/dp_relationship.png" width="80%"/></p>
+<a class="glightbox" href="../pictures/dp_relationship.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 1" class="center" src="../pictures/dp_relationship.png" width="80%"/></a></p>
 <h2 id="creational-patterns"><strong>Creational patterns</strong><a class="headerlink" href="#creational-patterns" title="Anchor link to this section for reference">⚓︎</a></h2>
 <h3 id="11-singleton"><strong>1.1 Singleton</strong><a class="headerlink" href="#11-singleton" title="Anchor link to this section for reference">⚓︎</a></h3>
 <h3 id="12-factory-method"><strong>1.2 Factory Method</strong><a class="headerlink" href="#12-factory-method" title="Anchor link to this section for reference">⚓︎</a></h3>
@@ -4836,5 +4847,5 @@
         
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

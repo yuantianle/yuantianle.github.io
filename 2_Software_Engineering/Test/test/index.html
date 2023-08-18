@@ -51,7 +51,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4591,7 +4602,7 @@
 <h1 id="test"><strong><img alt="🧪" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@14.1.2/assets/svg/1f9ea.svg" title=":test_tube:"/> Test</strong><a class="headerlink" href="#test" title="Anchor link to this section for reference">⚓︎</a></h1>
 <h2 id="types-of-tests"><strong>Types of Tests</strong><a class="headerlink" href="#types-of-tests" title="Anchor link to this section for reference">⚓︎</a></h2>
 <p>There are four major types of <code>tests</code>. You can see their relations in the diagram below:</p>
-<p><img :=":" _="," alt="pic1" class="center" src="../pictures/test.png" width="50%"/></p>
+<p><a class="glightbox" href="../pictures/test.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="pic1" class="center" src="../pictures/test.png" width="50%"/></a></p>
 <details class="note" open="open">
 <summary>Definitions</summary>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:5"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio"/><input id="__tabbed_1_2" name="__tabbed_1" type="radio"/><input id="__tabbed_1_3" name="__tabbed_1" type="radio"/><input id="__tabbed_1_4" name="__tabbed_1" type="radio"/><input id="__tabbed_1_5" name="__tabbed_1" type="radio"/><div class="tabbed-labels"><label for="__tabbed_1_1">Unit tests</label><label for="__tabbed_1_2">Integration tests</label><label for="__tabbed_1_3">System tests</label><label for="__tabbed_1_4">E2E tests</label><label for="__tabbed_1_5">Manual tests</label></div>
@@ -4609,7 +4620,7 @@
 <li><strong>Explanation:</strong> test the function of the <strong>parent function</strong> <code>A</code> including <code>B</code>. </li>
 <li><strong>Note:</strong> Test <code>A</code> individually needs <code>dependency injection</code>. Test <code>B</code> individually can just use <code>unit test</code>.</li>
 </ul>
-<p><img :=":" _="," alt="" class="center" src="../pictures/DI.png" width="50%"/></p>
+<p><a class="glightbox" href="../pictures/DI.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="" class="center" src="../pictures/DI.png" width="50%"/></a></p>
 </div>
 <div class="tabbed-block">
 <ul>
@@ -4807,5 +4818,5 @@
         
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

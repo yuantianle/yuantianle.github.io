@@ -49,7 +49,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4552,7 +4563,7 @@
 </blockquote>
 <details class="note" open="open">
 <summary>Sheet</summary>
-<p><img :=":" _="," alt="picture 1" class="center" src="../pictures/%E6%AF%8F%E5%A4%A9%E5%A4%9A%E7%88%B1%E4%BD%A0%E4%B8%80%E4%BA%9B%E5%92%8C%E5%BC%A6.png" width="70%"/> </p>
+<p><a class="glightbox" href="../pictures/%E6%AF%8F%E5%A4%A9%E5%A4%9A%E7%88%B1%E4%BD%A0%E4%B8%80%E4%BA%9B%E5%92%8C%E5%BC%A6.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 1" class="center" src="../pictures/%E6%AF%8F%E5%A4%A9%E5%A4%9A%E7%88%B1%E4%BD%A0%E4%B8%80%E4%BA%9B%E5%92%8C%E5%BC%A6.png" width="70%"/></a> </p>
 <div class="highlight"><span class="filename">C++</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="hll"><a href="#__codelineno-0-1"><span class="linenos" data-linenos=" 1 "></span></a><span class="n">Prelude</span>
 </span><a id="__codelineno-0-2" name="__codelineno-0-2"></a><a href="#__codelineno-0-2"><span class="linenos" data-linenos=" 2 "></span></a><span class="n">G</span><span class="w"> </span><span class="n">D</span><span class="o">/</span><span class="n">F</span><span class="err">#</span><span class="w"> </span><span class="n">Em</span><span class="w"> </span><span class="n">Bm</span><span class="w"> </span><span class="n">C</span><span class="w"> </span><span class="n">G</span><span class="w"> </span><span class="n">Am7</span><span class="w"> </span><span class="n">D</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a><a href="#__codelineno-0-3"><span class="linenos" data-linenos=" 3 "></span></a>
@@ -4766,5 +4777,5 @@
         
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

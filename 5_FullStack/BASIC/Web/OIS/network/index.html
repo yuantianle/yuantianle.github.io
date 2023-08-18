@@ -51,7 +51,18 @@
     
     
     
-  </head>
+   <link href="../../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4593,7 +4604,7 @@
 
 
 <h1 id="network-layer"><strong><span class="twemoji"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15 9h-2V7h2v2m7 11v2h-7a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1H2v-2h7a1 1 0 0 1 1-1h1v-2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-4v2h1a1 1 0 0 1 1 1h7M9 5H7v10h2V5m2 10h2v-4h2a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-4v10Z"></path></svg></span> Network Layer</strong><a class="headerlink" href="#network-layer" title="Anchor link to this section for reference">⚓︎</a></h1>
-<p><img :=":" _="," alt="picture 1" class="center" src="../pictures/Network%20Layer.png" width="80%"/> </p>
+<p><a class="glightbox" href="../pictures/Network%20Layer.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 1" class="center" src="../pictures/Network%20Layer.png" width="80%"/></a> </p>
 <h2 id="definition"><strong>Definition</strong><a class="headerlink" href="#definition" title="Anchor link to this section for reference">⚓︎</a></h2>
 <details class="question" open="open">
 <summary>Demand?</summary>
@@ -4606,13 +4617,13 @@
 <li><strong>Plan A:</strong> LAN is limited locally. So we should use other long-distance links such as using <code>PPP</code>/<code>MPLS</code>/<code>ATM</code>. Obviously, building specific <code>p2p</code> networking is costly and messy. </li>
 <li><strong>Plan B:</strong> The <code>protocols</code> used in the <code>Layer2 network</code> are not always the same. Compatibility is a problem.</li>
 </ul>
-<p><img :=":" _="," alt="picture 2" class="center" src="../pictures/networking_intro0.png" width="100%"/> </p>
+<p><a class="glightbox" href="../pictures/networking_intro0.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 2" class="center" src="../pictures/networking_intro0.png" width="100%"/></a> </p>
 </details>
 <details class="question" open="open">
 <summary>How?</summary>
 <p>To solve this problem, we need to import a new layer. <code>Layer3</code> -- <code>Network Layer</code> is where <code>Internetworking</code> comes from. </p>
 <p>We need to use <code>IP protocol</code> and <code>IP packets</code>.</p>
-<p><img :=":" _="," alt="picture 1" class="center" src="../pictures/networking_intro.png" width="100%"/></p>
+<p><a class="glightbox" href="../pictures/networking_intro.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 1" class="center" src="../pictures/networking_intro.png" width="100%"/></a></p>
 </details>
 <h2 id="ip-packets"><strong>IP packets</strong><a class="headerlink" href="#ip-packets" title="Anchor link to this section for reference">⚓︎</a></h2>
 <details class="question" open="open">
@@ -4623,7 +4634,7 @@
 <details class="note" open="open">
 <summary>Structure</summary>
 <p>There are two types of IP packets for <code>IPv4</code> (Internet Protocol version 4) and <code>IPv6</code> (Internet Protocol version 6):</p>
-<p><img alt="picture 5" src="../pictures/ipv4.png"/> </p>
+<p><a class="glightbox" href="../pictures/ipv4.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img alt="picture 5" src="../pictures/ipv4.png"/></a> </p>
 </details>
 <h3 id="references"><strong>References</strong><a class="headerlink" href="#references" title="Anchor link to this section for reference">⚓︎</a></h3>
 <p><a href="https://www.youtube.com/watch?v=WAZxo2ObFIw&amp;list=PLTk5ZYSbd9Mi_ya5tVFD8NFfU1YZOyml1&amp;index=7">Networking Fundamentals: OSI 7 - Layer 3 - the network layer - Part 1</a></p>
@@ -4787,5 +4798,5 @@
         
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

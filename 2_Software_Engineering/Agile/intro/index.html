@@ -51,7 +51,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4634,7 +4645,7 @@ E --&gt; F[Matainence];</code></pre>
 <details class="example" open="open">
 <summary><code>Kanban</code></summary>
 <p>The famous software for <code>Kanban board</code> is <a href="https://app.asana.com/">Asana</a>:</p>
-<p><img :=":" _="," alt="picture 1" class="center" src="../pictures/asana.png" width="80%"/></p>
+<p><a class="glightbox" href="../pictures/asana.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 1" class="center" src="../pictures/asana.png" width="80%"/></a></p>
 </details>
 <details class="example" open="open">
 <summary><code>Scrum</code></summary>
@@ -4642,11 +4653,11 @@ E --&gt; F[Matainence];</code></pre>
 <p>One <code>scrum board</code> is for one <strong>sprint</strong>, which typically set <mark class="critic">two weeks</mark> as period. There are typical <strong>three stages</strong>:</p>
 <ol>
 <li><strong>Initialize:</strong> in <code>Backlog</code>, set points for each <ins class="critic">story/task</ins>. Try to assign the points to the story with the number in <ins class="critic">Fibonacci series</ins> such as: <code>1,2,3,5...</code>:
-    <img :=":" _="," alt="picture 3" class="center" src="../pictures/backlog.png" width="80%"/> </li>
+    <a class="glightbox" href="../pictures/backlog.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 3" class="center" src="../pictures/backlog.png" width="80%"/></a> </li>
 <li><strong>Start:</strong> in scrum board, there are three <ins class="critic">swim lanes</ins>: <code>To do</code>, <code>In progress</code>, <code>Done</code>:
-    <img :=":" _="," alt="picture 4" class="center" src="../pictures/scrumboard.png" width="80%"/> </li>
+    <a class="glightbox" href="../pictures/scrumboard.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 4" class="center" src="../pictures/scrumboard.png" width="80%"/></a> </li>
 <li><strong>End:</strong> when you finish the scrum board in the corresponding sprint, you will get a <code>"burn down" chat</code>:
-    <img :=":" _="," alt="picture 5" class="center" src="../pictures/burndown.png" width="80%"/> </li>
+    <a class="glightbox" href="../pictures/burndown.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 5" class="center" src="../pictures/burndown.png" width="80%"/></a> </li>
 </ol>
 </details>
 <h3 id="references"><strong>References:</strong><a class="headerlink" href="#references" title="Anchor link to this section for reference">⚓︎</a></h3>
@@ -4813,5 +4824,5 @@ E --&gt; F[Matainence];</code></pre>
         
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

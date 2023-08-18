@@ -51,7 +51,18 @@
     
     
     
-  </head>
+   <link href="../../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -4567,7 +4578,7 @@
 <p>run the image in vscode terminal and open the swift image in the container as u did in the docker desktop</p>
 </li>
 </ol>
-<p><img alt="" src="../attachments/74449025/74318046.png"/></p>
+<p><a class="glightbox" href="../attachments/74449025/74318046.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img alt="" src="../attachments/74449025/74318046.png"/></a></p>
 <p>For testing ur swift code:</p>
 <ol>
 <li>
@@ -4580,11 +4591,11 @@
 <p>swift test in your terminal</p>
 </li>
 </ol>
-<p><img alt="" src="../attachments/74449025/74416413.png"/></p>
+<p><a class="glightbox" href="../attachments/74449025/74416413.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img alt="" src="../attachments/74449025/74416413.png"/></a></p>
 <p>For example:</p>
-<p><img alt="" src="../attachments/74449025/74383525.png?width=680"/></p>
+<p><a class="glightbox" href="../attachments/74449025/74383525.png?width=680" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img alt="" src="../attachments/74449025/74383525.png?width=680"/></a></p>
 <p>Moreover, you can even get the following instead, which looks more like what you get in Xcode:</p>
-<p><img alt="" src="../attachments/74449025/74416471.png"/></p>
+<p><a class="glightbox" href="../attachments/74449025/74416471.png" data-type="image" data-width="70%" data-height="auto" data-desc-position="bottom"><img alt="" src="../attachments/74449025/74416471.png"/></a></p>
 <p>See <a href="VS-Code---Docker-for-a-nice-Swift-edition-on-Windows10_74350771.html">VS Code - Docker for a nice Swift edition on Windows10</a> for more details.</p>
 
   <hr>
@@ -4746,5 +4757,5 @@
         
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>

@@ -51,7 +51,18 @@
     
     
     
-  </head>
+   <link href="../../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+        html.glightbox-open { overflow: initial; height: 100%; }
+        .gslide-title { margin-top: 0px; user-select: text; }
+        .gslide-desc { color: #666; user-select: text; }
+        .gslide-image img { background: white; }
+        
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
+            </style> <script src="../../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -71,6 +82,11 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#-c-questions" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -4152,6 +4168,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         C++ Questions
@@ -4529,7 +4547,7 @@
   
     <div class="md-source-date" style="text-align: right; font-weight: bold;">
       <small>
-          Author: <span class='git-page-authors git-authors'></span>
+          Author: <span class='git-page-authors git-authors'><a href='mailto:yuant@oregonstate.edu'>Tianle Yuan</a></span>
       </small>
     </div>
 
@@ -4541,16 +4559,17 @@
   
 
 
-  <h1>C++ Questions</h1>
-
-
+<h1 id="-c-questions"><strong>🎮 C++ Questions</strong><a class="headerlink" href="#-c-questions" title="Anchor link to this section for reference">⚓︎</a></h1>
+<blockquote>
+<p>This material is for related questions:</p>
+</blockquote>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 15, 2023 23:21:52</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 18, 2023 01:48:08</span>
       
         <br>
         Created:
@@ -4655,5 +4674,5 @@
         
       
     
-  </body>
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
