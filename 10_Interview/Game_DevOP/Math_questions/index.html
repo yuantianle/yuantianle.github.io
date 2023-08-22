@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../../images/self.ico">
-      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.0">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.1">
     
     
       
@@ -5413,57 +5413,57 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    ****
+  <a href="#eigenvalues-and-eigenvectors" class="md-nav__link">
+    Eigenvalues and Eigenvectors
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    ****
+  <a href="#rotation-matrix-eigenvalues" class="md-nav__link">
+    Rotation matrix eigenvalues
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    ****
+  <a href="#least-squares-method" class="md-nav__link">
+    Least squares method
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    ****
+  <a href="#euler-angles" class="md-nav__link">
+    Euler angles
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    ****
+  <a href="#gimbal-lock" class="md-nav__link">
+    Gimbal lock
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
-    ****
+  <a href="#quaternions" class="md-nav__link">
+    Quaternions
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
-    ****
+  <a href="#monte-carlo-integration" class="md-nav__link">
+    Monte Carlo integration
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
-    ****
+  <a href="#nonlinear-to-linear" class="md-nav__link">
+    Nonlinear to linear
   </a>
   
 </li>
@@ -6179,24 +6179,29 @@ R=\begin{bmatrix}
 <summary>Definition and characteristics of orthogonal matrices.</summary>
 <p><strong>Answer:</strong> </p>
 <ul>
-<li><strong>Definition:</strong> A square matrix <span class="arithmatex">\(A\)</span> is said to be orthogonal if its transpose is equal to its inverse. That is, </li>
-</ul>
+<li>
+<p><strong>Definition:</strong> A square matrix <span class="arithmatex">\(A\)</span> is said to be orthogonal if its transpose is equal to its inverse. That is, </p>
 <div class="arithmatex">\[ A^T = A^{-1} \]</div>
 <p>or equivalently, </p>
 <div class="arithmatex">\[ A^T A = AA^T = I \]</div>
 <p>where <span class="arithmatex">\(I\)</span> is the identity matrix of appropriate size.</p>
-<ul>
+</li>
 <li>
 <p><strong>Characteristics of Orthogonal Matrices:</strong></p>
-<ul>
-<li>Preservation of Dot Product: For an orthogonal matrix <span class="arithmatex">\(A\)</span> and any vectors <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span> in <span class="arithmatex">\(\mathbb{R}^n\)</span>, the dot product of the transformed vectors remains unchanged. This means that orthogonal matrices preserve angles between vectors. i.e., </li>
-</ul>
-<div class="arithmatex">\[ (Ax) \cdot (Ay) = x \cdot y \]</div>
-<ul>
-<li>Preservation of Norm: For an orthogonal matrix <span class="arithmatex">\(A\)</span> and any vector <span class="arithmatex">\(x\)</span> in <span class="arithmatex">\(\mathbb{R}^n\)</span>, the length (or norm) of the transformed vector remains unchanged. That is, </li>
-</ul>
-<div class="arithmatex">\[ ||Ax|| = ||x|| \]</div>
-<ul>
+<ol>
+<li>
+<p>Preservation of Dot Product: For an orthogonal matrix <span class="arithmatex">\(A\)</span> and any vectors <span class="arithmatex">\(x\)</span> and <span class="arithmatex">\(y\)</span> in <span class="arithmatex">\(\mathbb{R}^n\)</span>, the dot product of the transformed vectors remains unchanged, i.e., </p>
+<div class="arithmatex">\[ 
+(Ax) \cdot (Ay) = x \cdot y 
+\]</div>
+<p>This means that orthogonal matrices preserve angles between vectors.</p>
+</li>
+<li>
+<p>Preservation of Norm: For an orthogonal matrix <span class="arithmatex">\(A\)</span> and any vector <span class="arithmatex">\(x\)</span> in <span class="arithmatex">\(\mathbb{R}^n\)</span>, the length (or norm) of the transformed vector remains unchanged. That is, </p>
+<div class="arithmatex">\[ 
+||Ax|| = ||x|| 
+\]</div>
+</li>
 <li>
 <p>Determinant: The determinant of an orthogonal matrix is either 1 or -1.</p>
 </li>
@@ -6209,64 +6214,385 @@ R=\begin{bmatrix}
 <li>
 <p>Rotation and Reflection: Orthogonal matrices in <span class="arithmatex">\(\mathbb{R}^2\)</span> and <span class="arithmatex">\(\mathbb{R}^3\)</span> can represent rotations (if the determinant is 1) or  reflections (if the determinant is -1).</p>
 </li>
+</ol>
+</li>
+</ul>
+</details>
+<h2 id="eigenvalues-and-eigenvectors"><strong>Eigenvalues and Eigenvectors</strong><a class="headerlink" href="#eigenvalues-and-eigenvectors" title="Anchor link to this section for reference">⚓︎</a></h2>
+<details class="note" open="open">
+<summary>Understanding eigenvalues and eigenvectors, along with related equations.</summary>
+<p><strong>Answer:</strong></p>
+<ul>
+<li>
+<p><strong>Definitions</strong></p>
+<ol>
+<li>
+<p><strong>Eigenvector</strong>: A non-zero vector <span class="arithmatex">\( v \)</span> such that when a matrix <span class="arithmatex">\( A \)</span> multiplies it, the vector <span class="arithmatex">\( v \)</span> only gets scaled (its direction may or may not change). </p>
+</li>
+<li>
+<p><strong>Eigenvalue</strong>: The scalar <span class="arithmatex">\( \lambda \)</span> associated with its corresponding eigenvector. </p>
+<div class="arithmatex">\[
+Av = \lambda v
+\]</div>
+<p>where <span class="arithmatex">\( A \)</span> is a matrix, <span class="arithmatex">\( v \)</span> is the eigenvector, and <span class="arithmatex">\( \lambda \)</span> is the eigenvalue.</p>
+<p>Eigenvalues indicate the factor by which the eigenvector is stretched or compressed. </p>
+<ul>
+<li>If <span class="arithmatex">\( \lambda = 1 \)</span>, vectors along the direction of the associated eigenvector remain unchanged.</li>
+<li>If <span class="arithmatex">\( \lambda &gt; 1 \)</span>, vectors are stretched.</li>
+<li>If <span class="arithmatex">\( 0 &lt; \lambda &lt; 1 \)</span>, vectors are compressed.</li>
+<li>If <span class="arithmatex">\( \lambda &lt; 0 \)</span>, vectors are inverted and may also be stretched or compressed.</li>
+</ul>
+</li>
+<li>
+<p><strong>Geometric Perspective on linear transformation.</strong></p>
+</li>
+</ol>
+<p>The number of independent eigenvectors gives information about the dimensionality of the space preserved by the linear transformation.</p>
+<p>Imagine a rubber sheet laid out on a grid. A linear transformation could stretch, compress, skew, or rotate this sheet. The eigenvectors of this transformation would be the directions where the rubber sheet is merely <u>stretched or compressed</u> (no skewing or rotation), and the eigenvalues would tell you by how much.</p>
+<p>For a 2x2 matrix, think of it as two main actions:</p>
+<ul>
+<li>Stretching or compressing along one direction (first eigenvector).</li>
+<li>Stretching or compressing along a perpendicular direction (second eigenvector).</li>
+</ul>
+</li>
+<li>
+<p><strong>Determining Eigenvalues and Eigenvectors</strong></p>
+<p>To find the eigenvalues of a matrix, you need to solve the characteristic equation:</p>
+<div class="arithmatex">\[
+\text{det}(A - \lambda I) = 0
+\]</div>
+<p>Here, <span class="arithmatex">\( I \)</span> is the identity matrix of the same size as <span class="arithmatex">\( A \)</span>, and "det" represents the determinant of a matrix.</p>
+<p>Once the eigenvalues <span class="arithmatex">\( \lambda \)</span> are found, you can plug them back into the equation </p>
+<div class="arithmatex">\[
+(A - \lambda I)v = 0
+\]</div>
+<p>to determine the eigenvectors <span class="arithmatex">\( v \)</span>.</p>
+</li>
+<li>
+<p><strong>Example</strong></p>
+<p>Let's take a simple 2x2 matrix to illustrate the process:</p>
+<div class="arithmatex">\[
+A = \begin{bmatrix} 2 &amp; 1 \\ 1 &amp; 3 \end{bmatrix}
+\]</div>
+<p>To find its eigenvalues:</p>
+<ol>
+<li>Subtract <span class="arithmatex">\( \lambda \)</span> from the diagonal of <span class="arithmatex">\( A \)</span>:</li>
+</ol>
+<div class="arithmatex">\[
+A - \lambda I = \begin{bmatrix} 2-\lambda &amp; 1 \\ 1 &amp; 3-\lambda \end{bmatrix}
+\]</div>
+<ol>
+<li>
+<p>Set the determinant of this matrix to zero and solve for <span class="arithmatex">\( \lambda \)</span>:</p>
+<div class="arithmatex">\[
+\text{det}(A - \lambda I) = (2-\lambda)(3-\lambda) - 1(1) = 0
+\]</div>
+<p>Solving this equation will yield the eigenvalues <span class="arithmatex">\( \lambda \)</span>.</p>
+<p>Once you have the eigenvalues, plug them back into the equation </p>
+<div class="arithmatex">\[
+(A - \lambda I)v = 0
+\]</div>
+<p>to get the respective eigenvectors.</p>
+</li>
+</ol>
+</li>
+<li>
+<p><strong>Properties</strong></p>
+<ol>
+<li>
+<p>For a diagonal matrix, the eigenvalues are simply the diagonal entries.</p>
+</li>
+<li>
+<p>The sum of the eigenvalues is equal to the trace of the matrix (the sum of its diagonal elements).</p>
+</li>
+<li>
+<p>The product of the eigenvalues is equal to the determinant of the matrix.</p>
+</li>
+<li>
+<p>If <span class="arithmatex">\( A \)</span> is an <span class="arithmatex">\( n \times n \)</span> matrix and <span class="arithmatex">\( \lambda \)</span> is an eigenvalue of <span class="arithmatex">\( A \)</span> with multiplicity <span class="arithmatex">\( k \)</span>, then the algebraic multiplicity (how many times <span class="arithmatex">\( \lambda \)</span> appears as a root) is always greater than or equal to the geometric multiplicity (the number of independent eigenvectors associated with <span class="arithmatex">\( \lambda \)</span>).</p>
+</li>
+</ol>
+</li>
+</ul>
+</details>
+<h2 id="rotation-matrix-eigenvalues"><strong>Rotation matrix eigenvalues</strong><a class="headerlink" href="#rotation-matrix-eigenvalues" title="Anchor link to this section for reference">⚓︎</a></h2>
+<details class="note" open="open">
+<summary>What are the eigenvalues of a rotation matrix?</summary>
+<p><strong>Answer:</strong> The eigenvalues of a rotation matrix are complex numbers with magnitude 1.</p>
+<p>Given a 2x2 rotation matrix <span class="arithmatex">\( R \)</span> that represents a rotation of <span class="arithmatex">\( \theta \)</span> degrees (or radians) counter-clockwise around the origin, the matrix is given by:</p>
+<div class="arithmatex">\[
+R = \begin{bmatrix}
+\cos(\theta) &amp; -\sin(\theta) \\
+\sin(\theta) &amp; \cos(\theta) \\
+\end{bmatrix}
+\]</div>
+<p>To find its eigenvalues, we need to solve the characteristic polynomial given by:</p>
+<div class="arithmatex">\[
+\text{det}(R - \lambda I) = 0
+\]</div>
+<p>where <span class="arithmatex">\( I \)</span> is the 2x2 identity matrix.</p>
+<p>Expanding out, we have:</p>
+<div class="arithmatex">\[
+\text{det}\left( \begin{bmatrix}
+\cos(\theta) - \lambda &amp; -\sin(\theta) \\
+\sin(\theta) &amp; \cos(\theta) - \lambda \\
+\end{bmatrix} \right) = 0
+\]</div>
+<p>This simplifies to:</p>
+<div class="arithmatex">\[
+(\cos(\theta) - \lambda)^2 + \sin^2(\theta) = 0
+\]</div>
+<p>The above equation has complex solutions for all <span class="arithmatex">\( \theta \)</span> except for <span class="arithmatex">\( \theta = 0 \)</span> and <span class="arithmatex">\( \theta = \pi \)</span> (or 0 and 180 degrees). In other words, for a genuine rotation (not identity or a reflection), the eigenvalues are complex.</p>
+<p>The eigenvalues are:</p>
+<div class="arithmatex">\[
+\lambda_1, \lambda_2 = \cos(\theta) \pm i\sin(\theta)
+\]</div>
+<p>This is a representation of Euler's formula:</p>
+<div class="arithmatex">\[
+e^{i\theta} = \cos(\theta) + i\sin(\theta)
+\]</div>
+<p>So, the eigenvalues for a 2D rotation matrix are complex conjugates lying on the unit circle in the complex plane. The rotation doesn't have any real vectors that only get stretched or compressed, which is consistent with our geometric understanding that all vectors change direction except for those on the axis of rotation.</p>
+</details>
+<h2 id="least-squares-method"><strong>Least squares method</strong><a class="headerlink" href="#least-squares-method" title="Anchor link to this section for reference">⚓︎</a></h2>
+<details class="note" open="open">
+<summary>Are you familiar with the least squares method?</summary>
+<p><strong>Answer:</strong> The least squares method minimizes the sum of squared differences between data points and a fitted model.</p>
+<ul>
+<li>
+<p><strong>Mathematical Background</strong></p>
+<p>Given a set of <span class="arithmatex">\( n \)</span> data points <span class="arithmatex">\( (x_1, y_1), (x_2, y_2), \ldots, (x_n, y_n) \)</span> and a function <span class="arithmatex">\( f \)</span> that is linear in its parameters, the goal is to find the parameters that minimize the sum of the squared residuals:</p>
+<div class="arithmatex">\[
+S = \sum_{i=1}^{n} r_i^2
+\]</div>
+<p>where <span class="arithmatex">\( r_i = y_i - f(x_i) \)</span> is the residual.</p>
+<p>In matrix notation, this can be formulated as:</p>
+<div class="arithmatex">\[
+\mathbf{A} \mathbf{x} = \mathbf{b}
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\( \mathbf{A} \)</span> is the design matrix.</li>
+<li><span class="arithmatex">\( \mathbf{x} \)</span> is the column vector of the parameters we wish to determine.</li>
+<li><span class="arithmatex">\( \mathbf{b} \)</span> is the column vector of the observed values.</li>
+</ul>
+<p>The solution, when <span class="arithmatex">\( \mathbf{A} \)</span> is overdetermined, is typically given by:</p>
+<div class="arithmatex">\[
+\mathbf{x} = (\mathbf{A}^T \mathbf{A})^{-1} \mathbf{A}^T \mathbf{b}
+\]</div>
+</li>
+<li>
+<p><strong>Application: Linear Regression</strong></p>
+<p>A common application of the least squares method is linear regression. In this context, the goal is to find the best-fitting straight line <span class="arithmatex">\( y = mx + c \)</span> to a set of data points.</p>
+<p>For linear regression:</p>
+<ul>
+<li><span class="arithmatex">\( f(x) = mx + c \)</span></li>
+<li>The parameters to be determined are the slope <span class="arithmatex">\( m \)</span> and the y-intercept <span class="arithmatex">\( c \)</span>.</li>
+</ul>
+</li>
+<li>
+<p><strong>Benefits and Limitations</strong></p>
+<ul>
+<li>
+<p>Benefits:</p>
+<ol>
+<li>Provides a best-fitting curve or line to a dataset.</li>
+<li>Has a clear mathematical formulation and is computationally efficient for many problems.</li>
+</ol>
+</li>
+<li>
+<p>Limitations:</p>
+<ol>
+<li>Sensitive to outliers, as squaring the residuals gives more weight to large deviations.</li>
+<li>Assumes a specific form for the underlying model (e.g., linearity for simple linear regression).</li>
+</ol>
+</li>
 </ul>
 </li>
 </ul>
 </details>
-<h2 id="_1">****<a class="headerlink" href="#_1" title="Anchor link to this section for reference">⚓︎</a></h2>
+<h2 id="euler-angles"><strong>Euler angles</strong><a class="headerlink" href="#euler-angles" title="Anchor link to this section for reference">⚓︎</a></h2>
 <details class="note" open="open">
-<summary></summary>
+<summary>Do you know about Euler angles? What are they used for? What are their pros and cons?</summary>
+<p><strong>Answer:</strong> Euler angles represent rotations in 3D space and have issues like gimbal lock.</p>
+<p><a class="glightbox" href="../Images/Eulerangles.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="Alt text" class="center" src="../Images/Eulerangles.png" width="30%"/></a></p>
+<p>There are multiple conventions for defining Euler angles, but one common sequence is:</p>
+<ol>
+<li><strong>Roll (<span class="arithmatex">\( \phi \)</span>)</strong>: Rotation about the body's X-axis.</li>
+<li><strong>Pitch (<span class="arithmatex">\( \theta \)</span>)</strong>: Rotation about the body's Y-axis.</li>
+<li><strong>Yaw (<span class="arithmatex">\( \psi \)</span>)</strong>: Rotation about the body's Z-axis.</li>
+</ol>
+<p>The specific order and axes of rotation can vary, leading to different conventions like Yaw-Pitch-Roll, Pitch-Yaw-Roll, etc (total 12 types).</p>
+<ul>
+<li>
+<p><strong>Applications:</strong></p>
+<ol>
+<li><strong>Aerospace &amp; Robotics</strong>: Used extensively to describe the orientation of aircraft, spacecraft, and robots.</li>
+<li><strong>Computer Graphics</strong>: Used in 3D modeling and animation to set the orientation of objects.</li>
+<li><strong>Physics</strong>: Useful in describing rotations in three-dimensional systems.</li>
+</ol>
+</li>
+<li>
+<p><strong>Pros:</strong></p>
+<ol>
+<li><strong>Intuitive Understanding</strong>: Each angle has a clear physical interpretation, making it relatively easy to visualize and understand.</li>
+<li><strong>Compact Representation</strong>: Only three angles are required to describe any orientation.</li>
+</ol>
+</li>
+<li>
+<p><strong>Cons:</strong></p>
+<ol>
+<li><strong>Gimbal Lock</strong>: This is a situation where you lose one degree of freedom, and it becomes impossible to represent certain rotations. It happens when the second rotation in a sequence aligns two of the rotational axes.</li>
+<li><strong>Not Unique</strong>: Multiple sets of Euler angles can represent the same orientation.</li>
+<li><strong>Not Always Suitable for Interpolation</strong>: Directly interpolating between two sets of Euler angles might not produce the shortest or most    intuitive rotation.</li>
+<li><strong>Numerical Stability</strong>: Repeated conversions between rotation matrices or quaternions and Euler angles can introduce numerical inaccuracies.</li>
+</ol>
+</li>
+</ul>
 </details>
-<p>Understanding eigenvalues and eigenvectors, along with related equations.
-Answer: Eigenvalues and eigenvectors describe the behavior of a linear transformation.</p>
-<h2 id="_2">****<a class="headerlink" href="#_2" title="Anchor link to this section for reference">⚓︎</a></h2>
+<h2 id="gimbal-lock"><strong>Gimbal lock</strong><a class="headerlink" href="#gimbal-lock" title="Anchor link to this section for reference">⚓︎</a></h2>
 <details class="note" open="open">
-<summary></summary>
+<summary>Have you encountered gimbal lock? Why does it occur? How to solve it?</summary>
+<p><strong>Answer:</strong> Gimbal lock occurs when a three-axis rotation representation loses a degree of freedom. It can be solved using other representations.</p>
+<ul>
+<li>
+<p><strong>Why Does It Occur?</strong></p>
+<p>To visualize this, imagine three rings representing the three rotational axes, each nested inside the other. </p>
+<ul>
+<li>The <strong>outer ring</strong> represents the first rotation (e.g., yaw).</li>
+<li>The <strong>middle ring</strong> represents the second rotation (e.g., pitch).</li>
+<li>The <strong>inner ring</strong> represents the third rotation (e.g., roll).</li>
+</ul>
+<p>When the middle ring (pitch) is rotated by <span class="arithmatex">\( \pm 90^\circ \)</span>, the outer and inner rings become coplanar. This causes the loss of one rotational degree of freedom, as two of the rotational axes align. Now, any rotation about one axis is indistinguishable from a rotation about the other axis.</p>
+</li>
+<li>
+<p><strong>How to Solve Gimbal Lock?</strong></p>
+<ol>
+<li>
+<p><strong>Avoid <span class="arithmatex">\( \pm 90^\circ \)</span> Pitch</strong>: One approach, which might not be feasible in all situations, is to avoid reaching the critical pitch angles where gimbal lock occurs. This, however, limits the range of motion.</p>
+</li>
+<li>
+<p><strong>Use Quaternions</strong>: Quaternions are a four-dimensional number system that can represent 3D orientations and rotations without suffering from gimbal lock. In many applications, especially in computer graphics and aerospace, quaternions are preferred over Euler angles for this reason. </p>
+</li>
+<li>
+<p><strong>Use Additional or Redundant Sensors</strong>: In applications like spacecraft attitude control, additional sensors can be used to determine orientation when gimbal lock is encountered.</p>
+</li>
+<li>
+<p><strong>Switch Rotation Order</strong>: Temporarily switch to a different sequence of rotations when approaching gimbal lock. However, this can be complex to implement and may not be suitable for all applications.</p>
+</li>
+<li>
+<p><strong>Use Rotation Matrices or Axis-Angle Representation</strong>: While they have their own sets of challenges, in some cases, they might offer ways to maneuver around the gimbal lock problem.</p>
+</li>
+</ol>
+</li>
+</ul>
 </details>
-<p>What are the eigenvalues of a rotation matrix?
-Answer: The eigenvalues of a rotation matrix are complex numbers with magnitude 1.</p>
-<h2 id="_3">****<a class="headerlink" href="#_3" title="Anchor link to this section for reference">⚓︎</a></h2>
+<h2 id="quaternions"><strong>Quaternions</strong><a class="headerlink" href="#quaternions" title="Anchor link to this section for reference">⚓︎</a></h2>
 <details class="note" open="open">
-<summary></summary>
+<summary>Are you familiar with quaternions? What are their roles? How can interpolation be performed?</summary>
+<p><strong>Answer:</strong> Quaternions are used to represent rotations. Spherical linear interpolation (slerp) can be used for interpolation.</p>
+<ul>
+<li>
+<p><strong>Role in 3D Rotations:</strong></p>
+<ul>
+<li>
+<p>Compact Representation: Quaternions provide a compact way to represent 3D orientations and rotations without the <code>gimbal lock</code> issue that can arise with Euler angles.</p>
+</li>
+<li>
+<p>Efficient Computation: Quaternion operations can be more computationally efficient than their matrix counterparts.</p>
+</li>
+<li>
+<p>Smooth Interpolations: Slerp (spherical linear interpolation) with quaternions can provide smooth transitions between orientations.</p>
+</li>
+<li>
+<p>Numerical Stability: Quaternions can be renormalized easily to combat numerical drift, ensuring they represent a valid rotation.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Interpolation:</strong></p>
+<p>Slerp (Spherical Linear Interpolation): This is the most common method of quaternion interpolation. Given two quaternions <span class="arithmatex">\( q_1 \)</span> and <span class="arithmatex">\( q_2 \)</span>, the interpolated quaternion <span class="arithmatex">\( q(t) \)</span> at a fraction <span class="arithmatex">\( t \)</span> between 0 and 1 is given by:</p>
+<div class="arithmatex">\[
+q(t) = \frac{\sin((1-t)\theta)}{\sin(\theta)}q_1 + \frac{\sin(t\theta)}{\sin(\theta)}q_2
+\]</div>
+<p>where <span class="arithmatex">\( \theta \)</span> is the angle between <span class="arithmatex">\( q_1 \)</span> and <span class="arithmatex">\( q_2 \)</span>.</p>
+</li>
+</ul>
 </details>
-<p>How to understand eigenvectors for a 2x2 matrix A?
-Answer: Eigenvectors of a 2x2 matrix A are vectors that do not change direction when multiplied by A.</p>
-<h2 id="_4">****<a class="headerlink" href="#_4" title="Anchor link to this section for reference">⚓︎</a></h2>
+<h2 id="monte-carlo-integration"><strong>Monte Carlo integration</strong><a class="headerlink" href="#monte-carlo-integration" title="Anchor link to this section for reference">⚓︎</a></h2>
 <details class="note" open="open">
-<summary></summary>
+<summary>What is Monte Carlo integration?</summary>
+<p><strong>Answer:</strong> Monte Carlo integration is a technique used to estimate the value of a definite integral using random sampling. It is particularly useful when dealing with high-dimensional integrals.</p>
+<p><a class="glightbox" href="../Images/MonteCarloIntegrationCircle.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="Alt text" class="center" src="../Images/MonteCarloIntegrationCircle.png" width="30%"/></a></p>
+<ul>
+<li>
+<p><strong>Procedure:</strong></p>
+<ol>
+<li>
+<p><strong>Random Sampling</strong>: Generate <span class="arithmatex">\( N \)</span> random points <span class="arithmatex">\( x_i \)</span> within the domain <span class="arithmatex">\( D \)</span>.</p>
+</li>
+<li>
+<p><strong>Evaluate Function</strong>: Evaluate <span class="arithmatex">\( f(x_i) \)</span> at each of the <span class="arithmatex">\( N \)</span> points.</p>
+</li>
+<li>
+<p><strong>Compute Average</strong>: Calculate the average value of the function over these points:</p>
+</li>
+</ol>
+<div class="arithmatex">\[ \bar{f} = \frac{1}{N} \sum_{i=1}^{N} f(x_i) \]</div>
+<ol>
+<li><strong>Estimate Integral</strong>: The integral of <span class="arithmatex">\( f(x) \)</span> over <span class="arithmatex">\( D \)</span> is approximated as:</li>
+</ol>
+<div class="arithmatex">\[ \int_D f(x) \, dx \approx \text{volume}(D) \times \bar{f} \]</div>
+</li>
+<li>
+<p><strong>Advantages:</strong></p>
+<ul>
+<li><strong>Flexibility</strong>: Can handle complex and high-dimensional integrals.</li>
+<li><strong>Simplicity</strong>: The algorithm is straightforward.</li>
+<li><strong>Parallelism</strong>: Easily parallelizable.</li>
+</ul>
+</li>
+<li>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li><strong>Convergence</strong>: The error decreases as <span class="arithmatex">\( O(N^{-1/2}) \)</span>.</li>
+<li><strong>Inefficiency</strong>: Many samples might be "wasted" in regions where the function varies little.</li>
+</ul>
+</li>
+<li>
+<p><strong>Variance Reduction:</strong></p>
+<p>To improve efficiency, various techniques can be employed:</p>
+<ul>
+<li><strong>Importance Sampling</strong>: Sampling more from regions where the function has higher values.</li>
+<li><strong>Stratified Sampling</strong>: Dividing the domain and sampling uniformly from each.</li>
+<li><strong>Antithetic Variates</strong>: Using dependent random variables to reduce variance.</li>
+</ul>
+</li>
+</ul>
 </details>
-<p>Are you familiar with the least squares method?
-Answer: The least squares method minimizes the sum of squared differences between data points and a fitted model.</p>
-<h2 id="_5">****<a class="headerlink" href="#_5" title="Anchor link to this section for reference">⚓︎</a></h2>
+<h2 id="nonlinear-to-linear"><strong>Nonlinear to linear</strong><a class="headerlink" href="#nonlinear-to-linear" title="Anchor link to this section for reference">⚓︎</a></h2>
 <details class="note" open="open">
-<summary></summary>
+<summary>How can a nonlinear problem be represented as a linear problem?</summary>
+<p>Answer: Nonlinear problems can be linearized using tangent planes or linear approximations.</p>
+<p>One common method for linearization is using a <code>Taylor series expansion</code>. </p>
+<ul>
+<li>
+<p><strong>1. One Dimension (Tangent Line)</strong></p>
+<p>For a single-variable function <span class="arithmatex">\( f(x) \)</span>, the tangent line at a point <span class="arithmatex">\( x_0 \)</span> provides a linear approximation:</p>
+<div class="arithmatex">\[
+f(x) \approx f(x_0) + f'(x_0) (x - x_0)
+\]</div>
+<p>This equation represents the linearization of <span class="arithmatex">\( f(x) \)</span> about the point <span class="arithmatex">\( x_0 \)</span>. The term <span class="arithmatex">\( f'(x_0) \)</span> is the derivative of the function at the point, which gives the slope of the tangent line.</p>
+</li>
+<li>
+<p><strong>2. Multiple Dimensions (Tangent Plane)</strong></p>
+<p>For functions of multiple variables, such as <span class="arithmatex">\( f(x, y) \)</span>, the tangent plane at a point <span class="arithmatex">\( (x_0, y_0) \)</span> provides the linear approximation:</p>
+<div class="arithmatex">\[
+f(x, y) \approx f(x_0, y_0) + f_x(x_0, y_0) (x - x_0) + f_y(x_0, y_0) (y - y_0)
+\]</div>
+<p>Here, <span class="arithmatex">\( f_x \)</span> and <span class="arithmatex">\( f_y \)</span> are the partial derivatives with respect to <span class="arithmatex">\( x \)</span> and <span class="arithmatex">\( y \)</span> respectively. The tangent plane captures the variations in the function as you move in the <span class="arithmatex">\( x \)</span> and <span class="arithmatex">\( y \)</span> directions.</p>
+</li>
+</ul>
 </details>
-<p>Do you know about Euler angles? What are they used for? What are their pros and cons?
-Answer: Euler angles represent rotations in 3D space and have issues like gimbal lock.</p>
-<h2 id="_6">****<a class="headerlink" href="#_6" title="Anchor link to this section for reference">⚓︎</a></h2>
-<details class="note" open="open">
-<summary></summary>
-</details>
-<p>Have you encountered gimbal lock? Why does it occur? How to solve it?
-Answer: Gimbal lock occurs when a three-axis rotation representation loses a degree of freedom. It can be solved using other representations.</p>
-<h2 id="_7">****<a class="headerlink" href="#_7" title="Anchor link to this section for reference">⚓︎</a></h2>
-<details class="note" open="open">
-<summary></summary>
-</details>
-<p>Are you familiar with quaternions? What are their roles? How can interpolation be performed?
-Answer: Quaternions are used to represent rotations. Spherical linear interpolation (slerp) can be used for interpolation.</p>
-<h2 id="_8">****<a class="headerlink" href="#_8" title="Anchor link to this section for reference">⚓︎</a></h2>
-<details class="note" open="open">
-<summary></summary>
-</details>
-<p>What is Monte Carlo integration?
-Answer: Monte Carlo integration is a numerical method to estimate complex integrals using random sampling.</p>
-<p>How can a nonlinear problem be represented as a linear problem?
-Answer: Nonlinear problems can be linearized using tangent planes or linear approximations.</p>
-<p>Partial differentiation of multivariable functions.
-Answer: Partial differentiation computes the rate of change of a function with respect to one variable, holding others constant.</p>
-<p>How to find extreme values of a function? Necessary and sufficient conditions?
-Answer: Extreme values can be found by analyzing critical points and endpoints. First and second derivative tests provide conditions.</p>
 <h3 id="reference"><strong>Reference</strong><a class="headerlink" href="#reference" title="Anchor link to this section for reference">⚓︎</a></h3>
 <ul>
 <li><a href="https://cdn.kastatic.org/ka-perseus-images/62a0493b8bb7f29f2655190b718be3d029e6750e.png">Picture resource 1</a></li>
@@ -6276,6 +6602,7 @@ Answer: Extreme values can be found by analyzing critical points and endpoints. 
 <li><a href="https://www.math.ucdavis.edu/~daddel/MATH22AL/MATH_22AL_New_Website/image/lab10/section_10_14.png">Picture resource 5</a></li>
 <li><a href="https://www3.ntu.edu.sg/home/ehchua/programming/opengl/images/Graphics3D_CameraPerspective.png">Picture resource 6</a></li>
 <li><a href="http://15462.courses.cs.cmu.edu/fall2015/lecture/texture/slide_011">Picture resource 7</a></li>
+<li><a href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Eulerangles.svg/300px-Eulerangles.svg.png">Picture resource 8</a></li>
 </ul>
 
   <hr>
@@ -6283,7 +6610,7 @@ Answer: Extreme values can be found by analyzing critical points and endpoints. 
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 21, 2023 06:16:55</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 22, 2023 04:18:58</span>
       
         <br>
         Created:
