@@ -6,6 +6,38 @@
 
 > This material is for related questions:
 
+??? warning "Table of contents"
+
+    - [**Convex hull**](#convex-hull)
+    - [**Dot and Cross products**](#dot-and-cross-products)
+    - [**Point in Tri**](#point-in-tri)
+    - [**Convex polygon**](#convex-polygon)
+    - [**Reflection vector**](#reflection-vector)
+    - [**Polygon area**](#polygon-area)
+    - [**3D two lines' distance**](#3d-two-lines-distance)
+    - [**Zero determinant**](#zero-determinant)
+    - [**Homogeneous coordinates**](#homogeneous-coordinates)
+    - [**Posit homo v.s. Direct homo**](#posit-homo-vs-direct-homo)
+    - [**Benifits of homo**](#benifits-of-homo)
+    - [**Ray-sphere intersection**](#ray-sphere-intersection)
+    - [**Normal matrix**](#normal-matrix)
+    - [**Clipping space transformation**](#clipping-space-transformation)
+    - [**Viewing frustum**](#viewing-frustum)
+    - [**Dimensions of vectors/matrices**](#dimensions-of-vectorsmatrices)
+    - [**M matrix**](#m-matrix)
+    - [**M matrix decomposation**](#m-matrix-decomposation)
+    - [**Order of matrix concatenation**](#order-of-matrix-concatenation)
+    - [**Orthogonal matrices**](#orthogonal-matrices)
+    - [**Eigenvalues and Eigenvectors**](#eigenvalues-and-eigenvectors)
+    - [**Rotation matrix eigenvalues**](#rotation-matrix-eigenvalues)
+    - [**Least squares method**](#least-squares-method)
+    - [**Euler angles**](#euler-angles)
+    - [**Gimbal lock**](#gimbal-lock)
+    - [**Quaternions**](#quaternions)
+    - [**Monte Carlo integration**](#monte-carlo-integration)
+    - [**Nonlinear to linear**](#nonlinear-to-linear)
+
+
 ## **Convex hull**
 
 ???+Note "How to compute the convex hull of a given set of points?"
