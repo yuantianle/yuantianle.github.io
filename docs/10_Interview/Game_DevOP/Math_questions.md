@@ -296,96 +296,402 @@
     
     - **Definition:** A square matrix $A$ is said to be orthogonal if its transpose is equal to its inverse. That is, 
 
-    $$ A^T = A^{-1} $$
+        $$ A^T = A^{-1} $$
 
-    or equivalently, 
+        or equivalently, 
 
-    $$ A^T A = AA^T = I $$
+        $$ A^T A = AA^T = I $$
 
-    where $I$ is the identity matrix of appropriate size.
+        where $I$ is the identity matrix of appropriate size.
 
     - **Characteristics of Orthogonal Matrices:**
 
-        - Preservation of Dot Product: For an orthogonal matrix $A$ and any vectors $x$ and $y$ in $\mathbb{R}^n$, the dot product of the transformed vectors remains unchanged. This means that orthogonal matrices preserve angles between vectors. i.e., 
+        1. Preservation of Dot Product: For an orthogonal matrix $A$ and any vectors $x$ and $y$ in $\mathbb{R}^n$, the dot product of the transformed vectors remains unchanged, i.e., 
 
-        $$ (Ax) \cdot (Ay) = x \cdot y $$
+            $$ 
+            (Ax) \cdot (Ay) = x \cdot y 
+            $$
 
-        - Preservation of Norm: For an orthogonal matrix $A$ and any vector $x$ in $\mathbb{R}^n$, the length (or norm) of the transformed vector remains unchanged. That is, 
+            This means that orthogonal matrices preserve angles between vectors.
+
+        2. Preservation of Norm: For an orthogonal matrix $A$ and any vector $x$ in $\mathbb{R}^n$, the length (or norm) of the transformed vector remains unchanged. That is, 
    
-        $$ ||Ax|| = ||x|| $$
+            $$ 
+            ||Ax|| = ||x|| 
+            $$
         
-        - Determinant: The determinant of an orthogonal matrix is either 1 or -1.
+        3. Determinant: The determinant of an orthogonal matrix is either 1 or -1.
 
-        - Eigenvalues: The eigenvalues of an orthogonal matrix have an absolute value of 1.
+        4. Eigenvalues: The eigenvalues of an orthogonal matrix have an absolute value of 1.
 
-        - Inverse: As per the definition, the inverse of an orthogonal matrix is its transpose.
+        5. Inverse: As per the definition, the inverse of an orthogonal matrix is its transpose.
 
-        - Rotation and Reflection: Orthogonal matrices in $\mathbb{R}^2$ and $\mathbb{R}^3$ can represent rotations (if the determinant is 1) or  reflections (if the determinant is -1).
+        6. Rotation and Reflection: Orthogonal matrices in $\mathbb{R}^2$ and $\mathbb{R}^3$ can represent rotations (if the determinant is 1) or  reflections (if the determinant is -1).
 
-## ****
+## **Eigenvalues and Eigenvectors**
 
-???+Note ""
+???+Note "Understanding eigenvalues and eigenvectors, along with related equations."
 
-Understanding eigenvalues and eigenvectors, along with related equations.
-Answer: Eigenvalues and eigenvectors describe the behavior of a linear transformation.
+    **Answer:**
 
-## ****
+    - **Definitions**
 
-???+Note ""
+        1. **Eigenvector**: A non-zero vector \( v \) such that when a matrix \( A \) multiplies it, the vector \( v \) only gets scaled (its direction may or may not change). 
 
-What are the eigenvalues of a rotation matrix?
-Answer: The eigenvalues of a rotation matrix are complex numbers with magnitude 1.
+        2. **Eigenvalue**: The scalar \( \lambda \) associated with its corresponding eigenvector. 
+       
+            $$
+            Av = \lambda v
+            $$
 
-## ****
+            where \( A \) is a matrix, \( v \) is the eigenvector, and \( \lambda \) is the eigenvalue.
 
-???+Note ""
+            Eigenvalues indicate the factor by which the eigenvector is stretched or compressed. 
 
-How to understand eigenvectors for a 2x2 matrix A?
-Answer: Eigenvectors of a 2x2 matrix A are vectors that do not change direction when multiplied by A.
+            - If \( \lambda = 1 \), vectors along the direction of the associated eigenvector remain unchanged.
+            - If \( \lambda > 1 \), vectors are stretched.
+            - If \( 0 < \lambda < 1 \), vectors are compressed.
+            - If \( \lambda < 0 \), vectors are inverted and may also be stretched or compressed.
 
-## ****
+            
+        - **Geometric Perspective on linear transformation.**
+        
+        The number of independent eigenvectors gives information about the dimensionality of the space preserved by the linear transformation.
 
-???+Note ""
+        Imagine a rubber sheet laid out on a grid. A linear transformation could stretch, compress, skew, or rotate this sheet. The eigenvectors of this transformation would be the directions where the rubber sheet is merely <u>stretched or compressed</u> (no skewing or rotation), and the eigenvalues would tell you by how much.
 
-Are you familiar with the least squares method?
-Answer: The least squares method minimizes the sum of squared differences between data points and a fitted model.
+        For a 2x2 matrix, think of it as two main actions:
 
-## ****
+        - Stretching or compressing along one direction (first eigenvector).
+        - Stretching or compressing along a perpendicular direction (second eigenvector).
+    
+    - **Determining Eigenvalues and Eigenvectors**
 
-???+Note ""
+        To find the eigenvalues of a matrix, you need to solve the characteristic equation:
+        
+        $$
+        \text{det}(A - \lambda I) = 0
+        $$
+        
+        Here, \( I \) is the identity matrix of the same size as \( A \), and "det" represents the determinant of a matrix.
 
-Do you know about Euler angles? What are they used for? What are their pros and cons?
-Answer: Euler angles represent rotations in 3D space and have issues like gimbal lock.
+        Once the eigenvalues \( \lambda \) are found, you can plug them back into the equation 
+        
+        $$
+        (A - \lambda I)v = 0
+        $$ 
+        
+        to determine the eigenvectors \( v \).
 
-## ****
+    - **Example**
 
-???+Note ""
+        Let's take a simple 2x2 matrix to illustrate the process:
+        
+        $$
+        A = \begin{bmatrix} 2 & 1 \\ 1 & 3 \end{bmatrix}
+        $$
 
-Have you encountered gimbal lock? Why does it occur? How to solve it?
-Answer: Gimbal lock occurs when a three-axis rotation representation loses a degree of freedom. It can be solved using other representations.
+        To find its eigenvalues:
 
-## ****
+        1. Subtract \( \lambda \) from the diagonal of \( A \):
+        
+        $$
+        A - \lambda I = \begin{bmatrix} 2-\lambda & 1 \\ 1 & 3-\lambda \end{bmatrix}
+        $$
 
-???+Note ""
+        2. Set the determinant of this matrix to zero and solve for \( \lambda \):
+        
+            $$
+            \text{det}(A - \lambda I) = (2-\lambda)(3-\lambda) - 1(1) = 0
+            $$
 
-Are you familiar with quaternions? What are their roles? How can interpolation be performed?
-Answer: Quaternions are used to represent rotations. Spherical linear interpolation (slerp) can be used for interpolation.
+            Solving this equation will yield the eigenvalues \( \lambda \).
 
-## ****
+            Once you have the eigenvalues, plug them back into the equation 
+        
+            $$
+            (A - \lambda I)v = 0
+            $$ 
+        
+            to get the respective eigenvectors.
 
-???+Note ""
+    - **Properties**
 
-What is Monte Carlo integration?
-Answer: Monte Carlo integration is a numerical method to estimate complex integrals using random sampling.
+        1. For a diagonal matrix, the eigenvalues are simply the diagonal entries.
 
-How can a nonlinear problem be represented as a linear problem?
-Answer: Nonlinear problems can be linearized using tangent planes or linear approximations.
+        2. The sum of the eigenvalues is equal to the trace of the matrix (the sum of its diagonal elements).
 
-Partial differentiation of multivariable functions.
-Answer: Partial differentiation computes the rate of change of a function with respect to one variable, holding others constant.
+        3. The product of the eigenvalues is equal to the determinant of the matrix.
 
-How to find extreme values of a function? Necessary and sufficient conditions?
-Answer: Extreme values can be found by analyzing critical points and endpoints. First and second derivative tests provide conditions.
+        4. If \( A \) is an \( n \times n \) matrix and \( \lambda \) is an eigenvalue of \( A \) with multiplicity \( k \), then the algebraic multiplicity (how many times \( \lambda \) appears as a root) is always greater than or equal to the geometric multiplicity (the number of independent eigenvectors associated with \( \lambda \)).
+
+
+## **Rotation matrix eigenvalues**
+
+???+Note "What are the eigenvalues of a rotation matrix?"
+
+    **Answer:** The eigenvalues of a rotation matrix are complex numbers with magnitude 1.
+
+    Given a 2x2 rotation matrix \( R \) that represents a rotation of \( \theta \) degrees (or radians) counter-clockwise around the origin, the matrix is given by:
+
+    $$
+    R = \begin{bmatrix}
+    \cos(\theta) & -\sin(\theta) \\
+    \sin(\theta) & \cos(\theta) \\
+    \end{bmatrix}
+    $$
+
+    To find its eigenvalues, we need to solve the characteristic polynomial given by:
+
+    $$
+    \text{det}(R - \lambda I) = 0
+    $$
+
+    where \( I \) is the 2x2 identity matrix.
+
+    Expanding out, we have:
+
+    $$
+    \text{det}\left( \begin{bmatrix}
+    \cos(\theta) - \lambda & -\sin(\theta) \\
+    \sin(\theta) & \cos(\theta) - \lambda \\
+    \end{bmatrix} \right) = 0
+    $$
+
+    This simplifies to:
+
+    $$
+    (\cos(\theta) - \lambda)^2 + \sin^2(\theta) = 0
+    $$
+
+    The above equation has complex solutions for all \( \theta \) except for \( \theta = 0 \) and \( \theta = \pi \) (or 0 and 180 degrees). In other words, for a genuine rotation (not identity or a reflection), the eigenvalues are complex.
+
+    The eigenvalues are:
+
+    $$
+    \lambda_1, \lambda_2 = \cos(\theta) \pm i\sin(\theta)
+    $$
+
+    This is a representation of Euler's formula:
+
+    $$
+    e^{i\theta} = \cos(\theta) + i\sin(\theta)
+    $$
+
+    So, the eigenvalues for a 2D rotation matrix are complex conjugates lying on the unit circle in the complex plane. The rotation doesn't have any real vectors that only get stretched or compressed, which is consistent with our geometric understanding that all vectors change direction except for those on the axis of rotation.
+
+## **Least squares method**
+
+???+Note "Are you familiar with the least squares method?"
+
+    **Answer:** The least squares method minimizes the sum of squared differences between data points and a fitted model.
+
+    - **Mathematical Background**
+
+        Given a set of \( n \) data points \( (x_1, y_1), (x_2, y_2), \ldots, (x_n, y_n) \) and a function \( f \) that is linear in its parameters, the goal is to find the parameters that minimize the sum of the squared residuals:
+
+        $$
+        S = \sum_{i=1}^{n} r_i^2
+        $$
+
+        where \( r_i = y_i - f(x_i) \) is the residual.
+
+        In matrix notation, this can be formulated as:
+
+        $$
+        \mathbf{A} \mathbf{x} = \mathbf{b}
+        $$
+
+        Where:
+
+          - \( \mathbf{A} \) is the design matrix.
+          - \( \mathbf{x} \) is the column vector of the parameters we wish to determine.
+          - \( \mathbf{b} \) is the column vector of the observed values.
+
+        The solution, when \( \mathbf{A} \) is overdetermined, is typically given by:
+
+        $$
+        \mathbf{x} = (\mathbf{A}^T \mathbf{A})^{-1} \mathbf{A}^T \mathbf{b}
+        $$
+
+    - **Application: Linear Regression**
+
+        A common application of the least squares method is linear regression. In this context, the goal is to find the best-fitting straight line \( y = mx + c \) to a set of data points.
+
+        For linear regression:
+
+          - \( f(x) = mx + c \)
+          - The parameters to be determined are the slope \( m \) and the y-intercept \( c \).
+
+    - **Benefits and Limitations**
+
+        - Benefits:
+
+            1. Provides a best-fitting curve or line to a dataset.
+            2. Has a clear mathematical formulation and is computationally efficient for many problems.
+
+        - Limitations:
+
+            1. Sensitive to outliers, as squaring the residuals gives more weight to large deviations.
+            2. Assumes a specific form for the underlying model (e.g., linearity for simple linear regression).
+
+## **Euler angles**
+
+???+Note "Do you know about Euler angles? What are they used for? What are their pros and cons?"
+
+    **Answer:** Euler angles represent rotations in 3D space and have issues like gimbal lock.
+   
+    ![Alt text](Images/Eulerangles.png){width="30%", : .center}
+
+    There are multiple conventions for defining Euler angles, but one common sequence is:
+
+    1. **Roll (\( \phi \))**: Rotation about the body's X-axis.
+    2. **Pitch (\( \theta \))**: Rotation about the body's Y-axis.
+    3. **Yaw (\( \psi \))**: Rotation about the body's Z-axis.
+
+    The specific order and axes of rotation can vary, leading to different conventions like Yaw-Pitch-Roll, Pitch-Yaw-Roll, etc (total 12 types).
+
+    - **Applications:**
+
+        1. **Aerospace & Robotics**: Used extensively to describe the orientation of aircraft, spacecraft, and robots.
+        2. **Computer Graphics**: Used in 3D modeling and animation to set the orientation of objects.
+        3. **Physics**: Useful in describing rotations in three-dimensional systems.
+
+    - **Pros:**
+
+        1. **Intuitive Understanding**: Each angle has a clear physical interpretation, making it relatively easy to visualize and understand.
+        2. **Compact Representation**: Only three angles are required to describe any orientation.
+
+    - **Cons:**
+
+        1. **Gimbal Lock**: This is a situation where you lose one degree of freedom, and it becomes impossible to represent certain rotations. It happens when the second rotation in a sequence aligns two of the rotational axes.
+        2. **Not Unique**: Multiple sets of Euler angles can represent the same orientation.
+        3. **Not Always Suitable for Interpolation**: Directly interpolating between two sets of Euler angles might not produce the shortest or most    intuitive rotation.
+        4. **Numerical Stability**: Repeated conversions between rotation matrices or quaternions and Euler angles can introduce numerical inaccuracies.
+
+
+## **Gimbal lock**
+
+???+Note "Have you encountered gimbal lock? Why does it occur? How to solve it?"
+
+    **Answer:** Gimbal lock occurs when a three-axis rotation representation loses a degree of freedom. It can be solved using other representations.
+
+    - **Why Does It Occur?**
+
+        To visualize this, imagine three rings representing the three rotational axes, each nested inside the other. 
+
+        - The **outer ring** represents the first rotation (e.g., yaw).
+        - The **middle ring** represents the second rotation (e.g., pitch).
+        - The **inner ring** represents the third rotation (e.g., roll).
+
+        When the middle ring (pitch) is rotated by \( \pm 90^\circ \), the outer and inner rings become coplanar. This causes the loss of one rotational degree of freedom, as two of the rotational axes align. Now, any rotation about one axis is indistinguishable from a rotation about the other axis.
+
+    - **How to Solve Gimbal Lock?**
+
+        1. **Avoid \( \pm 90^\circ \) Pitch**: One approach, which might not be feasible in all situations, is to avoid reaching the critical pitch angles where gimbal lock occurs. This, however, limits the range of motion.
+
+        2. **Use Quaternions**: Quaternions are a four-dimensional number system that can represent 3D orientations and rotations without suffering from gimbal lock. In many applications, especially in computer graphics and aerospace, quaternions are preferred over Euler angles for this reason. 
+
+        3. **Use Additional or Redundant Sensors**: In applications like spacecraft attitude control, additional sensors can be used to determine orientation when gimbal lock is encountered.
+
+        4. **Switch Rotation Order**: Temporarily switch to a different sequence of rotations when approaching gimbal lock. However, this can be complex to implement and may not be suitable for all applications.
+
+        5. **Use Rotation Matrices or Axis-Angle Representation**: While they have their own sets of challenges, in some cases, they might offer ways to maneuver around the gimbal lock problem.
+
+## **Quaternions**
+
+???+Note "Are you familiar with quaternions? What are their roles? How can interpolation be performed?"
+
+    **Answer:** Quaternions are used to represent rotations. Spherical linear interpolation (slerp) can be used for interpolation.
+
+    - **Role in 3D Rotations:**
+
+        - Compact Representation: Quaternions provide a compact way to represent 3D orientations and rotations without the `gimbal lock` issue that can arise with Euler angles.
+
+        - Efficient Computation: Quaternion operations can be more computationally efficient than their matrix counterparts.
+
+        - Smooth Interpolations: Slerp (spherical linear interpolation) with quaternions can provide smooth transitions between orientations.
+
+        - Numerical Stability: Quaternions can be renormalized easily to combat numerical drift, ensuring they represent a valid rotation.
+
+    - **Interpolation:**
+
+        Slerp (Spherical Linear Interpolation): This is the most common method of quaternion interpolation. Given two quaternions \( q_1 \) and \( q_2 \), the interpolated quaternion \( q(t) \) at a fraction \( t \) between 0 and 1 is given by:
+
+        $$
+        q(t) = \frac{\sin((1-t)\theta)}{\sin(\theta)}q_1 + \frac{\sin(t\theta)}{\sin(\theta)}q_2
+        $$
+
+        where \( \theta \) is the angle between \( q_1 \) and \( q_2 \).
+
+## **Monte Carlo integration**
+
+???+Note "What is Monte Carlo integration?"
+
+    **Answer:** Monte Carlo integration is a technique used to estimate the value of a definite integral using random sampling. It is particularly useful when dealing with high-dimensional integrals.
+
+    ![Alt text](Images/MonteCarloIntegrationCircle.png){width="30%", : .center}
+
+    - **Procedure:**
+
+        1. **Random Sampling**: Generate \( N \) random points \( x_i \) within the domain \( D \).
+
+        2. **Evaluate Function**: Evaluate \( f(x_i) \) at each of the \( N \) points.
+
+        3. **Compute Average**: Calculate the average value of the function over these points:
+   
+        $$ \bar{f} = \frac{1}{N} \sum_{i=1}^{N} f(x_i) $$
+
+        4. **Estimate Integral**: The integral of \( f(x) \) over \( D \) is approximated as:
+   
+        $$ \int_D f(x) \, dx \approx \text{volume}(D) \times \bar{f} $$
+
+    - **Advantages:**
+
+        - **Flexibility**: Can handle complex and high-dimensional integrals.
+        - **Simplicity**: The algorithm is straightforward.
+        - **Parallelism**: Easily parallelizable.
+
+    - **Disadvantages:**
+
+        - **Convergence**: The error decreases as \( O(N^{-1/2}) \).
+        - **Inefficiency**: Many samples might be "wasted" in regions where the function varies little.
+
+    - **Variance Reduction:**
+
+        To improve efficiency, various techniques can be employed:
+
+        - **Importance Sampling**: Sampling more from regions where the function has higher values.
+        - **Stratified Sampling**: Dividing the domain and sampling uniformly from each.
+        - **Antithetic Variates**: Using dependent random variables to reduce variance.
+
+## **Nonlinear to linear**
+
+???+Note "How can a nonlinear problem be represented as a linear problem?" 
+
+    Answer: Nonlinear problems can be linearized using tangent planes or linear approximations.
+
+    One common method for linearization is using a `Taylor series expansion`. 
+    
+    - **1. One Dimension (Tangent Line)**
+
+        For a single-variable function \( f(x) \), the tangent line at a point \( x_0 \) provides a linear approximation:
+
+        $$
+        f(x) \approx f(x_0) + f'(x_0) (x - x_0)
+        $$
+
+        This equation represents the linearization of \( f(x) \) about the point \( x_0 \). The term \( f'(x_0) \) is the derivative of the function at the point, which gives the slope of the tangent line.
+
+    - **2. Multiple Dimensions (Tangent Plane)**
+
+        For functions of multiple variables, such as \( f(x, y) \), the tangent plane at a point \( (x_0, y_0) \) provides the linear approximation:
+
+        $$
+        f(x, y) \approx f(x_0, y_0) + f_x(x_0, y_0) (x - x_0) + f_y(x_0, y_0) (y - y_0)
+        $$
+
+        Here, \( f_x \) and \( f_y \) are the partial derivatives with respect to \( x \) and \( y \) respectively. The tangent plane captures the variations in the function as you move in the \( x \) and \( y \) directions.
 
 ### **Reference**
 
@@ -396,3 +702,4 @@ Answer: Extreme values can be found by analyzing critical points and endpoints. 
 - [Picture resource 5](https://www.math.ucdavis.edu/~daddel/MATH22AL/MATH_22AL_New_Website/image/lab10/section_10_14.png)
 - [Picture resource 6](https://www3.ntu.edu.sg/home/ehchua/programming/opengl/images/Graphics3D_CameraPerspective.png)
 - [Picture resource 7](http://15462.courses.cs.cmu.edu/fall2015/lecture/texture/slide_011)
+- [Picture resource 8](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Eulerangles.svg/300px-Eulerangles.svg.png)
