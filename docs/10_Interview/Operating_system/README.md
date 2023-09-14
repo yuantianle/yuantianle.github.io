@@ -3,11 +3,35 @@ comments: true
 ᴴₒᴴₒᴴₒ: ture
 ---
 
-# ** 👨‍💻 Operating System**
+# **👨‍💻 Operating System**
 
 > Interview Questions for Operating System
 
-- [**What is Operating System**](#what-is-operating-system)
+!!!+note "Table of Content"
+
+    - [**Operating System**](#operating-system)
+    - [**Classifications of OS**](#classifications-of-os)
+    - [**OS components**](#os-components)
+    - [**Process and thread**](#process-and-thread)
+    - [**Different states of processes**](#different-states-of-processes)
+    - [\*\*Parameters for process scheduling \*\*](#parameters-for-process-scheduling-)
+    - [**Necessity of process**](#necessity-of-process)
+    - [**Different process scheduling algorithms (PSA)**](#different-process-scheduling-algorithms-psa)
+    - [**Objectives of PSA**](#objectives-of-psa)
+    - [**Critical section problem \& solution**](#critical-section-problem--solution)
+    - [**Synchronization Tools**](#synchronization-tools)
+    - [**Deadlock**](#deadlock)
+    - [**Memory Management**](#memory-management)
+    - [**Memory Management Techniques**](#memory-management-techniques)
+    - [**Paging \& Segmentation**](#paging--segmentation)
+    - [**Logic memory \& Virtual memory**](#logic-memory--virtual-memory)
+    - [**Page Fault**](#page-fault)
+    - [**File System**](#file-system)
+    - [**File Directories**](#file-directories)
+    - [\*\* Disk time \*\*](#-disk-time-)
+    - [**Buffer**](#buffer)
+    - [**Disk Scheduling Algorithms**](#disk-scheduling-algorithms)
+
 
 
 ### **Operating System**
@@ -295,7 +319,7 @@ comments: true
     
     - **Indexed Allocation:** It addresses many of the problems of contiguous and chained allocation. In this case, the file allocation table contains a <u>separate one-level index</u> for each file
     
-### ** Disk time ** 
+### **Disk time** 
 
 ??? question "Click for answers 👇"
 
