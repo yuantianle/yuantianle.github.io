@@ -7,7 +7,7 @@ comments: true
 
 > Interview Questions for Operating System
 
-!!!+note "Table of Content"
+???+note "Table of Content"
 
     - [**Operating System**](#operating-system)
     - [**Classifications of OS**](#classifications-of-os)
