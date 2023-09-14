@@ -14,7 +14,7 @@ comments: true
     - [**OS components**](#os-components)
     - [**Process and thread**](#process-and-thread)
     - [**Different states of processes**](#different-states-of-processes)
-    - [\*\*Parameters for process scheduling \*\*](#parameters-for-process-scheduling-)
+    - [**Parameters for process scheduling**](#parameters-for-process-scheduling-)
     - [**Necessity of process**](#necessity-of-process)
     - [**Different process scheduling algorithms (PSA)**](#different-process-scheduling-algorithms-psa)
     - [**Objectives of PSA**](#objectives-of-psa)
@@ -28,7 +28,7 @@ comments: true
     - [**Page Fault**](#page-fault)
     - [**File System**](#file-system)
     - [**File Directories**](#file-directories)
-    - [\*\* Disk time \*\*](#-disk-time-)
+    - [**Disk time**](#-disk-time-)
     - [**Buffer**](#buffer)
     - [**Disk Scheduling Algorithms**](#disk-scheduling-algorithms)
 
