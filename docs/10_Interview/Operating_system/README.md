@@ -354,7 +354,7 @@ comments: true
 
 #### **References:**
 
-- [SQL Tutorial](https://www.geeksforgeeks.org/commonly-asked-operating-systems-interview-questions/?ref=lbp)]
+- [SQL Tutorial](https://www.geeksforgeeks.org/commonly-asked-operating-systems-interview-questions/?ref=lbp)
 - [Last Minute Notes – Operating Systems](https://www.geeksforgeeks.org/last-minute-notes-operating-systems/?ref=lbp)
 - [Concurrency vs. Parallelism](https://jenkov.com/tutorials/java-concurrency/concurrency-vs-parallelism.html#:~:text=Thus%2C%20the%20threads%20executed%20on,CPUs%20are%20executed%20in%20parallel.)
 - [Image Resource 1](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.learncomputerscienceonline.com%2Foperating-system%2F&psig=AOvVaw3VcjEWrCoDpv64FY_LqyrY&ust=1681838404932000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJCM3ru2sf4CFQAAAAAdAAAAABAb)
