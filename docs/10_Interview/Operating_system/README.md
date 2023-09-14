@@ -129,7 +129,7 @@ comments: true
         - The remaining processes are either in a <u>waiting state</u> or a <u>ready state</u>. 
         - In a real operating system, the <u>waiting and ready states</u> are implemented as *queues* that hold the processes in these states.
 
-### **Parameters for process scheduling **
+### **Parameters for process scheduling**
 
 ??? question "Click for answers 👇"
 
