@@ -376,5 +376,11 @@ comments: true
 
     ![picture 19](pictures/sha1.png){width="80%", : .center}  
 
+## **folder**
 
+???note "`mkdir`"
+
+    Create folder:
+
+    ![Alt text](pictures/mkdir.png){width="80%", : .center}
 
