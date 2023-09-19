@@ -184,6 +184,13 @@ comments: true
 
         ![picture 20](pictures/cat2.png){width="80%", : .center}   
 
+    !!!warning ""
+
+        `cat` is primarily used for displaying the entire contents of one or more text files in the terminal.
+
+        `less` is a pager utility designed for viewing and navigating through large text files or long outputs that don't fit on a single screen.
+
+
 ## **man**  
 
 ???note "`man`"
@@ -212,6 +219,20 @@ comments: true
           - Has `search` options. 
           - Can go to the `beginning` and the `end` of a file instantly. 
           - Can switch to an `editor` (like opening the file in `vi` or `vim`). 
+
+        !!!warning ""
+        
+            `Arrow keys`: Scroll up and down.
+
+            `/`: Start a forward search.
+
+            `?`: Start a backward search.
+
+            `n`: Move to the next search result.
+
+            `N`: Move to the previous search result.
+
+            `q`: Quit the less viewer.
     
         It is {==noticeably quicker than editor==} when the file is large.
 
@@ -354,7 +375,7 @@ comments: true
 
     `Bash` commands can be used not only in **command lines** but also in **scripts**. The head of `Bash script` should mention using **Bash shell** with `#!`.
     
-    **e.g:** With `#!/bin/bash`, generate SHA hash for `[A-Za-z0-9]`:
+    **e.g:** With `#!/bin/bash`, generate SHA hash for `[A-Za-z0-9]`: (More [bashscript learning](https://www.geeksforgeeks.org/bash-scripting-introduction-to-bash-and-bash-scripting/))
 
     ![picture 23](pictures/shabang.png){width="60%", : .center}
 
@@ -387,6 +408,26 @@ comments: true
     Create folder:
 
     ![Alt text](pictures/mkdir.png){width="80%", : .center}
+
+???note "`cp`"
+
+    - To copy a file to another location: `cp <sourcefile> <destination>`
+
+        **e.g.** cp myfile.txt /path/to/destination/
+
+    - To copy a folder and its contents recursively: `cp -r <sourcefolder> <destination>`
+
+        **e.g.** cp -r myfolder/ /path/to/destination/
+
+???note "`mv`"
+
+    - To move(cut) a file to another location: `cp <sourcefile> <destination>`
+
+        **e.g.** mv myfile.txt /path/to/destination/
+
+    - To move(cut) a folder and its contents recursively: `cp <sourcefolder> <destination>`
+
+        **e.g.** mv myfolder/ /path/to/destination/
 
 ???note "`rmdir`"
 
@@ -528,22 +569,55 @@ comments: true
 
     !!! note ""
 
-        -a: Shows all sockets (both listening and non-listening).
+        `-a`: Shows all sockets (both listening and non-listening).
 
-        -l: Includes listening sockets.
+        `-l`: Includes listening sockets.
 
-        -n: Displays numerical IP addresses instead of resolving hostnames.
+        `-n`: Displays numerical IP addresses instead of resolving hostnames.
 
-        -o: Shows additional information.
+        `-o`: Shows additional information.
 
-        -r: Displays the routing table.
+        `-r`: Displays the routing table.
 
-        -t: Lists only TCP sockets.
+        `-t`: Lists only TCP sockets.
 
-        -u: Lists only UDP sockets.
+        `-u`: Lists only UDP sockets.
 
-        -w: Lists only raw sockets.
+        `-w`: Lists only raw sockets.
 
-        -x: Lists only Unix Domain sockets.
+        `-x`: Lists only Unix Domain sockets.
 
+## **Process**
+
+???note "`ps`"
     
+    The `ps` command is used to display information about running processes on the system.
+
+      - To list processes for the current user: `ps`
+
+        ![Alt text](pictures/ps.png){width="80%", : .center}
+
+      - To list all processes on the system: `ps aux`
+      - 
+        ![Alt text](pictures/psaux.png){width="80%", : .center}
+
+???note "`pgrep`"
+    
+    The `pgrep` command is used to search for processes based on their names or other attributes and retrieve their PIDs (Process IDs).
+
+
+???note "`top`"
+
+    The `top` command provides a dynamic, real-time view of system processes and their resource usage.
+    
+    ![Alt text](pictures/top.png){width="80%", : .center}
+
+???note "`kill`"
+
+    use `kill` when you know the specific <u>PID</u> of the process you want to terminate.
+
+      - `kill 1234`
+    
+    use `pkill` when you want to terminate processes based on their <u>names</u> or <u>attributes</u>.
+
+      - `pkill myprocess`
