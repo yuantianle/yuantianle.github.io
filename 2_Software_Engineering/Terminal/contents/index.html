@@ -2494,6 +2494,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#process" class="md-nav__link">
+    Process
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -6119,6 +6126,10 @@
 </div>
 </div>
 </div>
+<div class="admonition warning">
+<p><code>cat</code> is primarily used for displaying the entire contents of one or more text files in the terminal.</p>
+<p><code>less</code> is a pager utility designed for viewing and navigating through large text files or long outputs that don't fit on a single screen.</p>
+</div>
 </details>
 <h2 id="man"><strong>man</strong><a class="headerlink" href="#man" title="Anchor link to this section for reference">⚓︎</a></h2>
 <details class="note">
@@ -6146,6 +6157,14 @@
 <li>Can go to the <code>beginning</code> and the <code>end</code> of a file instantly. </li>
 <li>Can switch to an <code>editor</code> (like opening the file in <code>vi</code> or <code>vim</code>). </li>
 </ul>
+<div class="admonition warning">
+<p><code>Arrow keys</code>: Scroll up and down.</p>
+<p><code>/</code>: Start a forward search.</p>
+<p><code>?</code>: Start a backward search.</p>
+<p><code>n</code>: Move to the next search result.</p>
+<p><code>N</code>: Move to the previous search result.</p>
+<p><code>q</code>: Quit the less viewer.</p>
+</div>
 <p>It is <mark class="critic">noticeably quicker than editor</mark> when the file is large.</p>
 </div>
 <div class="tabbed-block">
@@ -6278,7 +6297,7 @@
 <details class="note">
 <summary><code>#!</code></summary>
 <p><code>Bash</code> commands can be used not only in <strong>command lines</strong> but also in <strong>scripts</strong>. The head of <code>Bash script</code> should mention using <strong>Bash shell</strong> with <code>#!</code>.</p>
-<p><strong>e.g:</strong> With <code>#!/bin/bash</code>, generate SHA hash for <code>[A-Za-z0-9]</code>:</p>
+<p><strong>e.g:</strong> With <code>#!/bin/bash</code>, generate SHA hash for <code>[A-Za-z0-9]</code>: (More <a href="https://www.geeksforgeeks.org/bash-scripting-introduction-to-bash-and-bash-scripting/">bashscript learning</a>)</p>
 <p><a class="glightbox" href="../pictures/shabang.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="picture 23" class="center" src="../pictures/shabang.png" width="60%"/></a></p>
 <details class="question" open="open">
 <summary>How to run a bash script?</summary>
@@ -6309,6 +6328,32 @@
 <summary><code>mkdir</code></summary>
 <p>Create folder:</p>
 <p><a class="glightbox" href="../pictures/mkdir.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="Alt text" class="center" src="../pictures/mkdir.png" width="80%"/></a></p>
+</details>
+<details class="note">
+<summary><code>cp</code></summary>
+<ul>
+<li>
+<p>To copy a file to another location: <code>cp &lt;sourcefile&gt; &lt;destination&gt;</code></p>
+<p><strong>e.g.</strong> cp myfile.txt /path/to/destination/</p>
+</li>
+<li>
+<p>To copy a folder and its contents recursively: <code>cp -r &lt;sourcefolder&gt; &lt;destination&gt;</code></p>
+<p><strong>e.g.</strong> cp -r myfolder/ /path/to/destination/</p>
+</li>
+</ul>
+</details>
+<details class="note">
+<summary><code>mv</code></summary>
+<ul>
+<li>
+<p>To move(cut) a file to another location: <code>cp &lt;sourcefile&gt; &lt;destination&gt;</code></p>
+<p><strong>e.g.</strong> mv myfile.txt /path/to/destination/</p>
+</li>
+<li>
+<p>To move(cut) a folder and its contents recursively: <code>cp &lt;sourcefolder&gt; &lt;destination&gt;</code></p>
+<p><strong>e.g.</strong> mv myfolder/ /path/to/destination/</p>
+</li>
+</ul>
 </details>
 <details class="note">
 <summary><code>rmdir</code></summary>
@@ -6436,16 +6481,53 @@
 <p>Display Network Status: the <code>netstat</code> command is used to display <u>network-related information</u>. It provides various options to control what information is displayed:</p>
 <p><a class="glightbox" href="../pictures/netstat.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="Alt text" class="center" src="../pictures/netstat.png" width="80%"/></a></p>
 <div class="admonition note">
-<p>-a: Shows all sockets (both listening and non-listening).</p>
-<p>-l: Includes listening sockets.</p>
-<p>-n: Displays numerical IP addresses instead of resolving hostnames.</p>
-<p>-o: Shows additional information.</p>
-<p>-r: Displays the routing table.</p>
-<p>-t: Lists only TCP sockets.</p>
-<p>-u: Lists only UDP sockets.</p>
-<p>-w: Lists only raw sockets.</p>
-<p>-x: Lists only Unix Domain sockets.</p>
+<p><code>-a</code>: Shows all sockets (both listening and non-listening).</p>
+<p><code>-l</code>: Includes listening sockets.</p>
+<p><code>-n</code>: Displays numerical IP addresses instead of resolving hostnames.</p>
+<p><code>-o</code>: Shows additional information.</p>
+<p><code>-r</code>: Displays the routing table.</p>
+<p><code>-t</code>: Lists only TCP sockets.</p>
+<p><code>-u</code>: Lists only UDP sockets.</p>
+<p><code>-w</code>: Lists only raw sockets.</p>
+<p><code>-x</code>: Lists only Unix Domain sockets.</p>
 </div>
+</details>
+<h2 id="process"><strong>Process</strong><a class="headerlink" href="#process" title="Anchor link to this section for reference">⚓︎</a></h2>
+<details class="note">
+<summary><code>ps</code></summary>
+<p>The <code>ps</code> command is used to display information about running processes on the system.</p>
+<ul>
+<li>
+<p>To list processes for the current user: <code>ps</code></p>
+<p><a class="glightbox" href="../pictures/ps.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="Alt text" class="center" src="../pictures/ps.png" width="80%"/></a></p>
+</li>
+<li>
+<p>To list all processes on the system: <code>ps aux</code></p>
+</li>
+<li>
+<p><a class="glightbox" href="../pictures/psaux.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="Alt text" class="center" src="../pictures/psaux.png" width="80%"/></a></p>
+</li>
+</ul>
+</details>
+<details class="note">
+<summary><code>pgrep</code></summary>
+<p>The <code>pgrep</code> command is used to search for processes based on their names or other attributes and retrieve their PIDs (Process IDs).</p>
+</details>
+<details class="note">
+<summary><code>top</code></summary>
+<p>The <code>top</code> command provides a dynamic, real-time view of system processes and their resource usage.</p>
+<p><a class="glightbox" href="../pictures/top.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="Alt text" class="center" src="../pictures/top.png" width="80%"/></a></p>
+</details>
+<details class="note">
+<summary><code>kill</code></summary>
+<p>use <code>kill</code> when you know the specific <u>PID</u> of the process you want to terminate.</p>
+<ul>
+<li><code>kill 1234</code></li>
+</ul>
+<p>use <code>pkill</code> when you want to terminate processes based on their <u>names</u> or <u>attributes</u>.</p>
+<ul>
+<li><code>pkill myprocess</code></li>
+</ul>
 </details>
 
   <hr>
@@ -6453,7 +6535,7 @@
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 19, 2023 00:53:05</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 19, 2023 02:56:49</span>
       
         <br>
         Created:
