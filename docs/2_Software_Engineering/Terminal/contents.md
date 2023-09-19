@@ -278,9 +278,13 @@ comments: true
 
 ???note "`ln -s`"   
 
-    Create a `soft link` for an <u>existing file</u>.
+    Create a `soft link` for an <u>existing file</u>. 
+    
+    Grammar: `ln -s <a: original file> <b: soft link file>`
 
-    ![picture 26](pictures/ln.png){width="80%", : .center}     
+    ![picture 26](pictures/ln.png){width="80%", : .center}
+
+    We can use `rm -rf <b>` to delete the soft link.
 
 ## **Background Processing (&)**
 
@@ -384,3 +388,162 @@ comments: true
 
     ![Alt text](pictures/mkdir.png){width="80%", : .center}
 
+???note "`rmdir`"
+
+    Clear folder; `rmdir` only works on empty directories. If a directory contains files or subdirectories, `rmdir` will not remove it and will display an error message.
+
+    ![Alt text](pictures/rmdir.png){width="80%", : .center}
+
+???note "`rm -rf`"
+    
+    `rm -rf` is used for forcefully and recursively removing directories and their contents, including non-empty directories.
+
+      - `-f` force; delete without informing and ignore unexistant files/para.
+      - `r` recursive; recursivly delete the directory and its contents.
+
+    ![Alt text](pictures/rm-rf.png){width="80%", : .center}
+
+???note "`du -h`"
+
+    Used to display the size of a directory or file.
+
+      - `-h` human-readable; In units K, M, G, improve the readability of information.
+
+    ![Alt text](pictures/du.png){width="80%", : .center}
+
+## **disk**
+
+???note "`df -T -h`"
+
+    Disk free (`df`); Check disk space usage:
+
+      `-T:` This option is used to display the file system type for each file system.
+      `-h`: This option is used to display sizes in a human-readable format (e.g., in gigabytes, megabytes, etc.) rather than in raw blocks.
+    
+    ![Alt text](pictures/df-T-h.png){width="80%", : .center}
+
+???note "`fdisk -l`"
+
+    Fixed disk (`fdisk`); List disk partitions:
+
+      `-l`: This option stands for "list" and is used to list the partition table for all available storage devices.
+    
+    ![Alt text](pictures/fdisk.png){width="80%", : .center}
+
+
+???note "`mount`"
+
+    Mount Disk Partitions:
+
+    Grammar: `mount -t <filesystem_type> <device> <mount_point>`
+
+    `<device>`: This should be replaced with the device or partition you want to mount. It can be specified as a device file, such as **/dev/sda1**, or a UUID (Universally Unique Identifier) for the device.
+
+    `<mount_point>`: This should be replaced with the directory where you want to mount the file system. This directory should already exist. For example, if you want to mount the file system on a directory called **/mnt/mydata**, you would replace <mount_point> with **/mnt/mydata**.
+
+      - Mount an ISO9660 file system (e.g., for CD/DVD):
+
+        `mount -t iso9660 <device> <mount_point>`
+
+      - Mount a VFAT (FAT32) file system:
+
+        `mount -t vfat <device> <mount_point>`
+
+      - Mount a ext4 file system:
+
+        `mount -t ext4 <device> <mount_point>`
+
+
+???note "`umount`"
+
+    Unmount a specific device (replace <category> with the actual category):
+
+      - `umount <mount_point>`
+
+    Unmount all mounted filesystems:
+
+      - `umount -a`
+
+## **ZIP**
+
+???note "**Compress**"
+
+    1. Compress a file or directory into a `.tar.gz` file:
+
+        `tar -czvf archive.tar.gz file1 file2 ...`
+
+    2. Compress a file or directory into a `.tar.bz2` file:
+
+        `tar -cjvf archive.tar.bz2 file1 file2 ...`
+    
+    3. Compress a file or directory into a `.zip` file:
+
+        `zip -r archive.zip file1 file2 ...`
+
+    !!! note ""
+        
+        `-c`: This option stands for "create" and instructs tar to create a new archive.
+    
+        `-v`: This option stands for "verbose" and makes tar display the names of the files it is archiving as it processes them. It provides additional information during the archiving process.
+    
+        `-f`: filename.tar: This option specifies the filename of the tar archive that will be created. In this case, it will be named **filename.tar**.
+    
+        `-z/-j:` For gzip/bzip2 compressed or decompressed algorithms.
+    
+        `-r`: This option stands for "append." It instructs tar to add files or directories to an existing tar archive.
+
+???note "**DeCompress**"
+
+    1. Extract files from a `.tar.gz` archive:
+        
+        `tar -xzvf archive.tar.gz`
+
+    2. Extract files from a `.tar.bz2` archive:
+
+        `tar -xjvf archive.tar.bz2`
+
+    3. Extract files from a `.zip` archive:
+
+        `unzip archive.zip`
+
+## **Networking**
+
+???note "`ifconfig`"
+
+    Display Network Interface Parameters: this command is used to display information about <u>network interfaces</u> on your system, including **IP addresses**, **MAC addresses**, and **other network-related settings**.
+
+    ![Alt text](pictures/ifconfig.png){width="80%", : .center}
+
+???note "`ping`"
+    
+    Check Connectivity: the `ping` command is used to test <u>network connectivity</u> to a specific IP address (replace xxx.xxx.xxx.xxx with the target IP address). It sends ICMP echo request packets to the target and waits for responses, <u>allowing you to check if a remote host is reachable</u>.
+
+    ![Alt text](pictures/ping.png){width="80%", : .center}
+
+???note "`netstat`"
+    
+    Display Network Status: the `netstat` command is used to display <u>network-related information</u>. It provides various options to control what information is displayed:
+
+    ![Alt text](pictures/netstat.png){width="80%", : .center}
+
+    !!! note ""
+
+        -a: Shows all sockets (both listening and non-listening).
+
+        -l: Includes listening sockets.
+
+        -n: Displays numerical IP addresses instead of resolving hostnames.
+
+        -o: Shows additional information.
+
+        -r: Displays the routing table.
+
+        -t: Lists only TCP sockets.
+
+        -u: Lists only UDP sockets.
+
+        -w: Lists only raw sockets.
+
+        -x: Lists only Unix Domain sockets.
+
+    
