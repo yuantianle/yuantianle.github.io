@@ -55,11 +55,11 @@
 }
 
 [data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__scrollwrap{
-    background-color: #0000007c;
+    background-color: #000000bf;
 }
 
 [data-md-color-scheme="default"] .md-sidebar--primary .md-sidebar__scrollwrap{
-    background-color: #ffffff60;
+    background-color: #d8ebffe9;
 }
 /*For normal*/
 
