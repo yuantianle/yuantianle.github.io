@@ -47,11 +47,11 @@
 }
 
 [data-md-color-scheme="default"] .md-content{
-    background-color: #f9fcffd6;
+    background-color: #d8ebffe9;
 }
 
 [data-md-color-scheme="slate"] .md-content{
-    background-color: #0000007c;
+    background-color: #000000bf;
 }
 
 [data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__scrollwrap{
