@@ -153,8 +153,8 @@ markdown_extensions:
       toc_depth: 2
       title: On this page
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji 
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - md_in_html
 
   - pymdownx.superfences:
@@ -185,7 +185,12 @@ nav:
 
       - Arts: 
         - 1_Computer_Graphics/Art/README.md
-      
+    - Game Dev:
+      - 11_Game_Development/README.md
+      - Unity:
+        - 11_Game_Development/Unity/README.md
+      - unreal:
+        - 11_Game_Development/Unreal/README.md
     - SDE: 
       - 2_Software_Engineering/README.md
       
