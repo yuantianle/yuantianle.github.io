@@ -12,7 +12,7 @@
       
       
       <link rel="icon" href="../../../../images/self.ico">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.35">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.36">
     
     
       
@@ -20,7 +20,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.06209087.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -6165,11 +6165,56 @@
 
 <h1 id="unity-graph-debug"><strong>Unity Graph Debug</strong><a class="headerlink" href="#unity-graph-debug" title="Anchor link to this section for reference">⚓︎</a></h1>
 <p>Here are several tools under the IDE for debugging the CPU and GPU.</p>
-<p><strong><code>Memory profiler</code>:</strong> Test CPU</p>
-<p><strong><code>Profiler</code>:</strong> See the time spend in CPU and GPU</p>
-<p><strong><code>Frame Debugger</code>:</strong> See the renderping pipeline frame by frame</p>
-<p><strong><code>Rendering Debugger</code></strong>: Debug specific part in the GPU pipeline</p>
-<p><strong><code>Rendering Graph Viewer</code>:</strong> Look what node in the GPU pipeline the component (e.g. texture) is using</p>
+<h2 id="memory-profiler"><strong>Memory profiler</strong><a class="headerlink" href="#memory-profiler" title="Anchor link to this section for reference">⚓︎</a></h2>
+<details class="note" open="open">
+<summary>When to use <strong><code>Memory profiler</code>?</strong></summary>
+<ul>
+<li>Monitors <strong>real-time memory usage</strong> for both <strong>managed</strong> and <strong>native memory</strong>.</li>
+<li>Identifies memory <strong>allocations</strong> and <strong>leaks</strong> to optimize <strong>RAM</strong> usage.</li>
+<li>Tracks memory allocation per <strong>object type</strong>, helping pinpoint areas of high <strong>memory consumption</strong>.</li>
+</ul>
+</details>
+<h2 id="profiler"><strong>Profiler</strong>:<a class="headerlink" href="#profiler" title="Anchor link to this section for reference">⚓︎</a></h2>
+<details class="note" open="open">
+<summary>When to use <strong><code>Profiler</code>?</strong></summary>
+<ul>
+<li>Tracks <strong>CPU and GPU performance</strong> in terms of time spent on different tasks.</li>
+<li>Provides a breakdown of <strong>scripts</strong>, <strong>rendering</strong>, <strong>physics</strong>, and <strong>other processes</strong>.</li>
+<li>Identifies <strong>bottlenecks</strong> by showing <strong>frame time</strong> and <strong>resource usage</strong>.</li>
+</ul>
+</details>
+<p><a class="glightbox" href="../Profiler.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img :=":" _="," alt="alt text" class="center" src="../Profiler.png" width="50%"/></a></p>
+<h2 id="frame-debugger"><strong>Frame Debugger</strong>:<a class="headerlink" href="#frame-debugger" title="Anchor link to this section for reference">⚓︎</a></h2>
+<details class="note" open="open">
+<summary>When to use <strong><code>Frame Debugger</code>?</strong></summary>
+<ul>
+<li>Allows you to <strong>step through frames</strong> to visualize each <strong>draw call</strong>.</li>
+<li>Helps understand the <strong>order of operations</strong> in the rendering pipeline.</li>
+<li>Useful for debugging <strong>overdraw</strong>, <strong>incorrect rendering order</strong>, and other <strong>rendering issues</strong>.</li>
+</ul>
+</details>
+<h2 id="rendering-debugger"><strong>Rendering Debugger</strong>:<a class="headerlink" href="#rendering-debugger" title="Anchor link to this section for reference">⚓︎</a></h2>
+<details class="note" open="open">
+<summary>When to use <strong><code>Rendering Debugger</code>?</strong></summary>
+<ul>
+<li>Focuses on specific <strong>stages of the GPU pipeline</strong>.</li>
+<li>Helps debug <strong>shader issues</strong>, <strong>pipeline state</strong>, and <strong>resource binding</strong>.</li>
+<li>Useful for troubleshooting <strong>rendering artifacts</strong> or <strong>GPU-related bugs</strong>.</li>
+</ul>
+</details>
+<h2 id="rendering-graph-viewer"><strong>Rendering Graph Viewer</strong>:<a class="headerlink" href="#rendering-graph-viewer" title="Anchor link to this section for reference">⚓︎</a></h2>
+<details class="note" open="open">
+<summary>When to use <strong><code>Rendering Graph Viewer</code>?</strong></summary>
+<ul>
+<li>Visualizes the <strong>rendering pipeline nodes</strong>.</li>
+<li>Shows how resources like <strong>textures</strong>, <strong>buffers</strong>, and <strong>shaders</strong> are used in each stage.</li>
+<li>Helps optimize <strong>resource allocation</strong> and <strong>GPU performance</strong>.</li>
+</ul>
+</details>
+<h3 id="reference"><strong>Reference</strong><a class="headerlink" href="#reference" title="Anchor link to this section for reference">⚓︎</a></h3>
+<ul>
+<li><a href="https://docs.unity3d.com/Manual/Profiler.html">Profiler overview</a></li>
+</ul>
 
 
 
@@ -6192,7 +6237,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 21, 2024 07:14:09</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 21, 2024 20:11:54</span>
   </span>
 
     
