@@ -45,6 +45,7 @@ theme:
 
 extra_css:
   - stylesheets/extra.css
+  - stylesheets/fancybox.css
 
 extra_javascript:
   - javascripts/mathjax.js
@@ -54,6 +55,7 @@ extra_javascript:
   - javascripts/tablesort.js
   - https://cdn.jsdelivr.net/npm/marked/marked.min.js
   - javascripts/extra-internet-markdown-ref.js
+  - javascripts/fancybox.js
 
 
 extra: 
@@ -102,19 +104,6 @@ plugins:
       enabled: true
   - table-reader
   - markmap
-  - glightbox:
-      touchNavigation: true
-      loop: false
-      effect: zoom
-      slide_effect: slide
-      width: 100%
-      height: auto
-      zoomable: true
-      draggable: true
-      skip_classes:
-        - custom-skip-class-name
-      auto_caption: false
-      caption_position: bottom
 
 repo_url: https://github.com/yuantianle
 repo_name: yuantianle's GitHub
@@ -184,8 +173,6 @@ nav:
         - OpenCV: 1_Computer_Graphics/Tools/OpenCV/README.md
         - Shader: 1_Computer_Graphics/Tools/Shader/README.md
         - Three.js: 1_Computer_Graphics/Tools/Threejs/README.md
-        - Unity: 1_Computer_Graphics/Tools/Unity/README.md
-        - Unreal Engine: 1_Computer_Graphics/Tools/Unreal/README.md
         - Vulkan: 1_Computer_Graphics/Tools/Vulkan/README.md
       - Visual Effects:
         - 1_Computer_Graphics/Visual_Effects/README.md
@@ -193,7 +180,17 @@ nav:
       - 11_Game_Development/README.md
       - Unity:
         - 11_Game_Development/Unity/README.md
-      - unreal:
+        - Shader Graph: 
+          - 11_Game_Development/Unity/Shader_Graph/README.md
+          - Flipbook: 11_Game_Development/Unity/Shader_Graph/Flipbook/Flipbook.md
+        - VFX: 
+          - 11_Game_Development/Unity/VFX/README.md
+          - Fog Effect: 11_Game_Development/Unity/VFX/Fog/Fog.md
+        - Game Design Pattern: 11_Game_Development/Unity/Design_Pattern/README.md
+        - Investigation: 11_Game_Development/Unity/Unity_Investigation/README.md
+        - Reading materials: 11_Game_Development/Unity/Reading_Materials/README.md
+
+      - Unreal:
         - 11_Game_Development/Unreal/README.md
     - SDE: 
       - 2_Software_Engineering/README.md

@@ -47,19 +47,23 @@
 }
 
 [data-md-color-scheme="default"] .md-content{
-    background-color: #d8ebffe9;
+    background: linear-gradient(to bottom, #00000000, #d8ebff0d, #d8ebffcc, #d8ebfff1, #d8ebff);
+    background-size: 100% 100vh; /* 设置渐变高度为视口高度 */
+    background-attachment: fixed; /* 确保背景固定，不随滚动移动 */
 }
 
 [data-md-color-scheme="slate"] .md-content{
-    background-color: #000000bf;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.85), rgb(0, 0, 0));
+    background-size: 100% 100vh; /* 设置渐变高度为视口高度 */
+    background-attachment: fixed; /* 确保背景固定，不随滚动移动 */
 }
 
 [data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__scrollwrap{
-    background-color: #000000bf;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.452), rgba(0, 0, 0, 0.9));
 }
 
 [data-md-color-scheme="default"] .md-sidebar--primary .md-sidebar__scrollwrap{
-    background-color: #d8ebffe9;
+    background: linear-gradient(to bottom, #d8ebff02, #d8ebffce);
 }
 /*For normal*/
 

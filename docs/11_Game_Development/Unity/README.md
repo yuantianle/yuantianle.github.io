@@ -15,3 +15,5 @@
 3. [Game Design Pattern](./Design_Pattern/README.md): Common design patterns from Unity.
 
 4. [Unity Investigation](./Unity_Investigation/README.md): IDE and coding knowledge from Unity.
+
+5. [Reading Materials](./Reading_Materials/README.md): Unity related books and articles.
