@@ -9,7 +9,7 @@ Below are the reading materials for Unity:
 
 ??? Note "The definitive guide to creating advanced visual effects in Unity"
 
-    <iframe width="100%" height="700" src="https://unity.com/resources/definitive-guide-to-creating-visual-effects?ungated=true"></iframe>
+    <iframe width="100%" height="700" src="https://drive.google.com/file/d/18HIv8LcLQ_gtZiZyMRtnT0geQPWYCTbV/preview"></iframe>
 
 ??? Note "Assets, Resources and AssetBundles"
 

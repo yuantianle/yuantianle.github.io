@@ -182,7 +182,7 @@ nav:
         - 11_Game_Development/Unity/README.md
         - Shader Graph: 
           - 11_Game_Development/Unity/Shader_Graph/README.md
-          - Flipbook: 11_Game_Development/Unity/Shader_Graph/Flipbook/Flipbook.md
+          - Flipbook Node: 11_Game_Development/Unity/Shader_Graph/Flipbook/Flipbook.md
         - VFX: 
           - 11_Game_Development/Unity/VFX/README.md
           - Fog Effect: 11_Game_Development/Unity/VFX/Fog/Fog.md

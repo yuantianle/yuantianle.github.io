@@ -5,15 +5,15 @@ comments: true
 
 # **Flipbook Node**
 
-In shader graph, The Flipbook Node generates **UV coordinates** that are used to sample a texture that's divided into frames laid out in a grid pattern. It's most frequently used to playback a series of frames to create an animation.
+In shader graph, The `Flipbook` node generates **UV coordinates** that are used to sample a texture that's divided into frames laid out in a grid pattern. It's most frequently used to playback a <u>series of frames</u> to create an animation.
 
-Here is the example of the flipbook node provided by Unity:
+Here is the example of the `Flipbook` node provided by Unity:
 
 ![alt text](Flipbook.png){width="70%", : .center}
 
-???+Node "How to use the `flipbook` node?"
+???+Node "How to use the `Flipbook` node?"
 
-    Below are the properties of the `flipbook` node:
+    Below are the properties of the `Flipbook` node:
 
       - **UV**: The UV coordinates used to sample the texture.
       - **Width**: The number of frames in the texture's horizontal direction.
@@ -22,7 +22,7 @@ Here is the example of the flipbook node provided by Unity:
   
     ![alt text](Flipbook_usage.png){width="50%", : .center}
 
-???+Node "How to generate texture for `flipbook` ?"
+???+Node "How to generate texture for `Flipbook` ?"
 
     ![alt text](Flipbook_tex_gen.png){width="50%", : .center}
 
