@@ -4,8 +4,13 @@
 
 # **VFX under Unity**
 
-This section is talking about the visual effects implemented by VFX particle system in Unity.
+This section is talking about the VFX particle system in Unity.
 
 ### **Table of contents:**
 
-1. [Fog effect](./Fog/Fog.md).
+#### VFX Visual Effects
+1. [Fog effect](./VisualEffects/Fog/Fog.md).
+2. [Tracing](./VisualEffects/Tracing/Tracing.md).
+
+#### VFX Concepts
+1. [Parameter v.s. Attribute](./VFX_Concepts/Parameter_vs_Attribute/Parameter_vs_Attribute.md).

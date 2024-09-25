@@ -187,7 +187,12 @@ nav:
           - 11_Game_Development/Unity/VFX/README.md
           - Fog Effect: 11_Game_Development/Unity/VFX/Fog/Fog.md
         - Game Design Pattern: 11_Game_Development/Unity/Design_Pattern/README.md
-        - Investigation: 11_Game_Development/Unity/Unity_Investigation/README.md
+        - Investigation: 
+          - 11_Game_Development/Unity/Unity_Investigation/README.md
+          - URP: 11_Game_Development/Unity/Unity_Investigation/URP.md
+          - Unity Debug: 11_Game_Development/Unity/Unity_Investigation/Unity_Debug/Unity_Debug.md
+          - Unity Life Cycle: 11_Game_Development/Unity/Unity_Investigation/Unity_LifeCycle/Unity_LifeCycle.md
+          - Awaitable: 11_Game_Development/Unity/Unity_Investigation/Awaitable/Awaitable.md
         - Reading materials: 11_Game_Development/Unity/Reading_Materials/README.md
 
       - Unreal:

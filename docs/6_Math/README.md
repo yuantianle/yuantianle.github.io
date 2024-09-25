@@ -1,13 +1,13 @@
 ---
+comments: true
 ᴴₒᴴₒᴴₒ: ture
 ---
 
 # **:bar_chart: Math**
 
-```
-{% raw %}{% include list.liquid all=true %}{% endraw %}
+This chapter is about 
 
-{% include list.liquid all=true %}
-```
+### **Table of contents:**
 
-{% include list.liquid all=true %}
+1. [Concepts](Concepts/Math_questions.md).
+2. [Optimization](Optimization/Optimization.md).
