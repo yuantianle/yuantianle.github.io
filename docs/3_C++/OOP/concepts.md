@@ -67,7 +67,7 @@ comments: true
 
     * **Advantages:** Improve code <u>flexibility and extensibility</u>, reduce code <u>repetition</u>, and better adhere to the <u>open-closed principle</u>.
 
-    ![picture 1](pictures/polymorphism.png){width="80%", : .center}  
+    ![picture 1](./polymorphism.png){width="80%", : .center}  
 
 
 ## **Encapsulation**
