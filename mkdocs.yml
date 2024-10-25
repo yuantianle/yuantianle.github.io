@@ -259,7 +259,7 @@ nav:
           - Lock, mutex, and Semaphore: 2_Software_Engineering/Others/Lock_mutex_semaphore.md
           - Self-documenting code: 2_Software_Engineering/Others/Self_documenting_code.md
 
-  - C++ & C#:
+  - C++:
       - 3_C++/README.md
       - Fast Read Catalog: 3_C++/fast_read.md
       - Oldschool C++:
@@ -315,6 +315,7 @@ nav:
           - 4_Algorithms/Practice_Sheet/README.md
   - Full Stack:
       - 5_FullStack/README.md
+      - Check List: 5_FullStack/CheckList.md
       - Basic knowledge:
           - 5_FullStack/BASIC/README.md
           - Front End:
@@ -354,6 +355,9 @@ nav:
               - Structural Operators: 5_FullStack/LANG/SQL/particle.md
               - Higher-level Management: 5_FullStack/LANG/SQL/higher.md
               - Multiple Table Operation: 5_FullStack/LANG/SQL/multi_table.md
+          - C#: 5_FullStack/LANG/C#/README.md
+      - .NET:
+          - 5_FullStack/.NET/README.md
   - ICS:
       - 10_Interview/README.md
       - OOP: 10_Interview/Other/oop_guide.md

@@ -6,6 +6,6 @@
 
 ### **:book: Table of contents**
 
-1. [ORM & LINQ](./orm&linq/README.md)
+1. [Middlewares](./middlewares/README.md)
 
-2. [Middlewares](./middlewares/README.md)
+2. [Filters](./filters/README.md)
