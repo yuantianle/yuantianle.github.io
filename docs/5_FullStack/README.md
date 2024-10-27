@@ -12,6 +12,8 @@
 
 - [Programming language](LANG/README.md)
 
+- [.NET](NET/README.md)
+
 ### **References:**
 
 - [Picture resource 1](https://i.morioh.com/baaf57369c.png)

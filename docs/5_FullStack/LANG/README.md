@@ -2,7 +2,7 @@
 ᴴₒᴴₒᴴₒ: ture
 ---
 
-# ** 💻 Full Stack Language**
+# **💻 Full Stack Language**
 
 ![picture 1](./full_stack_lang.png){width="80%", : .center}     
 
@@ -10,6 +10,7 @@
 
 - [Javascript](JS/README.md)
 - [SQL](SQL/README.md)
+- [C#](CSharp/README.md)
 
 ### **References:**
 

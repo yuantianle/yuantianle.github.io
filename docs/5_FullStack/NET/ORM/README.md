@@ -1,16 +1,9 @@
 ---
 ᴴₒᴴₒᴴₒ: ture
+comments: true
 ---
 
-# **:material-language-csharp: ORM & LINQ**
-
-
-## **LINQ**
-
-???+Note "Definition of `LINQ`"
-
-    `Object-oriented programming` has several **advantages** over procedural
-
+# **:material-dot-net:{.e_dotnet} ORM**
 
 ## **ORM**
 

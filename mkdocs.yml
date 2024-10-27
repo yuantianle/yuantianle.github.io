@@ -355,9 +355,12 @@ nav:
               - Structural Operators: 5_FullStack/LANG/SQL/particle.md
               - Higher-level Management: 5_FullStack/LANG/SQL/higher.md
               - Multiple Table Operation: 5_FullStack/LANG/SQL/multi_table.md
-          - C#: 5_FullStack/LANG/C#/README.md
+          - C#: 
+            - 5_FullStack/LANG/CSharp/README.md
+            - LINQ: 5_FullStack/LANG/CSharp/LINQ.md
       - .NET:
-          - 5_FullStack/.NET/README.md
+          - 5_FullStack/NET/README.md
+          - ORM & LINQ: 5_FullStack/%2ENET/ORM.md
   - ICS:
       - 10_Interview/README.md
       - OOP: 10_Interview/Other/oop_guide.md

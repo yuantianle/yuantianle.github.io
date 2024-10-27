@@ -2,9 +2,11 @@
 ᴴₒᴴₒᴴₒ: ture
 ---
 
-# **:material-language-csharp: C#**
+# **:material-language-csharp:{.e_csharp} C#**
 
 ### **:book: Table of contents**
+
+1. [LINQ](./LINQ/README.md)
 
 1. [Middlewares](./middlewares/README.md)
 

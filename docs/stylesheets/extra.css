@@ -226,7 +226,13 @@ For christmas*/
   }  
 .e_terminal {
     color: #02cb16;
-  }  
+  }
+.e_csharp {
+    color: #795dd9;
+  }
+.e_dotnet {
+    color: #512BD4;
+  }
 
 .git_triangle{
     color: #00FFFF;
