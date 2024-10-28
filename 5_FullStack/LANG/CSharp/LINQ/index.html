@@ -6782,6 +6782,8 @@
 
 
 <h1 id="linq"><strong><span class="twemoji e_dotnet"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2 15a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1m19 2h-2V9h-2V7h6v2h-2zM16 7v2h-2v2h2v2h-2v2h2v2h-4V7zm-5 0v10H9l-3-6v6H4V7h2l3 6V7z"></path></svg></span> LINQ</strong><a class="headerlink" href="#linq" title="Anchor link to this section for reference">⚓︎</a></h1>
+<details class="note" open="open">
+<summary>What is <code>LINQ</code>?</summary>
 <p><code>LINQ</code> stands for <strong>Language Integrated Query</strong>, which is <u>extentioned method library</u> that target <code>IEnumerable</code> objects. </p>
 <p>You can use <code>LINQ</code> to query:</p>
 <ul>
@@ -6791,6 +6793,23 @@
 <li>any collection of objects (arrays, lists, etc.) in memory.</li>
 <li>ADO.NET datasets (ADO.NET is a set of classes that allows programmers to access and modify data from databases and other data sources in .NET Framework.)</li>
 </ul>
+</details>
+<h2 id="linq-query-syntax"><strong>LINQ Query Syntax</strong><a class="headerlink" href="#linq-query-syntax" title="Anchor link to this section for reference">⚓︎</a></h2>
+<details class="note" open="open">
+<summary><code>IEnumerable</code> theory in <code>LINQ</code></summary>
+<ul>
+<li><strong>In-Memory Sources</strong>: for the usage case with <code>Lists</code>, <code>arrays</code>, <code>dictionaries</code>, etc. <ul>
+<li>These collections implement the <code>IEnumerable&lt;T&gt;</code> interface, the output of LINQ queries is an <code>IEnumerable&lt;T&gt;</code> collection, they are competible. </li>
+<li>LINQ queries on <code>IEnumerable</code> are not executed immediately (<a href="./#different-excution-in-linq"><code>Deffered Execution</code></a>). The query is deferred until the result is enumerated (e.g., via <code>foreach()</code> or .<code>ToList()</code>), optimizing performance and reducing unnecessary computation.</li>
+</ul>
+</li>
+<li><strong>Out-Memory Sources</strong>: for the usage case with <code>databases</code>, <code>XML</code>, <code>JSON</code>, and other data sources. <ul>
+<li>In these cases, the output of a LINQ query is an <code>IQueryable&lt;T&gt;</code> collection. <code>IQueryable&lt;T&gt;</code> is inherited from <code>IEnumerable&lt;T&gt;</code>, but it has additional methods allows to translate queries into a data source’s native language, like SQL.</li>
+<li>LINQ queries on <code>IQueryable&lt;T&gt;</code> queries are executed immediately (<a href="./#different-excution-in-linq"><code>Immediate Execution</code></a>), because they are using <code>.ToList()</code>, <code>.ToArray()</code>, <code>.First()</code>, <code>.Single()</code>, etc.</li>
+</ul>
+</li>
+</ul>
+</details>
 <details class="note" open="open">
 <summary><code>LINQ</code> use scenarios</summary>
 <ol>
@@ -6840,6 +6859,7 @@ This query groups a list of products by category and counts the number of   prod
 </li>
 </ol>
 </details>
+<h2 id="different-excution-in-linq"><strong>Different excution in LINQ</strong><a class="headerlink" href="#different-excution-in-linq" title="Anchor link to this section for reference">⚓︎</a></h2>
 <details class="note" open="open">
 <summary><code>Differed Execution</code> &amp; <code>Immediate Execution</code> in LINQ</summary>
 <ul>
@@ -6909,7 +6929,7 @@ This query groups a list of products by category and counts the number of   prod
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 27, 2024 07:23:30</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 28, 2024 00:40:17</span>
   </span>
 
     
