@@ -249,4 +249,37 @@ For christmas*/
     font-size: .80rem;
 }
 
+.mkdocs-markmap {
+    max-height: 35vh !important; /* 35% of the viewport height*/
+}
 
+.markmap-foreign strong {
+    font-weight: 300 !important; /* Adjust the weight: 100 (thin) to 900 (bold) */
+    font-family: Arial, sans-serif; /* Optional: Set the font family */
+}
+
+[data-md-color-scheme="default"] .markmap-foreign a:not(code) {
+    color: #20314e !important;  /* 设置链接文字颜色为番茄红 */
+}
+
+[data-md-color-scheme="default"] .markmap-foreign code {
+    color: rgb(221, 133, 17) !important;  /* Typical code color */
+    background-color: #f5f5f572;  /* Light gray background */
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+[data-md-color-scheme="default"] .mkdocs-markmap a:hover:not(code) {
+    color: #3763d2 !important;   /* 设置鼠标悬停时为绿色 */
+}
+
+[data-md-color-scheme="slate"] .markmap-foreign a:not(code) {
+    color: #8c7ac7 !important; 
+}
+
+[data-md-color-scheme="slate"] .markmap-foreign code {
+    color: #f25dff !important;  /* Typical code color */
+    background-color: #39405c79;  /* Light gray background */
+    padding: 2px 4px;
+    border-radius: 4px;
+}

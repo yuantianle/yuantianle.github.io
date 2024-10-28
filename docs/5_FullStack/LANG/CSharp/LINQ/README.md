@@ -5,16 +5,28 @@ comments: true
 
 # **:material-dot-net:{.e_dotnet} LINQ**
 
+???+Note "What is `LINQ`?"
 
-`LINQ` stands for **Language Integrated Query**, which is <u>extentioned method library</u> that target `IEnumerable` objects. 
-    
-You can use `LINQ` to query:
+    `LINQ` stands for **Language Integrated Query**, which is <u>extentioned method library</u> that target `IEnumerable` objects. 
 
-- SQL databases
-- XML documents
-- various web services
-- any collection of objects (arrays, lists, etc.) in memory.
-- ADO.NET datasets (ADO.NET is a set of classes that allows programmers to access and modify data from databases and other data sources in .NET Framework.)
+    You can use `LINQ` to query:
+
+    - SQL databases
+    - XML documents
+    - various web services
+    - any collection of objects (arrays, lists, etc.) in memory.
+    - ADO.NET datasets (ADO.NET is a set of classes that allows programmers to access and modify data from databases and other data sources in .NET Framework.)
+  
+## **LINQ Query Syntax**
+  
+???+Note "`IEnumerable` theory in `LINQ`"
+
+    - **In-Memory Sources**: for the usage case with `Lists`, `arrays`, `dictionaries`, etc. 
+        - These collections implement the `IEnumerable<T>` interface, the output of LINQ queries is an `IEnumerable<T>` collection, they are competible. 
+        - LINQ queries on `IEnumerable` are not executed immediately ([`Deffered Execution`](./#different-excution-in-linq)). The query is deferred until the result is enumerated (e.g., via `foreach()` or .`ToList()`), optimizing performance and reducing unnecessary computation.
+    - **Out-Memory Sources**: for the usage case with `databases`, `XML`, `JSON`, and other data sources. 
+        - In these cases, the output of a LINQ query is an `IQueryable<T>` collection. `IQueryable<T>` is inherited from `IEnumerable<T>`, but it has additional methods allows to translate queries into a data source’s native language, like SQL.
+        - LINQ queries on `IQueryable<T>` queries are executed immediately ([`Immediate Execution`](./#different-excution-in-linq)), because they are using `.ToList()`, `.ToArray()`, `.First()`, `.Single()`, etc.
 
 ???+Note "`LINQ` use scenarios"
 
@@ -61,6 +73,8 @@ You can use `LINQ` to query:
         .Where(r => r.Field<decimal>("Price") > 20)
         .Select(r => r.Field<string>("Name"));
     ```
+
+## **Different excution in LINQ**
 
 ???+Note "`Differed Execution` & `Immediate Execution` in LINQ"
 

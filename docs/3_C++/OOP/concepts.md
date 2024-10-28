@@ -8,20 +8,20 @@ comments: true
 > This material is for listing different OOP concepts:
 
 ```markmap
-### [**OOP**](#oop)
-### [**Class and Object**](#class-and-object)
-### [**Inheritance**](#inheritance)
-### [**Polymorphism**](#polymorphism)
-### [**Encapsulation**](#encapsulation)
-### [**Interface**](#interface)
-### [**Abstract class**](#abstract-class)
-### [**Abstract methods & Virtual function (method)**](#abstract-methods--virtual-function-method)
-### [**Overloading**](#overloading)
-### [**Overriding**](#overriding)
-### [**Compile & Run time**](#compile--run-time)
-### [**Static methods and variables**](#static-methods-and-variables)
-### [**Constructor and Destructor**](#constructor-and-destructor)
-### [**Access modifier**](#access-modifier)
+- [**OOP**](#oop)
+- [**Class and Object**](#class-and-object)
+- [**Inheritance**](#inheritance)
+- [**Polymorphism**](#polymorphism)
+- [**Encapsulation**](#encapsulation)
+- [**Interface**](#interface)
+- [**Abstract class**](#abstract-class)
+- [**Abstract methods & Virtual function (method)**](#abstract-methods--virtual-function-method)
+- [**Overloading**](#overloading)
+- [**Overriding**](#overriding)
+- [**Compile & Run time**](#compile--run-time)
+- [**Static methods and variables**](#static-methods-and-variables)
+- [**Constructor and Destructor**](#constructor-and-destructor)
+- [**Access modifier**](#access-modifier)
 ```
 
 ## **OOP**
@@ -57,7 +57,7 @@ comments: true
 
     * **Advantages:** It is an important way of <u>code reuse</u>. (for avoiding duplicates, organizing code structure, and improving code readability and maintainability).
 
-### **Polymorphism**
+## **Polymorphism**
 
 ???+Note "`Polymorphism`"
 
