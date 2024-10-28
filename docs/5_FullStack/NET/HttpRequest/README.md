@@ -5,12 +5,18 @@ comments: true
 
 # **:material-dot-net:{.e_dotnet} HTTP Request**
 
+```markmap
+- [**HTTP Requests in C#**](#http-requests-in-c)
+- [**HTTP Requests in .NET**](#http-requests-in-net)
+  - [**When to use `IHttpContextAccessor`**](#when-to-use-ihttpcontextaccessor)
+  - [**How to use `IHttpContextAccessor`**](#how-to-use-ihttpcontextaccessor)
+```
 
-## **C#**
+## **HTTP Requests in C#**
 
 In **C#** (and particularly in **.NET**), you can use the `HttpClient` class to make HTTP requests. This class is part of the `System.Net.Http` namespace and provides methods to perform HTTP operations such as `GET`, `POST`, `PUT`, and `DELETE`.
 
-???+Note "HTTP Requests in C#"
+???+Note "<br>"
 
     - **`HttpClient`** is a class in the `System.Net.Http` namespace that allows you to make HTTP requests.
     ```csharp
@@ -60,16 +66,21 @@ In **C#** (and particularly in **.NET**), you can use the `HttpClient` class to 
       HttpResponseMessage response = await client.DeleteAsync("https://api.example.com/1");
       ```
 
-## **.NET**
+## **HTTP Requests in .NET**
 
 `IHttpContextAccessor` is an **interface in ASP.NET Core** that allows you to access the <u>current HTTP context (e.g., request, response, user claims)</u> from places where dependency injection (DI) doesn't normally apply, such as static classes or services that don't have access to the `HttpContext`.
 
-???+Note "When is `IHttpContextAccessor` used?"
+
+### **When to use `IHttpContextAccessor`**
+
+???+Note "<br>"
     
     - In **middleware** or **services** that need access to the `HttpContext` outside the scope of a typical controller or page (in other classes where the HttpContext is not directly available).
     - Helps when you need to access **request-related information** (like headers, cookies, or user identity) from areas without built-in DI support.
 
-???+Note "Registering and Using `IHttpContextAccessor`"
+### **How to use `IHttpContextAccessor`**
+
+???+Note "<br>"
 
     - **Step 1**: Register in `Program.cs` (or `Startup.cs`)
     ```csharp
