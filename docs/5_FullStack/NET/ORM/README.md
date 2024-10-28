@@ -6,7 +6,18 @@ comments: true
 # **:material-dot-net:{.e_dotnet} ORM**
 
 ```markmap
-
+- [**ORM**](#orm)
+- [**Entity Framework**](#entity-framework)
+  - [**Advantages of `EF` over `ADO .NET`**](#advantages-of-ef-over-ado-net)
+  - [**==Disadvantages of `EF`. How to improve the performance?==**](#disadvantages-of-ef-how-to-improve-the-performance)
+  - [**Lazy loading v.s. Eager loading, N+1 problem?**](#lazy-loading-vs-eager-loading-n1-problem)
+  - [**Disable `Lazy loading`**](#disable-lazy-loading)
+  - [**Different approaches in `EF`, usage?**](#different-approaches-in-ef-usage)
+  - [**`DbSet` and `DbContext` classes in EF**](#dbset-and-dbcontext-classes-in-ef)
+  - [**`.AsNoTracking()` in EF**](#asnotracking-in-ef)
+  - [**`Skip()` and `Take()` in EF**](#skip-and-take-in-ef)
+- [**Dapper**](#dapper)
+  - [**Diffs: `Dapper` v.s. `EF Core`**](#diffs-dapper-vs-ef-core)
 ```
 
 ## **ORM**
