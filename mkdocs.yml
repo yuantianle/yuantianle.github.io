@@ -360,8 +360,8 @@ nav:
             - LINQ: 5_FullStack/LANG/CSharp/README.md
       - .NET:
           - 5_FullStack/NET/README.md
-          - ORM & LINQ: 5_FullStack/NET/README.md
-          - HTTP Request: 5_FullStack/NET/README.md
+          - ORM: 5_FullStack/NET/ORM/README.md
+          - HTTP Request: 5_FullStack/NET/HttpRequest/README.md
   - ICS:
       - 10_Interview/README.md
       - OOP: 10_Interview/Other/oop_guide.md
