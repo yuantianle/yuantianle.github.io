@@ -357,10 +357,11 @@ nav:
               - Multiple Table Operation: 5_FullStack/LANG/SQL/multi_table.md
           - C#: 
             - 5_FullStack/LANG/CSharp/README.md
-            - LINQ: 5_FullStack/LANG/CSharp/LINQ.md
+            - LINQ: 5_FullStack/LANG/CSharp/README.md
       - .NET:
           - 5_FullStack/NET/README.md
-          - ORM & LINQ: 5_FullStack/%2ENET/ORM.md
+          - ORM & LINQ: 5_FullStack/NET/README.md
+          - HTTP Request: 5_FullStack/NET/README.md
   - ICS:
       - 10_Interview/README.md
       - OOP: 10_Interview/Other/oop_guide.md
