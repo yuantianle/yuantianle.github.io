@@ -5,7 +5,23 @@ comments: true
 
 # **:material-dot-net:{.e_dotnet} LINQ**
 
-???+Note "What is `LINQ`?"
+```markmap
+- [**LINQ**](#linq)
+  - [What is `LINQ`?](#what-is-linq)
+- [**LINQ Query Syntax**](#linq-query-syntax)
+  - [What are `LINQ` use scenarios?](#what-are-linq-use-scenarios)
+  - [What is `IEnumerable` theory in `LINQ`?](#what-is-ienumerable-theory-in-linq)
+- [**Different excution in LINQ**](#different-excution-in-linq)
+  - [What are `Differed Execution` and `Immediate Execution` in LINQ?](#what-are-differed-execution-and-immediate-execution-in-linq)
+  - [Differences: `First()`, `FirstOrDefault()`, `Single()`, `SingleOrDefault()` in LINQ?](#differences-first-firstordefault-single-singleordefault-in-linq)
+
+```
+
+## **LINQ**
+
+### What is `LINQ`?
+
+???+Note "LINQ"
 
     `LINQ` stands for **Language Integrated Query**, which is <u>extentioned method library</u> that target `IEnumerable` objects. 
 
@@ -18,25 +34,18 @@ comments: true
     - ADO.NET datasets (ADO.NET is a set of classes that allows programmers to access and modify data from databases and other data sources in .NET Framework.)
   
 ## **LINQ Query Syntax**
-  
-???+Note "`IEnumerable` theory in `LINQ`"
 
-    - **In-Memory Sources**: for the usage case with `Lists`, `arrays`, `dictionaries`, etc. 
-        - These collections implement the `IEnumerable<T>` interface, the output of LINQ queries is an `IEnumerable<T>` collection, they are competible. 
-        - LINQ queries on `IEnumerable` are not executed immediately ([`Deffered Execution`](./#different-excution-in-linq)). The query is deferred until the result is enumerated (e.g., via `foreach()` or .`ToList()`), optimizing performance and reducing unnecessary computation.
-    - **Out-Memory Sources**: for the usage case with `databases`, `XML`, `JSON`, and other data sources. 
-        - In these cases, the output of a LINQ query is an `IQueryable<T>` collection. `IQueryable<T>` is inherited from `IEnumerable<T>`, but it has additional methods allows to translate queries into a data source’s native language, like SQL.
-        - LINQ queries on `IQueryable<T>` queries are executed immediately ([`Immediate Execution`](./#different-excution-in-linq)), because they are using `.ToList()`, `.ToArray()`, `.First()`, `.Single()`, etc.
+### What are `LINQ` use scenarios?
 
-???+Note "`LINQ` use scenarios"
+???+Note "LINQ use scenarios"
 
     1. <u>`LINQ` to Entities</u> - Process data from a database:
     ```csharp
     var customers = dbContext.Customers
         .Where(c => c.City == "London")
         .OrderBy(c => c.Name);
-    This query returns all customers from London, sorted by name.
     ```
+    This query returns all customers from London, sorted by name.
 
     2. <u>`LINQ` to XML</u> - Parsing and querying XML documents:
     ```csharp
@@ -74,9 +83,22 @@ comments: true
         .Select(r => r.Field<string>("Name"));
     ```
 
+### What is `IEnumerable` theory in `LINQ`?
+  
+???+Note "IEnumerable theory in LINQ"
+
+    - **In-Memory Sources**: for the usage case with `Lists`, `arrays`, `dictionaries`, etc. 
+        - These collections implement the `IEnumerable<T>` interface, the output of LINQ queries is an `IEnumerable<T>` collection, they are competible. 
+        - LINQ queries on `IEnumerable` are not executed immediately ([`Deffered Execution`](./#different-excution-in-linq)). The query is deferred until the result is enumerated (e.g., via `foreach()` or .`ToList()`), optimizing performance and reducing unnecessary computation.
+    - **Out-Memory Sources**: for the usage case with `databases`, `XML`, `JSON`, and other data sources. 
+        - In these cases, the output of a LINQ query is an `IQueryable<T>` collection. `IQueryable<T>` is inherited from `IEnumerable<T>`, but it has additional methods allows to translate queries into a data source’s native language, like SQL.
+        - LINQ queries on `IQueryable<T>` queries are executed immediately ([`Immediate Execution`](./#different-excution-in-linq)), because they are using `.ToList()`, `.ToArray()`, `.First()`, `.Single()`, etc.
+
 ## **Different excution in LINQ**
 
-???+Note "`Differed Execution` & `Immediate Execution` in LINQ"
+### What are `Differed Execution` and `Immediate Execution` in LINQ?
+
+???+Note "Differed Execution and Immediate Execution"
 
     - **Differed Execution**: the query is **NOT** executed at the moment it's defined. Instead, it is execute <u>At the time of enumeration (e.g., foreach).</u>. This can be <u>beneficial for performance</u>, because it allows you to "build up" a query over time and execute it all at once, and because it only pulls into memory the data that's actually needed. The result of a differed execution is a <u>query that can be iterated over</u>.
     ```csharp
@@ -97,7 +119,9 @@ comments: true
     .ToList(); // Query defined and executed here.
     ``` 
 
-???+Note "Differences: `First()`, `FirstOrDefault()`, `Single()`, `SingleOrDefault()` in LINQ"
+### Differences: `First()`, `FirstOrDefault()`, `Single()`, `SingleOrDefault()` in LINQ?
+
+???+Note "First(), FirstOrDefault(), Single(), SingleOrDefault()"
 
     1. **`First()`**: This method returns the first element of a sequence. If the sequence contains no elements, it throws an InvalidOperationException.
 

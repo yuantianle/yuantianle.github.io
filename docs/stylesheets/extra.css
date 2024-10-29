@@ -257,8 +257,13 @@ For christmas*/
     max-height: 35vh !important; /* 35% of the viewport height*/
 }
 
+.markmap {
+    font-weight: 500 !important; /* Adjust the weight: 100 (thin) to 900 (bold) */
+    font-family: Arial, sans-serif; /* Optional: Set the font family */
+}
+
 .markmap-foreign strong {
-    font-weight: 300 !important; /* Adjust the weight: 100 (thin) to 900 (bold) */
+    font-weight: 600 !important; /* Adjust the weight: 100 (thin) to 900 (bold) */
     font-family: Arial, sans-serif; /* Optional: Set the font family */
 }
 
@@ -286,4 +291,53 @@ For christmas*/
     background-color: #39405c79;  /* Light gray background */
     padding: 2px 4px;
     border-radius: 4px;
+}
+
+.md-typeset ol li, .md-typeset ul li {
+    margin-top: 0.4em !important;
+    margin-bottom: 0em !important;
+}
+
+.md-typeset ol li ul, .md-typeset ul li ul{
+    margin-top: 0em !important;
+    margin-bottom: 0em !important;
+}
+
+.md-typeset ol li ul li, .md-typeset ul li ul li{
+    margin-top: 0em !important;
+    margin-bottom: 0em !important;
+}
+
+.md-typeset ol li p, .md-typeset ul li p{
+    margin-top: 0em !important;
+}
+
+.md-typeset ol, .md-typeset ul{
+    margin-top: 0em !important;
+    margin-bottom: 0.6em !important;
+}
+
+p{
+    margin-top: 0.4em !important;
+    margin-bottom: 0em !important;
+}
+
+h3{
+    margin-top: 0.4em !important;
+    margin-bottom: 0.2em !important;
+}
+
+.md-typeset details {
+    margin-top: 0.4em !important;
+}
+
+.highlight span.filename {
+    margin-top: 0.2em !important;
+    padding-top: 0.3em !important;
+    padding-bottom: 0.2em !important;
+    padding-left: 1em !important;
+}
+
+.md-typeset pre{
+    margin-bottom: 0.4em !important;
 }

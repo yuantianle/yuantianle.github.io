@@ -7,37 +7,43 @@ comments: true
 
 ```markmap
 - [**ORM**](#orm)
+  - [What is `ORM`?](#what-is-orm)
 - [**Entity Framework**](#entity-framework)
-  - [**Advantages of `EF` over `ADO .NET`**](#advantages-of-ef-over-ado-net)
-  - [**==Disadvantages of `EF`. How to improve the performance?==**](#disadvantages-of-ef-how-to-improve-the-performance)
-  - [**Lazy loading v.s. Eager loading, N+1 problem?**](#lazy-loading-vs-eager-loading-n1-problem)
-  - [**Disable `Lazy loading`**](#disable-lazy-loading)
-  - [**Different approaches in `EF`, usage?**](#different-approaches-in-ef-usage)
-  - [**`DbSet` and `DbContext` classes in EF**](#dbset-and-dbcontext-classes-in-ef)
-  - [**`.AsNoTracking()` in EF**](#asnotracking-in-ef)
-  - [**`Skip()` and `Take()` in EF**](#skip-and-take-in-ef)
+  - [What is `Entity Framework`?](#what-is-entity-framework)
+  - [Advantages of `EF` over `ADO .NET`?](#advantages-of-ef-over-ado-net)
+  - [==Disadvantages of `EF`. How to improve the performance?==](#disadvantages-of-ef-how-to-improve-the-performance)
+  - [What are the diffs between `Lazy loading` and `Eager loading`, What is `N+1 problem`?](#what-are-the-diffs-between-lazy-loading-and-eager-loading-what-is-n1-problem)
+  - [How to disable `Lazy loading`?](#how-to-disable-lazy-loading)
+  - [What are `Code-first` and `Database-first` approaches in EF, usage?](#what-are-code-first-and-database-first-approaches-in-ef-usage)
+  - [What are `DbSet` and `DbContext` classes in EF?](#what-are-dbset-and-dbcontext-classes-in-ef)
+  - [What is `.AsNoTracking()` in EF?](#what-is-asnotracking-in-ef)
+  - [What are `Skip()` and `Take()` methods?](#what-are-skip-and-take-methods)
 - [**Dapper**](#dapper)
-  - [**Diffs: `Dapper` v.s. `EF Core`**](#diffs-dapper-vs-ef-core)
+  - [==What is `Dapper`?==](#what-is-dapper)
+  - [What are the diffs between `Dapper` and `EF Core`?](#what-are-the-diffs-between-dapper-and-ef-core)
 ```
-
 ## **ORM**
 
-???+Note "What is `ORM`"
+### What is `ORM`?
+
+???+Note "ORM"
 
     `ORM` stands for <u>Object-relational Mapping</u>, which is a **design pattern**. It is a technique for converting data between a <u>relational database</u> and an <u>object-oriented programming language</u>.
 
 
 ## **Entity Framework**
 
-???+Note "Entity Framework `EF`"
+### What is `Entity Framework`?
 
-    `EF` is a <u>ORM framework</u> for .NET applications that provides us a way to map the objects in the application to database tables and <u>perform CRUD operations</u> without writing explicit SQL queries.
+???+Note "Entity Framework"
+
+    `Entity Framework (EF)` is a <u>ORM framework</u> for .NET applications that provides us a way to map the objects in the application to database tables and <u>perform CRUD operations</u> without writing explicit SQL queries.
 
     With the help of `EF`, we can use [`LINQ`](../../LANG/CSharp/LINQ/README.md) queries to fetch data from the underlying database.
 
-### **Advantages of `EF` over `ADO .NET`**
+### Advantages of `EF` over `ADO .NET`?
 
-???+Note "<br>"
+???+Note "EF v.s. ADO .NET"
 
     | **Feature**                    | **Entity Framework (EF)**                                          | **ADO.NET**                                           |
     |---------------------------------|--------------------------------------------------------------------|------------------------------------------------------|
@@ -53,9 +59,9 @@ comments: true
     
     In contrast, `ADO.NET` offers <u>more control and better performance</u> for low-level operations but requires more manual coding. `EF` is ideal for larger, more complex applications, while `ADO.NET` is better for performance-sensitive scenarios with simple queries.
 
-### **==Disadvantages of `EF`. How to improve the performance?==**
+### ==Disadvantages of `EF`. How to improve the performance?==
 
-???+Note "<br>"
+???+Note "EF Disadvantages & performance improvement"
 
     - `EF` introduces a **performance overhead** compared to using raw ADO.NET or other lightweight data access methods. The <u>`ORM` layer adds an extra layer of abstraction and introduces additional processing and mapping steps</u>, which can impact performance, especially in complex or high-load scenarios.
     
@@ -69,9 +75,9 @@ comments: true
       - **Caching:** Implement in-memory caching or distributed caching to store frequently accessed data.
       - **Using Compiled Queries:** Use compiled queries to pre-compile LINQ queries and improve query execution time.
 
-### **Lazy loading v.s. Eager loading, N+1 problem?**
+### What are the diffs between `Lazy loading` and `Eager loading`, What is `N+1 problem`?
 
-???+Note "<br>"
+???+Note "Lazy loading (N+1 problem) v.s. Eager loading"
 
     - **`Lazy loading`**: the related data is not retrieved from the database until it is actually needed.
     ```csharp
@@ -90,9 +96,9 @@ comments: true
     
     The `N+1 problem` is a performance issue that can occur when using `lazy loading` in Entity Framework. It occurs when you have a collection of objects, and each object has a related entity that needs to be loaded lazily. If you access the related entity for each object in the collection, Entity Framework will execute N+1 database queries to retrieve the related data, where N is the number of objects in the collection. This can <u>result in a significant performance penalty</u>, as each database query involves overhead for network communication, query parsing, and result materialization.
 
-### **Disable `Lazy loading`**
+### How to disable `Lazy loading`?
 
-???+Note "<br>"
+???+Note "Disable Lazy loading"
 
     You can disable `lazy loading` in `EF`:
     
@@ -126,25 +132,9 @@ comments: true
     By carefully choosing when to **enable or disable lazy loading**, you can avoid performance pitfalls while leveraging `EF`’s flexibility.
 
 
+### What are `Code-first` and `Database-first` approaches in EF, usage?
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-### **Different approaches in `EF`, usage?**
-
-???+Note "<br>"
+???+Note "Different approaches in `EF` & usages"
 
     - **Code-first approach**: `EF` creates database for you
       
@@ -185,16 +175,16 @@ comments: true
                 - Fluent API - override OnModelCreating method in DbContext
                 - If there are conflicts btw a and b, Fluent API will be prioritized.
 
-### **`DbSet` and `DbContext` classes in EF**
+### What are `DbSet` and `DbContext` classes in EF?
 
-???+Note "<br>"
+???+Note "DbSet & DbContext"
 
     - `DbContext` - represents your database.
     - `DbSet` - represents your tables. It is properties of `DbContext`.
 
-### **`.AsNoTracking()` in EF**
+### What is `.AsNoTracking()` in EF?
 
-???+Note "<br>"
+???+Note ".AsNoTracking()"
 
     **By default**, `EF` tracks the changes of the entities. 
     
@@ -220,9 +210,9 @@ comments: true
     }
     ```
 
-### **`Skip()` and `Take()` in EF**
+### What are `Skip()` and `Take()` methods?
 
-???+Note "<br>"
+???+Note "Skip() & Take()"
 
     - The `Skip()` and `Take()` methods are used for <u>pagination or paging functionality in queries</u>.
         - `Skip()` method is used to <u>skip a specified number of elements</u> in the query result.
@@ -239,13 +229,15 @@ comments: true
 
 ## **Dapper**
 
-???+Note "==About `Dapper`=="
+### ==What is `Dapper`?==
+
+???+Note "Dapper"
 
     `Dapper` is a **micro-ORM** that provides a <u>simple and fast</u> way to query the database. It is a lightweight library that focuses on **performance** and **simplicity**. `Dapper` is ideal for scenarios where you need to execute raw SQL queries and map the results to objects without the overhead of a full-fledged ORM like `EF Core`.
 
-### **Diffs: `Dapper` v.s. `EF Core`**
+### What are the diffs between `Dapper` and `EF Core`?
 
-???+Note "<br>"
+???+Note "Dapper v.s. EF Core"
 
     - **Performance**: `Dapper` is generally faster than `EF` because it generates more efficient SQL and loads data faster. `EF` can be faster if you use it correctly and take advantage of features like compiled queries and efficient loading patterns.
     - **Ease of Use**: `EF` has a higher learning curve than `Dapper`, but `Dapper` can be more convenient to use because it provides a lot of features out of the box, such as change tracking, lazy loading, and automated database migrations.
