@@ -2331,31 +2331,36 @@
 </div>
 <h1 id="orm"><strong><span class="twemoji e_dotnet"><svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M2 15a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1m19 2h-2V9h-2V7h6v2h-2zM16 7v2h-2v2h2v2h-2v2h2v2h-4V7zm-5 0v10H9l-3-6v6H4V7h2l3 6V7z"></path></svg></span> ORM</strong><a class="headerlink" href="#orm" title="Anchor link to this section for reference">⚓︎</a></h1>
 <div class="language-markmap mkdocs-markmap"><markmap-data hidden="true">- [**ORM**](#orm)
+  - [What is `ORM`?](#what-is-orm)
 - [**Entity Framework**](#entity-framework)
-  - [**Advantages of `EF` over `ADO .NET`**](#advantages-of-ef-over-ado-net)
-  - [**==Disadvantages of `EF`. How to improve the performance?==**](#disadvantages-of-ef-how-to-improve-the-performance)
-  - [**Lazy loading v.s. Eager loading, N+1 problem?**](#lazy-loading-vs-eager-loading-n1-problem)
-  - [**Disable `Lazy loading`**](#disable-lazy-loading)
-  - [**Different approaches in `EF`, usage?**](#different-approaches-in-ef-usage)
-  - [**`DbSet` and `DbContext` classes in EF**](#dbset-and-dbcontext-classes-in-ef)
-  - [**`.AsNoTracking()` in EF**](#asnotracking-in-ef)
-  - [**`Skip()` and `Take()` in EF**](#skip-and-take-in-ef)
+  - [What is `Entity Framework`?](#what-is-entity-framework)
+  - [Advantages of `EF` over `ADO .NET`?](#advantages-of-ef-over-ado-net)
+  - [==Disadvantages of `EF`. How to improve the performance?==](#disadvantages-of-ef-how-to-improve-the-performance)
+  - [What are the diffs between `Lazy loading` and `Eager loading`, What is `N+1 problem`?](#what-are-the-diffs-between-lazy-loading-and-eager-loading-what-is-n1-problem)
+  - [How to disable `Lazy loading`?](#how-to-disable-lazy-loading)
+  - [What are `Code-first` and `Database-first` approaches in EF, usage?](#what-are-code-first-and-database-first-approaches-in-ef-usage)
+  - [What are `DbSet` and `DbContext` classes in EF?](#what-are-dbset-and-dbcontext-classes-in-ef)
+  - [What is `.AsNoTracking()` in EF?](#what-is-asnotracking-in-ef)
+  - [What are `Skip()` and `Take()` methods?](#what-are-skip-and-take-methods)
 - [**Dapper**](#dapper)
-  - [**Diffs: `Dapper` v.s. `EF Core`**](#diffs-dapper-vs-ef-core)</markmap-data></div>
+  - [==What is `Dapper`?==](#what-is-dapper)
+  - [What are the diffs between `Dapper` and `EF Core`?](#what-are-the-diffs-between-dapper-and-ef-core)</markmap-data></div>
 <h2 id="orm_1"><strong>ORM</strong><a class="headerlink" href="#orm_1" title="Anchor link to this section for reference">⚓︎</a></h2>
+<h3 id="what-is-orm">What is <code>ORM</code>?<a class="headerlink" href="#what-is-orm" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="note" open="open">
-<summary>What is <code>ORM</code></summary>
+<summary>ORM</summary>
 <p><code>ORM</code> stands for <u>Object-relational Mapping</u>, which is a <strong>design pattern</strong>. It is a technique for converting data between a <u>relational database</u> and an <u>object-oriented programming language</u>.</p>
 </details>
 <h2 id="entity-framework"><strong>Entity Framework</strong><a class="headerlink" href="#entity-framework" title="Anchor link to this section for reference">⚓︎</a></h2>
+<h3 id="what-is-entity-framework">What is <code>Entity Framework</code>?<a class="headerlink" href="#what-is-entity-framework" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="note" open="open">
-<summary>Entity Framework <code>EF</code></summary>
-<p><code>EF</code> is a <u>ORM framework</u> for .NET applications that provides us a way to map the objects in the application to database tables and <u>perform CRUD operations</u> without writing explicit SQL queries.</p>
+<summary>Entity Framework</summary>
+<p><code>Entity Framework (EF)</code> is a <u>ORM framework</u> for .NET applications that provides us a way to map the objects in the application to database tables and <u>perform CRUD operations</u> without writing explicit SQL queries.</p>
 <p>With the help of <code>EF</code>, we can use <a href="../../LANG/CSharp/LINQ/"><code>LINQ</code></a> queries to fetch data from the underlying database.</p>
 </details>
-<h3 id="advantages-of-ef-over-ado-net"><strong>Advantages of <code>EF</code> over <code>ADO .NET</code></strong><a class="headerlink" href="#advantages-of-ef-over-ado-net" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="advantages-of-ef-over-ado-net">Advantages of <code>EF</code> over <code>ADO .NET</code>?<a class="headerlink" href="#advantages-of-ef-over-ado-net" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="note" open="open">
-<summary><br/></summary>
+<summary>EF v.s. ADO .NET</summary>
 <table>
 <thead>
 <tr>
@@ -2405,9 +2410,9 @@
 <p><code>EF</code> provides <u>higher abstraction, improved productivity, and flexibility</u> by allowing developers to work with entities and LINQ instead of writing SQL manually. </p>
 <p>In contrast, <code>ADO.NET</code> offers <u>more control and better performance</u> for low-level operations but requires more manual coding. <code>EF</code> is ideal for larger, more complex applications, while <code>ADO.NET</code> is better for performance-sensitive scenarios with simple queries.</p>
 </details>
-<h3 id="disadvantages-of-ef-how-to-improve-the-performance"><strong><mark>Disadvantages of <code>EF</code>. How to improve the performance?</mark></strong><a class="headerlink" href="#disadvantages-of-ef-how-to-improve-the-performance" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="disadvantages-of-ef-how-to-improve-the-performance"><mark>Disadvantages of <code>EF</code>. How to improve the performance?</mark><a class="headerlink" href="#disadvantages-of-ef-how-to-improve-the-performance" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="note" open="open">
-<summary><br/></summary>
+<summary>EF Disadvantages &amp; performance improvement</summary>
 <ul>
 <li>
 <p><code>EF</code> introduces a <strong>performance overhead</strong> compared to using raw ADO.NET or other lightweight data access methods. The <u><code>ORM</code> layer adds an extra layer of abstraction and introduces additional processing and mapping steps</u>, which can impact performance, especially in complex or high-load scenarios.</p>
@@ -2425,9 +2430,9 @@
 <li><strong>Using Compiled Queries:</strong> Use compiled queries to pre-compile LINQ queries and improve query execution time.</li>
 </ul>
 </details>
-<h3 id="lazy-loading-vs-eager-loading-n1-problem"><strong>Lazy loading v.s. Eager loading, N+1 problem?</strong><a class="headerlink" href="#lazy-loading-vs-eager-loading-n1-problem" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="what-are-the-diffs-between-lazy-loading-and-eager-loading-what-is-n1-problem">What are the diffs between <code>Lazy loading</code> and <code>Eager loading</code>, What is <code>N+1 problem</code>?<a class="headerlink" href="#what-are-the-diffs-between-lazy-loading-and-eager-loading-what-is-n1-problem" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="note" open="open">
-<summary><br/></summary>
+<summary>Lazy loading (N+1 problem) v.s. Eager loading</summary>
 <ul>
 <li>
 <p><strong><code>Lazy loading</code></strong>: the related data is not retrieved from the database until it is actually needed.
@@ -2447,9 +2452,9 @@
 </ul>
 <p>The <code>N+1 problem</code> is a performance issue that can occur when using <code>lazy loading</code> in Entity Framework. It occurs when you have a collection of objects, and each object has a related entity that needs to be loaded lazily. If you access the related entity for each object in the collection, Entity Framework will execute N+1 database queries to retrieve the related data, where N is the number of objects in the collection. This can <u>result in a significant performance penalty</u>, as each database query involves overhead for network communication, query parsing, and result materialization.</p>
 </details>
-<h3 id="disable-lazy-loading"><strong>Disable <code>Lazy loading</code></strong><a class="headerlink" href="#disable-lazy-loading" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="how-to-disable-lazy-loading">How to disable <code>Lazy loading</code>?<a class="headerlink" href="#how-to-disable-lazy-loading" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="note" open="open">
-<summary><br/></summary>
+<summary>Disable Lazy loading</summary>
 <p>You can disable <code>lazy loading</code> in <code>EF</code>:</p>
 <ul>
 <li>Set up <code>DbContextOptionsBuilder.UseLazyLoadingProxies</code> globally by configuring your <code>DbContext</code> with the following code:
@@ -2478,9 +2483,9 @@
 </ul>
 <p>By carefully choosing when to <strong>enable or disable lazy loading</strong>, you can avoid performance pitfalls while leveraging <code>EF</code>’s flexibility.</p>
 </details>
-<h3 id="different-approaches-in-ef-usage"><strong>Different approaches in <code>EF</code>, usage?</strong><a class="headerlink" href="#different-approaches-in-ef-usage" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="what-are-code-first-and-database-first-approaches-in-ef-usage">What are <code>Code-first</code> and <code>Database-first</code> approaches in EF, usage?<a class="headerlink" href="#what-are-code-first-and-database-first-approaches-in-ef-usage" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="note" open="open">
-<summary><br/></summary>
+<summary>Different approaches in <code>EF</code> &amp; usages</summary>
 <ul>
 <li>
 <p><strong>Code-first approach</strong>: <code>EF</code> creates database for you</p>
@@ -2541,17 +2546,17 @@
 </ol>
 </details>
 </details>
-<h3 id="dbset-and-dbcontext-classes-in-ef"><strong><code>DbSet</code> and <code>DbContext</code> classes in EF</strong><a class="headerlink" href="#dbset-and-dbcontext-classes-in-ef" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="what-are-dbset-and-dbcontext-classes-in-ef">What are <code>DbSet</code> and <code>DbContext</code> classes in EF?<a class="headerlink" href="#what-are-dbset-and-dbcontext-classes-in-ef" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="note" open="open">
-<summary><br/></summary>
+<summary>DbSet &amp; DbContext</summary>
 <ul>
 <li><code>DbContext</code> - represents your database.</li>
 <li><code>DbSet</code> - represents your tables. It is properties of <code>DbContext</code>.</li>
 </ul>
 </details>
-<h3 id="asnotracking-in-ef"><strong><code>.AsNoTracking()</code> in EF</strong><a class="headerlink" href="#asnotracking-in-ef" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="what-is-asnotracking-in-ef">What is <code>.AsNoTracking()</code> in EF?<a class="headerlink" href="#what-is-asnotracking-in-ef" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="note" open="open">
-<summary><br/></summary>
+<summary>.AsNoTracking()</summary>
 <p><strong>By default</strong>, <code>EF</code> tracks the changes of the entities. </p>
 <p><code>AsNoTracking()</code> is a method in <code>EF</code> that tells the <u>context to fetch not to track the changes of the entities</u>. Even if you change contexts' properties, the context won’t detect or persist those changes. It is useful when you are querying data that you don't intend to update, which can help to <u>improve the performance</u> of your application when working with large amounts of data or read-only data.</p>
 <p>When you call <code>SaveChanges()</code>, EF generates an UPDATE SQL to apply the context setting-ups to the database.</p>
@@ -2572,9 +2577,9 @@
 <a id="__codelineno-7-15" name="__codelineno-7-15"></a><a href="#__codelineno-7-15"><span class="linenos" data-linenos="15 "></span></a><span class="p">}</span>
 </code></pre></div>
 </details>
-<h3 id="skip-and-take-in-ef"><strong><code>Skip()</code> and <code>Take()</code> in EF</strong><a class="headerlink" href="#skip-and-take-in-ef" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="what-are-skip-and-take-methods">What are <code>Skip()</code> and <code>Take()</code> methods?<a class="headerlink" href="#what-are-skip-and-take-methods" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="note" open="open">
-<summary><br/></summary>
+<summary>Skip() &amp; Take()</summary>
 <ul>
 <li>The <code>Skip()</code> and <code>Take()</code> methods are used for <u>pagination or paging functionality in queries</u>.<ul>
 <li><code>Skip()</code> method is used to <u>skip a specified number of elements</u> in the query result.</li>
@@ -2590,13 +2595,14 @@
 </code></pre></div>
 </details>
 <h2 id="dapper"><strong>Dapper</strong><a class="headerlink" href="#dapper" title="Anchor link to this section for reference">⚓︎</a></h2>
+<h3 id="what-is-dapper"><mark>What is <code>Dapper</code>?</mark><a class="headerlink" href="#what-is-dapper" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="note" open="open">
-<summary><mark>About <code>Dapper</code></mark></summary>
+<summary>Dapper</summary>
 <p><code>Dapper</code> is a <strong>micro-ORM</strong> that provides a <u>simple and fast</u> way to query the database. It is a lightweight library that focuses on <strong>performance</strong> and <strong>simplicity</strong>. <code>Dapper</code> is ideal for scenarios where you need to execute raw SQL queries and map the results to objects without the overhead of a full-fledged ORM like <code>EF Core</code>.</p>
 </details>
-<h3 id="diffs-dapper-vs-ef-core"><strong>Diffs: <code>Dapper</code> v.s. <code>EF Core</code></strong><a class="headerlink" href="#diffs-dapper-vs-ef-core" title="Anchor link to this section for reference">⚓︎</a></h3>
+<h3 id="what-are-the-diffs-between-dapper-and-ef-core">What are the diffs between <code>Dapper</code> and <code>EF Core</code>?<a class="headerlink" href="#what-are-the-diffs-between-dapper-and-ef-core" title="Anchor link to this section for reference">⚓︎</a></h3>
 <details class="note" open="open">
-<summary><br/></summary>
+<summary>Dapper v.s. EF Core</summary>
 <ul>
 <li><strong>Performance</strong>: <code>Dapper</code> is generally faster than <code>EF</code> because it generates more efficient SQL and loads data faster. <code>EF</code> can be faster if you use it correctly and take advantage of features like compiled queries and efficient loading patterns.</li>
 <li><strong>Ease of Use</strong>: <code>EF</code> has a higher learning curve than <code>Dapper</code>, but <code>Dapper</code> can be more convenient to use because it provides a lot of features out of the box, such as change tracking, lazy loading, and automated database migrations.</li>
@@ -2609,7 +2615,7 @@
 <span class="md-icon" title="Last update">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"></path></svg>
 </span>
-<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 28, 2024 04:37:30</span>
+<span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">October 29, 2024 02:44:43</span>
 </span>
 <span class="md-source-file__fact">
 <span class="md-icon" title="Created">
