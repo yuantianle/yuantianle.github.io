@@ -12,7 +12,7 @@
     
 }
 [data-md-color-scheme="default"] {
-    --md-default-bg-color: /*#f6e9e7;*/#e7eef6;
+    --md-default-bg-color: /*#f6e9e7;#e7eef6;*/#f9fef3; /*background filter*/
     --md-code-fg-color: #c20707;
     --md-code-hl-name-color: #2e3c43;
     --md-code-hl-comment-color: #3e9516;
@@ -47,21 +47,21 @@
 }
 
 [data-md-color-scheme="default"] .md-content{
-    background: linear-gradient(to bottom, #00000000, #d8ebff0d, #d8ebffcc, #d8ebfff1, #d8ebff);
+    background: linear-gradient(to bottom, #00000000, #d8ebff0d, #d8ebffcc, #d8ebffdd);
     background-size: 100% 100vh; /* 设置渐变高度为视口高度 */
     background-attachment: fixed; /* 确保背景固定，不随滚动移动 */
     backdrop-filter: blur(50px);
 }
 
 [data-md-color-scheme="slate"] .md-content{
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.85), rgb(0, 0, 0));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.158), rgba(0, 0, 0, 0.558), rgba(0, 0, 0, 0.881));
     background-size: 100% 100vh; /* 设置渐变高度为视口高度 */
     background-attachment: fixed; /* 确保背景固定，不随滚动移动 */
     backdrop-filter: blur(50px);
 }
 
 [data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__scrollwrap{
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.452), rgba(0, 0, 0, 0.9));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.284), rgba(0, 0, 0, 0.864));
     backdrop-filter: blur(70px);
 }
 
@@ -342,13 +342,20 @@ h3{
     margin-bottom: 0.4em !important;
 }
 
-.md-nav--secondary{
+[data-md-color-scheme="default"] .md-nav--secondary{
     color: #0621a4 !important;
+}
+[data-md-color-scheme="slate"] .md-nav--secondary{
+    color: #7588e8 !important;
 }
 /* .md-nav__item--section>.md-nav>.md-nav__list>.md-nav__item--active>.md-nav>.md-nav__list>.md-nav__item>.md-nav__link{
     color: #a46206 ;
 } */
 
-.md-nav__item--section>.md-nav>.md-nav__list>.md-nav__item--active{
+[data-md-color-scheme="default"] .md-nav__item--section>.md-nav>.md-nav__list>.md-nav__item--active{
     color: #9d3319 !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav__item--section>.md-nav>.md-nav__list>.md-nav__item--active{
+    color: #eb9782 !important;
 }
