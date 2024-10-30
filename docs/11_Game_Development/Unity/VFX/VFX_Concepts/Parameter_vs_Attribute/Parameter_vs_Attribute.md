@@ -3,7 +3,7 @@ comments: true
 ᴴₒᴴₒᴴₒ: ture
 ---
 
-# **Parameter vs. Attribute** in Unity's VFX Graph
+# **:fontawesome-brands-unity: Parameter vs. Attribute in Unity's VFX Graph**
 
 > In Unity's VFX Graph, "Parameters" and "Attributes" are two common concepts used to control and adjust particle effects, but they serve different purposes and are used in distinct ways. Here's an explanation of the difference between them
 

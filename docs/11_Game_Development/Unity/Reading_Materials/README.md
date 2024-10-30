@@ -3,7 +3,7 @@ comments: true
 ᴴₒᴴₒᴴₒ: ture
 ---
 
-# **Unity Reading Materials**
+# **:fontawesome-brands-unity: Unity Reading Materials**
 
 Below are the reading materials for Unity:
 

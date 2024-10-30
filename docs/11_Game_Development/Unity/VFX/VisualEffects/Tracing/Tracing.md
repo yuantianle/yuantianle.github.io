@@ -3,7 +3,7 @@ comments: true
 ᴴₒᴴₒᴴₒ: ture
 ---
 
-# **Tracing**
+# **:fontawesome-brands-unity: Tracing**
 
 `Tracing` is a visual effect that creates a trail of particles behind an object. Remember turn on the `world` space option in the VFX graph to make the particless stay at the old position in the world space.
 

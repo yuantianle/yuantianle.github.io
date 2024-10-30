@@ -3,7 +3,7 @@ comments: true
 ᴴₒᴴₒᴴₒ: ture
 ---
 
-# **Unity Debug**
+# **:fontawesome-brands-unity: Unity Debug**
 
 Here are several tools under the IDE for debugging the CPU and GPU.
 

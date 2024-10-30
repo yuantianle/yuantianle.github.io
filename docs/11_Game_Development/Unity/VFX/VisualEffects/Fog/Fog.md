@@ -3,7 +3,7 @@ comments: true
 ᴴₒᴴₒᴴₒ: ture
 ---
 
-# **Fog Effect**
+# **:fontawesome-brands-unity: Fog Effect**
 
 `Flip book` is a way to animate a series of images. This technique is used in animation (frame animation), shader ([Flipbook node](../Shader_Graph/Flipbook/Flipbook.md)), and visual effects. Flip book is frequencly used in game development to create visual effects like **fire**, **smoke**, and **water**.
 

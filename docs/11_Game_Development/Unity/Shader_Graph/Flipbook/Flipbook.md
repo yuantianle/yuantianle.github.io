@@ -3,7 +3,7 @@ comments: true
 ᴴₒᴴₒᴴₒ: ture
 ---
 
-# **Flipbook Node**
+# **:fontawesome-brands-unity: Flipbook Node**
 
 In shader graph, The `Flipbook` node generates **UV coordinates** that are used to sample a texture that's divided into frames laid out in a grid pattern. It's most frequently used to playback a <u>series of frames</u> to create an animation.
 

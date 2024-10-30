@@ -177,17 +177,23 @@ nav:
           - 11_Game_Development/Unity/README.md
           - Shader Graph:
               - 11_Game_Development/Unity/Shader_Graph/README.md
-              - Flipbook Node: 11_Game_Development/Unity/Shader_Graph/Flipbook/Flipbook.md
+              - Flipbook Node: 11_Game_Development/Unity/Shader_Graph/Flipbook/Flipbook
           - VFX:
               - 11_Game_Development/Unity/VFX/README.md
-              - Fog Effect: 11_Game_Development/Unity/VFX/Fog/Fog.md
+              - VFX Concepts:
+                - 11_Game_Development/Unity/VFX/VFX_Concepts/README.md
+                - VFX Graph: 11_Game_Development/Unity/VFX/VFX_Concepts/Parameter_vs_Attribute/Parameter_vs_Attribute
+              - Visual Effects:
+                - 11_Game_Development/Unity/VFX/VisualEffects/README.md
+                - Fog: 11_Game_Development/Unity/VFX/VisualEffects/Fog
+                - Tracing: 11_Game_Development/Unity/VFX/VisualEffects/Tracing
           - Game Design Pattern: 11_Game_Development/Unity/Design_Pattern/README.md
           - Investigation:
               - 11_Game_Development/Unity/Unity_Investigation/README.md
-              - URP: 11_Game_Development/Unity/Unity_Investigation/URP.md
-              - Unity Debug: 11_Game_Development/Unity/Unity_Investigation/Unity_Debug/Unity_Debug.md
-              - Unity Life Cycle: 11_Game_Development/Unity/Unity_Investigation/Unity_LifeCycle/Unity_LifeCycle.md
-              - Awaitable: 11_Game_Development/Unity/Unity_Investigation/Awaitable/Awaitable.md
+              - URP: 11_Game_Development/Unity/Unity_Investigation/URP
+              - Unity Debug: 11_Game_Development/Unity/Unity_Investigation/Unity_Debug/Unity_Debug
+              - Unity Life Cycle: 11_Game_Development/Unity/Unity_Investigation/Unity_LifeCycle/Unity_LifeCycle
+              - Awaitable: 11_Game_Development/Unity/Unity_Investigation/Awaitable/Awaitable
           - Reading materials: 11_Game_Development/Unity/Reading_Materials/README.md
 
       - Unreal:

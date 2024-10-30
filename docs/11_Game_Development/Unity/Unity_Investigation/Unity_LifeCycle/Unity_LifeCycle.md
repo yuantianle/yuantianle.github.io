@@ -3,7 +3,7 @@ comments: true
 ᴴₒᴴₒᴴₒ: ture
 ---
 
-# **Unity Life Cycle**
+# **:fontawesome-brands-unity: Unity Life Cycle**
 
 Here is the official documentation for Unity **Life Cycle**: 
 

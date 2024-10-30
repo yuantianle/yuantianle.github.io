@@ -3,7 +3,7 @@ comments: true
 ᴴₒᴴₒᴴₒ: ture
 ---
 
-# **Awaitable**
+# **:fontawesome-brands-unity: Awaitable**
 
 ???+note "What is an "Awaitable" in Unity?"
 
