@@ -341,3 +341,14 @@ h3{
 .md-typeset pre{
     margin-bottom: 0.4em !important;
 }
+
+.md-nav--secondary{
+    color: #0621a4 !important;
+}
+/* .md-nav__item--section>.md-nav>.md-nav__list>.md-nav__item--active>.md-nav>.md-nav__list>.md-nav__item>.md-nav__link{
+    color: #a46206 ;
+} */
+
+.md-nav__item--section>.md-nav>.md-nav__list>.md-nav__item--active{
+    color: #9d3319 !important;
+}
