@@ -3,7 +3,7 @@ comments: true
 ᴴₒᴴₒᴴₒ: ture
 ---
 
-# **Unordered Set**
+# **:simple-cplusplus:{.e_cpp} Unordered Set**
 
 > This data structure is used for the case we DON'T need the key-value pairs like in the [unordered_map](./unodered_map.md). It is a easy way to implement presence/absence
 

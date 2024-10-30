@@ -3,7 +3,7 @@ comments: true
 ᴴₒᴴₒᴴₒ: ture
 ---
 
-# ** :simple-matternet: UML & Object relationships**
+# **:simple-matternet: UML & Object relationships**
 
 > Let's see how to express OOP by using UML class diagram. With UML we then import the relationship between classes.
 

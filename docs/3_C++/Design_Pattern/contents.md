@@ -3,7 +3,7 @@ comments: true
 ᴴₒᴴₒᴴₒ: ture
 ---
 
-# ** :simple-matternet: Desgin Patterns**
+# **:simple-matternet: Desgin Patterns**
 
 > `Design pattern` is a <u>reusable solution</u> to a commonly occurring problem in software design. It provides a general <u>framework</u> for solving a particular design problem, which can be adapted to suit the specific needs of a particular application.
 

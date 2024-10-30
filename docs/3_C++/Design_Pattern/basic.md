@@ -3,7 +3,7 @@ comments: true
 ᴴₒᴴₒᴴₒ: ture
 ---
 
-# ** :simple-matternet: Software desgin principles**
+# **:simple-matternet: Software desgin principles**
 
 > Before we start to learn the design pattern, we need to know what is a **good software design**.
 

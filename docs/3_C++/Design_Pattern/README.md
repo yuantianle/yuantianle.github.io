@@ -2,7 +2,7 @@
 ᴴₒᴴₒᴴₒ: ture
 ---
 
-# ** :simple-matternet: Design Pattern**
+# **:simple-matternet: Design Pattern**
 
 > Here is the section talking about the Desgin Pattern for OOP projects.
 

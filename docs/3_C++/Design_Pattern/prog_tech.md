@@ -3,7 +3,7 @@ comments: true
 ᴴₒᴴₒᴴₒ: ture
 ---
 
-# ** :simple-matternet: Programming techniques**
+# **:simple-matternet: Programming techniques**
 
 > Let's see some **programming techniques** used for design pattern.
 
