@@ -368,6 +368,35 @@ nav:
           - 5_FullStack/NET/README.md
           - ORM: 5_FullStack/NET/ORM/README.md
           - HTTP Request: 5_FullStack/NET/HttpRequest/README.md
+
+  - SoftArch:
+    - 12_Architecture/README.md
+    - Principles: 
+        - 12_Architecture/Principles/README.md
+        - SOLID: 12_Architecture/Principles/SOLID/README.md
+        - KISS: 12_Architecture/Principles/KISS/README.md
+        - DRY: 12_Architecture/Principles/DRY/README.md
+        - YAGNI: 12_Architecture/Principles/YAGNI/README.md
+    - Design Patterns:
+        - 12_Architecture/Design_Patterns/README.md
+        - Factory: 12_Architecture/Design_Patterns/Factory/README.md
+        - Singleton: 12_Architecture/Design_Patterns/Singleton/README.md
+        - Observer: 12_Architecture/Design_Patterns/Observer/README.md
+        - Object Pool: 12_Architecture/Design_Patterns/Object_Pool/README.md
+    - Arch Styles:
+        - 12_Architecture/Arch_Styles/README.md
+        - MVC: 12_Architecture/Arch_Styles/MVC/README.md
+        - MVVM: 12_Architecture/Arch_Styles/MVVM/README.md
+        - Microservices: 12_Architecture/Arch_Styles/Microservices/README.md
+        - SOA: 12_Architecture/Arch_Styles/SOA/README.md
+        - Event-driven: 12_Architecture/Arch_Styles/Event_driven/README.md
+    - Distribute Sys Theorem:
+        - 12_Architecture/Distribute_System/README.md
+        - CAP: 12_Architecture/Distribute_System/CAP/README.md
+        - PACELC: 12_Architecture/Distribute_System/PACELC/README.md
+        - BASE: 12_Architecture/Distribute_System/BASE/README.md
+        - ACID: 12_Architecture/Distribute_System/ACID/README.md
+
   - ICS:
       - 10_Interview/README.md
       - OOP: 10_Interview/Other/oop_guide.md
