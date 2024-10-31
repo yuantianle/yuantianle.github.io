@@ -47,7 +47,7 @@
 }
 
 [data-md-color-scheme="default"] .md-content{
-    background: linear-gradient(to bottom, #00000000, #d8ebff0d, #d8ebffcc, #d8ebffdd);
+    background: linear-gradient(to bottom, #00000000, #d8ebff0d, #d8ebffcc, #d8ebffe5);
     background-size: 100% 100vh; /* 设置渐变高度为视口高度 */
     background-attachment: fixed; /* 确保背景固定，不随滚动移动 */
     backdrop-filter: blur(50px);
@@ -66,7 +66,7 @@
 }
 
 [data-md-color-scheme="default"] .md-sidebar--primary .md-sidebar__scrollwrap{
-    background: linear-gradient(to bottom, #d8ebff02, #d8ebffce);
+    background: linear-gradient(to bottom, #d8ebff02, #d8ebffd3);
     backdrop-filter: blur(70px);
 }
 /*For normal*/
