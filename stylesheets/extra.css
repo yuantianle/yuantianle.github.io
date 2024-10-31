@@ -359,3 +359,13 @@ h3{
 [data-md-color-scheme="slate"] .md-nav__item--section>.md-nav>.md-nav__list>.md-nav__item--active{
     color: #eb9782 !important;
 }
+
+.md-typeset details {
+    padding-bottom: 0.7em !important;
+    padding-left: 0.7em !important;
+    padding-right: 0.7em !important;
+}
+
+.md-typeset summary {
+    margin-bottom: 0.5em;
+}
