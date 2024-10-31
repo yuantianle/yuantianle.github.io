@@ -12,7 +12,7 @@
     
 }
 [data-md-color-scheme="default"] {
-    --md-default-bg-color: /*#f6e9e7;#e7eef6;*/#f9fef3; /*background filter*/
+    --md-default-bg-color: /*#f6e9e7;#f9fef3;*/ #e7eef6;/*background filter*/
     --md-code-fg-color: #c20707;
     --md-code-hl-name-color: #2e3c43;
     --md-code-hl-comment-color: #3e9516;
@@ -47,7 +47,7 @@
 }
 
 [data-md-color-scheme="default"] .md-content{
-    background: linear-gradient(to bottom, #00000000, #d8ebff0d, #d8ebffcc, #d8ebffe5);
+    background: linear-gradient(to bottom, #00000000, #d8ebff0d, #d8ebffcc, #d8ebffe5, #d8ebfff4);
     background-size: 100% 100vh; /* 设置渐变高度为视口高度 */
     background-attachment: fixed; /* 确保背景固定，不随滚动移动 */
     backdrop-filter: blur(50px);
