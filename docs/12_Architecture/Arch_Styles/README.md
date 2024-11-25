@@ -1,6 +1,5 @@
 ---
 ᴴₒᴴₒᴴₒ: ture
-comments: true
 ---
 
 # **:material-head-dots-horizontal: Architecture Styles**

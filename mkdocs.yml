@@ -295,13 +295,11 @@ nav:
       - STL:
           - 3_C++/STL/README.md
           - unordered_set: 3_C++/STL/unodered_set.md
-      - OOP concepts: 3_C++/OOP/concepts.md
-      - Design Pattern:
-          - 3_C++/Design_Pattern/README.md
-          - UML & Object relationships: 3_C++/Design_Pattern/UML.md
-          - Software desgin principles: 3_C++/Design_Pattern/basic.md
-          - Programming techniques: 3_C++/Design_Pattern/prog_tech.md
-          - Desgin Patterns: 3_C++/Design_Pattern/contents.md
+      - OOP concepts: 
+          - 3_C++/OOP/README.md
+          - Basic Concepts: 3_C++/OOP/concepts.md
+          - UML & Object relationships: 3_C++/OOP/UML.md
+
   - Algorithm:
       - 4_Algorithms/README.md
       - Typical Algorithms:
@@ -371,18 +369,16 @@ nav:
 
   - SoftArch:
     - 12_Architecture/README.md
-    - Principles: 
-        - 12_Architecture/Principles/README.md
-        - SOLID: 12_Architecture/Principles/SOLID/README.md
-        - KISS: 12_Architecture/Principles/KISS/README.md
-        - DRY: 12_Architecture/Principles/DRY/README.md
-        - YAGNI: 12_Architecture/Principles/YAGNI/README.md
+    - Principles: 12_Architecture/Principles/README.md
     - Design Patterns:
         - 12_Architecture/Design_Patterns/README.md
-        - Factory: 12_Architecture/Design_Patterns/Factory/README.md
-        - Singleton: 12_Architecture/Design_Patterns/Singleton/README.md
-        - Observer: 12_Architecture/Design_Patterns/Observer/README.md
-        - Object Pool: 12_Architecture/Design_Patterns/Object_Pool/README.md
+        - Programming techniques: 12_Architecture/Design_Patterns/ProgramTech/README.md
+        - Catagory of Desgin Patterns: 
+            - 12_Architecture/Design_Patterns/DesignPatterns/README.md
+            - Factory: 12_Architecture/Design_Patterns/DesignPatterns/Factory/README.md
+            - Singleton: X
+            - Observer: X
+            - Object Pool: X
     - Arch Styles:
         - 12_Architecture/Arch_Styles/README.md
         - MVC: 12_Architecture/Arch_Styles/MVC/README.md

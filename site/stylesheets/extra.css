@@ -12,7 +12,7 @@
     
 }
 [data-md-color-scheme="default"] {
-    --md-default-bg-color: /*#f6e9e7;*/#e7eef6;
+    --md-default-bg-color: /*#f6e9e7;#f9fef3;*/ #e7eef6;/*background filter*/
     --md-code-fg-color: #c20707;
     --md-code-hl-name-color: #2e3c43;
     --md-code-hl-comment-color: #3e9516;
@@ -29,7 +29,7 @@
 /*For normal*/
 
 [data-md-color-scheme="default"]{
-    background-image: url("sea.jpg");
+    background-image: url("snow\(1\).jpg");
     background-size:cover;
     background-attachment: fixed;
     background-position: center top;
@@ -38,7 +38,7 @@
 }
 
 [data-md-color-scheme="slate"]{
-    background-image: url("sunset.jpg");
+    background-image: url("aurora\(1\).jpg");
     background-size:cover;
     background-attachment: fixed;
     background-position: center bottom;
@@ -47,23 +47,27 @@
 }
 
 [data-md-color-scheme="default"] .md-content{
-    background: linear-gradient(to bottom, #00000000, #d8ebff0d, #d8ebffcc, #d8ebfff1, #d8ebff);
+    background: linear-gradient(to bottom, #00000000, #d8ebff0d, #d8ebffcc, #d8ebffe5, #d8ebfff4);
     background-size: 100% 100vh; /* 设置渐变高度为视口高度 */
     background-attachment: fixed; /* 确保背景固定，不随滚动移动 */
+    backdrop-filter: blur(50px);
 }
 
 [data-md-color-scheme="slate"] .md-content{
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.85), rgb(0, 0, 0));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.158), rgba(0, 0, 0, 0.558), rgba(0, 0, 0, 0.881));
     background-size: 100% 100vh; /* 设置渐变高度为视口高度 */
     background-attachment: fixed; /* 确保背景固定，不随滚动移动 */
+    backdrop-filter: blur(50px);
 }
 
 [data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__scrollwrap{
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.452), rgba(0, 0, 0, 0.9));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.284), rgba(0, 0, 0, 0.864));
+    backdrop-filter: blur(70px);
 }
 
 [data-md-color-scheme="default"] .md-sidebar--primary .md-sidebar__scrollwrap{
-    background: linear-gradient(to bottom, #d8ebff02, #d8ebffce);
+    background: linear-gradient(to bottom, #d8ebff02, #d8ebffd3);
+    backdrop-filter: blur(70px);
 }
 /*For normal*/
 
@@ -249,4 +253,124 @@ For christmas*/
     font-size: .80rem;
 }
 
+.mkdocs-markmap {
+    max-height: 35vh !important; /* 35% of the viewport height*/
+}
 
+.markmap {
+    font-weight: 500 !important; /* Adjust the weight: 100 (thin) to 900 (bold) */
+    font-family: Arial, sans-serif; /* Optional: Set the font family */
+}
+
+.markmap-foreign strong {
+    font-weight: 600 !important; /* Adjust the weight: 100 (thin) to 900 (bold) */
+    font-family: Arial, sans-serif; /* Optional: Set the font family */
+}
+
+[data-md-color-scheme="default"] .markmap-foreign a:not(code) {
+    color: #20314e !important;  /* 设置链接文字颜色为番茄红 */
+}
+
+[data-md-color-scheme="default"] .markmap-foreign code {
+    color: rgb(221, 133, 17) !important;  /* Typical code color */
+    background-color: #f5f5f572;  /* Light gray background */
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+[data-md-color-scheme="default"] .mkdocs-markmap a:hover:not(code) {
+    color: #3763d2 !important;   /* 设置鼠标悬停时为绿色 */
+}
+
+[data-md-color-scheme="slate"] .markmap-foreign a:not(code) {
+    color: #8c7ac7 !important; 
+}
+
+[data-md-color-scheme="slate"] .markmap-foreign code {
+    color: #f25dff !important;  /* Typical code color */
+    background-color: #39405c79;  /* Light gray background */
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.md-typeset ol li, .md-typeset ul li {
+    margin-top: 0.4em !important;
+    margin-bottom: 0em !important;
+}
+
+.md-typeset ol li ul, .md-typeset ul li ul{
+    margin-top: 0em !important;
+    margin-bottom: 0em !important;
+}
+
+.md-typeset ol li ul li, .md-typeset ul li ul li{
+    margin-top: 0em !important;
+    margin-bottom: 0em !important;
+}
+
+.md-typeset ol li p, .md-typeset ul li p{
+    margin-top: 0em !important;
+}
+
+.md-typeset ol, .md-typeset ul{
+    margin-top: 0em !important;
+    margin-bottom: 0.6em !important;
+}
+
+p{
+    margin-top: 0.4em !important;
+    margin-bottom: 0em !important;
+}
+
+h3{
+    margin-top: 0.4em !important;
+    margin-bottom: 0.2em !important;
+}
+
+h4{
+    margin-top: 0.4em !important;
+    margin-bottom: 0.2em !important;
+}
+
+.md-typeset details {
+    margin-top: 0.4em !important;
+}
+
+.highlight span.filename {
+    margin-top: 0.2em !important;
+    padding-top: 0.3em !important;
+    padding-bottom: 0.2em !important;
+    padding-left: 1em !important;
+}
+
+.md-typeset pre{
+    margin-bottom: 0.4em !important;
+}
+
+[data-md-color-scheme="default"] .md-nav--secondary{
+    color: #0621a4 !important;
+}
+[data-md-color-scheme="slate"] .md-nav--secondary{
+    color: #7588e8 !important;
+}
+/* .md-nav__item--section>.md-nav>.md-nav__list>.md-nav__item--active>.md-nav>.md-nav__list>.md-nav__item>.md-nav__link{
+    color: #a46206 ;
+} */
+
+[data-md-color-scheme="default"] .md-nav__item--section>.md-nav>.md-nav__list>.md-nav__item--active{
+    color: #9d3319 !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav__item--section>.md-nav>.md-nav__list>.md-nav__item--active{
+    color: #eb9782 !important;
+}
+
+.md-typeset details {
+    padding-bottom: 0.7em !important;
+    padding-left: 0.7em !important;
+    padding-right: 0.7em !important;
+}
+
+.md-typeset summary {
+    margin-bottom: 0.5em;
+}
