@@ -409,6 +409,10 @@ nav:
 
   - Math:
       - 6_Math/README.md
+      - Concepts: 6_Math/Concepts/Math_questions.md
+      - Optimization: 
+            - 6_Math/Optimization/Optimization.md
+            - Methods Classification: 6_Math/Optimization/Methods_classification/Methods_classification.md
       - Numercial Methods: 6_Math/Numerical/README.md
 
   - By-time:
