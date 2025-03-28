@@ -28,6 +28,3 @@ Additionally, here are some other critial thoughts:
 
 - If you <u>never use `Try-catch`, you are wasting time</u> on debugging. 
 - But you <u>also don't want to wrap your entire code base in try catch blocks (sometimes it happen). Having your program fail is sometimes desirable,</u> since allowing your code to continue running when it shouldn't, can cause problem.
-
-
-<br><br><br><br>
