@@ -8181,7 +8181,7 @@
                 
                   <div class="md-profile md-post__profile">
                     <span class="md-author md-author--long">
-                      <img src="https://github.com/yuantianle/yuantianle.github.io/blob/main/docs/images/headfile.png" alt="Tianle (Mark)">
+                      <img src="https://raw.githubusercontent.com/yuantianle/yuantianle.github.io/refs/heads/main/docs/images/headfile.png" alt="Tianle (Mark)">
                     </span>
                     <span class="md-profile__description">
                       <strong>
@@ -8230,7 +8230,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              15 min read
+                              5 min read
                             
                           </span>
                         </div>
@@ -8270,10 +8270,27 @@
   
 
 
-<h1 id="goal-of-using-try-catch">Goal of using Try-catch<a class="headerlink" href="#goal-of-using-try-catch" title="Anchor link to this section for reference">⚓︎</a></h1>
-<p>"Try-catch should never replace proper control flow. Don’t use it to handle null references or check for empty lists. It’s not meant for regular logic—it’s meant for unpredictable failures like file I/O, networking, reflection, or untrusted input."</p>
+<h1 id="goal-of-using-try-catch"><strong>Goal of using <code>Try-catch</code></strong><a class="headerlink" href="#goal-of-using-try-catch" title="Anchor link to this section for reference">⚓︎</a></h1>
+<blockquote>
+<p>"<code>Try-catch</code> should never replace proper control flow. Don’t use it to handle null references or check for empty lists. It’s not meant for regular logic — it’s <u>meant for unpredictable failures like file I/O, networking, reflection, or untrusted input</u>."</p>
+</blockquote>
 <!-- more -->
-<p>Above is what I got from <a href="https://www.linkedin.com/posts/abhisheketh_gamedev-programming-code-activity-7310662695081365504-7WFc?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAADaDCvsBb-J9qFGjgvr5zPCGJSwTxsqOD-g">LinkedIn Post</a>.</p>
+<p>Above is what I got from <a href="https://www.linkedin.com/posts/abhisheketh_gamedev-programming-code-activity-7310662695081365504-7WFc?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAADaDCvsBb-J9qFGjgvr5zPCGJSwTxsqOD-g">LinkedIn Post</a>. 
+<br/>
+As we all know in the development for a product, <code>Try-catch</code> normally is not used for fixing mistakes — we use it to handle failure gracefully.</p>
+<ul>
+<li>log the error</li>
+<li>recover with default values</li>
+<li>continue running—without impacting the player experience.</li>
+</ul>
+<p>But the head paragraph highlighted the most important point: <strong><code>Try-catch</code> is for unpredictable failures</strong>. It is not for fixing mistakes.
+<br/>
+Additionally, here are some other critial thoughts: </p>
+<ul>
+<li>If you <u>never use <code>Try-catch</code>, you are wasting time</u> on debugging. </li>
+<li>But you <u>also don't want to wrap your entire code base in try catch blocks (sometimes it happen). Having your program fail is sometimes desirable,</u> since allowing your code to continue running when it shouldn't, can cause problem.</li>
+</ul>
+<p><br/><br/><br/><br/></p>
 
 
 
@@ -8296,7 +8313,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="March 28, 2025 18:09:01">March 28, 2025 18:09:01</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime" title="March 28, 2025 19:33:33">March 28, 2025 19:33:33</span>
   </span>
 
     
@@ -8334,6 +8351,55 @@
   
 
 
+
+  <h2 id="__comments">Comments</h2>
+  <!-- Insert generated snippet here -->
+    <script src="https://giscus.app/client.js"
+        data-repo="yuantianle/yuantianle.github.io"
+        data-repo-id="R_kgDOITXaGg"
+        data-category-id="DIC_kwDOITXaGs4CSWJD"
+        =""
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="top"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async>
+    </script>
+
+  <!-- Synchronize Giscus theme with palette -->
+  <script>
+    var giscus = document.querySelector("script[src*=giscus]")
+
+    /* Set palette on initial load */
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var theme = palette.color.scheme === "slate" ? "dark" : "light"
+      giscus.setAttribute("data-theme", theme) 
+    }
+
+    /* Register event handlers after documented loaded */
+    document.addEventListener("DOMContentLoaded", function() {
+      var ref = document.querySelector("[data-md-component=palette]")
+      ref.addEventListener("change", function() {
+        var palette = __md_get("__palette")
+        if (palette && typeof palette.color === "object") {
+          var theme = palette.color.scheme === "slate" ? "dark" : "light"
+
+          /* Instruct Giscus to change theme */
+          var frame = document.querySelector(".giscus-frame")
+          frame.contentWindow.postMessage(
+            { giscus: { setConfig: { theme } } },
+            "https://giscus.app"
+          )
+        }
+      })
+    })
+  </script>
 
       
     </article>
